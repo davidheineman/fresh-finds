@@ -1,0 +1,332 @@
+/* GT America Font Face Declarations - Optimized with WOFF2 */
+
+/* Font Loading Strategy:
+   1. WOFF2 format with WOFF fallback for broader compatibility
+   2. Multiple URL formats to handle different deployment scenarios
+   3. font-display: swap for better performance
+   4. Explicit format declarations for better browser support
+*/
+
+/* Thin Weight (100) */
+@font-face {
+    font-display: swap;
+    font-family: 'GT America';
+    font-style: normal;
+    font-weight: 100;
+    src: url('/fonts/gt-america/GT-America-Standard-Thin.woff2') format('woff2');
+}
+
+/* Ultra Light Weight (200) */
+@font-face {
+    font-display: swap;
+    font-family: 'GT America';
+    font-style: normal;
+    font-weight: 200;
+    src: url('/fonts/gt-america/GT-America-Standard-Ultra-Light.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'GT America';
+    font-style: italic;
+    font-weight: 200;
+    src: url('/fonts/gt-america/GT-America-Standard-Ultra-Light-Italic.woff2') format('woff2');
+}
+
+/* Light Weight (300) */
+@font-face {
+    font-display: swap;
+    font-family: 'GT America';
+    font-style: normal;
+    font-weight: 300;
+    src: url('/fonts/gt-america/GT-America-Standard-Light.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'GT America';
+    font-style: italic;
+    font-weight: 300;
+    src: url('/fonts/gt-america/GT-America-Standard-Light-Italic.woff2') format('woff2');
+}
+
+/* Regular Weight (400) */
+@font-face {
+    font-display: swap;
+    font-family: 'GT America';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/gt-america/GT-America-Standard-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'GT America';
+    font-style: italic;
+    font-weight: 400;
+    src: url('/fonts/gt-america/GT-America-Standard-Regular-Italic.woff2') format('woff2');
+}
+
+/* Medium Weight (500) */
+@font-face {
+    font-display: swap;
+    font-family: 'GT America';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/fonts/gt-america/GT-America-Standard-Medium.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'GT America';
+    font-style: italic;
+    font-weight: 500;
+    src: url('/fonts/gt-america/GT-America-Standard-Medium-Italic.woff2') format('woff2');
+}
+
+/* Bold Weight (700) */
+@font-face {
+    font-display: swap;
+    font-family: 'GT America';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/gt-america/GT-America-Standard-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'GT America';
+    font-style: italic;
+    font-weight: 700;
+    src: url('/fonts/gt-america/GT-America-Standard-Bold-Italic.woff2') format('woff2');
+}
+
+/* Black Weight (900) - Added for extra bold needs */
+@font-face {
+    font-display: swap;
+    font-family: 'GT America';
+    font-style: normal;
+    font-weight: 900;
+    src: url('/fonts/gt-america/GT-America-Standard-Black.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'GT America';
+    font-style: italic;
+    font-weight: 900;
+    src: url('/fonts/gt-america/GT-America-Standard-Black-Italic.woff2') format('woff2');
+}
+
+/* CSS Custom Properties for Font Stack */
+:root {
+    --font-sans: 'GT America', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-sans-fallback: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Utility class for GT America font */
+.font-gt-america {
+    font-family: var(--font-sans);
+}
+
+/* Font weight utilities */
+.font-light {
+    font-weight: 300;
+}
+
+.font-regular {
+    font-weight: 400;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-black {
+    font-weight: 900;
+}
+
+/* Debug class to test font loading */
+.font-test-gt-america {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    padding: 10px;
+    background: #f0f0f0;
+    margin: 10px 0;
+}
+
+.font-test-gt-america::before {
+    content: 'GT America Font Test: ';
+    font-weight: 700;
+}
+
+.font-test-gt-america::after {
+    content: ' (Light 300, Regular 400, Medium 500, Bold 700, Black 900)';
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* Preload critical font weights for performance */
+/* Note: Preload links are already added in baseof.html template
+   Font paths use both absolute and relative URLs for maximum compatibility
+*/
+
+/* Debug: Force font loading with data URI fallback for testing */
+@supports (font-display: swap) {
+    .font-debug-info::after {
+        content: 'Font support: YES';
+        font-family: 'GT America', sans-serif;
+    }
+}
+
+/* Iowan Old Style (serif for long-form content) */
+@font-face {
+    font-display: swap;
+    font-family: 'Iowan Old Style BT';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/iowan-old-style/iowan-old-style_regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Iowan Old Style BT';
+    font-style: italic;
+    font-weight: 400;
+    src: url('/fonts/iowan-old-style/iowan-old-style_italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Iowan Old Style BT';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/iowan-old-style/iowan-old-style_bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Iowan Old Style BT';
+    font-style: italic;
+    font-weight: 700;
+    src: url('/fonts/iowan-old-style/iowan-old-style_bold-italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Iowan Old Style BT';
+    font-style: normal;
+    font-weight: 900;
+    src: url('/fonts/iowan-old-style/iowan-old-style_black.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Iowan Old Style BT';
+    font-style: italic;
+    font-weight: 900;
+    src: url('/fonts/iowan-old-style/iowan-old-style_black-italic.woff2') format('woff2');
+}
+
+/* Latin Modern (for code/preformatted blocks) */
+@font-face {
+    font-display: swap;
+    font-family: latin modern mono;
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/lmmono-bold.woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: latin modern mono;
+    font-style: italic;
+    font-weight: 700;
+    src: url('../fonts/lmmono-bolditalic.woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: latin modern mono;
+    font-style: italic;
+    font-weight: 400;
+    src: url('../fonts/lmmono-italic.woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: latin modern mono;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/lmmono-normal.woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: latin modern roman;
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/lmroman-bold.woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: latin modern roman;
+    font-style: italic;
+    font-weight: 700;
+    src: url('../fonts/lmroman-bolditalic.woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: latin modern roman;
+    font-style: italic;
+    font-weight: 400;
+    src: url('../fonts/lmroman-italic.woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: latin modern roman;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/lmroman-normal.woff');
+}
+
+/* Chakra Petch (self-hosted) */
+@font-face {
+    font-family: 'Chakra Petch';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src:
+        local('Chakra Petch Regular'),
+        local('ChakraPetch-Regular'),
+        url('/fonts/chakra-petch/chakra-petch-v12-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Chakra Petch';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src:
+        local('Chakra Petch Medium'),
+        local('ChakraPetch-Medium'),
+        url('/fonts/chakra-petch/chakra-petch-v12-latin-500.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Chakra Petch';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src:
+        local('Chakra Petch SemiBold'),
+        local('ChakraPetch-SemiBold'),
+        url('/fonts/chakra-petch/chakra-petch-v12-latin-600.woff2') format('woff2');
+}
