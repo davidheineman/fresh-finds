@@ -50,7 +50,7 @@ jobs:
       - name: Fetch latest papers
         run: |
           source .venv/bin/activate
-          python fetch_papers.py
+          python fetch.py
       
       - name: Commit updated papers (if changes)
         run: |

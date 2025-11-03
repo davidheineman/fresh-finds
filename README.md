@@ -5,7 +5,7 @@ Pulls arXiv papers every morning for [these researchers](https://raw.githubuserc
 ```sh
 pip install requests arxiv
 
-python fetch_papers.py
+python fetch.py
 ```
 
 ### install the chrome extension
