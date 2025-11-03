@@ -7,3 +7,12 @@ pip install requests arxiv
 
 python fetch_papers.py
 ```
+
+### install the chrome extension
+
+```sh
+# go to chrome://extensions/
+# turn on Developer mode (top-right corner)
+# click “Load unpacked”.
+# select extension/
+```
