@@ -1,22 +1,14 @@
-#!/usr/bin/env python3
-"""
-Fetch recent arXiv papers from authors in the GitHub constants.py file
-and generate updated HTML content.
-"""
-
 import requests
 import arxiv
 import json
-from datetime import datetime
 from typing import List, Dict
 import re
 
-# URL to the constants.py file
-CONSTANTS_URL = 'https://raw.githubusercontent.com/davidheineman/conference-papers/main/constants.py'
+RESEARCHERS_URL = 'https://raw.githubusercontent.com/davidheineman/conference-papers/main/constants.py'
 
 def fetch_authors_from_github() -> List[str]:
     """Fetch the authors list from the GitHub repository."""
-    response = requests.get(CONSTANTS_URL)
+    response = requests.get(RESEARCHERS_URL)
     if response.status_code != 200:
         print(f"Failed to fetch constants.py: {response.status_code}")
         return []
@@ -165,8 +157,13 @@ def generate_html_list_items(papers: List[Dict]) -> str:
 
 def update_index_html(papers: List[Dict]):
     """Update the index.html file with the new papers."""
+    # Use relative path that works both locally and in GitHub Actions
+    import os
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    index_path = os.path.join(script_dir, 'index.html')
+    
     # Read the current HTML
-    with open('/Users/dhei/Downloads/thinking/index.html', 'r') as f:
+    with open(index_path, 'r') as f:
         html_content = f.read()
     
     # Generate new list items for first 20 papers (initial load)
@@ -183,7 +180,7 @@ def update_index_html(papers: List[Dict]):
     updated_html = re.sub(pattern, replace_func, html_content, flags=re.DOTALL)
     
     # Write back
-    with open('/Users/dhei/Downloads/thinking/index.html', 'w') as f:
+    with open(index_path, 'w') as f:
         f.write(updated_html)
     
     print(f"Updated index.html with {len(papers)} total papers ({len(initial_papers)} initially visible)")
@@ -221,7 +218,11 @@ def main():
         print("No papers found to update.")
     
     # Save papers to JSON for reference
-    with open('/Users/dhei/Downloads/thinking/papers.json', 'w') as f:
+    import os
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    json_path = os.path.join(script_dir, 'papers.json')
+    
+    with open(json_path, 'w') as f:
         # Remove published_raw for JSON serialization
         papers_for_json = []
         for p in papers:
