@@ -14,5 +14,5 @@ python fetch_papers.py
 # go to chrome://extensions/
 # turn on Developer mode (top-right corner)
 # click “Load unpacked”.
-# select extension/
+# select chrome/
 ```

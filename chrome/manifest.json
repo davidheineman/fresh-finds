@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "New Finds",
+  "version": "1.0.1",
+  "description": "Fresh releases on the arXiv",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "action": {
+    "default_icon": "favicon.png"
+  }
+}
