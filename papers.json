@@ -1228,8 +1228,8 @@
     ],
     "summary": "We develop signatures of capacity familiarity to characterize large language\nmodel (LLM) benchmarks and their meaningful overlaps. Benchmark signatures\nprobe the capacity required for benchmark performance. We formally define them\nas a set of salient tokens drawn from in-the-wild, naturally authored...",
     "published": "Sep 27",
-    "pdf_url": "http://arxiv.org/pdf/2509.23488v2",
-    "arxiv_url": "http://arxiv.org/abs/2509.23488v2",
+    "pdf_url": "http://arxiv.org/pdf/2509.23488v3",
+    "arxiv_url": "http://arxiv.org/abs/2509.23488v3",
     "queried_author": "Ari Holtzman",
     "matching_authors": [
       "Ari Holtzman"
