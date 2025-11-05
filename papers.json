@@ -1,5 +1,192 @@
 [
   {
+    "title": "Oolong: Evaluating Long Context Reasoning and Aggregation Capabilities",
+    "authors": [
+      "Amanda Bertsch",
+      "Adithya Pratapa",
+      "Teruko Mitamura",
+      "Graham Neubig",
+      "Matthew R. Gormley"
+    ],
+    "summary": "As model context lengths continue to grow, concerns about whether models\neffectively use the full context length have persisted. While several carefully\ndesigned long-context evaluations have recently been released, these\nevaluations tend to rely on retrieval from one or more sections of the context...",
+    "published": "Nov 04",
+    "pdf_url": "http://arxiv.org/pdf/2511.02817v1",
+    "arxiv_url": "http://arxiv.org/abs/2511.02817v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
+    "title": "When Visualizing is the First Step to Reasoning: MIRA, a Benchmark for Visual Chain-of-Thought",
+    "authors": [
+      "Yiyang Zhou",
+      "Haoqin Tu",
+      "Zijun Wang",
+      "Zeyu Wang",
+      "Niklas Muennighoff",
+      "Fan Nie",
+      "Yejin Choi",
+      "James Zou",
+      "Chaorui Deng",
+      "Shen Yan",
+      "Haoqi Fan",
+      "Cihang Xie",
+      "Huaxiu Yao",
+      "Qinghao Ye"
+    ],
+    "summary": "We propose MIRA, a new benchmark designed to evaluate models in scenarios\nwhere generating intermediate visual images is essential for successful\nreasoning. Unlike traditional CoT methods that rely solely on text, tasks in\nMIRA require models to generate and utilize intermediate images - such as\nske...",
+    "published": "Nov 04",
+    "pdf_url": "http://arxiv.org/pdf/2511.02779v1",
+    "arxiv_url": "http://arxiv.org/abs/2511.02779v1",
+    "queried_author": "Niklas Muennighoff",
+    "matching_authors": [
+      "Niklas Muennighoff",
+      "Yejin Choi"
+    ]
+  },
+  {
+    "title": "Beyond Single Embeddings: Capturing Diverse Targets with Multi-Query Retrieval",
+    "authors": [
+      "Hung-Ting Chen",
+      "Xiang Liu",
+      "Shauli Ravfogel",
+      "Eunsol Choi"
+    ],
+    "summary": "Most text retrievers generate \\emph{one} query vector to retrieve relevant\ndocuments. Yet, the conditional distribution of relevant documents for the\nquery may be multimodal, e.g., representing different interpretations of the\nquery. We first quantify the limitations of existing retrievers. All retr...",
+    "published": "Nov 04",
+    "pdf_url": "http://arxiv.org/pdf/2511.02770v1",
+    "arxiv_url": "http://arxiv.org/abs/2511.02770v1",
+    "queried_author": "Eunsol Choi",
+    "matching_authors": [
+      "Eunsol Choi"
+    ]
+  },
+  {
+    "title": "Opportunistic Expert Activation: Batch-Aware Expert Routing for Faster Decode Without Retraining",
+    "authors": [
+      "Costin-Andrei Oncescu",
+      "Qingyang Wu",
+      "Wai Tong Chung",
+      "Robert Wu",
+      "Bryan Gopal",
+      "Junxiong Wang",
+      "Tri Dao",
+      "Ben Athiwaratkun"
+    ],
+    "summary": "An increasing number of LLMs employ Mixture-of-Experts (MoE) architectures\nwhere the feed-forward layer is replaced by a pool of experts and each token\nonly activates a small subset of them. During autoregressive generation, these\nmodels often enter a memory-bound regime even for moderate batch size...",
+    "published": "Nov 04",
+    "pdf_url": "http://arxiv.org/pdf/2511.02237v1",
+    "arxiv_url": "http://arxiv.org/abs/2511.02237v1",
+    "queried_author": "Tri Dao",
+    "matching_authors": [
+      "Tri Dao"
+    ]
+  },
+  {
+    "title": "Training Proactive and Personalized LLM Agents",
+    "authors": [
+      "Weiwei Sun",
+      "Xuhui Zhou",
+      "Weihua Du",
+      "Xingyao Wang",
+      "Sean Welleck",
+      "Graham Neubig",
+      "Maarten Sap",
+      "Yiming Yang"
+    ],
+    "summary": "While existing work focuses primarily on task success, we argue that\neffective real-world agents require optimizing three dimensions: productivity\n(task completion), proactivity (asking essential questions), and\npersonalization (adapting to diverse user preferences). We introduce UserVille,\nan inter...",
+    "published": "Nov 04",
+    "pdf_url": "http://arxiv.org/pdf/2511.02208v1",
+    "arxiv_url": "http://arxiv.org/abs/2511.02208v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig",
+      "Maarten Sap",
+      "Sean Welleck"
+    ]
+  },
+  {
+    "title": "Shared Parameter Subspaces and Cross-Task Linearity in Emergently Misaligned Behavior",
+    "authors": [
+      "Daniel Aarao Reis Arturi",
+      "Eric Zhang",
+      "Andrew Ansah",
+      "Kevin Zhu",
+      "Ashwinee Panda",
+      "Aishwarya Balwani"
+    ],
+    "summary": "Recent work has discovered that large language models can develop broadly\nmisaligned behaviors after being fine-tuned on narrowly harmful datasets, a\nphenomenon known as emergent misalignment (EM). However, the fundamental\nmechanisms enabling such harmful generalization across disparate domains rema...",
+    "published": "Nov 03",
+    "pdf_url": "http://arxiv.org/pdf/2511.02022v1",
+    "arxiv_url": "http://arxiv.org/abs/2511.02022v1",
+    "queried_author": "Ashwinee Panda",
+    "matching_authors": [
+      "Ashwinee Panda"
+    ]
+  },
+  {
+    "title": "Accumulating Context Changes the Beliefs of Language Models",
+    "authors": [
+      "Jiayi Geng",
+      "Howard Chen",
+      "Ryan Liu",
+      "Manoel Horta Ribeiro",
+      "Robb Willer",
+      "Graham Neubig",
+      "Thomas L. Griffiths"
+    ],
+    "summary": "Language model (LM) assistants are increasingly used in applications such as\nbrainstorming and research. Improvements in memory and context size have\nallowed these models to become more autonomous, which has also resulted in more\ntext accumulation in their context windows without explicit user inter...",
+    "published": "Nov 03",
+    "pdf_url": "http://arxiv.org/pdf/2511.01805v2",
+    "arxiv_url": "http://arxiv.org/abs/2511.01805v2",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
+    "title": "CodeClash: Benchmarking Goal-Oriented Software Engineering",
+    "authors": [
+      "John Yang",
+      "Kilian Lieret",
+      "Joyce Yang",
+      "Carlos E. Jimenez",
+      "Ofir Press",
+      "Ludwig Schmidt",
+      "Diyi Yang"
+    ],
+    "summary": "Current benchmarks for coding evaluate language models (LMs) on concrete,\nwell-specified tasks such as fixing specific bugs or writing targeted tests.\nHowever, human programmers do not spend all day incessantly addressing isolated\ntasks. Instead, real-world software development is grounded in the pu...",
+    "published": "Nov 02",
+    "pdf_url": "http://arxiv.org/pdf/2511.00839v1",
+    "arxiv_url": "http://arxiv.org/abs/2511.00839v1",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang",
+      "Ludwig Schmidt"
+    ]
+  },
+  {
+    "title": "Belief Dynamics Reveal the Dual Nature of In-Context Learning and Activation Steering",
+    "authors": [
+      "Eric Bigelow",
+      "Daniel Wurgaft",
+      "YingQiao Wang",
+      "Noah Goodman",
+      "Tomer Ullman",
+      "Hidenori Tanaka",
+      "Ekdeep Singh Lubana"
+    ],
+    "summary": "Large language models (LLMs) can be controlled at inference time through\nprompts (in-context learning) and internal activations (activation steering).\nDifferent accounts have been proposed to explain these methods, yet their\ncommon goal of controlling model behavior raises the question of whether th...",
+    "published": "Nov 01",
+    "pdf_url": "http://arxiv.org/pdf/2511.00617v1",
+    "arxiv_url": "http://arxiv.org/abs/2511.00617v1",
+    "queried_author": "Noah Goodman",
+    "matching_authors": [
+      "Noah Goodman"
+    ]
+  },
+  {
     "title": "Culture Cartography: Mapping the Landscape of Cultural Knowledge",
     "authors": [
       "Caleb Ziems",
@@ -48,10 +235,10 @@
       "Ranjay Krishna",
       "Yu Cheng"
     ],
-    "summary": "Multimodal reasoning requires iterative coordination between language and\nvision, yet it remains unclear what constitutes a meaningful interleaved chain\nof thought. We posit that text and image thoughts should function as\ncomplementary, rather than isomorphic, modalities that mutually advance\nreason...",
+    "summary": "Multimodal reasoning requires iterative coordination between language and\nvision, yet it remains unclear what constitutes a meaningful interleaved chain\nof thought. We posit that text and image thoughts should function as\ncomplementary rather than isomorphic modalities that mutually advance\nreasonin...",
     "published": "Oct 30",
-    "pdf_url": "http://arxiv.org/pdf/2510.27492v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.27492v1",
+    "pdf_url": "http://arxiv.org/pdf/2510.27492v2",
+    "arxiv_url": "http://arxiv.org/abs/2510.27492v2",
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
@@ -94,40 +281,6 @@
     ]
   },
   {
-    "title": "The Tool Decathlon: Benchmarking Language Agents for Diverse, Realistic, and Long-Horizon Task Execution",
-    "authors": [
-      "Junlong Li",
-      "Wenshuo Zhao",
-      "Jian Zhao",
-      "Weihao Zeng",
-      "Haoze Wu",
-      "Xiaochen Wang",
-      "Rui Ge",
-      "Yuxuan Cao",
-      "Yuzhen Huang",
-      "Wei Liu",
-      "Junteng Liu",
-      "Zhaochen Su",
-      "Yiyang Guo",
-      "Fan Zhou",
-      "Lueyang Zhang",
-      "Juan Michelini",
-      "Xingyao Wang",
-      "Xiang Yue",
-      "Shuyan Zhou",
-      "Graham Neubig",
-      "Junxian He"
-    ],
-    "summary": "Real-world language agents must handle complex, multi-step workflows across\ndiverse Apps. For instance, an agent may manage emails by coordinating with\ncalendars and file systems, or monitor a production database to detect\nanomalies and generate reports following an operating manual. However, existi...",
-    "published": "Oct 29",
-    "pdf_url": "http://arxiv.org/pdf/2510.25726v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.25726v1",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
-    ]
-  },
-  {
     "title": "RLMEval: Evaluating Research-Level Neural Theorem Proving",
     "authors": [
       "Auguste Poiroux",
@@ -141,40 +294,6 @@
     "queried_author": "Antoine Bosselut",
     "matching_authors": [
       "Antoine Bosselut"
-    ]
-  },
-  {
-    "title": "Agent Data Protocol: Unifying Datasets for Diverse, Effective Fine-tuning of LLM Agents",
-    "authors": [
-      "Yueqi Song",
-      "Ketan Ramaneti",
-      "Zaid Sheikh",
-      "Ziru Chen",
-      "Boyu Gou",
-      "Tianbao Xie",
-      "Yiheng Xu",
-      "Danyang Zhang",
-      "Apurva Gandhi",
-      "Fan Yang",
-      "Joseph Liu",
-      "Tianyue Ou",
-      "Zhihao Yuan",
-      "Frank Xu",
-      "Shuyan Zhou",
-      "Xingyao Wang",
-      "Xiang Yue",
-      "Tao Yu",
-      "Huan Sun",
-      "Yu Su",
-      "Graham Neubig"
-    ],
-    "summary": "Public research results on large-scale supervised finetuning of AI agents\nremain relatively rare, since the collection of agent training data presents\nunique challenges. In this work, we argue that the bottleneck is not a lack of\nunderlying data sources, but that a large variety of data is fragmente...",
-    "published": "Oct 28",
-    "pdf_url": "http://arxiv.org/pdf/2510.24702v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.24702v1",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
     ]
   },
   {
@@ -217,32 +336,6 @@
       "Diyi Yang",
       "Percy Liang",
       "William Held"
-    ]
-  },
-  {
-    "title": "ReplicationBench: Can AI Agents Replicate Astrophysics Research Papers?",
-    "authors": [
-      "Christine Ye",
-      "Sihan Yuan",
-      "Suchetha Cooray",
-      "Steven Dillmann",
-      "Ian L. V. Roque",
-      "Dalya Baron",
-      "Philipp Frank",
-      "Sergio Martin-Alvarez",
-      "Nolan Koblischke",
-      "Frank J Qu",
-      "Diyi Yang",
-      "Risa Wechsler",
-      "Ioana Ciuca"
-    ],
-    "summary": "Frontier AI agents show increasing promise as scientific research assistants,\nand may eventually be useful for extended, open-ended research workflows.\nHowever, in order to use agents for novel research, we must first assess the\nunderlying faithfulness and correctness of their work. To evaluate agen...",
-    "published": "Oct 28",
-    "pdf_url": "http://arxiv.org/pdf/2510.24591v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.24591v1",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang"
     ]
   },
   {
@@ -301,25 +394,6 @@
     "matching_authors": [
       "Maarten Sap",
       "Yejin Choi"
-    ]
-  },
-  {
-    "title": "How Do AI Agents Do Human Work? Comparing AI and Human Workflows Across Diverse Occupations",
-    "authors": [
-      "Zora Zhiruo Wang",
-      "Yijia Shao",
-      "Omar Shaikh",
-      "Daniel Fried",
-      "Graham Neubig",
-      "Diyi Yang"
-    ],
-    "summary": "AI agents are continually optimized for tasks related to human work, such as\nsoftware engineering and professional writing, signaling a pressing trend with\nsignificant impacts on the human workforce. However, these agent developments\nhave often not been grounded in a clear understanding of how human...",
-    "published": "Oct 26",
-    "pdf_url": "http://arxiv.org/pdf/2510.22780v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.22780v1",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
     ]
   },
   {
@@ -399,32 +473,6 @@
     "queried_author": "Maarten Sap",
     "matching_authors": [
       "Maarten Sap"
-    ]
-  },
-  {
-    "title": "RiboPO: Preference Optimization for Structure- and Stability-Aware RNA Design",
-    "authors": [
-      "Minghao Sun",
-      "Hanqun Cao",
-      "Zhou Zhang",
-      "Chen Wei",
-      "Liang Wang",
-      "Tianrui Jia",
-      "Zhiyuan Liu",
-      "Tianfan Fu",
-      "Xiangru Tang",
-      "Yejin Choi",
-      "Pheng-Ann Heng",
-      "Fang Wu",
-      "Yang Zhang"
-    ],
-    "summary": "Designing RNA sequences that reliably adopt specified three-dimensional\nstructures while maintaining thermodynamic stability remains challenging for\nsynthetic biology and therapeutics. Current inverse folding approaches optimize\nfor sequence recovery or single structural metrics, failing to simultan...",
-    "published": "Oct 24",
-    "pdf_url": "http://arxiv.org/pdf/2510.21161v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.21161v2",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
     ]
   },
   {
@@ -892,27 +940,6 @@
     ]
   },
   {
-    "title": "EVALUESTEER: Measuring Reward Model Steerability Towards Values and Preferences",
-    "authors": [
-      "Kshitish Ghate",
-      "Andy Liu",
-      "Devansh Jain",
-      "Taylor Sorensen",
-      "Atoosa Kasirzadeh",
-      "Aylin Caliskan",
-      "Mona T. Diab",
-      "Maarten Sap"
-    ],
-    "summary": "As large language models (LLMs) are deployed globally, creating pluralistic\nsystems that can accommodate the diverse preferences and values of users\nworldwide becomes essential. We introduce EVALUESTEER, a benchmark to measure\nLLMs' and reward models' (RMs) steerability towards users' value and styl...",
-    "published": "Oct 07",
-    "pdf_url": "http://arxiv.org/pdf/2510.06370v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.06370v2",
-    "queried_author": "Maarten Sap",
-    "matching_authors": [
-      "Maarten Sap"
-    ]
-  },
-  {
     "title": "Latent Speech-Text Transformer",
     "authors": [
       "Yen-Ju Lu",
@@ -1202,22 +1229,6 @@
     ]
   },
   {
-    "title": "Humanline: Online Alignment as Perceptual Loss",
-    "authors": [
-      "Sijia Liu",
-      "Niklas Muennighoff",
-      "Kawin Ethayarajh"
-    ],
-    "summary": "Online alignment (e.g., GRPO) is generally more performant than offline\nalignment (e.g., DPO) -- but why? Drawing on prospect theory from behavioral\neconomics, we propose a human-centric explanation. We prove that online\non-policy sampling better approximates the human-perceived distribution of what...",
-    "published": "Sep 29",
-    "pdf_url": "http://arxiv.org/pdf/2509.24207v1",
-    "arxiv_url": "http://arxiv.org/abs/2509.24207v1",
-    "queried_author": "Niklas Muennighoff",
-    "matching_authors": [
-      "Niklas Muennighoff"
-    ]
-  },
-  {
     "title": "Mapping Overlaps in Benchmarks through Perplexity in the Wild",
     "authors": [
       "Siyang Wu",
@@ -1418,24 +1429,6 @@
     ]
   },
   {
-    "title": "Amortized Latent Steering: Low-Cost Alternative to Test-Time Optimization",
-    "authors": [
-      "Nathan Egbuna",
-      "Saatvik Gaur",
-      "Sunishchal Dev",
-      "Ashwinee Panda",
-      "Maheep Chaudhary"
-    ],
-    "summary": "Test-time optimization remains impractical at scale due to prohibitive\ninference costs\\textemdash techniques like iterative refinement and multi-step\nverification can require $10$--$100\\times$ more compute per query than standard\ndecoding. Latent space test-time optimization methods like LatentSeek ...",
-    "published": "Sep 10",
-    "pdf_url": "http://arxiv.org/pdf/2509.18116v1",
-    "arxiv_url": "http://arxiv.org/abs/2509.18116v1",
-    "queried_author": "Ashwinee Panda",
-    "matching_authors": [
-      "Ashwinee Panda"
-    ]
-  },
-  {
     "title": "mmBERT: A Modern Multilingual Encoder with Annealed Language Learning",
     "authors": [
       "Marc Marone",
@@ -1452,26 +1445,6 @@
     "queried_author": "Orion Weller",
     "matching_authors": [
       "Orion Weller"
-    ]
-  },
-  {
-    "title": "OLMoASR: Open Models and Data for Training Robust Speech Recognition Models",
-    "authors": [
-      "Huong Ngo",
-      "Matt Deitke",
-      "Martijn Bartelds",
-      "Sarah Pratt",
-      "Josh Gardner",
-      "Matt Jordan",
-      "Ludwig Schmidt"
-    ],
-    "summary": "Improvements in training data scale and quality have led to significant\nadvances, yet its influence in speech recognition remains underexplored. In\nthis paper, we present a large-scale dataset, OLMoASR-Pool, and series of\nmodels, OLMoASR, to study and develop robust zero-shot speech recognition\nmode...",
-    "published": "Aug 28",
-    "pdf_url": "http://arxiv.org/pdf/2508.20869v1",
-    "arxiv_url": "http://arxiv.org/abs/2508.20869v1",
-    "queried_author": "Ludwig Schmidt",
-    "matching_authors": [
-      "Ludwig Schmidt"
     ]
   },
   {
@@ -5416,107 +5389,6 @@
     ]
   },
   {
-    "title": "The Singapore Consensus on Global AI Safety Research Priorities",
-    "authors": [
-      "Yoshua Bengio",
-      "Tegan Maharaj",
-      "Luke Ong",
-      "Stuart Russell",
-      "Dawn Song",
-      "Max Tegmark",
-      "Lan Xue",
-      "Ya-Qin Zhang",
-      "Stephen Casper",
-      "Wan Sie Lee",
-      "S\u00f6ren Mindermann",
-      "Vanessa Wilfred",
-      "Vidhisha Balachandran",
-      "Fazl Barez",
-      "Michael Belinsky",
-      "Imane Bello",
-      "Malo Bourgon",
-      "Mark Brakel",
-      "Sim\u00e9on Campos",
-      "Duncan Cass-Beggs",
-      "Jiahao Chen",
-      "Rumman Chowdhury",
-      "Kuan Chua Seah",
-      "Jeff Clune",
-      "Juntao Dai",
-      "Agnes Delaborde",
-      "Nouha Dziri",
-      "Francisco Eiras",
-      "Joshua Engels",
-      "Jinyu Fan",
-      "Adam Gleave",
-      "Noah Goodman",
-      "Fynn Heide",
-      "Johannes Heidecke",
-      "Dan Hendrycks",
-      "Cyrus Hodes",
-      "Bryan Low Kian Hsiang",
-      "Minlie Huang",
-      "Sami Jawhar",
-      "Wang Jingyu",
-      "Adam Tauman Kalai",
-      "Meindert Kamphuis",
-      "Mohan Kankanhalli",
-      "Subhash Kantamneni",
-      "Mathias Bonde Kirk",
-      "Thomas Kwa",
-      "Jeffrey Ladish",
-      "Kwok-Yan Lam",
-      "Wan Lee Sie",
-      "Taewhi Lee",
-      "Xiaojian Li",
-      "Jiajun Liu",
-      "Chaochao Lu",
-      "Yifan Mai",
-      "Richard Mallah",
-      "Julian Michael",
-      "Nick Mo\u00ebs",
-      "Simon M\u00f6ller",
-      "Kihyuk Nam",
-      "Kwan Yee Ng",
-      "Mark Nitzberg",
-      "Besmira Nushi",
-      "Se\u00e1n O h\u00c9igeartaigh",
-      "Alejandro Ortega",
-      "Pierre Peign\u00e9",
-      "James Petrie",
-      "Benjamin Prud'Homme",
-      "Reihaneh Rabbany",
-      "Nayat Sanchez-Pi",
-      "Sarah Schwettmann",
-      "Buck Shlegeris",
-      "Saad Siddiqui",
-      "Aradhana Sinha",
-      "Mart\u00edn Soto",
-      "Cheston Tan",
-      "Dong Ting",
-      "William Tjhi",
-      "Robert Trager",
-      "Brian Tse",
-      "Anthony Tung K. H.",
-      "Vanessa Wilfred",
-      "John Willes",
-      "Denise Wong",
-      "Wei Xu",
-      "Rongwu Xu",
-      "Yi Zeng",
-      "HongJiang Zhang",
-      "Djordje \u017dikeli\u0107"
-    ],
-    "summary": "Rapidly improving AI capabilities and autonomy hold significant promise of\ntransformation, but are also driving vigorous debate on how to ensure that AI\nis safe, i.e., trustworthy, reliable, and secure. Building a trusted ecosystem\nis therefore essential -- it helps people embrace AI with confidence...",
-    "published": "Jun 25",
-    "pdf_url": "http://arxiv.org/pdf/2506.20702v2",
-    "arxiv_url": "http://arxiv.org/abs/2506.20702v2",
-    "queried_author": "Noah Goodman",
-    "matching_authors": [
-      "Noah Goodman"
-    ]
-  },
-  {
     "title": "Report on NSF Workshop on Science of Safe AI",
     "authors": [
       "Rajeev Alur",
@@ -5547,6 +5419,21 @@
     "published": "Jun 20",
     "pdf_url": "http://arxiv.org/pdf/2506.17121v1",
     "arxiv_url": "http://arxiv.org/abs/2506.17121v1",
+    "queried_author": "Alexander Wettig",
+    "matching_authors": [
+      "Alexander Wettig"
+    ]
+  },
+  {
+    "title": "Envelopes of lines, unfoldings and breaking symmetry",
+    "authors": [
+      "Peter Giblin",
+      "Alexander Wettig"
+    ],
+    "summary": "We generalise the well-known ``embroidery'' envelopes of chords joining\npoints at angles $t$ and $mt$ of a single circle in several ways. Firstly we\nallow $m$ to be rational (possibly negative) instead of integral, finding\nformulas for the number of cusps, points at infinity and self-intersections o...",
+    "published": "Jun 19",
+    "pdf_url": "http://arxiv.org/pdf/2506.16547v1",
+    "arxiv_url": "http://arxiv.org/abs/2506.16547v1",
     "queried_author": "Alexander Wettig",
     "matching_authors": [
       "Alexander Wettig"
