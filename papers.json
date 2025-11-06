@@ -1,5 +1,47 @@
 [
   {
+    "title": "The OpenHands Software Agent SDK: A Composable and Extensible Foundation for Production Agents",
+    "authors": [
+      "Xingyao Wang",
+      "Simon Rosenberg",
+      "Juan Michelini",
+      "Calvin Smith",
+      "Hoang Tran",
+      "Engel Nyst",
+      "Rohit Malhotra",
+      "Xuhui Zhou",
+      "Valerie Chen",
+      "Robert Brennan",
+      "Graham Neubig"
+    ],
+    "summary": "Agents are now used widely in the process of software development, but\nbuilding production-ready software engineering agents is a complex task.\nDeploying software agents effectively requires flexibility in implementation\nand experimentation, reliable and secure execution, and interfaces for users to...",
+    "published": "Nov 05",
+    "pdf_url": "http://arxiv.org/pdf/2511.03690v1",
+    "arxiv_url": "http://arxiv.org/abs/2511.03690v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
+    "title": "Reading Between the Lines: The One-Sided Conversation Problem",
+    "authors": [
+      "Victoria Ebert",
+      "Rishabh Singh",
+      "Tuochao Chen",
+      "Noah A. Smith",
+      "Shyamnath Gollakota"
+    ],
+    "summary": "Conversational AI is constrained in many real-world settings where only one\nside of a dialogue can be recorded, such as telemedicine, call centers, and\nsmart glasses. We formalize this as the one-sided conversation problem (1SC):\ninferring and learning from one side of a conversation. We study two t...",
+    "published": "Nov 04",
+    "pdf_url": "http://arxiv.org/pdf/2511.03056v1",
+    "arxiv_url": "http://arxiv.org/abs/2511.03056v1",
+    "queried_author": "Noah A. Smith",
+    "matching_authors": [
+      "Noah A. Smith"
+    ]
+  },
+  {
     "title": "Oolong: Evaluating Long Context Reasoning and Aggregation Capabilities",
     "authors": [
       "Amanda Bertsch",
@@ -123,26 +165,6 @@
     "queried_author": "Ashwinee Panda",
     "matching_authors": [
       "Ashwinee Panda"
-    ]
-  },
-  {
-    "title": "Accumulating Context Changes the Beliefs of Language Models",
-    "authors": [
-      "Jiayi Geng",
-      "Howard Chen",
-      "Ryan Liu",
-      "Manoel Horta Ribeiro",
-      "Robb Willer",
-      "Graham Neubig",
-      "Thomas L. Griffiths"
-    ],
-    "summary": "Language model (LM) assistants are increasingly used in applications such as\nbrainstorming and research. Improvements in memory and context size have\nallowed these models to become more autonomous, which has also resulted in more\ntext accumulation in their context windows without explicit user inter...",
-    "published": "Nov 03",
-    "pdf_url": "http://arxiv.org/pdf/2511.01805v2",
-    "arxiv_url": "http://arxiv.org/abs/2511.01805v2",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
     ]
   },
   {
@@ -1544,8 +1566,7 @@
     "matching_authors": [
       "Ian Magnusson",
       "Jesse Dodge",
-      "Kyle Lo",
-      "Noah A. Smith"
+      "Kyle Lo"
     ]
   },
   {
@@ -5419,21 +5440,6 @@
     "published": "Jun 20",
     "pdf_url": "http://arxiv.org/pdf/2506.17121v1",
     "arxiv_url": "http://arxiv.org/abs/2506.17121v1",
-    "queried_author": "Alexander Wettig",
-    "matching_authors": [
-      "Alexander Wettig"
-    ]
-  },
-  {
-    "title": "Envelopes of lines, unfoldings and breaking symmetry",
-    "authors": [
-      "Peter Giblin",
-      "Alexander Wettig"
-    ],
-    "summary": "We generalise the well-known ``embroidery'' envelopes of chords joining\npoints at angles $t$ and $mt$ of a single circle in several ways. Firstly we\nallow $m$ to be rational (possibly negative) instead of integral, finding\nformulas for the number of cusps, points at infinity and self-intersections o...",
-    "published": "Jun 19",
-    "pdf_url": "http://arxiv.org/pdf/2506.16547v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.16547v1",
     "queried_author": "Alexander Wettig",
     "matching_authors": [
       "Alexander Wettig"
