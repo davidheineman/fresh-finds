@@ -1,5 +1,23 @@
 [
   {
+    "title": "Real-Time Reasoning Agents in Evolving Environments",
+    "authors": [
+      "Yule Wen",
+      "Yixin Ye",
+      "Yanzhe Zhang",
+      "Diyi Yang",
+      "Hao Zhu"
+    ],
+    "summary": "Agents in the real world must make not only logical but also timely\njudgments. This requires continuous awareness of the dynamic environment:\nhazards emerge, opportunities arise, and other agents act, while the agent's\nreasoning is still unfolding. Despite advances in language model reasoning,\nexist...",
+    "published": "Nov 07",
+    "pdf_url": "http://arxiv.org/pdf/2511.04898v1",
+    "arxiv_url": "http://arxiv.org/abs/2511.04898v1",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang"
+    ]
+  },
+  {
     "title": "Addressing divergent representations from causal interventions on neural networks",
     "authors": [
       "Satchel Grant",
@@ -226,6 +244,61 @@
     ]
   },
   {
+    "title": "Measuring what Matters: Construct Validity in Large Language Model Benchmarks",
+    "authors": [
+      "Andrew M. Bean",
+      "Ryan Othniel Kearns",
+      "Angelika Romanou",
+      "Franziska Sofia Hafner",
+      "Harry Mayne",
+      "Jan Batzner",
+      "Negar Foroutan",
+      "Chris Schmitz",
+      "Karolina Korgul",
+      "Hunar Batra",
+      "Oishi Deb",
+      "Emma Beharry",
+      "Cornelius Emde",
+      "Thomas Foster",
+      "Anna Gausen",
+      "Mar\u00eda Grandury",
+      "Simeng Han",
+      "Valentin Hofmann",
+      "Lujain Ibrahim",
+      "Hazel Kim",
+      "Hannah Rose Kirk",
+      "Fangru Lin",
+      "Gabrielle Kaili-May Liu",
+      "Lennart Luettgau",
+      "Jabez Magomere",
+      "Jonathan Rystr\u00f8m",
+      "Anna Sotnikova",
+      "Yushi Yang",
+      "Yilun Zhao",
+      "Adel Bibi",
+      "Antoine Bosselut",
+      "Ronald Clark",
+      "Arman Cohan",
+      "Jakob Foerster",
+      "Yarin Gal",
+      "Scott A. Hale",
+      "Inioluwa Deborah Raji",
+      "Christopher Summerfield",
+      "Philip H. S. Torr",
+      "Cozmin Ududec",
+      "Luc Rocher",
+      "Adam Mahdi"
+    ],
+    "summary": "Evaluating large language models (LLMs) is crucial for both assessing their\ncapabilities and identifying safety or robustness issues prior to deployment.\nReliably measuring abstract and complex phenomena such as 'safety' and\n'robustness' requires strong construct validity, that is, having measures t...",
+    "published": "Nov 03",
+    "pdf_url": "http://arxiv.org/pdf/2511.04703v1",
+    "arxiv_url": "http://arxiv.org/abs/2511.04703v1",
+    "queried_author": "Antoine Bosselut",
+    "matching_authors": [
+      "Antoine Bosselut"
+    ]
+  },
+  {
     "title": "CodeClash: Benchmarking Goal-Oriented Software Engineering",
     "authors": [
       "John Yang",
@@ -361,22 +434,6 @@
     ]
   },
   {
-    "title": "RLMEval: Evaluating Research-Level Neural Theorem Proving",
-    "authors": [
-      "Auguste Poiroux",
-      "Antoine Bosselut",
-      "Viktor Kun\u010dak"
-    ],
-    "summary": "Despite impressive results on curated benchmarks, the practical impact of\nlarge language models (LLMs) on research-level neural theorem proving and proof\nautoformalization is still limited. We introduce RLMEval, an evaluation suite\nfor these tasks, focusing on research-level mathematics from real-wo...",
-    "published": "Oct 29",
-    "pdf_url": "http://arxiv.org/pdf/2510.25427v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.25427v1",
-    "queried_author": "Antoine Bosselut",
-    "matching_authors": [
-      "Antoine Bosselut"
-    ]
-  },
-  {
     "title": "SPICE: Self-Play In Corpus Environments Improves Reasoning",
     "authors": [
       "Bo Liu",
@@ -411,9 +468,8 @@
     "published": "Oct 28",
     "pdf_url": "http://arxiv.org/pdf/2510.24626v1",
     "arxiv_url": "http://arxiv.org/abs/2510.24626v1",
-    "queried_author": "Diyi Yang",
+    "queried_author": "Percy Liang",
     "matching_authors": [
-      "Diyi Yang",
       "Percy Liang",
       "William Held"
     ]
@@ -5425,24 +5481,6 @@
     "queried_author": "Colin Raffel",
     "matching_authors": [
       "Colin Raffel"
-    ]
-  },
-  {
-    "title": "Report on NSF Workshop on Science of Safe AI",
-    "authors": [
-      "Rajeev Alur",
-      "Greg Durrett",
-      "Hadas Kress-Gazit",
-      "Corina P\u0103s\u0103reanu",
-      "Ren\u00e9 Vidal"
-    ],
-    "summary": "Recent advances in machine learning, particularly the emergence of foundation\nmodels, are leading to new opportunities to develop technology-based solutions\nto societal problems. However, the reasoning and inner workings of today's\ncomplex AI models are not transparent to the user, and there are no ...",
-    "published": "Jun 24",
-    "pdf_url": "http://arxiv.org/pdf/2506.22492v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.22492v1",
-    "queried_author": "Greg Durrett",
-    "matching_authors": [
-      "Greg Durrett"
     ]
   }
 ]
