@@ -46858,27 +46858,6 @@
     ]
   },
   {
-    "title": "Unfolding Spatial Cognition: Evaluating Multimodal Models on Visual Simulations",
-    "authors": [
-      "Linjie Li",
-      "Mahtab Bigverdi",
-      "Jiawei Gu",
-      "Zixian Ma",
-      "Yinuo Yang",
-      "Ziang Li",
-      "Yejin Choi",
-      "Ranjay Krishna"
-    ],
-    "summary": "Spatial cognition is essential for human intelligence, enabling problem-solving through visual simulations rather than solely relying on verbal reasoning. However, existing AI benchmarks primarily assess verbal reasoning, neglecting the complexities of non-verbal, multi-step visual simulation. We in...",
-    "published": "Jun 05",
-    "pdf_url": null,
-    "arxiv_url": "http://arxiv.org/abs/2506.04633v1",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
     "title": "Understanding challenges to the interpretation of disaggregated evaluations of algorithmic fairness",
     "authors": [
       "Stephen R. Pfohl",
@@ -49846,6 +49825,26 @@
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
+    ]
+  },
+  {
+    "title": "CRUST-Bench: A Comprehensive Benchmark for C-to-safe-Rust Transpilation",
+    "authors": [
+      "Anirudh Khatry",
+      "Robert Zhang",
+      "Jia Pan",
+      "Ziteng Wang",
+      "Qiaochu Chen",
+      "Greg Durrett",
+      "Isil Dillig"
+    ],
+    "summary": "C-to-Rust transpilation is essential for modernizing legacy C code while enhancing safety and interoperability with modern Rust ecosystems. However, no dataset currently exists for evaluating whether a system can transpile C into safe Rust that passes a set of test cases. We introduce CRUST-Bench, a...",
+    "published": "Apr 21",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2504.15254v3",
+    "queried_author": "Greg Durrett",
+    "matching_authors": [
+      "Greg Durrett"
     ]
   }
 ]
