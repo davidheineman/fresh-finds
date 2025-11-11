@@ -1,5 +1,21 @@
 [
   {
+    "title": "olmOCR 2: Unit Test Rewards for Document OCR",
+    "authors": [
+      "Jake Poznanski",
+      "Luca Soldaini",
+      "Kyle Lo"
+    ],
+    "summary": "We present olmOCR 2, the latest in our family of powerful OCR systems for converting digitized print documents, like PDFs, into clean, naturally ordered plain text. olmOCR 2 is powered by olmOCR-2-7B-1025, a specialized, 7B vision language model (VLM) trained using reinforcement learning with verifi...",
+    "published": "Oct 22",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2510.19817v1",
+    "queried_author": "Kyle Lo",
+    "matching_authors": [
+      "Kyle Lo"
+    ]
+  },
+  {
     "title": "Zero-shot Multimodal Document Retrieval via Cross-modal Question Generation",
     "authors": [
       "Yejin Choi",
@@ -16,6 +32,109 @@
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
+    ]
+  },
+  {
+    "title": "Prompting as Scientific Inquiry",
+    "authors": [
+      "Ari Holtzman",
+      "Chenhao Tan"
+    ],
+    "summary": "Prompting is the primary method by which we study and control large language models. It is also one of the most powerful: nearly every major capability attributed to LLMs-few-shot learning, chain-of-thought, constitutional AI-was first unlocked through prompting. Yet prompting is rarely treated as s...",
+    "published": "Jun 30",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2507.00163v2",
+    "queried_author": "Ari Holtzman",
+    "matching_authors": [
+      "Ari Holtzman"
+    ]
+  },
+  {
+    "title": "VideoGameBench: Can Vision-Language Models complete popular video games?",
+    "authors": [
+      "Alex L. Zhang",
+      "Thomas L. Griffiths",
+      "Karthik R. Narasimhan",
+      "Ofir Press"
+    ],
+    "summary": "Vision-language models (VLMs) have achieved strong results on coding and math benchmarks that are challenging for humans, yet their ability to perform tasks that come naturally to humans--such as perception, spatial navigation, and memory management--remains understudied. Real video games are crafte...",
+    "published": "May 23",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2505.18134v2",
+    "queried_author": "Karthik R Narasimhan",
+    "matching_authors": [
+      "Karthik R Narasimhan"
+    ]
+  },
+  {
+    "title": "Do Language Models Use Their Depth Efficiently?",
+    "authors": [
+      "R\u00f3bert Csord\u00e1s",
+      "Christopher D. Manning",
+      "Christopher Potts"
+    ],
+    "summary": "Modern LLMs are increasingly deep, and depth correlates with performance, albeit with diminishing returns. However, do these models use their depth efficiently? Do they compose more features to create higher-order computations that are impossible in shallow models, or do they merely spread the same ...",
+    "published": "May 20",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2505.13898v3",
+    "queried_author": "Christopher D Manning",
+    "matching_authors": [
+      "Christopher D Manning"
+    ]
+  },
+  {
+    "title": "YourBench: Easy Custom Evaluation Sets for Everyone",
+    "authors": [
+      "Sumuk Shashidhar",
+      "Cl\u00e9mentine Fourrier",
+      "Alina Lozovskia",
+      "Thomas Wolf",
+      "Gokhan Tur",
+      "Dilek Hakkani-T\u00fcr"
+    ],
+    "summary": "Evaluating large language models (LLMs) effectively remains a critical bottleneck, as traditional static benchmarks suffer from saturation and contamination, while human evaluations are costly and slow. This hinders timely or domain-specific assessment, crucial for real-world applications. We introd...",
+    "published": "Apr 02",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2504.01833v1",
+    "queried_author": "Cl\u00e9mentine Fourrier",
+    "matching_authors": [
+      "Cl\u00e9mentine Fourrier"
+    ]
+  },
+  {
+    "title": "Privacy Auditing of Large Language Models",
+    "authors": [
+      "Ashwinee Panda",
+      "Xinyu Tang",
+      "Milad Nasr",
+      "Christopher A. Choquette-Choo",
+      "Prateek Mittal"
+    ],
+    "summary": "Current techniques for privacy auditing of large language models (LLMs) have limited efficacy -- they rely on basic approaches to generate canaries which leads to weak membership inference attacks that in turn give loose lower bounds on the empirical privacy leakage. We develop canaries that are far...",
+    "published": "Mar 09",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2503.06808v1",
+    "queried_author": "Ashwinee Panda",
+    "matching_authors": [
+      "Ashwinee Panda"
+    ]
+  },
+  {
+    "title": "Large-Scale Data Selection for Instruction Tuning",
+    "authors": [
+      "Hamish Ivison",
+      "Muru Zhang",
+      "Faeze Brahman",
+      "Pang Wei Koh",
+      "Pradeep Dasigi"
+    ],
+    "summary": "Selecting high-quality training data from a larger pool is a crucial step when instruction-tuning language models, as carefully curated datasets often produce models that outperform those trained on much larger, noisier datasets. Automated data selection approaches for instruction-tuning are typical...",
+    "published": "Mar 03",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2503.01807v2",
+    "queried_author": "Hamish Ivison",
+    "matching_authors": [
+      "Hamish Ivison"
     ]
   },
   {
@@ -96,6 +215,39 @@
     "queried_author": "Sean Welleck",
     "matching_authors": [
       "Sean Welleck"
+    ]
+  },
+  {
+    "title": "Talking Heads: Understanding Inter-layer Communication in Transformer Language Models",
+    "authors": [
+      "Jack Merullo",
+      "Carsten Eickhoff",
+      "Ellie Pavlick"
+    ],
+    "summary": "Although it is known that transformer language models (LMs) pass features from early layers to later layers, it is not well understood how this information is represented and routed by the model. We analyze a mechanism used in two LMs to selectively inhibit items in a context in one task, and find t...",
+    "published": "Jun 13",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2406.09519v4",
+    "queried_author": "Jack Merullo",
+    "matching_authors": [
+      "Jack Merullo"
+    ]
+  },
+  {
+    "title": "The Call for Socially Aware Language Technologies",
+    "authors": [
+      "Diyi Yang",
+      "Dirk Hovy",
+      "David Jurgens",
+      "Barbara Plank"
+    ],
+    "summary": "Language technologies have made enormous progress, especially with the introduction of large language models (LLMs). On traditional tasks such as machine translation and sentiment analysis, these models perform at near-human level. These advances can, however, exacerbate a variety of issues that mod...",
+    "published": "May 03",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2405.02411v2",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang"
     ]
   },
   {
@@ -185,6 +337,24 @@
     ]
   },
   {
+    "title": "Teach LLMs to Phish: Stealing Private Information from Language Models",
+    "authors": [
+      "Ashwinee Panda",
+      "Christopher A. Choquette-Choo",
+      "Zhengming Zhang",
+      "Yaoqing Yang",
+      "Prateek Mittal"
+    ],
+    "summary": "When large language models are trained on private data, it can be a significant privacy risk for them to memorize and regurgitate sensitive information. In this work, we propose a new practical data extraction attack that we call \"neural phishing\". This attack enables an adversary to target and extr...",
+    "published": "Mar 01",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2403.00871v1",
+    "queried_author": "Ashwinee Panda",
+    "matching_authors": [
+      "Ashwinee Panda"
+    ]
+  },
+  {
     "title": "Mamba: Linear-Time Sequence Modeling with Selective State Spaces",
     "authors": [
       "Albert Gu",
@@ -197,6 +367,40 @@
     "queried_author": "Tri Dao",
     "matching_authors": [
       "Tri Dao"
+    ]
+  },
+  {
+    "title": "GAIA: a benchmark for General AI Assistants",
+    "authors": [
+      "Gr\u00e9goire Mialon",
+      "Cl\u00e9mentine Fourrier",
+      "Craig Swift",
+      "Thomas Wolf",
+      "Yann LeCun",
+      "Thomas Scialom"
+    ],
+    "summary": "We introduce GAIA, a benchmark for General AI Assistants that, if solved, would represent a milestone in AI research. GAIA proposes real-world questions that require a set of fundamental abilities such as reasoning, multi-modality handling, web browsing, and generally tool-use proficiency. GAIA ques...",
+    "published": "Nov 21",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2311.12983v1",
+    "queried_author": "Cl\u00e9mentine Fourrier",
+    "matching_authors": [
+      "Cl\u00e9mentine Fourrier"
+    ]
+  },
+  {
+    "title": "Towards Evaluating AI Systems for Moral Status Using Self-Reports",
+    "authors": [
+      "Ethan Perez",
+      "Robert Long"
+    ],
+    "summary": "As AI systems become more advanced and widely deployed, there will likely be increasing debate over whether AI systems could have conscious experiences, desires, or other states of potential moral significance. It is important to inform these discussions with empirical evidence to the extent possibl...",
+    "published": "Nov 14",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2311.08576v1",
+    "queried_author": "Ethan Perez",
+    "matching_authors": [
+      "Ethan Perez"
     ]
   },
   {
@@ -217,6 +421,54 @@
     ]
   },
   {
+    "title": "Circuit Component Reuse Across Tasks in Transformer Language Models",
+    "authors": [
+      "Jack Merullo",
+      "Carsten Eickhoff",
+      "Ellie Pavlick"
+    ],
+    "summary": "Recent work in mechanistic interpretability has shown that behaviors in language models can be successfully reverse-engineered through circuit analysis. A common criticism, however, is that each circuit is task-specific, and thus such analysis cannot contribute to understanding the models at a highe...",
+    "published": "Oct 12",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2310.08744v3",
+    "queried_author": "Jack Merullo",
+    "matching_authors": [
+      "Jack Merullo"
+    ]
+  },
+  {
+    "title": "Artificial Intelligence and Aesthetic Judgment",
+    "authors": [
+      "Jessica Hullman",
+      "Ari Holtzman",
+      "Andrew Gelman"
+    ],
+    "summary": "Generative AIs produce creative outputs in the style of human expression. We argue that encounters with the outputs of modern generative AI models are mediated by the same kinds of aesthetic judgments that organize our interactions with artwork. The interpretation procedure we use on art we find in ...",
+    "published": "Aug 21",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2309.12338v1",
+    "queried_author": "Ari Holtzman",
+    "matching_authors": [
+      "Ari Holtzman"
+    ]
+  },
+  {
+    "title": "Generative Models as a Complex Systems Science: How can we make sense of large language model behavior?",
+    "authors": [
+      "Ari Holtzman",
+      "Peter West",
+      "Luke Zettlemoyer"
+    ],
+    "summary": "Coaxing out desired behavior from pretrained models, while avoiding undesirable ones, has redefined NLP and is reshaping how we interact with computers. What was once a scientific engineering discipline-in which building blocks are stacked one on top of the other-is arguably already a complex system...",
+    "published": "Jul 31",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2308.00189v1",
+    "queried_author": "Ari Holtzman",
+    "matching_authors": [
+      "Ari Holtzman"
+    ]
+  },
+  {
     "title": "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning",
     "authors": [
       "Tri Dao"
@@ -228,6 +480,121 @@
     "queried_author": "Tri Dao",
     "matching_authors": [
       "Tri Dao"
+    ]
+  },
+  {
+    "title": "Reproducibility in NLP: What Have We Learned from the Checklist?",
+    "authors": [
+      "Ian Magnusson",
+      "Noah A. Smith",
+      "Jesse Dodge"
+    ],
+    "summary": "Scientific progress in NLP rests on the reproducibility of researchers' claims. The *CL conferences created the NLP Reproducibility Checklist in 2020 to be completed by authors at submission to remind them of key information to include. We provide the first analysis of the Checklist by examining 10,...",
+    "published": "Jun 16",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2306.09562v1",
+    "queried_author": "Ian Magnusson",
+    "matching_authors": [
+      "Ian Magnusson"
+    ]
+  },
+  {
+    "title": "Backpack Language Models",
+    "authors": [
+      "John Hewitt",
+      "John Thickstun",
+      "Christopher D. Manning",
+      "Percy Liang"
+    ],
+    "summary": "We present Backpacks: a new neural architecture that marries strong modeling performance with an interface for interpretability and control. Backpacks learn multiple non-contextual sense vectors for each word in a vocabulary, and represent a word in a sequence as a context-dependent, non-negative li...",
+    "published": "May 26",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2305.16765v1",
+    "queried_author": "John Hewitt",
+    "matching_authors": [
+      "John Hewitt"
+    ]
+  },
+  {
+    "title": "Language Models Implement Simple Word2Vec-style Vector Arithmetic",
+    "authors": [
+      "Jack Merullo",
+      "Carsten Eickhoff",
+      "Ellie Pavlick"
+    ],
+    "summary": "A primary criticism towards language models (LMs) is their inscrutability. This paper presents evidence that, despite their size and complexity, LMs sometimes exploit a simple vector arithmetic style mechanism to solve some relational tasks using regularities encoded in the hidden space of the model...",
+    "published": "May 25",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2305.16130v3",
+    "queried_author": "Jack Merullo",
+    "matching_authors": [
+      "Jack Merullo"
+    ]
+  },
+  {
+    "title": "Decomposing Complex Queries for Tip-of-the-tongue Retrieval",
+    "authors": [
+      "Kevin Lin",
+      "Kyle Lo",
+      "Joseph E. Gonzalez",
+      "Dan Klein"
+    ],
+    "summary": "When re-finding items, users who forget or are uncertain about identifying details often rely on creative strategies for expressing their information needs -- complex queries that describe content elements (e.g., book characters or events), information beyond the document text (e.g., descriptions of...",
+    "published": "May 24",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2305.15053v1",
+    "queried_author": "Kyle Lo",
+    "matching_authors": [
+      "Kyle Lo"
+    ]
+  },
+  {
+    "title": "Anchor Prediction: Automatic Refinement of Internet Links",
+    "authors": [
+      "Nelson F. Liu",
+      "Kenton Lee",
+      "Kristina Toutanova"
+    ],
+    "summary": "Internet links enable users to deepen their understanding of a topic by providing convenient access to related information. However, the majority of links are unanchored -- they link to a target webpage as a whole, and readers may expend considerable effort localizing the specific parts of the targe...",
+    "published": "May 23",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2305.14337v2",
+    "queried_author": "Nelson F. Liu",
+    "matching_authors": [
+      "Nelson F. Liu"
+    ]
+  },
+  {
+    "title": "Privacy-Preserving In-Context Learning for Large Language Models",
+    "authors": [
+      "Tong Wu",
+      "Ashwinee Panda",
+      "Jiachen T. Wang",
+      "Prateek Mittal"
+    ],
+    "summary": "In-context learning (ICL) is an important capability of Large Language Models (LLMs), enabling these models to dynamically adapt based on specific, in-context exemplars, thereby improving accuracy and relevance. However, LLM's responses may leak the sensitive private information contained in in-cont...",
+    "published": "May 02",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2305.01639v2",
+    "queried_author": "Ashwinee Panda",
+    "matching_authors": [
+      "Ashwinee Panda"
+    ]
+  },
+  {
+    "title": "Evaluating Verifiability in Generative Search Engines",
+    "authors": [
+      "Nelson F. Liu",
+      "Tianyi Zhang",
+      "Percy Liang"
+    ],
+    "summary": "Generative search engines directly generate responses to user queries, along with in-line citations. A prerequisite trait of a trustworthy generative search engine is verifiability, i.e., systems should cite comprehensively (high citation recall; all statements are fully supported by citations) and ...",
+    "published": "Apr 19",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2304.09848v2",
+    "queried_author": "Nelson F. Liu",
+    "matching_authors": [
+      "Nelson F. Liu"
     ]
   },
   {
@@ -247,6 +614,105 @@
     ]
   },
   {
+    "title": "A Toy Model of Universality: Reverse Engineering How Networks Learn Group Operations",
+    "authors": [
+      "Bilal Chughtai",
+      "Lawrence Chan",
+      "Neel Nanda"
+    ],
+    "summary": "Universality is a key hypothesis in mechanistic interpretability -- that different models learn similar features and circuits when trained on similar tasks. In this work, we study the universality hypothesis by examining how small neural networks learn to implement group composition. We present a no...",
+    "published": "Feb 06",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2302.03025v2",
+    "queried_author": "Neel Nanda",
+    "matching_authors": [
+      "Neel Nanda"
+    ]
+  },
+  {
+    "title": "Progress measures for grokking via mechanistic interpretability",
+    "authors": [
+      "Neel Nanda",
+      "Lawrence Chan",
+      "Tom Lieberum",
+      "Jess Smith",
+      "Jacob Steinhardt"
+    ],
+    "summary": "Neural networks often exhibit emergent behavior, where qualitatively new capabilities arise from scaling up the amount of parameters, training data, or training steps. One approach to understanding emergence is to find continuous \\textit{progress measures} that underlie the seemingly discontinuous q...",
+    "published": "Jan 12",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2301.05217v3",
+    "queried_author": "Neel Nanda",
+    "matching_authors": [
+      "Neel Nanda"
+    ]
+  },
+  {
+    "title": "Language Models as Agent Models",
+    "authors": [
+      "Jacob Andreas"
+    ],
+    "summary": "Language models (LMs) are trained on collections of documents, written by individual human agents to achieve specific goals in an outside world. During training, LMs have access only to text of these documents, with no direct evidence of the internal states of the agents that produced them -- a fact...",
+    "published": "Dec 03",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2212.01681v1",
+    "queried_author": "Jacob Andreas",
+    "matching_authors": [
+      "Jacob Andreas"
+    ]
+  },
+  {
+    "title": "Data-Efficient Finetuning Using Cross-Task Nearest Neighbors",
+    "authors": [
+      "Hamish Ivison",
+      "Noah A. Smith",
+      "Hannaneh Hajishirzi",
+      "Pradeep Dasigi"
+    ],
+    "summary": "Obtaining labeled data to train a model for a task of interest is often expensive. Prior work shows training models on multitask data augmented with task descriptions (prompts) effectively transfers knowledge to new tasks. Towards efficiently building task-specific models, we assume access to a smal...",
+    "published": "Dec 01",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2212.00196v2",
+    "queried_author": "Hamish Ivison",
+    "matching_authors": [
+      "Hamish Ivison"
+    ]
+  },
+  {
+    "title": "MTEB: Massive Text Embedding Benchmark",
+    "authors": [
+      "Niklas Muennighoff",
+      "Nouamane Tazi",
+      "Lo\u00efc Magne",
+      "Nils Reimers"
+    ],
+    "summary": "Text embeddings are commonly evaluated on a small set of datasets from a single task not covering their possible applications to other tasks. It is unclear whether state-of-the-art embeddings on semantic textual similarity (STS) can be equally well applied to other tasks like clustering or reranking...",
+    "published": "Oct 13",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2210.07316v3",
+    "queried_author": "Niklas Muennighoff",
+    "matching_authors": [
+      "Niklas Muennighoff"
+    ]
+  },
+  {
+    "title": "Are Sample-Efficient NLP Models More Robust?",
+    "authors": [
+      "Nelson F. Liu",
+      "Ananya Kumar",
+      "Percy Liang",
+      "Robin Jia"
+    ],
+    "summary": "Recent results in image classification and extractive question answering have observed that pre-trained models trained on less in-distribution data have better out-of-distribution performance. However, it is unclear how broadly these trends hold. We conduct a large empirical study across three tasks...",
+    "published": "Oct 12",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2210.06456v2",
+    "queried_author": "Nelson F. Liu",
+    "matching_authors": [
+      "Nelson F. Liu"
+    ]
+  },
+  {
     "title": "Shapley Head Pruning: Identifying and Removing Interference in Multilingual Transformers",
     "authors": [
       "William Held",
@@ -256,8 +722,9 @@
     "published": "Oct 11",
     "pdf_url": null,
     "arxiv_url": "http://arxiv.org/abs/2210.05709v1",
-    "queried_author": "William Held",
+    "queried_author": "Diyi Yang",
     "matching_authors": [
+      "Diyi Yang",
       "William Held"
     ]
   },
@@ -295,6 +762,21 @@
     ]
   },
   {
+    "title": "The Authenticity Gap in Human Evaluation",
+    "authors": [
+      "Kawin Ethayarajh",
+      "Dan Jurafsky"
+    ],
+    "summary": "Human ratings are the gold standard in NLG evaluation. The standard protocol is to collect ratings of generated text, average across annotators, and rank NLG systems by their average scores. However, little consideration has been given as to whether this approach faithfully captures human preference...",
+    "published": "May 24",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2205.11930v2",
+    "queried_author": "Dan Jurafsky",
+    "matching_authors": [
+      "Dan Jurafsky"
+    ]
+  },
+  {
     "title": "When to Use Multi-Task Learning vs Intermediate Fine-Tuning for Pre-Trained Encoder Transfer Learning",
     "authors": [
       "Orion Weller",
@@ -308,6 +790,87 @@
     "queried_author": "Orion Weller",
     "matching_authors": [
       "Orion Weller"
+    ]
+  },
+  {
+    "title": "SUBS: Subtree Substitution for Compositional Semantic Parsing",
+    "authors": [
+      "Jingfeng Yang",
+      "Le Zhang",
+      "Diyi Yang"
+    ],
+    "summary": "Although sequence-to-sequence models often achieve good performance in semantic parsing for i.i.d. data, their performance is still inferior in compositional generalization. Several data augmentation methods have been proposed to alleviate this problem. However, prior work only leveraged superficial...",
+    "published": "May 03",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2205.01538v1",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang"
+    ]
+  },
+  {
+    "title": "Language Contamination Helps Explain the Cross-lingual Capabilities of English Pretrained Models",
+    "authors": [
+      "Terra Blevins",
+      "Luke Zettlemoyer"
+    ],
+    "summary": "English pretrained language models, which make up the backbone of many modern NLP systems, require huge amounts of unlabeled training data. These models are generally presented as being trained only on English text but have been found to transfer surprisingly well to other languages. We investigate ...",
+    "published": "Apr 17",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2204.08110v4",
+    "queried_author": "Luke Zettlemoyer",
+    "matching_authors": [
+      "Luke Zettlemoyer"
+    ]
+  },
+  {
+    "title": "Informativeness and Invariance: Two Perspectives on Spurious Correlations in Natural Language",
+    "authors": [
+      "Jacob Eisenstein"
+    ],
+    "summary": "Spurious correlations are a threat to the trustworthiness of natural language processing systems, motivating research into methods for identifying and eliminating them. However, addressing the problem of spurious correlations requires more clarity on what they are and how they arise in language data...",
+    "published": "Apr 09",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2204.04487v2",
+    "queried_author": "Jacob Eisenstein",
+    "matching_authors": [
+      "Jacob Eisenstein"
+    ]
+  },
+  {
+    "title": "Entity-Centric Query Refinement",
+    "authors": [
+      "David Wadden",
+      "Nikita Gupta",
+      "Kenton Lee",
+      "Kristina Toutanova"
+    ],
+    "summary": "We introduce the task of entity-centric query refinement. Given an input query whose answer is a (potentially large) collection of entities, the task output is a small set of query refinements meant to assist the user in efficient domain exploration and entity discovery. We propose a method to creat...",
+    "published": "Apr 02",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2204.00743v2",
+    "queried_author": "David Wadden",
+    "matching_authors": [
+      "David Wadden"
+    ]
+  },
+  {
+    "title": "Linking Emergent and Natural Languages via Corpus Transfer",
+    "authors": [
+      "Shunyu Yao",
+      "Mo Yu",
+      "Yang Zhang",
+      "Karthik R Narasimhan",
+      "Joshua B. Tenenbaum",
+      "Chuang Gan"
+    ],
+    "summary": "The study of language emergence aims to understand how human languages are shaped by perceptual grounding and communicative intent. Computational approaches to emergent communication (EC) predominantly consider referential games in limited domains and analyze the learned protocol within the game fra...",
+    "published": "Mar 24",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2203.13344v1",
+    "queried_author": "Karthik R Narasimhan",
+    "matching_authors": [
+      "Karthik R Narasimhan"
     ]
   },
   {
@@ -329,6 +892,85 @@
     ]
   },
   {
+    "title": "Hyperdecoders: Instance-specific decoders for multi-task NLP",
+    "authors": [
+      "Hamish Ivison",
+      "Matthew E. Peters"
+    ],
+    "summary": "We investigate input-conditioned hypernetworks for multi-tasking in NLP, generating parameter-efficient adaptations for a decoder using a hypernetwork conditioned on the output of an encoder. This approach produces a unique decoder adaptation for every input instance, allowing the network a larger d...",
+    "published": "Mar 15",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2203.08304v3",
+    "queried_author": "Hamish Ivison",
+    "matching_authors": [
+      "Hamish Ivison"
+    ]
+  },
+  {
+    "title": "SGPT: GPT Sentence Embeddings for Semantic Search",
+    "authors": [
+      "Niklas Muennighoff"
+    ],
+    "summary": "Decoder transformers have continued increasing in scale reaching hundreds of billions of parameters. Due to their scale the same decoder sets state-of-the-art results on various language tasks via prompting or fine-tuning. Yet, these large foundation models remain unusable for the related fields of ...",
+    "published": "Feb 17",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2202.08904v5",
+    "queried_author": "Niklas Muennighoff",
+    "matching_authors": [
+      "Niklas Muennighoff"
+    ]
+  },
+  {
+    "title": "Imagined versus Remembered Stories: Quantifying Differences in Narrative Flow",
+    "authors": [
+      "Maarten Sap",
+      "Anna Jafarpour",
+      "Yejin Choi",
+      "Noah A. Smith",
+      "James W. Pennebaker",
+      "Eric Horvitz"
+    ],
+    "summary": "Lifelong experiences and learned knowledge lead to shared expectations about how common situations tend to unfold. Such knowledge of narrative event flow enables people to weave together a story. However, comparable computational tools to evaluate the flow of events in narratives are limited. We qua...",
+    "published": "Jan 07",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2201.02662v2",
+    "queried_author": "Maarten Sap",
+    "matching_authors": [
+      "Maarten Sap"
+    ]
+  },
+  {
+    "title": "Training Neural Networks with Fixed Sparse Masks",
+    "authors": [
+      "Yi-Lin Sung",
+      "Varun Nair",
+      "Colin Raffel"
+    ],
+    "summary": "During typical gradient-based training of deep neural networks, all of the model's parameters are updated at each iteration. Recent work has shown that it is possible to update only a small subset of the model's parameters during training, which can alleviate storage and communication requirements. ...",
+    "published": "Nov 18",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2111.09839v1",
+    "queried_author": "Colin Raffel",
+    "matching_authors": [
+      "Colin Raffel"
+    ]
+  },
+  {
+    "title": "Merging Models with Fisher-Weighted Averaging",
+    "authors": [
+      "Michael Matena",
+      "Colin Raffel"
+    ],
+    "summary": "Averaging the parameters of models that have the same architecture and initialization can provide a means of combining their respective capabilities. In this paper, we take the perspective that this \"merging\" operation can be seen as choosing parameters that approximately maximize the joint likeliho...",
+    "published": "Nov 18",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2111.09832v2",
+    "queried_author": "Colin Raffel",
+    "matching_authors": [
+      "Colin Raffel"
+    ]
+  },
+  {
     "title": "Focus on what matters: Applying Discourse Coherence Theory to Cross Document Coreference",
     "authors": [
       "William Held",
@@ -339,9 +981,107 @@
     "published": "Oct 11",
     "pdf_url": null,
     "arxiv_url": "http://arxiv.org/abs/2110.05362v1",
-    "queried_author": "William Held",
+    "queried_author": "Dan Jurafsky",
     "matching_authors": [
+      "Dan Jurafsky",
       "William Held"
+    ]
+  },
+  {
+    "title": "An Empirical Investigation of Learning from Biased Toxicity Labels",
+    "authors": [
+      "Neel Nanda",
+      "Jonathan Uesato",
+      "Sven Gowal"
+    ],
+    "summary": "Collecting annotations from human raters often results in a trade-off between the quantity of labels one wishes to gather and the quality of these labels. As such, it is often only possible to gather a small amount of high-quality labels. In this paper, we study how different training strategies can...",
+    "published": "Oct 04",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2110.01577v1",
+    "queried_author": "Neel Nanda",
+    "matching_authors": [
+      "Neel Nanda"
+    ]
+  },
+  {
+    "title": "Expected Validation Performance and Estimation of a Random Variable's Maximum",
+    "authors": [
+      "Jesse Dodge",
+      "Suchin Gururangan",
+      "Dallas Card",
+      "Roy Schwartz",
+      "Noah A. Smith"
+    ],
+    "summary": "Research in NLP is often supported by experimental results, and improved reporting of such results can lead to better understanding and more reproducible science. In this paper we analyze three statistical estimators for expected validation performance, a tool used for reporting performance (e.g., a...",
+    "published": "Oct 01",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2110.00613v1",
+    "queried_author": "Jesse Dodge",
+    "matching_authors": [
+      "Jesse Dodge"
+    ]
+  },
+  {
+    "title": "Extracting Fine-Grained Knowledge Graphs of Scientific Claims: Dataset and Transformer-Based Results",
+    "authors": [
+      "Ian H. Magnusson",
+      "Scott E. Friedman"
+    ],
+    "summary": "Recent transformer-based approaches demonstrate promising results on relational scientific information extraction. Existing datasets focus on high-level description of how research is carried out. Instead we focus on the subtleties of how experimental associations are presented by building SciClaim,...",
+    "published": "Sep 21",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2109.10453v1",
+    "queried_author": "Ian Magnusson",
+    "matching_authors": [
+      "Ian Magnusson"
+    ]
+  },
+  {
+    "title": "Conditional probing: measuring usable information beyond a baseline",
+    "authors": [
+      "John Hewitt",
+      "Kawin Ethayarajh",
+      "Percy Liang",
+      "Christopher D. Manning"
+    ],
+    "summary": "Probing experiments investigate the extent to which neural representations make properties -- like part-of-speech -- predictable. One suggests that a representation encodes a property if probing that representation produces higher accuracy than probing a baseline representation like non-contextual w...",
+    "published": "Sep 19",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2109.09234v1",
+    "queried_author": "John Hewitt",
+    "matching_authors": [
+      "John Hewitt"
+    ]
+  },
+  {
+    "title": "Invertible Frowns: Video-to-Video Facial Emotion Translation",
+    "authors": [
+      "Ian Magnusson",
+      "Aruna Sankaranarayanan",
+      "Andrew Lippman"
+    ],
+    "summary": "We present Wav2Lip-Emotion, a video-to-video translation architecture that modifies facial expressions of emotion in videos of speakers. Previous work modifies emotion in images, uses a single image to produce a video with animated emotion, or puppets facial expressions in videos with landmarks from...",
+    "published": "Sep 16",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2109.08061v2",
+    "queried_author": "Ian Magnusson",
+    "matching_authors": [
+      "Ian Magnusson"
+    ]
+  },
+  {
+    "title": "Overview and Insights from the SciVer Shared Task on Scientific Claim Verification",
+    "authors": [
+      "David Wadden",
+      "Kyle Lo"
+    ],
+    "summary": "We present an overview of the SciVer shared task, presented at the 2nd Scholarly Document Processing (SDP) workshop at NAACL 2021. In this shared task, systems were provided a scientific claim and a corpus of research abstracts, and asked to identify which articles SUPPORT or REFUTE the claim as wel...",
+    "published": "Jul 17",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2107.08188v1",
+    "queried_author": "David Wadden",
+    "matching_authors": [
+      "David Wadden"
     ]
   },
   {
@@ -359,6 +1099,36 @@
     "queried_author": "Rafael Rafailov",
     "matching_authors": [
       "Rafael Rafailov"
+    ]
+  },
+  {
+    "title": "Diagnosing the Impact of AI on Radiology in China",
+    "authors": [
+      "Niklas Muennighoff"
+    ],
+    "summary": "Artificial Intelligence will significantly impact the work environment of radiologists. I suggest that up to 50% of a radiologists work in 2021 will be performed by AI-models in 2025. However, it won't increase beyond that 50% level, as radiologists remain key for human-centered aspects of their job...",
+    "published": "Jun 15",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2106.07921v1",
+    "queried_author": "Niklas Muennighoff",
+    "matching_authors": [
+      "Niklas Muennighoff"
+    ]
+  },
+  {
+    "title": "True Few-Shot Learning with Language Models",
+    "authors": [
+      "Ethan Perez",
+      "Douwe Kiela",
+      "Kyunghyun Cho"
+    ],
+    "summary": "Pretrained language models (LMs) perform well on many tasks even when learning from a few examples, but prior work uses many held-out examples to tune various aspects of learning, such as hyperparameters, training objectives, and natural language templates (\"prompts\"). Here, we evaluate the few-shot...",
+    "published": "May 24",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2105.11447v1",
+    "queried_author": "Ethan Perez",
+    "matching_authors": [
+      "Ethan Perez"
     ]
   },
   {
@@ -394,6 +1164,75 @@
     ]
   },
   {
+    "title": "BASE Layers: Simplifying Training of Large, Sparse Models",
+    "authors": [
+      "Mike Lewis",
+      "Shruti Bhosale",
+      "Tim Dettmers",
+      "Naman Goyal",
+      "Luke Zettlemoyer"
+    ],
+    "summary": "We introduce a new balanced assignment of experts (BASE) layer for large language models that greatly simplifies existing high capacity sparse layers. Sparse layers can dramatically improve the efficiency of training and inference by routing each token to specialized expert modules that contain only...",
+    "published": "Mar 30",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2103.16716v1",
+    "queried_author": "Mike Lewis",
+    "matching_authors": [
+      "Mike Lewis"
+    ]
+  },
+  {
+    "title": "Rissanen Data Analysis: Examining Dataset Characteristics via Description Length",
+    "authors": [
+      "Ethan Perez",
+      "Douwe Kiela",
+      "Kyunghyun Cho"
+    ],
+    "summary": "We introduce a method to determine if a certain capability helps to achieve an accurate model of given data. We view labels as being generated from the inputs by a program composed of subroutines with different capabilities, and we posit that a subroutine is useful if and only if the minimal program...",
+    "published": "Mar 05",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2103.03872v1",
+    "queried_author": "Ethan Perez",
+    "matching_authors": [
+      "Ethan Perez"
+    ]
+  },
+  {
+    "title": "Decontextualization: Making Sentences Stand-Alone",
+    "authors": [
+      "Eunsol Choi",
+      "Jennimaria Palomaki",
+      "Matthew Lamm",
+      "Tom Kwiatkowski",
+      "Dipanjan Das",
+      "Michael Collins"
+    ],
+    "summary": "Models for question answering, dialogue agents, and summarization often interpret the meaning of a sentence in a rich context and use that meaning in a new context. Taking excerpts of text can be problematic, as key pieces may not be explicit in a local window. We isolate and define the problem of s...",
+    "published": "Feb 09",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2102.05169v1",
+    "queried_author": "Eunsol Choi",
+    "matching_authors": [
+      "Eunsol Choi"
+    ]
+  },
+  {
+    "title": "Modeling Context in Answer Sentence Selection Systems on a Latency Budget",
+    "authors": [
+      "Rujun Han",
+      "Luca Soldaini",
+      "Alessandro Moschitti"
+    ],
+    "summary": "Answer Sentence Selection (AS2) is an efficient approach for the design of open-domain Question Answering (QA) systems. In order to achieve low latency, traditional AS2 models score question-answer pairs individually, ignoring any information from the document each potential answer was extracted fro...",
+    "published": "Jan 28",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2101.12093v2",
+    "queried_author": "Luca Soldaini",
+    "matching_authors": [
+      "Luca Soldaini"
+    ]
+  },
+  {
     "title": "Prefix-Tuning: Optimizing Continuous Prompts for Generation",
     "authors": [
       "Xiang Lisa Li",
@@ -426,6 +1265,38 @@
     ]
   },
   {
+    "title": "PowerTransformer: Unsupervised Controllable Revision for Biased Language Correction",
+    "authors": [
+      "Xinyao Ma",
+      "Maarten Sap",
+      "Hannah Rashkin",
+      "Yejin Choi"
+    ],
+    "summary": "Unconscious biases continue to be prevalent in modern text and media, calling for algorithms that can assist writers with bias correction. For example, a female character in a story is often portrayed as passive and powerless (\"She daydreams about being a doctor\") while a man is portrayed as more pr...",
+    "published": "Oct 26",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2010.13816v1",
+    "queried_author": "Maarten Sap",
+    "matching_authors": [
+      "Maarten Sap"
+    ]
+  },
+  {
+    "title": "A Frustratingly Easy Approach for Entity and Relation Extraction",
+    "authors": [
+      "Zexuan Zhong",
+      "Danqi Chen"
+    ],
+    "summary": "End-to-end relation extraction aims to identify named entities and extract relations between them. Most recent work models these two subtasks jointly, either by casting them in one structured prediction framework, or performing multi-task learning through shared representations. In this work, we pre...",
+    "published": "Oct 24",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2010.12812v2",
+    "queried_author": "Danqi Chen",
+    "matching_authors": [
+      "Danqi Chen"
+    ]
+  },
+  {
     "title": "Evaluating Factuality in Generation with Dependency-level Entailment",
     "authors": [
       "Tanya Goyal",
@@ -453,6 +1324,38 @@
     "queried_author": "Sean Welleck",
     "matching_authors": [
       "Sean Welleck"
+    ]
+  },
+  {
+    "title": "Pretraining with Contrastive Sentence Objectives Improves Discourse Performance of Language Models",
+    "authors": [
+      "Dan Iter",
+      "Kelvin Guu",
+      "Larry Lansing",
+      "Dan Jurafsky"
+    ],
+    "summary": "Recent models for unsupervised representation learning of text have employed a number of techniques to improve contextual word representations but have put little focus on discourse-level representations. We propose CONPONO, an inter-sentence objective for pretraining language models that models dis...",
+    "published": "May 20",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2005.10389v1",
+    "queried_author": "Dan Jurafsky",
+    "matching_authors": [
+      "Dan Jurafsky"
+    ]
+  },
+  {
+    "title": "The Cascade Transformer: an Application for Efficient Answer Sentence Selection",
+    "authors": [
+      "Luca Soldaini",
+      "Alessandro Moschitti"
+    ],
+    "summary": "Large transformer-based language models have been shown to be very effective in many classification tasks. However, their computational complexity prevents their use in applications requiring the classification of a large set of candidates. While previous works have investigated approaches to reduce...",
+    "published": "May 05",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2005.02534v2",
+    "queried_author": "Luca Soldaini",
+    "matching_authors": [
+      "Luca Soldaini"
     ]
   },
   {
@@ -487,6 +1390,187 @@
     ]
   },
   {
+    "title": "Mapping Three Decades of Intellectual Change in Academia",
+    "authors": [
+      "Daniel Ramage",
+      "Christopher D. Manning",
+      "Daniel A. McFarland"
+    ],
+    "summary": "Research on the development of science has focused on the creation of multidisciplinary teams. However, while this coming together of people is symmetrical, the ideas, methods, and vocabulary of science have a directional flow. We present a statistical model of the text of dissertation abstracts fro...",
+    "published": "Apr 02",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2004.01291v2",
+    "queried_author": "Christopher D Manning",
+    "matching_authors": [
+      "Christopher D Manning"
+    ]
+  },
+  {
+    "title": "Calibration of Pre-trained Transformers",
+    "authors": [
+      "Shrey Desai",
+      "Greg Durrett"
+    ],
+    "summary": "Pre-trained Transformers are now ubiquitous in natural language processing, but despite their high end-task performance, little is known empirically about whether they are calibrated. Specifically, do these models' posterior probabilities provide an accurate empirical measure of how likely the model...",
+    "published": "Mar 17",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2003.07892v3",
+    "queried_author": "Greg Durrett",
+    "matching_authors": [
+      "Greg Durrett"
+    ]
+  },
+  {
+    "title": "The Alzheimer's Disease Prediction Of Longitudinal Evolution (TADPOLE) Challenge: Results after 1 Year Follow-up",
+    "authors": [
+      "Razvan V. Marinescu",
+      "Neil P. Oxtoby",
+      "Alexandra L. Young",
+      "Esther E. Bron",
+      "Arthur W. Toga",
+      "Michael W. Weiner",
+      "Frederik Barkhof",
+      "Nick C. Fox",
+      "Arman Eshaghi",
+      "Tina Toni",
+      "Marcin Salaterski",
+      "Veronika Lunina",
+      "Manon Ansart",
+      "Stanley Durrleman",
+      "Pascal Lu",
+      "Samuel Iddi",
+      "Dan Li",
+      "Wesley K. Thompson",
+      "Michael C. Donohue",
+      "Aviv Nahon",
+      "Yarden Levy",
+      "Dan Halbersberg",
+      "Mariya Cohen",
+      "Huiling Liao",
+      "Tengfei Li",
+      "Kaixian Yu",
+      "Hongtu Zhu",
+      "Jose G. Tamez-Pena",
+      "Aya Ismail",
+      "Timothy Wood",
+      "Hector Corrada Bravo",
+      "Minh Nguyen",
+      "Nanbo Sun",
+      "Jiashi Feng",
+      "B. T. Thomas Yeo",
+      "Gang Chen",
+      "Ke Qi",
+      "Shiyang Chen",
+      "Deqiang Qiu",
+      "Ionut Buciuman",
+      "Alex Kelner",
+      "Raluca Pop",
+      "Denisa Rimocea",
+      "Mostafa M. Ghazi",
+      "Mads Nielsen",
+      "Sebastien Ourselin",
+      "Lauge Sorensen",
+      "Vikram Venkatraghavan",
+      "Keli Liu",
+      "Christina Rabe",
+      "Paul Manser",
+      "Steven M. Hill",
+      "James Howlett",
+      "Zhiyue Huang",
+      "Steven Kiddle",
+      "Sach Mukherjee",
+      "Anais Rouanet",
+      "Bernd Taschler",
+      "Brian D. M. Tom",
+      "Simon R. White",
+      "Noel Faux",
+      "Suman Sedai",
+      "Javier de Velasco Oriol",
+      "Edgar E. V. Clemente",
+      "Karol Estrada",
+      "Leon Aksman",
+      "Andre Altmann",
+      "Cynthia M. Stonnington",
+      "Yalin Wang",
+      "Jianfeng Wu",
+      "Vivek Devadas",
+      "Clementine Fourrier",
+      "Lars Lau Raket",
+      "Aristeidis Sotiras",
+      "Guray Erus",
+      "Jimit Doshi",
+      "Christos Davatzikos",
+      "Jacob Vogel",
+      "Andrew Doyle",
+      "Angela Tam",
+      "Alex Diaz-Papkovich",
+      "Emmanuel Jammeh",
+      "Igor Koval",
+      "Paul Moore",
+      "Terry J. Lyons",
+      "John Gallacher",
+      "Jussi Tohka",
+      "Robert Ciszek",
+      "Bruno Jedynak",
+      "Kruti Pandya",
+      "Murat Bilgel",
+      "William Engels",
+      "Joseph Cole",
+      "Polina Golland",
+      "Stefan Klein",
+      "Daniel C. Alexander"
+    ],
+    "summary": "We present the findings of \"The Alzheimer's Disease Prediction Of Longitudinal Evolution\" (TADPOLE) Challenge, which compared the performance of 92 algorithms from 33 international teams at predicting the future trajectory of 219 individuals at risk of Alzheimer's disease. Challenge participants wer...",
+    "published": "Feb 09",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2002.03419v2",
+    "queried_author": "Cl\u00e9mentine Fourrier",
+    "matching_authors": [
+      "Cl\u00e9mentine Fourrier"
+    ]
+  },
+  {
+    "title": "Dynamic Neuro-Symbolic Knowledge Graph Construction for Zero-shot Commonsense Question Answering",
+    "authors": [
+      "Antoine Bosselut",
+      "Ronan Le Bras",
+      "Yejin Choi"
+    ],
+    "summary": "Understanding narratives requires reasoning about implicit world knowledge related to the causes, effects, and states of situations described in text. At the core of this challenge is how to access contextually relevant knowledge on demand and reason over it.\n  In this paper, we present initial stud...",
+    "published": "Nov 10",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1911.03876v2",
+    "queried_author": "Antoine Bosselut",
+    "matching_authors": [
+      "Antoine Bosselut"
+    ]
+  },
+  {
+    "title": "MUSE Analysis of Gas around Galaxies (MAGG) -- I: Survey design and the environment of a near pristine gas cloud at z~3.5",
+    "authors": [
+      "Emma K. Lofthouse",
+      "Michele Fumagalli",
+      "Matteo Fossati",
+      "John M. O'Meara",
+      "Michael T. Murphy",
+      "Lise Christensen",
+      "J. Xavier Prochaska",
+      "Sebastiano Cantalupo",
+      "Richard M. Bielby",
+      "Ryan J. Cooke",
+      "Elisabeta Lusso",
+      "Simon L. Morris"
+    ],
+    "summary": "We present the design, methods, and first results of the MUSE Analysis of Gas around Galaxies (MAGG) survey, a large programme on the Multi Unit Spectroscopic Explorer (MUSE) instrument at the Very Large Telescope (VLT) which targets 28 z > 3.2 quasars to investigate the connection between optically...",
+    "published": "Oct 29",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1910.13458v1",
+    "queried_author": "John Xavier Morris",
+    "matching_authors": [
+      "John Xavier Morris"
+    ]
+  },
+  {
     "title": "Specializing Word Embeddings (for Parsing) by Information Bottleneck",
     "authors": [
       "Xiang Lisa Li",
@@ -499,6 +1583,55 @@
     "queried_author": "Xiang Lisa Li",
     "matching_authors": [
       "Xiang Lisa Li"
+    ]
+  },
+  {
+    "title": "Entity, Relation, and Event Extraction with Contextualized Span Representations",
+    "authors": [
+      "David Wadden",
+      "Ulme Wennberg",
+      "Yi Luan",
+      "Hannaneh Hajishirzi"
+    ],
+    "summary": "We examine the capabilities of a unified, multi-task framework for three information extraction tasks: named entity recognition, relation extraction, and event extraction. Our framework (called DyGIE++) accomplishes all tasks by enumerating, refining, and scoring text spans designed to capture local...",
+    "published": "Sep 08",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1909.03546v2",
+    "queried_author": "David Wadden",
+    "matching_authors": [
+      "David Wadden"
+    ]
+  },
+  {
+    "title": "Designing and Interpreting Probes with Control Tasks",
+    "authors": [
+      "John Hewitt",
+      "Percy Liang"
+    ],
+    "summary": "Probes, supervised models trained to predict properties (like parts-of-speech) from representations (like ELMo), have achieved high accuracy on a range of linguistic tasks. But does this mean that the representations encode linguistic structure or just that the probe has learned the linguistic task?...",
+    "published": "Sep 08",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1909.03368v1",
+    "queried_author": "John Hewitt",
+    "matching_authors": [
+      "John Hewitt"
+    ]
+  },
+  {
+    "title": "RNN Architecture Learning with Sparse Regularization",
+    "authors": [
+      "Jesse Dodge",
+      "Roy Schwartz",
+      "Hao Peng",
+      "Noah A. Smith"
+    ],
+    "summary": "Neural models for NLP typically use large numbers of parameters to reach state-of-the-art performance, which can lead to excessive memory usage and increased runtime. We present a structure learning method for learning sparse, parameter-efficient NLP models. Our method applies group lasso to rationa...",
+    "published": "Sep 06",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1909.03011v1",
+    "queried_author": "Jesse Dodge",
+    "matching_authors": [
+      "Jesse Dodge"
     ]
   },
   {
@@ -532,6 +1665,38 @@
     ]
   },
   {
+    "title": "Better Character Language Modeling Through Morphology",
+    "authors": [
+      "Terra Blevins",
+      "Luke Zettlemoyer"
+    ],
+    "summary": "We incorporate morphological supervision into character language models (CLMs) via multitasking and show that this addition improves bits-per-character (BPC) performance across 24 languages, even when the morphology data and language modeling data are disjoint. Analyzing the CLMs shows that inflecte...",
+    "published": "Jun 03",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1906.01037v2",
+    "queried_author": "Luke Zettlemoyer",
+    "matching_authors": [
+      "Luke Zettlemoyer"
+    ]
+  },
+  {
+    "title": "Efficient Adaptation of Pretrained Transformers for Abstractive Summarization",
+    "authors": [
+      "Andrew Hoang",
+      "Antoine Bosselut",
+      "Asli Celikyilmaz",
+      "Yejin Choi"
+    ],
+    "summary": "Large-scale learning of transformer language models has yielded improvements on a variety of natural language understanding tasks. Whether they can be effectively adapted for summarization, however, has been less explored, as the learned representations are less seamlessly integrated into existing n...",
+    "published": "Jun 01",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1906.00138v1",
+    "queried_author": "Antoine Bosselut",
+    "matching_authors": [
+      "Antoine Bosselut"
+    ]
+  },
+  {
     "title": "Sequential Graph Dependency Parser",
     "authors": [
       "Sean Welleck",
@@ -547,230 +1712,36 @@
     ]
   },
   {
-    "title": "Stronger Data Poisoning Attacks Break Data Sanitization Defenses",
+    "title": "SocialIQA: Commonsense Reasoning about Social Interactions",
     "authors": [
-      "Pang Wei Koh",
-      "Jacob Steinhardt",
-      "Percy Liang"
-    ],
-    "summary": "Machine learning models trained on data from the outside world can be corrupted by data poisoning attacks that inject malicious points into the models' training sets. A common defense against these attacks is data sanitization: first filter out anomalous training points before training the model. In...",
-    "published": "Nov 02",
-    "pdf_url": null,
-    "arxiv_url": "http://arxiv.org/abs/1811.00741v2",
-    "queried_author": "Pang Wei Koh",
-    "matching_authors": [
-      "Pang Wei Koh"
-    ]
-  },
-  {
-    "title": "Dialogue Natural Language Inference",
-    "authors": [
-      "Sean Welleck",
-      "Jason Weston",
-      "Arthur Szlam",
-      "Kyunghyun Cho"
-    ],
-    "summary": "Consistency is a long standing issue faced by dialogue models. In this paper, we frame the consistency of dialogue agents as natural language inference (NLI) and create a new natural language inference dataset called Dialogue NLI. We propose a method which demonstrates that a model trained on Dialog...",
-    "published": "Nov 01",
-    "pdf_url": null,
-    "arxiv_url": "http://arxiv.org/abs/1811.00671v2",
-    "queried_author": "Sean J Welleck",
-    "matching_authors": [
-      "Sean J Welleck"
-    ]
-  },
-  {
-    "title": "Saliency-based Sequential Image Attention with Multiset Prediction",
-    "authors": [
-      "Sean Welleck",
-      "Jialin Mao",
-      "Kyunghyun Cho",
-      "Zheng Zhang"
-    ],
-    "summary": "Humans process visual scenes selectively and sequentially using attention. Central to models of human visual attention is the saliency map. We propose a hierarchical visual architecture that operates on a saliency map and uses a novel attention mechanism to sequentially focus on salient regions and ...",
-    "published": "Nov 14",
-    "pdf_url": null,
-    "arxiv_url": "http://arxiv.org/abs/1711.05165v1",
-    "queried_author": "Sean J Welleck",
-    "matching_authors": [
-      "Sean J Welleck"
-    ]
-  },
-  {
-    "title": "Gaussian Quadrature for Kernel Features",
-    "authors": [
-      "Tri Dao",
-      "Christopher De Sa",
-      "Christopher R\u00e9"
-    ],
-    "summary": "Kernel methods have recently attracted resurgent interest, showing performance competitive with deep neural networks in tasks such as speech recognition. The random Fourier features map is a technique commonly used to scale up kernel machines, but employing the randomized feature map means that $O(\u03b5...",
-    "published": "Sep 08",
-    "pdf_url": null,
-    "arxiv_url": "http://arxiv.org/abs/1709.02605v3",
-    "queried_author": "Tri Dao",
-    "matching_authors": [
-      "Tri Dao"
-    ]
-  },
-  {
-    "title": "Zero-Shot Activity Recognition with Verb Attribute Induction",
-    "authors": [
-      "Rowan Zellers",
+      "Maarten Sap",
+      "Hannah Rashkin",
+      "Derek Chen",
+      "Ronan LeBras",
       "Yejin Choi"
     ],
-    "summary": "In this paper, we investigate large-scale zero-shot activity recognition by modeling the visual and linguistic attributes of action verbs. For example, the verb \"salute\" has several properties, such as being a light movement, a social act, and short in duration. We use these attributes as the intern...",
-    "published": "Jul 29",
+    "summary": "We introduce Social IQa, the first largescale benchmark for commonsense reasoning about social situations. Social IQa contains 38,000 multiple choice questions for probing emotional and social intelligence in a variety of everyday situations (e.g., Q: \"Jordan wanted to tell Tracy a secret, so Jordan...",
+    "published": "Apr 22",
     "pdf_url": null,
-    "arxiv_url": "http://arxiv.org/abs/1707.09468v2",
-    "queried_author": "Yejin Choi",
+    "arxiv_url": "http://arxiv.org/abs/1904.09728v3",
+    "queried_author": "Maarten Sap",
     "matching_authors": [
-      "Yejin Choi"
+      "Maarten Sap"
     ]
   },
   {
-    "title": "Mapping Instructions and Visual Observations to Actions with Reinforcement Learning",
+    "title": "Modeling Drug-Disease Relations with Linguistic and Knowledge Graph Constraints",
     "authors": [
-      "Dipendra Misra",
-      "John Langford",
-      "Yoav Artzi"
+      "Bruno Godefroy",
+      "Christopher Potts"
     ],
-    "summary": "We propose to directly map raw visual observations and text input to actions for instruction execution. While existing approaches assume access to structured environment representations or use a pipeline of separately trained models, we learn a single model to jointly reason about linguistic and vis...",
-    "published": "Apr 28",
+    "summary": "FDA drug labels are rich sources of information about drugs and drug-disease relations, but their complexity makes them challenging texts to analyze in isolation. To overcome this, we situate these labels in two health knowledge graphs: one built from precise structured information about drugs and d...",
+    "published": "Mar 31",
     "pdf_url": null,
-    "arxiv_url": "http://arxiv.org/abs/1704.08795v2",
-    "queried_author": "Yoav Artzi",
+    "arxiv_url": "http://arxiv.org/abs/1904.00313v1",
+    "queried_author": "Christopher Potts",
     "matching_authors": [
-      "Yoav Artzi"
-    ]
-  },
-  {
-    "title": "Understanding Black-box Predictions via Influence Functions",
-    "authors": [
-      "Pang Wei Koh",
-      "Percy Liang"
-    ],
-    "summary": "How can we explain the predictions of a black-box model? In this paper, we use influence functions -- a classic technique from robust statistics -- to trace a model's prediction through the learning algorithm and back to its training data, thereby identifying training points most responsible for a g...",
-    "published": "Mar 14",
-    "pdf_url": null,
-    "arxiv_url": "http://arxiv.org/abs/1703.04730v3",
-    "queried_author": "Pang Wei Koh",
-    "matching_authors": [
-      "Pang Wei Koh"
-    ]
-  },
-  {
-    "title": "Neural Machine Translation and Sequence-to-sequence Models: A Tutorial",
-    "authors": [
-      "Graham Neubig"
-    ],
-    "summary": "This tutorial introduces a new and powerful set of techniques variously called \"neural machine translation\" or \"neural sequence-to-sequence models\". These techniques have been used in a number of tasks regarding the handling of human language, and can be a powerful tool in the toolbox of anyone who ...",
-    "published": "Mar 05",
-    "pdf_url": null,
-    "arxiv_url": "http://arxiv.org/abs/1703.01619v1",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
-    ]
-  },
-  {
-    "title": "Lexicons and Minimum Risk Training for Neural Machine Translation: NAIST-CMU at WAT2016",
-    "authors": [
-      "Graham Neubig"
-    ],
-    "summary": "This year, the Nara Institute of Science and Technology (NAIST)/Carnegie Mellon University (CMU) submission to the Japanese-English translation track of the 2016 Workshop on Asian Translation was based on attentional neural machine translation (NMT) models. In addition to the standard NMT model, we ...",
-    "published": "Oct 20",
-    "pdf_url": null,
-    "arxiv_url": "http://arxiv.org/abs/1610.06542v1",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
-    ]
-  },
-  {
-    "title": "Generalizing and Hybridizing Count-based and Neural Language Models",
-    "authors": [
-      "Graham Neubig",
-      "Chris Dyer"
-    ],
-    "summary": "Language models (LMs) are statistical models that calculate probabilities over sequences of words or other discrete symbols. Currently two major paradigms for language modeling exist: count-based n-gram models, which have advantages of scalability and test-time speed, and neural LMs, which often ach...",
-    "published": "Jun 01",
-    "pdf_url": null,
-    "arxiv_url": "http://arxiv.org/abs/1606.00499v2",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
-    ]
-  },
-  {
-    "title": "Learning Executable Semantic Parsers for Natural Language Understanding",
-    "authors": [
-      "Percy Liang"
-    ],
-    "summary": "For building question answering systems and natural language interfaces, semantic parsing has emerged as an important and powerful paradigm. Semantic parsers map natural language into logical forms, the classic representation for many important linguistic phenomena. The modern twist is that we are i...",
-    "published": "Mar 22",
-    "pdf_url": null,
-    "arxiv_url": "http://arxiv.org/abs/1603.06677v1",
-    "queried_author": "Percy Liang",
-    "matching_authors": [
-      "Percy Liang"
-    ]
-  },
-  {
-    "title": "Efficient AUC Optimization for Information Ranking Applications",
-    "authors": [
-      "Sean J. Welleck"
-    ],
-    "summary": "Adequate evaluation of an information retrieval system to estimate future performance is a crucial task. Area under the ROC curve (AUC) is widely used to evaluate the generalization of a retrieval system. However, the objective function optimized in many retrieval systems is the error rate and not t...",
-    "published": "Nov 16",
-    "pdf_url": null,
-    "arxiv_url": "http://arxiv.org/abs/1511.05202v3",
-    "queried_author": "Sean J Welleck",
-    "matching_authors": [
-      "Sean J Welleck"
-    ]
-  },
-  {
-    "title": "Cornell SPF: Cornell Semantic Parsing Framework",
-    "authors": [
-      "Yoav Artzi"
-    ],
-    "summary": "The Cornell Semantic Parsing Framework (SPF) is a learning and inference framework for mapping natural language to formal representation of its meaning.",
-    "published": "Nov 13",
-    "pdf_url": null,
-    "arxiv_url": "http://arxiv.org/abs/1311.3011v2",
-    "queried_author": "Yoav Artzi",
-    "matching_authors": [
-      "Yoav Artzi"
-    ]
-  },
-  {
-    "title": "Lambda Dependency-Based Compositional Semantics",
-    "authors": [
-      "Percy Liang"
-    ],
-    "summary": "This short note presents a new formal language, lambda dependency-based compositional semantics (lambda DCS) for representing logical forms in semantic parsing. By eliminating variables and making existential quantification implicit, lambda DCS logical forms are generally more compact than those in ...",
-    "published": "Sep 17",
-    "pdf_url": null,
-    "arxiv_url": "http://arxiv.org/abs/1309.4408v2",
-    "queried_author": "Percy Liang",
-    "matching_authors": [
-      "Percy Liang"
-    ]
-  },
-  {
-    "title": "Learning Dependency-Based Compositional Semantics",
-    "authors": [
-      "Percy Liang",
-      "Michael I. Jordan",
-      "Dan Klein"
-    ],
-    "summary": "Suppose we want to build a system that answers a natural language question by representing its semantics as a logical form and computing the answer given a structured database of facts. The core part of such a system is the semantic parser that maps questions to logical forms. Semantic parsers are t...",
-    "published": "Sep 30",
-    "pdf_url": null,
-    "arxiv_url": "http://arxiv.org/abs/1109.6841v1",
-    "queried_author": "Percy Liang",
-    "matching_authors": [
-      "Percy Liang"
+      "Christopher Potts"
     ]
   }
 ]
