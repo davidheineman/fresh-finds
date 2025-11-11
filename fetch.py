@@ -186,27 +186,20 @@ def update_index_html(papers: List[Dict]):
     print(f"Updated index.html with {len(papers)} total papers ({len(initial_papers)} initially visible)")
 
 def main():
-    print("Fetching authors from GitHub...")
+    print(f"Fetching authors from {RESEARCHERS_URL}...")
     authors = fetch_authors_from_github()
     
     if not authors:
-        print("No authors found. Using fallback list.")
-        # Fallback list in case we can't parse the file
-        authors = [
-            "David Heineman",
-            "Byron Wallace",
-            "Yonatan Bisk",
-        ]
-    
+        raise RuntimeError("No authors found.")
+
     print(f"Found {len(authors)} authors")
-    print(f"First few: {', '.join(authors[:5])}...")
     
     print("\nFetching recent papers (this may take a few minutes)...")
     # Fetch 3 papers per author for more content
     papers = get_all_recent_papers(authors, max_per_author=3)
     
-    # Keep top 100 papers for infinite scrolling
-    papers = papers[:100]
+    # Keep top 300 papers for infinite scrolling
+    papers = papers[:300]
     
     print(f"\nFound {len(papers)} unique recent papers")
     

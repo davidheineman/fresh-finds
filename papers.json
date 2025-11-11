@@ -234,6 +234,21 @@
     ]
   },
   {
+    "title": "Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality",
+    "authors": [
+      "Tri Dao",
+      "Albert Gu"
+    ],
+    "summary": "While Transformers have been the main architecture behind deep learning's success in language modeling, state-space models (SSMs) such as Mamba have recently been shown to match or outperform Transformers at small to medium scale. We show that these families of models are actually quite closely rela...",
+    "published": "May 31",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2405.21060v1",
+    "queried_author": "Albert Gu",
+    "matching_authors": [
+      "Albert Gu"
+    ]
+  },
+  {
     "title": "The Call for Socially Aware Language Technologies",
     "authors": [
       "Diyi Yang",
@@ -355,6 +370,23 @@
     ]
   },
   {
+    "title": "QuRating: Selecting High-Quality Data for Training Language Models",
+    "authors": [
+      "Alexander Wettig",
+      "Aatmik Gupta",
+      "Saumya Malik",
+      "Danqi Chen"
+    ],
+    "summary": "Selecting high-quality pre-training data is important for creating capable language models, but existing methods rely on simple heuristics. We introduce QuRating, a method for selecting pre-training data that can capture human intuitions about data quality. In this paper, we investigate four qualiti...",
+    "published": "Feb 15",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2402.09739v3",
+    "queried_author": "Alexander Wettig",
+    "matching_authors": [
+      "Alexander Wettig"
+    ]
+  },
+  {
     "title": "Mamba: Linear-Time Sequence Modeling with Selective State Spaces",
     "authors": [
       "Albert Gu",
@@ -364,8 +396,9 @@
     "published": "Dec 01",
     "pdf_url": null,
     "arxiv_url": "http://arxiv.org/abs/2312.00752v2",
-    "queried_author": "Tri Dao",
+    "queried_author": "Albert Gu",
     "matching_authors": [
+      "Albert Gu",
       "Tri Dao"
     ]
   },
@@ -549,6 +582,23 @@
     ]
   },
   {
+    "title": "Adapting Language Models to Compress Contexts",
+    "authors": [
+      "Alexis Chevalier",
+      "Alexander Wettig",
+      "Anirudh Ajith",
+      "Danqi Chen"
+    ],
+    "summary": "Transformer-based language models (LMs) are powerful and widely-applicable tools, but their usefulness is constrained by a finite context window and the expensive computational cost of processing long text documents. We propose to adapt pre-trained LMs into AutoCompressors. These language models are...",
+    "published": "May 24",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2305.14788v2",
+    "queried_author": "Alexander Wettig",
+    "matching_authors": [
+      "Alexander Wettig"
+    ]
+  },
+  {
     "title": "Anchor Prediction: Automatic Refinement of Internet Links",
     "authors": [
       "Nelson F. Liu",
@@ -726,6 +776,24 @@
     "matching_authors": [
       "Diyi Yang",
       "William Held"
+    ]
+  },
+  {
+    "title": "A Kernel-Based View of Language Model Fine-Tuning",
+    "authors": [
+      "Sadhika Malladi",
+      "Alexander Wettig",
+      "Dingli Yu",
+      "Danqi Chen",
+      "Sanjeev Arora"
+    ],
+    "summary": "It has become standard to solve NLP tasks by fine-tuning pre-trained language models (LMs), especially in low-data settings. There is minimal theoretical understanding of empirical success, e.g., why fine-tuning a model with $10^8$ or more parameters on a couple dozen training points does not result...",
+    "published": "Oct 11",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2210.05643v4",
+    "queried_author": "Alexander Wettig",
+    "matching_authors": [
+      "Alexander Wettig"
     ]
   },
   {
@@ -968,6 +1036,22 @@
     "queried_author": "Colin Raffel",
     "matching_authors": [
       "Colin Raffel"
+    ]
+  },
+  {
+    "title": "Efficiently Modeling Long Sequences with Structured State Spaces",
+    "authors": [
+      "Albert Gu",
+      "Karan Goel",
+      "Christopher R\u00e9"
+    ],
+    "summary": "A central goal of sequence modeling is designing a single principled model that can address sequence data across a range of modalities and tasks, particularly on long-range dependencies. Although conventional models including RNNs, CNNs, and Transformers have specialized variants for capturing long ...",
+    "published": "Oct 31",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2111.00396v3",
+    "queried_author": "Albert Gu",
+    "matching_authors": [
+      "Albert Gu"
     ]
   },
   {
@@ -1530,6 +1614,21 @@
     ]
   },
   {
+    "title": "Torch-Struct: Deep Structured Prediction Library",
+    "authors": [
+      "Alexander M. Rush"
+    ],
+    "summary": "The literature on structured prediction for NLP describes a rich collection of distributions and algorithms over sequences, segmentations, alignments, and trees; however, these algorithms are difficult to utilize in deep learning frameworks. We introduce Torch-Struct, a library for structured predic...",
+    "published": "Feb 03",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2002.00876v1",
+    "queried_author": "Alexander M Rush",
+    "matching_authors": [
+      "Alexander M Rush",
+      "Alexander M. Rush"
+    ]
+  },
+  {
     "title": "Dynamic Neuro-Symbolic Knowledge Graph Construction for Zero-shot Commonsense Question Answering",
     "authors": [
       "Antoine Bosselut",
@@ -1647,101 +1746,6 @@
     "queried_author": "Orion Weller",
     "matching_authors": [
       "Orion Weller"
-    ]
-  },
-  {
-    "title": "Embedding time expressions for deep temporal ordering models",
-    "authors": [
-      "Tanya Goyal",
-      "Greg Durrett"
-    ],
-    "summary": "Data-driven models have demonstrated state-of-the-art performance in inferring the temporal ordering of events in text. However, these models often overlook explicit temporal signals, such as dates and time windows. Rule-based methods can be used to identify the temporal links between these time exp...",
-    "published": "Jun 19",
-    "pdf_url": null,
-    "arxiv_url": "http://arxiv.org/abs/1906.08287v1",
-    "queried_author": "Tanya Goyal",
-    "matching_authors": [
-      "Tanya Goyal"
-    ]
-  },
-  {
-    "title": "Better Character Language Modeling Through Morphology",
-    "authors": [
-      "Terra Blevins",
-      "Luke Zettlemoyer"
-    ],
-    "summary": "We incorporate morphological supervision into character language models (CLMs) via multitasking and show that this addition improves bits-per-character (BPC) performance across 24 languages, even when the morphology data and language modeling data are disjoint. Analyzing the CLMs shows that inflecte...",
-    "published": "Jun 03",
-    "pdf_url": null,
-    "arxiv_url": "http://arxiv.org/abs/1906.01037v2",
-    "queried_author": "Luke Zettlemoyer",
-    "matching_authors": [
-      "Luke Zettlemoyer"
-    ]
-  },
-  {
-    "title": "Efficient Adaptation of Pretrained Transformers for Abstractive Summarization",
-    "authors": [
-      "Andrew Hoang",
-      "Antoine Bosselut",
-      "Asli Celikyilmaz",
-      "Yejin Choi"
-    ],
-    "summary": "Large-scale learning of transformer language models has yielded improvements on a variety of natural language understanding tasks. Whether they can be effectively adapted for summarization, however, has been less explored, as the learned representations are less seamlessly integrated into existing n...",
-    "published": "Jun 01",
-    "pdf_url": null,
-    "arxiv_url": "http://arxiv.org/abs/1906.00138v1",
-    "queried_author": "Antoine Bosselut",
-    "matching_authors": [
-      "Antoine Bosselut"
-    ]
-  },
-  {
-    "title": "Sequential Graph Dependency Parser",
-    "authors": [
-      "Sean Welleck",
-      "Kyunghyun Cho"
-    ],
-    "summary": "We propose a method for non-projective dependency parsing by incrementally predicting a set of edges. Since the edges do not have a pre-specified order, we propose a set-based learning method. Our method blends graph, transition, and easy-first parsing, including a prior state of the parser as a spe...",
-    "published": "May 27",
-    "pdf_url": null,
-    "arxiv_url": "http://arxiv.org/abs/1905.10930v2",
-    "queried_author": "Sean Welleck",
-    "matching_authors": [
-      "Sean Welleck"
-    ]
-  },
-  {
-    "title": "SocialIQA: Commonsense Reasoning about Social Interactions",
-    "authors": [
-      "Maarten Sap",
-      "Hannah Rashkin",
-      "Derek Chen",
-      "Ronan LeBras",
-      "Yejin Choi"
-    ],
-    "summary": "We introduce Social IQa, the first largescale benchmark for commonsense reasoning about social situations. Social IQa contains 38,000 multiple choice questions for probing emotional and social intelligence in a variety of everyday situations (e.g., Q: \"Jordan wanted to tell Tracy a secret, so Jordan...",
-    "published": "Apr 22",
-    "pdf_url": null,
-    "arxiv_url": "http://arxiv.org/abs/1904.09728v3",
-    "queried_author": "Maarten Sap",
-    "matching_authors": [
-      "Maarten Sap"
-    ]
-  },
-  {
-    "title": "Modeling Drug-Disease Relations with Linguistic and Knowledge Graph Constraints",
-    "authors": [
-      "Bruno Godefroy",
-      "Christopher Potts"
-    ],
-    "summary": "FDA drug labels are rich sources of information about drugs and drug-disease relations, but their complexity makes them challenging texts to analyze in isolation. To overcome this, we situate these labels in two health knowledge graphs: one built from precise structured information about drugs and d...",
-    "published": "Mar 31",
-    "pdf_url": null,
-    "arxiv_url": "http://arxiv.org/abs/1904.00313v1",
-    "queried_author": "Christopher Potts",
-    "matching_authors": [
-      "Christopher Potts"
     ]
   }
 ]
