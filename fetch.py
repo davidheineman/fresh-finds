@@ -90,8 +90,7 @@ def get_recent_papers_for_author(author_name: str, max_results: int = 3) -> List
         
         return papers
     except Exception as e:
-        print(f"Error fetching papers for {author_name}: {e}")
-        return []
+        raise RuntimeError(f"Error fetching papers for {author_name}: {e}")
 
 def get_all_recent_papers(authors: List[str], max_per_author: int = 3) -> List[Dict]:
     """Fetch recent papers for all authors."""
