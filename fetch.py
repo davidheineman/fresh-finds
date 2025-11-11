@@ -56,16 +56,21 @@ def fetch_authors_from_github() -> List[str]:
     
     return unique_authors
 
-def get_recent_papers_for_author(author_name: str, max_results: int = 3) -> List[Dict]:
+def get_recent_papers_for_author(author_name: str, max_results: int | None = None) -> List[Dict]:
     """Fetch recent papers for a given author from arXiv."""
     print(f"Fetching papers for {author_name}...")
     
     try:
+        # import time
+        # # Add a small delay to avoid rate limiting
+        # time.sleep(0.5)
+        
         client = arxiv.Client()
         search = arxiv.Search(
             query=f'au:"{author_name}"',
             max_results=max_results,
-            sort_by=arxiv.SortCriterion.SubmittedDate
+            sort_by=arxiv.SortCriterion.SubmittedDate,
+            sort_order = arxiv.SortOrder.Descending
         )
         
         papers = []
@@ -92,7 +97,7 @@ def get_recent_papers_for_author(author_name: str, max_results: int = 3) -> List
     except Exception as e:
         raise RuntimeError(f"Error fetching papers for {author_name}: {e}")
 
-def get_all_recent_papers(authors: List[str], max_per_author: int = 3) -> List[Dict]:
+def get_all_recent_papers(authors: List[str], max_per_author: int | None = None) -> List[Dict]:
     """Fetch recent papers for all authors."""
     all_papers = []
     
@@ -119,70 +124,6 @@ def get_all_recent_papers(authors: List[str], max_per_author: int = 3) -> List[D
     
     return unique_papers
 
-def generate_html_list_items(papers: List[Dict]) -> str:
-    """Generate HTML list items for papers."""
-    html_items = []
-    
-    for paper in papers:
-        # Format authors - show up to 50, then et al.
-        matching_authors = set(paper.get('matching_authors', []))
-        
-        author_parts = []
-        for i, author in enumerate(paper['authors']):
-            if i >= 50:
-                author_parts.append('et al.')
-                break
-            # Underline if this author is in the matching list
-            if author in matching_authors:
-                author_parts.append(f'<u>{author}</u>')
-            else:
-                author_parts.append(author)
-        
-        authors_str = ', '.join(author_parts)
-        
-        # Create the HTML
-        item = f'''          <li> <a class="post-item-link" href="{paper['arxiv_url']}" target="_blank"> <time
-                class="desktop-time">{paper['published']}</time>
-              <div class="post-info">
-                <div class="post-title">{paper['title']}</div>
-                <div class="author-date"> {authors_str}<span class="mobile-date-separator"> <span
-                      class="separator">·</span> {paper['published']}</span> </div>
-              </div>
-            </a> </li>'''
-        
-        html_items.append(item)
-    
-    return '\n'.join(html_items)
-
-def update_index_html(papers: List[Dict]):
-    """Update the index.html file with the new papers."""
-    # Use relative path that works both locally and in GitHub Actions
-    import os
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    index_path = os.path.join(script_dir, 'index.html')
-    
-    # Read the current HTML
-    with open(index_path, 'r') as f:
-        html_content = f.read()
-    
-    # Generate new list items for first 20 papers (initial load)
-    initial_papers = papers[:20]
-    new_items = generate_html_list_items(initial_papers)
-    
-    # Find and replace the list items between <ul> and </ul> in the post-group div
-    # Look for the pattern: <div class="post-group">\s*<ul>.*?</ul>\s*</div>
-    pattern = r'(<div class="post-group">\s*<ul>)(.*?)(</ul>)'
-    
-    def replace_func(match):
-        return match.group(1) + '\n' + new_items + '\n        ' + match.group(3)
-    
-    updated_html = re.sub(pattern, replace_func, html_content, flags=re.DOTALL)
-    
-    # Write back
-    with open(index_path, 'w') as f:
-        f.write(updated_html)
-    
-    print(f"Updated index.html with {len(papers)} total papers ({len(initial_papers)} initially visible)")
 
 def main():
     print(f"Fetching authors from {RESEARCHERS_URL}...")
@@ -194,22 +135,14 @@ def main():
     print(f"Found {len(authors)} authors")
     
     print("\nFetching recent papers (this may take a few minutes)...")
-    # Fetch 3 papers per author for more content
-    papers = get_all_recent_papers(authors, max_per_author=3)
+    papers = get_all_recent_papers(authors)
     
-    # Keep top 300 papers for infinite scrolling
-    papers = papers[:300]
+    # Keep top 500 papers for infinite scrolling
+    papers = papers[:500]
     
     print(f"\nFound {len(papers)} unique recent papers")
     
-    if papers:
-        print("\nUpdating index.html...")
-        update_index_html(papers)
-        print("\nDone! The website has been updated with recent arXiv papers.")
-    else:
-        print("No papers found to update.")
-    
-    # Save papers to JSON for reference
+    # Save papers to JSON
     import os
     script_dir = os.path.dirname(os.path.abspath(__file__))
     json_path = os.path.join(script_dir, 'papers.json')
@@ -222,7 +155,7 @@ def main():
             # Keep matching_authors for JavaScript to use
             papers_for_json.append(paper_copy)
         json.dump(papers_for_json, f, indent=2)
-        print("Saved papers data to papers.json")
+        print(f"\nDone! Saved {len(papers)} papers to papers.json")
 
 if __name__ == '__main__':
     main()

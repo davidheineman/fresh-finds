@@ -1,8 +1,8 @@
 // Infinite scroll functionality for arXiv papers
 (function() {
     let allPapers = [];
-    let currentIndex = 20; // First 20 papers are already loaded
-    const papersPerLoad = 10;
+    let currentIndex = 0; // Start from the beginning
+    const papersPerLoad = 20;
     let isLoading = false;
     let hasMorePapers = true;
 
@@ -20,7 +20,10 @@
             }
             allPapers = await response.json();
             hasMorePapers = currentIndex < allPapers.length;
-            console.log(`Loaded ${allPapers.length} papers for infinite scroll`);
+            console.log(`Loaded ${allPapers.length} papers total`);
+            
+            // Load initial batch of papers
+            loadMorePapers();
         } catch (error) {
             console.error('Error loading papers:', error);
         }
@@ -78,14 +81,17 @@
 
         // Add papers to the list
         papersToAdd.forEach(paper => {
-            const li = document.createElement('li');
-            li.innerHTML = generatePaperHTML(paper).trim();
-            postList.appendChild(li.firstChild);
+            const paperHTML = generatePaperHTML(paper).trim();
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = paperHTML;
+            postList.appendChild(tempDiv.firstChild);
         });
 
         currentIndex = endIndex;
         hasMorePapers = currentIndex < allPapers.length;
         isLoading = false;
+
+        console.log(`Loaded papers ${currentIndex - papersToAdd.length + 1}-${currentIndex} of ${allPapers.length}`);
 
         if (!hasMorePapers) {
             console.log('All papers loaded');
