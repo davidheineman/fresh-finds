@@ -3,11 +3,12 @@ import arxiv
 import json
 from typing import List, Dict
 
-RESEARCHERS_URL = 'https://raw.githubusercontent.com/davidheineman/conference-papers/main/constants.py'
+RESEARCHERS = 'https://raw.githubusercontent.com/davidheineman/conference-papers/main/constants.py'
+CATEGORIES = {'cs.LG', 'cs.AI', 'cs.CL', 'cs.HC', 'stat.ML'}
 
 def fetch_authors_from_github() -> List[str]:
     """Fetch the authors list from the GitHub repository."""
-    response = requests.get(RESEARCHERS_URL)
+    response = requests.get(RESEARCHERS)
     if response.status_code != 200:
         raise RuntimeError(f"Failed to fetch constants.py: {response.status_code}")
     
@@ -46,6 +47,11 @@ def get_recent_papers_for_author(author_name: str, max_results: int | None = Non
         
         papers = []
         for result in client.results(search):
+            # Filter by category - only include papers from allowed categories
+            paper_categories = set(result.categories)
+            if not paper_categories.intersection(CATEGORIES):
+                continue  # Skip papers not in our allowed categories
+            
             # Format the date without year
             pub_date = result.published.strftime("%b %d")
             
@@ -97,7 +103,7 @@ def get_all_recent_papers(authors: List[str], max_per_author: int | None = None)
 
 
 def main():
-    print(f"Fetching authors from {RESEARCHERS_URL}...")
+    print(f"Fetching authors from {RESEARCHERS}...")
     authors = fetch_authors_from_github()
 
     print(f"Found {len(authors)} authors")

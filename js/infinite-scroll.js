@@ -32,13 +32,17 @@
     // Generate HTML for a single paper
     function generatePaperHTML(paper) {
         // Format authors - show up to 50, then et al.
-        const matchingAuthors = new Set(paper.matching_authors || []);
+        // Create a normalized set of matching authors (without periods)
+        const matchingAuthorsNormalized = new Set(
+            (paper.matching_authors || []).map(name => name.replace(/\./g, ''))
+        );
         const authorParts = [];
         
         for (let i = 0; i < paper.authors.length && i < 50; i++) {
             const author = paper.authors[i];
-            // Underline if this author is in the matching list
-            if (matchingAuthors.has(author)) {
+            // Underline if this author is in the matching list (compare without periods)
+            const authorNormalized = author.replace(/\./g, '');
+            if (matchingAuthorsNormalized.has(authorNormalized)) {
                 authorParts.push(`<u>${author}</u>`);
             } else {
                 authorParts.push(author);
