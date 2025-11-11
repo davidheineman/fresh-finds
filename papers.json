@@ -1747,5 +1747,1074 @@
     "matching_authors": [
       "Orion Weller"
     ]
+  },
+  {
+    "title": "Embedding time expressions for deep temporal ordering models",
+    "authors": [
+      "Tanya Goyal",
+      "Greg Durrett"
+    ],
+    "summary": "Data-driven models have demonstrated state-of-the-art performance in inferring the temporal ordering of events in text. However, these models often overlook explicit temporal signals, such as dates and time windows. Rule-based methods can be used to identify the temporal links between these time exp...",
+    "published": "Jun 19",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1906.08287v1",
+    "queried_author": "Tanya Goyal",
+    "matching_authors": [
+      "Tanya Goyal"
+    ]
+  },
+  {
+    "title": "Better Character Language Modeling Through Morphology",
+    "authors": [
+      "Terra Blevins",
+      "Luke Zettlemoyer"
+    ],
+    "summary": "We incorporate morphological supervision into character language models (CLMs) via multitasking and show that this addition improves bits-per-character (BPC) performance across 24 languages, even when the morphology data and language modeling data are disjoint. Analyzing the CLMs shows that inflecte...",
+    "published": "Jun 03",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1906.01037v2",
+    "queried_author": "Luke Zettlemoyer",
+    "matching_authors": [
+      "Luke Zettlemoyer"
+    ]
+  },
+  {
+    "title": "Efficient Adaptation of Pretrained Transformers for Abstractive Summarization",
+    "authors": [
+      "Andrew Hoang",
+      "Antoine Bosselut",
+      "Asli Celikyilmaz",
+      "Yejin Choi"
+    ],
+    "summary": "Large-scale learning of transformer language models has yielded improvements on a variety of natural language understanding tasks. Whether they can be effectively adapted for summarization, however, has been less explored, as the learned representations are less seamlessly integrated into existing n...",
+    "published": "Jun 01",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1906.00138v1",
+    "queried_author": "Antoine Bosselut",
+    "matching_authors": [
+      "Antoine Bosselut"
+    ]
+  },
+  {
+    "title": "Sequential Graph Dependency Parser",
+    "authors": [
+      "Sean Welleck",
+      "Kyunghyun Cho"
+    ],
+    "summary": "We propose a method for non-projective dependency parsing by incrementally predicting a set of edges. Since the edges do not have a pre-specified order, we propose a set-based learning method. Our method blends graph, transition, and easy-first parsing, including a prior state of the parser as a spe...",
+    "published": "May 27",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1905.10930v2",
+    "queried_author": "Sean Welleck",
+    "matching_authors": [
+      "Sean Welleck"
+    ]
+  },
+  {
+    "title": "SocialIQA: Commonsense Reasoning about Social Interactions",
+    "authors": [
+      "Maarten Sap",
+      "Hannah Rashkin",
+      "Derek Chen",
+      "Ronan LeBras",
+      "Yejin Choi"
+    ],
+    "summary": "We introduce Social IQa, the first largescale benchmark for commonsense reasoning about social situations. Social IQa contains 38,000 multiple choice questions for probing emotional and social intelligence in a variety of everyday situations (e.g., Q: \"Jordan wanted to tell Tracy a secret, so Jordan...",
+    "published": "Apr 22",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1904.09728v3",
+    "queried_author": "Maarten Sap",
+    "matching_authors": [
+      "Maarten Sap"
+    ]
+  },
+  {
+    "title": "Modeling Drug-Disease Relations with Linguistic and Knowledge Graph Constraints",
+    "authors": [
+      "Bruno Godefroy",
+      "Christopher Potts"
+    ],
+    "summary": "FDA drug labels are rich sources of information about drugs and drug-disease relations, but their complexity makes them challenging texts to analyze in isolation. To overcome this, we situate these labels in two health knowledge graphs: one built from precise structured information about drugs and d...",
+    "published": "Mar 31",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1904.00313v1",
+    "queried_author": "Christopher Potts",
+    "matching_authors": [
+      "Christopher Potts"
+    ]
+  },
+  {
+    "title": "Measuring Compositionality in Representation Learning",
+    "authors": [
+      "Jacob Andreas"
+    ],
+    "summary": "Many machine learning algorithms represent input data with vector embeddings or discrete codes. When inputs exhibit compositional structure (e.g. objects built from parts or procedures from subroutines), it is natural to ask whether this compositional structure is reflected in the the inputs' learne...",
+    "published": "Feb 19",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1902.07181v2",
+    "queried_author": "Jacob Andreas",
+    "matching_authors": [
+      "Jacob Andreas"
+    ]
+  },
+  {
+    "title": "Contextual Word Representations: A Contextual Introduction",
+    "authors": [
+      "Noah A. Smith"
+    ],
+    "summary": "This introduction aims to tell the story of how we put words into computers. It is part of the story of the field of natural language processing (NLP), a branch of artificial intelligence. It targets a wide audience with a basic understanding of computer programming, but avoids a detailed mathematic...",
+    "published": "Feb 15",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1902.06006v3",
+    "queried_author": "Noah A. Smith",
+    "matching_authors": [
+      "Noah A. Smith"
+    ]
+  },
+  {
+    "title": "Do ImageNet Classifiers Generalize to ImageNet?",
+    "authors": [
+      "Benjamin Recht",
+      "Rebecca Roelofs",
+      "Ludwig Schmidt",
+      "Vaishaal Shankar"
+    ],
+    "summary": "We build new test sets for the CIFAR-10 and ImageNet datasets. Both benchmarks have been the focus of intense research for almost a decade, raising the danger of overfitting to excessively re-used test sets. By closely following the original dataset creation processes, we test to what extent current...",
+    "published": "Feb 13",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1902.10811v2",
+    "queried_author": "Ludwig Schmidt",
+    "matching_authors": [
+      "Ludwig Schmidt"
+    ]
+  },
+  {
+    "title": "Stronger Data Poisoning Attacks Break Data Sanitization Defenses",
+    "authors": [
+      "Pang Wei Koh",
+      "Jacob Steinhardt",
+      "Percy Liang"
+    ],
+    "summary": "Machine learning models trained on data from the outside world can be corrupted by data poisoning attacks that inject malicious points into the models' training sets. A common defense against these attacks is data sanitization: first filter out anomalous training points before training the model. In...",
+    "published": "Nov 02",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1811.00741v2",
+    "queried_author": "Pang Wei Koh",
+    "matching_authors": [
+      "Pang Wei Koh"
+    ]
+  },
+  {
+    "title": "Dialogue Natural Language Inference",
+    "authors": [
+      "Sean Welleck",
+      "Jason Weston",
+      "Arthur Szlam",
+      "Kyunghyun Cho"
+    ],
+    "summary": "Consistency is a long standing issue faced by dialogue models. In this paper, we frame the consistency of dialogue agents as natural language inference (NLI) and create a new natural language inference dataset called Dialogue NLI. We propose a method which demonstrates that a model trained on Dialog...",
+    "published": "Nov 01",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1811.00671v2",
+    "queried_author": "Sean J Welleck",
+    "matching_authors": [
+      "Sean J Welleck"
+    ]
+  },
+  {
+    "title": "Stress-Testing Neural Models of Natural Language Inference with Multiply-Quantified Sentences",
+    "authors": [
+      "Atticus Geiger",
+      "Ignacio Cases",
+      "Lauri Karttunen",
+      "Christopher Potts"
+    ],
+    "summary": "Standard evaluations of deep learning models for semantics using naturalistic corpora are limited in what they can tell us about the fidelity of the learned representations, because the corpora rarely come with good measures of semantic complexity. To overcome this limitation, we present a method fo...",
+    "published": "Oct 30",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1810.13033v1",
+    "queried_author": "Christopher Potts",
+    "matching_authors": [
+      "Christopher Potts"
+    ]
+  },
+  {
+    "title": "Combining Distant and Direct Supervision for Neural Relation Extraction",
+    "authors": [
+      "Iz Beltagy",
+      "Kyle Lo",
+      "Waleed Ammar"
+    ],
+    "summary": "In relation extraction with distant supervision, noisy labels make it difficult to train quality models. Previous neural models addressed this problem using an attention mechanism that attends to sentences that are likely to express the relations. We improve such models by combining the distant supe...",
+    "published": "Oct 30",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1810.12956v2",
+    "queried_author": "Kyle Lo",
+    "matching_authors": [
+      "Kyle Lo"
+    ]
+  },
+  {
+    "title": "A case for deep learning in semantics",
+    "authors": [
+      "Christopher Potts"
+    ],
+    "summary": "Pater's target article builds a persuasive case for establishing stronger ties between theoretical linguistics and connectionism (deep learning). This commentary extends his arguments to semantics, focusing in particular on issues of learning, compositionality, and lexical meaning.",
+    "published": "Sep 10",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1809.03068v1",
+    "queried_author": "Christopher Potts",
+    "matching_authors": [
+      "Christopher Potts"
+    ]
+  },
+  {
+    "title": "Neural Compositional Denotational Semantics for Question Answering",
+    "authors": [
+      "Nitish Gupta",
+      "Mike Lewis"
+    ],
+    "summary": "Answering compositional questions requiring multi-step reasoning is challenging. We introduce an end-to-end differentiable model for interpreting questions about a knowledge graph (KG), which is inspired by formal approaches to semantics. Each span of text is represented by a denotation in a KG and ...",
+    "published": "Aug 29",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1808.09942v1",
+    "queried_author": "Mike Lewis",
+    "matching_authors": [
+      "Mike Lewis"
+    ]
+  },
+  {
+    "title": "Ultra-Fine Entity Typing",
+    "authors": [
+      "Eunsol Choi",
+      "Omer Levy",
+      "Yejin Choi",
+      "Luke Zettlemoyer"
+    ],
+    "summary": "We introduce a new entity typing task: given a sentence with an entity mention, the goal is to predict a set of free-form phrases (e.g. skyscraper, songwriter, or criminal) that describe appropriate types for the target entity. This formulation allows us to use a new type of distant supervision at l...",
+    "published": "Jul 13",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1807.04905v1",
+    "queried_author": "Eunsol Choi",
+    "matching_authors": [
+      "Eunsol Choi"
+    ]
+  },
+  {
+    "title": "Helping or Hurting? Predicting Changes in Users' Risk of Self-Harm Through Online Community Interactions",
+    "authors": [
+      "Luca Soldaini",
+      "Timothy Walsh",
+      "Arman Cohan",
+      "Julien Han",
+      "Nazli Goharian"
+    ],
+    "summary": "In recent years, online communities have formed around suicide and self-harm prevention. While these communities offer support in moment of crisis, they can also normalize harmful behavior, discourage professional treatment, and instigate suicidal ideation. In this work, we focus on how interaction ...",
+    "published": "Apr 19",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1804.07253v1",
+    "queried_author": "Luca Soldaini",
+    "matching_authors": [
+      "Luca Soldaini"
+    ]
+  },
+  {
+    "title": "Deep Communicating Agents for Abstractive Summarization",
+    "authors": [
+      "Asli Celikyilmaz",
+      "Antoine Bosselut",
+      "Xiaodong He",
+      "Yejin Choi"
+    ],
+    "summary": "We present deep communicating agents in an encoder-decoder architecture to address the challenges of representing a long document for abstractive summarization. With deep communicating agents, the task of encoding a long text is divided across multiple collaborating agents, each in charge of a subse...",
+    "published": "Mar 27",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1803.10357v3",
+    "queried_author": "Antoine Bosselut",
+    "matching_authors": [
+      "Antoine Bosselut"
+    ]
+  },
+  {
+    "title": "An Empirical Evaluation of Generic Convolutional and Recurrent Networks for Sequence Modeling",
+    "authors": [
+      "Shaojie Bai",
+      "J. Zico Kolter",
+      "Vladlen Koltun"
+    ],
+    "summary": "For most deep learning practitioners, sequence modeling is synonymous with recurrent networks. Yet recent results indicate that convolutional architectures can outperform recurrent networks on tasks such as audio synthesis and machine translation. Given a new sequence modeling task or dataset, which...",
+    "published": "Mar 04",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1803.01271v2",
+    "queried_author": "J Zico Kolter",
+    "matching_authors": [
+      "J Zico Kolter"
+    ]
+  },
+  {
+    "title": "Saliency-based Sequential Image Attention with Multiset Prediction",
+    "authors": [
+      "Sean Welleck",
+      "Jialin Mao",
+      "Kyunghyun Cho",
+      "Zheng Zhang"
+    ],
+    "summary": "Humans process visual scenes selectively and sequentially using attention. Central to models of human visual attention is the saliency map. We propose a hierarchical visual architecture that operates on a saliency map and uses a novel attention mechanism to sequentially focus on salient regions and ...",
+    "published": "Nov 14",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1711.05165v1",
+    "queried_author": "Sean J Welleck",
+    "matching_authors": [
+      "Sean J Welleck"
+    ]
+  },
+  {
+    "title": "Provable defenses against adversarial examples via the convex outer adversarial polytope",
+    "authors": [
+      "Eric Wong",
+      "J. Zico Kolter"
+    ],
+    "summary": "We propose a method to learn deep ReLU-based classifiers that are provably robust against norm-bounded adversarial perturbations on the training data. For previously unseen examples, the approach is guaranteed to detect all adversarial examples, though it may flag some non-adversarial examples as we...",
+    "published": "Nov 02",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1711.00851v3",
+    "queried_author": "J Zico Kolter",
+    "matching_authors": [
+      "J Zico Kolter"
+    ]
+  },
+  {
+    "title": "Gaussian Quadrature for Kernel Features",
+    "authors": [
+      "Tri Dao",
+      "Christopher De Sa",
+      "Christopher R\u00e9"
+    ],
+    "summary": "Kernel methods have recently attracted resurgent interest, showing performance competitive with deep neural networks in tasks such as speech recognition. The random Fourier features map is a technique commonly used to scale up kernel machines, but employing the randomized feature map means that $O(\u03b5...",
+    "published": "Sep 08",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1709.02605v3",
+    "queried_author": "Tri Dao",
+    "matching_authors": [
+      "Tri Dao"
+    ]
+  },
+  {
+    "title": "Zero-Shot Activity Recognition with Verb Attribute Induction",
+    "authors": [
+      "Rowan Zellers",
+      "Yejin Choi"
+    ],
+    "summary": "In this paper, we investigate large-scale zero-shot activity recognition by modeling the visual and linguistic attributes of action verbs. For example, the verb \"salute\" has several properties, such as being a light movement, a social act, and short in duration. We use these attributes as the intern...",
+    "published": "Jul 29",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1707.09468v2",
+    "queried_author": "Yejin Choi",
+    "matching_authors": [
+      "Yejin Choi"
+    ]
+  },
+  {
+    "title": "End-to-end Neural Coreference Resolution",
+    "authors": [
+      "Kenton Lee",
+      "Luheng He",
+      "Mike Lewis",
+      "Luke Zettlemoyer"
+    ],
+    "summary": "We introduce the first end-to-end coreference resolution model and show that it significantly outperforms all previous work without using a syntactic parser or hand-engineered mention detector. The key idea is to directly consider all spans in a document as potential mentions and learn distributions...",
+    "published": "Jul 21",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1707.07045v2",
+    "queried_author": "Mike Lewis",
+    "matching_authors": [
+      "Mike Lewis"
+    ]
+  },
+  {
+    "title": "Open Loop Hyperparameter Optimization and Determinantal Point Processes",
+    "authors": [
+      "Jesse Dodge",
+      "Kevin Jamieson",
+      "Noah A. Smith"
+    ],
+    "summary": "Driven by the need for parallelizable hyperparameter optimization methods, this paper studies \\emph{open loop} search methods: sequences that are predetermined and can be generated before a single configuration is evaluated. Examples include grid search, uniform random search, low discrepancy sequen...",
+    "published": "Jun 06",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1706.01566v4",
+    "queried_author": "Jesse Dodge",
+    "matching_authors": [
+      "Jesse Dodge"
+    ]
+  },
+  {
+    "title": "Mapping Instructions and Visual Observations to Actions with Reinforcement Learning",
+    "authors": [
+      "Dipendra Misra",
+      "John Langford",
+      "Yoav Artzi"
+    ],
+    "summary": "We propose to directly map raw visual observations and text input to actions for instruction execution. While existing approaches assume access to structured environment representations or use a pipeline of separately trained models, we learn a single model to jointly reason about linguistic and vis...",
+    "published": "Apr 28",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1704.08795v2",
+    "queried_author": "Yoav Artzi",
+    "matching_authors": [
+      "Yoav Artzi"
+    ]
+  },
+  {
+    "title": "Reading Wikipedia to Answer Open-Domain Questions",
+    "authors": [
+      "Danqi Chen",
+      "Adam Fisch",
+      "Jason Weston",
+      "Antoine Bordes"
+    ],
+    "summary": "This paper proposes to tackle open- domain question answering using Wikipedia as the unique knowledge source: the answer to any factoid question is a text span in a Wikipedia article. This task of machine reading at scale combines the challenges of document retrieval (finding the relevant articles) ...",
+    "published": "Mar 31",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1704.00051v2",
+    "queried_author": "Danqi Chen",
+    "matching_authors": [
+      "Danqi Chen"
+    ]
+  },
+  {
+    "title": "Understanding Black-box Predictions via Influence Functions",
+    "authors": [
+      "Pang Wei Koh",
+      "Percy Liang"
+    ],
+    "summary": "How can we explain the predictions of a black-box model? In this paper, we use influence functions -- a classic technique from robust statistics -- to trace a model's prediction through the learning algorithm and back to its training data, thereby identifying training points most responsible for a g...",
+    "published": "Mar 14",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1703.04730v3",
+    "queried_author": "Pang Wei Koh",
+    "matching_authors": [
+      "Pang Wei Koh"
+    ]
+  },
+  {
+    "title": "Neural Machine Translation and Sequence-to-sequence Models: A Tutorial",
+    "authors": [
+      "Graham Neubig"
+    ],
+    "summary": "This tutorial introduces a new and powerful set of techniques variously called \"neural machine translation\" or \"neural sequence-to-sequence models\". These techniques have been used in a number of tasks regarding the handling of human language, and can be a powerful tool in the toolbox of anyone who ...",
+    "published": "Mar 05",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1703.01619v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
+    "title": "Training a Subsampling Mechanism in Expectation",
+    "authors": [
+      "Colin Raffel",
+      "Dieterich Lawson"
+    ],
+    "summary": "We describe a mechanism for subsampling sequences and show how to compute its expected output so that it can be trained with standard backpropagation. We test this approach on a simple toy problem and discuss its shortcomings.",
+    "published": "Feb 22",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1702.06914v3",
+    "queried_author": "Colin Raffel",
+    "matching_authors": [
+      "Colin Raffel"
+    ]
+  },
+  {
+    "title": "Unsupervised Learning for Lexicon-Based Classification",
+    "authors": [
+      "Jacob Eisenstein"
+    ],
+    "summary": "In lexicon-based classification, documents are assigned labels by comparing the number of words that appear from two opposed lexicons, such as positive and negative sentiment. Creating such words lists is often easier than labeling instances, and they can be debugged by non-experts if classification...",
+    "published": "Nov 21",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1611.06933v1",
+    "queried_author": "Jacob Eisenstein",
+    "matching_authors": [
+      "Jacob Eisenstein"
+    ]
+  },
+  {
+    "title": "Hierarchical Question Answering for Long Documents",
+    "authors": [
+      "Eunsol Choi",
+      "Daniel Hewlett",
+      "Alexandre Lacoste",
+      "Illia Polosukhin",
+      "Jakob Uszkoreit",
+      "Jonathan Berant"
+    ],
+    "summary": "We present a framework for question answering that can efficiently scale to longer documents while maintaining or even improving performance of state-of-the-art models. While most successful approaches for reading comprehension rely on recurrent neural networks (RNNs), running them over long documen...",
+    "published": "Nov 06",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1611.01839v2",
+    "queried_author": "Eunsol Choi",
+    "matching_authors": [
+      "Eunsol Choi"
+    ]
+  },
+  {
+    "title": "Lexicons and Minimum Risk Training for Neural Machine Translation: NAIST-CMU at WAT2016",
+    "authors": [
+      "Graham Neubig"
+    ],
+    "summary": "This year, the Nara Institute of Science and Technology (NAIST)/Carnegie Mellon University (CMU) submission to the Japanese-English translation track of the 2016 Workshop on Asian Translation was based on attentional neural machine translation (NMT) models. In addition to the standard NMT model, we ...",
+    "published": "Oct 20",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1610.06542v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
+    "title": "Input Convex Neural Networks",
+    "authors": [
+      "Brandon Amos",
+      "Lei Xu",
+      "J. Zico Kolter"
+    ],
+    "summary": "This paper presents the input convex neural network architecture. These are scalar-valued (potentially deep) neural networks with constraints on the network parameters such that the output of the network is a convex function of (some of) the inputs. The networks allow for efficient inference via opt...",
+    "published": "Sep 22",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1609.07152v3",
+    "queried_author": "J Zico Kolter",
+    "matching_authors": [
+      "J Zico Kolter"
+    ]
+  },
+  {
+    "title": "MUSE searches for galaxies near very metal-poor gas clouds at z~3: new constraints for cold accretion models",
+    "authors": [
+      "Michele Fumagalli",
+      "Sebastiano Cantalupo",
+      "Avishai Dekel",
+      "Simon L. Morris",
+      "John M. O'Meara",
+      "J. Xavier Prochaska",
+      "Tom Theuns"
+    ],
+    "summary": "We report on the search for galaxies in the proximity of two very metal-poor gas clouds at z~3 towards the quasar Q0956+122. With a 5-hour MUSE integration in a ~500x500 kpc^2 region centred at the quasar position, we achieve a >80% complete spectroscopic survey of continuum-detected galaxies with m...",
+    "published": "Jul 13",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1607.03893v2",
+    "queried_author": "John Xavier Morris",
+    "matching_authors": [
+      "John Xavier Morris"
+    ]
+  },
+  {
+    "title": "LSTMVis: A Tool for Visual Analysis of Hidden State Dynamics in Recurrent Neural Networks",
+    "authors": [
+      "Hendrik Strobelt",
+      "Sebastian Gehrmann",
+      "Hanspeter Pfister",
+      "Alexander M. Rush"
+    ],
+    "summary": "Recurrent neural networks, and in particular long short-term memory (LSTM) networks, are a remarkably effective tool for sequence modeling that learn a dense black-box hidden representation of their sequential input. Researchers interested in better understanding these models have studied the change...",
+    "published": "Jun 23",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1606.07461v2",
+    "queried_author": "Alexander M Rush",
+    "matching_authors": [
+      "Alexander M Rush",
+      "Alexander M. Rush"
+    ]
+  },
+  {
+    "title": "Shallow Discourse Parsing Using Distributed Argument Representations and Bayesian Optimization",
+    "authors": [
+      "Akanksha",
+      "Jacob Eisenstein"
+    ],
+    "summary": "This paper describes the Georgia Tech team's approach to the CoNLL-2016 supplementary evaluation on discourse relation sense classification. We use long short-term memories (LSTM) to induce distributed representations of each argument, and then combine these representations with surface features in ...",
+    "published": "Jun 14",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1606.04503v1",
+    "queried_author": "Jacob Eisenstein",
+    "matching_authors": [
+      "Jacob Eisenstein"
+    ]
+  },
+  {
+    "title": "A Thorough Examination of the CNN/Daily Mail Reading Comprehension Task",
+    "authors": [
+      "Danqi Chen",
+      "Jason Bolton",
+      "Christopher D. Manning"
+    ],
+    "summary": "Enabling a computer to understand a document so that it can answer comprehension questions is a central, yet unsolved goal of NLP. A key factor impeding its solution by machine learned systems is the limited availability of human-annotated data. Hermann et al. (2015) seek to solve this problem by cr...",
+    "published": "Jun 09",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1606.02858v2",
+    "queried_author": "Danqi Chen",
+    "matching_authors": [
+      "Danqi Chen"
+    ]
+  },
+  {
+    "title": "Generalizing and Hybridizing Count-based and Neural Language Models",
+    "authors": [
+      "Graham Neubig",
+      "Chris Dyer"
+    ],
+    "summary": "Language models (LMs) are statistical models that calculate probabilities over sequences of words or other discrete symbols. Currently two major paradigms for language modeling exist: count-based n-gram models, which have advantages of scalability and test-time speed, and neural LMs, which often ach...",
+    "published": "Jun 01",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1606.00499v2",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
+    "title": "Hierarchical Deep Reinforcement Learning: Integrating Temporal Abstraction and Intrinsic Motivation",
+    "authors": [
+      "Tejas D. Kulkarni",
+      "Karthik R. Narasimhan",
+      "Ardavan Saeedi",
+      "Joshua B. Tenenbaum"
+    ],
+    "summary": "Learning goal-directed behavior in environments with sparse feedback is a major challenge for reinforcement learning algorithms. The primary difficulty arises due to insufficient exploration, resulting in an agent being unable to learn robust value functions. Intrinsically motivated agents can explo...",
+    "published": "Apr 20",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1604.06057v2",
+    "queried_author": "Karthik R Narasimhan",
+    "matching_authors": [
+      "Karthik R Narasimhan"
+    ]
+  },
+  {
+    "title": "Learning-Based Single-Document Summarization with Compression and Anaphoricity Constraints",
+    "authors": [
+      "Greg Durrett",
+      "Taylor Berg-Kirkpatrick",
+      "Dan Klein"
+    ],
+    "summary": "We present a discriminative model for single-document summarization that integrally combines compression and anaphoricity constraints. Our model selects textual units to include in the summary based on a rich set of sparse features whose weights are learned on a large corpus. We allow for the deleti...",
+    "published": "Mar 29",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1603.08887v2",
+    "queried_author": "Greg Durrett",
+    "matching_authors": [
+      "Greg Durrett"
+    ]
+  },
+  {
+    "title": "Learning Executable Semantic Parsers for Natural Language Understanding",
+    "authors": [
+      "Percy Liang"
+    ],
+    "summary": "For building question answering systems and natural language interfaces, semantic parsing has emerged as an important and powerful paradigm. Semantic parsers map natural language into logical forms, the classic representation for many important linguistic phenomena. The modern twist is that we are i...",
+    "published": "Mar 22",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1603.06677v1",
+    "queried_author": "Percy Liang",
+    "matching_authors": [
+      "Percy Liang"
+    ]
+  },
+  {
+    "title": "Efficient AUC Optimization for Information Ranking Applications",
+    "authors": [
+      "Sean J. Welleck"
+    ],
+    "summary": "Adequate evaluation of an information retrieval system to estimate future performance is a crucial task. Area under the ROC curve (AUC) is widely used to evaluate the generalization of a retrieval system. However, the objective function optimized in many retrieval systems is the error rate and not t...",
+    "published": "Nov 16",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1511.05202v3",
+    "queried_author": "Sean J Welleck",
+    "matching_authors": [
+      "Sean J Welleck"
+    ]
+  },
+  {
+    "title": "A Neural Attention Model for Abstractive Sentence Summarization",
+    "authors": [
+      "Alexander M. Rush",
+      "Sumit Chopra",
+      "Jason Weston"
+    ],
+    "summary": "Summarization based on text extraction is inherently limited, but generation-style abstractive methods have proven challenging to build. In this work, we propose a fully data-driven approach to abstractive sentence summarization. Our method utilizes a local attention-based model that generates each ...",
+    "published": "Sep 02",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1509.00685v2",
+    "queried_author": "Alexander M Rush",
+    "matching_authors": [
+      "Alexander M Rush",
+      "Alexander M. Rush"
+    ]
+  },
+  {
+    "title": "Neural CRF Parsing",
+    "authors": [
+      "Greg Durrett",
+      "Dan Klein"
+    ],
+    "summary": "This paper describes a parsing model that combines the exact dynamic programming of CRF parsing with the rich nonlinear featurization of neural net approaches. Our model is structurally a CRF that factors over anchored rule productions, but instead of linear potential functions based on sparse featu...",
+    "published": "Jul 13",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1507.03641v1",
+    "queried_author": "Greg Durrett",
+    "matching_authors": [
+      "Greg Durrett"
+    ]
+  },
+  {
+    "title": "A Nearly Optimal and Agnostic Algorithm for Properly Learning a Mixture of k Gaussians, for any Constant k",
+    "authors": [
+      "Jerry Li",
+      "Ludwig Schmidt"
+    ],
+    "summary": "Learning a Gaussian mixture model (GMM) is a fundamental problem in machine learning, learning theory, and statistics. One notion of learning a GMM is proper learning: here, the goal is to find a mixture of $k$ Gaussians $\\mathcal{M}$ that is close to the density $f$ of the unknown distribution from...",
+    "published": "Jun 03",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1506.01367v1",
+    "queried_author": "Ludwig Schmidt",
+    "matching_authors": [
+      "Ludwig Schmidt"
+    ]
+  },
+  {
+    "title": "Sample-Optimal Density Estimation in Nearly-Linear Time",
+    "authors": [
+      "Jayadev Acharya",
+      "Ilias Diakonikolas",
+      "Jerry Li",
+      "Ludwig Schmidt"
+    ],
+    "summary": "We design a new, fast algorithm for agnostically learning univariate probability distributions whose densities are well approximated by piecewise polynomial functions. Let $f$ be the density function of an arbitrary univariate distribution, and suppose that $f$ is $\\mathrm{OPT}$-close in $L_1$-dista...",
+    "published": "Jun 01",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1506.00671v1",
+    "queried_author": "Ludwig Schmidt",
+    "matching_authors": [
+      "Ludwig Schmidt"
+    ]
+  },
+  {
+    "title": "An Empirical Comparison of Parsing Methods for Stanford Dependencies",
+    "authors": [
+      "Lingpeng Kong",
+      "Noah A. Smith"
+    ],
+    "summary": "Stanford typed dependencies are a widely desired representation of natural language sentences, but parsing is one of the major computational bottlenecks in text analysis systems. In light of the evolving definition of the Stanford dependencies and developments in statistical dependency parsing algor...",
+    "published": "Apr 16",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1404.4314v1",
+    "queried_author": "Noah A. Smith",
+    "matching_authors": [
+      "Noah A. Smith"
+    ]
+  },
+  {
+    "title": "Cornell SPF: Cornell Semantic Parsing Framework",
+    "authors": [
+      "Yoav Artzi"
+    ],
+    "summary": "The Cornell Semantic Parsing Framework (SPF) is a learning and inference framework for mapping natural language to formal representation of its meaning.",
+    "published": "Nov 13",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1311.3011v2",
+    "queried_author": "Yoav Artzi",
+    "matching_authors": [
+      "Yoav Artzi"
+    ]
+  },
+  {
+    "title": "Lambda Dependency-Based Compositional Semantics",
+    "authors": [
+      "Percy Liang"
+    ],
+    "summary": "This short note presents a new formal language, lambda dependency-based compositional semantics (lambda DCS) for representing logical forms in semantic parsing. By eliminating variables and making existential quantification implicit, lambda DCS logical forms are generally more compact than those in ...",
+    "published": "Sep 17",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1309.4408v2",
+    "queried_author": "Percy Liang",
+    "matching_authors": [
+      "Percy Liang"
+    ]
+  },
+  {
+    "title": "Semantic Understanding of Professional Soccer Commentaries",
+    "authors": [
+      "Hannaneh Hajishirzi",
+      "Mohammad Rastegari",
+      "Ali Farhadi",
+      "Jessica K. Hodgins"
+    ],
+    "summary": "This paper presents a novel approach to the problem of semantic parsing via learning the correspondences between complex sentences and rich sets of events. Our main intuition is that correct correspondences tend to occur more frequently. Our model benefits from a discriminative notion of similarity ...",
+    "published": "Oct 16",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1210.4854v1",
+    "queried_author": "Hannaneh Hajishirzi",
+    "matching_authors": [
+      "Hannaneh Hajishirzi"
+    ]
+  },
+  {
+    "title": "A high molecular fraction in a sub-damped absorber at z=0.56",
+    "authors": [
+      "Neil H. M. Crighton",
+      "Jill Bechtold",
+      "Robert F. Carswell",
+      "Romeel Dav\u00e9",
+      "Craig B. Foltz",
+      "Buell T. Jannuzi",
+      "Simon L. Morris",
+      "John M. O'Meara",
+      "J. Xavier Prochaska",
+      "Joop Schaye",
+      "Nicolas Tejos"
+    ],
+    "summary": "Measuring rest-frame ultraviolet rotational transitions from the Lyman and Werner bands in absorption against a bright background continuum is one of the few ways to directly measure molecular hydrogen (H2). Here we report the detection of Lyman-Werner absorption from H2 at z=0.56 in a sub-damped Ly...",
+    "published": "Oct 02",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1210.0905v2",
+    "queried_author": "John Xavier Morris",
+    "matching_authors": [
+      "John Xavier Morris"
+    ]
+  },
+  {
+    "title": "Learning to Map Sentences to Logical Form: Structured Classification with Probabilistic Categorial Grammars",
+    "authors": [
+      "Luke S. Zettlemoyer",
+      "Michael Collins"
+    ],
+    "summary": "This paper addresses the problem of mapping natural language sentences to lambda-calculus encodings of their meaning. We describe a learning algorithm that takes as input a training set of sentences labeled with expressions in the lambda calculus. The algorithm induces a grammar for the problem, alo...",
+    "published": "Jul 04",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1207.1420v1",
+    "queried_author": "Luke Zettlemoyer",
+    "matching_authors": [
+      "Luke Zettlemoyer"
+    ]
+  },
+  {
+    "title": "Adversarial Evaluation for Models of Natural Language",
+    "authors": [
+      "Noah A. Smith"
+    ],
+    "summary": "We now have a rich and growing set of modeling tools and algorithms for inducing linguistic structure from text that is less than fully annotated. In this paper, we discuss some of the weaknesses of our current methodology. We present a new abstract framework for evaluating natural language processi...",
+    "published": "Jul 01",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1207.0245v2",
+    "queried_author": "Noah A. Smith",
+    "matching_authors": [
+      "Noah A. Smith"
+    ]
+  },
+  {
+    "title": "The Complexity of Learning Principles and Parameters Grammars",
+    "authors": [
+      "Jacob Andreas"
+    ],
+    "summary": "We investigate models for learning the class of context-free and context-sensitive languages (CFLs and CSLs). We begin with a brief discussion of some early hardness results which show that unrestricted language learning is impossible, and unrestricted CFL learning is computationally infeasible; we ...",
+    "published": "Jun 30",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1207.0052v3",
+    "queried_author": "Jacob Andreas",
+    "matching_authors": [
+      "Jacob Andreas"
+    ]
+  },
+  {
+    "title": "Sampling First Order Logical Particles",
+    "authors": [
+      "Hannaneh Hajishirzi",
+      "Eyal Amir"
+    ],
+    "summary": "Approximate inference in dynamic systems is the problem of estimating the state of the system given a sequence of actions and partial observations. High precision estimation is fundamental in many applications like diagnosis, natural language processing, tracking, planning, and robotics. In this pap...",
+    "published": "Jun 13",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1206.3264v1",
+    "queried_author": "Hannaneh Hajishirzi",
+    "matching_authors": [
+      "Hannaneh Hajishirzi"
+    ]
+  },
+  {
+    "title": "The Infinite Latent Events Model",
+    "authors": [
+      "David Wingate",
+      "Noah Goodman",
+      "Daniel Roy",
+      "Joshua Tenenbaum"
+    ],
+    "summary": "We present the Infinite Latent Events Model, a nonparametric hierarchical Bayesian distribution over infinite dimensional Dynamic Bayesian Networks with binary state representations and noisy-OR-like transitions. The distribution can be used to learn structure in discrete timeseries data by simultan...",
+    "published": "May 09",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1205.2604v1",
+    "queried_author": "Noah Goodman",
+    "matching_authors": [
+      "Noah Goodman"
+    ]
+  },
+  {
+    "title": "Reasoning about RoboCup Soccer Narratives",
+    "authors": [
+      "Hannaneh Hajishirzi",
+      "Julia Hockenmaier",
+      "Erik T. Mueller",
+      "Eyal Amir"
+    ],
+    "summary": "This paper presents an approach for learning to translate simple narratives, i.e., texts (sequences of sentences) describing dynamic systems, into coherent sequences of events without the need for labeled training data. Our approach incorporates domain knowledge in the form of preconditions and effe...",
+    "published": "Feb 14",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1202.3728v1",
+    "queried_author": "Hannaneh Hajishirzi",
+    "matching_authors": [
+      "Hannaneh Hajishirzi"
+    ]
+  },
+  {
+    "title": "Inducing Probabilistic Programs by Bayesian Program Merging",
+    "authors": [
+      "Irvin Hwang",
+      "Andreas Stuhlm\u00fcller",
+      "Noah D. Goodman"
+    ],
+    "summary": "This report outlines an approach to learning generative models from data. We express models as probabilistic programs, which allows us to capture abstract patterns within the examples. By choosing our language for programs to be an extension of the algebraic data type of the examples, we can begin w...",
+    "published": "Oct 25",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1110.5667v1",
+    "queried_author": "Noah Goodman",
+    "matching_authors": [
+      "Noah Goodman"
+    ]
+  },
+  {
+    "title": "Learning Dependency-Based Compositional Semantics",
+    "authors": [
+      "Percy Liang",
+      "Michael I. Jordan",
+      "Dan Klein"
+    ],
+    "summary": "Suppose we want to build a system that answers a natural language question by representing its semantics as a logical form and computing the answer given a structured database of facts. The core part of such a system is the semantic parser that maps questions to logical forms. Semantic parsers are t...",
+    "published": "Sep 30",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/1109.6841v1",
+    "queried_author": "Percy Liang",
+    "matching_authors": [
+      "Percy Liang"
+    ]
+  },
+  {
+    "title": "Unraveling L_{n,k}: Grassmannian Kinematics",
+    "authors": [
+      "Jared Kaplan"
+    ],
+    "summary": "It was recently proposed that the leading singularities of the S-Matrix of N = 4 super Yang-Mills theory arise as the residues of a contour integral over a Grassmannian manifold, with space-time locality encoded through residue theorems generalizing Cauchy's theorem to more than one variable. We pro...",
+    "published": "Dec 07",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/0912.0957v1",
+    "queried_author": "Jared Kaplan",
+    "matching_authors": [
+      "Jared Kaplan"
+    ]
+  },
+  {
+    "title": "IDF revisited: A simple new derivation within the Robertson-Sp\u00e4rck Jones probabilistic model",
+    "authors": [
+      "Lillian Lee"
+    ],
+    "summary": "There have been a number of prior attempts to theoretically justify the effectiveness of the inverse document frequency (IDF). Those that take as their starting point Robertson and Sparck Jones's probabilistic model are based on strong or complex assumptions. We show that a more intuitively plausibl...",
+    "published": "May 08",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/0705.1161v1",
+    "queried_author": "Lillian Lee",
+    "matching_authors": [
+      "Lillian Lee"
+    ]
+  },
+  {
+    "title": "Dark Matter Generation and Split Supersymmetry",
+    "authors": [
+      "Jared Kaplan"
+    ],
+    "summary": "We analyze a simple Split Supersymmetry scenario where fermion masses come from anomaly mediation, yielding m_s ~ 1000 TeV, m_{3/2} ~ 100 TeV, and m_f ~ 1 TeV. We consider non-thermal dark matter production in the presence of moduli, and we find that the decay chains of moduli to LSPs and moduli to ...",
+    "published": "Jan 31",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/hep-ph/0601262v3",
+    "queried_author": "Jared Kaplan",
+    "matching_authors": [
+      "Jared Kaplan"
+    ]
+  },
+  {
+    "title": "Overtwisted open books from sobering arcs",
+    "authors": [
+      "Noah Goodman"
+    ],
+    "summary": "We study open books on three manifolds which are compatible with an overtwisted contact structure. We show that the existence of certain arcs, called sobering arcs, is a sufficient condition for an open book to be overtwisted, and is necessary up to stabilization by positive Hopf-bands. Using these ...",
+    "published": "Jul 24",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/math/0407420v2",
+    "queried_author": "Noah Goodman",
+    "matching_authors": [
+      "Noah Goodman"
+    ]
+  },
+  {
+    "title": "Extracting Data from Behind Horizons with the AdS/CFT Correspondence",
+    "authors": [
+      "Jared Kaplan"
+    ],
+    "summary": "Recent work has shown that boundary correlators in AdS-Schwarzschild can probe the geometry near the singularity. In this paper we aim to analyze the specific signatures of the singularity, show how significant they can be, and uncover the origins of these large effects in explicitly outside the hor...",
+    "published": "Feb 07",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/hep-th/0402066v1",
+    "queried_author": "Jared Kaplan",
+    "matching_authors": [
+      "Jared Kaplan"
+    ]
+  },
+  {
+    "title": "Measures of Distributional Similarity",
+    "authors": [
+      "Lillian Lee"
+    ],
+    "summary": "We study distributional similarity measures for the purpose of improving probability estimation for unseen cooccurrences. Our contributions are three-fold: an empirical comparison of a broad range of measures; a classification of similarity functions based on the information that they incorporate; a...",
+    "published": "Jan 18",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/cs/0001012v1",
+    "queried_author": "Lillian Lee",
+    "matching_authors": [
+      "Lillian Lee"
+    ]
+  },
+  {
+    "title": "Probabilistic Parsing Using Left Corner Language Models",
+    "authors": [
+      "Christopher D. Manning",
+      "Bob Carpenter"
+    ],
+    "summary": "We introduce a novel parser based on a probabilistic version of a left-corner parser. The left-corner strategy is attractive because rule probabilities can be conditioned on both top-down goals and bottom-up derivations. We develop the underlying theory and explain how a grammar can be induced from ...",
+    "published": "Nov 17",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/cmp-lg/9711003v1",
+    "queried_author": "Christopher D Manning",
+    "matching_authors": [
+      "Christopher D Manning"
+    ]
+  },
+  {
+    "title": "Fast Context-Free Parsing Requires Fast Boolean Matrix Multiplication",
+    "authors": [
+      "Lillian Lee"
+    ],
+    "summary": "Valiant showed that Boolean matrix multiplication (BMM) can be used for CFG parsing. We prove a dual result: CFG parsers running in time $O(|G||w|^{3 - \\myeps})$ on a grammar $G$ and a string $w$ can be used to multiply $m \\times m$ Boolean matrices in time $O(m^{3 - \\myeps/3})$. In the process we a...",
+    "published": "Aug 14",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/cmp-lg/9708008v1",
+    "queried_author": "Lillian Lee",
+    "matching_authors": [
+      "Lillian Lee"
+    ]
   }
 ]
