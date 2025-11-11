@@ -2,7 +2,6 @@ import requests
 import arxiv
 import json
 from typing import List, Dict
-import re
 
 RESEARCHERS_URL = 'https://raw.githubusercontent.com/davidheineman/conference-papers/main/constants.py'
 
@@ -10,51 +9,23 @@ def fetch_authors_from_github() -> List[str]:
     """Fetch the authors list from the GitHub repository."""
     response = requests.get(RESEARCHERS_URL)
     if response.status_code != 200:
-        print(f"Failed to fetch constants.py: {response.status_code}")
-        return []
+        raise RuntimeError(f"Failed to fetch constants.py: {response.status_code}")
     
-    content = response.text
+    # Execute the Python code to get the variables
+    namespace = {}
+    exec(response.text, namespace)
     
-    # The file has an ARXIV_RESEARCHERS list with quoted author names
-    authors = []
+    # Get the ARXIV_RESEARCHERS list
+    if 'ARXIV_RESEARCHERS' not in namespace:
+        raise RuntimeError("ARXIV_RESEARCHERS not found in constants.py")
+
+    authors = namespace['ARXIV_RESEARCHERS']
     
-    # Look for ARXIV_RESEARCHERS = [ ... ]
-    if 'ARXIV_RESEARCHERS' in content:
-        # Find the start of the list
-        start_idx = content.find('ARXIV_RESEARCHERS')
-        if start_idx != -1:
-            # Find the opening bracket
-            bracket_idx = content.find('[', start_idx)
-            if bracket_idx != -1:
-                # Extract everything until the closing bracket
-                # Count brackets to handle nested structures
-                bracket_count = 1
-                end_idx = bracket_idx + 1
-                while end_idx < len(content) and bracket_count > 0:
-                    if content[end_idx] == '[':
-                        bracket_count += 1
-                    elif content[end_idx] == ']':
-                        bracket_count -= 1
-                    end_idx += 1
-                
-                # Extract the list content
-                list_content = content[bracket_idx:end_idx]
-                
-                # Find all quoted strings (author names)
-                # Match both single and double quotes
-                pattern = r'["\']([^"\']+)["\']'
-                authors = re.findall(pattern, list_content)
-    
-    # Remove duplicates while preserving order
-    seen = set()
-    unique_authors = []
-    for author in authors:
-        # Skip empty strings
-        if author.strip() and author not in seen:
-            seen.add(author)
-            unique_authors.append(author.strip())
-    
-    return unique_authors
+    if not authors:
+        raise RuntimeError("No authors found.")
+
+    return authors
+
 
 def get_recent_papers_for_author(author_name: str, max_results: int | None = None) -> List[Dict]:
     """Fetch recent papers for a given author from arXiv."""
@@ -128,9 +99,6 @@ def get_all_recent_papers(authors: List[str], max_per_author: int | None = None)
 def main():
     print(f"Fetching authors from {RESEARCHERS_URL}...")
     authors = fetch_authors_from_github()
-    
-    if not authors:
-        raise RuntimeError("No authors found.")
 
     print(f"Found {len(authors)} authors")
     
