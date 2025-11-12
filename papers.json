@@ -1,5 +1,45 @@
 [
   {
+    "title": "Training Language Models to Explain Their Own Computations",
+    "authors": [
+      "Belinda Z. Li",
+      "Zifan Carl Guo",
+      "Vincent Huang",
+      "Jacob Steinhardt",
+      "Jacob Andreas"
+    ],
+    "summary": "Can language models (LMs) learn to faithfully describe their internal computations? Are they better able to describe themselves than other models? We study the extent to which LMs' privileged access to their own internals can be leveraged to produce new techniques for explaining their behavior. Usin...",
+    "published": "Nov 11",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2511.08579v1",
+    "queried_author": "Jacob Andreas",
+    "matching_authors": [
+      "Jacob Andreas"
+    ]
+  },
+  {
+    "title": "SALT: Steering Activations towards Leakage-free Thinking in Chain of Thought",
+    "authors": [
+      "Shourya Batra",
+      "Pierce Tillman",
+      "Samarth Gaggar",
+      "Shashank Kesineni",
+      "Kevin Zhu",
+      "Sunishchal Dev",
+      "Ashwinee Panda",
+      "Vasu Sharma",
+      "Maheep Chaudhary"
+    ],
+    "summary": "As Large Language Models (LLMs) evolve into personal assistants with access to sensitive user data, they face a critical privacy challenge: while prior work has addressed output-level privacy, recent findings reveal that LLMs often leak private information through their internal reasoning processes,...",
+    "published": "Nov 11",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2511.07772v1",
+    "queried_author": "Ashwinee Panda",
+    "matching_authors": [
+      "Ashwinee Panda"
+    ]
+  },
+  {
     "title": "RLVE: Scaling Up Reinforcement Learning for Language Models with Adaptive Verifiable Environments",
     "authors": [
       "Zhiyuan Zeng",
@@ -47,6 +87,27 @@
     "queried_author": "J Zico Kolter",
     "matching_authors": [
       "J Zico Kolter"
+    ]
+  },
+  {
+    "title": "Alignment-Constrained Dynamic Pruning for LLMs: Identifying and Preserving Alignment-Critical Circuits",
+    "authors": [
+      "Dev Patel",
+      "Gabrielle Gervacio",
+      "Diekola Raimi",
+      "Kevin Zhu",
+      "Ryan Lagasse",
+      "Gabriel Grand",
+      "Ashwinee Panda",
+      "Maheep Chaudhary"
+    ],
+    "summary": "Large Language Models require substantial computational resources for inference, posing deployment challenges. While dynamic pruning offers superior efficiency over static methods through adaptive circuit selection, it exacerbates alignment degradation by retaining only input-dependent safety-critic...",
+    "published": "Nov 09",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2511.07482v1",
+    "queried_author": "Ashwinee Panda",
+    "matching_authors": [
+      "Ashwinee Panda"
     ]
   },
   {
@@ -8857,7 +8918,7 @@
     "summary": "A crucial factor for successful human and AI interaction is the ability of language models or chatbots to follow human instructions precisely. A common feature of instructions are output constraints like ``only answer with yes or no\" or ``mention the word `abrakadabra' at least 3 times\" that the use...",
     "published": "Jul 03",
     "pdf_url": null,
-    "arxiv_url": "http://arxiv.org/abs/2507.02833v2",
+    "arxiv_url": "http://arxiv.org/abs/2507.02833v3",
     "queried_author": "Hamish Ivison",
     "matching_authors": [
       "Hamish Ivison",
@@ -9371,24 +9432,6 @@
     ]
   },
   {
-    "title": "Report on NSF Workshop on Science of Safe AI",
-    "authors": [
-      "Rajeev Alur",
-      "Greg Durrett",
-      "Hadas Kress-Gazit",
-      "Corina P\u0103s\u0103reanu",
-      "Ren\u00e9 Vidal"
-    ],
-    "summary": "Recent advances in machine learning, particularly the emergence of foundation models, are leading to new opportunities to develop technology-based solutions to societal problems. However, the reasoning and inner workings of today's complex AI models are not transparent to the user, and there are no ...",
-    "published": "Jun 24",
-    "pdf_url": null,
-    "arxiv_url": "http://arxiv.org/abs/2506.22492v1",
-    "queried_author": "Greg Durrett",
-    "matching_authors": [
-      "Greg Durrett"
-    ]
-  },
-  {
     "title": "Position: Machine Learning Conferences Should Establish a \"Refutations and Critiques\" Track",
     "authors": [
       "Rylan Schaeffer",
@@ -9706,25 +9749,6 @@
     ]
   },
   {
-    "title": "StorySage: Conversational Autobiography Writing Powered by a Multi-Agent Framework",
-    "authors": [
-      "Shayan Talaei",
-      "Meijin Li",
-      "Kanu Grover",
-      "James Kent Hippler",
-      "Diyi Yang",
-      "Amin Saberi"
-    ],
-    "summary": "Every individual carries a unique and personal life story shaped by their memories and experiences. However, these memories are often scattered and difficult to organize into a coherent narrative, a challenge that defines the task of autobiography writing. Existing conversational writing assistants ...",
-    "published": "Jun 17",
-    "pdf_url": null,
-    "arxiv_url": "http://arxiv.org/abs/2506.14159v2",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang"
-    ]
-  },
-  {
     "title": "DCRM: A Heuristic to Measure Response Pair Quality in Preference Optimization",
     "authors": [
       "Chengyu Huang",
@@ -9870,24 +9894,6 @@
     "queried_author": "J Zico Kolter",
     "matching_authors": [
       "J Zico Kolter"
-    ]
-  },
-  {
-    "title": "The Rise of AI Companions: How Human-Chatbot Relationships Influence Well-Being",
-    "authors": [
-      "Yutong Zhang",
-      "Dora Zhao",
-      "Jeffrey T. Hancock",
-      "Robert Kraut",
-      "Diyi Yang"
-    ],
-    "summary": "As large language models (LLMs)-enhanced chatbots grow increasingly expressive and socially responsive, many users are beginning to form companionship-like bonds with them, particularly with simulated AI partners designed to mimic emotionally attuned interlocutors. These emerging AI companions raise...",
-    "published": "Jun 14",
-    "pdf_url": null,
-    "arxiv_url": "http://arxiv.org/abs/2506.12605v3",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang"
     ]
   },
   {
@@ -10449,8 +10455,9 @@
     "published": "Jun 05",
     "pdf_url": null,
     "arxiv_url": "http://arxiv.org/abs/2506.05598v1",
-    "queried_author": "William Held",
+    "queried_author": "Diyi Yang",
     "matching_authors": [
+      "Diyi Yang",
       "William Held"
     ]
   },
@@ -12238,7 +12245,7 @@
     "summary": "Interpretability research now offers a variety of techniques for identifying abstract internal mechanisms in neural networks. Can such techniques be used to predict how models will behave on out-of-distribution examples? In this work, we provide a positive answer to this question. Through a diverse ...",
     "published": "May 17",
     "pdf_url": null,
-    "arxiv_url": "http://arxiv.org/abs/2505.11770v1",
+    "arxiv_url": "http://arxiv.org/abs/2505.11770v2",
     "queried_author": "Christopher Potts",
     "matching_authors": [
       "Christopher Potts",
@@ -14144,25 +14151,6 @@
     ]
   },
   {
-    "title": "Is the Top Still Spinning? Evaluating Subjectivity in Narrative Understanding",
-    "authors": [
-      "Melanie Subbiah",
-      "Akankshya Mishra",
-      "Grace Kim",
-      "Liyan Tang",
-      "Greg Durrett",
-      "Kathleen McKeown"
-    ],
-    "summary": "Determining faithfulness of a claim to a source document is an important problem across many domains. This task is generally treated as a binary judgment of whether the claim is supported or unsupported in relation to the source. In many cases, though, whether a claim is supported can be ambiguous. ...",
-    "published": "Apr 01",
-    "pdf_url": null,
-    "arxiv_url": "http://arxiv.org/abs/2504.01132v2",
-    "queried_author": "Greg Durrett",
-    "matching_authors": [
-      "Greg Durrett"
-    ]
-  },
-  {
     "title": "ShieldGemma 2: Robust and Tractable Image Content Moderation",
     "authors": [
       "Wenjun Zeng",
@@ -15941,6 +15929,25 @@
     "queried_author": "Jesse Dodge",
     "matching_authors": [
       "Jesse Dodge"
+    ]
+  },
+  {
+    "title": "From Language to Cognition: How LLMs Outgrow the Human Language Network",
+    "authors": [
+      "Badr AlKhamissi",
+      "Greta Tuckute",
+      "Yingtian Tang",
+      "Taha Binhuraib",
+      "Antoine Bosselut",
+      "Martin Schrimpf"
+    ],
+    "summary": "Large language models (LLMs) exhibit remarkable similarity to neural activity in the human language network. However, the key properties of language shaping brain-like representations, and their evolution during training as a function of different tasks remain unclear. We here benchmark 34 training ...",
+    "published": "Mar 03",
+    "pdf_url": null,
+    "arxiv_url": "http://arxiv.org/abs/2503.01830v2",
+    "queried_author": "Antoine Bosselut",
+    "matching_authors": [
+      "Antoine Bosselut"
     ]
   }
 ]
