@@ -2057,24 +2057,6 @@
     ]
   },
   {
-    "title": "Diagnosing Bottlenecks in Data Visualization Understanding by Vision-Language Models",
-    "authors": [
-      "Alexa R. Tartaglini",
-      "Satchel Grant",
-      "Daniel Wurgaft",
-      "Christopher Potts",
-      "Judith E. Fan"
-    ],
-    "summary": "Data visualizations are vital components of many scientific articles and news stories. Current vision-language models (VLMs) still struggle on basic data visualization understanding tasks, but the causes of failure remain unclear. Are VLM failures attributable to limitations in how visual informatio...",
-    "published": "Oct 02",
-    "pdf_url": "https://arxiv.org/pdf/2510.21740v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.21740v1",
-    "queried_author": "Christopher Potts",
-    "matching_authors": [
-      "Christopher Potts"
-    ]
-  },
-  {
     "title": "From Supervision to Exploration: What Does Protein Language Model Learn During Reinforcement Learning?",
     "authors": [
       "Hanqun Cao",
@@ -4548,6 +4530,26 @@
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "The Invisible Leash: Why RLVR May or May Not Escape Its Origin",
+    "authors": [
+      "Fang Wu",
+      "Weihao Xuan",
+      "Ximing Lu",
+      "Mingjie Liu",
+      "Yi Dong",
+      "Zaid Harchaoui",
+      "Yejin Choi"
+    ],
+    "summary": "Recent advances in LLMs highlight RLVR as a promising method for enhancing AI's capabilities, particularly in solving complex logical tasks. However, it remains unclear whether the current practice of RLVR truly expands a model's reasoning boundary or mainly amplifies high-reward outputs that the ba...",
+    "published": "Jul 20",
+    "pdf_url": "https://arxiv.org/pdf/2507.14843v2",
+    "arxiv_url": "http://arxiv.org/abs/2507.14843v2",
+    "queried_author": "Yejin Choi",
+    "matching_authors": [
+      "Yejin Choi"
     ]
   },
   {
@@ -11797,6 +11799,24 @@
     ]
   },
   {
+    "title": "CHART-6: Human-Centered Evaluation of Data Visualization Understanding in Vision-Language Models",
+    "authors": [
+      "Arnav Verma",
+      "Kushin Mukherjee",
+      "Christopher Potts",
+      "Elisa Kreiss",
+      "Judith E. Fan"
+    ],
+    "summary": "Data visualizations are powerful tools for communicating patterns in quantitative data. Yet understanding any data visualization is no small feat -- succeeding requires jointly making sense of visual, numerical, and linguistic inputs arranged in a conventionalized format one has previously learned t...",
+    "published": "May 22",
+    "pdf_url": "https://arxiv.org/pdf/2505.17202v1",
+    "arxiv_url": "http://arxiv.org/abs/2505.17202v1",
+    "queried_author": "Christopher Potts",
+    "matching_authors": [
+      "Christopher Potts"
+    ]
+  },
+  {
     "title": "Breaking mBad! Supervised Fine-tuning for Cross-Lingual Detoxification",
     "authors": [
       "Himanshu Beniwal",
@@ -12406,8 +12426,7 @@
     "arxiv_url": "http://arxiv.org/abs/2505.11770v2",
     "queried_author": "Christopher Potts",
     "matching_authors": [
-      "Christopher Potts",
-      "Diyi Yang"
+      "Christopher Potts"
     ]
   },
   {
@@ -13854,8 +13873,9 @@
     "published": "Apr 07",
     "pdf_url": "https://arxiv.org/pdf/2504.04953v2",
     "arxiv_url": "http://arxiv.org/abs/2504.04953v2",
-    "queried_author": "Seungone Kim",
+    "queried_author": "Graham Neubig",
     "matching_authors": [
+      "Graham Neubig",
       "Seungone Kim"
     ]
   },
@@ -15960,23 +15980,6 @@
     "queried_author": "Orion Weller",
     "matching_authors": [
       "Orion Weller"
-    ]
-  },
-  {
-    "title": "Scaling Rich Style-Prompted Text-to-Speech Datasets",
-    "authors": [
-      "Anuj Diwan",
-      "Zhisheng Zheng",
-      "David Harwath",
-      "Eunsol Choi"
-    ],
-    "summary": "We introduce Paralinguistic Speech Captions (ParaSpeechCaps), a large-scale dataset that annotates speech utterances with rich style captions. While rich abstract tags (e.g. guttural, nasal, pained) have been explored in small-scale human-annotated datasets, existing large-scale datasets only cover ...",
-    "published": "Mar 06",
-    "pdf_url": "https://arxiv.org/pdf/2503.04713v2",
-    "arxiv_url": "http://arxiv.org/abs/2503.04713v2",
-    "queried_author": "Eunsol Choi",
-    "matching_authors": [
-      "Eunsol Choi"
     ]
   }
 ]
