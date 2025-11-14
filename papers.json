@@ -2057,6 +2057,24 @@
     ]
   },
   {
+    "title": "Diagnosing Bottlenecks in Data Visualization Understanding by Vision-Language Models",
+    "authors": [
+      "Alexa R. Tartaglini",
+      "Satchel Grant",
+      "Daniel Wurgaft",
+      "Christopher Potts",
+      "Judith E. Fan"
+    ],
+    "summary": "Data visualizations are vital components of many scientific articles and news stories. Current vision-language models (VLMs) still struggle on basic data visualization understanding tasks, but the causes of failure remain unclear. Are VLM failures attributable to limitations in how visual informatio...",
+    "published": "Oct 02",
+    "pdf_url": "https://arxiv.org/pdf/2510.21740v1",
+    "arxiv_url": "http://arxiv.org/abs/2510.21740v1",
+    "queried_author": "Christopher Potts",
+    "matching_authors": [
+      "Christopher Potts"
+    ]
+  },
+  {
     "title": "From Supervision to Exploration: What Does Protein Language Model Learn During Reinforcement Learning?",
     "authors": [
       "Hanqun Cao",
@@ -10612,8 +10630,9 @@
     "published": "Jun 05",
     "pdf_url": "https://arxiv.org/pdf/2506.05598v1",
     "arxiv_url": "http://arxiv.org/abs/2506.05598v1",
-    "queried_author": "William Held",
+    "queried_author": "Diyi Yang",
     "matching_authors": [
+      "Diyi Yang",
       "William Held"
     ]
   },
@@ -12426,7 +12445,8 @@
     "arxiv_url": "http://arxiv.org/abs/2505.11770v2",
     "queried_author": "Christopher Potts",
     "matching_authors": [
-      "Christopher Potts"
+      "Christopher Potts",
+      "Diyi Yang"
     ]
   },
   {
@@ -15963,23 +15983,6 @@
     "queried_author": "Ashwinee Panda",
     "matching_authors": [
       "Ashwinee Panda"
-    ]
-  },
-  {
-    "title": "Beyond RAG: Task-Aware KV Cache Compression for Comprehensive Knowledge Reasoning",
-    "authors": [
-      "Giulio Corallo",
-      "Orion Weller",
-      "Fabio Petroni",
-      "Paolo Papotti"
-    ],
-    "summary": "Incorporating external knowledge in large language models (LLMs) enhances their utility across diverse applications, but existing methods have trade-offs. Retrieval-Augmented Generation (RAG) fetches evidence via similarity search, but key information may fall outside top ranked results. Long-contex...",
-    "published": "Mar 06",
-    "pdf_url": "https://arxiv.org/pdf/2503.04973v1",
-    "arxiv_url": "http://arxiv.org/abs/2503.04973v1",
-    "queried_author": "Orion Weller",
-    "matching_authors": [
-      "Orion Weller"
     ]
   }
 ]
