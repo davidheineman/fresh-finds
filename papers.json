@@ -1,5 +1,26 @@
 [
   {
+    "title": "Modeling and Predicting Multi-Turn Answer Instability in Large Language Models",
+    "authors": [
+      "Jiahang He",
+      "Rishi Ramachandran",
+      "Neel Ramachandran",
+      "Aryan Katakam",
+      "Kevin Zhu",
+      "Sunishchal Dev",
+      "Ashwinee Panda",
+      "Aryan Shrivastava"
+    ],
+    "summary": "As large language models (LLMs) are adopted in an increasingly wide range of applications, user-model interactions have grown in both frequency and scale. Consequently, research has focused on evaluating the robustness of LLMs, an essential quality for real-world tasks. In this paper, we employ simp...",
+    "published": "Nov 12",
+    "pdf_url": "https://arxiv.org/pdf/2511.10688v1",
+    "arxiv_url": "http://arxiv.org/abs/2511.10688v1",
+    "queried_author": "Ashwinee Panda",
+    "matching_authors": [
+      "Ashwinee Panda"
+    ]
+  },
+  {
     "title": "Training Language Models to Explain Their Own Computations",
     "authors": [
       "Belinda Z. Li",
@@ -60,8 +81,8 @@
     ],
     "summary": "Large language model (LLM) queries are predominantly processed by frontier models in centralized cloud infrastructure. Rapidly growing demand strains this paradigm, and cloud providers struggle to scale infrastructure at pace. Two advances enable us to rethink this paradigm: small LMs (<=20B active ...",
     "published": "Nov 11",
-    "pdf_url": "https://arxiv.org/pdf/2511.07885v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.07885v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.07885v2",
+    "arxiv_url": "http://arxiv.org/abs/2511.07885v2",
     "queried_author": "Christopher R\u00e9",
     "matching_authors": [
       "Christopher R\u00e9"
@@ -15960,29 +15981,6 @@
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "Continual Pre-training of MoEs: How robust is your router?",
-    "authors": [
-      "Benjamin Th\u00e9rien",
-      "Charles-\u00c9tienne Joseph",
-      "Zain Sarwar",
-      "Ashwinee Panda",
-      "Anirban Das",
-      "Shi-Xiong Zhang",
-      "Stephen Rawls",
-      "Sambit Sahu",
-      "Eugene Belilovsky",
-      "Irina Rish"
-    ],
-    "summary": "Sparsely-activated Mixture of Experts (MoE) transformers are promising architectures for foundation models. Compared to dense transformers that require the same amount of floating-point operations (FLOPs) per forward pass, MoEs benefit from improved sample efficiency at training time and achieve muc...",
-    "published": "Mar 06",
-    "pdf_url": "https://arxiv.org/pdf/2503.05029v2",
-    "arxiv_url": "http://arxiv.org/abs/2503.05029v2",
-    "queried_author": "Ashwinee Panda",
-    "matching_authors": [
-      "Ashwinee Panda"
     ]
   }
 ]
