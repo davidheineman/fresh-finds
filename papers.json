@@ -1,5 +1,72 @@
 [
   {
+    "title": "ARC Is a Vision Problem!",
+    "authors": [
+      "Keya Hu",
+      "Ali Cy",
+      "Linlu Qiu",
+      "Xiaoman Delores Ding",
+      "Runqian Wang",
+      "Yeyin Eva Zhu",
+      "Jacob Andreas",
+      "Kaiming He"
+    ],
+    "summary": "The Abstraction and Reasoning Corpus (ARC) is designed to promote research on abstract reasoning, a fundamental aspect of human intelligence. Common approaches to ARC treat it as a language-oriented problem, addressed by large language models (LLMs) or recurrent reasoning models. However, although t...",
+    "published": "Nov 18",
+    "pdf_url": "https://arxiv.org/pdf/2511.14761v1",
+    "arxiv_url": "http://arxiv.org/abs/2511.14761v1",
+    "queried_author": "Jacob Andreas",
+    "matching_authors": [
+      "Jacob Andreas"
+    ]
+  },
+  {
+    "title": "ParallelKittens: Systematic and Practical Simplification of Multi-GPU AI Kernels",
+    "authors": [
+      "Stuart H. Sul",
+      "Simran Arora",
+      "Benjamin F. Spector",
+      "Christopher R\u00e9"
+    ],
+    "summary": "Inter-GPU communication has become a major bottleneck for modern AI workloads as models scale and improvements in hardware compute throughput outpace improvements in interconnect bandwidth. Existing systems mitigate this through compute-communication overlap but often fail to meet theoretical peak p...",
+    "published": "Nov 17",
+    "pdf_url": "https://arxiv.org/pdf/2511.13940v1",
+    "arxiv_url": "http://arxiv.org/abs/2511.13940v1",
+    "queried_author": "Christopher R\u00e9",
+    "matching_authors": [
+      "Christopher R\u00e9"
+    ]
+  },
+  {
+    "title": "Beat the long tail: Distribution-Aware Speculative Decoding for RL Training",
+    "authors": [
+      "Zelei Shao",
+      "Vikranth Srivatsa",
+      "Sanjana Srivastava",
+      "Qingyang Wu",
+      "Alpay Ariyak",
+      "Xiaoxia Wu",
+      "Ameen Patel",
+      "Jue Wang",
+      "Percy Liang",
+      "Tri Dao",
+      "Ce Zhang",
+      "Yiying Zhang",
+      "Ben Athiwaratkun",
+      "Chenfeng Xu",
+      "Junxiong Wang"
+    ],
+    "summary": "Reinforcement learning(RL) post-training has become essential for aligning large language models (LLMs), yet its efficiency is increasingly constrained by the rollout phase, where long trajectories are generated token by token. We identify a major bottleneck:the long-tail distribution of rollout len...",
+    "published": "Nov 17",
+    "pdf_url": "https://arxiv.org/pdf/2511.13841v1",
+    "arxiv_url": "http://arxiv.org/abs/2511.13841v1",
+    "queried_author": "Percy Liang",
+    "matching_authors": [
+      "Percy Liang",
+      "Tri Dao"
+    ]
+  },
+  {
     "title": "CURE: Cultural Understanding and Reasoning Evaluation - A Framework for \"Thick\" Culture Alignment Evaluation in LLMs",
     "authors": [
       "Truong Vo",
@@ -15916,63 +15983,6 @@
     "matching_authors": [
       "Hannaneh Hajishirzi",
       "Pang Wei Koh"
-    ]
-  },
-  {
-    "title": "Chain-of-Thought Reasoning In The Wild Is Not Always Faithful",
-    "authors": [
-      "Iv\u00e1n Arcuschin",
-      "Jett Janiak",
-      "Robert Krzyzanowski",
-      "Senthooran Rajamanoharan",
-      "Neel Nanda",
-      "Arthur Conmy"
-    ],
-    "summary": "Chain-of-Thought (CoT) reasoning has significantly advanced state-of-the-art AI capabilities. However, recent studies have shown that CoT reasoning is not always faithful when models face an explicit bias in their prompts, i.e., the CoT can give an incorrect picture of how models arrive at conclusio...",
-    "published": "Mar 11",
-    "pdf_url": "https://arxiv.org/pdf/2503.08679v4",
-    "arxiv_url": "http://arxiv.org/abs/2503.08679v4",
-    "queried_author": "Neel Nanda",
-    "matching_authors": [
-      "Neel Nanda"
-    ]
-  },
-  {
-    "title": "Efficient Many-Shot In-Context Learning with Dynamic Block-Sparse Attention",
-    "authors": [
-      "Emily Xiao",
-      "Chin-Jou Li",
-      "Yilin Zhang",
-      "Graham Neubig",
-      "Amanda Bertsch"
-    ],
-    "summary": "Many-shot in-context learning has recently shown promise as an alternative to finetuning, with the major advantage that the same model can be served for multiple tasks. However, this shifts the computational burden from training-time to inference-time, making deployment of many-shot ICL challenging ...",
-    "published": "Mar 11",
-    "pdf_url": "https://arxiv.org/pdf/2503.08640v2",
-    "arxiv_url": "http://arxiv.org/abs/2503.08640v2",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
-    ]
-  },
-  {
-    "title": "Datasets, Documents, and Repetitions: The Practicalities of Unequal Data Quality",
-    "authors": [
-      "Alex Fang",
-      "Hadi Pouransari",
-      "Matt Jordan",
-      "Alexander Toshev",
-      "Vaishaal Shankar",
-      "Ludwig Schmidt",
-      "Tom Gunter"
-    ],
-    "summary": "Data filtering has become a powerful tool for improving model performance while reducing computational cost. However, as large language model compute budgets continue to grow, the limited data volume provided by heavily filtered and deduplicated datasets will become a practical constraint. In effort...",
-    "published": "Mar 10",
-    "pdf_url": "https://arxiv.org/pdf/2503.07879v2",
-    "arxiv_url": "http://arxiv.org/abs/2503.07879v2",
-    "queried_author": "Ludwig Schmidt",
-    "matching_authors": [
-      "Ludwig Schmidt"
     ]
   }
 ]
