@@ -94,8 +94,8 @@
     ],
     "summary": "Explanations are often promoted as tools for transparency, but they can also foster confirmation bias; users may assume reasoning is correct whenever outputs appear acceptable. We study this double-edged role of Chain-of-Thought (CoT) explanations in multimodal moral scenarios by systematically pert...",
     "published": "Nov 15",
-    "pdf_url": "https://arxiv.org/pdf/2511.12001v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.12001v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.12001v2",
+    "arxiv_url": "http://arxiv.org/abs/2511.12001v2",
     "queried_author": "Maarten Sap",
     "matching_authors": [
       "Maarten Sap"
