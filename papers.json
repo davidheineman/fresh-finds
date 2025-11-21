@@ -1143,8 +1143,8 @@
     ],
     "summary": "Large language models (LLMs) can sometimes detect when they are being evaluated and adjust their behavior to appear more aligned, compromising the reliability of safety evaluations. In this paper, we show that adding a steering vector to an LLM's activations can suppress evaluation-awareness and mak...",
     "published": "Oct 23",
-    "pdf_url": "https://arxiv.org/pdf/2510.20487v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.20487v2",
+    "pdf_url": "https://arxiv.org/pdf/2510.20487v3",
+    "arxiv_url": "http://arxiv.org/abs/2510.20487v3",
     "queried_author": "Neel Nanda",
     "matching_authors": [
       "Neel Nanda"
@@ -10437,8 +10437,8 @@
     ],
     "summary": "As text-to-image models become increasingly prevalent, ensuring their equitable performance across diverse cultural contexts is critical. Efforts to mitigate cross-cultural biases have been hampered by trade-offs, including a loss in performance, factual inaccuracies, or offensive outputs. Despite w...",
     "published": "Jun 10",
-    "pdf_url": "https://arxiv.org/pdf/2506.09109v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.09109v1",
+    "pdf_url": "https://arxiv.org/pdf/2506.09109v2",
+    "arxiv_url": "http://arxiv.org/abs/2506.09109v2",
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig"
