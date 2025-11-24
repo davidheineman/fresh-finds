@@ -1,5 +1,29 @@
 [
   {
+    "title": "Fantastic Bugs and Where to Find Them in AI Benchmarks",
+    "authors": [
+      "Sang Truong",
+      "Yuheng Tu",
+      "Michael Hardy",
+      "Anka Reuel",
+      "Zeyu Tang",
+      "Jirayu Burapacheep",
+      "Jonathan Perera",
+      "Chibuike Uwakwe",
+      "Ben Domingue",
+      "Nick Haber",
+      "Sanmi Koyejo"
+    ],
+    "summary": "Benchmarks are pivotal in driving AI progress, and invalid benchmark questions frequently undermine their reliability. Manually identifying and correcting errors among thousands of benchmark questions is not only infeasible but also a critical bottleneck for reliable evaluation. In this work, we int...",
+    "published": "Nov 20",
+    "pdf_url": "https://arxiv.org/pdf/2511.16842v1",
+    "arxiv_url": "http://arxiv.org/abs/2511.16842v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
     "title": "ARC Is a Vision Problem!",
     "authors": [
       "Keya Hu",
@@ -221,8 +245,8 @@
     ],
     "summary": "As Large Language Models (LLMs) evolve into personal assistants with access to sensitive user data, they face a critical privacy challenge: while prior work has addressed output-level privacy, recent findings reveal that LLMs often leak private information through their internal reasoning processes,...",
     "published": "Nov 11",
-    "pdf_url": "https://arxiv.org/pdf/2511.07772v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.07772v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.07772v2",
+    "arxiv_url": "http://arxiv.org/abs/2511.07772v2",
     "queried_author": "Ashwinee Panda",
     "matching_authors": [
       "Ashwinee Panda"
@@ -15965,24 +15989,6 @@
     "queried_author": "Neel Nanda",
     "matching_authors": [
       "Neel Nanda"
-    ]
-  },
-  {
-    "title": "EvalTree: Profiling Language Model Weaknesses via Hierarchical Capability Trees",
-    "authors": [
-      "Zhiyuan Zeng",
-      "Yizhong Wang",
-      "Hannaneh Hajishirzi",
-      "Pang Wei Koh"
-    ],
-    "summary": "An ideal model evaluation should achieve two goals: identifying where the model fails and providing actionable improvement guidance. Toward these goals for language model (LM) evaluations, we formulate the problem of generating a weakness profile, a set of weaknesses expressed in natural language, g...",
-    "published": "Mar 11",
-    "pdf_url": "https://arxiv.org/pdf/2503.08893v2",
-    "arxiv_url": "http://arxiv.org/abs/2503.08893v2",
-    "queried_author": "Hannaneh Hajishirzi",
-    "matching_authors": [
-      "Hannaneh Hajishirzi",
-      "Pang Wei Koh"
     ]
   }
 ]
