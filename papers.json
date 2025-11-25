@@ -1,5 +1,78 @@
 [
   {
+    "title": "DR Tulu: Reinforcement Learning with Evolving Rubrics for Deep Research",
+    "authors": [
+      "Rulin Shao",
+      "Akari Asai",
+      "Shannon Zejiang Shen",
+      "Hamish Ivison",
+      "Varsha Kishore",
+      "Jingming Zhuo",
+      "Xinran Zhao",
+      "Molly Park",
+      "Samuel G. Finlayson",
+      "David Sontag",
+      "Tyler Murray",
+      "Sewon Min",
+      "Pradeep Dasigi",
+      "Luca Soldaini",
+      "Faeze Brahman",
+      "Wen-tau Yih",
+      "Tongshuang Wu",
+      "Luke Zettlemoyer",
+      "Yoon Kim",
+      "Hannaneh Hajishirzi",
+      "Pang Wei Koh"
+    ],
+    "summary": "Deep research models perform multi-step research to produce long-form, well-attributed answers. However, most open deep research models are trained on easily verifiable short-form QA tasks via reinforcement learning with verifiable rewards (RLVR), which does not extend to realistic long-form tasks. ...",
+    "published": "Nov 24",
+    "pdf_url": "https://arxiv.org/pdf/2511.19399v1",
+    "arxiv_url": "http://arxiv.org/abs/2511.19399v1",
+    "queried_author": "Hamish Ivison",
+    "matching_authors": [
+      "Hamish Ivison",
+      "Hannaneh Hajishirzi",
+      "Luca Soldaini",
+      "Luke Zettlemoyer",
+      "Pang Wei Koh"
+    ]
+  },
+  {
+    "title": "Natural Emergent Misalignment from Reward Hacking in Production RL",
+    "authors": [
+      "Monte MacDiarmid",
+      "Benjamin Wright",
+      "Jonathan Uesato",
+      "Joe Benton",
+      "Jon Kutasov",
+      "Sara Price",
+      "Naia Bouscal",
+      "Sam Bowman",
+      "Trenton Bricken",
+      "Alex Cloud",
+      "Carson Denison",
+      "Johannes Gasteiger",
+      "Ryan Greenblatt",
+      "Jan Leike",
+      "Jack Lindsey",
+      "Vlad Mikulik",
+      "Ethan Perez",
+      "Alex Rodrigues",
+      "Drake Thomas",
+      "Albert Webson",
+      "Daniel Ziegler",
+      "Evan Hubinger"
+    ],
+    "summary": "We show that when large language models learn to reward hack on production RL environments, this can result in egregious emergent misalignment. We start with a pretrained model, impart knowledge of reward hacking strategies via synthetic document finetuning or prompting, and train on a selection of ...",
+    "published": "Nov 23",
+    "pdf_url": "https://arxiv.org/pdf/2511.18397v1",
+    "arxiv_url": "http://arxiv.org/abs/2511.18397v1",
+    "queried_author": "Ethan Perez",
+    "matching_authors": [
+      "Ethan Perez"
+    ]
+  },
+  {
     "title": "Fantastic Bugs and Where to Find Them in AI Benchmarks",
     "authors": [
       "Sang Truong",
@@ -942,8 +1015,8 @@
     ],
     "summary": "Frontier AI agents show increasing promise as scientific research assistants, and may eventually be useful for extended, open-ended research workflows. However, in order to use agents for novel research, we must first assess the underlying faithfulness and correctness of their work. To evaluate agen...",
     "published": "Oct 28",
-    "pdf_url": "https://arxiv.org/pdf/2510.24591v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.24591v1",
+    "pdf_url": "https://arxiv.org/pdf/2510.24591v2",
+    "arxiv_url": "http://arxiv.org/abs/2510.24591v2",
     "queried_author": "Diyi Yang",
     "matching_authors": [
       "Diyi Yang"
@@ -10569,10 +10642,10 @@
       "Samy Bengio",
       "Emmanuel Abbe"
     ],
-    "summary": "Recent studies have shown that large language models (LLMs), especially smaller ones, often lack robustness in their reasoning. I.e., they tend to experience performance drops when faced with distribution shifts, such as changes to numerical or nominal variables, or insertions of distracting clauses...",
+    "summary": "Recent studies have shown that large language models (LLMs), especially smaller ones, often lack robustness in grade school math (GSM) reasoning. In particular, they tend to experience performance drops when faced with distribution shifts, such as changes to numerical or nominal variables, or insert...",
     "published": "Jun 09",
-    "pdf_url": "https://arxiv.org/pdf/2506.07751v2",
-    "arxiv_url": "http://arxiv.org/abs/2506.07751v2",
+    "pdf_url": "https://arxiv.org/pdf/2506.07751v3",
+    "arxiv_url": "http://arxiv.org/abs/2506.07751v3",
     "queried_author": "Antoine Bosselut",
     "matching_authors": [
       "Antoine Bosselut"
@@ -15941,54 +16014,6 @@
     "queried_author": "Mike Lewis",
     "matching_authors": [
       "Mike Lewis"
-    ]
-  },
-  {
-    "title": "Un-Straightening Generative AI: How Queer Artists Surface and Challenge the Normativity of Generative AI Models",
-    "authors": [
-      "Jordan Taylor",
-      "Joel Mire",
-      "Franchesca Spektor",
-      "Alicia DeVrio",
-      "Maarten Sap",
-      "Haiyi Zhu",
-      "Sarah Fox"
-    ],
-    "summary": "Queer people are often discussed as targets of bias, harm, or discrimination in research on generative AI. However, the specific ways that queer people engage with generative AI, and thus possible uses that support queer people, have yet to be explored. We conducted a workshop study with 13 queer ar...",
-    "published": "Mar 12",
-    "pdf_url": "https://arxiv.org/pdf/2503.09805v2",
-    "arxiv_url": "http://arxiv.org/abs/2503.09805v2",
-    "queried_author": "Maarten Sap",
-    "matching_authors": [
-      "Maarten Sap"
-    ]
-  },
-  {
-    "title": "SAEBench: A Comprehensive Benchmark for Sparse Autoencoders in Language Model Interpretability",
-    "authors": [
-      "Adam Karvonen",
-      "Can Rager",
-      "Johnny Lin",
-      "Curt Tigges",
-      "Joseph Bloom",
-      "David Chanin",
-      "Yeu-Tong Lau",
-      "Eoin Farrell",
-      "Callum McDougall",
-      "Kola Ayonrinde",
-      "Demian Till",
-      "Matthew Wearden",
-      "Arthur Conmy",
-      "Samuel Marks",
-      "Neel Nanda"
-    ],
-    "summary": "Sparse autoencoders (SAEs) are a popular technique for interpreting language model activations, and there is extensive recent work on improving SAE effectiveness. However, most prior work evaluates progress using unsupervised proxy metrics with unclear practical relevance. We introduce SAEBench, a c...",
-    "published": "Mar 12",
-    "pdf_url": "https://arxiv.org/pdf/2503.09532v4",
-    "arxiv_url": "http://arxiv.org/abs/2503.09532v4",
-    "queried_author": "Neel Nanda",
-    "matching_authors": [
-      "Neel Nanda"
     ]
   }
 ]
