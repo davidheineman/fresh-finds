@@ -1,5 +1,54 @@
 [
   {
+    "title": "Concept-Aware Batch Sampling Improves Language-Image Pretraining",
+    "authors": [
+      "Adhiraj Ghosh",
+      "Vishaal Udandarao",
+      "Thao Nguyen",
+      "Matteo Farina",
+      "Mehdi Cherti",
+      "Jenia Jitsev",
+      "Sewoong Oh",
+      "Elisa Ricci",
+      "Ludwig Schmidt",
+      "Matthias Bethge"
+    ],
+    "summary": "What data should a vision-language model be trained on? To answer this question, many data curation efforts center on the quality of a dataset. However, most of these existing methods are (i) offline, i.e. they produce a static dataset from a set of predetermined filtering criteria, and (ii) concept...",
+    "published": "Nov 25",
+    "pdf_url": "https://arxiv.org/pdf/2511.20643v1",
+    "arxiv_url": "http://arxiv.org/abs/2511.20643v1",
+    "queried_author": "Ludwig Schmidt",
+    "matching_authors": [
+      "Ludwig Schmidt"
+    ]
+  },
+  {
+    "title": "Latent Collaboration in Multi-Agent Systems",
+    "authors": [
+      "Jiaru Zou",
+      "Xiyuan Yang",
+      "Ruizhong Qiu",
+      "Gaotang Li",
+      "Katherine Tieu",
+      "Pan Lu",
+      "Ke Shen",
+      "Hanghang Tong",
+      "Yejin Choi",
+      "Jingrui He",
+      "James Zou",
+      "Mengdi Wang",
+      "Ling Yang"
+    ],
+    "summary": "Multi-agent systems (MAS) extend large language models (LLMs) from independent single-model reasoning to coordinative system-level intelligence. While existing LLM agents depend on text-based mediation for reasoning and communication, we take a step forward by enabling models to collaborate directly...",
+    "published": "Nov 25",
+    "pdf_url": "https://arxiv.org/pdf/2511.20639v1",
+    "arxiv_url": "http://arxiv.org/abs/2511.20639v1",
+    "queried_author": "Yejin Choi",
+    "matching_authors": [
+      "Yejin Choi"
+    ]
+  },
+  {
     "title": "DR Tulu: Reinforcement Learning with Evolving Rubrics for Deep Research",
     "authors": [
       "Rulin Shao",
@@ -446,8 +495,8 @@
     ],
     "summary": "A common approach to mechanistic interpretability is to causally manipulate model representations via targeted interventions in order to understand what those representations encode. Here we ask whether such interventions create out-of-distribution (divergent) representations, and whether this raise...",
     "published": "Nov 06",
-    "pdf_url": "https://arxiv.org/pdf/2511.04638v2",
-    "arxiv_url": "http://arxiv.org/abs/2511.04638v2",
+    "pdf_url": "https://arxiv.org/pdf/2511.04638v3",
+    "arxiv_url": "http://arxiv.org/abs/2511.04638v3",
     "queried_author": "Christopher Potts",
     "matching_authors": [
       "Christopher Potts"
@@ -15976,44 +16025,6 @@
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
-    ]
-  },
-  {
-    "title": "HyperDAS: Towards Automating Mechanistic Interpretability with Hypernetworks",
-    "authors": [
-      "Jiuding Sun",
-      "Jing Huang",
-      "Sidharth Baskaran",
-      "Karel D'Oosterlinck",
-      "Christopher Potts",
-      "Michael Sklar",
-      "Atticus Geiger"
-    ],
-    "summary": "Mechanistic interpretability has made great strides in identifying neural network features (e.g., directions in hidden activation space) that mediate concepts(e.g., the birth year of a person) and enable predictable manipulation. Distributed alignment search (DAS) leverages supervision from counterf...",
-    "published": "Mar 13",
-    "pdf_url": "https://arxiv.org/pdf/2503.10894v3",
-    "arxiv_url": "http://arxiv.org/abs/2503.10894v3",
-    "queried_author": "Christopher Potts",
-    "matching_authors": [
-      "Christopher Potts"
-    ]
-  },
-  {
-    "title": "Compute Optimal Scaling of Skills: Knowledge vs Reasoning",
-    "authors": [
-      "Nicholas Roberts",
-      "Niladri Chatterji",
-      "Sharan Narang",
-      "Mike Lewis",
-      "Dieuwke Hupkes"
-    ],
-    "summary": "Scaling laws are a critical component of the LLM development pipeline, most famously as a way to forecast training decisions such as 'compute-optimally' trading-off parameter count and dataset size, alongside a more recent growing list of other crucial decisions. In this work, we ask whether compute...",
-    "published": "Mar 13",
-    "pdf_url": "https://arxiv.org/pdf/2503.10061v3",
-    "arxiv_url": "http://arxiv.org/abs/2503.10061v3",
-    "queried_author": "Mike Lewis",
-    "matching_authors": [
-      "Mike Lewis"
     ]
   }
 ]
