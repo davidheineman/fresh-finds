@@ -1,26 +1,58 @@
 <head>
 	<title>New Tab</title>
+	<!-- Prevent white flash on dark mode - must run before any rendering -->
+	<script>
+		(function () {
+			// Check if user has dark mode preference stored
+			const darkModeStored = localStorage.getItem("darkmode") === "true";
+			// Check system preference
+			const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+			// Apply dark mode class immediately if either condition is true
+			if (darkModeStored || (!localStorage.getItem("darkmode") && prefersDark)) {
+				document.documentElement.classList.add("darkmode");
+			}
+		})();
+	</script>
+	<style>
+		:root {
+			--bg: white;
+		}
+
+		@media (prefers-color-scheme: dark) {
+			:root {
+				--bg: #1F1F1F;
+			}
+		}
+
+		.darkmode {
+			--bg: #1F1F1F;
+		}
+
+		html {
+			background-color: var(--bg);
+		}
+
+		body {
+			margin: 0;
+			background: var(--bg);
+		}
+
+		iframe {
+			border: none;
+			width: 100%;
+			height: 100%
+		}
+
+		.social-buttons {
+			display: none
+		}
+	</style>
 </head>
 
 <body>
 	<div class="container">
-		<iframe id="vaporwave" class="screen" src="https://davidheineman.github.io/fresh-finds/"></iframe>
+		<iframe id="" class="screen" src="https://davidheineman.github.io/fresh-finds/"></iframe>
 	</div>
 
 </body>
-
-<style>
-	body {
-		margin: 0;
-		background: white;
-	}
-
-	iframe {
-		border: none;
-		width: 100%;
-		height: 100%
-	}
-	.social-buttons {
-		display: none
-	}
-</style>
