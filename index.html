@@ -28,6 +28,21 @@
   <link rel="preload" href="fonts/chakra-petch/chakra-petch-v12-latin-600.woff2" as="font" type="font/woff2"
     crossorigin="anonymous">
   <meta name="keywords" content='thinky thinkingmachines machine learning deep learning ai'>
+  <!-- Prevent white flash on dark mode - must run before any rendering -->
+  <script>
+    (function() {
+      // Check if user has dark mode preference stored
+      const darkModeStored = localStorage.getItem("darkmode") === "true";
+      // Check system preference
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      
+      // Apply dark mode class immediately if either condition is true
+      if (darkModeStored || (!localStorage.getItem("darkmode") && prefersDark)) {
+        document.documentElement.classList.add("darkmode");
+        document.body.classList.add("darkmode");
+      }
+    })();
+  </script>
   <!-- <script>    (function () { function pageHasMath() { try { const text = document.body ? document.body.textContent : ''; if (!text) return false; const block = /\$\$[\s\S]*?\$\$/; const paren = /\\\([\s\S]*?\\\)/; const bracket = /\\\[[\s\S]*?\\\]/; const inline = /(^|\s)\$(?!\$)[^\n]+?\$(?=\s|[\.,;:!?)]|$)/; return block.test(text) || paren.test(text) || bracket.test(text) || inline.test(text); } catch (e) { return true; } } function loadStyle(href) { var preload = document.createElement('link'); preload.rel = 'preload'; preload.as = 'style'; preload.href = href; document.head.appendChild(preload); var link = document.createElement('link'); link.rel = 'stylesheet'; link.href = href; link.media = 'print'; link.onload = function () { this.media = 'all'; }; document.head.appendChild(link); var noscript = document.createElement('noscript'); noscript.innerHTML = '<link rel="stylesheet" href="' + href + '">'; document.head.appendChild(noscript); } function loadScript(src) { return new Promise(function (resolve, reject) { var s = document.createElement('script'); s.src = src; s.defer = true; s.onload = resolve; s.onerror = reject; document.head.appendChild(s); }); } function renderAllMath(root) { if (!window.renderMathInElement) return; window.renderMathInElement(root || document.body, { delimiters: [{ left: '$$', right: '$$', display: true }, { left: '$', right: '$', display: false }, { left: '\\(', right: '\\)', display: false }, { left: '\\[', right: '\\]', display: true }], throwOnError: false, ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'], }); } function init() { if (!pageHasMath()) return; var base = '\/katex\/'; var cssHref = base + 'katex.min.css?v=1762121057'; var katexJs = base + 'katex.min.js?v=1762121057'; var autorenderJs = base + 'contrib/auto-render.min.js?v=1762121057'; loadStyle(cssHref); loadScript(katexJs).then(function () { return loadScript(autorenderJs); }).then(function () { renderAllMath(document.body); setTimeout(function () { renderAllMath(document.body); }, 0); try { var observer = new MutationObserver(function (mutations) { for (var i = 0; i < mutations.length; i++) { var m = mutations[i]; if (m.addedNodes && m.addedNodes.length) { for (var j = 0; j < m.addedNodes.length; j++) { var node = m.addedNodes[j]; if (node.nodeType === 1) { renderAllMath(node); } } } } }); observer.observe(document.body, { childList: true, subtree: true }); } catch (e) { } }).catch(function () { }); } if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } else { init(); } })();  </script> -->
   <link rel="canonical" href="https://thinkingmachines.ai/blog/">
   <link rel="alternate" type="application/rss+xml" href="https://thinkingmachines.ai/blog/index.xml"
