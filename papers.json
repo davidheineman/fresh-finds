@@ -1,5 +1,68 @@
 [
   {
+    "title": "ToolOrchestra: Elevating Intelligence via Efficient Model and Tool Orchestration",
+    "authors": [
+      "Hongjin Su",
+      "Shizhe Diao",
+      "Ximing Lu",
+      "Mingjie Liu",
+      "Jiacheng Xu",
+      "Xin Dong",
+      "Yonggan Fu",
+      "Peter Belcak",
+      "Hanrong Ye",
+      "Hongxu Yin",
+      "Yi Dong",
+      "Evelina Bakhturina",
+      "Tao Yu",
+      "Yejin Choi",
+      "Jan Kautz",
+      "Pavlo Molchanov"
+    ],
+    "summary": "Large language models are powerful generalists, yet solving deep and complex problems such as those of the Humanity's Last Exam (HLE) remains both conceptually challenging and computationally expensive. We show that small orchestrators managing other models and a variety of tools can both push the u...",
+    "published": "Nov 26",
+    "pdf_url": "https://arxiv.org/pdf/2511.21689v1",
+    "arxiv_url": "http://arxiv.org/abs/2511.21689v1",
+    "queried_author": "Yejin Choi",
+    "matching_authors": [
+      "Yejin Choi"
+    ]
+  },
+  {
+    "title": "Structured Prompting Enables More Robust, Holistic Evaluation of Language Models",
+    "authors": [
+      "Asad Aali",
+      "Muhammad Ahmed Mohsin",
+      "Vasiliki Bikia",
+      "Arnav Singhvi",
+      "Richard Gaus",
+      "Suhana Bedi",
+      "Hejie Cui",
+      "Miguel Fuentes",
+      "Alyssa Unell",
+      "Yifan Mai",
+      "Jordan Cahoon",
+      "Michael Pfeffer",
+      "Roxana Daneshjou",
+      "Sanmi Koyejo",
+      "Emily Alsentzer",
+      "Percy Liang",
+      "Christopher Potts",
+      "Nigam H. Shah",
+      "Akshay S. Chaudhari"
+    ],
+    "summary": "As language models (LMs) are increasingly adopted across domains, high-quality benchmarking frameworks that accurately estimate performance are essential for guiding deployment decisions. While frameworks such as Holistic Evaluation of Language Models (HELM) enable broad evaluation across tasks, the...",
+    "published": "Nov 25",
+    "pdf_url": "https://arxiv.org/pdf/2511.20836v1",
+    "arxiv_url": "http://arxiv.org/abs/2511.20836v1",
+    "queried_author": "Christopher Potts",
+    "matching_authors": [
+      "Christopher Potts",
+      "Percy Liang",
+      "Sanmi Koyejo"
+    ]
+  },
+  {
     "title": "Concept-Aware Batch Sampling Improves Language-Image Pretraining",
     "authors": [
       "Adhiraj Ghosh",
@@ -75,8 +138,8 @@
     ],
     "summary": "Deep research models perform multi-step research to produce long-form, well-attributed answers. However, most open deep research models are trained on easily verifiable short-form QA tasks via reinforcement learning with verifiable rewards (RLVR), which does not extend to realistic long-form tasks. ...",
     "published": "Nov 24",
-    "pdf_url": "https://arxiv.org/pdf/2511.19399v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.19399v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.19399v2",
+    "arxiv_url": "http://arxiv.org/abs/2511.19399v2",
     "queried_author": "Hamish Ivison",
     "matching_authors": [
       "Hamish Ivison",
@@ -12004,8 +12067,8 @@
     ],
     "summary": "Training data attribution (TDA) methods aim to measure how training data impacts a model's predictions. While gradient-based attribution methods, such as influence functions, offer theoretical grounding, their computational costs make them impractical for large-scale applications. Representation-bas...",
     "published": "May 24",
-    "pdf_url": "https://arxiv.org/pdf/2505.18513v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.18513v1",
+    "pdf_url": "https://arxiv.org/pdf/2505.18513v2",
+    "arxiv_url": "http://arxiv.org/abs/2505.18513v2",
     "queried_author": "Colin Raffel",
     "matching_authors": [
       "Colin Raffel"
@@ -12237,8 +12300,8 @@
     ],
     "summary": "Web navigation is a unique domain that can automate many repetitive real-life tasks and is challenging as it requires long-horizon sequential decision making beyond typical multimodal large language model (MLLM) tasks. Yet, specialized reward models for web navigation that can be utilized during bot...",
     "published": "May 21",
-    "pdf_url": "https://arxiv.org/pdf/2505.15277v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.15277v1",
+    "pdf_url": "https://arxiv.org/pdf/2505.15277v2",
+    "arxiv_url": "http://arxiv.org/abs/2505.15277v2",
     "queried_author": "Seungone Kim",
     "matching_authors": [
       "Seungone Kim"
@@ -15980,48 +16043,6 @@
     "published": "Mar 16",
     "pdf_url": "https://arxiv.org/pdf/2503.13544v7",
     "arxiv_url": "http://arxiv.org/abs/2503.13544v7",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Towards Learning High-Precision Least Squares Algorithms with Sequence Models",
-    "authors": [
-      "Jerry Liu",
-      "Jessica Grogan",
-      "Owen Dugan",
-      "Ashish Rao",
-      "Simran Arora",
-      "Atri Rudra",
-      "Christopher R\u00e9"
-    ],
-    "summary": "This paper investigates whether sequence models can learn to perform numerical algorithms, e.g. gradient descent, on the fundamental problem of least squares. Our goal is to inherit two properties of standard algorithms from numerical analysis: (1) machine precision, i.e. we want to obtain solutions...",
-    "published": "Mar 15",
-    "pdf_url": "https://arxiv.org/pdf/2503.12295v1",
-    "arxiv_url": "http://arxiv.org/abs/2503.12295v1",
-    "queried_author": "Christopher R\u00e9",
-    "matching_authors": [
-      "Christopher R\u00e9"
-    ]
-  },
-  {
-    "title": "Information-Guided Identification of Training Data Imprint in (Proprietary) Large Language Models",
-    "authors": [
-      "Abhilasha Ravichander",
-      "Jillian Fisher",
-      "Taylor Sorensen",
-      "Ximing Lu",
-      "Yuchen Lin",
-      "Maria Antoniak",
-      "Niloofar Mireshghallah",
-      "Chandra Bhagavatula",
-      "Yejin Choi"
-    ],
-    "summary": "High-quality training data has proven crucial for developing performant large language models (LLMs). However, commercial LLM providers disclose few, if any, details about the data used for training. This lack of transparency creates multiple challenges: it limits external oversight and inspection o...",
-    "published": "Mar 15",
-    "pdf_url": "https://arxiv.org/pdf/2503.12072v1",
-    "arxiv_url": "http://arxiv.org/abs/2503.12072v1",
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
