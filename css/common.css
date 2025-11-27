@@ -37,15 +37,54 @@
 }
 
 /* UI primitives moved to ui.css */
+
+/* Apply dark mode based on system preference */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg_h: #1F1F1F;
+    --bg: #1F1F1F;
+    --bg_s: #2a2a2a;
+    --bg_code: #2a2a2a;
+    --bg1: #3a3a3a;
+    --bg2: #4a4a4a;
+    --bg3: #5a5a5a;
+    --bg4: #6a6a6a;
+    --fg: #ffffff;
+    --fg_code: #8ec07c;
+    --fg1: #f0f0f0;
+    --fg2: #e0e0e0;
+    --fg3: #d0d0d0;
+    --fg4: #c0c0c0;
+    --fg5: #b0b0b0;
+    --red: #AD2111;
+    --green: #9CC355;
+    --yellow: #fabd2f;
+    --blue: #0E9EE4;
+    --purple: #d3869b;
+    --aqua: #8ec07c;
+    --gray: #817d79;
+    --orange: #fe8019;
+    --red-dim: #cc2412;
+    --green-dim: #98971a;
+    --yellow-dim: #d79921;
+    --blue-dim: #458588;
+    --purple-dim: #b16286;
+    --aqua-dim: #689d6a;
+    --gray-dim: #a89984;
+    --orange-dim: #d65d0e;
+    --hover-bg: rgba(128, 128, 128, 0.4);
+  }
+}
+
 .darkmode {
-  --bg_h: #000000;
-  --bg: #000000;
-  --bg_s: #1a1a1a;
-  --bg_code: #1a1a1a;
-  --bg1: #2a2a2a;
-  --bg2: #3a3a3a;
-  --bg3: #4a4a4a;
-  --bg4: #5a5a5a;
+  --bg_h: #1F1F1F;
+  --bg: #1F1F1F;
+  --bg_s: #2a2a2a;
+  --bg_code: #2a2a2a;
+  --bg1: #3a3a3a;
+  --bg2: #4a4a4a;
+  --bg3: #5a5a5a;
+  --bg4: #6a6a6a;
   --fg: #ffffff;
   --fg_code: #8ec07c;
   --fg1: #f0f0f0;
@@ -146,6 +185,16 @@ body.darkmode #header .navbar-logo a:visited,
 body.darkmode #header .navbar-logo a:active,
 body.darkmode #header .navbar-logo a:hover {
   color: var(--fg4) !important;  /* Medium grey for dark mode */
+}
+
+@media (prefers-color-scheme: dark) {
+  body #header .navbar-logo a,
+  body #header .navbar-logo a:link,
+  body #header .navbar-logo a:visited,
+  body #header .navbar-logo a:active,
+  body #header .navbar-logo a:hover {
+    color: var(--fg4) !important;  /* Medium grey for dark mode */
+  }
 }
 
 #header .navbar-logo a:hover {
@@ -328,6 +377,15 @@ body:not(.darkmode) #sun {
 body.darkmode #moon {
   display: none;
 }
+
+@media (prefers-color-scheme: dark) {
+  body:not(.darkmode) #sun {
+    display: block;
+  }
+  body:not(.darkmode) #moon {
+    display: none;
+  }
+}
 a {
   text-decoration: none;
   transition:
@@ -348,6 +406,13 @@ a:visited {
 .darkmode ::selection {
   background-color: rgba(240, 240, 240, 0.5);
   color: var(--fg);
+}
+
+@media (prefers-color-scheme: dark) {
+  ::selection {
+    background-color: rgba(240, 240, 240, 0.5);
+    color: var(--fg);
+  }
 }
 time {
   color: var(--fg4);
@@ -839,6 +904,19 @@ main {
 .darkmode .logo:AFTER {
   background: linear-gradient(90deg, #b5b9ff, #ffd6e0, #c1f7d3, #ffe5b4, #f7c8ff, #b5b9ff, #ffd6e0);
   mix-blend-mode: multiply;
+}
+
+@media (prefers-color-scheme: dark) {
+  .logo {
+    background: black;
+    color: white;
+    border-color: black;
+  }
+
+  .logo:AFTER {
+    background: linear-gradient(90deg, #b5b9ff, #ffd6e0, #c1f7d3, #ffe5b4, #f7c8ff, #b5b9ff, #ffd6e0);
+    mix-blend-mode: multiply;
+  }
 }
 
 @media(prefers-reduced-motion: reduce) {

@@ -203,6 +203,22 @@ button.copy-button svg {
     color: var(--bg);
 }
 
+@media (prefers-color-scheme: dark) {
+    .content pre::selection,
+    .content pre code::selection,
+    .content pre *::selection {
+        background-color: rgba(255, 255, 255, 0.5);
+        color: var(--bg);
+    }
+
+    .content pre::-moz-selection,
+    .content pre code::-moz-selection,
+    .content pre *::-moz-selection {
+        background-color: rgba(255, 255, 255, 0.5);
+        color: var(--bg);
+    }
+}
+
 /* Language label chip shown at top-left of code blocks */
 .content pre code[data-lang]::before {
     content: attr(data-lang);

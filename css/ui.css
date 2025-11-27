@@ -78,6 +78,12 @@
     background: linear-gradient(180deg, #7a9fcd 5.17%, #6f93c1 23.1%, #6f93c1 76.9%, #7a9fcd 94.83%);
 }
 
+@media (prefers-color-scheme: dark) {
+    .btn.primary {
+        background: linear-gradient(180deg, #7a9fcd 5.17%, #6f93c1 23.1%, #6f93c1 76.9%, #7a9fcd 94.83%);
+    }
+}
+
 .btn.secondary {
     background: linear-gradient(180deg, #FFFFFF 5.17%, #F6F6F6 22.41%, #F4F5F7 82.31%, #F6F7F9 94.83%);
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -144,6 +150,17 @@
 
 .darkmode .btn.plain:active {
     background: rgba(255, 255, 255, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+    .btn.plain:hover,
+    .btn.plain:focus-visible {
+        background: rgba(255, 255, 255, 0.08);
+    }
+
+    .btn.plain:active {
+        background: rgba(255, 255, 255, 0.12);
+    }
 }
 
 /* Size variants */
