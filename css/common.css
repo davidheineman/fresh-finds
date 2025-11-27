@@ -1117,7 +1117,7 @@ main {
   display: block;
   font-size: 16px;
   color: var(--fg4);
-  font-family: var(--font-sans);
+  /* font-family: var(--font-sans); */
 }
 
 .author-date .separator {
