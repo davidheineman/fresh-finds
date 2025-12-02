@@ -1,5 +1,24 @@
 [
   {
+    "title": "Improved Mean Flows: On the Challenges of Fastforward Generative Models",
+    "authors": [
+      "Zhengyang Geng",
+      "Yiyang Lu",
+      "Zongze Wu",
+      "Eli Shechtman",
+      "J. Zico Kolter",
+      "Kaiming He"
+    ],
+    "summary": "MeanFlow (MF) has recently been established as a framework for one-step generative modeling. However, its ``fastforward'' nature introduces key challenges in both the training objective and the guidance mechanism. First, the original MF's training target depends not only on the underlying ground-tru...",
+    "published": "Dec 01",
+    "pdf_url": "https://arxiv.org/pdf/2512.02012v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.02012v1",
+    "queried_author": "J Zico Kolter",
+    "matching_authors": [
+      "J Zico Kolter"
+    ]
+  },
+  {
     "title": "Difficulties with Evaluating a Deception Detector for AIs",
     "authors": [
       "Lewis Smith",
@@ -597,8 +616,8 @@
     ],
     "summary": "A common approach to mechanistic interpretability is to causally manipulate model representations via targeted interventions in order to understand what those representations encode. Here we ask whether such interventions create out-of-distribution (divergent) representations, and whether this raise...",
     "published": "Nov 06",
-    "pdf_url": "https://arxiv.org/pdf/2511.04638v3",
-    "arxiv_url": "http://arxiv.org/abs/2511.04638v3",
+    "pdf_url": "https://arxiv.org/pdf/2511.04638v4",
+    "arxiv_url": "http://arxiv.org/abs/2511.04638v4",
     "queried_author": "Christopher Potts",
     "matching_authors": [
       "Christopher Potts"
@@ -2864,8 +2883,8 @@
     ],
     "summary": "Margin-based optimization is fundamental to improving generalization and robustness in classification tasks. In the context of reward model learning from preferences within Reinforcement Learning from Human Feedback (RLHF), existing methods typically rely on no margins, fixed margins, or margins tha...",
     "published": "Sep 26",
-    "pdf_url": "https://arxiv.org/pdf/2509.22851v2",
-    "arxiv_url": "http://arxiv.org/abs/2509.22851v2",
+    "pdf_url": "https://arxiv.org/pdf/2509.22851v3",
+    "arxiv_url": "http://arxiv.org/abs/2509.22851v3",
     "queried_author": "Greg Durrett",
     "matching_authors": [
       "Greg Durrett"
@@ -4859,8 +4878,8 @@
     ],
     "summary": "Language models must be adapted to understand and follow user instructions. Reinforcement learning is widely used to facilitate this -- typically using fixed criteria such as \"helpfulness\" and \"harmfulness\". In our work, we instead propose using flexible, instruction-specific criteria as a means of ...",
     "published": "Jul 24",
-    "pdf_url": "https://arxiv.org/pdf/2507.18624v1",
-    "arxiv_url": "http://arxiv.org/abs/2507.18624v1",
+    "pdf_url": "https://arxiv.org/pdf/2507.18624v2",
+    "arxiv_url": "http://arxiv.org/abs/2507.18624v2",
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig"
@@ -10052,11 +10071,13 @@
       "Kanav Arora",
       "Kirsty Ellis",
       "Luca Macesanu",
+      "Marcel Torne Villasevil",
       "Matthew Leonard",
       "Meedeum Cho",
       "Ozgur Aslan",
       "Shivin Dass",
       "Jie Wang",
+      "William Reger",
       "Xingfang Yuan",
       "Xuning Yang",
       "Abhishek Gupta",
@@ -10071,8 +10092,8 @@
     ],
     "summary": "Comprehensive, unbiased, and comparable evaluation of modern generalist policies is uniquely challenging: existing approaches for robot benchmarking typically rely on heavy standardization, either by specifying fixed evaluation tasks and environments, or by hosting centralized ''robot challenges'', ...",
     "published": "Jun 22",
-    "pdf_url": "https://arxiv.org/pdf/2506.18123v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.18123v1",
+    "pdf_url": "https://arxiv.org/pdf/2506.18123v2",
+    "arxiv_url": "http://arxiv.org/abs/2506.18123v2",
     "queried_author": "Percy Liang",
     "matching_authors": [
       "Percy Liang"
@@ -12810,8 +12831,8 @@
     ],
     "summary": "Plaintiffs and defendants in copyright lawsuits over generative AI often make sweeping, opposing claims about the extent to which large language models (LLMs) have memorized plaintiffs' protected expression in their training data. Drawing on both machine learning and copyright law, we show that thes...",
     "published": "May 18",
-    "pdf_url": "https://arxiv.org/pdf/2505.12546v3",
-    "arxiv_url": "http://arxiv.org/abs/2505.12546v3",
+    "pdf_url": "https://arxiv.org/pdf/2505.12546v4",
+    "arxiv_url": "http://arxiv.org/abs/2505.12546v4",
     "queried_author": "Percy Liang",
     "matching_authors": [
       "Percy Liang"
@@ -15248,25 +15269,6 @@
     "matching_authors": [
       "Noah A. Smith",
       "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Reliable and Efficient Amortized Model-based Evaluation",
-    "authors": [
-      "Sang Truong",
-      "Yuheng Tu",
-      "Percy Liang",
-      "Bo Li",
-      "Sanmi Koyejo"
-    ],
-    "summary": "Comprehensive evaluations of language models (LM) during both development and deployment phases are necessary because these models possess numerous capabilities (e.g., mathematical reasoning, legal support, or medical diagnostic) as well as safety risks (e.g., racial bias, toxicity, or misinformatio...",
-    "published": "Mar 17",
-    "pdf_url": "https://arxiv.org/pdf/2503.13335v1",
-    "arxiv_url": "http://arxiv.org/abs/2503.13335v1",
-    "queried_author": "Percy Liang",
-    "matching_authors": [
-      "Percy Liang",
-      "Sanmi Koyejo"
     ]
   }
 ]
