@@ -1,5 +1,43 @@
 [
   {
+    "title": "Martingale Score: An Unsupervised Metric for Bayesian Rationality in LLM Reasoning",
+    "authors": [
+      "Zhonghao He",
+      "Tianyi Qiu",
+      "Hirokazu Shirado",
+      "Maarten Sap"
+    ],
+    "summary": "Recent advances in reasoning techniques have substantially improved the performance of large language models (LLMs), raising expectations for their ability to provide accurate, truthful, and reliable information. However, emerging evidence suggests that iterative reasoning may foster belief entrench...",
+    "published": "Dec 02",
+    "pdf_url": "https://arxiv.org/pdf/2512.02914v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.02914v1",
+    "queried_author": "Maarten Sap",
+    "matching_authors": [
+      "Maarten Sap"
+    ]
+  },
+  {
+    "title": "Joint Distillation for Fast Likelihood Evaluation and Sampling in Flow-based Models",
+    "authors": [
+      "Xinyue Ai",
+      "Yutong He",
+      "Albert Gu",
+      "Ruslan Salakhutdinov",
+      "J Zico Kolter",
+      "Nicholas Matthew Boffi",
+      "Max Simchowitz"
+    ],
+    "summary": "Log-likelihood evaluation enables important capabilities in generative models, including model comparison, certain fine-tuning objectives, and many downstream applications. Yet paradoxically, some of today's best generative models -- diffusion and flow-based models -- still require hundreds to thous...",
+    "published": "Dec 02",
+    "pdf_url": "https://arxiv.org/pdf/2512.02636v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.02636v1",
+    "queried_author": "Albert Gu",
+    "matching_authors": [
+      "Albert Gu",
+      "J Zico Kolter"
+    ]
+  },
+  {
     "title": "Improved Mean Flows: On the Challenges of Fastforward Generative Models",
     "authors": [
       "Zhengyang Geng",
@@ -3225,6 +3263,7 @@
   {
     "title": "Apertus: Democratizing Open and Compliant LLMs for Global Language Environments",
     "authors": [
+      "Project Apertus",
       "Alejandro Hern\u00e1ndez-Cano",
       "Alexander H\u00e4gele",
       "Allen Hao Huang",
@@ -3244,7 +3283,7 @@
       "Yixuan Xu",
       "Michael Aerni",
       "Badr AlKhamissi",
-      "Ines Altemir Marinas",
+      "In\u00e9s Altemir Mari\u00f1as",
       "Mohammad Hossein Amani",
       "Matin Ansaripour",
       "Ilia Badanin",
@@ -3279,7 +3318,7 @@
       "Andreas Marfurt",
       "Kyle Matoba",
       "Simon Matrenok",
-      "Henrique Mendonc\u00e7a",
+      "Henrique Mendon\u00e7a",
       "Fawzi Roberto Mohamed",
       "Syrielle Montariol",
       "Luca Mouchel",
@@ -3311,7 +3350,8 @@
       "Paul Teiletche",
       "Jannis Vamvas",
       "Xiaozhe Yao",
-      "Hao Zhao Alexander Ilic",
+      "Hao Zhao",
+      "Alexander Ilic",
       "Ana Klimovic",
       "Andreas Krause",
       "Caglar Gulcehre",
@@ -3329,8 +3369,8 @@
     ],
     "summary": "We present Apertus, a fully open suite of large language models (LLMs) designed to address two systemic shortcomings in today's open model ecosystem: data compliance and multilingual representation. Unlike many prior models that release weights without reproducible data pipelines or regard for conte...",
     "published": "Sep 17",
-    "pdf_url": "https://arxiv.org/pdf/2509.14233v1",
-    "arxiv_url": "http://arxiv.org/abs/2509.14233v1",
+    "pdf_url": "https://arxiv.org/pdf/2509.14233v2",
+    "arxiv_url": "http://arxiv.org/abs/2509.14233v2",
     "queried_author": "Antoine Bosselut",
     "matching_authors": [
       "Antoine Bosselut"
@@ -12324,10 +12364,10 @@
       "Yann LeCun",
       "Ravid Shwartz-Ziv"
     ],
-    "summary": "Humans organize knowledge into compact categories that balance compression with semantic meaning preservation. Large Language Models (LLMs) demonstrate striking linguistic abilities, yet whether they achieve this same balance remains unclear. We apply the Information Bottleneck principle to quantita...",
+    "summary": "Humans organize knowledge into compact conceptual categories that balance compression with semantic richness. Large Language Models (LLMs) exhibit impressive linguistic abilities, but whether they navigate this same compression-meaning trade-off remains unclear. We apply an Information Bottleneck fr...",
     "published": "May 21",
-    "pdf_url": "https://arxiv.org/pdf/2505.17117v5",
-    "arxiv_url": "http://arxiv.org/abs/2505.17117v5",
+    "pdf_url": "https://arxiv.org/pdf/2505.17117v6",
+    "arxiv_url": "http://arxiv.org/abs/2505.17117v6",
     "queried_author": "Dan Jurafsky",
     "matching_authors": [
       "Dan Jurafsky"
@@ -12407,8 +12447,8 @@
     ],
     "summary": "AI agents have the potential to significantly alter the cybersecurity landscape. Here, we introduce the first framework to capture offensive and defensive cyber-capabilities in evolving real-world systems. Instantiating this framework with BountyBench, we set up 25 systems with complex, real-world c...",
     "published": "May 21",
-    "pdf_url": "https://arxiv.org/pdf/2505.15216v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.15216v2",
+    "pdf_url": "https://arxiv.org/pdf/2505.15216v3",
+    "arxiv_url": "http://arxiv.org/abs/2505.15216v3",
     "queried_author": "Percy Liang",
     "matching_authors": [
       "Percy Liang"
@@ -15231,44 +15271,6 @@
     "queried_author": "Jacob Eisenstein",
     "matching_authors": [
       "Jacob Eisenstein"
-    ]
-  },
-  {
-    "title": "Benchmarking Failures in Tool-Augmented Language Models",
-    "authors": [
-      "Eduardo Trevi\u00f1o",
-      "Hugo Contant",
-      "James Ngai",
-      "Graham Neubig",
-      "Zora Zhiruo Wang"
-    ],
-    "summary": "The integration of tools has extended the capabilities of language models (LMs) beyond vanilla text generation to versatile scenarios. However, tool-augmented language models (TaLMs) often assume 'perfect' information access and tool availability, which may not hold in the real world. To systematica...",
-    "published": "Mar 18",
-    "pdf_url": "https://arxiv.org/pdf/2503.14227v1",
-    "arxiv_url": "http://arxiv.org/abs/2503.14227v1",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
-    ]
-  },
-  {
-    "title": "SuperBPE: Space Travel for Language Models",
-    "authors": [
-      "Alisa Liu",
-      "Jonathan Hayase",
-      "Valentin Hofmann",
-      "Sewoong Oh",
-      "Noah A. Smith",
-      "Yejin Choi"
-    ],
-    "summary": "The assumption across nearly all language model (LM) tokenization schemes is that tokens should be subwords, i.e., contained within word boundaries. While providing a seemingly reasonable inductive bias, is this common practice limiting the potential of modern LMs? Whitespace is not a reliable delim...",
-    "published": "Mar 17",
-    "pdf_url": "https://arxiv.org/pdf/2503.13423v3",
-    "arxiv_url": "http://arxiv.org/abs/2503.13423v3",
-    "queried_author": "Noah A. Smith",
-    "matching_authors": [
-      "Noah A. Smith",
-      "Yejin Choi"
     ]
   }
 ]
