@@ -1,5 +1,81 @@
 [
   {
+    "title": "SkillFactory: Self-Distillation For Learning Cognitive Behaviors",
+    "authors": [
+      "Zayne Sprague",
+      "Jack Lu",
+      "Manya Wadhwa",
+      "Sedrick Keh",
+      "Mengye Ren",
+      "Greg Durrett"
+    ],
+    "summary": "Reasoning models leveraging long chains of thought employ various cognitive skills, such as verification of their answers, backtracking, retrying by an alternate method, and more. Previous work has shown that when a base language model exhibits these skills, training that model further with reinforc...",
+    "published": "Dec 03",
+    "pdf_url": "https://arxiv.org/pdf/2512.04072v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.04072v1",
+    "queried_author": "Greg Durrett",
+    "matching_authors": [
+      "Greg Durrett"
+    ]
+  },
+  {
+    "title": "Learning Steerable Clarification Policies with Collaborative Self-play",
+    "authors": [
+      "Jonathan Berant",
+      "Maximillian Chen",
+      "Adam Fisch",
+      "Reza Aghajani",
+      "Fantine Huot",
+      "Mirella Lapata",
+      "Jacob Eisenstein"
+    ],
+    "summary": "To handle underspecified or ambiguous queries, AI assistants need a policy for managing their uncertainty to determine (a) when to guess the user intent and answer directly, (b) when to enumerate and answer multiple possible intents, and (c) when to ask a clarifying question. However, such policies ...",
+    "published": "Dec 03",
+    "pdf_url": "https://arxiv.org/pdf/2512.04068v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.04068v1",
+    "queried_author": "Jacob Eisenstein",
+    "matching_authors": [
+      "Jacob Eisenstein"
+    ]
+  },
+  {
+    "title": "Too Late to Recall: Explaining the Two-Hop Problem in Multimodal Knowledge Retrieval",
+    "authors": [
+      "Constantin Venhoff",
+      "Ashkan Khakzar",
+      "Sonia Joseph",
+      "Philip Torr",
+      "Neel Nanda"
+    ],
+    "summary": "Training vision language models (VLMs) aims to align visual representations from a vision encoder with the textual representations of a pretrained large language model (LLM). However, many VLMs exhibit reduced factual recall performance compared to their LLM backbones, raising the question of how ef...",
+    "published": "Dec 02",
+    "pdf_url": "https://arxiv.org/pdf/2512.03276v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.03276v1",
+    "queried_author": "Neel Nanda",
+    "matching_authors": [
+      "Neel Nanda"
+    ]
+  },
+  {
+    "title": "Plantain: Plan-Answer Interleaved Reasoning",
+    "authors": [
+      "Anthony Liang",
+      "Jonathan Berant",
+      "Adam Fisch",
+      "Abhimanyu Goyal",
+      "Kalpesh Krishna",
+      "Jacob Eisenstein"
+    ],
+    "summary": "Reasoning models often spend a significant amount of time thinking before they generate a visible response. In the meantime, they do not give the user any hints as to whether their reasoning is on the right track, and do not give the user any recourse to stop and correct them if their reasoning is f...",
+    "published": "Dec 02",
+    "pdf_url": "https://arxiv.org/pdf/2512.03176v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.03176v1",
+    "queried_author": "Jacob Eisenstein",
+    "matching_authors": [
+      "Jacob Eisenstein"
+    ]
+  },
+  {
     "title": "Martingale Score: An Unsupervised Metric for Bayesian Rationality in LLM Reasoning",
     "authors": [
       "Zhonghao He",
@@ -1585,8 +1661,8 @@
     ],
     "summary": "Adapting language models (LMs) to new tasks via post-training carries the risk of degrading existing capabilities -- a phenomenon classically known as catastrophic forgetting. In this paper, toward identifying guidelines for mitigating this phenomenon, we systematically compare the forgetting patter...",
     "published": "Oct 21",
-    "pdf_url": "https://arxiv.org/pdf/2510.18874v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.18874v1",
+    "pdf_url": "https://arxiv.org/pdf/2510.18874v2",
+    "arxiv_url": "http://arxiv.org/abs/2510.18874v2",
     "queried_author": "Danqi Chen",
     "matching_authors": [
       "Danqi Chen"
@@ -11689,8 +11765,8 @@
     ],
     "summary": "Current LLMs are trained to refuse potentially harmful input queries regardless of whether users actually had harmful intents, causing a tradeoff between safety and user experience. Through a study of 480 participants evaluating 3,840 query-response pairs, we examine how different refusal strategies...",
     "published": "May 30",
-    "pdf_url": "https://arxiv.org/pdf/2506.00195v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.00195v1",
+    "pdf_url": "https://arxiv.org/pdf/2506.00195v2",
+    "arxiv_url": "http://arxiv.org/abs/2506.00195v2",
     "queried_author": "Maarten Sap",
     "matching_authors": [
       "Maarten Sap"
@@ -15187,90 +15263,6 @@
     "queried_author": "Danqi Chen",
     "matching_authors": [
       "Danqi Chen"
-    ]
-  },
-  {
-    "title": "Lyra: An Efficient and Expressive Subquadratic Architecture for Modeling Biological Sequences",
-    "authors": [
-      "Krithik Ramesh",
-      "Sameed M. Siddiqui",
-      "Albert Gu",
-      "Michael D. Mitzenmacher",
-      "Pardis C. Sabeti"
-    ],
-    "summary": "Deep learning architectures such as convolutional neural networks and Transformers have revolutionized biological sequence modeling, with recent advances driven by scaling up foundation and task-specific models. The computational resources and large datasets required, however, limit their applicabil...",
-    "published": "Mar 20",
-    "pdf_url": "https://arxiv.org/pdf/2503.16351v1",
-    "arxiv_url": "http://arxiv.org/abs/2503.16351v1",
-    "queried_author": "Albert Gu",
-    "matching_authors": [
-      "Albert Gu"
-    ]
-  },
-  {
-    "title": "AutoRedTeamer: Autonomous Red Teaming with Lifelong Attack Integration",
-    "authors": [
-      "Andy Zhou",
-      "Kevin Wu",
-      "Francesco Pinto",
-      "Zhaorun Chen",
-      "Yi Zeng",
-      "Yu Yang",
-      "Shuang Yang",
-      "Sanmi Koyejo",
-      "James Zou",
-      "Bo Li"
-    ],
-    "summary": "As large language models (LLMs) become increasingly capable, security and safety evaluation are crucial. While current red teaming approaches have made strides in assessing LLM vulnerabilities, they often rely heavily on human input and lack comprehensive coverage of emerging attack vectors. This pa...",
-    "published": "Mar 20",
-    "pdf_url": "https://arxiv.org/pdf/2503.15754v1",
-    "arxiv_url": "http://arxiv.org/abs/2503.15754v1",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "Value Profiles for Encoding Human Variation",
-    "authors": [
-      "Taylor Sorensen",
-      "Pushkar Mishra",
-      "Roma Patel",
-      "Michael Henry Tessler",
-      "Michiel Bakker",
-      "Georgina Evans",
-      "Iason Gabriel",
-      "Noah Goodman",
-      "Verena Rieser"
-    ],
-    "summary": "Modelling human variation in rating tasks is crucial for personalization, pluralistic model alignment, and computational social science. We propose representing individuals using natural language value profiles -- descriptions of underlying values compressed from in-context demonstrations -- along w...",
-    "published": "Mar 19",
-    "pdf_url": "https://arxiv.org/pdf/2503.15484v2",
-    "arxiv_url": "http://arxiv.org/abs/2503.15484v2",
-    "queried_author": "Noah Goodman",
-    "matching_authors": [
-      "Noah Goodman"
-    ]
-  },
-  {
-    "title": "Don't lie to your friends: Learning what you know from collaborative self-play",
-    "authors": [
-      "Jacob Eisenstein",
-      "Reza Aghajani",
-      "Adam Fisch",
-      "Dheeru Dua",
-      "Fantine Huot",
-      "Mirella Lapata",
-      "Vicky Zayats",
-      "Jonathan Berant"
-    ],
-    "summary": "To be helpful assistants, AI agents must be aware of their own capabilities and limitations. This includes knowing when to answer from parametric knowledge versus using tools, when to trust tool outputs, and when to abstain or hedge. Such capabilities are hard to teach through supervised fine-tuning...",
-    "published": "Mar 18",
-    "pdf_url": "https://arxiv.org/pdf/2503.14481v3",
-    "arxiv_url": "http://arxiv.org/abs/2503.14481v3",
-    "queried_author": "Jacob Eisenstein",
-    "matching_authors": [
-      "Jacob Eisenstein"
     ]
   }
 ]
