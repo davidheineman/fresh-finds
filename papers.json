@@ -1,5 +1,81 @@
 [
   {
+    "title": "TV2TV: A Unified Framework for Interleaved Language and Video Generation",
+    "authors": [
+      "Xiaochuang Han",
+      "Youssef Emad",
+      "Melissa Hall",
+      "John Nguyen",
+      "Karthik Padthe",
+      "Liam Robbins",
+      "Amir Bar",
+      "Delong Chen",
+      "Michal Drozdzal",
+      "Maha Elbayad",
+      "Yushi Hu",
+      "Shang-Wen Li",
+      "Sreya Dutta Roy",
+      "Jakob Verbeek",
+      "XuDong Wang",
+      "Marjan Ghazvininejad",
+      "Luke Zettlemoyer",
+      "Emily Dinan"
+    ],
+    "summary": "Video generation models are rapidly advancing, but can still struggle with complex video outputs that require significant semantic branching or repeated high-level reasoning about what should happen next. In this paper, we introduce a new class of omni video-text models that integrate ideas from rec...",
+    "published": "Dec 04",
+    "pdf_url": "https://arxiv.org/pdf/2512.05103v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.05103v1",
+    "queried_author": "Luke Zettlemoyer",
+    "matching_authors": [
+      "Luke Zettlemoyer"
+    ]
+  },
+  {
+    "title": "LeMat-GenBench: A Unified Evaluation Framework for Crystal Generative Models",
+    "authors": [
+      "Siddharth Betala",
+      "Samuel P. Gleason",
+      "Ali Ramlaoui",
+      "Andy Xu",
+      "Georgia Channing",
+      "Daniel Levy",
+      "Cl\u00e9mentine Fourrier",
+      "Nikita Kazeev",
+      "Chaitanya K. Joshi",
+      "S\u00e9kou-Oumar Kaba",
+      "F\u00e9lix Therrien",
+      "Alex Hernandez-Garcia",
+      "Roc\u00edo Mercado",
+      "N. M. Anoop Krishnan",
+      "Alexandre Duval"
+    ],
+    "summary": "Generative machine learning (ML) models hold great promise for accelerating materials discovery through the inverse design of inorganic crystals, enabling an unprecedented exploration of chemical space. Yet, the lack of standardized evaluation frameworks makes it challenging to evaluate, compare, an...",
+    "published": "Dec 04",
+    "pdf_url": "https://arxiv.org/pdf/2512.04562v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.04562v1",
+    "queried_author": "Cl\u00e9mentine Fourrier",
+    "matching_authors": [
+      "Cl\u00e9mentine Fourrier"
+    ]
+  },
+  {
+    "title": "ClusterFusion: Hybrid Clustering with Embedding Guidance and LLM Adaptation",
+    "authors": [
+      "Yiming Xu",
+      "Yuan Yuan",
+      "Vijay Viswanathan",
+      "Graham Neubig"
+    ],
+    "summary": "Text clustering is a fundamental task in natural language processing, yet traditional clustering algorithms with pre-trained embeddings often struggle in domain-specific contexts without costly fine-tuning. Large language models (LLMs) provide strong contextual reasoning, yet prior work mainly uses ...",
+    "published": "Dec 04",
+    "pdf_url": "https://arxiv.org/pdf/2512.04350v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.04350v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
     "title": "SkillFactory: Self-Distillation For Learning Cognitive Behaviors",
     "authors": [
       "Zayne Sprague",
@@ -2167,8 +2243,8 @@
     ],
     "summary": "Comparing human and model performance offers a valuable perspective for understanding the strengths and limitations of embedding models, highlighting where they succeed and where they fail to capture meaning and nuance. However, such comparisons are rarely made, as human performance on embedding tas...",
     "published": "Oct 11",
-    "pdf_url": "https://arxiv.org/pdf/2510.10062v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.10062v2",
+    "pdf_url": "https://arxiv.org/pdf/2510.10062v3",
+    "arxiv_url": "http://arxiv.org/abs/2510.10062v3",
     "queried_author": "Niklas Muennighoff",
     "matching_authors": [
       "Niklas Muennighoff"
@@ -15174,95 +15250,6 @@
     "matching_authors": [
       "Percy Liang",
       "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "In-House Evaluation Is Not Enough: Towards Robust Third-Party Flaw Disclosure for General-Purpose AI",
-    "authors": [
-      "Shayne Longpre",
-      "Kevin Klyman",
-      "Ruth E. Appel",
-      "Sayash Kapoor",
-      "Rishi Bommasani",
-      "Michelle Sahar",
-      "Sean McGregor",
-      "Avijit Ghosh",
-      "Borhane Blili-Hamelin",
-      "Nathan Butters",
-      "Alondra Nelson",
-      "Amit Elazari",
-      "Andrew Sellars",
-      "Casey John Ellis",
-      "Dane Sherrets",
-      "Dawn Song",
-      "Harley Geiger",
-      "Ilona Cohen",
-      "Lauren McIlvenny",
-      "Madhulika Srikumar",
-      "Mark M. Jaycox",
-      "Markus Anderljung",
-      "Nadine Farid Johnson",
-      "Nicholas Carlini",
-      "Nicolas Miailhe",
-      "Nik Marda",
-      "Peter Henderson",
-      "Rebecca S. Portnoff",
-      "Rebecca Weiss",
-      "Victoria Westerhoff",
-      "Yacine Jernite",
-      "Rumman Chowdhury",
-      "Percy Liang",
-      "Arvind Narayanan"
-    ],
-    "summary": "The widespread deployment of general-purpose AI (GPAI) systems introduces significant new risks. Yet the infrastructure, practices, and norms for reporting flaws in GPAI systems remain seriously underdeveloped, lagging far behind more established fields like software security. Based on a collaborati...",
-    "published": "Mar 21",
-    "pdf_url": "https://arxiv.org/pdf/2503.16861v2",
-    "arxiv_url": "http://arxiv.org/abs/2503.16861v2",
-    "queried_author": "Percy Liang",
-    "matching_authors": [
-      "Percy Liang"
-    ]
-  },
-  {
-    "title": "Preferential Multi-Objective Bayesian Optimization for Drug Discovery",
-    "authors": [
-      "Tai Dang",
-      "Long-Hung Pham",
-      "Sang T. Truong",
-      "Ari Glenn",
-      "Wendy Nguyen",
-      "Edward A. Pham",
-      "Jeffrey S. Glenn",
-      "Sanmi Koyejo",
-      "Thang Luong"
-    ],
-    "summary": "Despite decades of advancements in automated ligand screening, large-scale drug discovery remains resource-intensive and requires post-processing hit selection, a step where chemists manually select a few promising molecules based on their chemical intuition. This creates a major bottleneck in the v...",
-    "published": "Mar 21",
-    "pdf_url": "https://arxiv.org/pdf/2503.16841v1",
-    "arxiv_url": "http://arxiv.org/abs/2503.16841v1",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "The Model Hears You: Audio Language Model Deployments Should Consider the Principle of Least Privilege",
-    "authors": [
-      "Luxi He",
-      "Xiangyu Qi",
-      "Michel Liao",
-      "Inyoung Cheong",
-      "Prateek Mittal",
-      "Danqi Chen",
-      "Peter Henderson"
-    ],
-    "summary": "The latest Audio Language Models (Audio LMs) process speech directly instead of relying on a separate transcription step. This shift preserves detailed information, such as intonation or the presence of multiple speakers, that would otherwise be lost in transcription. However, it also introduces new...",
-    "published": "Mar 21",
-    "pdf_url": "https://arxiv.org/pdf/2503.16833v2",
-    "arxiv_url": "http://arxiv.org/abs/2503.16833v2",
-    "queried_author": "Danqi Chen",
-    "matching_authors": [
-      "Danqi Chen"
     ]
   }
 ]
