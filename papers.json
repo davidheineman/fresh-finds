@@ -1,5 +1,97 @@
 [
   {
+    "title": "Comparing AI Agents to Cybersecurity Professionals in Real-World Penetration Testing",
+    "authors": [
+      "Justin W. Lin",
+      "Eliot Krzysztof Jones",
+      "Donovan Julian Jasper",
+      "Ethan Jun-shen Ho",
+      "Anna Wu",
+      "Arnold Tianyi Yang",
+      "Neil Perry",
+      "Andy Zou",
+      "Matt Fredrikson",
+      "J. Zico Kolter",
+      "Percy Liang",
+      "Dan Boneh",
+      "Daniel E. Ho"
+    ],
+    "summary": "We present the first comprehensive evaluation of AI agents against human cybersecurity professionals in a live enterprise environment. We evaluate ten cybersecurity professionals alongside six existing AI agents and ARTEMIS, our new agent scaffold, on a large university network consisting of ~8,000 ...",
+    "published": "Dec 10",
+    "pdf_url": "https://arxiv.org/pdf/2512.09882v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.09882v1",
+    "queried_author": "J Zico Kolter",
+    "matching_authors": [
+      "J Zico Kolter",
+      "Percy Liang"
+    ]
+  },
+  {
+    "title": "Language models as tools for investigating the distinction between possible and impossible natural languages",
+    "authors": [
+      "Julie Kallini",
+      "Christopher Potts"
+    ],
+    "summary": "We argue that language models (LMs) have strong potential as investigative tools for probing the distinction between possible and impossible natural languages and thus uncovering the inductive biases that support human language learning. We outline a phased research program in which LM architectures...",
+    "published": "Dec 10",
+    "pdf_url": "https://arxiv.org/pdf/2512.09394v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.09394v1",
+    "queried_author": "Christopher Potts",
+    "matching_authors": [
+      "Christopher Potts"
+    ]
+  },
+  {
+    "title": "CONCUR: A Framework for Continual Constrained and Unconstrained Routing",
+    "authors": [
+      "Peter Baile Chen",
+      "Weiyue Li",
+      "Dan Roth",
+      "Michael Cafarella",
+      "Samuel Madden",
+      "Jacob Andreas"
+    ],
+    "summary": "AI tasks differ in complexity and are best addressed with different computation strategies (e.g., combinations of models and decoding methods). Hence, an effective routing system that maps tasks to the appropriate strategies is crucial. Most prior methods build the routing framework by training a si...",
+    "published": "Dec 10",
+    "pdf_url": "https://arxiv.org/pdf/2512.09386v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.09386v1",
+    "queried_author": "Jacob Andreas",
+    "matching_authors": [
+      "Jacob Andreas"
+    ]
+  },
+  {
+    "title": "On the Interplay of Pre-Training, Mid-Training, and RL on Reasoning Language Models",
+    "authors": [
+      "Charlie Zhang",
+      "Graham Neubig",
+      "Xiang Yue"
+    ],
+    "summary": "Recent reinforcement learning (RL) techniques have yielded impressive reasoning improvements in language models, yet it remains unclear whether post-training truly extends a model's reasoning ability beyond what it acquires during pre-training. A central challenge is the lack of control in modern tr...",
+    "published": "Dec 08",
+    "pdf_url": "https://arxiv.org/pdf/2512.07783v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.07783v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
+    "title": "ARC-AGI Without Pretraining",
+    "authors": [
+      "Isaac Liao",
+      "Albert Gu"
+    ],
+    "summary": "Conventional wisdom in the age of LLMs dictates that solving IQ-test-like visual puzzles from the ARC-AGI-1 benchmark requires capabilities derived from massive pretraining. To counter this, we introduce CompressARC, a 76K parameter model without any pretraining that solves 20% of evaluation puzzles...",
+    "published": "Dec 05",
+    "pdf_url": "https://arxiv.org/pdf/2512.06104v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.06104v1",
+    "queried_author": "Albert Gu",
+    "matching_authors": [
+      "Albert Gu"
+    ]
+  },
+  {
     "title": "TV2TV: A Unified Framework for Interleaved Language and Video Generation",
     "authors": [
       "Xiaochuang Han",
@@ -23,8 +115,8 @@
     ],
     "summary": "Video generation models are rapidly advancing, but can still struggle with complex video outputs that require significant semantic branching or repeated high-level reasoning about what should happen next. In this paper, we introduce a new class of omni video-text models that integrate ideas from rec...",
     "published": "Dec 04",
-    "pdf_url": "https://arxiv.org/pdf/2512.05103v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.05103v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.05103v2",
+    "arxiv_url": "http://arxiv.org/abs/2512.05103v2",
     "queried_author": "Luke Zettlemoyer",
     "matching_authors": [
       "Luke Zettlemoyer"
@@ -112,6 +204,27 @@
     "queried_author": "Jacob Eisenstein",
     "matching_authors": [
       "Jacob Eisenstein"
+    ]
+  },
+  {
+    "title": "Peek-a-Boo Reasoning: Contrastive Region Masking in MLLMs",
+    "authors": [
+      "Isha Chaturvedi",
+      "Anjana Nair",
+      "Yushen Li",
+      "Adhitya Rajendra Kumar",
+      "Kevin Zhu",
+      "Sunishchal Dev",
+      "Ashwinee Panda",
+      "Vasu Sharma"
+    ],
+    "summary": "We introduce Contrastive Region Masking (CRM), a training free diagnostic that reveals how multimodal large language models (MLLMs) depend on specific visual regions at each step of chain-of-thought (CoT) reasoning. Unlike prior approaches limited to final answers or attention maps, CRM provides cau...",
+    "published": "Dec 03",
+    "pdf_url": "https://arxiv.org/pdf/2512.08976v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.08976v1",
+    "queried_author": "Ashwinee Panda",
+    "matching_authors": [
+      "Ashwinee Panda"
     ]
   },
   {
@@ -244,7 +357,6 @@
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig",
-      "Sean J Welleck",
       "Sean Welleck",
       "Seungone Kim"
     ]
@@ -352,8 +464,8 @@
     ],
     "summary": "Multi-agent systems (MAS) extend large language models (LLMs) from independent single-model reasoning to coordinative system-level intelligence. While existing LLM agents depend on text-based mediation for reasoning and communication, we take a step forward by enabling models to collaborate directly...",
     "published": "Nov 25",
-    "pdf_url": "https://arxiv.org/pdf/2511.20639v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.20639v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.20639v2",
+    "arxiv_url": "http://arxiv.org/abs/2511.20639v2",
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
@@ -1259,28 +1371,6 @@
     ]
   },
   {
-    "title": "Small Talk, Big Impact? LLM-based Conversational Agents to Mitigate Passive Fatigue in Conditional Automated Driving",
-    "authors": [
-      "Lewis Cockram",
-      "Yueteng Yu",
-      "Jorge Pardo",
-      "Xiaomeng Li",
-      "Andry Rakotonirainy",
-      "Jonny Kuo",
-      "Sebastien Demmel",
-      "Mike Lenn\u00e9",
-      "Ronald Schroeter"
-    ],
-    "summary": "Passive fatigue during conditional automated driving can compromise driver readiness and safety. This paper presents findings from a test-track study with 40 participants in a real-world rural automated driving scenario. In this scenario, a Large Language Model (LLM) based conversational agent (CA) ...",
-    "published": "Oct 29",
-    "pdf_url": "https://arxiv.org/pdf/2510.25421v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.25421v1",
-    "queried_author": "Mike Lewis",
-    "matching_authors": [
-      "Mike Lewis"
-    ]
-  },
-  {
     "title": "Agent Data Protocol: Unifying Datasets for Diverse, Effective Fine-tuning of LLM Agents",
     "authors": [
       "Yueqi Song",
@@ -2036,30 +2126,6 @@
     ]
   },
   {
-    "title": "RNAGenScape: Property-guided Optimization and Interpolation of mRNA Sequences with Manifold Langevin Dynamics",
-    "authors": [
-      "Danqi Liao",
-      "Chen Liu",
-      "Xingzhi Sun",
-      "Di\u00e9 Tang",
-      "Haochen Wang",
-      "Scott Youlten",
-      "Srikar Krishna Gopinath",
-      "Haejeong Lee",
-      "Ethan C. Strayer",
-      "Antonio J. Giraldez",
-      "Smita Krishnaswamy"
-    ],
-    "summary": "mRNA design and optimization are important in synthetic biology and therapeutic development, but remain understudied in machine learning. Systematic optimization of mRNAs is hindered by the scarce and imbalanced data as well as complex sequence-function relationships. We present RNAGenScape, a prope...",
-    "published": "Oct 14",
-    "pdf_url": "https://arxiv.org/pdf/2510.24736v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.24736v1",
-    "queried_author": "Danqi Chen",
-    "matching_authors": [
-      "Danqi Chen"
-    ]
-  },
-  {
     "title": "Narrow Finetuning Leaves Clearly Readable Traces in Activation Differences",
     "authors": [
       "Julian Minder",
@@ -2587,8 +2653,8 @@
     ],
     "summary": "We present OneFlow, the first non-autoregressive multimodal model that enables variable-length and concurrent mixed-modal generation. Unlike autoregressive models that enforce rigid causal ordering between text and image generation, OneFlow combines an insertion-based Edit Flow for discrete text tok...",
     "published": "Oct 03",
-    "pdf_url": "https://arxiv.org/pdf/2510.03506v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.03506v2",
+    "pdf_url": "https://arxiv.org/pdf/2510.03506v3",
+    "arxiv_url": "http://arxiv.org/abs/2510.03506v3",
     "queried_author": "Luke Zettlemoyer",
     "matching_authors": [
       "Luke Zettlemoyer"
@@ -2928,24 +2994,6 @@
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Assessing the risk of future Dunkelflaute events for Germany using generative deep learning",
-    "authors": [
-      "Felix Strnad",
-      "Jonathan Schmidt",
-      "Fabian Mockert",
-      "Philipp Hennig",
-      "Nicole Ludwig"
-    ],
-    "summary": "The European electricity power grid is transitioning towards renewable energy sources, characterized by an increasing share of off- and onshore wind and solar power. However, the weather dependency of these energy sources poses a challenge to grid stability, with so-called Dunkelflaute events -- per...",
-    "published": "Sep 29",
-    "pdf_url": "https://arxiv.org/pdf/2509.24788v1",
-    "arxiv_url": "http://arxiv.org/abs/2509.24788v1",
-    "queried_author": "Ludwig Schmidt",
-    "matching_authors": [
-      "Ludwig Schmidt"
     ]
   },
   {
@@ -4362,9 +4410,8 @@
     "published": "Aug 18",
     "pdf_url": "https://arxiv.org/pdf/2508.13141v2",
     "arxiv_url": "http://arxiv.org/abs/2508.13141v2",
-    "queried_author": "Sean J Welleck",
+    "queried_author": "Sean Welleck",
     "matching_authors": [
-      "Sean J Welleck",
       "Sean Welleck",
       "Seungone Kim"
     ]
@@ -5214,435 +5261,6 @@
     ]
   },
   {
-    "title": "Apple Intelligence Foundation Language Models: Tech Report 2025",
-    "authors": [
-      "Ethan Li",
-      "Anders Boesen Lindbo Larsen",
-      "Chen Zhang",
-      "Xiyou Zhou",
-      "Jun Qin",
-      "Dian Ang Yap",
-      "Narendran Raghavan",
-      "Xuankai Chang",
-      "Margit Bowler",
-      "Eray Yildiz",
-      "John Peebles",
-      "Hannah Gillis Coleman",
-      "Matteo Ronchi",
-      "Peter Gray",
-      "Keen You",
-      "Anthony Spalvieri-Kruse",
-      "Ruoming Pang",
-      "Reed Li",
-      "Yuli Yang",
-      "Emad Soroush",
-      "Zhiyun Lu",
-      "Crystal Xiao",
-      "Rong Situ",
-      "Jordan Huffaker",
-      "David Griffiths",
-      "Zaid Ahmed",
-      "Peng Zhang",
-      "Daniel Parilla",
-      "Asaf Liberman",
-      "Jennifer Mallalieu",
-      "Parsa Mazaheri",
-      "Qibin Chen",
-      "Manjot Bilkhu",
-      "Aonan Zhang",
-      "Eric Wang",
-      "Dave Nelson",
-      "Michael FitzMaurice",
-      "Thomas Voice",
-      "Jeremy Liu",
-      "Josh Shaffer",
-      "Shiwen Zhao",
-      "Prasanth Yadla",
-      "Farzin Rasteh",
-      "Pengsheng Guo",
-      "Arsalan Farooq",
-      "Jeremy Snow",
-      "Stephen Murphy",
-      "Tao Lei",
-      "Minsik Cho",
-      "George Horrell",
-      "Sam Dodge",
-      "Lindsay Hislop",
-      "Sumeet Singh",
-      "Alex Dombrowski",
-      "Aiswarya Raghavan",
-      "Sasha Sirovica",
-      "Mandana Saebi",
-      "Faye Lao",
-      "Max Lam",
-      "TJ Lu",
-      "Zhaoyang Xu",
-      "Karanjeet Singh",
-      "Marc Kirchner",
-      "David Mizrahi",
-      "Rajat Arora",
-      "Haotian Zhang",
-      "Henry Mason",
-      "Lawrence Zhou",
-      "Yi Hua",
-      "Ankur Jain",
-      "Felix Bai",
-      "Joseph Astrauskas",
-      "Floris Weers",
-      "Josh Gardner",
-      "Mira Chiang",
-      "Yi Zhang",
-      "Pulkit Agrawal",
-      "Tony Sun",
-      "Quentin Keunebroek",
-      "Matthew Hopkins",
-      "Bugu Wu",
-      "Tao Jia",
-      "Chen Chen",
-      "Xingyu Zhou",
-      "Nanzhu Wang",
-      "Peng Liu",
-      "Ruixuan Hou",
-      "Rene Rauch",
-      "Yuan Gao",
-      "Afshin Dehghan",
-      "Jonathan Janke",
-      "Zirui Wang",
-      "Cha Chen",
-      "Xiaoyi Ren",
-      "Feng Nan",
-      "Josh Elman",
-      "Dong Yin",
-      "Yusuf Goren",
-      "Jeff Lai",
-      "Yiran Fei",
-      "Syd Evans",
-      "Muyang Yu",
-      "Guoli Yin",
-      "Yi Qin",
-      "Erin Feldman",
-      "Isha Garg",
-      "Aparna Rajamani",
-      "Karla Vega",
-      "Walker Cheng",
-      "TJ Collins",
-      "Hans Han",
-      "Raul Rea Menacho",
-      "Simon Yeung",
-      "Sophy Lee",
-      "Phani Mutyala",
-      "Ying-Chang Cheng",
-      "Zhe Gan",
-      "Sprite Chu",
-      "Justin Lazarow",
-      "Alessandro Pappalardo",
-      "Federico Scozzafava",
-      "Jing Lu",
-      "Erik Daxberger",
-      "Laurent Duchesne",
-      "Jen Liu",
-      "David G\u00fcera",
-      "Stefano Ligas",
-      "Mary Beth Kery",
-      "Brent Ramerth",
-      "Ciro Sannino",
-      "Marcin Eichner",
-      "Haoshuo Huang",
-      "Rui Qian",
-      "Moritz Schwarzer-Becker",
-      "David Riazati",
-      "Mingfei Gao",
-      "Bailin Wang",
-      "Jack Cackler",
-      "Yang Lu",
-      "Ransen Niu",
-      "John Dennison",
-      "Guillaume Klein",
-      "Jeffrey Bigham",
-      "Deepak Gopinath",
-      "Navid Shiee",
-      "Darren Botten",
-      "Guillaume Tartavel",
-      "Alex Guillen Garcia",
-      "Sam Xu",
-      "Victoria M\u00f6nchJuan Haladjian",
-      "Zi-Yi Dou",
-      "Matthias Paulik",
-      "Adolfo Lopez Mendez",
-      "Zhen Li",
-      "Hong-You Chen",
-      "Chao Jia",
-      "Dhaval Doshi",
-      "Zhengdong Zhang",
-      "Raunak Manjani",
-      "Aaron Franklin",
-      "Zhile Ren",
-      "David Chen",
-      "Artsiom Peshko",
-      "Nandhitha Raghuram",
-      "Hans Hao",
-      "Jiulong Shan",
-      "Kavya Nerella",
-      "Ramsey Tantawi",
-      "Vivek Kumar",
-      "Saiwen Wang",
-      "Brycen Wershing",
-      "Bhuwan Dhingra",
-      "Dhruti Shah",
-      "Ob Adaranijo",
-      "Xin Zheng",
-      "Tait Madsen",
-      "Hadas Kotek",
-      "Chang Liu",
-      "Yin Xia",
-      "Hanli Li",
-      "Suma Jayaram",
-      "Yanchao Sun",
-      "Ahmed Fakhry",
-      "Vasileios Saveris",
-      "Dustin Withers",
-      "Yanghao Li",
-      "Alp Aygar",
-      "Andres Romero Mier Y Teran",
-      "Kaiwei Huang",
-      "Mark Lee",
-      "Xiujun Li",
-      "Yuhong Li",
-      "Tyler Johnson",
-      "Jay Tang",
-      "Joseph Yitan Cheng",
-      "Futang Peng",
-      "Andrew Walkingshaw",
-      "Lucas Guibert",
-      "Abhishek Sharma",
-      "Cheng Shen",
-      "Piotr Maj",
-      "Yasutaka Tanaka",
-      "You-Cyuan Jhang",
-      "Vivian Ma",
-      "Tommi Vehvilainen",
-      "Kelvin Zou",
-      "Jeff Nichols",
-      "Matthew Lei",
-      "David Qiu",
-      "Yihao Qian",
-      "Gokul Santhanam",
-      "Wentao Wu",
-      "Yena Han",
-      "Dominik Moritz",
-      "Haijing Fu",
-      "Mingze Xu",
-      "Vivek Rathod",
-      "Jian Liu",
-      "Louis D'hauwe",
-      "Qin Ba",
-      "Haitian Sun",
-      "Haoran Yan",
-      "Philipp Dufter",
-      "Anh Nguyen",
-      "Yihao Feng",
-      "Emma Wang",
-      "Keyu He",
-      "Rahul Nair",
-      "Sanskruti Shah",
-      "Jiarui Lu",
-      "Patrick Sonnenberg",
-      "Jeremy Warner",
-      "Yuanzhi Li",
-      "Bowen Pan",
-      "Ziyi Zhong",
-      "Joe Zhou",
-      "Sam Davarnia",
-      "Olli Saarikivi",
-      "Irina Belousova",
-      "Rachel Burger",
-      "Shang-Chen Wu",
-      "Di Feng",
-      "Bas Straathof",
-      "James Chou",
-      "Yuanyang Zhang",
-      "Marco Zuliani",
-      "Eduardo Jimenez",
-      "Abhishek Sundararajan",
-      "Xianzhi Du",
-      "Chang Lan",
-      "Nilesh Shahdadpuri",
-      "Peter Grasch",
-      "Sergiu Sima",
-      "Josh Newnham",
-      "Varsha Paidi",
-      "Jianyu Wang",
-      "Kaelen Haag",
-      "Alex Braunstein",
-      "Daniele Molinari",
-      "Richard Wei",
-      "Brenda Yang",
-      "Nicholas Lusskin",
-      "Joanna Arreaza-Taylor",
-      "Meng Cao",
-      "Nicholas Seidl",
-      "Simon Wang",
-      "Jiaming Hu",
-      "Yiping Ma",
-      "Mengyu Li",
-      "Kieran Liu",
-      "Hang Su",
-      "Sachin Ravi",
-      "Chong Wang",
-      "Xin Wang",
-      "Kevin Smith",
-      "Haoxuan You",
-      "Binazir Karimzadeh",
-      "Rui Li",
-      "Jinhao Lei",
-      "Wei Fang",
-      "Alec Doane",
-      "Sam Wiseman",
-      "Ismael Fernandez",
-      "Jane Li",
-      "Andrew Hansen",
-      "Javier Movellan",
-      "Christopher Neubauer",
-      "Hanzhi Zhou",
-      "Chris Chaney",
-      "Nazir Kamaldin",
-      "Valentin Wolf",
-      "Fernando Berm\u00fadez-Medina",
-      "Joris Pelemans",
-      "Peter Fu",
-      "Howard Xing",
-      "Xiang Kong",
-      "Wayne Shan",
-      "Gabriel Jacoby-Cooper",
-      "Dongcai Shen",
-      "Tom Gunter",
-      "Guillaume Seguin",
-      "Fangping Shi",
-      "Shiyu Li",
-      "Yang Xu",
-      "Areeba Kamal",
-      "Dan Masi",
-      "Saptarshi Guha",
-      "Qi Zhu",
-      "Jenna Thibodeau",
-      "Changyuan Zhang",
-      "Rebecca Callahan",
-      "Charles Maalouf",
-      "Wilson Tsao",
-      "Boyue Li",
-      "Qingqing Cao",
-      "Naomy Sabo",
-      "Cheng Leong",
-      "Yi Wang",
-      "Anupama Mann Anupama",
-      "Colorado Reed",
-      "Kenneth Jung",
-      "Zhifeng Chen",
-      "Mohana Prasad Sathya Moorthy",
-      "Yifei He",
-      "Erik Hornberger",
-      "Devi Krishna",
-      "Senyu Tong",
-      "Michael",
-      "Lee",
-      "David Haldimann",
-      "Yang Zhao",
-      "Bowen Zhang",
-      "Chang Gao",
-      "Chris Bartels",
-      "Sushma Rao",
-      "Nathalie Tran",
-      "Simon Lehnerer",
-      "Co Giang",
-      "Patrick Dong",
-      "Junting Pan",
-      "Biyao Wang",
-      "Dongxu Li",
-      "Mehrdad Farajtabar",
-      "Dongseong Hwang",
-      "Grace Duanmu",
-      "Eshan Verma",
-      "Sujeeth Reddy",
-      "Qi Shan",
-      "Hongbin Gao",
-      "Nan Du",
-      "Pragnya Sridhar",
-      "Forrest Huang",
-      "Yingbo Wang",
-      "Nikhil Bhendawade",
-      "Diane Zhu",
-      "Sai Aitharaju",
-      "Fred Hohman",
-      "Lauren Gardiner",
-      "Chung-Cheng Chiu",
-      "Yinfei Yang",
-      "Alper Kokmen",
-      "Frank Chu",
-      "Ke Ye",
-      "Kaan Elgin",
-      "Oron Levy",
-      "John Park",
-      "Donald Zhang",
-      "Eldon Schoop",
-      "Nina Wenzel",
-      "Michael Booker",
-      "Hyunjik Kim",
-      "Chinguun Erdenebileg",
-      "Nan Dun",
-      "Eric Liang Yang",
-      "Priyal Chhatrapati",
-      "Vishaal Mahtani",
-      "Haiming Gang",
-      "Kohen Chia",
-      "Deepa Seshadri",
-      "Donghan Yu",
-      "Yan Meng",
-      "Kelsey Peterson",
-      "Zhen Yang",
-      "Yongqiang Wang",
-      "Carina Peng",
-      "Doug Kang",
-      "Anuva Agarwal",
-      "Albert Antony",
-      "Juan Lao Tebar",
-      "Albin Madappally Jose",
-      "Regan Poston",
-      "Andy De Wang",
-      "Gerard Casamayor",
-      "Elmira Amirloo",
-      "Violet Yao",
-      "Wojciech Kryscinski",
-      "Kun Duan",
-      "Lezhi L"
-    ],
-    "summary": "We introduce two multilingual, multimodal foundation language models that power Apple Intelligence features across Apple devices and services: i a 3B-parameter on-device model optimized for Apple silicon through architectural innovations such as KV-cache sharing and 2-bit quantization-aware training...",
-    "published": "Jul 17",
-    "pdf_url": "https://arxiv.org/pdf/2507.13575v3",
-    "arxiv_url": "http://arxiv.org/abs/2507.13575v3",
-    "queried_author": "Nelson F. Liu",
-    "matching_authors": [
-      "Nelson F. Liu"
-    ]
-  },
-  {
-    "title": "Prediction of Highway Traffic Flow Based on Artificial Intelligence Algorithms Using California Traffic Data",
-    "authors": [
-      "Junseong Lee",
-      "Jaegwan Cho",
-      "Yoonju Cho",
-      "Seoyoon Choi",
-      "Yejin Shin"
-    ],
-    "summary": "The study \"Prediction of Highway Traffic Flow Based on Artificial Intelligence Algorithms Using California Traffic Data\" presents a machine learning-based traffic flow prediction model to address global traffic congestion issues. The research utilized 30-second interval traffic data from California ...",
-    "published": "Jul 17",
-    "pdf_url": "https://arxiv.org/pdf/2507.13112v1",
-    "arxiv_url": "http://arxiv.org/abs/2507.13112v1",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
     "title": "Assessing Adaptive World Models in Machines with Novel Games",
     "authors": [
       "Lance Ying",
@@ -5814,8 +5432,8 @@
     ],
     "summary": "AI systems that \"think\" in human language offer a unique opportunity for AI safety: we can monitor their chains of thought (CoT) for the intent to misbehave. Like all other known AI oversight methods, CoT monitoring is imperfect and allows some misbehavior to go unnoticed. Nevertheless, it shows pro...",
     "published": "Jul 15",
-    "pdf_url": "https://arxiv.org/pdf/2507.11473v1",
-    "arxiv_url": "http://arxiv.org/abs/2507.11473v1",
+    "pdf_url": "https://arxiv.org/pdf/2507.11473v2",
+    "arxiv_url": "http://arxiv.org/abs/2507.11473v2",
     "queried_author": "Ethan Perez",
     "matching_authors": [
       "Ethan Perez",
@@ -5839,26 +5457,6 @@
     "queried_author": "Orion Weller",
     "matching_authors": [
       "Orion Weller"
-    ]
-  },
-  {
-    "title": "Towards Collaborative Fairness in Federated Learning Under Imbalanced Covariate Shift",
-    "authors": [
-      "Tianrun Yu",
-      "Jiaqi Wang",
-      "Haoyu Wang",
-      "Mingquan Lin",
-      "Han Liu",
-      "Nelson S. Yee",
-      "Fenglong Ma"
-    ],
-    "summary": "Collaborative fairness is a crucial challenge in federated learning. However, existing approaches often overlook a practical yet complex form of heterogeneity: imbalanced covariate shift. We provide a theoretical analysis of this setting, which motivates the design of FedAKD (Federated Asynchronous ...",
-    "published": "Jul 11",
-    "pdf_url": "https://arxiv.org/pdf/2507.08617v1",
-    "arxiv_url": "http://arxiv.org/abs/2507.08617v1",
-    "queried_author": "Nelson F. Liu",
-    "matching_authors": [
-      "Nelson F. Liu"
     ]
   },
   {
@@ -9497,22 +9095,9 @@
     "published": "Jul 07",
     "pdf_url": "https://arxiv.org/pdf/2507.06261v5",
     "arxiv_url": "http://arxiv.org/abs/2507.06261v5",
-    "queried_author": "Albert Gu",
+    "queried_author": "Noah Goodman",
     "matching_authors": [
-      "Albert Gu",
-      "Alexander M Rush",
-      "Alexander M. Rush",
-      "Christopher D Manning",
-      "Jacob Andreas",
-      "John Xavier Morris",
-      "Kyle Lo",
-      "Mike Lewis",
-      "Nelson F. Liu",
-      "Noah A. Smith",
-      "Noah Goodman",
-      "Pang Wei Koh",
-      "Tanya Goyal",
-      "Xiang Lisa Li"
+      "Noah Goodman"
     ]
   },
   {
@@ -9776,27 +9361,6 @@
     "queried_author": "Cl\u00e9mentine Fourrier",
     "matching_authors": [
       "Cl\u00e9mentine Fourrier"
-    ]
-  },
-  {
-    "title": "Deep learning-based segmentation of T1 and T2 cardiac MRI maps for automated disease detection",
-    "authors": [
-      "Andreea Bianca Popescu",
-      "Andreas Seitz",
-      "Heiko Mahrholdt",
-      "Jens Wetzl",
-      "Athira Jacob",
-      "Lucian Mihai Itu",
-      "Constantin Suciu",
-      "Teodora Chitiboi"
-    ],
-    "summary": "Objectives Parametric tissue mapping enables quantitative cardiac tissue characterization but is limited by inter-observer variability during manual delineation. Traditional approaches relying on average relaxation values and single cutoffs may oversimplify myocardial complexity. This study evaluate...",
-    "published": "Jul 01",
-    "pdf_url": "https://arxiv.org/pdf/2507.00903v1",
-    "arxiv_url": "http://arxiv.org/abs/2507.00903v1",
-    "queried_author": "Jacob Andreas",
-    "matching_authors": [
-      "Jacob Andreas"
     ]
   },
   {
@@ -10221,8 +9785,8 @@
     ],
     "summary": "Verifiers can improve language model capabilities by scoring and ranking responses from generated candidates. Currently, high-quality verifiers are either unscalable (e.g., humans) or limited in utility (e.g., tools like Lean). While LM judges and reward models have become broadly useful as general-...",
     "published": "Jun 22",
-    "pdf_url": "https://arxiv.org/pdf/2506.18203v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.18203v1",
+    "pdf_url": "https://arxiv.org/pdf/2506.18203v2",
+    "arxiv_url": "http://arxiv.org/abs/2506.18203v2",
     "queried_author": "Christopher R\u00e9",
     "matching_authors": [
       "Christopher R\u00e9"
@@ -11028,9 +10592,8 @@
     "published": "Jun 09",
     "pdf_url": "https://arxiv.org/pdf/2506.07477v1",
     "arxiv_url": "http://arxiv.org/abs/2506.07477v1",
-    "queried_author": "Sean J Welleck",
+    "queried_author": "Sean Welleck",
     "matching_authors": [
-      "Sean J Welleck",
       "Sean Welleck"
     ]
   },
@@ -11618,26 +11181,6 @@
     ]
   },
   {
-    "title": "Evaluating Large Language Models for Zero-Shot Disease Labeling in CT Radiology Reports Across Organ Systems",
-    "authors": [
-      "Michael E. Garcia-Alcoser",
-      "Mobina GhojoghNejad",
-      "Fakrul Islam Tushar",
-      "David Kim",
-      "Kyle J. Lafata",
-      "Geoffrey D. Rubin",
-      "Joseph Y. Lo"
-    ],
-    "summary": "Purpose: This study aims to evaluate the effectiveness of large language models (LLMs) in automating disease annotation of CT radiology reports. We compare a rule-based algorithm (RBA), RadBERT, and three lightweight open-weight LLMs for multi-disease labeling of chest, abdomen, and pelvis (CAP) CT ...",
-    "published": "Jun 03",
-    "pdf_url": "https://arxiv.org/pdf/2506.03259v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.03259v1",
-    "queried_author": "Kyle Lo",
-    "matching_authors": [
-      "Kyle Lo"
-    ]
-  },
-  {
     "title": "Coding Agents with Multimodal Browsing are Generalist Problem Solvers",
     "authors": [
       "Aditya Bharat Soni",
@@ -11978,7 +11521,7 @@
     ]
   },
   {
-    "title": "OMNIGUARD: An Efficient Approach for AI Safety Moderation Across Modalities",
+    "title": "OMNIGUARD: An Efficient Approach for AI Safety Moderation Across Languages and Modalities",
     "authors": [
       "Sahil Verma",
       "Keegan Hines",
@@ -11990,8 +11533,8 @@
     ],
     "summary": "The emerging capabilities of large language models (LLMs) have sparked concerns about their immediate potential for harmful misuse. The core approach to mitigate these concerns is the detection of harmful queries to the model. Current detection approaches are fallible, and are particularly susceptib...",
     "published": "May 29",
-    "pdf_url": "https://arxiv.org/pdf/2505.23856v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.23856v1",
+    "pdf_url": "https://arxiv.org/pdf/2505.23856v2",
+    "arxiv_url": "http://arxiv.org/abs/2505.23856v2",
     "queried_author": "Luke Zettlemoyer",
     "matching_authors": [
       "Luke Zettlemoyer"
@@ -12324,24 +11867,6 @@
     "queried_author": "Colin Raffel",
     "matching_authors": [
       "Colin Raffel"
-    ]
-  },
-  {
-    "title": "Is It Bad to Work All the Time? Cross-Cultural Evaluation of Social Norm Biases in GPT-4",
-    "authors": [
-      "Zhuozhuo Joy Liu",
-      "Farhan Samir",
-      "Mehar Bhatia",
-      "Laura K. Nelson",
-      "Vered Shwartz"
-    ],
-    "summary": "LLMs have been demonstrated to align with the values of Western or North American cultures. Prior work predominantly showed this effect through leveraging surveys that directly ask (originally people and now also LLMs) about their values. However, it is hard to believe that LLMs would consistently a...",
-    "published": "May 23",
-    "pdf_url": "https://arxiv.org/pdf/2505.18322v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.18322v1",
-    "queried_author": "Nelson F. Liu",
-    "matching_authors": [
-      "Nelson F. Liu"
     ]
   },
   {
@@ -12928,30 +12453,6 @@
     ]
   },
   {
-    "title": "CoT-Kinetics: A Theoretical Modeling Assessing LRM Reasoning Process",
-    "authors": [
-      "Jinhe Bi",
-      "Danqi Yan",
-      "Yifan Wang",
-      "Wenke Huang",
-      "Haokun Chen",
-      "Guancheng Wan",
-      "Mang Ye",
-      "Xun Xiao",
-      "Hinrich Schuetze",
-      "Volker Tresp",
-      "Yunpu Ma"
-    ],
-    "summary": "Recent Large Reasoning Models significantly improve the reasoning ability of Large Language Models by learning to reason, exhibiting the promising performance in solving complex tasks. LRMs solve tasks that require complex reasoning by explicitly generating reasoning trajectories together with answe...",
-    "published": "May 19",
-    "pdf_url": "https://arxiv.org/pdf/2505.13408v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.13408v1",
-    "queried_author": "Danqi Chen",
-    "matching_authors": [
-      "Danqi Chen"
-    ]
-  },
-  {
     "title": "Positional Fragility in LLMs: How Offset Effects Reshape Our Understanding of Memorization Risks",
     "authors": [
       "Yixuan Xu",
@@ -13092,7 +12593,6 @@
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig",
-      "Sean J Welleck",
       "Sean Welleck",
       "Seungone Kim"
     ]
@@ -13250,24 +12750,6 @@
     "queried_author": "Christopher D Manning",
     "matching_authors": [
       "Christopher D Manning"
-    ]
-  },
-  {
-    "title": "LLAMAPIE: Proactive In-Ear Conversation Assistants",
-    "authors": [
-      "Tuochao Chen",
-      "Nicholas Batchelder",
-      "Alisa Liu",
-      "Noah Smith",
-      "Shyamnath Gollakota"
-    ],
-    "summary": "We introduce LlamaPIE, the first real-time proactive assistant designed to enhance human conversations through discreet, concise guidance delivered via hearable devices. Unlike traditional language models that require explicit user invocation, this assistant operates in the background, anticipating ...",
-    "published": "May 07",
-    "pdf_url": "https://arxiv.org/pdf/2505.04066v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.04066v2",
-    "queried_author": "Noah A. Smith",
-    "matching_authors": [
-      "Noah A. Smith"
     ]
   },
   {
@@ -13594,55 +13076,6 @@
     ]
   },
   {
-    "title": "$\u03c0_{0.5}$: a Vision-Language-Action Model with Open-World Generalization",
-    "authors": [
-      "Physical Intelligence",
-      "Kevin Black",
-      "Noah Brown",
-      "James Darpinian",
-      "Karan Dhabalia",
-      "Danny Driess",
-      "Adnan Esmail",
-      "Michael Equi",
-      "Chelsea Finn",
-      "Niccolo Fusai",
-      "Manuel Y. Galliker",
-      "Dibya Ghosh",
-      "Lachy Groom",
-      "Karol Hausman",
-      "Brian Ichter",
-      "Szymon Jakubczak",
-      "Tim Jones",
-      "Liyiming Ke",
-      "Devin LeBlanc",
-      "Sergey Levine",
-      "Adrian Li-Bell",
-      "Mohith Mothukuri",
-      "Suraj Nair",
-      "Karl Pertsch",
-      "Allen Z. Ren",
-      "Lucy Xiaoyang Shi",
-      "Laura Smith",
-      "Jost Tobias Springenberg",
-      "Kyle Stachowicz",
-      "James Tanner",
-      "Quan Vuong",
-      "Homer Walke",
-      "Anna Walling",
-      "Haohuan Wang",
-      "Lili Yu",
-      "Ury Zhilinsky"
-    ],
-    "summary": "In order for robots to be useful, they must perform practically relevant tasks in the real world, outside of the lab. While vision-language-action (VLA) models have demonstrated impressive results for end-to-end robot control, it remains an open question how far such models can generalize in the wil...",
-    "published": "Apr 22",
-    "pdf_url": "https://arxiv.org/pdf/2504.16054v1",
-    "arxiv_url": "http://arxiv.org/abs/2504.16054v1",
-    "queried_author": "Noah A. Smith",
-    "matching_authors": [
-      "Noah A. Smith"
-    ]
-  },
-  {
     "title": "Understanding the Skill Gap in Recurrent Language Models: The Role of the Gather-and-Aggregate Mechanism",
     "authors": [
       "Aviv Bick",
@@ -13656,59 +13089,6 @@
     "queried_author": "Albert Gu",
     "matching_authors": [
       "Albert Gu"
-    ]
-  },
-  {
-    "title": "A Clinician-Friendly Platform for Ophthalmic Image Analysis Without Technical Barriers",
-    "authors": [
-      "Meng Wang",
-      "Tian Lin",
-      "Qingshan Hou",
-      "Aidi Lin",
-      "Jingcheng Wang",
-      "Qingsheng Peng",
-      "Truong X. Nguyen",
-      "Danqi Fang",
-      "Ke Zou",
-      "Ting Xu",
-      "Cancan Xue",
-      "Ten Cheer Quek",
-      "Qinkai Yu",
-      "Minxin Liu",
-      "Hui Zhou",
-      "Zixuan Xiao",
-      "Guiqin He",
-      "Huiyu Liang",
-      "Tingkun Shi",
-      "Man Chen",
-      "Linna Liu",
-      "Yuanyuan Peng",
-      "Lianyu Wang",
-      "Qiuming Hu",
-      "Junhong Chen",
-      "Zhenhua Zhang",
-      "Cheng Chen",
-      "Yitian Zhao",
-      "Dianbo Liu",
-      "Jianhua Wu",
-      "Xinjian Chen",
-      "Changqing Zhang",
-      "Triet Thanh Nguyen",
-      "Yanda Meng",
-      "Yalin Zheng",
-      "Yih Chung Tham",
-      "Carol Y. Cheung",
-      "Huazhu Fu",
-      "Haoyu Chen",
-      "Ching-Yu Cheng"
-    ],
-    "summary": "Artificial intelligence (AI) shows remarkable potential in medical imaging diagnostics, yet most current models require retraining when applied across different clinical settings, limiting their scalability. We introduce GlobeReady, a clinician-friendly AI platform that enables fundus disease diagno...",
-    "published": "Apr 22",
-    "pdf_url": "https://arxiv.org/pdf/2504.15928v2",
-    "arxiv_url": "http://arxiv.org/abs/2504.15928v2",
-    "queried_author": "Danqi Chen",
-    "matching_authors": [
-      "Danqi Chen"
     ]
   },
   {
@@ -14967,36 +14347,6 @@
     ]
   },
   {
-    "title": "ShieldGemma 2: Robust and Tractable Image Content Moderation",
-    "authors": [
-      "Wenjun Zeng",
-      "Dana Kurniawan",
-      "Ryan Mullins",
-      "Yuchi Liu",
-      "Tamoghna Saha",
-      "Dirichi Ike-Njoku",
-      "Jindong Gu",
-      "Yiwen Song",
-      "Cai Xu",
-      "Jingjing Zhou",
-      "Aparna Joshi",
-      "Shravan Dheep",
-      "Mani Malek",
-      "Hamid Palangi",
-      "Joon Baek",
-      "Rick Pereira",
-      "Karthik Narasimhan"
-    ],
-    "summary": "We introduce ShieldGemma 2, a 4B parameter image content moderation model built on Gemma 3. This model provides robust safety risk predictions across the following key harm categories: Sexually Explicit, Violence \\& Gore, and Dangerous Content for synthetic images (e.g. output of any image generatio...",
-    "published": "Apr 01",
-    "pdf_url": "https://arxiv.org/pdf/2504.01081v2",
-    "arxiv_url": "http://arxiv.org/abs/2504.01081v2",
-    "queried_author": "Karthik R Narasimhan",
-    "matching_authors": [
-      "Karthik R Narasimhan"
-    ]
-  },
-  {
     "title": "Are Domain Generalization Benchmarks with Accuracy on the Line Misspecified?",
     "authors": [
       "Olawale Salaudeen",
@@ -15148,7 +14498,6 @@
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig",
-      "Sean J Welleck",
       "Sean Welleck",
       "Seungone Kim"
     ]
@@ -15250,6 +14599,197 @@
     "matching_authors": [
       "Percy Liang",
       "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "In-House Evaluation Is Not Enough: Towards Robust Third-Party Flaw Disclosure for General-Purpose AI",
+    "authors": [
+      "Shayne Longpre",
+      "Kevin Klyman",
+      "Ruth E. Appel",
+      "Sayash Kapoor",
+      "Rishi Bommasani",
+      "Michelle Sahar",
+      "Sean McGregor",
+      "Avijit Ghosh",
+      "Borhane Blili-Hamelin",
+      "Nathan Butters",
+      "Alondra Nelson",
+      "Amit Elazari",
+      "Andrew Sellars",
+      "Casey John Ellis",
+      "Dane Sherrets",
+      "Dawn Song",
+      "Harley Geiger",
+      "Ilona Cohen",
+      "Lauren McIlvenny",
+      "Madhulika Srikumar",
+      "Mark M. Jaycox",
+      "Markus Anderljung",
+      "Nadine Farid Johnson",
+      "Nicholas Carlini",
+      "Nicolas Miailhe",
+      "Nik Marda",
+      "Peter Henderson",
+      "Rebecca S. Portnoff",
+      "Rebecca Weiss",
+      "Victoria Westerhoff",
+      "Yacine Jernite",
+      "Rumman Chowdhury",
+      "Percy Liang",
+      "Arvind Narayanan"
+    ],
+    "summary": "The widespread deployment of general-purpose AI (GPAI) systems introduces significant new risks. Yet the infrastructure, practices, and norms for reporting flaws in GPAI systems remain seriously underdeveloped, lagging far behind more established fields like software security. Based on a collaborati...",
+    "published": "Mar 21",
+    "pdf_url": "https://arxiv.org/pdf/2503.16861v2",
+    "arxiv_url": "http://arxiv.org/abs/2503.16861v2",
+    "queried_author": "Percy Liang",
+    "matching_authors": [
+      "Percy Liang"
+    ]
+  },
+  {
+    "title": "Preferential Multi-Objective Bayesian Optimization for Drug Discovery",
+    "authors": [
+      "Tai Dang",
+      "Long-Hung Pham",
+      "Sang T. Truong",
+      "Ari Glenn",
+      "Wendy Nguyen",
+      "Edward A. Pham",
+      "Jeffrey S. Glenn",
+      "Sanmi Koyejo",
+      "Thang Luong"
+    ],
+    "summary": "Despite decades of advancements in automated ligand screening, large-scale drug discovery remains resource-intensive and requires post-processing hit selection, a step where chemists manually select a few promising molecules based on their chemical intuition. This creates a major bottleneck in the v...",
+    "published": "Mar 21",
+    "pdf_url": "https://arxiv.org/pdf/2503.16841v1",
+    "arxiv_url": "http://arxiv.org/abs/2503.16841v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "The Model Hears You: Audio Language Model Deployments Should Consider the Principle of Least Privilege",
+    "authors": [
+      "Luxi He",
+      "Xiangyu Qi",
+      "Michel Liao",
+      "Inyoung Cheong",
+      "Prateek Mittal",
+      "Danqi Chen",
+      "Peter Henderson"
+    ],
+    "summary": "The latest Audio Language Models (Audio LMs) process speech directly instead of relying on a separate transcription step. This shift preserves detailed information, such as intonation or the presence of multiple speakers, that would otherwise be lost in transcription. However, it also introduces new...",
+    "published": "Mar 21",
+    "pdf_url": "https://arxiv.org/pdf/2503.16833v2",
+    "arxiv_url": "http://arxiv.org/abs/2503.16833v2",
+    "queried_author": "Danqi Chen",
+    "matching_authors": [
+      "Danqi Chen"
+    ]
+  },
+  {
+    "title": "Lyra: An Efficient and Expressive Subquadratic Architecture for Modeling Biological Sequences",
+    "authors": [
+      "Krithik Ramesh",
+      "Sameed M. Siddiqui",
+      "Albert Gu",
+      "Michael D. Mitzenmacher",
+      "Pardis C. Sabeti"
+    ],
+    "summary": "Deep learning architectures such as convolutional neural networks and Transformers have revolutionized biological sequence modeling, with recent advances driven by scaling up foundation and task-specific models. The computational resources and large datasets required, however, limit their applicabil...",
+    "published": "Mar 20",
+    "pdf_url": "https://arxiv.org/pdf/2503.16351v1",
+    "arxiv_url": "http://arxiv.org/abs/2503.16351v1",
+    "queried_author": "Albert Gu",
+    "matching_authors": [
+      "Albert Gu"
+    ]
+  },
+  {
+    "title": "AutoRedTeamer: Autonomous Red Teaming with Lifelong Attack Integration",
+    "authors": [
+      "Andy Zhou",
+      "Kevin Wu",
+      "Francesco Pinto",
+      "Zhaorun Chen",
+      "Yi Zeng",
+      "Yu Yang",
+      "Shuang Yang",
+      "Sanmi Koyejo",
+      "James Zou",
+      "Bo Li"
+    ],
+    "summary": "As large language models (LLMs) become increasingly capable, security and safety evaluation are crucial. While current red teaming approaches have made strides in assessing LLM vulnerabilities, they often rely heavily on human input and lack comprehensive coverage of emerging attack vectors. This pa...",
+    "published": "Mar 20",
+    "pdf_url": "https://arxiv.org/pdf/2503.15754v1",
+    "arxiv_url": "http://arxiv.org/abs/2503.15754v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "Value Profiles for Encoding Human Variation",
+    "authors": [
+      "Taylor Sorensen",
+      "Pushkar Mishra",
+      "Roma Patel",
+      "Michael Henry Tessler",
+      "Michiel Bakker",
+      "Georgina Evans",
+      "Iason Gabriel",
+      "Noah Goodman",
+      "Verena Rieser"
+    ],
+    "summary": "Modelling human variation in rating tasks is crucial for personalization, pluralistic model alignment, and computational social science. We propose representing individuals using natural language value profiles -- descriptions of underlying values compressed from in-context demonstrations -- along w...",
+    "published": "Mar 19",
+    "pdf_url": "https://arxiv.org/pdf/2503.15484v2",
+    "arxiv_url": "http://arxiv.org/abs/2503.15484v2",
+    "queried_author": "Noah Goodman",
+    "matching_authors": [
+      "Noah Goodman"
+    ]
+  },
+  {
+    "title": "Don't lie to your friends: Learning what you know from collaborative self-play",
+    "authors": [
+      "Jacob Eisenstein",
+      "Reza Aghajani",
+      "Adam Fisch",
+      "Dheeru Dua",
+      "Fantine Huot",
+      "Mirella Lapata",
+      "Vicky Zayats",
+      "Jonathan Berant"
+    ],
+    "summary": "To be helpful assistants, AI agents must be aware of their own capabilities and limitations. This includes knowing when to answer from parametric knowledge versus using tools, when to trust tool outputs, and when to abstain or hedge. Such capabilities are hard to teach through supervised fine-tuning...",
+    "published": "Mar 18",
+    "pdf_url": "https://arxiv.org/pdf/2503.14481v3",
+    "arxiv_url": "http://arxiv.org/abs/2503.14481v3",
+    "queried_author": "Jacob Eisenstein",
+    "matching_authors": [
+      "Jacob Eisenstein"
+    ]
+  },
+  {
+    "title": "Benchmarking Failures in Tool-Augmented Language Models",
+    "authors": [
+      "Eduardo Trevi\u00f1o",
+      "Hugo Contant",
+      "James Ngai",
+      "Graham Neubig",
+      "Zora Zhiruo Wang"
+    ],
+    "summary": "The integration of tools has extended the capabilities of language models (LMs) beyond vanilla text generation to versatile scenarios. However, tool-augmented language models (TaLMs) often assume 'perfect' information access and tool availability, which may not hold in the real world. To systematica...",
+    "published": "Mar 18",
+    "pdf_url": "https://arxiv.org/pdf/2503.14227v1",
+    "arxiv_url": "http://arxiv.org/abs/2503.14227v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
     ]
   }
 ]
