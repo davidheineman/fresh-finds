@@ -1,5 +1,44 @@
 [
   {
+    "title": "The 2025 Foundation Model Transparency Index",
+    "authors": [
+      "Alexander Wan",
+      "Kevin Klyman",
+      "Sayash Kapoor",
+      "Nestor Maslej",
+      "Shayne Longpre",
+      "Betty Xiong",
+      "Percy Liang",
+      "Rishi Bommasani"
+    ],
+    "summary": "Foundation model developers are among the world's most important companies. As these companies become increasingly consequential, how do their transparency practices evolve? The 2025 Foundation Model Transparency Index is the third edition of an annual effort to characterize and quantify the transpa...",
+    "published": "Dec 11",
+    "pdf_url": "https://arxiv.org/pdf/2512.10169v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.10169v1",
+    "queried_author": "Percy Liang",
+    "matching_authors": [
+      "Percy Liang"
+    ]
+  },
+  {
+    "title": "Interpretable Embeddings with Sparse Autoencoders: A Data Analysis Toolkit",
+    "authors": [
+      "Nick Jiang",
+      "Xiaoqing Sun",
+      "Lisa Dunlap",
+      "Lewis Smith",
+      "Neel Nanda"
+    ],
+    "summary": "Analyzing large-scale text corpora is a core challenge in machine learning, crucial for tasks like identifying undesirable model behaviors or biases in training data. Current methods often rely on costly LLM-based techniques (e.g. annotating dataset differences) or dense embedding models (e.g. for c...",
+    "published": "Dec 10",
+    "pdf_url": "https://arxiv.org/pdf/2512.10092v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.10092v1",
+    "queried_author": "Neel Nanda",
+    "matching_authors": [
+      "Neel Nanda"
+    ]
+  },
+  {
     "title": "Comparing AI Agents to Cybersecurity Professionals in Real-World Penetration Testing",
     "authors": [
       "Justin W. Lin",
@@ -14751,45 +14790,6 @@
     "queried_author": "Noah Goodman",
     "matching_authors": [
       "Noah Goodman"
-    ]
-  },
-  {
-    "title": "Don't lie to your friends: Learning what you know from collaborative self-play",
-    "authors": [
-      "Jacob Eisenstein",
-      "Reza Aghajani",
-      "Adam Fisch",
-      "Dheeru Dua",
-      "Fantine Huot",
-      "Mirella Lapata",
-      "Vicky Zayats",
-      "Jonathan Berant"
-    ],
-    "summary": "To be helpful assistants, AI agents must be aware of their own capabilities and limitations. This includes knowing when to answer from parametric knowledge versus using tools, when to trust tool outputs, and when to abstain or hedge. Such capabilities are hard to teach through supervised fine-tuning...",
-    "published": "Mar 18",
-    "pdf_url": "https://arxiv.org/pdf/2503.14481v3",
-    "arxiv_url": "http://arxiv.org/abs/2503.14481v3",
-    "queried_author": "Jacob Eisenstein",
-    "matching_authors": [
-      "Jacob Eisenstein"
-    ]
-  },
-  {
-    "title": "Benchmarking Failures in Tool-Augmented Language Models",
-    "authors": [
-      "Eduardo Trevi\u00f1o",
-      "Hugo Contant",
-      "James Ngai",
-      "Graham Neubig",
-      "Zora Zhiruo Wang"
-    ],
-    "summary": "The integration of tools has extended the capabilities of language models (LMs) beyond vanilla text generation to versatile scenarios. However, tool-augmented language models (TaLMs) often assume 'perfect' information access and tool availability, which may not hold in the real world. To systematica...",
-    "published": "Mar 18",
-    "pdf_url": "https://arxiv.org/pdf/2503.14227v1",
-    "arxiv_url": "http://arxiv.org/abs/2503.14227v1",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
     ]
   }
 ]
