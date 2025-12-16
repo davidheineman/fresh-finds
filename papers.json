@@ -1,5 +1,21 @@
 [
   {
+    "title": "Training Versatile Coding Agents in Synthetic Environments",
+    "authors": [
+      "Yiqi Zhu",
+      "Apurva Gandhi",
+      "Graham Neubig"
+    ],
+    "summary": "Prior works on training software engineering agents have explored utilizing existing resources such as issues on GitHub repositories to construct software engineering tasks and corresponding test suites. These approaches face two key limitations: (1) their reliance on pre-existing GitHub repositorie...",
+    "published": "Dec 13",
+    "pdf_url": "https://arxiv.org/pdf/2512.12216v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.12216v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
     "title": "The 2025 Foundation Model Transparency Index",
     "authors": [
       "Alexander Wan",
@@ -9505,8 +9521,8 @@
     ],
     "summary": "Humans continuously infer the states, goals, and behaviors of others by perceiving their surroundings in dynamic, real-world social interactions. However, most Theory of Mind (ToM) benchmarks only evaluate static, text-based scenarios, which have a significant gap compared to real interactions. We p...",
     "published": "Jun 29",
-    "pdf_url": "https://arxiv.org/pdf/2506.23046v2",
-    "arxiv_url": "http://arxiv.org/abs/2506.23046v2",
+    "pdf_url": "https://arxiv.org/pdf/2506.23046v3",
+    "arxiv_url": "http://arxiv.org/abs/2506.23046v3",
     "queried_author": "Maarten Sap",
     "matching_authors": [
       "Maarten Sap"
@@ -14768,28 +14784,6 @@
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "Value Profiles for Encoding Human Variation",
-    "authors": [
-      "Taylor Sorensen",
-      "Pushkar Mishra",
-      "Roma Patel",
-      "Michael Henry Tessler",
-      "Michiel Bakker",
-      "Georgina Evans",
-      "Iason Gabriel",
-      "Noah Goodman",
-      "Verena Rieser"
-    ],
-    "summary": "Modelling human variation in rating tasks is crucial for personalization, pluralistic model alignment, and computational social science. We propose representing individuals using natural language value profiles -- descriptions of underlying values compressed from in-context demonstrations -- along w...",
-    "published": "Mar 19",
-    "pdf_url": "https://arxiv.org/pdf/2503.15484v2",
-    "arxiv_url": "http://arxiv.org/abs/2503.15484v2",
-    "queried_author": "Noah Goodman",
-    "matching_authors": [
-      "Noah Goodman"
     ]
   }
 ]
