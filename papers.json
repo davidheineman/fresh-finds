@@ -1,5 +1,114 @@
 [
   {
+    "title": "SonicMoE: Accelerating MoE with IO and Tile-aware Optimizations",
+    "authors": [
+      "Wentao Guo",
+      "Mayank Mishra",
+      "Xinle Cheng",
+      "Ion Stoica",
+      "Tri Dao"
+    ],
+    "summary": "Mixture of Experts (MoE) models have emerged as the de facto architecture for scaling up language models without significantly increasing the computational cost. Recent MoE models demonstrate a clear trend towards high expert granularity (smaller expert intermediate dimension) and higher sparsity (c...",
+    "published": "Dec 16",
+    "pdf_url": "https://arxiv.org/pdf/2512.14080v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.14080v1",
+    "queried_author": "Tri Dao",
+    "matching_authors": [
+      "Tri Dao"
+    ]
+  },
+  {
+    "title": "Olmo 3",
+    "authors": [
+      "Team Olmo",
+      ":",
+      "Allyson Ettinger",
+      "Amanda Bertsch",
+      "Bailey Kuehl",
+      "David Graham",
+      "David Heineman",
+      "Dirk Groeneveld",
+      "Faeze Brahman",
+      "Finbarr Timbers",
+      "Hamish Ivison",
+      "Jacob Morrison",
+      "Jake Poznanski",
+      "Kyle Lo",
+      "Luca Soldaini",
+      "Matt Jordan",
+      "Mayee Chen",
+      "Michael Noukhovitch",
+      "Nathan Lambert",
+      "Pete Walsh",
+      "Pradeep Dasigi",
+      "Robert Berry",
+      "Saumya Malik",
+      "Saurabh Shah",
+      "Scott Geng",
+      "Shane Arora",
+      "Shashank Gupta",
+      "Taira Anderson",
+      "Teng Xiao",
+      "Tyler Murray",
+      "Tyler Romero",
+      "Victoria Graf",
+      "Akari Asai",
+      "Akshita Bhagia",
+      "Alexander Wettig",
+      "Alisa Liu",
+      "Aman Rangapur",
+      "Chloe Anastasiades",
+      "Costa Huang",
+      "Dustin Schwenk",
+      "Harsh Trivedi",
+      "Ian Magnusson",
+      "Jaron Lochner",
+      "Jiacheng Liu",
+      "Lester James V. Miranda",
+      "Maarten Sap",
+      "Malia Morgan",
+      "Michael Schmitz",
+      "Michal Guerquin",
+      "Michael Wilson",
+      "Regan Huff",
+      "Ronan Le Bras",
+      "Rui Xin",
+      "Rulin Shao",
+      "Sam Skjonsberg",
+      "Shannon Zejiang Shen",
+      "Shuyue Stella Li",
+      "Tucker Wilde",
+      "Valentina Pyatkin",
+      "Will Merrill",
+      "Yapei Chang",
+      "Yuling Gu",
+      "Zhiyuan Zeng",
+      "Ashish Sabharwal",
+      "Luke Zettlemoyer",
+      "Pang Wei Koh",
+      "Ali Farhadi",
+      "Noah A. Smith",
+      "Hannaneh Hajishirzi"
+    ],
+    "summary": "We introduce Olmo 3, a family of state-of-the-art, fully-open language models at the 7B and 32B parameter scales. Olmo 3 model construction targets long-context reasoning, function calling, coding, instruction following, general chat, and knowledge recall. This release includes the entire model flow...",
+    "published": "Dec 15",
+    "pdf_url": "https://arxiv.org/pdf/2512.13961v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.13961v1",
+    "queried_author": "Alexander Wettig",
+    "matching_authors": [
+      "Alexander Wettig",
+      "Hamish Ivison",
+      "Hannaneh Hajishirzi",
+      "Ian Magnusson",
+      "Kyle Lo",
+      "Luca Soldaini",
+      "Luke Zettlemoyer",
+      "Maarten Sap",
+      "Noah A. Smith",
+      "Pang Wei Koh"
+    ]
+  },
+  {
     "title": "Training Versatile Coding Agents in Synthetic Environments",
     "authors": [
       "Yiqi Zhu",
@@ -385,8 +494,8 @@
     ],
     "summary": "Building reliable deception detectors for AI systems -- methods that could predict when an AI system is being strategically deceptive without necessarily requiring behavioural evidence -- would be valuable in mitigating risks from advanced AI systems. But evaluating the reliability and efficacy of a...",
     "published": "Nov 27",
-    "pdf_url": "https://arxiv.org/pdf/2511.22662v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.22662v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.22662v2",
+    "arxiv_url": "http://arxiv.org/abs/2511.22662v2",
     "queried_author": "Neel Nanda",
     "matching_authors": [
       "Neel Nanda"
@@ -5290,8 +5399,8 @@
     ],
     "summary": "We construct evaluation tasks where extending the reasoning length of Large Reasoning Models (LRMs) deteriorates performance, exhibiting an inverse scaling relationship between test-time compute and accuracy. Our evaluation tasks span four categories: simple counting tasks with distractors, regressi...",
     "published": "Jul 19",
-    "pdf_url": "https://arxiv.org/pdf/2507.14417v1",
-    "arxiv_url": "http://arxiv.org/abs/2507.14417v1",
+    "pdf_url": "https://arxiv.org/pdf/2507.14417v2",
+    "arxiv_url": "http://arxiv.org/abs/2507.14417v2",
     "queried_author": "Ethan Perez",
     "matching_authors": [
       "Ethan Perez"
@@ -14743,47 +14852,6 @@
     "queried_author": "Danqi Chen",
     "matching_authors": [
       "Danqi Chen"
-    ]
-  },
-  {
-    "title": "Lyra: An Efficient and Expressive Subquadratic Architecture for Modeling Biological Sequences",
-    "authors": [
-      "Krithik Ramesh",
-      "Sameed M. Siddiqui",
-      "Albert Gu",
-      "Michael D. Mitzenmacher",
-      "Pardis C. Sabeti"
-    ],
-    "summary": "Deep learning architectures such as convolutional neural networks and Transformers have revolutionized biological sequence modeling, with recent advances driven by scaling up foundation and task-specific models. The computational resources and large datasets required, however, limit their applicabil...",
-    "published": "Mar 20",
-    "pdf_url": "https://arxiv.org/pdf/2503.16351v1",
-    "arxiv_url": "http://arxiv.org/abs/2503.16351v1",
-    "queried_author": "Albert Gu",
-    "matching_authors": [
-      "Albert Gu"
-    ]
-  },
-  {
-    "title": "AutoRedTeamer: Autonomous Red Teaming with Lifelong Attack Integration",
-    "authors": [
-      "Andy Zhou",
-      "Kevin Wu",
-      "Francesco Pinto",
-      "Zhaorun Chen",
-      "Yi Zeng",
-      "Yu Yang",
-      "Shuang Yang",
-      "Sanmi Koyejo",
-      "James Zou",
-      "Bo Li"
-    ],
-    "summary": "As large language models (LLMs) become increasingly capable, security and safety evaluation are crucial. While current red teaming approaches have made strides in assessing LLM vulnerabilities, they often rely heavily on human input and lack comprehensive coverage of emerging attack vectors. This pa...",
-    "published": "Mar 20",
-    "pdf_url": "https://arxiv.org/pdf/2503.15754v1",
-    "arxiv_url": "http://arxiv.org/abs/2503.15754v1",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
     ]
   }
 ]
