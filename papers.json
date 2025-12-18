@@ -1,5 +1,29 @@
 [
   {
+    "title": "Bolmo: Byteifying the Next Generation of Language Models",
+    "authors": [
+      "Benjamin Minixhofer",
+      "Tyler Murray",
+      "Tomasz Limisiewicz",
+      "Anna Korhonen",
+      "Luke Zettlemoyer",
+      "Noah A. Smith",
+      "Edoardo M. Ponti",
+      "Luca Soldaini",
+      "Valentin Hofmann"
+    ],
+    "summary": "We introduce Bolmo, the first family of competitive fully open byte-level language models (LMs) at the 1B and 7B parameter scales. In contrast to prior research on byte-level LMs, which focuses predominantly on training from scratch, we train Bolmo by byteifying existing subword-level LMs. Byteifica...",
+    "published": "Dec 17",
+    "pdf_url": "https://arxiv.org/pdf/2512.15586v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.15586v1",
+    "queried_author": "Luca Soldaini",
+    "matching_authors": [
+      "Luca Soldaini",
+      "Luke Zettlemoyer",
+      "Noah A. Smith"
+    ]
+  },
+  {
     "title": "SonicMoE: Accelerating MoE with IO and Tile-aware Optimizations",
     "authors": [
       "Wentao Guo",
@@ -14832,26 +14856,6 @@
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "The Model Hears You: Audio Language Model Deployments Should Consider the Principle of Least Privilege",
-    "authors": [
-      "Luxi He",
-      "Xiangyu Qi",
-      "Michel Liao",
-      "Inyoung Cheong",
-      "Prateek Mittal",
-      "Danqi Chen",
-      "Peter Henderson"
-    ],
-    "summary": "The latest Audio Language Models (Audio LMs) process speech directly instead of relying on a separate transcription step. This shift preserves detailed information, such as intonation or the presence of multiple speakers, that would otherwise be lost in transcription. However, it also introduces new...",
-    "published": "Mar 21",
-    "pdf_url": "https://arxiv.org/pdf/2503.16833v2",
-    "arxiv_url": "http://arxiv.org/abs/2503.16833v2",
-    "queried_author": "Danqi Chen",
-    "matching_authors": [
-      "Danqi Chen"
     ]
   }
 ]
