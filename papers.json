@@ -1,5 +1,110 @@
 [
   {
+    "title": "Multimodal RewardBench 2: Evaluating Omni Reward Models for Interleaved Text and Image",
+    "authors": [
+      "Yushi Hu",
+      "Reyhane Askari-Hemmat",
+      "Melissa Hall",
+      "Emily Dinan",
+      "Luke Zettlemoyer",
+      "Marjan Ghazvininejad"
+    ],
+    "summary": "Reward models (RMs) are essential for training large language models (LLMs), but remain underexplored for omni models that handle interleaved image and text sequences. We introduce Multimodal RewardBench 2 (MMRB2), the first comprehensive benchmark for reward models on multimodal understanding and (...",
+    "published": "Dec 18",
+    "pdf_url": "https://arxiv.org/pdf/2512.16899v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.16899v1",
+    "queried_author": "Luke Zettlemoyer",
+    "matching_authors": [
+      "Luke Zettlemoyer"
+    ]
+  },
+  {
+    "title": "GenEval 2: Addressing Benchmark Drift in Text-to-Image Evaluation",
+    "authors": [
+      "Amita Kamath",
+      "Kai-Wei Chang",
+      "Ranjay Krishna",
+      "Luke Zettlemoyer",
+      "Yushi Hu",
+      "Marjan Ghazvininejad"
+    ],
+    "summary": "Automating Text-to-Image (T2I) model evaluation is challenging; a judge model must be used to score correctness, and test prompts must be selected to be challenging for current T2I models but not the judge. We argue that satisfying these constraints can lead to benchmark drift over time, where the s...",
+    "published": "Dec 18",
+    "pdf_url": "https://arxiv.org/pdf/2512.16853v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.16853v1",
+    "queried_author": "Luke Zettlemoyer",
+    "matching_authors": [
+      "Luke Zettlemoyer"
+    ]
+  },
+  {
+    "title": "Adaptation of Agentic AI",
+    "authors": [
+      "Pengcheng Jiang",
+      "Jiacheng Lin",
+      "Zhiyi Shi",
+      "Zifeng Wang",
+      "Luxi He",
+      "Yichen Wu",
+      "Ming Zhong",
+      "Peiyang Song",
+      "Qizheng Zhang",
+      "Heng Wang",
+      "Xueqiang Xu",
+      "Hanwen Xu",
+      "Pengrui Han",
+      "Dylan Zhang",
+      "Jiashuo Sun",
+      "Chaoqi Yang",
+      "Kun Qian",
+      "Tian Wang",
+      "Changran Hu",
+      "Manling Li",
+      "Quanzheng Li",
+      "Hao Peng",
+      "Sheng Wang",
+      "Jingbo Shang",
+      "Chao Zhang",
+      "Jiaxuan You",
+      "Liyuan Liu",
+      "Pan Lu",
+      "Yu Zhang",
+      "Heng Ji",
+      "Yejin Choi",
+      "Dawn Song",
+      "Jimeng Sun",
+      "Jiawei Han"
+    ],
+    "summary": "Cutting-edge agentic AI systems are built on foundation models that can be adapted to plan, reason, and interact with external tools to perform increasingly complex and specialized tasks. As these systems grow in capability and scope, adaptation becomes a central mechanism for improving performance,...",
+    "published": "Dec 18",
+    "pdf_url": "https://arxiv.org/pdf/2512.16301v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.16301v1",
+    "queried_author": "Yejin Choi",
+    "matching_authors": [
+      "Yejin Choi"
+    ]
+  },
+  {
+    "title": "Social Story Frames: Contextual Reasoning about Narrative Intent and Reception",
+    "authors": [
+      "Joel Mire",
+      "Maria Antoniak",
+      "Steven R. Wilson",
+      "Zexin Ma",
+      "Achyutarama R. Ganti",
+      "Andrew Piper",
+      "Maarten Sap"
+    ],
+    "summary": "Reading stories evokes rich interpretive, affective, and evaluative responses, such as inferences about narrative intent or judgments about characters. Yet, computational models of reader response are limited, preventing nuanced analyses. To address this gap, we introduce SocialStoryFrames, a formal...",
+    "published": "Dec 17",
+    "pdf_url": "https://arxiv.org/pdf/2512.15925v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.15925v1",
+    "queried_author": "Maarten Sap",
+    "matching_authors": [
+      "Maarten Sap"
+    ]
+  },
+  {
     "title": "Bolmo: Byteifying the Next Generation of Language Models",
     "authors": [
       "Benjamin Minixhofer",
@@ -14746,113 +14851,6 @@
     "published": "Mar 23",
     "pdf_url": "https://arxiv.org/pdf/2503.18025v1",
     "arxiv_url": "http://arxiv.org/abs/2503.18025v1",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "Learning Multi-Level Features with Matryoshka Sparse Autoencoders",
-    "authors": [
-      "Bart Bussmann",
-      "Noa Nabeshima",
-      "Adam Karvonen",
-      "Neel Nanda"
-    ],
-    "summary": "Sparse autoencoders (SAEs) have emerged as a powerful tool for interpreting neural networks by extracting the concepts represented in their activations. However, choosing the size of the SAE dictionary (i.e. number of learned concepts) creates a tension: as dictionary size increases to capture more ...",
-    "published": "Mar 21",
-    "pdf_url": "https://arxiv.org/pdf/2503.17547v1",
-    "arxiv_url": "http://arxiv.org/abs/2503.17547v1",
-    "queried_author": "Neel Nanda",
-    "matching_authors": [
-      "Neel Nanda"
-    ]
-  },
-  {
-    "title": "Language Models May Verbatim Complete Text They Were Not Explicitly Trained On",
-    "authors": [
-      "Ken Ziyu Liu",
-      "Christopher A. Choquette-Choo",
-      "Matthew Jagielski",
-      "Peter Kairouz",
-      "Sanmi Koyejo",
-      "Percy Liang",
-      "Nicolas Papernot"
-    ],
-    "summary": "An important question today is whether a given text was used to train a large language model (LLM). A \\emph{completion} test is often employed: check if the LLM completes a sufficiently complex text. This, however, requires a ground-truth definition of membership; most commonly, it is defined as a m...",
-    "published": "Mar 21",
-    "pdf_url": "https://arxiv.org/pdf/2503.17514v2",
-    "arxiv_url": "http://arxiv.org/abs/2503.17514v2",
-    "queried_author": "Percy Liang",
-    "matching_authors": [
-      "Percy Liang",
-      "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "In-House Evaluation Is Not Enough: Towards Robust Third-Party Flaw Disclosure for General-Purpose AI",
-    "authors": [
-      "Shayne Longpre",
-      "Kevin Klyman",
-      "Ruth E. Appel",
-      "Sayash Kapoor",
-      "Rishi Bommasani",
-      "Michelle Sahar",
-      "Sean McGregor",
-      "Avijit Ghosh",
-      "Borhane Blili-Hamelin",
-      "Nathan Butters",
-      "Alondra Nelson",
-      "Amit Elazari",
-      "Andrew Sellars",
-      "Casey John Ellis",
-      "Dane Sherrets",
-      "Dawn Song",
-      "Harley Geiger",
-      "Ilona Cohen",
-      "Lauren McIlvenny",
-      "Madhulika Srikumar",
-      "Mark M. Jaycox",
-      "Markus Anderljung",
-      "Nadine Farid Johnson",
-      "Nicholas Carlini",
-      "Nicolas Miailhe",
-      "Nik Marda",
-      "Peter Henderson",
-      "Rebecca S. Portnoff",
-      "Rebecca Weiss",
-      "Victoria Westerhoff",
-      "Yacine Jernite",
-      "Rumman Chowdhury",
-      "Percy Liang",
-      "Arvind Narayanan"
-    ],
-    "summary": "The widespread deployment of general-purpose AI (GPAI) systems introduces significant new risks. Yet the infrastructure, practices, and norms for reporting flaws in GPAI systems remain seriously underdeveloped, lagging far behind more established fields like software security. Based on a collaborati...",
-    "published": "Mar 21",
-    "pdf_url": "https://arxiv.org/pdf/2503.16861v2",
-    "arxiv_url": "http://arxiv.org/abs/2503.16861v2",
-    "queried_author": "Percy Liang",
-    "matching_authors": [
-      "Percy Liang"
-    ]
-  },
-  {
-    "title": "Preferential Multi-Objective Bayesian Optimization for Drug Discovery",
-    "authors": [
-      "Tai Dang",
-      "Long-Hung Pham",
-      "Sang T. Truong",
-      "Ari Glenn",
-      "Wendy Nguyen",
-      "Edward A. Pham",
-      "Jeffrey S. Glenn",
-      "Sanmi Koyejo",
-      "Thang Luong"
-    ],
-    "summary": "Despite decades of advancements in automated ligand screening, large-scale drug discovery remains resource-intensive and requires post-processing hit selection, a step where chemists manually select a few promising molecules based on their chemical intuition. This creates a major bottleneck in the v...",
-    "published": "Mar 21",
-    "pdf_url": "https://arxiv.org/pdf/2503.16841v1",
-    "arxiv_url": "http://arxiv.org/abs/2503.16841v1",
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
