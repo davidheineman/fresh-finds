@@ -1,5 +1,24 @@
 [
   {
+    "title": "AutoMetrics: Approximate Human Judgements with Automatically Generated Evaluators",
+    "authors": [
+      "Michael J. Ryan",
+      "Yanzhe Zhang",
+      "Amol Salunkhe",
+      "Yi Chu",
+      "Di Xu",
+      "Diyi Yang"
+    ],
+    "summary": "Evaluating user-facing AI applications remains a central challenge, especially in open-ended domains such as travel planning, clinical note generation, or dialogue. The gold standard is user feedback (e.g., thumbs up/down) or behavioral signals (e.g., retention), but these are often scarce in protot...",
+    "published": "Dec 19",
+    "pdf_url": "https://arxiv.org/pdf/2512.17267v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.17267v1",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang"
+    ]
+  },
+  {
     "title": "Multimodal RewardBench 2: Evaluating Omni Reward Models for Interleaved Text and Image",
     "authors": [
       "Yushi Hu",
@@ -9386,8 +9405,8 @@
     ],
     "summary": "In this report, we introduce the Gemini 2.X model family: Gemini 2.5 Pro and Gemini 2.5 Flash, as well as our earlier Gemini 2.0 Flash and Flash-Lite models. Gemini 2.5 Pro is our most capable model yet, achieving SoTA performance on frontier coding and reasoning benchmarks. In addition to its incre...",
     "published": "Jul 07",
-    "pdf_url": "https://arxiv.org/pdf/2507.06261v5",
-    "arxiv_url": "http://arxiv.org/abs/2507.06261v5",
+    "pdf_url": "https://arxiv.org/pdf/2507.06261v6",
+    "arxiv_url": "http://arxiv.org/abs/2507.06261v6",
     "queried_author": "Noah Goodman",
     "matching_authors": [
       "Noah Goodman"
@@ -14495,8 +14514,8 @@
     ],
     "summary": "Increasing test-time computation has emerged as a promising direction for improving language model performance, particularly in scenarios where model finetuning is impractical or impossible due to computational constraints or private model weights. However, existing test-time search methods using a ...",
     "published": "Apr 04",
-    "pdf_url": "https://arxiv.org/pdf/2504.03790v1",
-    "arxiv_url": "http://arxiv.org/abs/2504.03790v1",
+    "pdf_url": "https://arxiv.org/pdf/2504.03790v2",
+    "arxiv_url": "http://arxiv.org/abs/2504.03790v2",
     "queried_author": "Noah A. Smith",
     "matching_authors": [
       "Noah A. Smith"
@@ -14836,24 +14855,6 @@
     "queried_author": "Diyi Yang",
     "matching_authors": [
       "Diyi Yang"
-    ]
-  },
-  {
-    "title": "Decision from Suboptimal Classifiers: Excess Risk Pre- and Post-Calibration",
-    "authors": [
-      "Alexandre Perez-Lebel",
-      "Gael Varoquaux",
-      "Sanmi Koyejo",
-      "Matthieu Doutreligne",
-      "Marine Le Morvan"
-    ],
-    "summary": "Probabilistic classifiers are central for making informed decisions under uncertainty. Based on the maximum expected utility principle, optimal decision rules can be derived using the posterior class probabilities and misclassification costs. Yet, in practice only learned approximations of the oracl...",
-    "published": "Mar 23",
-    "pdf_url": "https://arxiv.org/pdf/2503.18025v1",
-    "arxiv_url": "http://arxiv.org/abs/2503.18025v1",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
     ]
   }
 ]
