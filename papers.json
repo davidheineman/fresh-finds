@@ -1,5 +1,25 @@
 [
   {
+    "title": "Propose, Solve, Verify: Self-Play Through Formal Verification",
+    "authors": [
+      "Alex Wilf",
+      "Pranjal Aggarwal",
+      "Bryan Parno",
+      "Daniel Fried",
+      "Louis-Philippe Morency",
+      "Paul Pu Liang",
+      "Sean Welleck"
+    ],
+    "summary": "Training models through self-play alone (without any human data) has been a longstanding goal in AI, but its effectiveness for training large language models remains unclear, particularly in code generation where rewards based on unit tests are brittle and prone to error propagation. We study self-p...",
+    "published": "Dec 20",
+    "pdf_url": "https://arxiv.org/pdf/2512.18160v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.18160v1",
+    "queried_author": "Sean Welleck",
+    "matching_authors": [
+      "Sean Welleck"
+    ]
+  },
+  {
     "title": "AutoMetrics: Approximate Human Judgements with Automatically Generated Evaluators",
     "authors": [
       "Michael J. Ryan",
@@ -96,8 +116,8 @@
     ],
     "summary": "Cutting-edge agentic AI systems are built on foundation models that can be adapted to plan, reason, and interact with external tools to perform increasingly complex and specialized tasks. As these systems grow in capability and scope, adaptation becomes a central mechanism for improving performance,...",
     "published": "Dec 18",
-    "pdf_url": "https://arxiv.org/pdf/2512.16301v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.16301v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.16301v2",
+    "arxiv_url": "http://arxiv.org/abs/2512.16301v2",
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
@@ -14833,28 +14853,6 @@
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig"
-    ]
-  },
-  {
-    "title": "SPHERE: An Evaluation Card for Human-AI Systems",
-    "authors": [
-      "Qianou Ma",
-      "Dora Zhao",
-      "Xinran Zhao",
-      "Chenglei Si",
-      "Chenyang Yang",
-      "Ryan Louie",
-      "Ehud Reiter",
-      "Diyi Yang",
-      "Tongshuang Wu"
-    ],
-    "summary": "In the era of Large Language Models (LLMs), establishing effective evaluation methods and standards for diverse human-AI interaction systems is increasingly challenging. To encourage more transparent documentation and facilitate discussion on human-AI system evaluation design options, we present an ...",
-    "published": "Mar 24",
-    "pdf_url": "https://arxiv.org/pdf/2504.07971v1",
-    "arxiv_url": "http://arxiv.org/abs/2504.07971v1",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang"
     ]
   }
 ]
