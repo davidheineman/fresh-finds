@@ -1,9 +1,13 @@
 name: update papers
 
 on:
-  # Run daily at 4 PM UTC (7 AM PST)
   schedule:
-    - cron: '0 16 * * *'
+    # Primary sweep — catches announcements immediately (EDT or EST)
+    - cron: '0 0 * * 0,1,2,3,4'
+    - cron: '0 1 * * 0,1,2,3,4'
+
+    # Safety sweep — 8 hours later
+    - cron: '0 8 * * 0,1,2,3,4'
   
   # Allow manual trigger
   workflow_dispatch:
