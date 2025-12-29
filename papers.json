@@ -1,5 +1,24 @@
 [
   {
+    "title": "An Information Theoretic Perspective on Agentic System Design",
+    "authors": [
+      "Shizhe He",
+      "Avanika Narayan",
+      "Ishan S. Khare",
+      "Scott W. Linderman",
+      "Christopher R\u00e9",
+      "Dan Biderman"
+    ],
+    "summary": "Agentic language model (LM) systems power modern applications like \"Deep Research\" and \"Claude Code,\" and leverage multi-LM architectures to overcome context limitations. Beneath their apparent diversity lies a recurring pattern: smaller \"compressor\" LMs (that can even run locally) distill raw conte...",
+    "published": "Dec 25",
+    "pdf_url": "https://arxiv.org/pdf/2512.21720v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.21720v1",
+    "queried_author": "Christopher R\u00e9",
+    "matching_authors": [
+      "Christopher R\u00e9"
+    ]
+  },
+  {
     "title": "NVIDIA Nemotron 3: Efficient and Open Intelligence",
     "authors": [
       "NVIDIA",
@@ -11595,7 +11614,7 @@
     ]
   },
   {
-    "title": "Accelerating Diffusion Models in Offline RL via Reward-Aware Consistency Trajectory Distillation",
+    "title": "Accelerating Diffusion Planners in Offline RL via Reward-Aware Consistency Trajectory Distillation",
     "authors": [
       "Xintong Duan",
       "Yutong He",
@@ -11604,10 +11623,10 @@
       "J. Zico Kolter",
       "Jeff Schneider"
     ],
-    "summary": "Although diffusion models have achieved strong results in decision-making tasks, their slow inference speed remains a key limitation. While the consistency model offers a potential solution, its applications to decision-making often struggle with suboptimal demonstrations or rely on complex concurre...",
+    "summary": "Although diffusion models have achieved strong results in decision-making tasks, their slow inference speed remains a key limitation. While consistency models offer a potential solution, existing applications to decision-making either struggle with suboptimal demonstrations under behavior cloning or...",
     "published": "Jun 09",
-    "pdf_url": "https://arxiv.org/pdf/2506.07822v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.07822v1",
+    "pdf_url": "https://arxiv.org/pdf/2506.07822v2",
+    "arxiv_url": "http://arxiv.org/abs/2506.07822v2",
     "queried_author": "J Zico Kolter",
     "matching_authors": [
       "J Zico Kolter"
@@ -15479,27 +15498,6 @@
     "published": "Mar 28",
     "pdf_url": "https://arxiv.org/pdf/2503.22165v3",
     "arxiv_url": "http://arxiv.org/abs/2503.22165v3",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "Sharpe Ratio-Guided Active Learning for Preference Optimization in RLHF",
-    "authors": [
-      "Syrine Belakaria",
-      "Joshua Kazdan",
-      "Charles Marx",
-      "Chris Cundy",
-      "Willie Neiswanger",
-      "Sanmi Koyejo",
-      "Barbara E. Engelhardt",
-      "Stefano Ermon"
-    ],
-    "summary": "Reinforcement learning from human feedback (RLHF) has become a cornerstone of the training and alignment pipeline for large language models (LLMs). Recent advances, such as direct preference optimization (DPO), have simplified the preference learning step. However, collecting preference data remains...",
-    "published": "Mar 28",
-    "pdf_url": "https://arxiv.org/pdf/2503.22137v1",
-    "arxiv_url": "http://arxiv.org/abs/2503.22137v1",
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
