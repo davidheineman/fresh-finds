@@ -1,5 +1,49 @@
 [
   {
+    "title": "End-to-End Test-Time Training for Long Context",
+    "authors": [
+      "Arnuv Tandon",
+      "Karan Dalal",
+      "Xinhao Li",
+      "Daniel Koceja",
+      "Marcel R\u00f8d",
+      "Sam Buchanan",
+      "Xiaolong Wang",
+      "Jure Leskovec",
+      "Sanmi Koyejo",
+      "Tatsunori Hashimoto",
+      "Carlos Guestrin",
+      "Jed McCaleb",
+      "Yejin Choi",
+      "Yu Sun"
+    ],
+    "summary": "We formulate long-context language modeling as a problem in continual learning rather than architecture design. Under this formulation, we only use a standard architecture -- a Transformer with sliding-window attention. However, our model continues learning at test time via next-token prediction on ...",
+    "published": "Dec 29",
+    "pdf_url": "https://arxiv.org/pdf/2512.23675v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.23675v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo",
+      "Yejin Choi"
+    ]
+  },
+  {
+    "title": "DECEPTICON: How Dark Patterns Manipulate Web Agents",
+    "authors": [
+      "Phil Cuvin",
+      "Hao Zhu",
+      "Diyi Yang"
+    ],
+    "summary": "Deceptive UI designs, widely instantiated across the web and commonly known as dark patterns, manipulate users into performing actions misaligned with their goals. In this paper, we show that dark patterns are highly effective in steering agent trajectories, posing a significant risk to agent robust...",
+    "published": "Dec 28",
+    "pdf_url": "https://arxiv.org/pdf/2512.22894v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.22894v1",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang"
+    ]
+  },
+  {
     "title": "An Information Theoretic Perspective on Agentic System Design",
     "authors": [
       "Shizhe He",
@@ -3188,8 +3232,8 @@
     ],
     "summary": "The scalability of large language models for long-context reasoning is severely constrained by the linear growth of their Transformer key-value cache, which incurs significant memory and computational costs. We posit that as a model generates reasoning tokens, the informational value of past generat...",
     "published": "Oct 15",
-    "pdf_url": "https://arxiv.org/pdf/2510.13797v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.13797v2",
+    "pdf_url": "https://arxiv.org/pdf/2510.13797v3",
+    "arxiv_url": "http://arxiv.org/abs/2510.13797v3",
     "queried_author": "Yoav Artzi",
     "matching_authors": [
       "Yoav Artzi"
@@ -15457,50 +15501,6 @@
     "queried_author": "Niklas Muennighoff",
     "matching_authors": [
       "Niklas Muennighoff"
-    ]
-  },
-  {
-    "title": "Challenges and Paths Towards AI for Software Engineering",
-    "authors": [
-      "Alex Gu",
-      "Naman Jain",
-      "Wen-Ding Li",
-      "Manish Shetty",
-      "Yijia Shao",
-      "Ziyang Li",
-      "Diyi Yang",
-      "Kevin Ellis",
-      "Koushik Sen",
-      "Armando Solar-Lezama"
-    ],
-    "summary": "AI for software engineering has made remarkable progress recently, becoming a notable success within generative AI. Despite this, there are still many challenges that need to be addressed before automated software engineering reaches its full potential. It should be possible to reach high levels of ...",
-    "published": "Mar 28",
-    "pdf_url": "https://arxiv.org/pdf/2503.22625v1",
-    "arxiv_url": "http://arxiv.org/abs/2503.22625v1",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang"
-    ]
-  },
-  {
-    "title": "Landscape of Thoughts: Visualizing the Reasoning Process of Large Language Models",
-    "authors": [
-      "Zhanke Zhou",
-      "Zhaocheng Zhu",
-      "Xuan Li",
-      "Mikhail Galkin",
-      "Xiao Feng",
-      "Sanmi Koyejo",
-      "Jian Tang",
-      "Bo Han"
-    ],
-    "summary": "Numerous applications of large language models (LLMs) rely on their ability to perform step-by-step reasoning. However, the reasoning behavior of LLMs remains poorly understood, posing challenges to research, development, and safety. To address this gap, we introduce landscape of thoughts (LoT), the...",
-    "published": "Mar 28",
-    "pdf_url": "https://arxiv.org/pdf/2503.22165v3",
-    "arxiv_url": "http://arxiv.org/abs/2503.22165v3",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
     ]
   }
 ]
