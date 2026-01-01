@@ -1,5 +1,20 @@
 [
   {
+    "title": "Efficiently Estimating Data Efficiency for Language Model Fine-tuning",
+    "authors": [
+      "Gyung Hyun Je",
+      "Colin Raffel"
+    ],
+    "summary": "While large language models (LLMs) demonstrate reasonable zero-shot capability across many downstream tasks, fine-tuning is a common practice to improve their performance. However, a task's data efficiency--i.e., the number of fine-tuning examples needed to achieve a desired level of performance--is...",
+    "published": "Dec 31",
+    "pdf_url": "https://arxiv.org/pdf/2512.24991v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.24991v1",
+    "queried_author": "Colin Raffel",
+    "matching_authors": [
+      "Colin Raffel"
+    ]
+  },
+  {
     "title": "End-to-End Test-Time Training for Long Context",
     "authors": [
       "Arnuv Tandon",
@@ -19,8 +34,8 @@
     ],
     "summary": "We formulate long-context language modeling as a problem in continual learning rather than architecture design. Under this formulation, we only use a standard architecture -- a Transformer with sliding-window attention. However, our model continues learning at test time via next-token prediction on ...",
     "published": "Dec 29",
-    "pdf_url": "https://arxiv.org/pdf/2512.23675v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.23675v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.23675v2",
+    "arxiv_url": "http://arxiv.org/abs/2512.23675v2",
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo",
@@ -1832,8 +1847,8 @@
     ],
     "summary": "Can language models (LMs) learn to faithfully describe their internal computations? Are they better able to describe themselves than other models? We study the extent to which LMs' privileged access to their own internals can be leveraged to produce new techniques for explaining their behavior. Usin...",
     "published": "Nov 11",
-    "pdf_url": "https://arxiv.org/pdf/2511.08579v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.08579v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.08579v2",
+    "arxiv_url": "http://arxiv.org/abs/2511.08579v2",
     "queried_author": "Jacob Andreas",
     "matching_authors": [
       "Jacob Andreas"
@@ -6683,8 +6698,8 @@
     ],
     "summary": "Long-context reasoning requires accurately identifying relevant information in extensive, noisy input contexts. Previous research shows that using test-time learning to encode context directly into model parameters can effectively enable reasoning over noisy information. However, meta-learning metho...",
     "published": "Jul 08",
-    "pdf_url": "https://arxiv.org/pdf/2507.06415v1",
-    "arxiv_url": "http://arxiv.org/abs/2507.06415v1",
+    "pdf_url": "https://arxiv.org/pdf/2507.06415v2",
+    "arxiv_url": "http://arxiv.org/abs/2507.06415v2",
     "queried_author": "Antoine Bosselut",
     "matching_authors": [
       "Antoine Bosselut"
@@ -11318,8 +11333,8 @@
     ],
     "summary": "As large language models (LLMs)-enhanced chatbots grow increasingly expressive and socially responsive, many users are beginning to form companionship-like bonds with them, particularly with simulated AI partners designed to mimic emotionally attuned interlocutors. These emerging AI companions raise...",
     "published": "Jun 14",
-    "pdf_url": "https://arxiv.org/pdf/2506.12605v3",
-    "arxiv_url": "http://arxiv.org/abs/2506.12605v3",
+    "pdf_url": "https://arxiv.org/pdf/2506.12605v4",
+    "arxiv_url": "http://arxiv.org/abs/2506.12605v4",
     "queried_author": "Diyi Yang",
     "matching_authors": [
       "Diyi Yang"
@@ -15475,32 +15490,6 @@
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "A Survey on Test-Time Scaling in Large Language Models: What, How, Where, and How Well?",
-    "authors": [
-      "Qiyuan Zhang",
-      "Fuyuan Lyu",
-      "Zexu Sun",
-      "Lei Wang",
-      "Weixu Zhang",
-      "Wenyue Hua",
-      "Haolun Wu",
-      "Zhihan Guo",
-      "Yufei Wang",
-      "Niklas Muennighoff",
-      "Irwin King",
-      "Xue Liu",
-      "Chen Ma"
-    ],
-    "summary": "As enthusiasm for scaling computation (data and parameters) in the pretraining era gradually diminished, test-time scaling (TTS), also referred to as ``test-time computing'' has emerged as a prominent research focus. Recent studies demonstrate that TTS can further elicit the problem-solving capabili...",
-    "published": "Mar 31",
-    "pdf_url": "https://arxiv.org/pdf/2503.24235v3",
-    "arxiv_url": "http://arxiv.org/abs/2503.24235v3",
-    "queried_author": "Niklas Muennighoff",
-    "matching_authors": [
-      "Niklas Muennighoff"
     ]
   }
 ]
