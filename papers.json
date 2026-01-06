@@ -1,5 +1,83 @@
 [
   {
+    "title": "K-EXAONE Technical Report",
+    "authors": [
+      "Eunbi Choi",
+      "Kibong Choi",
+      "Seokhee Hong",
+      "Junwon Hwang",
+      "Hyojin Jeon",
+      "Hyunjik Jo",
+      "Joonkee Kim",
+      "Seonghwan Kim",
+      "Soyeon Kim",
+      "Sunkyoung Kim",
+      "Yireun Kim",
+      "Yongil Kim",
+      "Haeju Lee",
+      "Jinsik Lee",
+      "Kyungmin Lee",
+      "Sangha Park",
+      "Heuiyeen Yeen",
+      "Hwan Chang",
+      "Stanley Jungkyu Choi",
+      "Yejin Choi",
+      "Jiwon Ham",
+      "Kijeong Jeon",
+      "Geunyeong Jeong",
+      "Gerrard Jeongwon Jo",
+      "Yonghwan Jo",
+      "Jiyeon Jung",
+      "Naeun Kang",
+      "Dohoon Kim",
+      "Euisoon Kim",
+      "Hayeon Kim",
+      "Hyosang Kim",
+      "Hyunseo Kim",
+      "Jieun Kim",
+      "Minu Kim",
+      "Myoungshin Kim",
+      "Unsol Kim",
+      "Youchul Kim",
+      "YoungJin Kim",
+      "Chaeeun Lee",
+      "Chaeyoon Lee",
+      "Changhun Lee",
+      "Dahm Lee",
+      "Edward Hwayoung Lee",
+      "Honglak Lee",
+      "Jinsang Lee",
+      "Jiyoung Lee",
+      "Sangeun Lee",
+      "Seungwon Lim",
+      "Solji Lim",
+      "Woohyung Lim",
+      "Chanwoo Moon",
+      "Jaewoo Park",
+      "Jinho Park",
+      "Yongmin Park",
+      "Hyerin Seo",
+      "Wooseok Seo",
+      "Yongwoo Song",
+      "Sejong Yang",
+      "Sihoon Yang",
+      "Chang En Yea",
+      "Sihyuk Yi",
+      "Chansik Yoon",
+      "Dongkeun Yoon",
+      "Sangyeon Yoon",
+      "Hyeongu Yun"
+    ],
+    "summary": "This technical report presents K-EXAONE, a large-scale multilingual language model developed by LG AI Research. K-EXAONE is built on a Mixture-of-Experts architecture with 236B total parameters, activating 23B parameters during inference. It supports a 256K-token context window and covers six langua...",
+    "published": "Jan 05",
+    "pdf_url": "https://arxiv.org/pdf/2601.01739v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.01739v1",
+    "queried_author": "Yejin Choi",
+    "matching_authors": [
+      "Yejin Choi"
+    ]
+  },
+  {
     "title": "Efficiently Estimating Data Efficiency for Language Model Fine-tuning",
     "authors": [
       "Gyung Hyun Je",
@@ -847,8 +925,8 @@
     ],
     "summary": "Reward models (RMs) are essential for training large language models (LLMs), but remain underexplored for omni models that handle interleaved image and text sequences. We introduce Multimodal RewardBench 2 (MMRB2), the first comprehensive benchmark for reward models on multimodal understanding and (...",
     "published": "Dec 18",
-    "pdf_url": "https://arxiv.org/pdf/2512.16899v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.16899v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.16899v2",
+    "arxiv_url": "http://arxiv.org/abs/2512.16899v2",
     "queried_author": "Luke Zettlemoyer",
     "matching_authors": [
       "Luke Zettlemoyer"
@@ -1423,8 +1501,8 @@
     ],
     "summary": "Log-likelihood evaluation enables important capabilities in generative models, including model comparison, certain fine-tuning objectives, and many downstream applications. Yet paradoxically, some of today's best generative models -- diffusion and flow-based models -- still require hundreds to thous...",
     "published": "Dec 02",
-    "pdf_url": "https://arxiv.org/pdf/2512.02636v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.02636v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.02636v2",
+    "arxiv_url": "http://arxiv.org/abs/2512.02636v2",
     "queried_author": "Albert Gu",
     "matching_authors": [
       "Albert Gu",
@@ -2819,8 +2897,8 @@
     ],
     "summary": "Large language models (LLMs) can sometimes detect when they are being evaluated and adjust their behavior to appear more aligned, compromising the reliability of safety evaluations. In this paper, we show that adding a steering vector to an LLM's activations can suppress evaluation-awareness and mak...",
     "published": "Oct 23",
-    "pdf_url": "https://arxiv.org/pdf/2510.20487v3",
-    "arxiv_url": "http://arxiv.org/abs/2510.20487v3",
+    "pdf_url": "https://arxiv.org/pdf/2510.20487v4",
+    "arxiv_url": "http://arxiv.org/abs/2510.20487v4",
     "queried_author": "Neel Nanda",
     "matching_authors": [
       "Neel Nanda"
@@ -3420,8 +3498,8 @@
     ],
     "summary": "Language model (LM) agents deployed in novel environments often exhibit poor sample efficiency when learning from sequential interactions. This significantly hinders the usefulness of such agents in environments where interaction is costly (for example, when they interact with humans or reset physic...",
     "published": "Oct 11",
-    "pdf_url": "https://arxiv.org/pdf/2510.10304v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.10304v1",
+    "pdf_url": "https://arxiv.org/pdf/2510.10304v2",
+    "arxiv_url": "http://arxiv.org/abs/2510.10304v2",
     "queried_author": "Jacob Andreas",
     "matching_authors": [
       "Jacob Andreas"
@@ -15473,23 +15551,6 @@
     "queried_author": "Greg Durrett",
     "matching_authors": [
       "Greg Durrett"
-    ]
-  },
-  {
-    "title": "Are Domain Generalization Benchmarks with Accuracy on the Line Misspecified?",
-    "authors": [
-      "Olawale Salaudeen",
-      "Nicole Chiou",
-      "Shiny Weng",
-      "Sanmi Koyejo"
-    ],
-    "summary": "Spurious correlations, unstable statistical shortcuts a model can exploit, are expected to degrade performance out-of-distribution (OOD). However, across many popular OOD generalization benchmarks, vanilla empirical risk minimization (ERM) often achieves the highest OOD accuracy. Moreover, gains in ...",
-    "published": "Mar 31",
-    "pdf_url": "https://arxiv.org/pdf/2504.00186v3",
-    "arxiv_url": "http://arxiv.org/abs/2504.00186v3",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
     ]
   }
 ]
