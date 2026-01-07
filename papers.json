@@ -1,5 +1,42 @@
 [
   {
+    "title": "From Entropy to Epiplexity: Rethinking Information for Computationally Bounded Intelligence",
+    "authors": [
+      "Marc Finzi",
+      "Shikai Qiu",
+      "Yiding Jiang",
+      "Pavel Izmailov",
+      "J. Zico Kolter",
+      "Andrew Gordon Wilson"
+    ],
+    "summary": "Can we learn more from data than existed in the generating process itself? Can new and useful information be constructed from merely applying deterministic transformations to existing data? Can the learnable content in data be evaluated without considering a downstream task? On these questions, Shan...",
+    "published": "Jan 06",
+    "pdf_url": "https://arxiv.org/pdf/2601.03220v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.03220v1",
+    "queried_author": "J Zico Kolter",
+    "matching_authors": [
+      "J Zico Kolter"
+    ]
+  },
+  {
+    "title": "Extracting books from production language models",
+    "authors": [
+      "Ahmed Ahmed",
+      "A. Feder Cooper",
+      "Sanmi Koyejo",
+      "Percy Liang"
+    ],
+    "summary": "Many unresolved legal questions over LLMs and copyright center on memorization: whether specific training data have been encoded in the model's weights during training, and whether those memorized data can be extracted in the model's outputs. While many believe that LLMs do not memorize much of thei...",
+    "published": "Jan 06",
+    "pdf_url": "https://arxiv.org/pdf/2601.02671v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.02671v1",
+    "queried_author": "Percy Liang",
+    "matching_authors": [
+      "Percy Liang",
+      "Sanmi Koyejo"
+    ]
+  },
+  {
     "title": "K-EXAONE Technical Report",
     "authors": [
       "Eunbi Choi",
@@ -74,6 +111,34 @@
     "arxiv_url": "http://arxiv.org/abs/2601.01739v1",
     "queried_author": "Yejin Choi",
     "matching_authors": [
+      "Yejin Choi"
+    ]
+  },
+  {
+    "title": "NitroGen: An Open Foundation Model for Generalist Gaming Agents",
+    "authors": [
+      "Lo\u00efc Magne",
+      "Anas Awadalla",
+      "Guanzhi Wang",
+      "Yinzhen Xu",
+      "Joshua Belofsky",
+      "Fengyuan Hu",
+      "Joohwan Kim",
+      "Ludwig Schmidt",
+      "Georgia Gkioxari",
+      "Jan Kautz",
+      "Yisong Yue",
+      "Yejin Choi",
+      "Yuke Zhu",
+      "Linxi \"Jim\" Fan"
+    ],
+    "summary": "We introduce NitroGen, a vision-action foundation model for generalist gaming agents that is trained on 40,000 hours of gameplay videos across more than 1,000 games. We incorporate three key ingredients: 1) an internet-scale video-action dataset constructed by automatically extracting player actions...",
+    "published": "Jan 04",
+    "pdf_url": "https://arxiv.org/pdf/2601.02427v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.02427v1",
+    "queried_author": "Ludwig Schmidt",
+    "matching_authors": [
+      "Ludwig Schmidt",
       "Yejin Choi"
     ]
   },
@@ -11429,8 +11494,8 @@
     ],
     "summary": "Language models are trained mainly on massive text data from the Internet, and it becomes increasingly important to understand this data source. Exact-match search engines enable searching in large text corpora - counting string appearances and retrieving the enclosing documents - yet the high stora...",
     "published": "Jun 13",
-    "pdf_url": "https://arxiv.org/pdf/2506.12229v4",
-    "arxiv_url": "http://arxiv.org/abs/2506.12229v4",
+    "pdf_url": "https://arxiv.org/pdf/2506.12229v5",
+    "arxiv_url": "http://arxiv.org/abs/2506.12229v5",
     "queried_author": "Hannaneh Hajishirzi",
     "matching_authors": [
       "Hannaneh Hajishirzi",
@@ -15493,64 +15558,6 @@
     "matching_authors": [
       "Neel Nanda",
       "Noah Goodman"
-    ]
-  },
-  {
-    "title": "YourBench: Easy Custom Evaluation Sets for Everyone",
-    "authors": [
-      "Sumuk Shashidhar",
-      "Cl\u00e9mentine Fourrier",
-      "Alina Lozovskia",
-      "Thomas Wolf",
-      "Gokhan Tur",
-      "Dilek Hakkani-T\u00fcr"
-    ],
-    "summary": "Evaluating large language models (LLMs) effectively remains a critical bottleneck, as traditional static benchmarks suffer from saturation and contamination, while human evaluations are costly and slow. This hinders timely or domain-specific assessment, crucial for real-world applications. We introd...",
-    "published": "Apr 02",
-    "pdf_url": "https://arxiv.org/pdf/2504.01833v1",
-    "arxiv_url": "http://arxiv.org/abs/2504.01833v1",
-    "queried_author": "Cl\u00e9mentine Fourrier",
-    "matching_authors": [
-      "Cl\u00e9mentine Fourrier"
-    ]
-  },
-  {
-    "title": "ThinkPrune: Pruning Long Chain-of-Thought of LLMs via Reinforcement Learning",
-    "authors": [
-      "Bairu Hou",
-      "Yang Zhang",
-      "Jiabao Ji",
-      "Yujian Liu",
-      "Kaizhi Qian",
-      "Jacob Andreas",
-      "Shiyu Chang"
-    ],
-    "summary": "We present ThinkPrune, a simple yet effective method for pruning the thinking length for long-thinking LLMs, which has been found to often produce inefficient and redundant thinking processes. Existing preliminary explorations of reducing thinking length primarily focus on forcing the thinking proce...",
-    "published": "Apr 02",
-    "pdf_url": "https://arxiv.org/pdf/2504.01296v1",
-    "arxiv_url": "http://arxiv.org/abs/2504.01296v1",
-    "queried_author": "Jacob Andreas",
-    "matching_authors": [
-      "Jacob Andreas"
-    ]
-  },
-  {
-    "title": "Is the Top Still Spinning? Evaluating Subjectivity in Narrative Understanding",
-    "authors": [
-      "Melanie Subbiah",
-      "Akankshya Mishra",
-      "Grace Kim",
-      "Liyan Tang",
-      "Greg Durrett",
-      "Kathleen McKeown"
-    ],
-    "summary": "Determining faithfulness of a claim to a source document is an important problem across many domains. This task is generally treated as a binary judgment of whether the claim is supported or unsupported in relation to the source. In many cases, though, whether a claim is supported can be ambiguous. ...",
-    "published": "Apr 01",
-    "pdf_url": "https://arxiv.org/pdf/2504.01132v2",
-    "arxiv_url": "http://arxiv.org/abs/2504.01132v2",
-    "queried_author": "Greg Durrett",
-    "matching_authors": [
-      "Greg Durrett"
     ]
   }
 ]
