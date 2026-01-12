@@ -253,8 +253,8 @@
     ],
     "summary": "This technical report presents K-EXAONE, a large-scale multilingual language model developed by LG AI Research. K-EXAONE is built on a Mixture-of-Experts architecture with 236B total parameters, activating 23B parameters during inference. It supports a 256K-token context window and covers six langua...",
     "published": "Jan 05",
-    "pdf_url": "https://arxiv.org/pdf/2601.01739v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.01739v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.01739v2",
+    "arxiv_url": "http://arxiv.org/abs/2601.01739v2",
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
