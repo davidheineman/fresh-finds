@@ -1,5 +1,111 @@
 [
   {
+    "title": "The Roots of Performance Disparity in Multilingual Language Models: Intrinsic Modeling Difficulty or Design Choices?",
+    "authors": [
+      "Chen Shani",
+      "Yuval Reif",
+      "Nathan Roll",
+      "Dan Jurafsky",
+      "Ekaterina Shutova"
+    ],
+    "summary": "Multilingual language models (LMs) promise broader NLP access, yet current systems deliver uneven performance across the world's languages. This survey examines why these gaps persist and whether they reflect intrinsic linguistic difficulty or modeling artifacts. We organize the literature around tw...",
+    "published": "Jan 12",
+    "pdf_url": "https://arxiv.org/pdf/2601.07220v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.07220v1",
+    "queried_author": "Dan Jurafsky",
+    "matching_authors": [
+      "Dan Jurafsky"
+    ]
+  },
+  {
+    "title": "When Should We Introduce Safety Interventions During Pretraining?",
+    "authors": [
+      "Dylan Sam",
+      "Sachin Goyal",
+      "Pratyush Maini",
+      "Alexander Robey",
+      "J. Zico Kolter"
+    ],
+    "summary": "Ensuring the safety of language models in high-stakes settings remains a pressing challenge, as aligned behaviors are often brittle and easily undone by adversarial pressure or downstream finetuning. Prior work has shown that interventions applied during pretraining, such as rephrasing harmful conte...",
+    "published": "Jan 11",
+    "pdf_url": "https://arxiv.org/pdf/2601.07087v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.07087v1",
+    "queried_author": "J Zico Kolter",
+    "matching_authors": [
+      "J Zico Kolter"
+    ]
+  },
+  {
+    "title": "Categorize Early, Integrate Late: Divergent Processing Strategies in Automatic Speech Recognition",
+    "authors": [
+      "Nathan Roll",
+      "Pranav Bhalerao",
+      "Martijn Bartelds",
+      "Arjun Pawar",
+      "Yuka Tatsumi",
+      "Tolulope Ogunremi",
+      "Chen Shani",
+      "Calbert Graham",
+      "Meghan Sumner",
+      "Dan Jurafsky"
+    ],
+    "summary": "In speech language modeling, two architectures dominate the frontier: the Transformer and the Conformer. However, it remains unknown whether their comparable performance stems from convergent processing strategies or distinct architectural inductive biases. We introduce Architectural Fingerprinting,...",
+    "published": "Jan 11",
+    "pdf_url": "https://arxiv.org/pdf/2601.06972v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.06972v1",
+    "queried_author": "Dan Jurafsky",
+    "matching_authors": [
+      "Dan Jurafsky"
+    ]
+  },
+  {
+    "title": "Neural Nonmyopic Bayesian Optimization in Dynamic Cost Settings",
+    "authors": [
+      "Sang T. Truong",
+      "Duc Q. Nguyen",
+      "Willie Neiswanger",
+      "Ryan-Rhys Griffiths",
+      "Stefano Ermon",
+      "Nick Haber",
+      "Sanmi Koyejo"
+    ],
+    "summary": "Bayesian optimization (BO) is a common framework for optimizing black-box functions, yet most existing methods assume static query costs and rely on myopic acquisition strategies. We introduce LookaHES, a nonmyopic BO framework designed for dynamic, history-dependent cost environments, where evaluat...",
+    "published": "Jan 10",
+    "pdf_url": "https://arxiv.org/pdf/2601.06505v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.06505v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "Gecko: An Efficient Neural Architecture Inherently Processing Sequences with Arbitrary Lengths",
+    "authors": [
+      "Xuezhe Ma",
+      "Shicheng Wen",
+      "Linghao Jin",
+      "Bilge Acun",
+      "Ruihang Lai",
+      "Bohan Hou",
+      "Will Lin",
+      "Hao Zhang",
+      "Songlin Yang",
+      "Ryan Lee",
+      "Mengxi Wu",
+      "Jonathan May",
+      "Luke Zettlemoyer",
+      "Carole-Jean Wu"
+    ],
+    "summary": "Designing a unified neural network to efficiently and inherently process sequential data with arbitrary lengths is a central and challenging problem in sequence modeling. The design choices in Transformer, including quadratic complexity and weak length extrapolation, have limited their ability to sc...",
+    "published": "Jan 10",
+    "pdf_url": "https://arxiv.org/pdf/2601.06463v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.06463v1",
+    "queried_author": "Luke Zettlemoyer",
+    "matching_authors": [
+      "Luke Zettlemoyer"
+    ]
+  },
+  {
     "title": "GDPO: Group reward-Decoupled Normalization Policy Optimization for Multi-reward RL Optimization",
     "authors": [
       "Shih-Yang Liu",
@@ -1086,6 +1192,28 @@
     ]
   },
   {
+    "title": "Why Slop Matters",
+    "authors": [
+      "Cody Kommers",
+      "Eamon Duede",
+      "Julia Gordon",
+      "Ari Holtzman",
+      "Tess McNulty",
+      "Spencer Stewart",
+      "Lindsay Thomas",
+      "Richard Jean So",
+      "Hoyt Long"
+    ],
+    "summary": "AI-generated \"slop\" is often seen as digital pollution. We argue that this dismissal of the topic risks missing important aspects of AI Slop that deserve rigorous study. AI Slop serves a social function: it offers a supply-side solution to a variety of problems in cultural and economic demand - that...",
+    "published": "Dec 23",
+    "pdf_url": "https://arxiv.org/pdf/2601.06060v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.06060v1",
+    "queried_author": "Ari Holtzman",
+    "matching_authors": [
+      "Ari Holtzman"
+    ]
+  },
+  {
     "title": "Propose, Solve, Verify: Self-Play Through Formal Verification",
     "authors": [
       "Alex Wilf",
@@ -1371,8 +1499,8 @@
     ],
     "summary": "Prior works on training software engineering agents have explored utilizing existing resources such as issues on GitHub repositories to construct software engineering tasks and corresponding test suites. These approaches face two key limitations: (1) their reliance on pre-existing GitHub repositorie...",
     "published": "Dec 13",
-    "pdf_url": "https://arxiv.org/pdf/2512.12216v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.12216v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.12216v2",
+    "arxiv_url": "http://arxiv.org/abs/2512.12216v2",
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig"
@@ -12517,10 +12645,10 @@
       "Christopher D. Manning",
       "Nelson F. Liu"
     ],
-    "summary": "With the rise of long-context language models (LMs) capable of processing tens of thousands of tokens in a single pass, do multi-stage retrieval-augmented generation (RAG) pipelines still offer measurable benefits over simpler, single-stage approaches? To assess this question, we conduct a controlle...",
+    "summary": "With the rise of long-context language models (LMs) capable of processing tens of thousands of tokens in a single context window, do multi-stage retrieval-augmented generation (RAG) pipelines still offer measurable benefits over simpler, single-stage approaches? To assess this question, we conduct a...",
     "published": "Jun 04",
-    "pdf_url": "https://arxiv.org/pdf/2506.03989v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.03989v1",
+    "pdf_url": "https://arxiv.org/pdf/2506.03989v2",
+    "arxiv_url": "http://arxiv.org/abs/2506.03989v2",
     "queried_author": "Christopher D Manning",
     "matching_authors": [
       "Christopher D Manning",
@@ -14143,12 +14271,13 @@
       "Sumin Shim",
       "Yejin Choi",
       "Hanbin Kim",
+      "Dae Hyun Kim",
       "Youngjae Yu"
     ],
-    "summary": "User interface (UI) design goes beyond visuals, guiding user behavior and overall user experience (UX). Strategically crafted interfaces, for example, can boost sign-ups and drive business sales, underscoring the shift toward UI/UX as a unified design concept. While recent studies have explored UI q...",
+    "summary": "User interface (UI) design goes beyond visuals to shape user experience (UX), underscoring the shift toward UI/UX as a unified concept. While recent studies have explored UI evaluation using Multimodal Large Language Models (MLLMs), they largely focus on surface-level features, overlooking how desig...",
     "published": "May 08",
-    "pdf_url": "https://arxiv.org/pdf/2505.05026v3",
-    "arxiv_url": "http://arxiv.org/abs/2505.05026v3",
+    "pdf_url": "https://arxiv.org/pdf/2505.05026v4",
+    "arxiv_url": "http://arxiv.org/abs/2505.05026v4",
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
@@ -15253,129 +15382,6 @@
     "queried_author": "Alexander Wettig",
     "matching_authors": [
       "Alexander Wettig"
-    ]
-  },
-  {
-    "title": "Can Performant LLMs Be Ethical? Quantifying the Impact of Web Crawling Opt-Outs",
-    "authors": [
-      "Dongyang Fan",
-      "Vinko Sabol\u010dec",
-      "Matin Ansaripour",
-      "Ayush Kumar Tarun",
-      "Martin Jaggi",
-      "Antoine Bosselut",
-      "Imanol Schlag"
-    ],
-    "summary": "The increasing adoption of web crawling opt-outs by copyright holders of online content raises critical questions about the impact of data compliance on large language model (LLM) performance. However, little is known about how these restrictions (and the resultant filtering of pretraining datasets)...",
-    "published": "Apr 08",
-    "pdf_url": "https://arxiv.org/pdf/2504.06219v2",
-    "arxiv_url": "http://arxiv.org/abs/2504.06219v2",
-    "queried_author": "Antoine Bosselut",
-    "matching_authors": [
-      "Antoine Bosselut"
-    ]
-  },
-  {
-    "title": "M-Prometheus: A Suite of Open Multilingual LLM Judges",
-    "authors": [
-      "Jos\u00e9 Pombal",
-      "Dongkeun Yoon",
-      "Patrick Fernandes",
-      "Ian Wu",
-      "Seungone Kim",
-      "Ricardo Rei",
-      "Graham Neubig",
-      "Andr\u00e9 F. T. Martins"
-    ],
-    "summary": "The use of language models for automatically evaluating long-form text (LLM-as-a-judge) is becoming increasingly common, yet most LLM judges are optimized exclusively for English, with strategies for enhancing their multilingual evaluation capabilities remaining largely unexplored in the current lit...",
-    "published": "Apr 07",
-    "pdf_url": "https://arxiv.org/pdf/2504.04953v2",
-    "arxiv_url": "http://arxiv.org/abs/2504.04953v2",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig",
-      "Seungone Kim"
-    ]
-  },
-  {
-    "title": "Synthetic Data Generation & Multi-Step RL for Reasoning & Tool Use",
-    "authors": [
-      "Anna Goldie",
-      "Azalia Mirhoseini",
-      "Hao Zhou",
-      "Irene Cai",
-      "Christopher D. Manning"
-    ],
-    "summary": "Reinforcement learning has been shown to improve the performance of large language models. However, traditional approaches like RLHF or RLAIF treat the problem as single-step. As focus shifts toward more complex reasoning and agentic tasks, language models must take multiple steps of text generation...",
-    "published": "Apr 07",
-    "pdf_url": "https://arxiv.org/pdf/2504.04736v2",
-    "arxiv_url": "http://arxiv.org/abs/2504.04736v2",
-    "queried_author": "Christopher D Manning",
-    "matching_authors": [
-      "Christopher D Manning"
-    ]
-  },
-  {
-    "title": "Steering off Course: Reliability Challenges in Steering Language Models",
-    "authors": [
-      "Patrick Queiroz Da Silva",
-      "Hari Sethuraman",
-      "Dheeraj Rajagopal",
-      "Hannaneh Hajishirzi",
-      "Sachin Kumar"
-    ],
-    "summary": "Steering methods for language models (LMs) have gained traction as lightweight alternatives to fine-tuning, enabling targeted modifications to model activations. However, prior studies primarily report results on a few models, leaving critical gaps in understanding the robustness of these methods. I...",
-    "published": "Apr 06",
-    "pdf_url": "https://arxiv.org/pdf/2504.04635v1",
-    "arxiv_url": "http://arxiv.org/abs/2504.04635v1",
-    "queried_author": "Hannaneh Hajishirzi",
-    "matching_authors": [
-      "Hannaneh Hajishirzi"
-    ]
-  },
-  {
-    "title": "Retro-Search: Exploring Untaken Paths for Deeper and Efficient Reasoning",
-    "authors": [
-      "Ximing Lu",
-      "Seungju Han",
-      "David Acuna",
-      "Hyunwoo Kim",
-      "Jaehun Jung",
-      "Shrimai Prabhumoye",
-      "Niklas Muennighoff",
-      "Mostofa Patwary",
-      "Mohammad Shoeybi",
-      "Bryan Catanzaro",
-      "Yejin Choi"
-    ],
-    "summary": "Large reasoning models exhibit remarkable reasoning capabilities via long, elaborate reasoning trajectories. Supervised fine-tuning on such reasoning traces, also known as distillation, can be a cost-effective way to boost reasoning capabilities of student models. However, empirical observations rev...",
-    "published": "Apr 06",
-    "pdf_url": "https://arxiv.org/pdf/2504.04383v2",
-    "arxiv_url": "http://arxiv.org/abs/2504.04383v2",
-    "queried_author": "Niklas Muennighoff",
-    "matching_authors": [
-      "Niklas Muennighoff",
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "PolyGuard: A Multilingual Safety Moderation Tool for 17 Languages",
-    "authors": [
-      "Priyanshu Kumar",
-      "Devansh Jain",
-      "Akhila Yerukola",
-      "Liwei Jiang",
-      "Himanshu Beniwal",
-      "Thomas Hartvigsen",
-      "Maarten Sap"
-    ],
-    "summary": "Truly multilingual safety moderation efforts for Large Language Models (LLMs) have been hindered by a narrow focus on a small set of languages (e.g., English, Chinese) as well as a limited scope of safety definition, resulting in significant gaps in moderation capabilities. To bridge these gaps, we ...",
-    "published": "Apr 06",
-    "pdf_url": "https://arxiv.org/pdf/2504.04377v2",
-    "arxiv_url": "http://arxiv.org/abs/2504.04377v2",
-    "queried_author": "Maarten Sap",
-    "matching_authors": [
-      "Maarten Sap"
     ]
   }
 ]
