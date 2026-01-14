@@ -1,5 +1,20 @@
 [
   {
+    "title": "AI as Entertainment",
+    "authors": [
+      "Cody Kommers",
+      "Ari Holtzman"
+    ],
+    "summary": "Generative AI systems are predominantly designed, evaluated, and marketed as intelligent systems which will benefit society by augmenting or automating human cognitive labor, promising to increase personal, corporate, and macroeconomic productivity. But this mainstream narrative about what AI is and...",
+    "published": "Jan 13",
+    "pdf_url": "https://arxiv.org/pdf/2601.08768v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.08768v1",
+    "queried_author": "Ari Holtzman",
+    "matching_authors": [
+      "Ari Holtzman"
+    ]
+  },
+  {
     "title": "The Roots of Performance Disparity in Multilingual Language Models: Intrinsic Modeling Difficulty or Design Choices?",
     "authors": [
       "Chen Shani",
@@ -1745,8 +1760,8 @@
     ],
     "summary": "To handle underspecified or ambiguous queries, AI assistants need a policy for managing their uncertainty to determine (a) when to guess the user intent and answer directly, (b) when to enumerate and answer multiple possible intents, and (c) when to ask a clarifying question. However, such policies ...",
     "published": "Dec 03",
-    "pdf_url": "https://arxiv.org/pdf/2512.04068v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.04068v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.04068v2",
+    "arxiv_url": "http://arxiv.org/abs/2512.04068v2",
     "queried_author": "Jacob Eisenstein",
     "matching_authors": [
       "Jacob Eisenstein"
@@ -2223,10 +2238,10 @@
       "Gregory Valiant",
       "Percy Liang"
     ],
-    "summary": "We study the problem of entropy calibration, which asks whether a language model's entropy over generations matches its log loss on human text. Past work found that models are miscalibrated, with entropy per step increasing (and text quality decreasing) as generations grow longer. This error accumul...",
+    "summary": "We study the problem of entropy calibration, which asks whether a language model's entropy over generations matches its log loss on human text. Past work found that models are miscalibrated, with entropy per step increasing as generations grow longer, due to error accumulation. To calibrate the mode...",
     "published": "Nov 15",
-    "pdf_url": "https://arxiv.org/pdf/2511.11966v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.11966v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.11966v2",
+    "arxiv_url": "http://arxiv.org/abs/2511.11966v2",
     "queried_author": "Percy Liang",
     "matching_authors": [
       "Percy Liang"
@@ -15365,23 +15380,6 @@
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig"
-    ]
-  },
-  {
-    "title": "Lugha-Llama: Adapting Large Language Models for African Languages",
-    "authors": [
-      "Happy Buzaaba",
-      "Alexander Wettig",
-      "David Ifeoluwa Adelani",
-      "Christiane Fellbaum"
-    ],
-    "summary": "Large language models (LLMs) have achieved impressive results in a wide range of natural language applications. However, they often struggle to recognize low-resource languages, in particular African languages, which are not well represented in large training corpora. In this paper, we consider how ...",
-    "published": "Apr 09",
-    "pdf_url": "https://arxiv.org/pdf/2504.06536v1",
-    "arxiv_url": "http://arxiv.org/abs/2504.06536v1",
-    "queried_author": "Alexander Wettig",
-    "matching_authors": [
-      "Alexander Wettig"
     ]
   }
 ]
