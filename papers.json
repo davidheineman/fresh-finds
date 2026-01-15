@@ -1,5 +1,25 @@
 [
   {
+    "title": "PluriHarms: Benchmarking the Full Spectrum of Human Judgments on AI Harm",
+    "authors": [
+      "Jing-Jing Li",
+      "Joel Mire",
+      "Eve Fleisig",
+      "Valentina Pyatkin",
+      "Anne Collins",
+      "Maarten Sap",
+      "Sydney Levine"
+    ],
+    "summary": "Current AI safety frameworks, which often treat harmfulness as binary, lack the flexibility to handle borderline cases where humans meaningfully disagree. To build more pluralistic systems, it is essential to move beyond consensus and instead understand where and why disagreements arise. We introduc...",
+    "published": "Jan 13",
+    "pdf_url": "https://arxiv.org/pdf/2601.08951v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.08951v1",
+    "queried_author": "Maarten Sap",
+    "matching_authors": [
+      "Maarten Sap"
+    ]
+  },
+  {
     "title": "AI as Entertainment",
     "authors": [
       "Cody Kommers",
@@ -1704,8 +1724,8 @@
     ],
     "summary": "Generative machine learning (ML) models hold great promise for accelerating materials discovery through the inverse design of inorganic crystals, enabling an unprecedented exploration of chemical space. Yet, the lack of standardized evaluation frameworks makes it challenging to evaluate, compare, an...",
     "published": "Dec 04",
-    "pdf_url": "https://arxiv.org/pdf/2512.04562v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.04562v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.04562v2",
+    "arxiv_url": "http://arxiv.org/abs/2512.04562v2",
     "queried_author": "Cl\u00e9mentine Fourrier",
     "matching_authors": [
       "Cl\u00e9mentine Fourrier"
@@ -6747,10 +6767,10 @@
       "Rachid Guerraoui",
       "Sanmi Koyejo"
     ],
-    "summary": "Machine learning systems increasingly face requirements to remove entire domains of information -- such as toxic language or biases -- rather than individual user data. This task presents a dilemma: full removal of the unwanted domain data is computationally expensive, while random partial removal i...",
+    "summary": "Machine learning systems increasingly face requirements to remove entire domains of information--such as toxic language or biases--rather than individual user data. This task presents a dilemma: full removal of the unwanted domain data is computationally expensive, while random partial removal is st...",
     "published": "Jul 20",
-    "pdf_url": "https://arxiv.org/pdf/2507.15112v3",
-    "arxiv_url": "http://arxiv.org/abs/2507.15112v3",
+    "pdf_url": "https://arxiv.org/pdf/2507.15112v4",
+    "arxiv_url": "http://arxiv.org/abs/2507.15112v4",
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
@@ -15360,23 +15380,6 @@
     "published": "Apr 09",
     "pdf_url": "https://arxiv.org/pdf/2504.07079v1",
     "arxiv_url": "http://arxiv.org/abs/2504.07079v1",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
-    ]
-  },
-  {
-    "title": "Inducing Programmatic Skills for Agentic Tasks",
-    "authors": [
-      "Zora Zhiruo Wang",
-      "Apurva Gandhi",
-      "Graham Neubig",
-      "Daniel Fried"
-    ],
-    "summary": "To succeed in common digital tasks such as web navigation, agents must carry out a variety of specialized tasks such as searching for products or planning a travel route. To tackle these tasks, agents can bootstrap themselves by learning task-specific skills online through interaction with the web e...",
-    "published": "Apr 09",
-    "pdf_url": "https://arxiv.org/pdf/2504.06821v2",
-    "arxiv_url": "http://arxiv.org/abs/2504.06821v2",
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig"
