@@ -1,5 +1,23 @@
 [
   {
+    "title": "The Algorithmic Gaze: An Audit and Ethnography of the LAION-Aesthetics Predictor Model",
+    "authors": [
+      "Jordan Taylor",
+      "William Agnew",
+      "Maarten Sap",
+      "Sarah E. Fox",
+      "Haiyi Zhu"
+    ],
+    "summary": "Visual generative AI models are trained using a one-size-fits-all measure of aesthetic appeal. However, what is deemed \"aesthetic\" is inextricably linked to personal taste and cultural values, raising the question of whose taste is represented in visual generative AI models. In this work, we study a...",
+    "published": "Jan 14",
+    "pdf_url": "https://arxiv.org/pdf/2601.09896v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.09896v1",
+    "queried_author": "Maarten Sap",
+    "matching_authors": [
+      "Maarten Sap"
+    ]
+  },
+  {
     "title": "PluriHarms: Benchmarking the Full Spectrum of Human Judgments on AI Harm",
     "authors": [
       "Jing-Jing Li",
@@ -3018,8 +3036,8 @@
     ],
     "summary": "Scaling laws describe how language models improve with additional data, parameters, and compute. While widely used, they are typically measured on aggregate test sets. Aggregate evaluations yield clean trends but average over heterogeneous subpopulations, obscuring performance disparities. We introd...",
     "published": "Oct 28",
-    "pdf_url": "https://arxiv.org/pdf/2510.24626v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.24626v1",
+    "pdf_url": "https://arxiv.org/pdf/2510.24626v2",
+    "arxiv_url": "http://arxiv.org/abs/2510.24626v2",
     "queried_author": "Diyi Yang",
     "matching_authors": [
       "Diyi Yang",
@@ -15359,30 +15377,6 @@
     "queried_author": "Jacob Andreas",
     "matching_authors": [
       "Jacob Andreas"
-    ]
-  },
-  {
-    "title": "SkillWeaver: Web Agents can Self-Improve by Discovering and Honing Skills",
-    "authors": [
-      "Boyuan Zheng",
-      "Michael Y. Fatemi",
-      "Xiaolong Jin",
-      "Zora Zhiruo Wang",
-      "Apurva Gandhi",
-      "Yueqi Song",
-      "Yu Gu",
-      "Jayanth Srinivasa",
-      "Gaowen Liu",
-      "Graham Neubig",
-      "Yu Su"
-    ],
-    "summary": "To survive and thrive in complex environments, humans have evolved sophisticated self-improvement mechanisms through environment exploration, hierarchical abstraction of experiences into reuseable skills, and collaborative construction of an ever-growing skill repertoire. Despite recent advancements...",
-    "published": "Apr 09",
-    "pdf_url": "https://arxiv.org/pdf/2504.07079v1",
-    "arxiv_url": "http://arxiv.org/abs/2504.07079v1",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
     ]
   }
 ]
