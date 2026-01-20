@@ -1,5 +1,46 @@
 [
   {
+    "title": "Building Production-Ready Probes For Gemini",
+    "authors": [
+      "J\u00e1nos Kram\u00e1r",
+      "Joshua Engels",
+      "Zheng Wang",
+      "Bilal Chughtai",
+      "Rohin Shah",
+      "Neel Nanda",
+      "Arthur Conmy"
+    ],
+    "summary": "Frontier language model capabilities are improving rapidly. We thus need stronger mitigations against bad actors misusing increasingly powerful systems. Prior work has shown that activation probes may be a promising misuse mitigation technique, but we identify a key remaining challenge: probes fail ...",
+    "published": "Jan 16",
+    "pdf_url": "https://arxiv.org/pdf/2601.11516v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.11516v1",
+    "queried_author": "Neel Nanda",
+    "matching_authors": [
+      "Neel Nanda"
+    ]
+  },
+  {
+    "title": "Massively Multilingual Joint Segmentation and Glossing",
+    "authors": [
+      "Michael Ginn",
+      "Lindia Tjuatja",
+      "Enora Rice",
+      "Ali Marashian",
+      "Maria Valentini",
+      "Jasmine Xu",
+      "Graham Neubig",
+      "Alexis Palmer"
+    ],
+    "summary": "Automated interlinear gloss prediction with neural networks is a promising approach to accelerate language documentation efforts. However, while state-of-the-art models like GlossLM achieve high scores on glossing benchmarks, user studies with linguists have found critical barriers to the usefulness...",
+    "published": "Jan 16",
+    "pdf_url": "https://arxiv.org/pdf/2601.10925v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.10925v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
     "title": "The Algorithmic Gaze: An Audit and Ethnography of the LAION-Aesthetics Predictor Model",
     "authors": [
       "Jordan Taylor",
@@ -3861,20 +3902,21 @@
     "authors": [
       "Nikita Afonin",
       "Nikita Andriyanov",
+      "Vahagn Hovhannisyan",
       "Nikhil Bageshpura",
       "Kyle Liu",
       "Kevin Zhu",
       "Sunishchal Dev",
       "Ashwinee Panda",
-      "Alexander Panchenko",
       "Oleg Rogov",
       "Elena Tutubalina",
+      "Alexander Panchenko",
       "Mikhail Seleznyov"
     ],
     "summary": "Recent work has shown that narrow finetuning can produce broadly misaligned LLMs, a phenomenon termed emergent misalignment (EM). While concerning, these findings were limited to finetuning and activation steering, leaving out in-context learning (ICL). We therefore ask: does EM emerge in ICL? We fi...",
     "published": "Oct 13",
-    "pdf_url": "https://arxiv.org/pdf/2510.11288v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.11288v1",
+    "pdf_url": "https://arxiv.org/pdf/2510.11288v2",
+    "arxiv_url": "http://arxiv.org/abs/2510.11288v2",
     "queried_author": "Ashwinee Panda",
     "matching_authors": [
       "Ashwinee Panda"
@@ -15310,73 +15352,6 @@
     "queried_author": "Ashwinee Panda",
     "matching_authors": [
       "Ashwinee Panda"
-    ]
-  },
-  {
-    "title": "OLMoTrace: Tracing Language Model Outputs Back to Trillions of Training Tokens",
-    "authors": [
-      "Jiacheng Liu",
-      "Taylor Blanton",
-      "Yanai Elazar",
-      "Sewon Min",
-      "YenSung Chen",
-      "Arnavi Chheda-Kothary",
-      "Huy Tran",
-      "Byron Bischoff",
-      "Eric Marsh",
-      "Michael Schmitz",
-      "Cassidy Trier",
-      "Aaron Sarnat",
-      "Jenna James",
-      "Jon Borchardt",
-      "Bailey Kuehl",
-      "Evie Cheng",
-      "Karen Farley",
-      "Sruthi Sreeram",
-      "Taira Anderson",
-      "David Albright",
-      "Carissa Schoenick",
-      "Luca Soldaini",
-      "Dirk Groeneveld",
-      "Rock Yuren Pang",
-      "Pang Wei Koh",
-      "Noah A. Smith",
-      "Sophie Lebrecht",
-      "Yejin Choi",
-      "Hannaneh Hajishirzi",
-      "Ali Farhadi",
-      "Jesse Dodge"
-    ],
-    "summary": "We present OLMoTrace, the first system that traces the outputs of language models back to their full, multi-trillion-token training data in real time. OLMoTrace finds and shows verbatim matches between segments of language model output and documents in the training text corpora. Powered by an extend...",
-    "published": "Apr 09",
-    "pdf_url": "https://arxiv.org/pdf/2504.07096v2",
-    "arxiv_url": "http://arxiv.org/abs/2504.07096v2",
-    "queried_author": "Hannaneh Hajishirzi",
-    "matching_authors": [
-      "Hannaneh Hajishirzi",
-      "Jesse Dodge",
-      "Luca Soldaini",
-      "Noah A. Smith",
-      "Pang Wei Koh",
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Self-Steering Language Models",
-    "authors": [
-      "Gabriel Grand",
-      "Joshua B. Tenenbaum",
-      "Vikash K. Mansinghka",
-      "Alexander K. Lew",
-      "Jacob Andreas"
-    ],
-    "summary": "While test-time reasoning enables language models (LMs) to tackle complex tasks, searching or planning in natural language can be slow, costly, and error-prone. But even when LMs struggle to emulate the precise reasoning steps needed to solve a problem, they often excel at describing its abstract st...",
-    "published": "Apr 09",
-    "pdf_url": "https://arxiv.org/pdf/2504.07081v2",
-    "arxiv_url": "http://arxiv.org/abs/2504.07081v2",
-    "queried_author": "Jacob Andreas",
-    "matching_authors": [
-      "Jacob Andreas"
     ]
   }
 ]
