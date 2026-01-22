@@ -1,5 +1,25 @@
 [
   {
+    "title": "Towards Execution-Grounded Automated AI Research",
+    "authors": [
+      "Chenglei Si",
+      "Zitong Yang",
+      "Yejin Choi",
+      "Emmanuel Cand\u00e8s",
+      "Diyi Yang",
+      "Tatsunori Hashimoto"
+    ],
+    "summary": "Automated AI research holds great potential to accelerate scientific discovery. However, current LLMs often generate plausible-looking but ineffective ideas. Execution grounding may help, but it is unclear whether automated execution is feasible and whether LLMs can learn from the execution feedback...",
+    "published": "Jan 20",
+    "pdf_url": "https://arxiv.org/pdf/2601.14525v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.14525v1",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang",
+      "Yejin Choi"
+    ]
+  },
+  {
     "title": "CooperBench: Why Coding Agents Cannot be Your Teammates Yet",
     "authors": [
       "Arpandeep Khatua",
@@ -1793,8 +1813,8 @@
     ],
     "summary": "Unified multimodal generation architectures that jointly produce text and images have recently emerged as a promising direction for text-to-image (T2I) synthesis. However, many existing systems rely on explicit modality switching, generating reasoning text before switching manually to image generati...",
     "published": "Jan 07",
-    "pdf_url": "https://arxiv.org/pdf/2601.04339v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.04339v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.04339v2",
+    "arxiv_url": "http://arxiv.org/abs/2601.04339v2",
     "queried_author": "Luke Zettlemoyer",
     "matching_authors": [
       "Luke Zettlemoyer"
@@ -16739,25 +16759,6 @@
     "queried_author": "Eunsol Choi",
     "matching_authors": [
       "Eunsol Choi"
-    ]
-  },
-  {
-    "title": "QUDsim: Quantifying Discourse Similarities in LLM-Generated Text",
-    "authors": [
-      "Ramya Namuduri",
-      "Yating Wu",
-      "Anshun Asher Zheng",
-      "Manya Wadhwa",
-      "Greg Durrett",
-      "Junyi Jessy Li"
-    ],
-    "summary": "As large language models become increasingly capable at various writing tasks, their weakness at generating unique and creative content becomes a major liability. Although LLMs have the ability to generate text covering diverse topics, there is an overall sense of repetitiveness across texts that we...",
-    "published": "Apr 12",
-    "pdf_url": "https://arxiv.org/pdf/2504.09373v2",
-    "arxiv_url": "http://arxiv.org/abs/2504.09373v2",
-    "queried_author": "Greg Durrett",
-    "matching_authors": [
-      "Greg Durrett"
     ]
   }
 ]
