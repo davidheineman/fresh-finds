@@ -1,5 +1,89 @@
 [
   {
+    "title": "Learning to Discover at Test Time",
+    "authors": [
+      "Mert Yuksekgonul",
+      "Daniel Koceja",
+      "Xinhao Li",
+      "Federico Bianchi",
+      "Jed McCaleb",
+      "Xiaolong Wang",
+      "Jan Kautz",
+      "Yejin Choi",
+      "James Zou",
+      "Carlos Guestrin",
+      "Yu Sun"
+    ],
+    "summary": "How can we use AI to discover a new state of the art for a scientific problem? Prior work in test-time scaling, such as AlphaEvolve, performs search by prompting a frozen LLM. We perform reinforcement learning at test time, so the LLM can continue to train, but now with experience specific to the te...",
+    "published": "Jan 22",
+    "pdf_url": "https://arxiv.org/pdf/2601.16175v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.16175v1",
+    "queried_author": "Yejin Choi",
+    "matching_authors": [
+      "Yejin Choi"
+    ]
+  },
+  {
+    "title": "Cosmos Policy: Fine-Tuning Video Models for Visuomotor Control and Planning",
+    "authors": [
+      "Moo Jin Kim",
+      "Yihuai Gao",
+      "Tsung-Yi Lin",
+      "Yen-Chen Lin",
+      "Yunhao Ge",
+      "Grace Lam",
+      "Percy Liang",
+      "Shuran Song",
+      "Ming-Yu Liu",
+      "Chelsea Finn",
+      "Jinwei Gu"
+    ],
+    "summary": "Recent video generation models demonstrate remarkable ability to capture complex physical interactions and scene evolution over time. To leverage their spatiotemporal priors, robotics works have adapted video models for policy learning but introduce complexity by requiring multiple stages of post-tr...",
+    "published": "Jan 22",
+    "pdf_url": "https://arxiv.org/pdf/2601.16163v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.16163v1",
+    "queried_author": "Percy Liang",
+    "matching_authors": [
+      "Percy Liang"
+    ]
+  },
+  {
+    "title": "Tracking the Limits of Knowledge Propagation: How LLMs Fail at Multi-Step Reasoning with Conflicting Knowledge",
+    "authors": [
+      "Yiyang Feng",
+      "Zeming Chen",
+      "Haotian Wu",
+      "Jiawei Zhou",
+      "Antoine Bosselut"
+    ],
+    "summary": "A common solution for mitigating outdated or incorrect information in Large Language Models (LLMs) is to provide updated facts in-context or through knowledge editing. However, these methods introduce knowledge conflicts when the knowledge update fails to overwrite the model's parametric knowledge, ...",
+    "published": "Jan 21",
+    "pdf_url": "https://arxiv.org/pdf/2601.15495v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.15495v1",
+    "queried_author": "Antoine Bosselut",
+    "matching_authors": [
+      "Antoine Bosselut"
+    ]
+  },
+  {
+    "title": "Improving MoE Compute Efficiency by Composing Weight and Data Sparsity",
+    "authors": [
+      "Maciej Kilian",
+      "Oleg Mkrtchyan",
+      "Luke Zettlemoyer",
+      "Akshat Shrivastava",
+      "Armen Aghajanyan"
+    ],
+    "summary": "Mixture-of-Experts layers achieve compute efficiency through weight sparsity: each token activates only a subset of experts. Data sparsity, where each expert processes only a subset of tokens, offers a complementary axis. Expert-choice routing implements data sparsity directly but violates causality...",
+    "published": "Jan 21",
+    "pdf_url": "https://arxiv.org/pdf/2601.15370v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.15370v1",
+    "queried_author": "Luke Zettlemoyer",
+    "matching_authors": [
+      "Luke Zettlemoyer"
+    ]
+  },
+  {
     "title": "Towards Execution-Grounded Automated AI Research",
     "authors": [
       "Chenglei Si",
@@ -153,8 +237,8 @@
     ],
     "summary": "The next-token prediction (NTP) objective has been foundational in the development of modern large language models (LLMs), driving advances in fluency and generalization. However, NTP operates at the \\textit{token} level, treating deviations from a single reference continuation as errors even when a...",
     "published": "Jan 16",
-    "pdf_url": "https://arxiv.org/pdf/2601.11791v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.11791v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.11791v2",
+    "arxiv_url": "http://arxiv.org/abs/2601.11791v2",
     "queried_author": "Dan Jurafsky",
     "matching_authors": [
       "Dan Jurafsky"
@@ -12432,20 +12516,20 @@
     ]
   },
   {
-    "title": "SciArena: An Open Evaluation Platform for Foundation Models in Scientific Literature Tasks",
+    "title": "SciArena: An Open Evaluation Platform for Non-Verifiable Scientific Literature-Grounded Tasks",
     "authors": [
       "Yilun Zhao",
       "Kaiyan Zhang",
       "Tiansheng Hu",
       "Sihong Wu",
       "Ronan Le Bras",
+      "Charles McGrady",
       "Taira Anderson",
       "Jonathan Bragg",
       "Joseph Chee Chang",
       "Jesse Dodge",
       "Matt Latzke",
       "Yixin Liu",
-      "Charles McGrady",
       "Xiangru Tang",
       "Zihang Wang",
       "Chen Zhao",
@@ -12453,10 +12537,10 @@
       "Doug Downey",
       "Arman Cohan"
     ],
-    "summary": "We present SciArena, an open and collaborative platform for evaluating foundation models on scientific literature tasks. Unlike traditional benchmarks for scientific literature understanding and synthesis, SciArena engages the research community directly, following the Chatbot Arena evaluation appro...",
+    "summary": "We present SciArena, an open and collaborative platform for evaluating foundation models on scientific literature-grounded tasks. Unlike traditional benchmarks for scientific literature understanding and synthesis, SciArena engages the research community directly, following the Chatbot Arena evaluat...",
     "published": "Jul 01",
-    "pdf_url": "https://arxiv.org/pdf/2507.01001v1",
-    "arxiv_url": "http://arxiv.org/abs/2507.01001v1",
+    "pdf_url": "https://arxiv.org/pdf/2507.01001v2",
+    "arxiv_url": "http://arxiv.org/abs/2507.01001v2",
     "queried_author": "Hannaneh Hajishirzi",
     "matching_authors": [
       "Hannaneh Hajishirzi",
@@ -16682,83 +16766,6 @@
     "queried_author": "Niklas Muennighoff",
     "matching_authors": [
       "Niklas Muennighoff"
-    ]
-  },
-  {
-    "title": "M1: Towards Scalable Test-Time Compute with Mamba Reasoning Models",
-    "authors": [
-      "Junxiong Wang",
-      "Wen-Ding Li",
-      "Daniele Paliotta",
-      "Daniel Ritter",
-      "Alexander M. Rush",
-      "Tri Dao"
-    ],
-    "summary": "Effective reasoning is crucial to solving complex mathematical problems. Recent large language models (LLMs) have boosted performance by scaling test-time computation through long chain-of-thought reasoning. However, transformer-based models are inherently limited in extending context length due to ...",
-    "published": "Apr 14",
-    "pdf_url": "https://arxiv.org/pdf/2504.10449v3",
-    "arxiv_url": "http://arxiv.org/abs/2504.10449v3",
-    "queried_author": "Alexander M Rush",
-    "matching_authors": [
-      "Alexander M Rush",
-      "Alexander M. Rush",
-      "Tri Dao"
-    ]
-  },
-  {
-    "title": "VisualPuzzles: Decoupling Multimodal Reasoning Evaluation from Domain Knowledge",
-    "authors": [
-      "Yueqi Song",
-      "Tianyue Ou",
-      "Yibo Kong",
-      "Zecheng Li",
-      "Graham Neubig",
-      "Xiang Yue"
-    ],
-    "summary": "Current multimodal benchmarks often conflate reasoning with domain-specific knowledge, making it difficult to isolate and evaluate general reasoning abilities in non-expert settings. To address this, we introduce VisualPuzzles, a benchmark that targets visual reasoning while deliberately minimizing ...",
-    "published": "Apr 14",
-    "pdf_url": "https://arxiv.org/pdf/2504.10342v3",
-    "arxiv_url": "http://arxiv.org/abs/2504.10342v3",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
-    ]
-  },
-  {
-    "title": "Labeling Messages as AI-Generated Does Not Reduce Their Persuasive Effects",
-    "authors": [
-      "Isabel O. Gallegos",
-      "Chen Shani",
-      "Weiyan Shi",
-      "Federico Bianchi",
-      "Izzy Gainsburg",
-      "Dan Jurafsky",
-      "Robb Willer"
-    ],
-    "summary": "As generative artificial intelligence (AI) enables the creation and dissemination of information at massive scale and speed, it is increasingly important to understand how people perceive AI-generated content. One prominent policy proposal requires explicitly labeling AI-generated content to increas...",
-    "published": "Apr 14",
-    "pdf_url": "https://arxiv.org/pdf/2504.09865v2",
-    "arxiv_url": "http://arxiv.org/abs/2504.09865v2",
-    "queried_author": "Dan Jurafsky",
-    "matching_authors": [
-      "Dan Jurafsky"
-    ]
-  },
-  {
-    "title": "On Language Models' Sensitivity to Suspicious Coincidences",
-    "authors": [
-      "Sriram Padmanabhan",
-      "Kanishka Misra",
-      "Kyle Mahowald",
-      "Eunsol Choi"
-    ],
-    "summary": "Humans are sensitive to suspicious coincidences when generalizing inductively over data, as they make assumptions as to how the data was sampled. This results in smaller, more specific hypotheses being favored over more general ones. For instance, when provided the set {Austin, Dallas, Houston}, one...",
-    "published": "Apr 13",
-    "pdf_url": "https://arxiv.org/pdf/2504.09387v1",
-    "arxiv_url": "http://arxiv.org/abs/2504.09387v1",
-    "queried_author": "Eunsol Choi",
-    "matching_authors": [
-      "Eunsol Choi"
     ]
   }
 ]
