@@ -1,5 +1,22 @@
 [
   {
+    "title": "Endless Terminals: Scaling RL Environments for Terminal Agents",
+    "authors": [
+      "Kanishk Gandhi",
+      "Shivam Garg",
+      "Noah D. Goodman",
+      "Dimitris Papailiopoulos"
+    ],
+    "summary": "Environments are the bottleneck for self-improving agents. Current terminal benchmarks were built for evaluation, not training; reinforcement learning requires a scalable pipeline, not just a dataset. We introduce Endless Terminals, a fully autonomous pipeline that procedurally generates terminal-us...",
+    "published": "Jan 23",
+    "pdf_url": "https://arxiv.org/pdf/2601.16443v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.16443v1",
+    "queried_author": "Noah Goodman",
+    "matching_authors": [
+      "Noah Goodman"
+    ]
+  },
+  {
     "title": "Learning to Discover at Test Time",
     "authors": [
       "Mert Yuksekgonul",
@@ -66,6 +83,28 @@
     ]
   },
   {
+    "title": "Memorization Dynamics in Knowledge Distillation for Language Models",
+    "authors": [
+      "Jaydeep Borkar",
+      "Karan Chadha",
+      "Niloofar Mireshghallah",
+      "Yuchen Zhang",
+      "Irina-Elena Veliche",
+      "Archi Mitra",
+      "David A. Smith",
+      "Zheng Xu",
+      "Diego Garcia-Olano"
+    ],
+    "summary": "Knowledge Distillation (KD) is increasingly adopted to transfer capabilities from large language models to smaller ones, offering significant improvements in efficiency and utility while often surpassing standard fine-tuning. Beyond performance, KD is also explored as a privacy-preserving mechanism ...",
+    "published": "Jan 21",
+    "pdf_url": "https://arxiv.org/pdf/2601.15394v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.15394v1",
+    "queried_author": "Niloofar Mireshghallah",
+    "matching_authors": [
+      "Niloofar Mireshghallah"
+    ]
+  },
+  {
     "title": "Improving MoE Compute Efficiency by Composing Weight and Data Sparsity",
     "authors": [
       "Maciej Kilian",
@@ -100,6 +139,7 @@
     "queried_author": "Diyi Yang",
     "matching_authors": [
       "Diyi Yang",
+      "Tatsunori Hashimoto",
       "Yejin Choi"
     ]
   },
@@ -278,8 +318,8 @@
     ],
     "summary": "Automated interlinear gloss prediction with neural networks is a promising approach to accelerate language documentation efforts. However, while state-of-the-art models like GlossLM achieve high scores on glossing benchmarks, user studies with linguists have found critical barriers to the usefulness...",
     "published": "Jan 16",
-    "pdf_url": "https://arxiv.org/pdf/2601.10925v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.10925v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.10925v2",
+    "arxiv_url": "http://arxiv.org/abs/2601.10925v2",
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig"
@@ -1640,6 +1680,79 @@
     ]
   },
   {
+    "title": "A.X K1 Technical Report",
+    "authors": [
+      "Sung Jun Cheon",
+      "Jaekyung Cho",
+      "Seongho Choi",
+      "Hyunjun Eun",
+      "Seokhwan Jo",
+      "Jaehyun Jun",
+      "Minsoo Kang",
+      "Jin Kim",
+      "Jiwon Kim",
+      "Minsang Kim",
+      "Sungwan Kim",
+      "Seungsik Kim",
+      "Tae Yoon Kim",
+      "Youngrang Kim",
+      "Hyeongmun Lee",
+      "Sangyeol Lee",
+      "Sungeun Lee",
+      "Youngsoon Lee",
+      "Yujin Lee",
+      "Seongmin Ok",
+      "Chanyong Park",
+      "Hyewoong Park",
+      "Junyoung Park",
+      "Hyunho Yang",
+      "Subin Yi",
+      "Soohyun Bae",
+      "Dhammiko Arya",
+      "Yongseok Choi",
+      "Sangho Choi",
+      "Dongyeon Cho",
+      "Seungmo Cho",
+      "Gyoungeun Han",
+      "Yong-jin Han",
+      "Seokyoung Hong",
+      "Hyeon Hwang",
+      "Wonbeom Jang",
+      "Minjeong Ju",
+      "Wonjin Jung",
+      "Keummin Ka",
+      "Sungil Kang",
+      "Dongnam Kim",
+      "Joonghoon Kim",
+      "Jonghwi Kim",
+      "SaeRom Kim",
+      "Sangjin Kim",
+      "Seongwon Kim",
+      "Youngjin Kim",
+      "Seojin Lee",
+      "Sunwoo Lee",
+      "Taehoon Lee",
+      "Chanwoo Park",
+      "Sohee Park",
+      "Sooyeon Park",
+      "Yohan Ra",
+      "Sereimony Sek",
+      "Seungyeon Seo",
+      "Gun Song",
+      "Sanghoon Woo",
+      "Janghan Yoon",
+      "Sungbin Yoon"
+    ],
+    "summary": "We introduce A.X K1, a 519B-parameter Mixture-of-Experts (MoE) language model trained from scratch. Our design leverages scaling laws to optimize training configurations and vocabulary size under fixed computational budgets. A.X K1 is pre-trained on a corpus of approximately 10T tokens, curated by a...",
+    "published": "Jan 14",
+    "pdf_url": "https://arxiv.org/pdf/2601.09200v2",
+    "arxiv_url": "http://arxiv.org/abs/2601.09200v2",
+    "queried_author": "Yoon Kim",
+    "matching_authors": [
+      "Yoon Kim"
+    ]
+  },
+  {
     "title": "PluriHarms: Benchmarking the Full Spectrum of Human Judgments on AI Harm",
     "authors": [
       "Jing-Jing Li",
@@ -1921,8 +2034,9 @@
     "published": "Jan 07",
     "pdf_url": "https://arxiv.org/pdf/2601.04301v1",
     "arxiv_url": "http://arxiv.org/abs/2601.04301v1",
-    "queried_author": "Sanmi Koyejo",
+    "queried_author": "Niloofar Mireshghallah",
     "matching_authors": [
+      "Niloofar Mireshghallah",
       "Sanmi Koyejo"
     ]
   },
@@ -2109,6 +2223,7 @@
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo",
+      "Tatsunori Hashimoto",
       "Yejin Choi"
     ]
   },
@@ -2867,6 +2982,26 @@
     ]
   },
   {
+    "title": "Distilling to Hybrid Attention Models via KL-Guided Layer Selection",
+    "authors": [
+      "Yanhong Li",
+      "Songlin Yang",
+      "Shawn Tan",
+      "Mayank Mishra",
+      "Rameswar Panda",
+      "Jiawei Zhou",
+      "Yoon Kim"
+    ],
+    "summary": "Distilling pretrained softmax attention Transformers into more efficient hybrid architectures that interleave softmax and linear attention layers is a promising approach for improving the inference efficiency of LLMs without requiring expensive pretraining from scratch. A critical factor in the conv...",
+    "published": "Dec 23",
+    "pdf_url": "https://arxiv.org/pdf/2512.20569v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.20569v1",
+    "queried_author": "Yoon Kim",
+    "matching_authors": [
+      "Yoon Kim"
+    ]
+  },
+  {
     "title": "Why Slop Matters",
     "authors": [
       "Cody Kommers",
@@ -3033,6 +3168,70 @@
     ]
   },
   {
+    "title": "FrontierCS: Evolving Challenges for Evolving Intelligence",
+    "authors": [
+      "Qiuyang Mang",
+      "Wenhao Chai",
+      "Zhifei Li",
+      "Huanzhi Mao",
+      "Shang Zhou",
+      "Alexander Du",
+      "Hanchen Li",
+      "Shu Liu",
+      "Edwin Chen",
+      "Yichuan Wang",
+      "Xieting Chu",
+      "Zerui Cheng",
+      "Yuan Xu",
+      "Tian Xia",
+      "Zirui Wang",
+      "Tianneng Shi",
+      "Jianzhu Yao",
+      "Yilong Zhao",
+      "Qizheng Zhang",
+      "Charlie Ruan",
+      "Zeyu Shen",
+      "Kaiyuan Liu",
+      "Runyuan He",
+      "Dong Xing",
+      "Zerui Li",
+      "Zirong Zeng",
+      "Yige Jiang",
+      "Lufeng Cheng",
+      "Ziyi Zhao",
+      "Youran Sun",
+      "Wesley Zheng",
+      "Meiyuwang Zhang",
+      "Ruyi Ji",
+      "Xuechang Tu",
+      "Zihan Zheng",
+      "Zexing Chen",
+      "Kangyang Zhou",
+      "Zhaozi Wang",
+      "Jingbang Chen",
+      "Aleksandra Korolova",
+      "Peter Henderson",
+      "Pramod Viswanath",
+      "Vijay Ganesh",
+      "Saining Xie",
+      "Zhuang Liu",
+      "Dawn Song",
+      "Sewon Min",
+      "Ion Stoica",
+      "Joseph E. Gonzalez",
+      "Jingbo Shang",
+      "Alvin Cheung"
+    ],
+    "summary": "We introduce FrontierCS, a benchmark of 156 open-ended problems across diverse areas of computer science, designed and reviewed by experts, including CS PhDs and top-tier competitive programming participants and problem setters. Unlike existing benchmarks that focus on tasks with known optimal solut...",
+    "published": "Dec 17",
+    "pdf_url": "https://arxiv.org/pdf/2512.15699v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.15699v1",
+    "queried_author": "Peter Henderson",
+    "matching_authors": [
+      "Peter Henderson"
+    ]
+  },
+  {
     "title": "Bolmo: Byteifying the Next Generation of Language Models",
     "authors": [
       "Benjamin Minixhofer",
@@ -3151,8 +3350,9 @@
     "published": "Dec 15",
     "pdf_url": "https://arxiv.org/pdf/2512.13961v1",
     "arxiv_url": "http://arxiv.org/abs/2512.13961v1",
-    "queried_author": "Alexander Wettig",
+    "queried_author": "Akari Asai",
     "matching_authors": [
+      "Akari Asai",
       "Alexander Wettig",
       "Hamish Ivison",
       "Hannaneh Hajishirzi",
@@ -3721,13 +3921,15 @@
     "published": "Nov 24",
     "pdf_url": "https://arxiv.org/pdf/2511.19399v2",
     "arxiv_url": "http://arxiv.org/abs/2511.19399v2",
-    "queried_author": "Hamish Ivison",
+    "queried_author": "Akari Asai",
     "matching_authors": [
+      "Akari Asai",
       "Hamish Ivison",
       "Hannaneh Hajishirzi",
       "Luca Soldaini",
       "Luke Zettlemoyer",
-      "Pang Wei Koh"
+      "Pang Wei Koh",
+      "Yoon Kim"
     ]
   },
   {
@@ -4090,6 +4292,22 @@
     ]
   },
   {
+    "title": "Reinforcement Learning Improves Traversal of Hierarchical Knowledge in LLMs",
+    "authors": [
+      "Renfei Zhang",
+      "Manasa Kaniselvan",
+      "Niloofar Mireshghallah"
+    ],
+    "summary": "Reinforcement learning (RL) is often credited with improving language model reasoning and generalization at the expense of degrading memorized knowledge. We challenge this narrative by observing that RL-enhanced models consistently outperform their base and supervised fine-tuned (SFT) counterparts o...",
+    "published": "Nov 08",
+    "pdf_url": "https://arxiv.org/pdf/2511.05933v1",
+    "arxiv_url": "http://arxiv.org/abs/2511.05933v1",
+    "queried_author": "Niloofar Mireshghallah",
+    "matching_authors": [
+      "Niloofar Mireshghallah"
+    ]
+  },
+  {
     "title": "Long Grounded Thoughts: Distilling Compositional Visual Reasoning Chains at Scale",
     "authors": [
       "David Acuna",
@@ -4210,6 +4428,22 @@
     "queried_author": "Ludwig Schmidt",
     "matching_authors": [
       "Ludwig Schmidt"
+    ]
+  },
+  {
+    "title": "MIDI-LLM: Adapting Large Language Models for Text-to-MIDI Music Generation",
+    "authors": [
+      "Shih-Lun Wu",
+      "Yoon Kim",
+      "Cheng-Zhi Anna Huang"
+    ],
+    "summary": "We present MIDI-LLM, an LLM for generating multitrack MIDI music from free-form text prompts. Our approach expands a text LLM's vocabulary to include MIDI tokens, and uses a two-stage training recipe to endow text-to-MIDI abilities. By preserving the original LLM's parameter structure, we can direct...",
+    "published": "Nov 06",
+    "pdf_url": "https://arxiv.org/pdf/2511.03942v1",
+    "arxiv_url": "http://arxiv.org/abs/2511.03942v1",
+    "queried_author": "Yoon Kim",
+    "matching_authors": [
+      "Yoon Kim"
     ]
   },
   {
@@ -4486,6 +4720,32 @@
     "matching_authors": [
       "Diyi Yang",
       "William Held"
+    ]
+  },
+  {
+    "title": "Best Practices for Biorisk Evaluations on Open-Weight Bio-Foundation Models",
+    "authors": [
+      "Boyi Wei",
+      "Zora Che",
+      "Nathaniel Li",
+      "Udari Madhushani Sehwag",
+      "Jasper G\u00f6tting",
+      "Samira Nedungadi",
+      "Julian Michael",
+      "Summer Yue",
+      "Dan Hendrycks",
+      "Peter Henderson",
+      "Zifan Wang",
+      "Seth Donoughe",
+      "Mantas Mazeika"
+    ],
+    "summary": "Open-weight bio-foundation models present a dual-use dilemma. While holding great promise for accelerating scientific research and drug development, they could also enable bad actors to develop more deadly bioweapons. To mitigate the risk posed by these models, current approaches focus on filtering ...",
+    "published": "Oct 31",
+    "pdf_url": "https://arxiv.org/pdf/2510.27629v4",
+    "arxiv_url": "http://arxiv.org/abs/2510.27629v4",
+    "queried_author": "Peter Henderson",
+    "matching_authors": [
+      "Peter Henderson"
     ]
   },
   {
@@ -4808,7 +5068,8 @@
     "arxiv_url": "http://arxiv.org/abs/2510.21679v1",
     "queried_author": "Christopher D Manning",
     "matching_authors": [
-      "Christopher D Manning"
+      "Christopher D Manning",
+      "Peter Henderson"
     ]
   },
   {
@@ -5052,7 +5313,8 @@
     "arxiv_url": "http://arxiv.org/abs/2510.18874v2",
     "queried_author": "Danqi Chen",
     "matching_authors": [
-      "Danqi Chen"
+      "Danqi Chen",
+      "Karthik Narasimhan"
     ]
   },
   {
@@ -5106,8 +5368,9 @@
     "published": "Oct 20",
     "pdf_url": "https://arxiv.org/pdf/2510.17733v1",
     "arxiv_url": "http://arxiv.org/abs/2510.17733v1",
-    "queried_author": "Hannaneh Hajishirzi",
+    "queried_author": "Akari Asai",
     "matching_authors": [
+      "Akari Asai",
       "Hannaneh Hajishirzi",
       "Luke Zettlemoyer"
     ]
@@ -5186,8 +5449,9 @@
     "published": "Oct 18",
     "pdf_url": "https://arxiv.org/pdf/2510.16380v1",
     "arxiv_url": "http://arxiv.org/abs/2510.16380v1",
-    "queried_author": "Yejin Choi",
+    "queried_author": "Mitchell Gordon",
     "matching_authors": [
+      "Mitchell Gordon",
       "Yejin Choi"
     ]
   },
@@ -5442,7 +5706,8 @@
     "arxiv_url": "http://arxiv.org/abs/2510.11977v1",
     "queried_author": "Percy Liang",
     "matching_authors": [
-      "Percy Liang"
+      "Percy Liang",
+      "Peter Henderson"
     ]
   },
   {
@@ -5582,6 +5847,29 @@
     "queried_author": "Dan Jurafsky",
     "matching_authors": [
       "Dan Jurafsky"
+    ]
+  },
+  {
+    "title": "RefGrader: Automated Grading of Mathematical Competition Proofs using Agentic Workflows",
+    "authors": [
+      "Hamed Mahdavi",
+      "Pouria Mahdavinia",
+      "Samira Malek",
+      "Pegah Mohammadipour",
+      "Alireza Hashemi",
+      "Majid Daliri",
+      "Alireza Farhadi",
+      "Amir Khasahmadi",
+      "Niloofar Mireshghallah",
+      "Vasant Honavar"
+    ],
+    "summary": "State-of-the-art (SOTA) LLMs have progressed from struggling on proof-based Olympiad problems to solving most of the IMO 2025 problems, with leading systems reportedly handling 5 of 6 problems. Given this progress, we assess how well these models can grade proofs: detecting errors, judging their sev...",
+    "published": "Oct 10",
+    "pdf_url": "https://arxiv.org/pdf/2510.09021v1",
+    "arxiv_url": "http://arxiv.org/abs/2510.09021v1",
+    "queried_author": "Niloofar Mireshghallah",
+    "matching_authors": [
+      "Niloofar Mireshghallah"
     ]
   },
   {
@@ -5731,8 +6019,9 @@
     "published": "Oct 07",
     "pdf_url": "https://arxiv.org/pdf/2510.06084v1",
     "arxiv_url": "http://arxiv.org/abs/2510.06084v1",
-    "queried_author": "Yejin Choi",
+    "queried_author": "Niloofar Mireshghallah",
     "matching_authors": [
+      "Niloofar Mireshghallah",
       "Yejin Choi"
     ]
   },
@@ -5756,6 +6045,23 @@
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
+    ]
+  },
+  {
+    "title": "Learning to Interpret Weight Differences in Language Models",
+    "authors": [
+      "Avichal Goel",
+      "Yoon Kim",
+      "Nir Shavit",
+      "Tony T. Wang"
+    ],
+    "summary": "Finetuning (pretrained) language models is a standard approach for updating their internal parametric knowledge and specializing them to new tasks and domains. However, the corresponding model weight changes (\"weight diffs\") are not generally interpretable. While inspecting the finetuning dataset ca...",
+    "published": "Oct 06",
+    "pdf_url": "https://arxiv.org/pdf/2510.05092v3",
+    "arxiv_url": "http://arxiv.org/abs/2510.05092v3",
+    "queried_author": "Yoon Kim",
+    "matching_authors": [
+      "Yoon Kim"
     ]
   },
   {
@@ -5865,6 +6171,22 @@
     ]
   },
   {
+    "title": "Operationalizing Data Minimization for Privacy-Preserving LLM Prompting",
+    "authors": [
+      "Jijie Zhou",
+      "Niloofar Mireshghallah",
+      "Tianshi Li"
+    ],
+    "summary": "The rapid deployment of large language models (LLMs) in consumer applications has led to frequent exchanges of personal information. To obtain useful responses, users often share more than necessary, increasing privacy risks via memorization, context-based personalization, or security breaches. We p...",
+    "published": "Oct 04",
+    "pdf_url": "https://arxiv.org/pdf/2510.03662v1",
+    "arxiv_url": "http://arxiv.org/abs/2510.03662v1",
+    "queried_author": "Niloofar Mireshghallah",
+    "matching_authors": [
+      "Niloofar Mireshghallah"
+    ]
+  },
+  {
     "title": "OneFlow: Concurrent Mixed-Modal and Interleaved Generation with Edit Flows",
     "authors": [
       "John Nguyen",
@@ -5956,6 +6278,21 @@
     "queried_author": "Christopher Potts",
     "matching_authors": [
       "Christopher Potts"
+    ]
+  },
+  {
+    "title": "Position: Privacy Is Not Just Memorization!",
+    "authors": [
+      "Niloofar Mireshghallah",
+      "Tianshi Li"
+    ],
+    "summary": "The discourse on privacy risks in Large Language Models (LLMs) has disproportionately focused on verbatim memorization of training data, while a constellation of more immediate and scalable privacy threats remain underexplored. This position paper argues that the privacy landscape of LLM systems ext...",
+    "published": "Oct 02",
+    "pdf_url": "https://arxiv.org/pdf/2510.01645v1",
+    "arxiv_url": "http://arxiv.org/abs/2510.01645v1",
+    "queried_author": "Niloofar Mireshghallah",
+    "matching_authors": [
+      "Niloofar Mireshghallah"
     ]
   },
   {
@@ -6216,6 +6553,40 @@
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
+    ]
+  },
+  {
+    "title": "AutoCode: LLMs as Problem Setters for Competitive Programming",
+    "authors": [
+      "Shang Zhou",
+      "Zihan Zheng",
+      "Kaiyuan Liu",
+      "Zeyu Shen",
+      "Zerui Cheng",
+      "Zexing Chen",
+      "Hansen He",
+      "Jianzhu Yao",
+      "Huanzhi Mao",
+      "Qiuyang Mang",
+      "Tianfu Fu",
+      "Beichen Li",
+      "Dongruixuan Li",
+      "Wenhao Chai",
+      "Zhuang Liu",
+      "Aleksandra Korolova",
+      "Peter Henderson",
+      "Natasha Jaques",
+      "Pramod Viswanath",
+      "Saining Xie",
+      "Jingbo Shang"
+    ],
+    "summary": "Writing competitive programming problems is exacting. Authors must: set constraints, input distributions, and edge cases that rule out shortcuts; target specific algorithms (e.g., max-flow, dynamic programming, data structures); and calibrate complexity beyond the reach of most competitors. We argue...",
+    "published": "Sep 29",
+    "pdf_url": "https://arxiv.org/pdf/2510.12803v1",
+    "arxiv_url": "http://arxiv.org/abs/2510.12803v1",
+    "queried_author": "Peter Henderson",
+    "matching_authors": [
+      "Peter Henderson"
     ]
   },
   {
@@ -6659,7 +7030,28 @@
     "arxiv_url": "http://arxiv.org/abs/2509.14786v1",
     "queried_author": "Percy Liang",
     "matching_authors": [
-      "Percy Liang"
+      "Percy Liang",
+      "Tatsunori Hashimoto"
+    ]
+  },
+  {
+    "title": "Synthetic bootstrapped pretraining",
+    "authors": [
+      "Zitong Yang",
+      "Aonan Zhang",
+      "Hong Liu",
+      "Tatsunori Hashimoto",
+      "Emmanuel Cand\u00e8s",
+      "Chong Wang",
+      "Ruoming Pang"
+    ],
+    "summary": "We introduce Synthetic Bootstrapped Pretraining (SBP), a language model (LM) pretraining procedure that first learns a model of relations between documents from the pretraining dataset and then leverages it to synthesize a vast new corpus for joint training. While the standard pretraining teaches LM...",
+    "published": "Sep 17",
+    "pdf_url": "https://arxiv.org/pdf/2509.15248v3",
+    "arxiv_url": "http://arxiv.org/abs/2509.15248v3",
+    "queried_author": "Tatsunori Hashimoto",
+    "matching_authors": [
+      "Tatsunori Hashimoto"
     ]
   },
   {
@@ -6823,6 +7215,23 @@
     ]
   },
   {
+    "title": "Harnessing Optimization Dynamics for Curvature-Informed Model Merging",
+    "authors": [
+      "Pouria Mahdavinia",
+      "Hamed Mahdavi",
+      "Niloofar Mireshghallah",
+      "Mehrdad Mahdavi"
+    ],
+    "summary": "Model merging is an effective post-training strategy for composing capabilities in large language models without joint retraining. We study this in the supervised fine-tuning (SFT) stage, where multiple capability-based SFT checkpoints -- spanning math, code, precise instruction following, general i...",
+    "published": "Sep 14",
+    "pdf_url": "https://arxiv.org/pdf/2509.11167v1",
+    "arxiv_url": "http://arxiv.org/abs/2509.11167v1",
+    "queried_author": "Niloofar Mireshghallah",
+    "matching_authors": [
+      "Niloofar Mireshghallah"
+    ]
+  },
+  {
     "title": "Fluid Language Model Benchmarking",
     "authors": [
       "Valentin Hofmann",
@@ -6955,6 +7364,24 @@
     "queried_author": "Dan Jurafsky",
     "matching_authors": [
       "Dan Jurafsky"
+    ]
+  },
+  {
+    "title": "On the Same Wavelength? Evaluating Pragmatic Reasoning in Language Models across Broad Concepts",
+    "authors": [
+      "Linlu Qiu",
+      "Cedegao E. Zhang",
+      "Joshua B. Tenenbaum",
+      "Yoon Kim",
+      "Roger P. Levy"
+    ],
+    "summary": "Language use is shaped by pragmatics -- i.e., reasoning about communicative goals and norms in context. As language models (LMs) are increasingly used as conversational agents, it becomes ever more important to understand their pragmatic reasoning abilities. We propose an evaluation framework derive...",
+    "published": "Sep 08",
+    "pdf_url": "https://arxiv.org/pdf/2509.06952v2",
+    "arxiv_url": "http://arxiv.org/abs/2509.06952v2",
+    "queried_author": "Yoon Kim",
+    "matching_authors": [
+      "Yoon Kim"
     ]
   },
   {
@@ -7121,7 +7548,8 @@
     "arxiv_url": "http://arxiv.org/abs/2509.01186v1",
     "queried_author": "Danqi Chen",
     "matching_authors": [
-      "Danqi Chen"
+      "Danqi Chen",
+      "Peter Henderson"
     ]
   },
   {
@@ -7703,8 +8131,9 @@
     "published": "Aug 13",
     "pdf_url": "https://arxiv.org/pdf/2508.09603v1",
     "arxiv_url": "http://arxiv.org/abs/2508.09603v1",
-    "queried_author": "Yejin Choi",
+    "queried_author": "Niloofar Mireshghallah",
     "matching_authors": [
+      "Niloofar Mireshghallah",
       "Yejin Choi"
     ]
   },
@@ -8363,6 +8792,25 @@
     ]
   },
   {
+    "title": "Bob's Confetti: Phonetic Memorization Attacks in Music and Video Generation",
+    "authors": [
+      "Jaechul Roh",
+      "Zachary Novack",
+      "Yuefeng Peng",
+      "Niloofar Mireshghallah",
+      "Taylor Berg-Kirkpatrick",
+      "Amir Houmansadr"
+    ],
+    "summary": "Generative AI systems for music and video commonly use text-based filters to prevent the regurgitation of copyrighted material. We expose a fundamental flaw in this approach by introducing Adversarial PhoneTic Prompting (APT), a novel attack that bypasses these safeguards by exploiting phonetic memo...",
+    "published": "Jul 23",
+    "pdf_url": "https://arxiv.org/pdf/2507.17937v3",
+    "arxiv_url": "http://arxiv.org/abs/2507.17937v3",
+    "queried_author": "Niloofar Mireshghallah",
+    "matching_authors": [
+      "Niloofar Mireshghallah"
+    ]
+  },
+  {
     "title": "Beyond Binary Rewards: Training LMs to Reason About Their Uncertainty",
     "authors": [
       "Mehul Damani",
@@ -8379,7 +8827,8 @@
     "arxiv_url": "http://arxiv.org/abs/2507.16806v1",
     "queried_author": "Jacob Andreas",
     "matching_authors": [
-      "Jacob Andreas"
+      "Jacob Andreas",
+      "Yoon Kim"
     ]
   },
   {
@@ -8872,6 +9321,31 @@
     "queried_author": "Sean Welleck",
     "matching_authors": [
       "Sean Welleck"
+    ]
+  },
+  {
+    "title": "Deep Research Comparator: A Platform For Fine-grained Human Annotations of Deep Research Agents",
+    "authors": [
+      "Prahaladh Chandrahasan",
+      "Jiahe Jin",
+      "Zhihan Zhang",
+      "Tevin Wang",
+      "Andy Tang",
+      "Lucy Mo",
+      "Morteza Ziyadi",
+      "Leonardo F. R. Ribeiro",
+      "Zimeng Qiu",
+      "Markus Dreyer",
+      "Akari Asai",
+      "Chenyan Xiong"
+    ],
+    "summary": "Effectively evaluating deep research agents that autonomously search the web, analyze information, and generate reports remains a major challenge, particularly when it comes to assessing long reports and giving detailed feedback on their intermediate steps. To address these gaps, we introduce Deep R...",
+    "published": "Jul 07",
+    "pdf_url": "https://arxiv.org/pdf/2507.05495v2",
+    "arxiv_url": "http://arxiv.org/abs/2507.05495v2",
+    "queried_author": "Akari Asai",
+    "matching_authors": [
+      "Akari Asai"
     ]
   },
   {
@@ -12498,6 +12972,29 @@
     ]
   },
   {
+    "title": "Penalizing Transparency? How AI Disclosure and Author Demographics Shape Human and AI Judgments About Writing",
+    "authors": [
+      "Inyoung Cheong",
+      "Alicia Guo",
+      "Mina Lee",
+      "Zhehui Liao",
+      "Kowe Kadoma",
+      "Dongyoung Go",
+      "Joseph Chee Chang",
+      "Peter Henderson",
+      "Mor Naaman",
+      "Amy X. Zhang"
+    ],
+    "summary": "As AI integrates in various types of human writing, calls for transparency around AI assistance are growing. However, if transparency operates on uneven ground and certain identity groups bear a heavier cost for being honest, then the burden of openness becomes asymmetrical. This study investigates ...",
+    "published": "Jul 02",
+    "pdf_url": "https://arxiv.org/pdf/2507.01418v1",
+    "arxiv_url": "http://arxiv.org/abs/2507.01418v1",
+    "queried_author": "Peter Henderson",
+    "matching_authors": [
+      "Peter Henderson"
+    ]
+  },
+  {
     "title": "Frustratingly Simple Retrieval Improves Challenging, Reasoning-Intensive Benchmarks",
     "authors": [
       "Xinxi Lyu",
@@ -12765,7 +13262,8 @@
     "arxiv_url": "http://arxiv.org/abs/2506.20803v1",
     "queried_author": "Diyi Yang",
     "matching_authors": [
-      "Diyi Yang"
+      "Diyi Yang",
+      "Tatsunori Hashimoto"
     ]
   },
   {
@@ -12884,6 +13382,26 @@
     "queried_author": "Noah Goodman",
     "matching_authors": [
       "Noah Goodman"
+    ]
+  },
+  {
+    "title": "Probing AI Safety with Source Code",
+    "authors": [
+      "Ujwal Narayan",
+      "Shreyas Chaudhari",
+      "Ashwin Kalyan",
+      "Tanmay Rajpurohit",
+      "Karthik Narasimhan",
+      "Ameet Deshpande",
+      "Vishvak Murahari"
+    ],
+    "summary": "Large language models (LLMs) have become ubiquitous, interfacing with humans in numerous safety-critical applications. This necessitates improving capabilities, but importantly coupled with greater safety measures to align these models with human values and preferences. In this work, we demonstrate ...",
+    "published": "Jun 25",
+    "pdf_url": "https://arxiv.org/pdf/2506.20471v1",
+    "arxiv_url": "http://arxiv.org/abs/2506.20471v1",
+    "queried_author": "Karthik Narasimhan",
+    "matching_authors": [
+      "Karthik Narasimhan"
     ]
   },
   {
@@ -13187,8 +13705,9 @@
     "published": "Jun 19",
     "pdf_url": "https://arxiv.org/pdf/2506.17336v3",
     "arxiv_url": "http://arxiv.org/abs/2506.17336v3",
-    "queried_author": "Yejin Choi",
+    "queried_author": "Niloofar Mireshghallah",
     "matching_authors": [
+      "Niloofar Mireshghallah",
       "Yejin Choi"
     ]
   },
@@ -13491,6 +14010,38 @@
     ]
   },
   {
+    "title": "LiveCodeBench Pro: How Do Olympiad Medalists Judge LLMs in Competitive Programming?",
+    "authors": [
+      "Zihan Zheng",
+      "Zerui Cheng",
+      "Zeyu Shen",
+      "Shang Zhou",
+      "Kaiyuan Liu",
+      "Hansen He",
+      "Dongruixuan Li",
+      "Stanley Wei",
+      "Hangyi Hao",
+      "Jianzhu Yao",
+      "Peiyao Sheng",
+      "Zixuan Wang",
+      "Wenhao Chai",
+      "Aleksandra Korolova",
+      "Peter Henderson",
+      "Sanjeev Arora",
+      "Pramod Viswanath",
+      "Jingbo Shang",
+      "Saining Xie"
+    ],
+    "summary": "Recent reports claim that large language models (LLMs) now outperform elite humans in competitive programming. Drawing on knowledge from a group of medalists in international algorithmic contests, we revisit this claim, examining how LLMs differ from human experts and where limitations still remain....",
+    "published": "Jun 13",
+    "pdf_url": "https://arxiv.org/pdf/2506.11928v1",
+    "arxiv_url": "http://arxiv.org/abs/2506.11928v1",
+    "queried_author": "Peter Henderson",
+    "matching_authors": [
+      "Peter Henderson"
+    ]
+  },
+  {
     "title": "Convergent Linear Representations of Emergent Misalignment",
     "authors": [
       "Anna Soligo",
@@ -13571,6 +14122,25 @@
       "Hannaneh Hajishirzi",
       "Luke Zettlemoyer",
       "Pang Wei Koh"
+    ]
+  },
+  {
+    "title": "Self-Adapting Language Models",
+    "authors": [
+      "Adam Zweiger",
+      "Jyothish Pari",
+      "Han Guo",
+      "Ekin Aky\u00fcrek",
+      "Yoon Kim",
+      "Pulkit Agrawal"
+    ],
+    "summary": "Large language models (LLMs) are powerful but static; they lack mechanisms to adapt their weights in response to new tasks, knowledge, or examples. We introduce Self-Adapting LLMs (SEAL), a framework that enables LLMs to self-adapt by generating their own finetuning data and update directives. Given...",
+    "published": "Jun 12",
+    "pdf_url": "https://arxiv.org/pdf/2506.10943v2",
+    "arxiv_url": "http://arxiv.org/abs/2506.10943v2",
+    "queried_author": "Yoon Kim",
+    "matching_authors": [
+      "Yoon Kim"
     ]
   },
   {
@@ -13748,6 +14318,24 @@
     ]
   },
   {
+    "title": "$\u03c4^2$-Bench: Evaluating Conversational Agents in a Dual-Control Environment",
+    "authors": [
+      "Victor Barres",
+      "Honghua Dong",
+      "Soham Ray",
+      "Xujie Si",
+      "Karthik Narasimhan"
+    ],
+    "summary": "Existing benchmarks for conversational AI agents simulate single-control environments, where only the AI agent can use tools to interact with the world, while the user remains a passive information provider. This differs from real-world scenarios like technical support, where users need to actively ...",
+    "published": "Jun 09",
+    "pdf_url": "https://arxiv.org/pdf/2506.07982v1",
+    "arxiv_url": "http://arxiv.org/abs/2506.07982v1",
+    "queried_author": "Karthik Narasimhan",
+    "matching_authors": [
+      "Karthik Narasimhan"
+    ]
+  },
+  {
     "title": "Cost-Optimal Active AI Model Evaluation",
     "authors": [
       "Anastasios N. Angelopoulos",
@@ -13874,6 +14462,23 @@
     "queried_author": "Greg Durrett",
     "matching_authors": [
       "Greg Durrett"
+    ]
+  },
+  {
+    "title": "Contextual Experience Replay for Self-Improvement of Language Agents",
+    "authors": [
+      "Yitao Liu",
+      "Chenglei Si",
+      "Karthik Narasimhan",
+      "Shunyu Yao"
+    ],
+    "summary": "Large language model (LLM) agents have been applied to sequential decision-making tasks such as web navigation, but without any environment-specific experiences, they often fail in these complex tasks. Moreover, current LLM agents are not designed to continually learn from past experiences during in...",
+    "published": "Jun 07",
+    "pdf_url": "https://arxiv.org/pdf/2506.06698v1",
+    "arxiv_url": "http://arxiv.org/abs/2506.06698v1",
+    "queried_author": "Karthik Narasimhan",
+    "matching_authors": [
+      "Karthik Narasimhan"
     ]
   },
   {
@@ -14037,7 +14642,8 @@
     "arxiv_url": "http://arxiv.org/abs/2506.05579v2",
     "queried_author": "Diyi Yang",
     "matching_authors": [
-      "Diyi Yang"
+      "Diyi Yang",
+      "Karthik Narasimhan"
     ]
   },
   {
@@ -14117,7 +14723,8 @@
     "arxiv_url": "http://arxiv.org/abs/2506.04761v2",
     "queried_author": "Tri Dao",
     "matching_authors": [
-      "Tri Dao"
+      "Tri Dao",
+      "Yoon Kim"
     ]
   },
   {
@@ -14289,6 +14896,7 @@
       "Greg Durrett",
       "Ludwig Schmidt",
       "Niklas Muennighoff",
+      "Tatsunori Hashimoto",
       "Yejin Choi"
     ]
   },
@@ -14743,6 +15351,25 @@
     ]
   },
   {
+    "title": "Tell, Don't Show: Leveraging Language Models' Abstractive Retellings to Model Literary Themes",
+    "authors": [
+      "Li Lucy",
+      "Camilla Griffiths",
+      "Sarah Levine",
+      "Jennifer L. Eberhardt",
+      "Dorottya Demszky",
+      "David Bamman"
+    ],
+    "summary": "Conventional bag-of-words approaches for topic modeling, like latent Dirichlet allocation (LDA), struggle with literary text. Literature challenges lexical methods because narrative language focuses on immersive sensory details instead of abstractive description or exposition: writers are advised to...",
+    "published": "May 29",
+    "pdf_url": "https://arxiv.org/pdf/2505.23166v1",
+    "arxiv_url": "http://arxiv.org/abs/2505.23166v1",
+    "queried_author": "David Bamman",
+    "matching_authors": [
+      "David Bamman"
+    ]
+  },
+  {
     "title": "OMNIGUARD: An Efficient Approach for AI Safety Moderation Across Languages and Modalities",
     "authors": [
       "Sahil Verma",
@@ -14760,6 +15387,45 @@
     "queried_author": "Luke Zettlemoyer",
     "matching_authors": [
       "Luke Zettlemoyer"
+    ]
+  },
+  {
+    "title": "ER-REASON: A Benchmark Dataset for LLM-Based Clinical Reasoning in the Emergency Room",
+    "authors": [
+      "Nikita Mehandru",
+      "Niloufar Golchini",
+      "David Bamman",
+      "Travis Zack",
+      "Melanie F. Molina",
+      "Ahmed Alaa"
+    ],
+    "summary": "Large language models (LLMs) have been extensively evaluated on medical question answering tasks based on licensing exams. However, real-world evaluations often depend on costly human annotators, and existing benchmarks tend to focus on isolated tasks that rarely capture the clinical reasoning or fu...",
+    "published": "May 28",
+    "pdf_url": "https://arxiv.org/pdf/2505.22919v2",
+    "arxiv_url": "http://arxiv.org/abs/2505.22919v2",
+    "queried_author": "David Bamman",
+    "matching_authors": [
+      "David Bamman"
+    ]
+  },
+  {
+    "title": "FlashFormer: Whole-Model Kernels for Efficient Low-Batch Inference",
+    "authors": [
+      "Aniruddha Nrusimha",
+      "William Brandon",
+      "Mayank Mishra",
+      "Yikang Shen",
+      "Rameswar Panda",
+      "Jonathan Ragan-Kelley",
+      "Yoon Kim"
+    ],
+    "summary": "The size and compute characteristics of modern large language models have led to an increased interest in developing specialized kernels tailored for particular training and inference workloads. Existing kernels primarily optimize for compute utilization, targeting the large-batch training and infer...",
+    "published": "May 28",
+    "pdf_url": "https://arxiv.org/pdf/2505.22758v2",
+    "arxiv_url": "http://arxiv.org/abs/2505.22758v2",
+    "queried_author": "Yoon Kim",
+    "matching_authors": [
+      "Yoon Kim"
     ]
   },
   {
@@ -15074,6 +15740,35 @@
     ]
   },
   {
+    "title": "Exploring the limits of strong membership inference attacks on large language models",
+    "authors": [
+      "Jamie Hayes",
+      "Ilia Shumailov",
+      "Christopher A. Choquette-Choo",
+      "Matthew Jagielski",
+      "George Kaissis",
+      "Milad Nasr",
+      "Sahra Ghalebikesabi",
+      "Meenatchi Sundaram Mutu Selva Annamalai",
+      "Niloofar Mireshghallah",
+      "Igor Shilov",
+      "Matthieu Meeus",
+      "Yves-Alexandre de Montjoye",
+      "Katherine Lee",
+      "Franziska Boenisch",
+      "Adam Dziedzic",
+      "A. Feder Cooper"
+    ],
+    "summary": "State-of-the-art membership inference attacks (MIAs) typically require training many reference models, making it difficult to scale these attacks to large pre-trained language models (LLMs). As a result, prior research has either relied on weaker attacks that avoid training references (e.g., fine-tu...",
+    "published": "May 24",
+    "pdf_url": "https://arxiv.org/pdf/2505.18773v3",
+    "arxiv_url": "http://arxiv.org/abs/2505.18773v3",
+    "queried_author": "Niloofar Mireshghallah",
+    "matching_authors": [
+      "Niloofar Mireshghallah"
+    ]
+  },
+  {
     "title": "Enhancing Training Data Attribution with Representational Optimization",
     "authors": [
       "Weiwei Sun",
@@ -15092,6 +15787,25 @@
     ]
   },
   {
+    "title": "Dynamic Risk Assessments for Offensive Cybersecurity Agents",
+    "authors": [
+      "Boyi Wei",
+      "Benedikt Stroebl",
+      "Jiacen Xu",
+      "Joie Zhang",
+      "Zhou Li",
+      "Peter Henderson"
+    ],
+    "summary": "Foundation models are increasingly becoming better autonomous programmers, raising the prospect that they could also automate dangerous offensive cyber-operations. Current frontier model audits probe the cybersecurity risks of such agents, but most fail to account for the degrees of freedom availabl...",
+    "published": "May 23",
+    "pdf_url": "https://arxiv.org/pdf/2505.18384v5",
+    "arxiv_url": "http://arxiv.org/abs/2505.18384v5",
+    "queried_author": "Peter Henderson",
+    "matching_authors": [
+      "Peter Henderson"
+    ]
+  },
+  {
     "title": "VideoGameBench: Can Vision-Language Models complete popular video games?",
     "authors": [
       "Alex L. Zhang",
@@ -15103,8 +15817,9 @@
     "published": "May 23",
     "pdf_url": "https://arxiv.org/pdf/2505.18134v2",
     "arxiv_url": "http://arxiv.org/abs/2505.18134v2",
-    "queried_author": "Karthik R Narasimhan",
+    "queried_author": "Karthik Narasimhan",
     "matching_authors": [
+      "Karthik Narasimhan",
       "Karthik R Narasimhan"
     ]
   },
@@ -15165,6 +15880,25 @@
     ]
   },
   {
+    "title": "Multimodal Conversation Structure Understanding",
+    "authors": [
+      "Kent K. Chang",
+      "Mackenzie Hanh Cramer",
+      "Anna Ho",
+      "Ti Ti Nguyen",
+      "Yilin Yuan",
+      "David Bamman"
+    ],
+    "summary": "Conversations are usually structured by roles -- who is speaking, who's being addressed, and who's listening -- and unfold in threads that break with changes in speaker floor or topical focus. While large language models (LLMs) have shown incredible capabilities in dialogue and reasoning, their abil...",
+    "published": "May 23",
+    "pdf_url": "https://arxiv.org/pdf/2505.17536v2",
+    "arxiv_url": "http://arxiv.org/abs/2505.17536v2",
+    "queried_author": "David Bamman",
+    "matching_authors": [
+      "David Bamman"
+    ]
+  },
+  {
     "title": "CHART-6: Human-Centered Evaluation of Data Visualization Understanding in Vision-Language Models",
     "authors": [
       "Arnav Verma",
@@ -15213,6 +15947,27 @@
     "queried_author": "Seungone Kim",
     "matching_authors": [
       "Seungone Kim"
+    ]
+  },
+  {
+    "title": "PaTH Attention: Position Encoding via Accumulating Householder Transformations",
+    "authors": [
+      "Songlin Yang",
+      "Yikang Shen",
+      "Kaiyue Wen",
+      "Shawn Tan",
+      "Mayank Mishra",
+      "Liliang Ren",
+      "Rameswar Panda",
+      "Yoon Kim"
+    ],
+    "summary": "The attention mechanism is a core primitive in modern large language models (LLMs) and AI more broadly. Since attention by itself is permutation-invariant, position encoding is essential for modeling structured domains such as language. Rotary position encoding (RoPE) has emerged as the de facto sta...",
+    "published": "May 22",
+    "pdf_url": "https://arxiv.org/pdf/2505.16381v1",
+    "arxiv_url": "http://arxiv.org/abs/2505.16381v1",
+    "queried_author": "Yoon Kim",
+    "matching_authors": [
+      "Yoon Kim"
     ]
   },
   {
@@ -15467,9 +16222,29 @@
     "published": "May 20",
     "pdf_url": "https://arxiv.org/pdf/2505.14569v1",
     "arxiv_url": "http://arxiv.org/abs/2505.14569v1",
-    "queried_author": "Karthik R Narasimhan",
+    "queried_author": "Karthik Narasimhan",
     "matching_authors": [
+      "Karthik Narasimhan",
       "Karthik R Narasimhan"
+    ]
+  },
+  {
+    "title": "Can Large Language Models Really Recognize Your Name?",
+    "authors": [
+      "Dzung Pham",
+      "Peter Kairouz",
+      "Niloofar Mireshghallah",
+      "Eugene Bagdasarian",
+      "Chau Minh Pham",
+      "Amir Houmansadr"
+    ],
+    "summary": "Large language models (LLMs) are increasingly being used to protect sensitive user data. However, current LLM-based privacy solutions assume that these models can reliably detect personally identifiable information (PII), particularly named entities. In this paper, we challenge that assumption by re...",
+    "published": "May 20",
+    "pdf_url": "https://arxiv.org/pdf/2505.14549v1",
+    "arxiv_url": "http://arxiv.org/abs/2505.14549v1",
+    "queried_author": "Niloofar Mireshghallah",
+    "matching_authors": [
+      "Niloofar Mireshghallah"
     ]
   },
   {
@@ -15842,6 +16617,24 @@
     ]
   },
   {
+    "title": "Putting It All into Context: Simplifying Agents with LCLMs",
+    "authors": [
+      "Mingjian Jiang",
+      "Yangjun Ruan",
+      "Luis Lastras",
+      "Pavan Kapanipathi",
+      "Tatsunori Hashimoto"
+    ],
+    "summary": "Recent advances in language model (LM) agents have demonstrated significant potential for automating complex real-world tasks. To make progress on these difficult tasks, LM agent architectures have become increasingly complex, often incorporating multi-step retrieval tools, multiple agents, and scaf...",
+    "published": "May 12",
+    "pdf_url": "https://arxiv.org/pdf/2505.08120v1",
+    "arxiv_url": "http://arxiv.org/abs/2505.08120v1",
+    "queried_author": "Tatsunori Hashimoto",
+    "matching_authors": [
+      "Tatsunori Hashimoto"
+    ]
+  },
+  {
     "title": "MLE-Dojo: Interactive Environments for Empowering LLM Agents in Machine Learning Engineering",
     "authors": [
       "Rushi Qiang",
@@ -15863,6 +16656,27 @@
     "queried_author": "Percy Liang",
     "matching_authors": [
       "Percy Liang"
+    ]
+  },
+  {
+    "title": "LongCodeBench: Evaluating Coding LLMs at 1M Context Windows",
+    "authors": [
+      "Stefano Rando",
+      "Luca Romani",
+      "Alessio Sampieri",
+      "Luca Franco",
+      "John Yang",
+      "Yuta Kyuragi",
+      "Fabio Galasso",
+      "Tatsunori Hashimoto"
+    ],
+    "summary": "Context lengths for models have grown rapidly, from thousands to millions of tokens in just a few years. The extreme context sizes of modern long-context models have made it difficult to construct realistic long-context benchmarks -- not only due to the cost of collecting million-context tasks but a...",
+    "published": "May 12",
+    "pdf_url": "https://arxiv.org/pdf/2505.07897v3",
+    "arxiv_url": "http://arxiv.org/abs/2505.07897v3",
+    "queried_author": "Tatsunori Hashimoto",
+    "matching_authors": [
+      "Tatsunori Hashimoto"
     ]
   },
   {
@@ -15993,7 +16807,8 @@
     "arxiv_url": "http://arxiv.org/abs/2505.03970v1",
     "queried_author": "Christopher D Manning",
     "matching_authors": [
-      "Christopher D Manning"
+      "Christopher D Manning",
+      "Peter Henderson"
     ]
   },
   {
@@ -16060,712 +16875,6 @@
     "queried_author": "Diyi Yang",
     "matching_authors": [
       "Diyi Yang"
-    ]
-  },
-  {
-    "title": "Can LLM-Simulated Practice and Feedback Upskill Human Counselors? A Randomized Study with 90+ Novice Counselors",
-    "authors": [
-      "Ryan Louie",
-      "Ifdita Hasan Orney",
-      "Juan Pablo Pacheco",
-      "Raj Sanjay Shah",
-      "Emma Brunskill",
-      "Diyi Yang"
-    ],
-    "summary": "Training more counselors, from clinical students to peer supporters, can help meet the demand for accessible mental health support; however, current training approaches remain resource-intensive and difficult to scale effectively. Large Language Models (LLMs) offer promising solutions for growing co...",
-    "published": "May 05",
-    "pdf_url": "https://arxiv.org/pdf/2505.02428v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.02428v1",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang"
-    ]
-  },
-  {
-    "title": "PoseX: AI Defeats Physics Approaches on Protein-Ligand Cross Docking",
-    "authors": [
-      "Yize Jiang",
-      "Xinze Li",
-      "Yuanyuan Zhang",
-      "Jin Han",
-      "Youjun Xu",
-      "Ayush Pandit",
-      "Zaixi Zhang",
-      "Mengdi Wang",
-      "Mengyang Wang",
-      "Chong Liu",
-      "Guang Yang",
-      "Yejin Choi",
-      "Wu-Jun Li",
-      "Tianfan Fu",
-      "Fang Wu",
-      "Junhong Liu"
-    ],
-    "summary": "Existing protein-ligand docking studies typically focus on the self-docking scenario, which is less practical in real applications. Moreover, some studies involve heavy frameworks requiring extensive training, posing challenges for convenient and efficient assessment of docking methods. To fill thes...",
-    "published": "May 03",
-    "pdf_url": "https://arxiv.org/pdf/2505.01700v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.01700v2",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "SWE-smith: Scaling Data for Software Engineering Agents",
-    "authors": [
-      "John Yang",
-      "Kilian Lieret",
-      "Carlos E. Jimenez",
-      "Alexander Wettig",
-      "Kabir Khandpur",
-      "Yanzhe Zhang",
-      "Binyuan Hui",
-      "Ofir Press",
-      "Ludwig Schmidt",
-      "Diyi Yang"
-    ],
-    "summary": "Despite recent progress in Language Models (LMs) for software engineering, collecting training data remains a significant pain point. Existing datasets are small, with at most 1,000s of training instances from 11 or fewer GitHub repositories. The procedures to curate such datasets are often complex,...",
-    "published": "Apr 30",
-    "pdf_url": "https://arxiv.org/pdf/2504.21798v2",
-    "arxiv_url": "http://arxiv.org/abs/2504.21798v2",
-    "queried_author": "Alexander Wettig",
-    "matching_authors": [
-      "Alexander Wettig",
-      "Diyi Yang",
-      "Ludwig Schmidt"
-    ]
-  },
-  {
-    "title": "Base Models Beat Aligned Models at Randomness and Creativity",
-    "authors": [
-      "Peter West",
-      "Christopher Potts"
-    ],
-    "summary": "Alignment has quickly become a default ingredient in LLM development, with techniques such as reinforcement learning from human feedback making models act safely, follow instructions, and perform ever-better on complex tasks. While these techniques are certainly useful, we propose that they should n...",
-    "published": "Apr 30",
-    "pdf_url": "https://arxiv.org/pdf/2505.00047v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.00047v2",
-    "queried_author": "Christopher Potts",
-    "matching_authors": [
-      "Christopher Potts"
-    ]
-  },
-  {
-    "title": "The Leaderboard Illusion",
-    "authors": [
-      "Shivalika Singh",
-      "Yiyang Nan",
-      "Alex Wang",
-      "Daniel D'Souza",
-      "Sayash Kapoor",
-      "Ahmet \u00dcst\u00fcn",
-      "Sanmi Koyejo",
-      "Yuntian Deng",
-      "Shayne Longpre",
-      "Noah A. Smith",
-      "Beyza Ermis",
-      "Marzieh Fadaee",
-      "Sara Hooker"
-    ],
-    "summary": "Measuring progress is fundamental to the advancement of any scientific field. As benchmarks play an increasingly central role, they also grow more susceptible to distortion. Chatbot Arena has emerged as the go-to leaderboard for ranking the most capable AI systems. Yet, in this work we identify syst...",
-    "published": "Apr 29",
-    "pdf_url": "https://arxiv.org/pdf/2504.20879v2",
-    "arxiv_url": "http://arxiv.org/abs/2504.20879v2",
-    "queried_author": "Noah A. Smith",
-    "matching_authors": [
-      "Noah A. Smith",
-      "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "Cooking Up Creativity: Enhancing LLM Creativity through Structured Recombination",
-    "authors": [
-      "Moran Mizrahi",
-      "Chen Shani",
-      "Gabriel Stanovsky",
-      "Dan Jurafsky",
-      "Dafna Shahaf"
-    ],
-    "summary": "Large Language Models (LLMs) excel at many tasks, yet they struggle to produce truly creative, diverse ideas. In this paper, we introduce a novel approach that enhances LLM creativity. We apply LLMs for translating between natural language and structured representations, and perform the core creativ...",
-    "published": "Apr 29",
-    "pdf_url": "https://arxiv.org/pdf/2504.20643v2",
-    "arxiv_url": "http://arxiv.org/abs/2504.20643v2",
-    "queried_author": "Dan Jurafsky",
-    "matching_authors": [
-      "Dan Jurafsky"
-    ]
-  },
-  {
-    "title": "ReasonIR: Training Retrievers for Reasoning Tasks",
-    "authors": [
-      "Rulin Shao",
-      "Rui Qiao",
-      "Varsha Kishore",
-      "Niklas Muennighoff",
-      "Xi Victoria Lin",
-      "Daniela Rus",
-      "Bryan Kian Hsiang Low",
-      "Sewon Min",
-      "Wen-tau Yih",
-      "Pang Wei Koh",
-      "Luke Zettlemoyer"
-    ],
-    "summary": "We present ReasonIR-8B, the first retriever specifically trained for general reasoning tasks. Existing retrievers have shown limited gains on reasoning tasks, in part because existing training datasets focus on short factual queries tied to documents that straightforwardly answer them. We develop a ...",
-    "published": "Apr 29",
-    "pdf_url": "https://arxiv.org/pdf/2504.20595v1",
-    "arxiv_url": "http://arxiv.org/abs/2504.20595v1",
-    "queried_author": "Luke Zettlemoyer",
-    "matching_authors": [
-      "Luke Zettlemoyer",
-      "Niklas Muennighoff",
-      "Pang Wei Koh"
-    ]
-  },
-  {
-    "title": "A False Sense of Privacy: Evaluating Textual Data Sanitization Beyond Surface-level Privacy Leakage",
-    "authors": [
-      "Rui Xin",
-      "Niloofar Mireshghallah",
-      "Shuyue Stella Li",
-      "Michael Duan",
-      "Hyunwoo Kim",
-      "Yejin Choi",
-      "Yulia Tsvetkov",
-      "Sewoong Oh",
-      "Pang Wei Koh"
-    ],
-    "summary": "Sanitizing sensitive text data typically involves removing personally identifiable information (PII) or generating synthetic data under the assumption that these methods adequately protect privacy; however, their effectiveness is often only assessed by measuring the leakage of explicit identifiers b...",
-    "published": "Apr 28",
-    "pdf_url": "https://arxiv.org/pdf/2504.21035v2",
-    "arxiv_url": "http://arxiv.org/abs/2504.21035v2",
-    "queried_author": "Pang Wei Koh",
-    "matching_authors": [
-      "Pang Wei Koh",
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "RAGEN: Understanding Self-Evolution in LLM Agents via Multi-Turn Reinforcement Learning",
-    "authors": [
-      "Zihan Wang",
-      "Kangrui Wang",
-      "Qineng Wang",
-      "Pingyue Zhang",
-      "Linjie Li",
-      "Zhengyuan Yang",
-      "Xing Jin",
-      "Kefan Yu",
-      "Minh Nhat Nguyen",
-      "Licheng Liu",
-      "Eli Gottlieb",
-      "Yiping Lu",
-      "Kyunghyun Cho",
-      "Jiajun Wu",
-      "Li Fei-Fei",
-      "Lijuan Wang",
-      "Yejin Choi",
-      "Manling Li"
-    ],
-    "summary": "Training large language models (LLMs) as interactive agents presents unique challenges including long-horizon decision making and interacting with stochastic environment feedback. While reinforcement learning (RL) has enabled progress in static tasks, multi-turn agent RL training remains underexplor...",
-    "published": "Apr 24",
-    "pdf_url": "https://arxiv.org/pdf/2504.20073v2",
-    "arxiv_url": "http://arxiv.org/abs/2504.20073v2",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Safety Pretraining: Toward the Next Generation of Safe AI",
-    "authors": [
-      "Pratyush Maini",
-      "Sachin Goyal",
-      "Dylan Sam",
-      "Alex Robey",
-      "Yash Savani",
-      "Yiding Jiang",
-      "Andy Zou",
-      "Matt Fredrikson",
-      "Zacharcy C. Lipton",
-      "J. Zico Kolter"
-    ],
-    "summary": "As large language models (LLMs) are increasingly deployed in high-stakes settings, the risk of generating harmful or toxic content remains a central challenge. Post-hoc alignment methods are brittle: once unsafe patterns are learned during pretraining, they are hard to remove. In this work, we prese...",
-    "published": "Apr 23",
-    "pdf_url": "https://arxiv.org/pdf/2504.16980v2",
-    "arxiv_url": "http://arxiv.org/abs/2504.16980v2",
-    "queried_author": "J Zico Kolter",
-    "matching_authors": [
-      "J Zico Kolter"
-    ]
-  },
-  {
-    "title": "Understanding the Skill Gap in Recurrent Language Models: The Role of the Gather-and-Aggregate Mechanism",
-    "authors": [
-      "Aviv Bick",
-      "Eric Xing",
-      "Albert Gu"
-    ],
-    "summary": "State-space models (SSMs) offer efficient alternatives to Transformers for long sequences, but their fixed-size recurrent state limits capability on algorithmic tasks, such as retrieving past context. In this work, we examine how in-context retrieval operates in Transformer- and SSM-based language m...",
-    "published": "Apr 22",
-    "pdf_url": "https://arxiv.org/pdf/2504.18574v2",
-    "arxiv_url": "http://arxiv.org/abs/2504.18574v2",
-    "queried_author": "Albert Gu",
-    "matching_authors": [
-      "Albert Gu"
-    ]
-  },
-  {
-    "title": "LongPerceptualThoughts: Distilling System-2 Reasoning for System-1 Perception",
-    "authors": [
-      "Yuan-Hong Liao",
-      "Sven Elflein",
-      "Liu He",
-      "Laura Leal-Taix\u00e9",
-      "Yejin Choi",
-      "Sanja Fidler",
-      "David Acuna"
-    ],
-    "summary": "Recent reasoning models through test-time scaling have demonstrated that long chain-of-thoughts can unlock substantial performance boosts in hard reasoning tasks such as math and code. However, the benefit of such long thoughts for system-2 reasoning is relatively less explored in other domains such...",
-    "published": "Apr 21",
-    "pdf_url": "https://arxiv.org/pdf/2504.15362v1",
-    "arxiv_url": "http://arxiv.org/abs/2504.15362v1",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "CRUST-Bench: A Comprehensive Benchmark for C-to-safe-Rust Transpilation",
-    "authors": [
-      "Anirudh Khatry",
-      "Robert Zhang",
-      "Jia Pan",
-      "Ziteng Wang",
-      "Qiaochu Chen",
-      "Greg Durrett",
-      "Isil Dillig"
-    ],
-    "summary": "C-to-Rust transpilation is essential for modernizing legacy C code while enhancing safety and interoperability with modern Rust ecosystems. However, no dataset currently exists for evaluating whether a system can transpile C into safe Rust that passes a set of test cases. We introduce CRUST-Bench, a...",
-    "published": "Apr 21",
-    "pdf_url": "https://arxiv.org/pdf/2504.15254v3",
-    "arxiv_url": "http://arxiv.org/abs/2504.15254v3",
-    "queried_author": "Greg Durrett",
-    "matching_authors": [
-      "Greg Durrett"
-    ]
-  },
-  {
-    "title": "EvalAgent: Discovering Implicit Evaluation Criteria from the Web",
-    "authors": [
-      "Manya Wadhwa",
-      "Zayne Sprague",
-      "Chaitanya Malaviya",
-      "Philippe Laban",
-      "Junyi Jessy Li",
-      "Greg Durrett"
-    ],
-    "summary": "Evaluation of language model outputs on structured writing tasks is typically conducted with a number of desirable criteria presented to human evaluators or large language models (LLMs). For instance, on a prompt like \"Help me draft an academic talk on coffee intake vs research productivity\", a mode...",
-    "published": "Apr 21",
-    "pdf_url": "https://arxiv.org/pdf/2504.15219v2",
-    "arxiv_url": "http://arxiv.org/abs/2504.15219v2",
-    "queried_author": "Greg Durrett",
-    "matching_authors": [
-      "Greg Durrett"
-    ]
-  },
-  {
-    "title": "Compute-Optimal LLMs Provably Generalize Better With Scale",
-    "authors": [
-      "Marc Finzi",
-      "Sanyam Kapoor",
-      "Diego Granziol",
-      "Anming Gu",
-      "Christopher De Sa",
-      "J. Zico Kolter",
-      "Andrew Gordon Wilson"
-    ],
-    "summary": "Why do larger language models generalize better? To investigate this question, we develop generalization bounds on the pretraining objective of large language models (LLMs) in the compute-optimal regime, as described by the Chinchilla scaling laws. We introduce a novel, fully empirical Freedman-type...",
-    "published": "Apr 21",
-    "pdf_url": "https://arxiv.org/pdf/2504.15208v1",
-    "arxiv_url": "http://arxiv.org/abs/2504.15208v1",
-    "queried_author": "J Zico Kolter",
-    "matching_authors": [
-      "J Zico Kolter"
-    ]
-  },
-  {
-    "title": "Pairwise or Pointwise? Evaluating Feedback Protocols for Bias in LLM-Based Evaluation",
-    "authors": [
-      "Tuhina Tripathi",
-      "Manya Wadhwa",
-      "Greg Durrett",
-      "Scott Niekum"
-    ],
-    "summary": "Large Language Models (LLMs) are widely used as proxies for human labelers in both training (Reinforcement Learning from AI Feedback) and large-scale response evaluation (LLM-as-a-judge). Alignment and evaluation are critical components in the development of reliable LLMs, and the choice of feedback...",
-    "published": "Apr 20",
-    "pdf_url": "https://arxiv.org/pdf/2504.14716v2",
-    "arxiv_url": "http://arxiv.org/abs/2504.14716v2",
-    "queried_author": "Greg Durrett",
-    "matching_authors": [
-      "Greg Durrett"
-    ]
-  },
-  {
-    "title": "ParaPO: Aligning Language Models to Reduce Verbatim Reproduction of Pre-training Data",
-    "authors": [
-      "Tong Chen",
-      "Faeze Brahman",
-      "Jiacheng Liu",
-      "Niloofar Mireshghallah",
-      "Weijia Shi",
-      "Pang Wei Koh",
-      "Luke Zettlemoyer",
-      "Hannaneh Hajishirzi"
-    ],
-    "summary": "Language models (LMs) can memorize and reproduce segments from their pretraining data verbatim even in non-adversarial settings, raising concerns about copyright, plagiarism, privacy, and creativity. We introduce Paraphrase Preference Optimization (ParaPO), a post-training method that fine-tunes LMs...",
-    "published": "Apr 20",
-    "pdf_url": "https://arxiv.org/pdf/2504.14452v2",
-    "arxiv_url": "http://arxiv.org/abs/2504.14452v2",
-    "queried_author": "Hannaneh Hajishirzi",
-    "matching_authors": [
-      "Hannaneh Hajishirzi",
-      "Luke Zettlemoyer",
-      "Pang Wei Koh"
-    ]
-  },
-  {
-    "title": "SOTOPIA-S4: a user-friendly system for flexible, customizable, and large-scale social simulation",
-    "authors": [
-      "Xuhui Zhou",
-      "Zhe Su",
-      "Sophie Feng",
-      "Jiaxu Zhou",
-      "Jen-tse Huang",
-      "Hsien-Te Kao",
-      "Spencer Lynch",
-      "Svitlana Volkova",
-      "Tongshuang Sherry Wu",
-      "Anita Woolley",
-      "Hao Zhu",
-      "Maarten Sap"
-    ],
-    "summary": "Social simulation through large language model (LLM) agents is a promising approach to explore and validate hypotheses related to social science questions and LLM agents behavior. We present SOTOPIA-S4, a fast, flexible, and scalable social simulation system that addresses the technical barriers of ...",
-    "published": "Apr 19",
-    "pdf_url": "https://arxiv.org/pdf/2504.16122v1",
-    "arxiv_url": "http://arxiv.org/abs/2504.16122v1",
-    "queried_author": "Maarten Sap",
-    "matching_authors": [
-      "Maarten Sap"
-    ]
-  },
-  {
-    "title": "Not All Rollouts are Useful: Down-Sampling Rollouts in LLM Reinforcement Learning",
-    "authors": [
-      "Yixuan Even Xu",
-      "Yash Savani",
-      "Fei Fang",
-      "J. Zico Kolter"
-    ],
-    "summary": "Reinforcement learning with verifiable rewards (RLVR) has emerged as the leading approach for enhancing reasoning capabilities in large language models. However, it faces a fundamental compute and memory asymmetry: rollout generation is embarrassingly parallel and memory-light, whereas policy update...",
-    "published": "Apr 18",
-    "pdf_url": "https://arxiv.org/pdf/2504.13818v3",
-    "arxiv_url": "http://arxiv.org/abs/2504.13818v3",
-    "queried_author": "J Zico Kolter",
-    "matching_authors": [
-      "J Zico Kolter"
-    ]
-  },
-  {
-    "title": "A Framework for Objective-Driven Dynamical Stochastic Fields",
-    "authors": [
-      "Yibo Jacky Zhang",
-      "Sanmi Koyejo"
-    ],
-    "summary": "Fields offer a versatile approach for describing complex systems composed of interacting and dynamic components. In particular, some of these dynamical and stochastic systems may exhibit goal-directed behaviors aimed at achieving specific objectives, which we refer to as $\\textit{intelligent fields}...",
-    "published": "Apr 18",
-    "pdf_url": "https://arxiv.org/pdf/2504.16115v2",
-    "arxiv_url": "http://arxiv.org/abs/2504.16115v2",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "Scaling sparse feature circuit finding for in-context learning",
-    "authors": [
-      "Dmitrii Kharlapenko",
-      "Stepan Shabalin",
-      "Fazl Barez",
-      "Arthur Conmy",
-      "Neel Nanda"
-    ],
-    "summary": "Sparse autoencoders (SAEs) are a popular tool for interpreting large language model activations, but their utility in addressing open questions in interpretability remains unclear. In this work, we demonstrate their effectiveness by using SAEs to deepen our understanding of the mechanism behind in-c...",
-    "published": "Apr 18",
-    "pdf_url": "https://arxiv.org/pdf/2504.13756v1",
-    "arxiv_url": "http://arxiv.org/abs/2504.13756v1",
-    "queried_author": "Neel Nanda",
-    "matching_authors": [
-      "Neel Nanda"
-    ]
-  },
-  {
-    "title": "Antidistillation Sampling",
-    "authors": [
-      "Yash Savani",
-      "Asher Trockman",
-      "Zhili Feng",
-      "Yixuan Even Xu",
-      "Avi Schwarzschild",
-      "Alexander Robey",
-      "Marc Finzi",
-      "J. Zico Kolter"
-    ],
-    "summary": "Frontier models that generate extended reasoning traces inadvertently produce rich token sequences that can facilitate model distillation. Recognizing this vulnerability, model owners may seek sampling strategies that limit the effectiveness of distillation without compromising model performance. An...",
-    "published": "Apr 17",
-    "pdf_url": "https://arxiv.org/pdf/2504.13146v5",
-    "arxiv_url": "http://arxiv.org/abs/2504.13146v5",
-    "queried_author": "J Zico Kolter",
-    "matching_authors": [
-      "J Zico Kolter"
-    ]
-  },
-  {
-    "title": "Why and How LLMs Hallucinate: Connecting the Dots with Subsequence Associations",
-    "authors": [
-      "Yiyou Sun",
-      "Yu Gai",
-      "Lijie Chen",
-      "Abhilasha Ravichander",
-      "Yejin Choi",
-      "Dawn Song"
-    ],
-    "summary": "Large language models (LLMs) frequently generate hallucinations-content that deviates from factual accuracy or provided context-posing challenges for diagnosis due to the complex interplay of underlying causes. This paper introduces a subsequence association framework to systematically trace and und...",
-    "published": "Apr 17",
-    "pdf_url": "https://arxiv.org/pdf/2504.12691v1",
-    "arxiv_url": "http://arxiv.org/abs/2504.12691v1",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Memorization vs. Reasoning: Updating LLMs with New Knowledge",
-    "authors": [
-      "Aochong Oliver Li",
-      "Tanya Goyal"
-    ],
-    "summary": "Large language models (LLMs) encode vast amounts of pre-trained knowledge in their parameters, but updating them as real-world information evolves remains a challenge. Existing methodologies and benchmarks primarily target entity substitutions, failing to capture the full breadth of complex real-wor...",
-    "published": "Apr 16",
-    "pdf_url": "https://arxiv.org/pdf/2504.12523v1",
-    "arxiv_url": "http://arxiv.org/abs/2504.12523v1",
-    "queried_author": "Tanya Goyal",
-    "matching_authors": [
-      "Tanya Goyal"
-    ]
-  },
-  {
-    "title": "Dense Backpropagation Improves Training for Sparse Mixture-of-Experts",
-    "authors": [
-      "Ashwinee Panda",
-      "Vatsal Baherwani",
-      "Zain Sarwar",
-      "Benjamin Therien",
-      "Sambit Sahu",
-      "Tom Goldstein",
-      "Supriyo Chakraborty"
-    ],
-    "summary": "Mixture of Experts (MoE) pretraining is more scalable than dense Transformer pretraining, because MoEs learn to route inputs to a sparse set of their feedforward parameters. However, this means that MoEs only receive a sparse backward update, leading to training instability and suboptimal performanc...",
-    "published": "Apr 16",
-    "pdf_url": "https://arxiv.org/pdf/2504.12463v3",
-    "arxiv_url": "http://arxiv.org/abs/2504.12463v3",
-    "queried_author": "Ashwinee Panda",
-    "matching_authors": [
-      "Ashwinee Panda"
-    ]
-  },
-  {
-    "title": "On Linear Representations and Pretraining Data Frequency in Language Models",
-    "authors": [
-      "Jack Merullo",
-      "Noah A. Smith",
-      "Sarah Wiegreffe",
-      "Yanai Elazar"
-    ],
-    "summary": "Pretraining data has a direct impact on the behaviors and quality of language models (LMs), but we only understand the most basic principles of this relationship. While most work focuses on pretraining data's effect on downstream task behavior, we investigate its relationship to LM representations. ...",
-    "published": "Apr 16",
-    "pdf_url": "https://arxiv.org/pdf/2504.12459v1",
-    "arxiv_url": "http://arxiv.org/abs/2504.12459v1",
-    "queried_author": "Jack Merullo",
-    "matching_authors": [
-      "Jack Merullo",
-      "Noah A. Smith"
-    ]
-  },
-  {
-    "title": "Position: The Most Expensive Part of an LLM should be its Training Data",
-    "authors": [
-      "Nikhil Kandpal",
-      "Colin Raffel"
-    ],
-    "summary": "Training a state-of-the-art Large Language Model (LLM) is an increasingly expensive endeavor due to growing computational, hardware, energy, and engineering demands. Yet, an often-overlooked (and seldom paid) expense is the human labor behind these models' training data. Every LLM is built on an unf...",
-    "published": "Apr 16",
-    "pdf_url": "https://arxiv.org/pdf/2504.12427v1",
-    "arxiv_url": "http://arxiv.org/abs/2504.12427v1",
-    "queried_author": "Colin Raffel",
-    "matching_authors": [
-      "Colin Raffel"
-    ]
-  },
-  {
-    "title": "Nemotron-CrossThink: Scaling Self-Learning beyond Math Reasoning",
-    "authors": [
-      "Syeda Nahida Akter",
-      "Shrimai Prabhumoye",
-      "Matvei Novikov",
-      "Seungju Han",
-      "Ying Lin",
-      "Evelina Bakhturina",
-      "Eric Nyberg",
-      "Yejin Choi",
-      "Mostofa Patwary",
-      "Mohammad Shoeybi",
-      "Bryan Catanzaro"
-    ],
-    "summary": "Large Language Models (LLMs) have shown strong reasoning capabilities, particularly when enhanced through Reinforcement Learning (RL). While prior work has successfully applied RL to mathematical reasoning -- where rules and correctness are well-defined -- generalizing these methods to broader reaso...",
-    "published": "Apr 15",
-    "pdf_url": "https://arxiv.org/pdf/2504.13941v2",
-    "arxiv_url": "http://arxiv.org/abs/2504.13941v2",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "DataDecide: How to Predict Best Pretraining Data with Small Experiments",
-    "authors": [
-      "Ian Magnusson",
-      "Nguyen Tai",
-      "Ben Bogin",
-      "David Heineman",
-      "Jena D. Hwang",
-      "Luca Soldaini",
-      "Akshita Bhagia",
-      "Jiacheng Liu",
-      "Dirk Groeneveld",
-      "Oyvind Tafjord",
-      "Noah A. Smith",
-      "Pang Wei Koh",
-      "Jesse Dodge"
-    ],
-    "summary": "Because large language models are expensive to pretrain on different datasets, using smaller-scale experiments to decide on data is crucial for reducing costs. Which benchmarks and methods of making decisions from observed performance at small scale most accurately predict the datasets that yield th...",
-    "published": "Apr 15",
-    "pdf_url": "https://arxiv.org/pdf/2504.11393v2",
-    "arxiv_url": "http://arxiv.org/abs/2504.11393v2",
-    "queried_author": "Ian Magnusson",
-    "matching_authors": [
-      "Ian Magnusson",
-      "Jesse Dodge",
-      "Luca Soldaini",
-      "Noah A. Smith",
-      "Pang Wei Koh"
-    ]
-  },
-  {
-    "title": "RankAlign: A Ranking View of the Generator-Validator Gap in Large Language Models",
-    "authors": [
-      "Juan Diego Rodriguez",
-      "Wenxuan Ding",
-      "Katrin Erk",
-      "Greg Durrett"
-    ],
-    "summary": "Although large language models (LLMs) have become more capable and accurate across many tasks, some fundamental sources of unreliability remain in their behavior. One key limitation is their inconsistency at reporting the same information when prompts are changed. In this paper, we consider the disc...",
-    "published": "Apr 15",
-    "pdf_url": "https://arxiv.org/pdf/2504.11381v2",
-    "arxiv_url": "http://arxiv.org/abs/2504.11381v2",
-    "queried_author": "Greg Durrett",
-    "matching_authors": [
-      "Greg Durrett"
-    ]
-  },
-  {
-    "title": "X-Teaming: Multi-Turn Jailbreaks and Defenses with Adaptive Multi-Agents",
-    "authors": [
-      "Salman Rahman",
-      "Liwei Jiang",
-      "James Shiffer",
-      "Genglin Liu",
-      "Sheriff Issaka",
-      "Md Rizwan Parvez",
-      "Hamid Palangi",
-      "Kai-Wei Chang",
-      "Yejin Choi",
-      "Saadia Gabriel"
-    ],
-    "summary": "Multi-turn interactions with language models (LMs) pose critical safety risks, as harmful intent can be strategically spread across exchanges. Yet, the vast majority of prior work has focused on single-turn safety, while adaptability and diversity remain among the key challenges of multi-turn red-te...",
-    "published": "Apr 15",
-    "pdf_url": "https://arxiv.org/pdf/2504.13203v2",
-    "arxiv_url": "http://arxiv.org/abs/2504.13203v2",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Looking beyond the next token",
-    "authors": [
-      "Abitha Thankaraj",
-      "Yiding Jiang",
-      "J. Zico Kolter",
-      "Yonatan Bisk"
-    ],
-    "summary": "The structure of causal language model training assumes that each token can be accurately predicted from the previous context. This contrasts with humans' natural writing and reasoning process, where goals are typically known before the exact argument or phrasings. While this mismatch has been well ...",
-    "published": "Apr 15",
-    "pdf_url": "https://arxiv.org/pdf/2504.11336v2",
-    "arxiv_url": "http://arxiv.org/abs/2504.11336v2",
-    "queried_author": "J Zico Kolter",
-    "matching_authors": [
-      "J Zico Kolter"
-    ]
-  },
-  {
-    "title": "Rethinking Theory of Mind Benchmarks for LLMs: Towards A User-Centered Perspective",
-    "authors": [
-      "Qiaosi Wang",
-      "Xuhui Zhou",
-      "Maarten Sap",
-      "Jodi Forlizzi",
-      "Hong Shen"
-    ],
-    "summary": "The last couple of years have witnessed emerging research that appropriates Theory-of-Mind (ToM) tasks designed for humans to benchmark LLM's ToM capabilities as an indication of LLM's social intelligence. However, this approach has a number of limitations. Drawing on existing psychology and AI lite...",
-    "published": "Apr 15",
-    "pdf_url": "https://arxiv.org/pdf/2504.10839v1",
-    "arxiv_url": "http://arxiv.org/abs/2504.10839v1",
-    "queried_author": "Maarten Sap",
-    "matching_authors": [
-      "Maarten Sap"
-    ]
-  },
-  {
-    "title": "MIEB: Massive Image Embedding Benchmark",
-    "authors": [
-      "Chenghao Xiao",
-      "Isaac Chung",
-      "Imene Kerboua",
-      "Jamie Stirling",
-      "Xin Zhang",
-      "M\u00e1rton Kardos",
-      "Roman Solomatin",
-      "Noura Al Moubayed",
-      "Kenneth Enevoldsen",
-      "Niklas Muennighoff"
-    ],
-    "summary": "Image representations are often evaluated through disjointed, task-specific protocols, leading to a fragmented understanding of model capabilities. For instance, it is unclear whether an image embedding model adept at clustering images is equally good at retrieving relevant images given a piece of t...",
-    "published": "Apr 14",
-    "pdf_url": "https://arxiv.org/pdf/2504.10471v1",
-    "arxiv_url": "http://arxiv.org/abs/2504.10471v1",
-    "queried_author": "Niklas Muennighoff",
-    "matching_authors": [
-      "Niklas Muennighoff"
     ]
   }
 ]
