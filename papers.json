@@ -1,5 +1,45 @@
 [
   {
+    "title": "Gained in Translation: Privileged Pairwise Judges Enhance Multilingual Reasoning",
+    "authors": [
+      "Lintang Sutawika",
+      "Gokul Swamy",
+      "Zhiwei Steven Wu",
+      "Graham Neubig"
+    ],
+    "summary": "When asked a question in a language less seen in its training data, current reasoning large language models (RLMs) often exhibit dramatically lower performance than when asked the same question in English. In response, we introduce \\texttt{SP3F} (Self-Play with Privileged Pairwise Feedback), a two-s...",
+    "published": "Jan 26",
+    "pdf_url": "https://arxiv.org/pdf/2601.18722v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.18722v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
+    "title": "SAGE: Steerable Agentic Data Generation for Deep Search with Execution Feedback",
+    "authors": [
+      "Fangyuan Xu",
+      "Rujun Han",
+      "Yanfei Chen",
+      "Zifeng Wang",
+      "I-Hung Hsu",
+      "Jun Yan",
+      "Vishy Tirumalashetty",
+      "Eunsol Choi",
+      "Tomas Pfister",
+      "Chen-Yu Lee"
+    ],
+    "summary": "Deep search agents, which aim to answer complex questions requiring reasoning across multiple documents, can significantly speed up the information-seeking process. Collecting human annotations for this application is prohibitively expensive due to long and complex exploration trajectories. We propo...",
+    "published": "Jan 26",
+    "pdf_url": "https://arxiv.org/pdf/2601.18202v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.18202v1",
+    "queried_author": "Eunsol Choi",
+    "matching_authors": [
+      "Eunsol Choi"
+    ]
+  },
+  {
     "title": "Endless Terminals: Scaling RL Environments for Terminal Agents",
     "authors": [
       "Kanishk Gandhi",
@@ -160,8 +200,8 @@
     ],
     "summary": "Resolving team conflicts requires not only task-specific competence, but also social intelligence to find common ground and build consensus. As AI agents increasingly collaborate on complex work, they must develop coordination capabilities to function as effective teammates. Yet we hypothesize that ...",
     "published": "Jan 19",
-    "pdf_url": "https://arxiv.org/pdf/2601.13295v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.13295v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.13295v2",
+    "arxiv_url": "http://arxiv.org/abs/2601.13295v2",
     "queried_author": "Diyi Yang",
     "matching_authors": [
       "Diyi Yang"
@@ -297,8 +337,8 @@
     ],
     "summary": "Frontier language model capabilities are improving rapidly. We thus need stronger mitigations against bad actors misusing increasingly powerful systems. Prior work has shown that activation probes may be a promising misuse mitigation technique, but we identify a key remaining challenge: probes fail ...",
     "published": "Jan 16",
-    "pdf_url": "https://arxiv.org/pdf/2601.11516v2",
-    "arxiv_url": "http://arxiv.org/abs/2601.11516v2",
+    "pdf_url": "https://arxiv.org/pdf/2601.11516v3",
+    "arxiv_url": "http://arxiv.org/abs/2601.11516v3",
     "queried_author": "Neel Nanda",
     "matching_authors": [
       "Neel Nanda"
@@ -5614,10 +5654,10 @@
       "Wenxuan Wang",
       "Maarten Sap"
     ],
-    "summary": "Large Language Models (LLMs) are increasingly used for social simulation, where populations of agents are expected to reproduce human-like collective behavior. However, we find that many recent studies adopt experimental designs that systematically undermine the validity of their claims. From a surv...",
+    "summary": "Large language models (LLMs) are increasingly deployed to simulate human collective behaviors, yet the methodological rigor of these \"AI societies\" remains under-explored. Through a systematic audit of 42 recent studies, we identify six pervasive flaws-spanning agent profiles, interaction, memory, c...",
     "published": "Sep 22",
-    "pdf_url": "https://arxiv.org/pdf/2509.18052v1",
-    "arxiv_url": "http://arxiv.org/abs/2509.18052v1",
+    "pdf_url": "https://arxiv.org/pdf/2509.18052v2",
+    "arxiv_url": "http://arxiv.org/abs/2509.18052v2",
     "queried_author": "Maarten Sap",
     "matching_authors": [
       "Maarten Sap"
@@ -15520,44 +15560,6 @@
     "queried_author": "Luca Soldaini",
     "matching_authors": [
       "Luca Soldaini"
-    ]
-  },
-  {
-    "title": "AutoLibra: Agent Metric Induction from Open-Ended Human Feedback",
-    "authors": [
-      "Hao Zhu",
-      "Phil Cuvin",
-      "Xinkai Yu",
-      "Charlotte Ka Yee Yan",
-      "Jason Zhang",
-      "Diyi Yang"
-    ],
-    "summary": "Agents are predominantly evaluated and optimized via task success metrics, which are coarse, rely on manual design from experts, and fail to reward intermediate emergent behaviors. We propose **AutoLibra**, a framework for agent evaluation, that transforms open-ended human feedback *e.g.* \"If you fi...",
-    "published": "May 05",
-    "pdf_url": "https://arxiv.org/pdf/2505.02820v3",
-    "arxiv_url": "http://arxiv.org/abs/2505.02820v3",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang"
-    ]
-  },
-  {
-    "title": "Can LLM-Simulated Practice and Feedback Upskill Human Counselors? A Randomized Study with 90+ Novice Counselors",
-    "authors": [
-      "Ryan Louie",
-      "Ifdita Hasan Orney",
-      "Juan Pablo Pacheco",
-      "Raj Sanjay Shah",
-      "Emma Brunskill",
-      "Diyi Yang"
-    ],
-    "summary": "Training more counselors, from clinical students to peer supporters, can help meet the demand for accessible mental health support; however, current training approaches remain resource-intensive and difficult to scale effectively. Large Language Models (LLMs) offer promising solutions for growing co...",
-    "published": "May 05",
-    "pdf_url": "https://arxiv.org/pdf/2505.02428v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.02428v1",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang"
     ]
   }
 ]
