@@ -1,5 +1,27 @@
 [
   {
+    "title": "A Few Bad Neurons: Isolating and Surgically Correcting Sycophancy",
+    "authors": [
+      "Claire O'Brien",
+      "Jessica Seto",
+      "Dristi Roy",
+      "Aditya Dwivedi",
+      "Sunishchal Dev",
+      "Kevin Zhu",
+      "Sean O'Brien",
+      "Ashwinee Panda",
+      "Ryan Lagasse"
+    ],
+    "summary": "Behavioral alignment in large language models (LLMs) is often achieved through broad fine-tuning, which can result in undesired side effects like distributional shift and low interpretability. We propose a method for alignment that identifies and updates only the neurons most responsible for a given...",
+    "published": "Jan 26",
+    "pdf_url": "https://arxiv.org/pdf/2601.18939v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.18939v1",
+    "queried_author": "Ashwinee Panda",
+    "matching_authors": [
+      "Ashwinee Panda"
+    ]
+  },
+  {
     "title": "Gained in Translation: Privileged Pairwise Judges Enhance Multilingual Reasoning",
     "authors": [
       "Lintang Sutawika",
@@ -49,8 +71,8 @@
     ],
     "summary": "Environments are the bottleneck for self-improving agents. Current terminal benchmarks were built for evaluation, not training; reinforcement learning requires a scalable pipeline, not just a dataset. We introduce Endless Terminals, a fully autonomous pipeline that procedurally generates terminal-us...",
     "published": "Jan 23",
-    "pdf_url": "https://arxiv.org/pdf/2601.16443v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.16443v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.16443v2",
+    "arxiv_url": "http://arxiv.org/abs/2601.16443v2",
     "queried_author": "Noah Goodman",
     "matching_authors": [
       "Noah Goodman"
@@ -6945,8 +6967,8 @@
     ],
     "summary": "Addressing contextual privacy concerns remains challenging in interactive settings where large language models (LLMs) process information from multiple sources (e.g., summarizing meetings with private and public information). We introduce a multi-agent framework that decomposes privacy reasoning int...",
     "published": "Aug 11",
-    "pdf_url": "https://arxiv.org/pdf/2508.07667v1",
-    "arxiv_url": "http://arxiv.org/abs/2508.07667v1",
+    "pdf_url": "https://arxiv.org/pdf/2508.07667v2",
+    "arxiv_url": "http://arxiv.org/abs/2508.07667v2",
     "queried_author": "Maarten Sap",
     "matching_authors": [
       "Maarten Sap"
@@ -12904,8 +12926,8 @@
     ],
     "summary": "To steer pretrained language models for downstream tasks, today's post-training paradigm relies on humans to specify desired behaviors. However, for models with superhuman capabilities, it is difficult or impossible to get high-quality human supervision. To address this challenge, we introduce a new...",
     "published": "Jun 11",
-    "pdf_url": "https://arxiv.org/pdf/2506.10139v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.10139v1",
+    "pdf_url": "https://arxiv.org/pdf/2506.10139v2",
+    "arxiv_url": "http://arxiv.org/abs/2506.10139v2",
     "queried_author": "Ethan Perez",
     "matching_authors": [
       "Ethan Perez"
@@ -14942,10 +14964,10 @@
       "Chau Minh Pham",
       "Amir Houmansadr"
     ],
-    "summary": "Large language models (LLMs) are increasingly being used to protect sensitive user data. However, current LLM-based privacy solutions assume that these models can reliably detect personally identifiable information (PII), particularly named entities. In this paper, we challenge that assumption by re...",
+    "summary": "Large language models (LLMs) are increasingly being used in privacy pipelines to detect and remedy sensitive data leakage. These solutions often rely on the premise that LLMs can reliably recognize human names, one of the most important categories of personally identifiable information (PII). In thi...",
     "published": "May 20",
-    "pdf_url": "https://arxiv.org/pdf/2505.14549v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.14549v1",
+    "pdf_url": "https://arxiv.org/pdf/2505.14549v2",
+    "arxiv_url": "http://arxiv.org/abs/2505.14549v2",
     "queried_author": "Niloofar Mireshghallah",
     "matching_authors": [
       "Niloofar Mireshghallah"
@@ -15542,24 +15564,6 @@
     "queried_author": "Noah A. Smith",
     "matching_authors": [
       "Noah A. Smith"
-    ]
-  },
-  {
-    "title": "Teaching Models to Understand (but not Generate) High-risk Data",
-    "authors": [
-      "Ryan Wang",
-      "Matthew Finlayson",
-      "Luca Soldaini",
-      "Swabha Swayamdipta",
-      "Robin Jia"
-    ],
-    "summary": "Language model developers typically filter out high-risk content -- such as toxic or copyrighted text -- from their pre-training data to prevent models from generating similar outputs. However, removing such data altogether limits models' ability to recognize and appropriately respond to harmful or ...",
-    "published": "May 05",
-    "pdf_url": "https://arxiv.org/pdf/2505.03052v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.03052v2",
-    "queried_author": "Luca Soldaini",
-    "matching_authors": [
-      "Luca Soldaini"
     ]
   }
 ]
