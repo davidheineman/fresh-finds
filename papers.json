@@ -1,5 +1,22 @@
 [
   {
+    "title": "What's the plan? Metrics for implicit planning in LLMs and their application to rhyme generation and question answering",
+    "authors": [
+      "Jim Maar",
+      "Denis Paperno",
+      "Callum Stuart McDougall",
+      "Neel Nanda"
+    ],
+    "summary": "Prior work suggests that language models, while trained on next token prediction, show implicit planning behavior: they may select the next token in preparation to a predicted future token, such as a likely rhyming word, as supported by a prior qualitative study of Claude 3.5 Haiku using a cross-lay...",
+    "published": "Jan 28",
+    "pdf_url": "https://arxiv.org/pdf/2601.20164v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.20164v1",
+    "queried_author": "Neel Nanda",
+    "matching_authors": [
+      "Neel Nanda"
+    ]
+  },
+  {
     "title": "A Few Bad Neurons: Isolating and Surgically Correcting Sycophancy",
     "authors": [
       "Claire O'Brien",
@@ -617,6 +634,25 @@
     "queried_author": "Luke Zettlemoyer",
     "matching_authors": [
       "Luke Zettlemoyer"
+    ]
+  },
+  {
+    "title": "HEART: A Unified Benchmark for Assessing Humans and LLMs in Emotional Support Dialogue",
+    "authors": [
+      "Laya Iyer",
+      "Kriti Aggarwal",
+      "Sanmi Koyejo",
+      "Gail Heyman",
+      "Desmond C. Ong",
+      "Subhabrata Mukherjee"
+    ],
+    "summary": "Supportive conversation depends on skills that go beyond language fluency, including reading emotions, adjusting tone, and navigating moments of resistance, frustration, or distress. Despite rapid progress in language models, we still lack a clear way to understand how their abilities in these inter...",
+    "published": "Jan 09",
+    "pdf_url": "https://arxiv.org/pdf/2601.19922v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.19922v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
     ]
   },
   {
@@ -14615,10 +14651,10 @@
       "Yilin Yuan",
       "David Bamman"
     ],
-    "summary": "Conversations are usually structured by roles -- who is speaking, who's being addressed, and who's listening -- and unfold in threads that break with changes in speaker floor or topical focus. While large language models (LLMs) have shown incredible capabilities in dialogue and reasoning, their abil...",
+    "summary": "While multimodal large language models (LLMs) excel at dialogue, whether they can adequately parse the structure of conversation -- conversational roles and threading -- remains underexplored. In this work, we introduce a suite of tasks and release TV-MMPC, a new annotated dataset, for multimodal co...",
     "published": "May 23",
-    "pdf_url": "https://arxiv.org/pdf/2505.17536v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.17536v2",
+    "pdf_url": "https://arxiv.org/pdf/2505.17536v3",
+    "arxiv_url": "http://arxiv.org/abs/2505.17536v3",
     "queried_author": "David Bamman",
     "matching_authors": [
       "David Bamman"
@@ -15513,57 +15549,6 @@
     "queried_author": "Christopher D Manning",
     "matching_authors": [
       "Christopher D Manning"
-    ]
-  },
-  {
-    "title": "A Reasoning-Focused Legal Retrieval Benchmark",
-    "authors": [
-      "Lucia Zheng",
-      "Neel Guha",
-      "Javokhir Arifov",
-      "Sarah Zhang",
-      "Michal Skreta",
-      "Christopher D. Manning",
-      "Peter Henderson",
-      "Daniel E. Ho"
-    ],
-    "summary": "As the legal community increasingly examines the use of large language models (LLMs) for various legal applications, legal AI developers have turned to retrieval-augmented LLMs (\"RAG\" systems) to improve system performance and robustness. An obstacle to the development of specialized RAG systems is ...",
-    "published": "May 06",
-    "pdf_url": "https://arxiv.org/pdf/2505.03970v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.03970v1",
-    "queried_author": "Christopher D Manning",
-    "matching_authors": [
-      "Christopher D Manning",
-      "Peter Henderson"
-    ]
-  },
-  {
-    "title": "BLAB: Brutally Long Audio Bench",
-    "authors": [
-      "Orevaoghene Ahia",
-      "Martijn Bartelds",
-      "Kabir Ahuja",
-      "Hila Gonen",
-      "Valentin Hofmann",
-      "Siddhant Arora",
-      "Shuyue Stella Li",
-      "Vishal Puttagunta",
-      "Mofetoluwa Adeyemi",
-      "Charishma Buchireddy",
-      "Ben Walls",
-      "Noah Bennett",
-      "Shinji Watanabe",
-      "Noah A. Smith",
-      "Yulia Tsvetkov",
-      "Sachin Kumar"
-    ],
-    "summary": "Developing large audio language models (LMs) capable of understanding diverse spoken interactions is essential for accommodating the multimodal nature of human communication and can increase the accessibility of language technologies across different user populations. Recent work on audio LMs has pr...",
-    "published": "May 05",
-    "pdf_url": "https://arxiv.org/pdf/2505.03054v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.03054v2",
-    "queried_author": "Noah A. Smith",
-    "matching_authors": [
-      "Noah A. Smith"
     ]
   }
 ]
