@@ -1,5 +1,93 @@
 [
   {
+    "title": "FineInstructions: Scaling Synthetic Instructions to Pre-Training Scale",
+    "authors": [
+      "Ajay Patel",
+      "Colin Raffel",
+      "Chris Callison-Burch"
+    ],
+    "summary": "Due to limited supervised training data, large language models (LLMs) are typically pre-trained via a self-supervised \"predict the next word\" objective on a vast amount of unstructured text data. To make the resulting model useful to users, it is further trained on a far smaller amount of \"instructi...",
+    "published": "Jan 29",
+    "pdf_url": "https://arxiv.org/pdf/2601.22146v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.22146v1",
+    "queried_author": "Colin Raffel",
+    "matching_authors": [
+      "Colin Raffel"
+    ]
+  },
+  {
+    "title": "Latent Adversarial Regularization for Offline Preference Optimization",
+    "authors": [
+      "Enyi Jiang",
+      "Yibo Jacky Zhang",
+      "Yinglun Xu",
+      "Andreas Haupt",
+      "Nancy Amato",
+      "Sanmi Koyejo"
+    ],
+    "summary": "Learning from human feedback typically relies on preference optimization that constrains policy updates through token-level regularization. However, preference optimization for language models is particularly challenging because token-space similarity does not imply semantic or behavioral similarity...",
+    "published": "Jan 29",
+    "pdf_url": "https://arxiv.org/pdf/2601.22083v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.22083v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "NEMO: Execution-Aware Optimization Modeling via Autonomous Coding Agents",
+    "authors": [
+      "Yang Song",
+      "Anoushka Vyas",
+      "Zirui Wei",
+      "Sina Khoshfetrat Pakazad",
+      "Henrik Ohlsson",
+      "Graham Neubig"
+    ],
+    "summary": "In this paper, we present NEMO, a system that translates Natural-language descriptions of decision problems into formal Executable Mathematical Optimization implementations, operating collaboratively with users or autonomously. Existing approaches typically rely on specialized large language models ...",
+    "published": "Jan 29",
+    "pdf_url": "https://arxiv.org/pdf/2601.21372v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.21372v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
+    "title": "MoCo: A One-Stop Shop for Model Collaboration Research",
+    "authors": [
+      "Shangbin Feng",
+      "Yuyang Bai",
+      "Ziyuan Yang",
+      "Yike Wang",
+      "Zhaoxuan Tan",
+      "Jiajie Yan",
+      "Zhenyu Lei",
+      "Wenxuan Ding",
+      "Weijia Shi",
+      "Haojin Wang",
+      "Zhenting Qi",
+      "Yuru Jiang",
+      "Heng Wang",
+      "Chengsong Huang",
+      "Yu Fei",
+      "Jihan Yao",
+      "Yilun Du",
+      "Luke Zettlemoyer",
+      "Yejin Choi",
+      "Yulia Tsvetkov"
+    ],
+    "summary": "Advancing beyond single monolithic language models (LMs), recent research increasingly recognizes the importance of model collaboration, where multiple LMs collaborate, compose, and complement each other. Existing research on this topic has mostly been disparate and disconnected, from different rese...",
+    "published": "Jan 29",
+    "pdf_url": "https://arxiv.org/pdf/2601.21257v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.21257v1",
+    "queried_author": "Luke Zettlemoyer",
+    "matching_authors": [
+      "Luke Zettlemoyer",
+      "Yejin Choi"
+    ]
+  },
+  {
     "title": "What's the plan? Metrics for implicit planning in LLMs and their application to rhyme generation and question answering",
     "authors": [
       "Jim Maar",
@@ -415,8 +503,8 @@
     ],
     "summary": "Visual generative AI models are trained using a one-size-fits-all measure of aesthetic appeal. However, what is deemed \"aesthetic\" is inextricably linked to personal taste and cultural values, raising the question of whose taste is represented in visual generative AI models. In this work, we study a...",
     "published": "Jan 14",
-    "pdf_url": "https://arxiv.org/pdf/2601.09896v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.09896v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.09896v2",
+    "arxiv_url": "http://arxiv.org/abs/2601.09896v2",
     "queried_author": "Maarten Sap",
     "matching_authors": [
       "Maarten Sap"
@@ -15460,95 +15548,6 @@
     "queried_author": "Maarten Sap",
     "matching_authors": [
       "Maarten Sap"
-    ]
-  },
-  {
-    "title": "Reasoning Models Don't Always Say What They Think",
-    "authors": [
-      "Yanda Chen",
-      "Joe Benton",
-      "Ansh Radhakrishnan",
-      "Jonathan Uesato",
-      "Carson Denison",
-      "John Schulman",
-      "Arushi Somani",
-      "Peter Hase",
-      "Misha Wagner",
-      "Fabien Roger",
-      "Vlad Mikulik",
-      "Samuel R. Bowman",
-      "Jan Leike",
-      "Jared Kaplan",
-      "Ethan Perez"
-    ],
-    "summary": "Chain-of-thought (CoT) offers a potential boon for AI safety as it allows monitoring a model's CoT to try to understand its intentions and reasoning processes. However, the effectiveness of such monitoring hinges on CoTs faithfully representing models' actual reasoning processes. We evaluate CoT fai...",
-    "published": "May 08",
-    "pdf_url": "https://arxiv.org/pdf/2505.05410v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.05410v1",
-    "queried_author": "Ethan Perez",
-    "matching_authors": [
-      "Ethan Perez",
-      "Jared Kaplan"
-    ]
-  },
-  {
-    "title": "Crosslingual Reasoning through Test-Time Scaling",
-    "authors": [
-      "Zheng-Xin Yong",
-      "M. Farid Adilazuarda",
-      "Jonibek Mansurov",
-      "Ruochen Zhang",
-      "Niklas Muennighoff",
-      "Carsten Eickhoff",
-      "Genta Indra Winata",
-      "Julia Kreutzer",
-      "Stephen H. Bach",
-      "Alham Fikri Aji"
-    ],
-    "summary": "Reasoning capabilities of large language models are primarily studied for English, even when pretrained models are multilingual. In this work, we investigate to what extent English reasoning finetuning with long chain-of-thoughts (CoTs) can generalize across languages. First, we find that scaling up...",
-    "published": "May 08",
-    "pdf_url": "https://arxiv.org/pdf/2505.05408v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.05408v1",
-    "queried_author": "Niklas Muennighoff",
-    "matching_authors": [
-      "Niklas Muennighoff"
-    ]
-  },
-  {
-    "title": "Do MLLMs Capture How Interfaces Guide User Behavior? A Benchmark for Multimodal UI/UX Design Understanding",
-    "authors": [
-      "Jaehyun Jeon",
-      "Min Soo Kim",
-      "Jang Han Yoon",
-      "Sumin Shim",
-      "Yejin Choi",
-      "Hanbin Kim",
-      "Dae Hyun Kim",
-      "Youngjae Yu"
-    ],
-    "summary": "User interface (UI) design goes beyond visuals to shape user experience (UX), underscoring the shift toward UI/UX as a unified concept. While recent studies have explored UI evaluation using Multimodal Large Language Models (MLLMs), they largely focus on surface-level features, overlooking how desig...",
-    "published": "May 08",
-    "pdf_url": "https://arxiv.org/pdf/2505.05026v4",
-    "arxiv_url": "http://arxiv.org/abs/2505.05026v4",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Osiris: A Lightweight Open-Source Hallucination Detection System",
-    "authors": [
-      "Alex Shan",
-      "John Bauer",
-      "Christopher D. Manning"
-    ],
-    "summary": "Retrieval-Augmented Generation (RAG) systems have gained widespread adoption by application builders because they leverage sources of truth to enable Large Language Models (LLMs) to generate more factually sound responses. However, hallucinations, instances of LLM responses that are unfaithful to th...",
-    "published": "May 07",
-    "pdf_url": "https://arxiv.org/pdf/2505.04844v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.04844v1",
-    "queried_author": "Christopher D Manning",
-    "matching_authors": [
-      "Christopher D Manning"
     ]
   }
 ]
