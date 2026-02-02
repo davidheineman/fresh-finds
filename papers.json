@@ -1,5 +1,70 @@
 [
   {
+    "title": "Are you going to finish that? A Practical Study of the Tokenization Boundary Problem",
+    "authors": [
+      "Hao Xu",
+      "Alisa Liu",
+      "Jonathan Hayase",
+      "Yejin Choi",
+      "Noah A. Smith"
+    ],
+    "summary": "Language models (LMs) are trained over sequences of tokens, whereas users interact with LMs via text. This mismatch gives rise to the partial token problem, which occurs when a user ends their prompt in the middle of the expected next-token, leading to distorted next-token predictions. Although this...",
+    "published": "Jan 30",
+    "pdf_url": "https://arxiv.org/pdf/2601.23223v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.23223v1",
+    "queried_author": "Noah A. Smith",
+    "matching_authors": [
+      "Noah A. Smith",
+      "Yejin Choi"
+    ]
+  },
+  {
+    "title": "The Hot Mess of AI: How Does Misalignment Scale With Model Intelligence and Task Complexity?",
+    "authors": [
+      "Alexander H\u00e4gele",
+      "Aryo Pradipta Gema",
+      "Henry Sleight",
+      "Ethan Perez",
+      "Jascha Sohl-Dickstein"
+    ],
+    "summary": "As AI becomes more capable, we entrust it with more general and consequential tasks. The risks from failure grow more severe with increasing task scope. It is therefore important to understand how extremely capable AI models will fail: Will they fail by systematically pursuing goals we do not intend...",
+    "published": "Jan 30",
+    "pdf_url": "https://arxiv.org/pdf/2601.23045v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.23045v1",
+    "queried_author": "Ethan Perez",
+    "matching_authors": [
+      "Ethan Perez"
+    ]
+  },
+  {
+    "title": "Golden Goose: A Simple Trick to Synthesize Unlimited RLVR Tasks from Unverifiable Internet Text",
+    "authors": [
+      "Ximing Lu",
+      "David Acuna",
+      "Jaehun Jung",
+      "Jian Hu",
+      "Di Zhang",
+      "Shizhe Diao",
+      "Yunheng Zou",
+      "Shaokun Zhang",
+      "Brandon Cui",
+      "Mingjie Liu",
+      "Hyunwoo Kim",
+      "Prithviraj Ammanabrolu",
+      "Jan Kautz",
+      "Yi Dong",
+      "Yejin Choi"
+    ],
+    "summary": "Reinforcement Learning with Verifiable Rewards (RLVR) has become a cornerstone for unlocking complex reasoning in Large Language Models (LLMs). Yet, scaling up RL is bottlenecked by limited existing verifiable data, where improvements increasingly saturate over prolonged training. To overcome this, ...",
+    "published": "Jan 30",
+    "pdf_url": "https://arxiv.org/pdf/2601.22975v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.22975v1",
+    "queried_author": "Yejin Choi",
+    "matching_authors": [
+      "Yejin Choi"
+    ]
+  },
+  {
     "title": "FineInstructions: Scaling Synthetic Instructions to Pre-Training Scale",
     "authors": [
       "Ajay Patel",
@@ -3934,8 +3999,8 @@
     ],
     "summary": "Recent advances in coding agents have made them capable of planning, editing, running, and testing complex code bases. Despite their growing ability in coding tasks, these systems still struggle to infer and track user intent, especially when instructions are underspecified or context-dependent. To ...",
     "published": "Oct 24",
-    "pdf_url": "https://arxiv.org/pdf/2510.21903v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.21903v1",
+    "pdf_url": "https://arxiv.org/pdf/2510.21903v2",
+    "arxiv_url": "http://arxiv.org/abs/2510.21903v2",
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig",
@@ -5330,10 +5395,10 @@
       "Christopher D. Manning",
       "R\u00f3bert Csord\u00e1s"
     ],
-    "summary": "Current approaches for scaling inference-time compute in transformers rely on training them to emit explicit chain-of-thought tokens before producing an answer. While these methods are powerful, they are limited because they cannot be applied during pretraining and are limited to only serially-gener...",
+    "summary": "Current approaches for scaling inference-time compute in transformers train them to emit explicit chain-of-thought tokens before producing an answer. While these methods are powerful, they are limited because they cannot be applied during pretraining and rely solely on serially-generated, natural-la...",
     "published": "Sep 30",
-    "pdf_url": "https://arxiv.org/pdf/2510.00219v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.00219v1",
+    "pdf_url": "https://arxiv.org/pdf/2510.00219v2",
+    "arxiv_url": "http://arxiv.org/abs/2510.00219v2",
     "queried_author": "Christopher D Manning",
     "matching_authors": [
       "Christopher D Manning"
@@ -6411,10 +6476,10 @@
       "Hyunwoo Kim",
       "Maarten Sap"
     ],
-    "summary": "Humans intuitively navigate social interactions by simulating unspoken dynamics and reasoning about others' perspectives, even with limited information. In contrast, AI systems struggle to automatically structure and reason about these implicit social contexts. In this paper, we introduce a novel st...",
+    "summary": "Humans intuitively navigate social interactions by simulating unspoken dynamics and reasoning about others' perspectives, even with limited information. In contrast, AI systems struggle to structure and reason about implicit social contexts, as they lack explicit representations for unobserved dynam...",
     "published": "Aug 30",
-    "pdf_url": "https://arxiv.org/pdf/2509.00559v1",
-    "arxiv_url": "http://arxiv.org/abs/2509.00559v1",
+    "pdf_url": "https://arxiv.org/pdf/2509.00559v2",
+    "arxiv_url": "http://arxiv.org/abs/2509.00559v2",
     "queried_author": "Maarten Sap",
     "matching_authors": [
       "Maarten Sap"
@@ -12757,8 +12822,8 @@
     ],
     "summary": "As large language models (LLMs) are increasingly used in morally sensitive domains, it is crucial to understand how persona traits affect their moral reasoning and persuasive behavior. We present the first large-scale study of multi-dimensional persona effects in AI-AI debates over real-world moral ...",
     "published": "Jun 14",
-    "pdf_url": "https://arxiv.org/pdf/2506.12657v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.12657v1",
+    "pdf_url": "https://arxiv.org/pdf/2506.12657v2",
+    "arxiv_url": "http://arxiv.org/abs/2506.12657v2",
     "queried_author": "Maarten Sap",
     "matching_authors": [
       "Maarten Sap"
@@ -14970,8 +15035,8 @@
     ],
     "summary": "State space models (SSMs) for language modelling promise an efficient and performant alternative to quadratic-attention Transformers, yet show variable performance on recalling basic information from the context. While performance on synthetic tasks like Associative Recall (AR) can point to this def...",
     "published": "May 21",
-    "pdf_url": "https://arxiv.org/pdf/2505.15105v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.15105v2",
+    "pdf_url": "https://arxiv.org/pdf/2505.15105v3",
+    "arxiv_url": "http://arxiv.org/abs/2505.15105v3",
     "queried_author": "Christopher Potts",
     "matching_authors": [
       "Christopher Potts",
@@ -15482,72 +15547,6 @@
     "queried_author": "Tatsunori Hashimoto",
     "matching_authors": [
       "Tatsunori Hashimoto"
-    ]
-  },
-  {
-    "title": "MLE-Dojo: Interactive Environments for Empowering LLM Agents in Machine Learning Engineering",
-    "authors": [
-      "Rushi Qiang",
-      "Yuchen Zhuang",
-      "Yinghao Li",
-      "Dingu Sagar V K",
-      "Rongzhi Zhang",
-      "Changhao Li",
-      "Ian Shu-Hei Wong",
-      "Sherry Yang",
-      "Percy Liang",
-      "Chao Zhang",
-      "Bo Dai"
-    ],
-    "summary": "We introduce MLE-Dojo, a Gym-style framework for systematically reinforcement learning, evaluating, and improving autonomous large language model (LLM) agents in iterative machine learning engineering (MLE) workflows. Unlike existing benchmarks that primarily rely on static datasets or single-attemp...",
-    "published": "May 12",
-    "pdf_url": "https://arxiv.org/pdf/2505.07782v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.07782v1",
-    "queried_author": "Percy Liang",
-    "matching_authors": [
-      "Percy Liang"
-    ]
-  },
-  {
-    "title": "LongCodeBench: Evaluating Coding LLMs at 1M Context Windows",
-    "authors": [
-      "Stefano Rando",
-      "Luca Romani",
-      "Alessio Sampieri",
-      "Luca Franco",
-      "John Yang",
-      "Yuta Kyuragi",
-      "Fabio Galasso",
-      "Tatsunori Hashimoto"
-    ],
-    "summary": "Context lengths for models have grown rapidly, from thousands to millions of tokens in just a few years. The extreme context sizes of modern long-context models have made it difficult to construct realistic long-context benchmarks -- not only due to the cost of collecting million-context tasks but a...",
-    "published": "May 12",
-    "pdf_url": "https://arxiv.org/pdf/2505.07897v3",
-    "arxiv_url": "http://arxiv.org/abs/2505.07897v3",
-    "queried_author": "Tatsunori Hashimoto",
-    "matching_authors": [
-      "Tatsunori Hashimoto"
-    ]
-  },
-  {
-    "title": "Not Like Us, Hunty: Measuring Perceptions and Behavioral Effects of Minoritized Anthropomorphic Cues in LLMs",
-    "authors": [
-      "Jeffrey Basoah",
-      "Daniel Chechelnitsky",
-      "Tao Long",
-      "Katharina Reinecke",
-      "Chrysoula Zerva",
-      "Kaitlyn Zhou",
-      "Mark D\u00edaz",
-      "Maarten Sap"
-    ],
-    "summary": "As large language models (LLMs) increasingly adapt and personalize to diverse sets of users, there is an increased risk of systems appropriating sociolects, i.e., language styles or dialects that are associated with specific minoritized lived experiences (e.g., African American English, Queer slang)...",
-    "published": "May 08",
-    "pdf_url": "https://arxiv.org/pdf/2505.05660v3",
-    "arxiv_url": "http://arxiv.org/abs/2505.05660v3",
-    "queried_author": "Maarten Sap",
-    "matching_authors": [
-      "Maarten Sap"
     ]
   }
 ]
