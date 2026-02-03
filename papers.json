@@ -1,5 +1,68 @@
 [
   {
+    "title": "An Empirical Study on Noisy Data and LLM Pretraining Loss Divergence",
+    "authors": [
+      "Qizhen Zhang",
+      "Ankush Garg",
+      "Jakob Foerster",
+      "Niladri Chatterji",
+      "Kshitiz Malik",
+      "Mike Lewis"
+    ],
+    "summary": "Large-scale pretraining datasets drive the success of large language models (LLMs). However, these web-scale corpora inevitably contain large amounts of noisy data due to unregulated web content or randomness inherent in data. Although LLM pretrainers often speculate that such noise contributes to i...",
+    "published": "Feb 02",
+    "pdf_url": "https://arxiv.org/pdf/2602.02400v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.02400v1",
+    "queried_author": "Mike Lewis",
+    "matching_authors": [
+      "Mike Lewis"
+    ]
+  },
+  {
+    "title": "The Shape of Beliefs: Geometry, Dynamics, and Interventions along Representation Manifolds of Language Models' Posteriors",
+    "authors": [
+      "Rapha\u00ebl Sarfati",
+      "Eric Bigelow",
+      "Daniel Wurgaft",
+      "Jack Merullo",
+      "Atticus Geiger",
+      "Owen Lewis",
+      "Tom McGrath",
+      "Ekdeep Singh Lubana"
+    ],
+    "summary": "Large language models (LLMs) represent prompt-conditioned beliefs (posteriors over answers and claims), but we lack a mechanistic account of how these beliefs are encoded in representation space, how they update with new evidence, and how interventions reshape them. We study a controlled setting in ...",
+    "published": "Feb 02",
+    "pdf_url": "https://arxiv.org/pdf/2602.02315v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.02315v1",
+    "queried_author": "Jack Merullo",
+    "matching_authors": [
+      "Jack Merullo"
+    ]
+  },
+  {
+    "title": "Physiology as Language: Translating Respiration to Sleep EEG",
+    "authors": [
+      "Kaiwen Zha",
+      "Chao Li",
+      "Hao He",
+      "Peng Cao",
+      "Tianhong Li",
+      "Ali Mirzazadeh",
+      "Ellen Zhang",
+      "Jong Woo Lee",
+      "Yoon Kim",
+      "Dina Katabi"
+    ],
+    "summary": "This paper introduces a novel cross-physiology translation task: synthesizing sleep electroencephalography (EEG) from respiration signals. To address the significant complexity gap between the two modalities, we propose a waveform-conditional generative framework that preserves fine-grained respirat...",
+    "published": "Jan 31",
+    "pdf_url": "https://arxiv.org/pdf/2602.00526v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.00526v1",
+    "queried_author": "Yoon Kim",
+    "matching_authors": [
+      "Yoon Kim"
+    ]
+  },
+  {
     "title": "Are you going to finish that? A Practical Study of the Tokenization Boundary Problem",
     "authors": [
       "Hao Xu",
@@ -92,8 +155,8 @@
     ],
     "summary": "Learning from human feedback typically relies on preference optimization that constrains policy updates through token-level regularization. However, preference optimization for language models is particularly challenging because token-space similarity does not imply semantic or behavioral similarity...",
     "published": "Jan 29",
-    "pdf_url": "https://arxiv.org/pdf/2601.22083v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.22083v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.22083v2",
+    "arxiv_url": "http://arxiv.org/abs/2601.22083v2",
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
@@ -641,8 +704,8 @@
     ],
     "summary": "We introduce A.X K1, a 519B-parameter Mixture-of-Experts (MoE) language model trained from scratch. Our design leverages scaling laws to optimize training configurations and vocabulary size under fixed computational budgets. A.X K1 is pre-trained on a corpus of approximately 10T tokens, curated by a...",
     "published": "Jan 14",
-    "pdf_url": "https://arxiv.org/pdf/2601.09200v2",
-    "arxiv_url": "http://arxiv.org/abs/2601.09200v2",
+    "pdf_url": "https://arxiv.org/pdf/2601.09200v3",
+    "arxiv_url": "http://arxiv.org/abs/2601.09200v3",
     "queried_author": "Yoon Kim",
     "matching_authors": [
       "Yoon Kim"
@@ -4439,10 +4502,10 @@
       "Graham Neubig",
       "Chenyan Xiong"
     ],
-    "summary": "Recently, many language models have been pretrained with a \"midtraining\" phase, in which higher quality, often instruction-formatted data, is mixed in at the end of pretraining. Despite the popularity of this practice, there is little scientific understanding of this phase of model training or why i...",
+    "summary": "Midtraining, the practice of mixing specialized data with more general pretraining data in an intermediate training phase, has become widespread in language model development, yet there is little understanding of what makes it effective. We propose that midtraining functions as distributional bridgi...",
     "published": "Oct 16",
-    "pdf_url": "https://arxiv.org/pdf/2510.14865v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.14865v1",
+    "pdf_url": "https://arxiv.org/pdf/2510.14865v2",
+    "arxiv_url": "http://arxiv.org/abs/2510.14865v2",
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig"
@@ -5528,10 +5591,10 @@
       "Brando Miranda",
       "Sanmi Koyejo"
     ],
-    "summary": "Neural scaling laws have played a central role in modern machine learning, driving the field's ever-expanding scaling of parameters, data and compute. While much research has gone into fitting scaling laws and predicting performance on pretraining losses and on discriminative evaluations such as mul...",
+    "summary": "Neural scaling laws have driven the field's ever-expanding exponential growth in parameters, data and compute. While scaling behaviors for pretraining losses and discriminative benchmarks are well established, generative benchmarks such as mathematical problem-solving or software engineering remain ...",
     "published": "Sep 28",
-    "pdf_url": "https://arxiv.org/pdf/2509.24012v1",
-    "arxiv_url": "http://arxiv.org/abs/2509.24012v1",
+    "pdf_url": "https://arxiv.org/pdf/2509.24012v2",
+    "arxiv_url": "http://arxiv.org/abs/2509.24012v2",
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
@@ -13451,8 +13514,8 @@
     ],
     "summary": "The rapid rise of compound AI systems (a.k.a., AI agents) is reshaping the labor market, raising concerns about job displacement, diminished human agency, and overreliance on automation. Yet, we lack a systematic understanding of the evolving landscape. In this paper, we address this gap by introduc...",
     "published": "Jun 06",
-    "pdf_url": "https://arxiv.org/pdf/2506.06576v2",
-    "arxiv_url": "http://arxiv.org/abs/2506.06576v2",
+    "pdf_url": "https://arxiv.org/pdf/2506.06576v3",
+    "arxiv_url": "http://arxiv.org/abs/2506.06576v3",
     "queried_author": "Diyi Yang",
     "matching_authors": [
       "Diyi Yang"
@@ -15480,73 +15543,6 @@
     "queried_author": "Diyi Yang",
     "matching_authors": [
       "Diyi Yang"
-    ]
-  },
-  {
-    "title": "The CoT Encyclopedia: Analyzing, Predicting, and Controlling how a Reasoning Model will Think",
-    "authors": [
-      "Seongyun Lee",
-      "Seungone Kim",
-      "Minju Seo",
-      "Yongrae Jo",
-      "Dongyoung Go",
-      "Hyeonbin Hwang",
-      "Jinho Park",
-      "Xiang Yue",
-      "Sean Welleck",
-      "Graham Neubig",
-      "Moontae Lee",
-      "Minjoon Seo"
-    ],
-    "summary": "Long chain-of-thought (CoT) is an essential ingredient in effective usage of modern large language models, but our understanding of the reasoning strategies underlying these capabilities remains limited. While some prior works have attempted to categorize CoTs using predefined strategy types, such a...",
-    "published": "May 15",
-    "pdf_url": "https://arxiv.org/pdf/2505.10185v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.10185v1",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig",
-      "Sean Welleck",
-      "Seungone Kim"
-    ]
-  },
-  {
-    "title": "Measurement to Meaning: A Validity-Centered Framework for AI Evaluation",
-    "authors": [
-      "Olawale Salaudeen",
-      "Anka Reuel",
-      "Ahmed Ahmed",
-      "Suhana Bedi",
-      "Zachary Robertson",
-      "Sudharsan Sundar",
-      "Ben Domingue",
-      "Angelina Wang",
-      "Sanmi Koyejo"
-    ],
-    "summary": "While the capabilities and utility of AI systems have advanced, rigorous norms for evaluating these systems have lagged. Grand claims, such as models achieving general reasoning capabilities, are supported with model performance on narrow benchmarks, like performance on graduate-level exam questions...",
-    "published": "May 13",
-    "pdf_url": "https://arxiv.org/pdf/2505.10573v4",
-    "arxiv_url": "http://arxiv.org/abs/2505.10573v4",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "Putting It All into Context: Simplifying Agents with LCLMs",
-    "authors": [
-      "Mingjian Jiang",
-      "Yangjun Ruan",
-      "Luis Lastras",
-      "Pavan Kapanipathi",
-      "Tatsunori Hashimoto"
-    ],
-    "summary": "Recent advances in language model (LM) agents have demonstrated significant potential for automating complex real-world tasks. To make progress on these difficult tasks, LM agent architectures have become increasingly complex, often incorporating multi-step retrieval tools, multiple agents, and scaf...",
-    "published": "May 12",
-    "pdf_url": "https://arxiv.org/pdf/2505.08120v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.08120v1",
-    "queried_author": "Tatsunori Hashimoto",
-    "matching_authors": [
-      "Tatsunori Hashimoto"
     ]
   }
 ]
