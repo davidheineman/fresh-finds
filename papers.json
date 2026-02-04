@@ -1,5 +1,71 @@
 [
   {
+    "title": "Antidistillation Fingerprinting",
+    "authors": [
+      "Yixuan Even Xu",
+      "John Kirchenbauer",
+      "Yash Savani",
+      "Asher Trockman",
+      "Alexander Robey",
+      "Tom Goldstein",
+      "Fei Fang",
+      "J. Zico Kolter"
+    ],
+    "summary": "Model distillation enables efficient emulation of frontier large language models (LLMs), creating a need for robust mechanisms to detect when a third-party student model has trained on a teacher model's outputs. However, existing fingerprinting techniques that could be used to detect such distillati...",
+    "published": "Feb 03",
+    "pdf_url": "https://arxiv.org/pdf/2602.03812v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.03812v1",
+    "queried_author": "J Zico Kolter",
+    "matching_authors": [
+      "J Zico Kolter"
+    ]
+  },
+  {
+    "title": "Reasoning with Latent Tokens in Diffusion Language Models",
+    "authors": [
+      "Andre He",
+      "Sean Welleck",
+      "Daniel Fried"
+    ],
+    "summary": "Discrete diffusion models have recently become competitive with autoregressive models for language modeling, even outperforming them on reasoning tasks requiring planning and global coherence, but they require more computation at inference time. We trace this trade-off to a key mechanism: diffusion ...",
+    "published": "Feb 03",
+    "pdf_url": "https://arxiv.org/pdf/2602.03769v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.03769v1",
+    "queried_author": "Sean Welleck",
+    "matching_authors": [
+      "Sean Welleck"
+    ]
+  },
+  {
+    "title": "Privasis: Synthesizing the Largest \"Public\" Private Dataset from Scratch",
+    "authors": [
+      "Hyunwoo Kim",
+      "Niloofar Mireshghallah",
+      "Michael Duan",
+      "Rui Xin",
+      "Shuyue Stella Li",
+      "Jaehun Jung",
+      "David Acuna",
+      "Qi Pang",
+      "Hanshen Xiao",
+      "G. Edward Suh",
+      "Sewoong Oh",
+      "Yulia Tsvetkov",
+      "Pang Wei Koh",
+      "Yejin Choi"
+    ],
+    "summary": "Research involving privacy-sensitive data has always been constrained by data scarcity, standing in sharp contrast to other areas that have benefited from data scaling. This challenge is becoming increasingly urgent as modern AI agents--such as OpenClaw and Gemini Agent--are granted persistent acces...",
+    "published": "Feb 03",
+    "pdf_url": "https://arxiv.org/pdf/2602.03183v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.03183v1",
+    "queried_author": "Niloofar Mireshghallah",
+    "matching_authors": [
+      "Niloofar Mireshghallah",
+      "Pang Wei Koh",
+      "Yejin Choi"
+    ]
+  },
+  {
     "title": "An Empirical Study on Noisy Data and LLM Pretraining Loss Divergence",
     "authors": [
       "Qizhen Zhang",
@@ -63,7 +129,7 @@
     ]
   },
   {
-    "title": "Are you going to finish that? A Practical Study of the Tokenization Boundary Problem",
+    "title": "Are you going to finish that? A Practical Study of the Partial Token Problem",
     "authors": [
       "Hao Xu",
       "Alisa Liu",
@@ -73,8 +139,8 @@
     ],
     "summary": "Language models (LMs) are trained over sequences of tokens, whereas users interact with LMs via text. This mismatch gives rise to the partial token problem, which occurs when a user ends their prompt in the middle of the expected next-token, leading to distorted next-token predictions. Although this...",
     "published": "Jan 30",
-    "pdf_url": "https://arxiv.org/pdf/2601.23223v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.23223v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.23223v2",
+    "arxiv_url": "http://arxiv.org/abs/2601.23223v2",
     "queried_author": "Noah A. Smith",
     "matching_authors": [
       "Noah A. Smith",
@@ -120,8 +186,8 @@
     ],
     "summary": "Reinforcement Learning with Verifiable Rewards (RLVR) has become a cornerstone for unlocking complex reasoning in Large Language Models (LLMs). Yet, scaling up RL is bottlenecked by limited existing verifiable data, where improvements increasingly saturate over prolonged training. To overcome this, ...",
     "published": "Jan 30",
-    "pdf_url": "https://arxiv.org/pdf/2601.22975v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.22975v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.22975v2",
+    "arxiv_url": "http://arxiv.org/abs/2601.22975v2",
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
@@ -724,8 +790,8 @@
     ],
     "summary": "Current AI safety frameworks, which often treat harmfulness as binary, lack the flexibility to handle borderline cases where humans meaningfully disagree. To build more pluralistic systems, it is essential to move beyond consensus and instead understand where and why disagreements arise. We introduc...",
     "published": "Jan 13",
-    "pdf_url": "https://arxiv.org/pdf/2601.08951v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.08951v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.08951v2",
+    "arxiv_url": "http://arxiv.org/abs/2601.08951v2",
     "queried_author": "Maarten Sap",
     "matching_authors": [
       "Maarten Sap"
@@ -12457,8 +12523,8 @@
     ],
     "summary": "Modern tokenizers employ deterministic algorithms to map text into a single \"canonical\" token sequence, yet the same string can be encoded as many non-canonical tokenizations using the tokenizer vocabulary. In this work, we investigate the robustness of LMs to text encoded with non-canonical tokeniz...",
     "published": "Jun 23",
-    "pdf_url": "https://arxiv.org/pdf/2506.19004v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.19004v1",
+    "pdf_url": "https://arxiv.org/pdf/2506.19004v2",
+    "arxiv_url": "http://arxiv.org/abs/2506.19004v2",
     "queried_author": "Noah A. Smith",
     "matching_authors": [
       "Noah A. Smith",
@@ -15483,66 +15549,6 @@
     "queried_author": "Luke Zettlemoyer",
     "matching_authors": [
       "Luke Zettlemoyer"
-    ]
-  },
-  {
-    "title": "Extracting memorized pieces of (copyrighted) books from open-weight language models",
-    "authors": [
-      "A. Feder Cooper",
-      "Aaron Gokaslan",
-      "Ahmed Ahmed",
-      "Amy B. Cyphert",
-      "Christopher De Sa",
-      "Mark A. Lemley",
-      "Daniel E. Ho",
-      "Percy Liang"
-    ],
-    "summary": "Plaintiffs and defendants in copyright lawsuits over generative AI often make sweeping, opposing claims about the extent to which large language models (LLMs) have memorized plaintiffs' protected expression in their training data. Drawing on both machine learning and copyright law, we show that thes...",
-    "published": "May 18",
-    "pdf_url": "https://arxiv.org/pdf/2505.12546v4",
-    "arxiv_url": "http://arxiv.org/abs/2505.12546v4",
-    "queried_author": "Percy Liang",
-    "matching_authors": [
-      "Percy Liang"
-    ]
-  },
-  {
-    "title": "Internal Causal Mechanisms Robustly Predict Language Model Out-of-Distribution Behaviors",
-    "authors": [
-      "Jing Huang",
-      "Junyi Tao",
-      "Thomas Icard",
-      "Diyi Yang",
-      "Christopher Potts"
-    ],
-    "summary": "Interpretability research now offers a variety of techniques for identifying abstract internal mechanisms in neural networks. Can such techniques be used to predict how models will behave on out-of-distribution examples? In this work, we provide a positive answer to this question. Through a diverse ...",
-    "published": "May 17",
-    "pdf_url": "https://arxiv.org/pdf/2505.11770v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.11770v2",
-    "queried_author": "Christopher Potts",
-    "matching_authors": [
-      "Christopher Potts",
-      "Diyi Yang"
-    ]
-  },
-  {
-    "title": "Creating General User Models from Computer Use",
-    "authors": [
-      "Omar Shaikh",
-      "Shardul Sapkota",
-      "Shan Rizvi",
-      "Eric Horvitz",
-      "Joon Sung Park",
-      "Diyi Yang",
-      "Michael S. Bernstein"
-    ],
-    "summary": "Human-computer interaction has long imagined technology that understands us-from our preferences and habits, to the timing and purpose of our everyday actions. Yet current user models remain fragmented, narrowly tailored to specific apps, and incapable of the flexible reasoning required to fulfill t...",
-    "published": "May 16",
-    "pdf_url": "https://arxiv.org/pdf/2505.10831v3",
-    "arxiv_url": "http://arxiv.org/abs/2505.10831v3",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang"
     ]
   }
 ]
