@@ -1,5 +1,41 @@
 [
   {
+    "title": "Learning to Reason in 13 Parameters",
+    "authors": [
+      "John X. Morris",
+      "Niloofar Mireshghallah",
+      "Mark Ibrahim",
+      "Saeed Mahloujifar"
+    ],
+    "summary": "Recent research has shown that language models can learn to \\textit{reason}, often via reinforcement learning. Some work even trains low-rank parameterizations for reasoning, but conventional LoRA cannot scale below the model dimension. We question whether even rank=1 LoRA is necessary for learning ...",
+    "published": "Feb 04",
+    "pdf_url": "https://arxiv.org/pdf/2602.04118v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.04118v1",
+    "queried_author": "Niloofar Mireshghallah",
+    "matching_authors": [
+      "Niloofar Mireshghallah"
+    ]
+  },
+  {
+    "title": "BASS: Benchmarking Audio LMs for Musical Structure and Semantic Reasoning",
+    "authors": [
+      "Min Jang",
+      "Orevaoghene Ahia",
+      "Nazif Tamer",
+      "Sachin Kumar",
+      "Yulia Tsvetkov",
+      "Noah A. Smith"
+    ],
+    "summary": "Music understanding is a complex task that often requires reasoning over both structural and semantic elements of audio. We introduce BASS, designed to evaluate music understanding and reasoning in audio language models across four broad categories: structural segmentation, lyric transcription, musi...",
+    "published": "Feb 03",
+    "pdf_url": "https://arxiv.org/pdf/2602.04085v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.04085v1",
+    "queried_author": "Noah A. Smith",
+    "matching_authors": [
+      "Noah A. Smith"
+    ]
+  },
+  {
     "title": "Antidistillation Fingerprinting",
     "authors": [
       "Yixuan Even Xu",
@@ -7921,10 +7957,10 @@
       "Zaid Harchaoui",
       "Yejin Choi"
     ],
-    "summary": "Recent advances in LLMs highlight Reinforcement Learning with Verifiable Rewards (RLVR) as a promising method for enhancing AI capabilities, particularly in solving complex logical tasks. However, it remains unclear whether the current practice of RLVR truly expands a model's reasoning boundary or m...",
+    "summary": "Recent advances highlight Reinforcement Learning with Verifiable Rewards (RLVR) as a promising method for enhancing LLMs' capabilities. However, it remains unclear whether the current practice of RLVR truly expands a model's reasoning boundary or mainly amplifies high-reward outputs that the base mo...",
     "published": "Jul 20",
-    "pdf_url": "https://arxiv.org/pdf/2507.14843v3",
-    "arxiv_url": "http://arxiv.org/abs/2507.14843v3",
+    "pdf_url": "https://arxiv.org/pdf/2507.14843v4",
+    "arxiv_url": "http://arxiv.org/abs/2507.14843v4",
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
@@ -15007,8 +15043,8 @@
     ],
     "summary": "The attention mechanism is a core primitive in modern large language models (LLMs) and AI more broadly. Since attention by itself is permutation-invariant, position encoding is essential for modeling structured domains such as language. Rotary position encoding (RoPE) has emerged as the de facto sta...",
     "published": "May 22",
-    "pdf_url": "https://arxiv.org/pdf/2505.16381v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.16381v1",
+    "pdf_url": "https://arxiv.org/pdf/2505.16381v2",
+    "arxiv_url": "http://arxiv.org/abs/2505.16381v2",
     "queried_author": "Yoon Kim",
     "matching_authors": [
       "Yoon Kim"
@@ -15491,64 +15527,6 @@
     "queried_author": "Greg Durrett",
     "matching_authors": [
       "Greg Durrett"
-    ]
-  },
-  {
-    "title": "Positional Fragility in LLMs: How Offset Effects Reshape Our Understanding of Memorization Risks",
-    "authors": [
-      "Yixuan Xu",
-      "Antoni-Joan Solergibert i Llaquet",
-      "Antoine Bosselut",
-      "Imanol Schlag"
-    ],
-    "summary": "Large language models are known to memorize parts of their training data, posing risk of copyright violations. To systematically examine this risk, we pretrain language models (1B/3B/8B) from scratch on 83B tokens, mixing web-scale data with public domain books used to simulate copyrighted content a...",
-    "published": "May 19",
-    "pdf_url": "https://arxiv.org/pdf/2505.13171v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.13171v2",
-    "queried_author": "Antoine Bosselut",
-    "matching_authors": [
-      "Antoine Bosselut"
-    ]
-  },
-  {
-    "title": "DreamGen: Unlocking Generalization in Robot Learning through Video World Models",
-    "authors": [
-      "Joel Jang",
-      "Seonghyeon Ye",
-      "Zongyu Lin",
-      "Jiannan Xiang",
-      "Johan Bjorck",
-      "Yu Fang",
-      "Fengyuan Hu",
-      "Spencer Huang",
-      "Kaushil Kundalia",
-      "Yen-Chen Lin",
-      "Loic Magne",
-      "Ajay Mandlekar",
-      "Avnish Narayan",
-      "You Liang Tan",
-      "Guanzhi Wang",
-      "Jing Wang",
-      "Qi Wang",
-      "Yinzhen Xu",
-      "Xiaohui Zeng",
-      "Kaiyuan Zheng",
-      "Ruijie Zheng",
-      "Ming-Yu Liu",
-      "Luke Zettlemoyer",
-      "Dieter Fox",
-      "Jan Kautz",
-      "Scott Reed",
-      "Yuke Zhu",
-      "Linxi Fan"
-    ],
-    "summary": "We introduce DreamGen, a simple yet highly effective 4-stage pipeline for training robot policies that generalize across behaviors and environments through neural trajectories - synthetic robot data generated from video world models. DreamGen leverages state-of-the-art image-to-video generative mode...",
-    "published": "May 19",
-    "pdf_url": "https://arxiv.org/pdf/2505.12705v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.12705v2",
-    "queried_author": "Luke Zettlemoyer",
-    "matching_authors": [
-      "Luke Zettlemoyer"
     ]
   }
 ]
