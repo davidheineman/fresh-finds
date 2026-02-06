@@ -1,5 +1,42 @@
 [
   {
+    "title": "Multi-Token Prediction via Self-Distillation",
+    "authors": [
+      "John Kirchenbauer",
+      "Abhimanyu Hans",
+      "Brian Bartoldson",
+      "Micah Goldblum",
+      "Ashwinee Panda",
+      "Tom Goldstein"
+    ],
+    "summary": "Existing techniques for accelerating language model inference, such as speculative decoding, require training auxiliary speculator models and building and deploying complex inference pipelines. We consider a new approach for converting a pretrained autoregressive language model from a slow single ne...",
+    "published": "Feb 05",
+    "pdf_url": "https://arxiv.org/pdf/2602.06019v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.06019v1",
+    "queried_author": "Ashwinee Panda",
+    "matching_authors": [
+      "Ashwinee Panda"
+    ]
+  },
+  {
+    "title": "MentorCollab: Selective Large-to-Small Inference-Time Guidance for Efficient Reasoning",
+    "authors": [
+      "Haojin Wang",
+      "Yike Wang",
+      "Shangbin Feng",
+      "Hannaneh Hajishirzi",
+      "Yulia Tsvetkov"
+    ],
+    "summary": "Large reasoning models (LRMs) achieve strong performance by producing long chains of thought, but their inference costs are high and often generate redundant reasoning. Small language models (SLMs) are far more efficient, yet struggle on multi-step reasoning tasks. A natural idea is to let a large m...",
+    "published": "Feb 05",
+    "pdf_url": "https://arxiv.org/pdf/2602.05307v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.05307v1",
+    "queried_author": "Hannaneh Hajishirzi",
+    "matching_authors": [
+      "Hannaneh Hajishirzi"
+    ]
+  },
+  {
     "title": "Learning to Reason in 13 Parameters",
     "authors": [
       "John X. Morris",
@@ -11,8 +48,9 @@
     "published": "Feb 04",
     "pdf_url": "https://arxiv.org/pdf/2602.04118v1",
     "arxiv_url": "http://arxiv.org/abs/2602.04118v1",
-    "queried_author": "Niloofar Mireshghallah",
+    "queried_author": "John X. Morris",
     "matching_authors": [
+      "John X. Morris",
       "Niloofar Mireshghallah"
     ]
   },
@@ -70,6 +108,26 @@
     "queried_author": "Sean Welleck",
     "matching_authors": [
       "Sean Welleck"
+    ]
+  },
+  {
+    "title": "Can Large Language Models Generalize Procedures Across Representations?",
+    "authors": [
+      "Fangru Lin",
+      "Valentin Hofmann",
+      "Xingchen Wan",
+      "Weixing Wang",
+      "Zifeng Ding",
+      "Anthony G. Cohn",
+      "Janet B. Pierrehumbert"
+    ],
+    "summary": "Large language models (LLMs) are trained and tested extensively on symbolic representations such as code and graphs, yet real-world user tasks are often specified in natural language. To what extent can LLMs generalize across these representations? Here, we approach this question by studying isomorp...",
+    "published": "Feb 03",
+    "pdf_url": "https://arxiv.org/pdf/2602.03542v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.03542v1",
+    "queried_author": "Valentin Hofmann",
+    "matching_authors": [
+      "Valentin Hofmann"
     ]
   },
   {
@@ -374,6 +432,27 @@
     ]
   },
   {
+    "title": "Demographic Probing of Large Language Models Lacks Construct Validity",
+    "authors": [
+      "Manuel Tonneau",
+      "Neil K. R. Seghal",
+      "Niyati Malhotra",
+      "Victor Orozco-Olvera",
+      "Ana Mar\u00eda Mu\u00f1oz Boudet",
+      "Lakshmi Subramanian",
+      "Sharath Chandra Guntuku",
+      "Valentin Hofmann"
+    ],
+    "summary": "Demographic probing is widely used to study how large language models (LLMs) adapt their behavior to signaled demographic attributes. This approach typically uses a single demographic cue in isolation (e.g., a name or dialect) as a signal for group membership, implicitly assuming strong construct va...",
+    "published": "Jan 26",
+    "pdf_url": "https://arxiv.org/pdf/2601.18486v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.18486v1",
+    "queried_author": "Valentin Hofmann",
+    "matching_authors": [
+      "Valentin Hofmann"
+    ]
+  },
+  {
     "title": "SAGE: Steerable Agentic Data Generation for Deep Search with Execution Feedback",
     "authors": [
       "Fangyuan Xu",
@@ -430,8 +509,8 @@
     ],
     "summary": "How can we use AI to discover a new state of the art for a scientific problem? Prior work in test-time scaling, such as AlphaEvolve, performs search by prompting a frozen LLM. We perform reinforcement learning at test time, so the LLM can continue to train, but now with experience specific to the te...",
     "published": "Jan 22",
-    "pdf_url": "https://arxiv.org/pdf/2601.16175v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.16175v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.16175v2",
+    "arxiv_url": "http://arxiv.org/abs/2601.16175v2",
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
@@ -2332,7 +2411,8 @@
     "matching_authors": [
       "Luca Soldaini",
       "Luke Zettlemoyer",
-      "Noah A. Smith"
+      "Noah A. Smith",
+      "Valentin Hofmann"
     ]
   },
   {
@@ -3738,7 +3818,8 @@
     "arxiv_url": "http://arxiv.org/abs/2511.04703v1",
     "queried_author": "Antoine Bosselut",
     "matching_authors": [
-      "Antoine Bosselut"
+      "Antoine Bosselut",
+      "Valentin Hofmann"
     ]
   },
   {
@@ -6271,6 +6352,24 @@
     ]
   },
   {
+    "title": "Large Language Models Discriminate Against Speakers of German Dialects",
+    "authors": [
+      "Minh Duc Bui",
+      "Carolin Holtermann",
+      "Valentin Hofmann",
+      "Anne Lauscher",
+      "Katharina von der Wense"
+    ],
+    "summary": "Dialects represent a significant component of human culture and are found across all regions of the world. In Germany, more than 40% of the population speaks a regional dialect (Adler and Hansen, 2022). However, despite cultural importance, individuals speaking dialects often face negative societal ...",
+    "published": "Sep 17",
+    "pdf_url": "https://arxiv.org/pdf/2509.13835v1",
+    "arxiv_url": "http://arxiv.org/abs/2509.13835v1",
+    "queried_author": "Valentin Hofmann",
+    "matching_authors": [
+      "Valentin Hofmann"
+    ]
+  },
+  {
     "title": "A deep reinforcement learning platform for antibiotic discovery",
     "authors": [
       "Hanqun Cao",
@@ -6337,7 +6436,8 @@
       "Kyle Lo",
       "Maarten Sap",
       "Noah A. Smith",
-      "Pang Wei Koh"
+      "Pang Wei Koh",
+      "Valentin Hofmann"
     ]
   },
   {
@@ -6795,8 +6895,8 @@
     ],
     "summary": "Large language models are now routinely used in high-stakes applications where hallucinations can cause serious harm, such as medical consultations or legal advice. Existing hallucination detection methods, however, are impractical for real-world use, as they are either limited to short factual quer...",
     "published": "Aug 26",
-    "pdf_url": "https://arxiv.org/pdf/2509.03531v1",
-    "arxiv_url": "http://arxiv.org/abs/2509.03531v1",
+    "pdf_url": "https://arxiv.org/pdf/2509.03531v2",
+    "arxiv_url": "http://arxiv.org/abs/2509.03531v2",
     "queried_author": "Neel Nanda",
     "matching_authors": [
       "Neel Nanda"
@@ -7122,7 +7222,8 @@
       "Ian Magnusson",
       "Jesse Dodge",
       "Kyle Lo",
-      "Noah A. Smith"
+      "Noah A. Smith",
+      "Valentin Hofmann"
     ]
   },
   {
@@ -12754,6 +12855,24 @@
     ]
   },
   {
+    "title": "Better Language Model Inversion by Compactly Representing Next-Token Distributions",
+    "authors": [
+      "Murtaza Nazir",
+      "Matthew Finlayson",
+      "John X. Morris",
+      "Xiang Ren",
+      "Swabha Swayamdipta"
+    ],
+    "summary": "Language model inversion seeks to recover hidden prompts using only language model outputs. This capability has implications for security and accountability in language model deployments, such as leaking private information from an API-protected language model's system message. We propose a new meth...",
+    "published": "Jun 20",
+    "pdf_url": "https://arxiv.org/pdf/2506.17090v3",
+    "arxiv_url": "http://arxiv.org/abs/2506.17090v3",
+    "queried_author": "John X. Morris",
+    "matching_authors": [
+      "John X. Morris"
+    ]
+  },
+  {
     "title": "Mechanisms vs. Outcomes: Probing for Syntax Fails to Explain Performance on Targeted Syntactic Evaluations",
     "authors": [
       "Ananth Agarwal",
@@ -12827,7 +12946,9 @@
     "queried_author": "Alexander M Rush",
     "matching_authors": [
       "Alexander M Rush",
-      "Alexander M. Rush"
+      "Alexander M. Rush",
+      "John X. Morris",
+      "Junjie Oscar Yin"
     ]
   },
   {
@@ -12913,8 +13034,8 @@
     ],
     "summary": "Fact verification is essential for ensuring the reliability of LLM applications. In this study, we evaluate 12 pre-trained LLMs and one specialized fact-verifier, including frontier LLMs and open-weight reasoning LLMs, using a collection of examples from 14 fact-checking benchmarks. We share three f...",
     "published": "Jun 16",
-    "pdf_url": "https://arxiv.org/pdf/2506.13342v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.13342v1",
+    "pdf_url": "https://arxiv.org/pdf/2506.13342v2",
+    "arxiv_url": "http://arxiv.org/abs/2506.13342v2",
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
@@ -14281,6 +14402,23 @@
     ]
   },
   {
+    "title": "Aligned but Blind: Alignment Increases Implicit Bias by Reducing Awareness of Race",
+    "authors": [
+      "Lihao Sun",
+      "Chengzhi Mao",
+      "Valentin Hofmann",
+      "Xuechunzi Bai"
+    ],
+    "summary": "Although value-aligned language models (LMs) appear unbiased in explicit bias evaluations, they often exhibit stereotypes in implicit word association tasks, raising concerns about their fair usage. We investigate the mechanisms behind this discrepancy and find that alignment surprisingly amplifies ...",
+    "published": "May 30",
+    "pdf_url": "https://arxiv.org/pdf/2506.00253v3",
+    "arxiv_url": "http://arxiv.org/abs/2506.00253v3",
+    "queried_author": "Valentin Hofmann",
+    "matching_authors": [
+      "Valentin Hofmann"
+    ]
+  },
+  {
     "title": "Let Them Down Easy! Contextual Effects of LLM Guardrails on User Perceptions and Preferences",
     "authors": [
       "Mingqian Zheng",
@@ -14358,7 +14496,8 @@
     "queried_author": "Alexander M Rush",
     "matching_authors": [
       "Alexander M Rush",
-      "Alexander M. Rush"
+      "Alexander M. Rush",
+      "John X. Morris"
     ]
   },
   {
@@ -15387,146 +15526,6 @@
     "queried_author": "Orion Weller",
     "matching_authors": [
       "Orion Weller"
-    ]
-  },
-  {
-    "title": "Log-Augmented Generation: Scaling Test-Time Reasoning with Reusable Computation",
-    "authors": [
-      "Peter Baile Chen",
-      "Yi Zhang",
-      "Dan Roth",
-      "Samuel Madden",
-      "Jacob Andreas",
-      "Michael Cafarella"
-    ],
-    "summary": "While humans naturally learn and adapt from past experiences, large language models (LLMs) and their agentic counterparts struggle to retain reasoning from previous tasks and apply them in future contexts. To address this limitation, we propose a novel framework, log-augmented generation (LAG) that ...",
-    "published": "May 20",
-    "pdf_url": "https://arxiv.org/pdf/2505.14398v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.14398v1",
-    "queried_author": "Jacob Andreas",
-    "matching_authors": [
-      "Jacob Andreas"
-    ]
-  },
-  {
-    "title": "Towards eliciting latent knowledge from LLMs with mechanistic interpretability",
-    "authors": [
-      "Bartosz Cywi\u0144ski",
-      "Emil Ryd",
-      "Senthooran Rajamanoharan",
-      "Neel Nanda"
-    ],
-    "summary": "As language models become more powerful and sophisticated, it is crucial that they remain trustworthy and reliable. There is concerning preliminary evidence that models may attempt to deceive or keep secrets from their operators. To explore the ability of current techniques to elicit such hidden kno...",
-    "published": "May 20",
-    "pdf_url": "https://arxiv.org/pdf/2505.14352v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.14352v1",
-    "queried_author": "Neel Nanda",
-    "matching_authors": [
-      "Neel Nanda"
-    ]
-  },
-  {
-    "title": "ELEPHANT: Measuring and understanding social sycophancy in LLMs",
-    "authors": [
-      "Myra Cheng",
-      "Sunny Yu",
-      "Cinoo Lee",
-      "Pranav Khadpe",
-      "Lujain Ibrahim",
-      "Dan Jurafsky"
-    ],
-    "summary": "LLMs are known to exhibit sycophancy: agreeing with and flattering users, even at the cost of correctness. Prior work measures sycophancy only as direct agreement with users' explicitly stated beliefs that can be compared to a ground truth. This fails to capture broader forms of sycophancy such as a...",
-    "published": "May 20",
-    "pdf_url": "https://arxiv.org/pdf/2505.13995v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.13995v2",
-    "queried_author": "Dan Jurafsky",
-    "matching_authors": [
-      "Dan Jurafsky"
-    ]
-  },
-  {
-    "title": "CLEVER: A Curated Benchmark for Formally Verified Code Generation",
-    "authors": [
-      "Amitayush Thakur",
-      "Jasper Lee",
-      "George Tsoukalas",
-      "Meghana Sistla",
-      "Matthew Zhao",
-      "Stefan Zetzsche",
-      "Greg Durrett",
-      "Yisong Yue",
-      "Swarat Chaudhuri"
-    ],
-    "summary": "We introduce ${\\rm C{\\small LEVER}}$, a high-quality, curated benchmark of 161 problems for end-to-end verified code generation in Lean. Each problem consists of (1) the task of generating a specification that matches a held-out ground-truth specification, and (2) the task of generating a Lean imple...",
-    "published": "May 20",
-    "pdf_url": "https://arxiv.org/pdf/2505.13938v4",
-    "arxiv_url": "http://arxiv.org/abs/2505.13938v4",
-    "queried_author": "Greg Durrett",
-    "matching_authors": [
-      "Greg Durrett"
-    ]
-  },
-  {
-    "title": "Do Language Models Use Their Depth Efficiently?",
-    "authors": [
-      "R\u00f3bert Csord\u00e1s",
-      "Christopher D. Manning",
-      "Christopher Potts"
-    ],
-    "summary": "Modern LLMs are increasingly deep, and depth correlates with performance, albeit with diminishing returns. However, do these models use their depth efficiently? Do they compose more features to create higher-order computations that are impossible in shallow models, or do they merely spread the same ...",
-    "published": "May 20",
-    "pdf_url": "https://arxiv.org/pdf/2505.13898v3",
-    "arxiv_url": "http://arxiv.org/abs/2505.13898v3",
-    "queried_author": "Christopher D Manning",
-    "matching_authors": [
-      "Christopher D Manning",
-      "Christopher Potts"
-    ]
-  },
-  {
-    "title": "Mean Flows for One-step Generative Modeling",
-    "authors": [
-      "Zhengyang Geng",
-      "Mingyang Deng",
-      "Xingjian Bai",
-      "J. Zico Kolter",
-      "Kaiming He"
-    ],
-    "summary": "We propose a principled and effective framework for one-step generative modeling. We introduce the notion of average velocity to characterize flow fields, in contrast to instantaneous velocity modeled by Flow Matching methods. A well-defined identity between average and instantaneous velocities is d...",
-    "published": "May 19",
-    "pdf_url": "https://arxiv.org/pdf/2505.13447v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.13447v1",
-    "queried_author": "J Zico Kolter",
-    "matching_authors": [
-      "J Zico Kolter"
-    ]
-  },
-  {
-    "title": "ChartMuseum: Testing Visual Reasoning Capabilities of Large Vision-Language Models",
-    "authors": [
-      "Liyan Tang",
-      "Grace Kim",
-      "Xinyu Zhao",
-      "Thom Lake",
-      "Wenxuan Ding",
-      "Fangcong Yin",
-      "Prasann Singhal",
-      "Manya Wadhwa",
-      "Zeyu Leo Liu",
-      "Zayne Sprague",
-      "Ramya Namuduri",
-      "Bodun Hu",
-      "Juan Diego Rodriguez",
-      "Puyuan Peng",
-      "Greg Durrett"
-    ],
-    "summary": "Chart understanding presents a unique challenge for large vision-language models (LVLMs), as it requires the integration of sophisticated textual and visual reasoning capabilities. However, current LVLMs exhibit a notable imbalance between these skills, falling short on visual reasoning that is diff...",
-    "published": "May 19",
-    "pdf_url": "https://arxiv.org/pdf/2505.13444v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.13444v2",
-    "queried_author": "Greg Durrett",
-    "matching_authors": [
-      "Greg Durrett"
     ]
   }
 ]
