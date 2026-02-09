@@ -1,5 +1,76 @@
 [
   {
+    "title": "When RL Meets Adaptive Speculative Training: A Unified Training-Serving System",
+    "authors": [
+      "Junxiong Wang",
+      "Fengxiang Bie",
+      "Jisen Li",
+      "Zhongzhu Zhou",
+      "Zelei Shao",
+      "Yubo Wang",
+      "Yinghui Liu",
+      "Qingyang Wu",
+      "Avner May",
+      "Sri Yanamandra",
+      "Yineng Zhang",
+      "Ce Zhang",
+      "Tri Dao",
+      "Percy Liang",
+      "Ben Athiwaratkun",
+      "Shuaiwen Leon Song",
+      "Chenfeng Xu",
+      "Xiaoxia Wu"
+    ],
+    "summary": "Speculative decoding can significantly accelerate LLM serving, yet most deployments today disentangle speculator training from serving, treating speculator training as a standalone offline modeling problem. We show that this decoupled formulation introduces substantial deployment and adaptation lag:...",
+    "published": "Feb 06",
+    "pdf_url": "https://arxiv.org/pdf/2602.06932v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.06932v1",
+    "queried_author": "Percy Liang",
+    "matching_authors": [
+      "Percy Liang",
+      "Tri Dao"
+    ]
+  },
+  {
+    "title": "BenchMarker: An Education-Inspired Toolkit for Highlighting Flaws in Multiple-Choice Benchmarks",
+    "authors": [
+      "Nishant Balepur",
+      "Bhavya Rajasekaran",
+      "Jane Oh",
+      "Michael Xie",
+      "Atrey Desai",
+      "Vipul Gupta",
+      "Steven James Moore",
+      "Eunsol Choi",
+      "Rachel Rudinger",
+      "Jordan Lee Boyd-Graber"
+    ],
+    "summary": "Multiple-choice question answering (MCQA) is standard in NLP, but benchmarks lack rigorous quality control. We present BenchMarker, an education-inspired toolkit using LLM judges to flag three common MCQ flaws: 1) contamination - items appearing exactly online; 2) shortcuts - cues in the choices tha...",
+    "published": "Feb 05",
+    "pdf_url": "https://arxiv.org/pdf/2602.06221v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.06221v1",
+    "queried_author": "Eunsol Choi",
+    "matching_authors": [
+      "Eunsol Choi"
+    ]
+  },
+  {
+    "title": "Large Language Model Reasoning Failures",
+    "authors": [
+      "Peiyang Song",
+      "Pengrui Han",
+      "Noah Goodman"
+    ],
+    "summary": "Large Language Models (LLMs) have exhibited remarkable reasoning capabilities, achieving impressive results across a wide range of tasks. Despite these advances, significant reasoning failures persist, occurring even in seemingly simple scenarios. To systematically understand and address these short...",
+    "published": "Feb 05",
+    "pdf_url": "https://arxiv.org/pdf/2602.06176v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.06176v1",
+    "queried_author": "Noah Goodman",
+    "matching_authors": [
+      "Noah Goodman"
+    ]
+  },
+  {
     "title": "Multi-Token Prediction via Self-Distillation",
     "authors": [
       "John Kirchenbauer",
@@ -885,8 +956,8 @@
     ],
     "summary": "We introduce A.X K1, a 519B-parameter Mixture-of-Experts (MoE) language model trained from scratch. Our design leverages scaling laws to optimize training configurations and vocabulary size under fixed computational budgets. A.X K1 is pre-trained on a corpus of approximately 10T tokens, curated by a...",
     "published": "Jan 14",
-    "pdf_url": "https://arxiv.org/pdf/2601.09200v3",
-    "arxiv_url": "http://arxiv.org/abs/2601.09200v3",
+    "pdf_url": "https://arxiv.org/pdf/2601.09200v4",
+    "arxiv_url": "http://arxiv.org/abs/2601.09200v4",
     "queried_author": "Yoon Kim",
     "matching_authors": [
       "Yoon Kim"
@@ -1185,14 +1256,16 @@
       "Ken Ziyu Liu",
       "Brando Miranda",
       "Ahmed Ahmed",
+      "Fazl Berez",
       "Abhay Puri",
+      "Stella Biderman",
       "Niloofar Mireshghallah",
       "Sanmi Koyejo"
     ],
     "summary": "As frontier AI systems are pretrained on web-scale data, test set contamination has become a critical concern for accurately assessing their capabilities. While research has thoroughly investigated the impact of test set contamination on discriminative evaluations like multiple-choice question-answe...",
     "published": "Jan 07",
-    "pdf_url": "https://arxiv.org/pdf/2601.04301v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.04301v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.04301v2",
+    "arxiv_url": "http://arxiv.org/abs/2601.04301v2",
     "queried_author": "Niloofar Mireshghallah",
     "matching_authors": [
       "Niloofar Mireshghallah",
@@ -1395,8 +1468,8 @@
     ],
     "summary": "Deceptive UI designs, widely instantiated across the web and commonly known as dark patterns, manipulate users into performing actions misaligned with their goals. In this paper, we show that dark patterns are highly effective in steering agent trajectories, posing a significant risk to agent robust...",
     "published": "Dec 28",
-    "pdf_url": "https://arxiv.org/pdf/2512.22894v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.22894v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.22894v2",
+    "arxiv_url": "http://arxiv.org/abs/2512.22894v2",
     "queried_author": "Diyi Yang",
     "matching_authors": [
       "Diyi Yang"
@@ -13566,8 +13639,8 @@
     ],
     "summary": "Although diffusion models have achieved strong results in decision-making tasks, their slow inference speed remains a key limitation. While consistency models offer a potential solution, existing applications to decision-making either struggle with suboptimal demonstrations under behavior cloning or...",
     "published": "Jun 09",
-    "pdf_url": "https://arxiv.org/pdf/2506.07822v2",
-    "arxiv_url": "http://arxiv.org/abs/2506.07822v2",
+    "pdf_url": "https://arxiv.org/pdf/2506.07822v3",
+    "arxiv_url": "http://arxiv.org/abs/2506.07822v3",
     "queried_author": "J Zico Kolter",
     "matching_authors": [
       "J Zico Kolter"
@@ -15464,68 +15537,6 @@
     "queried_author": "Niloofar Mireshghallah",
     "matching_authors": [
       "Niloofar Mireshghallah"
-    ]
-  },
-  {
-    "title": "Reasoning Models Better Express Their Confidence",
-    "authors": [
-      "Dongkeun Yoon",
-      "Seungone Kim",
-      "Sohee Yang",
-      "Sunkyoung Kim",
-      "Soyeon Kim",
-      "Yongil Kim",
-      "Eunbi Choi",
-      "Yireun Kim",
-      "Minjoon Seo"
-    ],
-    "summary": "Despite their strengths, large language models (LLMs) often fail to communicate their confidence accurately, making it difficult to assess when they might be wrong and limiting their reliability. In this work, we demonstrate that reasoning models that engage in extended chain-of-thought (CoT) reason...",
-    "published": "May 20",
-    "pdf_url": "https://arxiv.org/pdf/2505.14489v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.14489v2",
-    "queried_author": "Seungone Kim",
-    "matching_authors": [
-      "Seungone Kim"
-    ]
-  },
-  {
-    "title": "Creative Preference Optimization",
-    "authors": [
-      "Mete Ismayilzada",
-      "Antonio Laverghetta",
-      "Simone A. Luchini",
-      "Reet Patel",
-      "Antoine Bosselut",
-      "Lonneke van der Plas",
-      "Roger Beaty"
-    ],
-    "summary": "While Large Language Models (LLMs) have demonstrated impressive performance across natural language generation tasks, their ability to generate truly creative content-characterized by novelty, diversity, surprise, and quality-remains limited. Existing methods for enhancing LLM creativity often focus...",
-    "published": "May 20",
-    "pdf_url": "https://arxiv.org/pdf/2505.14442v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.14442v2",
-    "queried_author": "Antoine Bosselut",
-    "matching_authors": [
-      "Antoine Bosselut"
-    ]
-  },
-  {
-    "title": "Rank-K: Test-Time Reasoning for Listwise Reranking",
-    "authors": [
-      "Eugene Yang",
-      "Andrew Yates",
-      "Kathryn Ricci",
-      "Orion Weller",
-      "Vivek Chari",
-      "Benjamin Van Durme",
-      "Dawn Lawrie"
-    ],
-    "summary": "Retrieve-and-rerank is a popular retrieval pipeline because of its ability to make slow but effective rerankers efficient enough at query time by reducing the number of comparisons. Recent works in neural rerankers take advantage of large language models for their capability in reasoning between que...",
-    "published": "May 20",
-    "pdf_url": "https://arxiv.org/pdf/2505.14432v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.14432v1",
-    "queried_author": "Orion Weller",
-    "matching_authors": [
-      "Orion Weller"
     ]
   }
 ]
