@@ -1,5 +1,96 @@
 [
   {
+    "title": "iGRPO: Self-Feedback-Driven LLM Reasoning",
+    "authors": [
+      "Ali Hatamizadeh",
+      "Shrimai Prabhumoye",
+      "Igor Gitman",
+      "Ximing Lu",
+      "Seungju Han",
+      "Wei Ping",
+      "Yejin Choi",
+      "Jan Kautz"
+    ],
+    "summary": "Large Language Models (LLMs) have shown promise in solving complex mathematical problems, yet they still fall short of producing accurate and consistent solutions. Reinforcement Learning (RL) is a framework for aligning these models with task-specific rewards, improving overall quality and reliabili...",
+    "published": "Feb 09",
+    "pdf_url": "https://arxiv.org/pdf/2602.09000v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.09000v1",
+    "queried_author": "Yejin Choi",
+    "matching_authors": [
+      "Yejin Choi"
+    ]
+  },
+  {
+    "title": "How2Everything: Mining the Web for How-To Procedures to Evaluate and Improve LLMs",
+    "authors": [
+      "Yapei Chang",
+      "Kyle Lo",
+      "Mohit Iyyer",
+      "Luca Soldaini"
+    ],
+    "summary": "Generating step-by-step \"how-to\" procedures is a key LLM capability: how-to advice is commonly requested in chatbots, and step-by-step planning is critical for reasoning over complex tasks. Yet, measuring and improving procedural validity at scale on real-world tasks remains challenging and understu...",
+    "published": "Feb 09",
+    "pdf_url": "https://arxiv.org/pdf/2602.08808v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.08808v1",
+    "queried_author": "Kyle Lo",
+    "matching_authors": [
+      "Kyle Lo",
+      "Luca Soldaini"
+    ]
+  },
+  {
+    "title": "Emergent Misalignment is Easy, Narrow Misalignment is Hard",
+    "authors": [
+      "Anna Soligo",
+      "Edward Turner",
+      "Senthooran Rajamanoharan",
+      "Neel Nanda"
+    ],
+    "summary": "Finetuning large language models on narrowly harmful datasets can cause them to become emergently misaligned, giving stereotypically `evil' responses across diverse unrelated settings. Concerningly, a pre-registered survey of experts failed to predict this result, highlighting our poor understanding...",
+    "published": "Feb 08",
+    "pdf_url": "https://arxiv.org/pdf/2602.07852v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.07852v1",
+    "queried_author": "Neel Nanda",
+    "matching_authors": [
+      "Neel Nanda"
+    ]
+  },
+  {
+    "title": "Mimetic Initialization of MLPs",
+    "authors": [
+      "Asher Trockman",
+      "J. Zico Kolter"
+    ],
+    "summary": "Mimetic initialization uses pretrained models as case studies of good initialization, using observations of structures in trained weights to inspire new, simple initialization techniques. So far, it has been applied only to spatial mixing layers, such convolutional, self-attention, and state space l...",
+    "published": "Feb 06",
+    "pdf_url": "https://arxiv.org/pdf/2602.07156v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.07156v1",
+    "queried_author": "J Zico Kolter",
+    "matching_authors": [
+      "J Zico Kolter"
+    ]
+  },
+  {
+    "title": "Anchored Decoding: Provably Reducing Copyright Risk for Any Language Model",
+    "authors": [
+      "Jacqueline He",
+      "Jonathan Hayase",
+      "Wen-tau Yih",
+      "Sewoong Oh",
+      "Luke Zettlemoyer",
+      "Pang Wei Koh"
+    ],
+    "summary": "Modern language models (LMs) tend to memorize portions of their training data and emit verbatim spans. When the underlying sources are sensitive or copyright-protected, such reproduction raises issues of consent and compensation for creators and compliance risks for developers. We propose Anchored D...",
+    "published": "Feb 06",
+    "pdf_url": "https://arxiv.org/pdf/2602.07120v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.07120v1",
+    "queried_author": "Luke Zettlemoyer",
+    "matching_authors": [
+      "Luke Zettlemoyer",
+      "Pang Wei Koh"
+    ]
+  },
+  {
     "title": "When RL Meets Adaptive Speculative Training: A Unified Training-Serving System",
     "authors": [
       "Junxiong Wang",
@@ -105,6 +196,99 @@
     "queried_author": "Hannaneh Hajishirzi",
     "matching_authors": [
       "Hannaneh Hajishirzi"
+    ]
+  },
+  {
+    "title": "Theory of Space: Can Foundation Models Construct Spatial Beliefs through Active Exploration?",
+    "authors": [
+      "Pingyue Zhang",
+      "Zihan Huang",
+      "Yue Wang",
+      "Jieyu Zhang",
+      "Letian Xue",
+      "Zihan Wang",
+      "Qineng Wang",
+      "Keshigeyan Chandrasegaran",
+      "Ruohan Zhang",
+      "Yejin Choi",
+      "Ranjay Krishna",
+      "Jiajun Wu",
+      "Li Fei-Fei",
+      "Manling Li"
+    ],
+    "summary": "Spatial embodied intelligence requires agents to act to acquire information under partial observability. While multimodal foundation models excel at passive perception, their capacity for active, self-directed exploration remains understudied. We propose Theory of Space, defined as an agent's abilit...",
+    "published": "Feb 04",
+    "pdf_url": "https://arxiv.org/pdf/2602.07055v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.07055v1",
+    "queried_author": "Yejin Choi",
+    "matching_authors": [
+      "Yejin Choi"
+    ]
+  },
+  {
+    "title": "Reliable and Responsible Foundation Models: A Comprehensive Survey",
+    "authors": [
+      "Xinyu Yang",
+      "Junlin Han",
+      "Rishi Bommasani",
+      "Jinqi Luo",
+      "Wenjie Qu",
+      "Wangchunshu Zhou",
+      "Adel Bibi",
+      "Xiyao Wang",
+      "Jaehong Yoon",
+      "Elias Stengel-Eskin",
+      "Shengbang Tong",
+      "Lingfeng Shen",
+      "Rafael Rafailov",
+      "Runjia Li",
+      "Zhaoyang Wang",
+      "Yiyang Zhou",
+      "Chenhang Cui",
+      "Yu Wang",
+      "Wenhao Zheng",
+      "Huichi Zhou",
+      "Jindong Gu",
+      "Zhaorun Chen",
+      "Peng Xia",
+      "Tony Lee",
+      "Thomas Zollo",
+      "Vikash Sehwag",
+      "Jixuan Leng",
+      "Jiuhai Chen",
+      "Yuxin Wen",
+      "Huan Zhang",
+      "Zhun Deng",
+      "Linjun Zhang",
+      "Pavel Izmailov",
+      "Pang Wei Koh",
+      "Yulia Tsvetkov",
+      "Andrew Wilson",
+      "Jiaheng Zhang",
+      "James Zou",
+      "Cihang Xie",
+      "Hao Wang",
+      "Philip Torr",
+      "Julian McAuley",
+      "David Alvarez-Melis",
+      "Florian Tram\u00e8r",
+      "Kaidi Xu",
+      "Suman Jana",
+      "Chris Callison-Burch",
+      "Rene Vidal",
+      "Filippos Kokkinos",
+      "Mohit Bansal",
+      "Beidi Chen",
+      "Huaxiu Yao"
+    ],
+    "summary": "Foundation models, including Large Language Models (LLMs), Multimodal Large Language Models (MLLMs), Image Generative Models (i.e, Text-to-Image Models and Image-Editing Models), and Video Generative Models, have become essential tools with broad applications across various domains such as law, medi...",
+    "published": "Feb 04",
+    "pdf_url": "https://arxiv.org/pdf/2602.08145v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.08145v1",
+    "queried_author": "Pang Wei Koh",
+    "matching_authors": [
+      "Pang Wei Koh",
+      "Rafael Rafailov"
     ]
   },
   {
@@ -1009,8 +1193,8 @@
     ],
     "summary": "Multilingual language models (LMs) promise broader NLP access, yet current systems deliver uneven performance across the world's languages. This survey examines why these gaps persist and whether they reflect intrinsic linguistic difficulty or modeling artifacts. We organize the literature around tw...",
     "published": "Jan 12",
-    "pdf_url": "https://arxiv.org/pdf/2601.07220v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.07220v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.07220v2",
+    "arxiv_url": "http://arxiv.org/abs/2601.07220v2",
     "queried_author": "Dan Jurafsky",
     "matching_authors": [
       "Dan Jurafsky"
@@ -2476,10 +2660,10 @@
       "Luca Soldaini",
       "Valentin Hofmann"
     ],
-    "summary": "We introduce Bolmo, the first family of competitive fully open byte-level language models (LMs) at the 1B and 7B parameter scales. In contrast to prior research on byte-level LMs, which focuses predominantly on training from scratch, we train Bolmo by byteifying existing subword-level LMs. Byteifica...",
+    "summary": "Recent advances in generative AI have been largely driven by large language models (LLMs), deep neural networks that operate over discrete units called tokens. To represent text, the vast majority of LLMs use words or word fragments as the tokens, known as subword tokenization. Subword tokenization ...",
     "published": "Dec 17",
-    "pdf_url": "https://arxiv.org/pdf/2512.15586v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.15586v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.15586v2",
+    "arxiv_url": "http://arxiv.org/abs/2512.15586v2",
     "queried_author": "Luca Soldaini",
     "matching_authors": [
       "Luca Soldaini",
@@ -3374,8 +3558,8 @@
     ],
     "summary": "Can language models (LMs) learn to faithfully describe their internal computations? Are they better able to describe themselves than other models? We study the extent to which LMs' privileged access to their own internals can be leveraged to produce new techniques for explaining their behavior. Usin...",
     "published": "Nov 11",
-    "pdf_url": "https://arxiv.org/pdf/2511.08579v2",
-    "arxiv_url": "http://arxiv.org/abs/2511.08579v2",
+    "pdf_url": "https://arxiv.org/pdf/2511.08579v3",
+    "arxiv_url": "http://arxiv.org/abs/2511.08579v3",
     "queried_author": "Jacob Andreas",
     "matching_authors": [
       "Jacob Andreas"
@@ -12083,8 +12267,8 @@
     ],
     "summary": "With the growing use of language models (LMs) in clinical environments, there is an immediate need to evaluate the accuracy and safety of LM-generated medical text. Currently, such evaluation relies solely on manual physician review. However, detecting errors in LM-generated text is challenging beca...",
     "published": "Jul 03",
-    "pdf_url": "https://arxiv.org/pdf/2507.03152v4",
-    "arxiv_url": "http://arxiv.org/abs/2507.03152v4",
+    "pdf_url": "https://arxiv.org/pdf/2507.03152v5",
+    "arxiv_url": "http://arxiv.org/abs/2507.03152v5",
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
@@ -12201,8 +12385,8 @@
     ],
     "summary": "Compound AI systems integrating multiple components, such as Large Language Models, specialized tools, and traditional machine learning models, are increasingly deployed to solve complex real-world tasks. However, optimizing compound systems remains challenging due to their non-differentiable struct...",
     "published": "Jul 03",
-    "pdf_url": "https://arxiv.org/pdf/2507.03041v3",
-    "arxiv_url": "http://arxiv.org/abs/2507.03041v3",
+    "pdf_url": "https://arxiv.org/pdf/2507.03041v4",
+    "arxiv_url": "http://arxiv.org/abs/2507.03041v4",
     "queried_author": "Diyi Yang",
     "matching_authors": [
       "Diyi Yang"
@@ -15398,145 +15582,6 @@
     "queried_author": "Percy Liang",
     "matching_authors": [
       "Percy Liang"
-    ]
-  },
-  {
-    "title": "Mechanistic evaluation of Transformers and state space models",
-    "authors": [
-      "Aryaman Arora",
-      "Neil Rathi",
-      "Nikil Roashan Selvam",
-      "R\u00f3bert Csord\u00e1s",
-      "Dan Jurafsky",
-      "Christopher Potts"
-    ],
-    "summary": "State space models (SSMs) for language modelling promise an efficient and performant alternative to quadratic-attention Transformers, yet show variable performance on recalling basic information from the context. While performance on synthetic tasks like Associative Recall (AR) can point to this def...",
-    "published": "May 21",
-    "pdf_url": "https://arxiv.org/pdf/2505.15105v3",
-    "arxiv_url": "http://arxiv.org/abs/2505.15105v3",
-    "queried_author": "Christopher Potts",
-    "matching_authors": [
-      "Christopher Potts",
-      "Dan Jurafsky"
-    ]
-  },
-  {
-    "title": "Tversky Neural Networks: Psychologically Plausible Deep Learning with Differentiable Tversky Similarity",
-    "authors": [
-      "Moussa Koulako Bala Doumbouya",
-      "Dan Jurafsky",
-      "Christopher D. Manning"
-    ],
-    "summary": "Work in psychology has highlighted that the geometric model of similarity standard in deep learning is not psychologically plausible because its metric properties such as symmetry do not align with human perception of similarity. In contrast, Tversky (1977) proposed an axiomatic theory of similarity...",
-    "published": "May 21",
-    "pdf_url": "https://arxiv.org/pdf/2506.11035v2",
-    "arxiv_url": "http://arxiv.org/abs/2506.11035v2",
-    "queried_author": "Christopher D Manning",
-    "matching_authors": [
-      "Christopher D Manning",
-      "Dan Jurafsky"
-    ]
-  },
-  {
-    "title": "In-Context Learning Boosts Speech Recognition via Human-like Adaptation to Speakers and Language Varieties",
-    "authors": [
-      "Nathan Roll",
-      "Calbert Graham",
-      "Yuka Tatsumi",
-      "Kim Tien Nguyen",
-      "Meghan Sumner",
-      "Dan Jurafsky"
-    ],
-    "summary": "Human listeners readily adjust to unfamiliar speakers and language varieties through exposure, but do these adaptation benefits extend to state-of-the-art spoken language models? We introduce a scalable framework that allows for in-context learning (ICL) in Phi-4 Multimodal using interleaved task pr...",
-    "published": "May 20",
-    "pdf_url": "https://arxiv.org/pdf/2505.14887v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.14887v1",
-    "queried_author": "Dan Jurafsky",
-    "matching_authors": [
-      "Dan Jurafsky"
-    ]
-  },
-  {
-    "title": "Will AI Tell Lies to Save Sick Children? Litmus-Testing AI Values Prioritization with AIRiskDilemmas",
-    "authors": [
-      "Yu Ying Chiu",
-      "Zhilin Wang",
-      "Sharan Maiya",
-      "Yejin Choi",
-      "Kyle Fish",
-      "Sydney Levine",
-      "Evan Hubinger"
-    ],
-    "summary": "Detecting AI risks becomes more challenging as stronger models emerge and find novel methods such as Alignment Faking to circumvent these detection attempts. Inspired by how risky behaviors in humans (i.e., illegal activities that may hurt others) are sometimes guided by strongly-held values, we bel...",
-    "published": "May 20",
-    "pdf_url": "https://arxiv.org/pdf/2505.14633v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.14633v1",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "SATBench: Benchmarking LLMs' Logical Reasoning via Automated Puzzle Generation from SAT Formulas",
-    "authors": [
-      "Anjiang Wei",
-      "Yuheng Wu",
-      "Yingjia Wan",
-      "Tarun Suresh",
-      "Huanmi Tan",
-      "Zhanke Zhou",
-      "Sanmi Koyejo",
-      "Ke Wang",
-      "Alex Aiken"
-    ],
-    "summary": "We introduce SATBench, a benchmark for evaluating the logical reasoning capabilities of large language models (LLMs) through logical puzzles derived from Boolean satisfiability (SAT) problems. Unlike prior work that focuses on inference rule-based reasoning, which often involves deducing conclusions...",
-    "published": "May 20",
-    "pdf_url": "https://arxiv.org/pdf/2505.14615v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.14615v2",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "Agent Context Protocols Enhance Collective Inference",
-    "authors": [
-      "Devansh Bhardwaj",
-      "Arjun Beniwal",
-      "Shreyas Chaudhari",
-      "Ashwin Kalyan",
-      "Tanmay Rajpurohit",
-      "Karthik R. Narasimhan",
-      "Ameet Deshpande",
-      "Vishvak Murahari"
-    ],
-    "summary": "AI agents have become increasingly adept at complex tasks such as coding, reasoning, and multimodal understanding. However, building generalist systems requires moving beyond individual agents to collective inference -- a paradigm where multi-agent systems with diverse, task-specialized agents compl...",
-    "published": "May 20",
-    "pdf_url": "https://arxiv.org/pdf/2505.14569v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.14569v1",
-    "queried_author": "Karthik Narasimhan",
-    "matching_authors": [
-      "Karthik Narasimhan",
-      "Karthik R Narasimhan"
-    ]
-  },
-  {
-    "title": "Can Large Language Models Really Recognize Your Name?",
-    "authors": [
-      "Dzung Pham",
-      "Peter Kairouz",
-      "Niloofar Mireshghallah",
-      "Eugene Bagdasarian",
-      "Chau Minh Pham",
-      "Amir Houmansadr"
-    ],
-    "summary": "Large language models (LLMs) are increasingly being used in privacy pipelines to detect and remedy sensitive data leakage. These solutions often rely on the premise that LLMs can reliably recognize human names, one of the most important categories of personally identifiable information (PII). In thi...",
-    "published": "May 20",
-    "pdf_url": "https://arxiv.org/pdf/2505.14549v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.14549v2",
-    "queried_author": "Niloofar Mireshghallah",
-    "matching_authors": [
-      "Niloofar Mireshghallah"
     ]
   }
 ]
