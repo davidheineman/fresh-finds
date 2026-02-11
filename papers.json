@@ -1,5 +1,44 @@
 [
   {
+    "title": "Features as Rewards: Scalable Supervision for Open-Ended Tasks via Interpretability",
+    "authors": [
+      "Aaditya Vikram Prasad",
+      "Connor Watts",
+      "Jack Merullo",
+      "Dhruvil Gala",
+      "Owen Lewis",
+      "Thomas McGrath",
+      "Ekdeep Singh Lubana"
+    ],
+    "summary": "Language models trained on large-scale datasets have been shown to learn features that encode abstract concepts such as factuality or intent. Such features are traditionally used for test-time monitoring or steering. We present an alternative affordance: features as scalable supervision for open-end...",
+    "published": "Feb 10",
+    "pdf_url": "https://arxiv.org/pdf/2602.10067v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.10067v1",
+    "queried_author": "Jack Merullo",
+    "matching_authors": [
+      "Jack Merullo"
+    ]
+  },
+  {
+    "title": "Overview of the TREC 2025 RAGTIME Track",
+    "authors": [
+      "Dawn Lawrie",
+      "Sean MacAvaney",
+      "James Mayfield",
+      "Luca Soldaini",
+      "Eugene Yang",
+      "Andrew Yates"
+    ],
+    "summary": "The principal goal of the RAG TREC Instrument for Multilingual Evaluation (RAGTIME) track at TREC is to study report generation from multilingual source documents. The track has created a document collection containing Arabic, Chinese, English, and Russian news stories. RAGTIME includes three task t...",
+    "published": "Feb 10",
+    "pdf_url": "https://arxiv.org/pdf/2602.10024v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.10024v1",
+    "queried_author": "Luca Soldaini",
+    "matching_authors": [
+      "Luca Soldaini"
+    ]
+  },
+  {
     "title": "iGRPO: Self-Feedback-Driven LLM Reasoning",
     "authors": [
       "Ali Hatamizadeh",
@@ -1209,10 +1248,10 @@
       "Alexander Robey",
       "J. Zico Kolter"
     ],
-    "summary": "Ensuring the safety of language models in high-stakes settings remains a pressing challenge, as aligned behaviors are often brittle and easily undone by adversarial pressure or downstream finetuning. Prior work has shown that interventions applied during pretraining, such as rephrasing harmful conte...",
+    "summary": "Prior work has shown that safety interventions applied during pretraining, such as removing and rephrasing harmful content, can substantially improve the robustness of the resulting models. In this paper, we study the fundamental question that prior work has overlooked: \"When during pretraining shou...",
     "published": "Jan 11",
-    "pdf_url": "https://arxiv.org/pdf/2601.07087v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.07087v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.07087v2",
+    "arxiv_url": "http://arxiv.org/abs/2601.07087v2",
     "queried_author": "J Zico Kolter",
     "matching_authors": [
       "J Zico Kolter"
@@ -15501,87 +15540,6 @@
     "queried_author": "Dan Jurafsky",
     "matching_authors": [
       "Dan Jurafsky"
-    ]
-  },
-  {
-    "title": "Web-Shepherd: Advancing PRMs for Reinforcing Web Agents",
-    "authors": [
-      "Hyungjoo Chae",
-      "Sunghwan Kim",
-      "Junhee Cho",
-      "Seungone Kim",
-      "Seungjun Moon",
-      "Gyeom Hwangbo",
-      "Dongha Lim",
-      "Minjin Kim",
-      "Yeonjun Hwang",
-      "Minju Gwak",
-      "Dongwook Choi",
-      "Minseok Kang",
-      "Gwanhoon Im",
-      "ByeongUng Cho",
-      "Hyojun Kim",
-      "Jun Hee Han",
-      "Taeyoon Kwon",
-      "Minju Kim",
-      "Beong-woo Kwak",
-      "Dongjin Kang",
-      "Jinyoung Yeo"
-    ],
-    "summary": "Web navigation is a unique domain that can automate many repetitive real-life tasks and is challenging as it requires long-horizon sequential decision making beyond typical multimodal large language model (MLLM) tasks. Yet, specialized reward models for web navigation that can be utilized during bot...",
-    "published": "May 21",
-    "pdf_url": "https://arxiv.org/pdf/2505.15277v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.15277v2",
-    "queried_author": "Seungone Kim",
-    "matching_authors": [
-      "Seungone Kim"
-    ]
-  },
-  {
-    "title": "BountyBench: Dollar Impact of AI Agent Attackers and Defenders on Real-World Cybersecurity Systems",
-    "authors": [
-      "Andy K. Zhang",
-      "Joey Ji",
-      "Celeste Menders",
-      "Riya Dulepet",
-      "Thomas Qin",
-      "Ron Y. Wang",
-      "Junrong Wu",
-      "Kyleen Liao",
-      "Jiliang Li",
-      "Jinghan Hu",
-      "Sara Hong",
-      "Nardos Demilew",
-      "Shivatmica Murgai",
-      "Jason Tran",
-      "Nishka Kacheria",
-      "Ethan Ho",
-      "Denis Liu",
-      "Lauren McLane",
-      "Olivia Bruvik",
-      "Dai-Rong Han",
-      "Seungwoo Kim",
-      "Akhil Vyas",
-      "Cuiyuanxiu Chen",
-      "Ryan Li",
-      "Weiran Xu",
-      "Jonathan Z. Ye",
-      "Prerit Choudhary",
-      "Siddharth M. Bhatia",
-      "Vikram Sivashankar",
-      "Yuxuan Bao",
-      "Dawn Song",
-      "Dan Boneh",
-      "Daniel E. Ho",
-      "Percy Liang"
-    ],
-    "summary": "AI agents have the potential to significantly alter the cybersecurity landscape. Here, we introduce the first framework to capture offensive and defensive cyber-capabilities in evolving real-world systems. Instantiating this framework with BountyBench, we set up 25 systems with complex, real-world c...",
-    "published": "May 21",
-    "pdf_url": "https://arxiv.org/pdf/2505.15216v3",
-    "arxiv_url": "http://arxiv.org/abs/2505.15216v3",
-    "queried_author": "Percy Liang",
-    "matching_authors": [
-      "Percy Liang"
     ]
   }
 ]
