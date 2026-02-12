@@ -1,5 +1,85 @@
 [
   {
+    "title": "Cross-Sectional Asset Retrieval via Future-Aligned Soft Contrastive Learning",
+    "authors": [
+      "Hyeongmin Lee",
+      "Chanyeol Choi",
+      "Jihoon Kwon",
+      "Yoon Kim",
+      "Alejandro Lopez-Lira",
+      "Wonbin Ahn",
+      "Yongjae Lee"
+    ],
+    "summary": "Asset retrieval--finding similar assets in a financial universe--is central to quantitative investment decision-making. Existing approaches define similarity through historical price patterns or sector classifications, but such backward-looking criteria provide no guarantee about future behavior. We...",
+    "published": "Feb 11",
+    "pdf_url": "https://arxiv.org/pdf/2602.10711v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.10711v1",
+    "queried_author": "Yoon Kim",
+    "matching_authors": [
+      "Yoon Kim"
+    ]
+  },
+  {
+    "title": "dnaHNet: A Scalable and Hierarchical Foundation Model for Genomic Sequence Learning",
+    "authors": [
+      "Arnav Shah",
+      "Junzhe Li",
+      "Parsa Idehpour",
+      "Adibvafa Fallahpour",
+      "Brandon Wang",
+      "Sukjun Hwang",
+      "Bo Wang",
+      "Patrick D. Hsu",
+      "Hani Goodarzi",
+      "Albert Gu"
+    ],
+    "summary": "Genomic foundation models have the potential to decode DNA syntax, yet face a fundamental tradeoff in their input representation. Standard fixed-vocabulary tokenizers fragment biologically meaningful motifs such as codons and regulatory elements, while nucleotide-level models preserve biological coh...",
+    "published": "Feb 11",
+    "pdf_url": "https://arxiv.org/pdf/2602.10603v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.10603v1",
+    "queried_author": "Albert Gu",
+    "matching_authors": [
+      "Albert Gu"
+    ]
+  },
+  {
+    "title": "Simple LLM Baselines are Competitive for Model Diffing",
+    "authors": [
+      "Elias Kempf",
+      "Simon Schrodi",
+      "Bartosz Cywi\u0144ski",
+      "Thomas Brox",
+      "Neel Nanda",
+      "Arthur Conmy"
+    ],
+    "summary": "Standard LLM evaluations only test capabilities or dispositions that evaluators designed them for, missing unexpected differences such as behavioral shifts between model revisions or emergent misaligned tendencies. Model diffing addresses this limitation by automatically surfacing systematic behavio...",
+    "published": "Feb 10",
+    "pdf_url": "https://arxiv.org/pdf/2602.10371v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.10371v1",
+    "queried_author": "Neel Nanda",
+    "matching_authors": [
+      "Neel Nanda"
+    ]
+  },
+  {
+    "title": "Frame-Level Internal Tool Use for Temporal Grounding in Audio LMs",
+    "authors": [
+      "Joesph An",
+      "Phillip Keung",
+      "Jiaqi Wang",
+      "Orevaoghene Ahia",
+      "Noah A. Smith"
+    ],
+    "summary": "Large audio language models are increasingly used for complex audio understanding tasks, but they struggle with temporal tasks that require precise temporal grounding, such as word alignment and speaker diarization. The standard approach, where we generate timestamps as sequences of text tokens, is ...",
+    "published": "Feb 10",
+    "pdf_url": "https://arxiv.org/pdf/2602.10230v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.10230v1",
+    "queried_author": "Noah A. Smith",
+    "matching_authors": [
+      "Noah A. Smith"
+    ]
+  },
+  {
     "title": "Features as Rewards: Scalable Supervision for Open-Ended Tasks via Interpretability",
     "authors": [
       "Aaditya Vikram Prasad",
@@ -1068,8 +1148,8 @@
     ],
     "summary": "Frontier language model capabilities are improving rapidly. We thus need stronger mitigations against bad actors misusing increasingly powerful systems. Prior work has shown that activation probes may be a promising misuse mitigation technique, but we identify a key remaining challenge: probes fail ...",
     "published": "Jan 16",
-    "pdf_url": "https://arxiv.org/pdf/2601.11516v3",
-    "arxiv_url": "http://arxiv.org/abs/2601.11516v3",
+    "pdf_url": "https://arxiv.org/pdf/2601.11516v4",
+    "arxiv_url": "http://arxiv.org/abs/2601.11516v4",
     "queried_author": "Neel Nanda",
     "matching_authors": [
       "Neel Nanda"
@@ -1127,8 +1207,8 @@
       "Jin Kim",
       "Jiwon Kim",
       "Minsang Kim",
-      "Sungwan Kim",
       "Seungsik Kim",
+      "Sungwan Kim",
       "Tae Yoon Kim",
       "Youngrang Kim",
       "Hyeongmun Lee",
@@ -1142,12 +1222,12 @@
       "Junyoung Park",
       "Hyunho Yang",
       "Subin Yi",
-      "Soohyun Bae",
       "Dhammiko Arya",
-      "Yongseok Choi",
-      "Sangho Choi",
+      "Soohyun Bae",
       "Dongyeon Cho",
       "Seungmo Cho",
+      "Sangho Choi",
+      "Yongseok Choi",
       "Gyoungeun Han",
       "Yong-jin Han",
       "Seokyoung Hong",
@@ -1158,8 +1238,8 @@
       "Keummin Ka",
       "Sungil Kang",
       "Dongnam Kim",
-      "Joonghoon Kim",
       "Jonghwi Kim",
+      "Joonghoon Kim",
       "SaeRom Kim",
       "Sangjin Kim",
       "Seongwon Kim",
@@ -1180,8 +1260,8 @@
     ],
     "summary": "We introduce A.X K1, a 519B-parameter Mixture-of-Experts (MoE) language model trained from scratch. Our design leverages scaling laws to optimize training configurations and vocabulary size under fixed computational budgets. A.X K1 is pre-trained on a corpus of approximately 10T tokens, curated by a...",
     "published": "Jan 14",
-    "pdf_url": "https://arxiv.org/pdf/2601.09200v4",
-    "arxiv_url": "http://arxiv.org/abs/2601.09200v4",
+    "pdf_url": "https://arxiv.org/pdf/2601.09200v5",
+    "arxiv_url": "http://arxiv.org/abs/2601.09200v5",
     "queried_author": "Yoon Kim",
     "matching_authors": [
       "Yoon Kim"
@@ -15469,81 +15549,6 @@
     "queried_author": "Maarten Sap",
     "matching_authors": [
       "Maarten Sap"
-    ]
-  },
-  {
-    "title": "FREESON: Retriever-Free Retrieval-Augmented Reasoning via Corpus-Traversing MCTS",
-    "authors": [
-      "Chaeeun Kim",
-      "Seungone Kim"
-    ],
-    "summary": "Large Reasoning Models (LRMs) have demonstrated remarkable capabilities in multi-step reasoning and calling search engines at appropriate steps. However, existing retrieval-augmented reasoning approaches rely on separate retrieval models, limiting the LRM's role in retrieval to deciding when to retr...",
-    "published": "May 22",
-    "pdf_url": "https://arxiv.org/pdf/2505.16409v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.16409v1",
-    "queried_author": "Seungone Kim",
-    "matching_authors": [
-      "Seungone Kim"
-    ]
-  },
-  {
-    "title": "PaTH Attention: Position Encoding via Accumulating Householder Transformations",
-    "authors": [
-      "Songlin Yang",
-      "Yikang Shen",
-      "Kaiyue Wen",
-      "Shawn Tan",
-      "Mayank Mishra",
-      "Liliang Ren",
-      "Rameswar Panda",
-      "Yoon Kim"
-    ],
-    "summary": "The attention mechanism is a core primitive in modern large language models (LLMs) and AI more broadly. Since attention by itself is permutation-invariant, position encoding is essential for modeling structured domains such as language. Rotary position encoding (RoPE) has emerged as the de facto sta...",
-    "published": "May 22",
-    "pdf_url": "https://arxiv.org/pdf/2505.16381v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.16381v2",
-    "queried_author": "Yoon Kim",
-    "matching_authors": [
-      "Yoon Kim"
-    ]
-  },
-  {
-    "title": "Causal Interventions Reveal Shared Structure Across English Filler-Gap Constructions",
-    "authors": [
-      "Sasha Boguraev",
-      "Christopher Potts",
-      "Kyle Mahowald"
-    ],
-    "summary": "Language Models (LMs) have emerged as powerful sources of evidence for linguists seeking to develop theories of syntax. In this paper, we argue that causal interpretability methods, applied to LMs, can greatly enhance the value of such evidence by helping us characterize the abstract mechanisms that...",
-    "published": "May 21",
-    "pdf_url": "https://arxiv.org/pdf/2505.16002v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.16002v2",
-    "queried_author": "Christopher Potts",
-    "matching_authors": [
-      "Christopher Potts"
-    ]
-  },
-  {
-    "title": "Pre-training Limited Memory Language Models with Internal and External Knowledge",
-    "authors": [
-      "Linxi Zhao",
-      "Sofian Zalouk",
-      "Christian K. Belardi",
-      "Justin Lovelace",
-      "Jin Peng Zhou",
-      "Ryan Thomas Noonan",
-      "Dongyoung Go",
-      "Kilian Q. Weinberger",
-      "Yoav Artzi",
-      "Jennifer J. Sun"
-    ],
-    "summary": "Neural language models are black-boxes--both linguistic patterns and factual knowledge are distributed across billions of opaque parameters. This entangled encoding makes it difficult to reliably inspect, verify, or update specific facts. We introduce Limited Memory Language Models (LMLM), a new cla...",
-    "published": "May 21",
-    "pdf_url": "https://arxiv.org/pdf/2505.15962v3",
-    "arxiv_url": "http://arxiv.org/abs/2505.15962v3",
-    "queried_author": "Yoav Artzi",
-    "matching_authors": [
-      "Yoav Artzi"
     ]
   }
 ]
