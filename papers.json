@@ -327,6 +327,7 @@
     "queried_author": "Pang Wei Koh",
     "matching_authors": [
       "Pang Wei Koh",
+      "Pavel Izmailov",
       "Rafael Rafailov"
     ]
   },
@@ -1511,7 +1512,8 @@
     "arxiv_url": "http://arxiv.org/abs/2601.03220v1",
     "queried_author": "J Zico Kolter",
     "matching_authors": [
-      "J Zico Kolter"
+      "J Zico Kolter",
+      "Pavel Izmailov"
     ]
   },
   {
@@ -2874,6 +2876,26 @@
     "queried_author": "Neel Nanda",
     "matching_authors": [
       "Neel Nanda"
+    ]
+  },
+  {
+    "title": "Closing the Train-Test Gap in World Models for Gradient-Based Planning",
+    "authors": [
+      "Arjun Parthasarathy",
+      "Nimit Kalra",
+      "Rohun Agrawal",
+      "Yann LeCun",
+      "Oumayma Bounou",
+      "Pavel Izmailov",
+      "Micah Goldblum"
+    ],
+    "summary": "World models paired with model predictive control (MPC) can be trained offline on large-scale datasets of expert trajectories and enable generalization to a wide range of planning tasks at inference time. Compared to traditional MPC procedures, which rely on slow search algorithms or on iteratively ...",
+    "published": "Dec 10",
+    "pdf_url": "https://arxiv.org/pdf/2512.09929v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.09929v1",
+    "queried_author": "Pavel Izmailov",
+    "matching_authors": [
+      "Pavel Izmailov"
     ]
   },
   {
@@ -15522,24 +15544,6 @@
     "queried_author": "Yoav Artzi",
     "matching_authors": [
       "Yoav Artzi"
-    ]
-  },
-  {
-    "title": "From Tokens to Thoughts: How LLMs and Humans Trade Compression for Meaning",
-    "authors": [
-      "Chen Shani",
-      "Liron Soffer",
-      "Dan Jurafsky",
-      "Yann LeCun",
-      "Ravid Shwartz-Ziv"
-    ],
-    "summary": "Humans organize knowledge into compact conceptual categories that balance compression with semantic richness. Large Language Models (LLMs) exhibit impressive linguistic abilities, but whether they navigate this same compression-meaning trade-off remains unclear. We apply an Information Bottleneck fr...",
-    "published": "May 21",
-    "pdf_url": "https://arxiv.org/pdf/2505.17117v6",
-    "arxiv_url": "http://arxiv.org/abs/2505.17117v6",
-    "queried_author": "Dan Jurafsky",
-    "matching_authors": [
-      "Dan Jurafsky"
     ]
   }
 ]
