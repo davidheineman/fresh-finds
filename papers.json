@@ -1,5 +1,45 @@
 [
   {
+    "title": "Olmix: A Framework for Data Mixing Throughout LM Development",
+    "authors": [
+      "Mayee F. Chen",
+      "Tyler Murray",
+      "David Heineman",
+      "Matt Jordan",
+      "Hannaneh Hajishirzi",
+      "Christopher R\u00e9",
+      "Luca Soldaini",
+      "Kyle Lo"
+    ],
+    "summary": "Data mixing -- determining the ratios of data from different domains -- is a first-order concern for training language models (LMs). While existing mixing methods show promise, they fall short when applied during real-world LM development. We present Olmix, a framework that addresses two such challe...",
+    "published": "Feb 12",
+    "pdf_url": "https://arxiv.org/pdf/2602.12237v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.12237v1",
+    "queried_author": "Christopher R\u00e9",
+    "matching_authors": [
+      "Christopher R\u00e9",
+      "Hannaneh Hajishirzi",
+      "Kyle Lo",
+      "Luca Soldaini"
+    ]
+  },
+  {
+    "title": "Retrieval-Aware Distillation for Transformer-SSM Hybrids",
+    "authors": [
+      "Aviv Bick",
+      "Eric P. Xing",
+      "Albert Gu"
+    ],
+    "summary": "State-space models (SSMs) offer efficient sequence modeling but lag behind Transformers on benchmarks that require in-context retrieval. Prior work links this gap to a small set of attention heads, termed Gather-and-Aggregate (G&A), which SSMs struggle to reproduce. We propose *retrieval-aware disti...",
+    "published": "Feb 11",
+    "pdf_url": "https://arxiv.org/pdf/2602.11374v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.11374v1",
+    "queried_author": "Albert Gu",
+    "matching_authors": [
+      "Albert Gu"
+    ]
+  },
+  {
     "title": "Cross-Sectional Asset Retrieval via Future-Aligned Soft Contrastive Learning",
     "authors": [
       "Hyeongmin Lee",
@@ -92,8 +132,8 @@
     ],
     "summary": "Language models trained on large-scale datasets have been shown to learn features that encode abstract concepts such as factuality or intent. Such features are traditionally used for test-time monitoring or steering. We present an alternative affordance: features as scalable supervision for open-end...",
     "published": "Feb 10",
-    "pdf_url": "https://arxiv.org/pdf/2602.10067v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.10067v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.10067v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.10067v2",
     "queried_author": "Jack Merullo",
     "matching_authors": [
       "Jack Merullo"
@@ -6418,8 +6458,8 @@
     ],
     "summary": "We present DistillKac, a fast image generator that uses the damped wave equation and its stochastic Kac representation to move probability mass at finite speed. In contrast to diffusion models whose reverse time velocities can become stiff and implicitly allow unbounded propagation speed, Kac dynami...",
     "published": "Sep 25",
-    "pdf_url": "https://arxiv.org/pdf/2509.21513v1",
-    "arxiv_url": "http://arxiv.org/abs/2509.21513v1",
+    "pdf_url": "https://arxiv.org/pdf/2509.21513v2",
+    "arxiv_url": "http://arxiv.org/abs/2509.21513v2",
     "queried_author": "Christopher D Manning",
     "matching_authors": [
       "Christopher D Manning"
@@ -15513,42 +15553,6 @@
     "queried_author": "David Bamman",
     "matching_authors": [
       "David Bamman"
-    ]
-  },
-  {
-    "title": "CHART-6: Human-Centered Evaluation of Data Visualization Understanding in Vision-Language Models",
-    "authors": [
-      "Arnav Verma",
-      "Kushin Mukherjee",
-      "Christopher Potts",
-      "Elisa Kreiss",
-      "Judith E. Fan"
-    ],
-    "summary": "Data visualizations are powerful tools for communicating patterns in quantitative data. Yet understanding any data visualization is no small feat -- succeeding requires jointly making sense of visual, numerical, and linguistic inputs arranged in a conventionalized format one has previously learned t...",
-    "published": "May 22",
-    "pdf_url": "https://arxiv.org/pdf/2505.17202v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.17202v1",
-    "queried_author": "Christopher Potts",
-    "matching_authors": [
-      "Christopher Potts"
-    ]
-  },
-  {
-    "title": "Breaking mBad! Supervised Fine-tuning for Cross-Lingual Detoxification",
-    "authors": [
-      "Himanshu Beniwal",
-      "Youngwoo Kim",
-      "Maarten Sap",
-      "Soham Dan",
-      "Thomas Hartvigsen"
-    ],
-    "summary": "As large language models (LLMs) become increasingly prevalent in global applications, ensuring that they are toxicity-free across diverse linguistic contexts remains a critical challenge. We explore \"Cross-lingual Detoxification\", a cross-lingual paradigm that mitigates toxicity, enabling detoxifica...",
-    "published": "May 22",
-    "pdf_url": "https://arxiv.org/pdf/2505.16722v3",
-    "arxiv_url": "http://arxiv.org/abs/2505.16722v3",
-    "queried_author": "Maarten Sap",
-    "matching_authors": [
-      "Maarten Sap"
     ]
   }
 ]
