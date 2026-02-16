@@ -1,5 +1,45 @@
 [
   {
+    "title": "Buy versus Build an LLM: A Decision Framework for Governments",
+    "authors": [
+      "Jiahao Lu",
+      "Ziwei Xu",
+      "William Tjhi",
+      "Junnan Li",
+      "Antoine Bosselut",
+      "Pang Wei Koh",
+      "Mohan Kankanhalli"
+    ],
+    "summary": "Large Language Models (LLMs) represent a new frontier of digital infrastructure that can support a wide range of public-sector applications, from general purpose citizen services to specialized and sensitive state functions. When expanding AI access, governments face a set of strategic choices over ...",
+    "published": "Feb 13",
+    "pdf_url": "https://arxiv.org/pdf/2602.13033v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.13033v1",
+    "queried_author": "Antoine Bosselut",
+    "matching_authors": [
+      "Antoine Bosselut",
+      "Pang Wei Koh"
+    ]
+  },
+  {
+    "title": "The Appeal and Reality of Recycling LoRAs with Adaptive Merging",
+    "authors": [
+      "Haokun Liu",
+      "Gyung Hyun Je",
+      "Marco Ciccone",
+      "Zhenlin Xu",
+      "Prasanth YSS",
+      "Colin Raffel"
+    ],
+    "summary": "The widespread availability of fine-tuned LoRA modules for open pre-trained models has led to an interest in methods that can adaptively merge LoRAs to improve performance. These methods typically include some way of selecting LoRAs from a pool and tune merging coefficients based on a task-specific ...",
+    "published": "Feb 12",
+    "pdf_url": "https://arxiv.org/pdf/2602.12323v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.12323v1",
+    "queried_author": "Colin Raffel",
+    "matching_authors": [
+      "Colin Raffel"
+    ]
+  },
+  {
     "title": "Olmix: A Framework for Data Mixing Throughout LM Development",
     "authors": [
       "Mayee F. Chen",
@@ -15509,50 +15549,6 @@
     "queried_author": "Neel Nanda",
     "matching_authors": [
       "Neel Nanda"
-    ]
-  },
-  {
-    "title": "MMMG: a Comprehensive and Reliable Evaluation Suite for Multitask Multimodal Generation",
-    "authors": [
-      "Jihan Yao",
-      "Yushi Hu",
-      "Yujie Yi",
-      "Bin Han",
-      "Shangbin Feng",
-      "Guang Yang",
-      "Bingbing Wen",
-      "Ranjay Krishna",
-      "Lucy Lu Wang",
-      "Yulia Tsvetkov",
-      "Noah A. Smith",
-      "Banghua Zhu"
-    ],
-    "summary": "Automatically evaluating multimodal generation presents a significant challenge, as automated metrics often struggle to align reliably with human evaluation, especially for complex tasks that involve multiple modalities. To address this, we present MMMG, a comprehensive and human-aligned benchmark f...",
-    "published": "May 23",
-    "pdf_url": "https://arxiv.org/pdf/2505.17613v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.17613v1",
-    "queried_author": "Noah A. Smith",
-    "matching_authors": [
-      "Noah A. Smith"
-    ]
-  },
-  {
-    "title": "Multimodal Conversation Structure Understanding",
-    "authors": [
-      "Kent K. Chang",
-      "Mackenzie Hanh Cramer",
-      "Anna Ho",
-      "Ti Ti Nguyen",
-      "Yilin Yuan",
-      "David Bamman"
-    ],
-    "summary": "While multimodal large language models (LLMs) excel at dialogue, whether they can adequately parse the structure of conversation -- conversational roles and threading -- remains underexplored. In this work, we introduce a suite of tasks and release TV-MMPC, a new annotated dataset, for multimodal co...",
-    "published": "May 23",
-    "pdf_url": "https://arxiv.org/pdf/2505.17536v3",
-    "arxiv_url": "http://arxiv.org/abs/2505.17536v3",
-    "queried_author": "David Bamman",
-    "matching_authors": [
-      "David Bamman"
     ]
   }
 ]
