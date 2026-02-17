@@ -1,5 +1,89 @@
 [
   {
+    "title": "Cold-Start Personalization via Training-Free Priors from Structured World Models",
+    "authors": [
+      "Avinandan Bose",
+      "Shuyue Stella Li",
+      "Faeze Brahman",
+      "Pang Wei Koh",
+      "Simon Shaolei Du",
+      "Yulia Tsvetkov",
+      "Maryam Fazel",
+      "Lin Xiao",
+      "Asli Celikyilmaz"
+    ],
+    "summary": "Cold-start personalization requires inferring user preferences through interaction when no user-specific historical data is available. The core challenge is a routing problem: each task admits dozens of preference dimensions, yet individual users care about only a few, and which ones matter depends ...",
+    "published": "Feb 16",
+    "pdf_url": "https://arxiv.org/pdf/2602.15012v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.15012v1",
+    "queried_author": "Pang Wei Koh",
+    "matching_authors": [
+      "Pang Wei Koh"
+    ]
+  },
+  {
+    "title": "Attention Head Entropy of LLMs Predicts Answer Correctness",
+    "authors": [
+      "Sophie Ostmeier",
+      "Brian Axelrod",
+      "Maya Varma",
+      "Asad Aali",
+      "Yabin Zhang",
+      "Magdalini Paschali",
+      "Sanmi Koyejo",
+      "Curtis Langlotz",
+      "Akshay Chaudhari"
+    ],
+    "summary": "Large language models (LLMs) often generate plausible yet incorrect answers, posing risks in safety-critical settings such as medicine. Human evaluation is expensive, and LLM-as-judge approaches risk introducing hidden errors. Recent white-box methods detect contextual hallucinations using model int...",
+    "published": "Feb 14",
+    "pdf_url": "https://arxiv.org/pdf/2602.13699v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.13699v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "ALMo: Interactive Aim-Limit-Defined, Multi-Objective System for Personalized High-Dose-Rate Brachytherapy Treatment Planning and Visualization for Cervical Cancer",
+    "authors": [
+      "Edward Chen",
+      "Natalie Dullerud",
+      "Pang Wei Koh",
+      "Thomas Niedermayr",
+      "Elizabeth Kidd",
+      "Sanmi Koyejo",
+      "Carlos Guestrin"
+    ],
+    "summary": "In complex clinical decision-making, clinicians must often track a variety of competing metrics defined by aim (ideal) and limit (strict) thresholds. Sifting through these high-dimensional tradeoffs to infer the optimal patient-specific strategy is cognitively demanding and historically prone to var...",
+    "published": "Feb 14",
+    "pdf_url": "https://arxiv.org/pdf/2602.13666v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.13666v1",
+    "queried_author": "Pang Wei Koh",
+    "matching_authors": [
+      "Pang Wei Koh",
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "Small Reward Models via Backward Inference",
+    "authors": [
+      "Yike Wang",
+      "Faeze Brahman",
+      "Shangbin Feng",
+      "Teng Xiao",
+      "Hannaneh Hajishirzi",
+      "Yulia Tsvetkov"
+    ],
+    "summary": "Reward models (RMs) play a central role throughout the language model (LM) pipeline, particularly in non-verifiable domains. However, the dominant LLM-as-a-Judge paradigm relies on the strong reasoning capabilities of large models, while alternative approaches require reference responses or explicit...",
+    "published": "Feb 14",
+    "pdf_url": "https://arxiv.org/pdf/2602.13551v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.13551v1",
+    "queried_author": "Hannaneh Hajishirzi",
+    "matching_authors": [
+      "Hannaneh Hajishirzi"
+    ]
+  },
+  {
     "title": "Buy versus Build an LLM: A Decision Framework for Governments",
     "authors": [
       "Jiahao Lu",
@@ -115,8 +199,8 @@
     ],
     "summary": "Genomic foundation models have the potential to decode DNA syntax, yet face a fundamental tradeoff in their input representation. Standard fixed-vocabulary tokenizers fragment biologically meaningful motifs such as codons and regulatory elements, while nucleotide-level models preserve biological coh...",
     "published": "Feb 11",
-    "pdf_url": "https://arxiv.org/pdf/2602.10603v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.10603v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.10603v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.10603v2",
     "queried_author": "Albert Gu",
     "matching_authors": [
       "Albert Gu"
@@ -940,8 +1024,8 @@
     ],
     "summary": "Environments are the bottleneck for self-improving agents. Current terminal benchmarks were built for evaluation, not training; reinforcement learning requires a scalable pipeline, not just a dataset. We introduce Endless Terminals, a fully autonomous pipeline that procedurally generates terminal-us...",
     "published": "Jan 23",
-    "pdf_url": "https://arxiv.org/pdf/2601.16443v2",
-    "arxiv_url": "http://arxiv.org/abs/2601.16443v2",
+    "pdf_url": "https://arxiv.org/pdf/2601.16443v3",
+    "arxiv_url": "http://arxiv.org/abs/2601.16443v3",
     "queried_author": "Noah Goodman",
     "matching_authors": [
       "Noah Goodman"
@@ -8346,10 +8430,10 @@
       "Matei Zaharia",
       "Omar Khattab"
     ],
-    "summary": "Large language models (LLMs) are increasingly adapted to downstream tasks via reinforcement learning (RL) methods like Group Relative Policy Optimization (GRPO), which often require thousands of rollouts to learn new tasks. We argue that the interpretable nature of language can often provide a much ...",
+    "summary": "Large language models (LLMs) are increasingly adapted to downstream tasks via reinforcement learning (RL) methods like Group Relative Policy Optimization (GRPO), which often require thousands of rollouts to learn new tasks. We argue that the interpretable nature of language often provides a much ric...",
     "published": "Jul 25",
-    "pdf_url": "https://arxiv.org/pdf/2507.19457v1",
-    "arxiv_url": "http://arxiv.org/abs/2507.19457v1",
+    "pdf_url": "https://arxiv.org/pdf/2507.19457v2",
+    "arxiv_url": "http://arxiv.org/abs/2507.19457v2",
     "queried_author": "Christopher Potts",
     "matching_authors": [
       "Christopher Potts"
@@ -14594,8 +14678,8 @@
     ],
     "summary": "Large Language Models (LLMs) currently respond to every prompt. However, they can produce incorrect answers when they lack knowledge or capability -- a problem known as hallucination. We instead propose post-training an LLM to generate content only when confident in its correctness and to otherwise ...",
     "published": "Jun 04",
-    "pdf_url": "https://arxiv.org/pdf/2506.04051v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.04051v1",
+    "pdf_url": "https://arxiv.org/pdf/2506.04051v2",
+    "arxiv_url": "http://arxiv.org/abs/2506.04051v2",
     "queried_author": "Luke Zettlemoyer",
     "matching_authors": [
       "Luke Zettlemoyer"
@@ -15481,74 +15565,6 @@
     "queried_author": "Colin Raffel",
     "matching_authors": [
       "Colin Raffel"
-    ]
-  },
-  {
-    "title": "Dynamic Risk Assessments for Offensive Cybersecurity Agents",
-    "authors": [
-      "Boyi Wei",
-      "Benedikt Stroebl",
-      "Jiacen Xu",
-      "Joie Zhang",
-      "Zhou Li",
-      "Peter Henderson"
-    ],
-    "summary": "Foundation models are increasingly becoming better autonomous programmers, raising the prospect that they could also automate dangerous offensive cyber-operations. Current frontier model audits probe the cybersecurity risks of such agents, but most fail to account for the degrees of freedom availabl...",
-    "published": "May 23",
-    "pdf_url": "https://arxiv.org/pdf/2505.18384v5",
-    "arxiv_url": "http://arxiv.org/abs/2505.18384v5",
-    "queried_author": "Peter Henderson",
-    "matching_authors": [
-      "Peter Henderson"
-    ]
-  },
-  {
-    "title": "VideoGameBench: Can Vision-Language Models complete popular video games?",
-    "authors": [
-      "Alex L. Zhang",
-      "Thomas L. Griffiths",
-      "Karthik R. Narasimhan",
-      "Ofir Press"
-    ],
-    "summary": "Vision-language models (VLMs) have achieved strong results on coding and math benchmarks that are challenging for humans, yet their ability to perform tasks that come naturally to humans--such as perception, spatial navigation, and memory management--remains understudied. Real video games are crafte...",
-    "published": "May 23",
-    "pdf_url": "https://arxiv.org/pdf/2505.18134v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.18134v2",
-    "queried_author": "Karthik Narasimhan",
-    "matching_authors": [
-      "Karthik Narasimhan",
-      "Karthik R Narasimhan"
-    ]
-  },
-  {
-    "title": "Knot So Simple: A Minimalistic Environment for Spatial Reasoning",
-    "authors": [
-      "Zizhao Chen",
-      "Yoav Artzi"
-    ],
-    "summary": "We propose KnotGym, an interactive environment for complex, spatial reasoning and manipulation. KnotGym includes goal-oriented rope manipulation tasks with varying levels of complexity, all requiring acting from pure image observations. Tasks are defined along a clear and quantifiable axis of comple...",
-    "published": "May 23",
-    "pdf_url": "https://arxiv.org/pdf/2505.18028v3",
-    "arxiv_url": "http://arxiv.org/abs/2505.18028v3",
-    "queried_author": "Yoav Artzi",
-    "matching_authors": [
-      "Yoav Artzi"
-    ]
-  },
-  {
-    "title": "Inference-Time Decomposition of Activations (ITDA): A Scalable Approach to Interpreting Large Language Models",
-    "authors": [
-      "Patrick Leask",
-      "Neel Nanda",
-      "Noura Al Moubayed"
-    ],
-    "summary": "Sparse autoencoders (SAEs) are a popular method for decomposing Large Langage Models (LLM) activations into interpretable latents. However, due to their substantial training cost, most academic research uses open-source SAEs which are only available for a restricted set of models of up to 27B parame...",
-    "published": "May 23",
-    "pdf_url": "https://arxiv.org/pdf/2505.17769v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.17769v2",
-    "queried_author": "Neel Nanda",
-    "matching_authors": [
-      "Neel Nanda"
     ]
   }
 ]
