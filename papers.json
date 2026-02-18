@@ -1,5 +1,21 @@
 [
   {
+    "title": "Discovering Implicit Large Language Model Alignment Objectives",
+    "authors": [
+      "Edward Chen",
+      "Sanmi Koyejo",
+      "Carlos Guestrin"
+    ],
+    "summary": "Large language model (LLM) alignment relies on complex reward signals that often obscure the specific behaviors being incentivized, creating critical risks of misalignment and reward hacking. Existing interpretation methods typically rely on pre-defined rubrics, risking the omission of \"unknown unkn...",
+    "published": "Feb 17",
+    "pdf_url": "https://arxiv.org/pdf/2602.15338v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.15338v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
     "title": "Cold-Start Personalization via Training-Free Priors from Structured World Models",
     "authors": [
       "Avinandan Bose",
@@ -4030,7 +4046,7 @@
     ]
   },
   {
-    "title": "Long Grounded Thoughts: Distilling Compositional Visual Reasoning Chains at Scale",
+    "title": "Long Grounded Thoughts: Synthesizing Visual Problems and Reasoning Chains at Scale",
     "authors": [
       "David Acuna",
       "Chao-Han Huck Yang",
@@ -4042,10 +4058,10 @@
       "Yuan-Hong Liao",
       "Yejin Choi"
     ],
-    "summary": "Recent progress in multimodal reasoning has been driven largely by undisclosed datasets and proprietary data synthesis recipes, leaving open questions about how to systematically build large-scale, vision-centric reasoning datasets, particularly for tasks that go beyond visual math. In this work, we...",
+    "summary": "Despite rapid progress, multimodal reasoning still lacks a systematic approach to synthesize large-scale vision-centric datasets beyond visual math. We introduce a framework able to synthesize vision-centric problems spanning diverse levels of complexity, and the resulting dataset with over 1M high-...",
     "published": "Nov 07",
-    "pdf_url": "https://arxiv.org/pdf/2511.05705v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.05705v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.05705v2",
+    "arxiv_url": "http://arxiv.org/abs/2511.05705v2",
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
@@ -9041,8 +9057,8 @@
     ],
     "summary": "Recent advances in AI agents capable of solving complex, everyday tasks, from scheduling to customer service, have enabled deployment in real-world settings, but their possibilities for unsafe behavior demands rigorous evaluation. While prior benchmarks have attempted to assess agent safety, most fa...",
     "published": "Jul 08",
-    "pdf_url": "https://arxiv.org/pdf/2507.06134v1",
-    "arxiv_url": "http://arxiv.org/abs/2507.06134v1",
+    "pdf_url": "https://arxiv.org/pdf/2507.06134v2",
+    "arxiv_url": "http://arxiv.org/abs/2507.06134v2",
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig",
@@ -15547,24 +15563,6 @@
     "queried_author": "Niloofar Mireshghallah",
     "matching_authors": [
       "Niloofar Mireshghallah"
-    ]
-  },
-  {
-    "title": "Enhancing Training Data Attribution with Representational Optimization",
-    "authors": [
-      "Weiwei Sun",
-      "Haokun Liu",
-      "Nikhil Kandpal",
-      "Colin Raffel",
-      "Yiming Yang"
-    ],
-    "summary": "Training data attribution (TDA) methods aim to measure how training data impacts a model's predictions. While gradient-based attribution methods, such as influence functions, offer theoretical grounding, their computational costs make them impractical for large-scale applications. Representation-bas...",
-    "published": "May 24",
-    "pdf_url": "https://arxiv.org/pdf/2505.18513v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.18513v2",
-    "queried_author": "Colin Raffel",
-    "matching_authors": [
-      "Colin Raffel"
     ]
   }
 ]
