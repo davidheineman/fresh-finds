@@ -1,5 +1,150 @@
 [
   {
+    "title": "Calibrate-Then-Act: Cost-Aware Exploration in LLM Agents",
+    "authors": [
+      "Wenxuan Ding",
+      "Nicholas Tomlin",
+      "Greg Durrett"
+    ],
+    "summary": "LLMs are increasingly being used for complex problems which are not necessarily resolved in a single response, but require interacting with an environment to acquire information. In these scenarios, LLMs must reason about inherent cost-uncertainty tradeoffs in when to stop exploring and commit to an...",
+    "published": "Feb 18",
+    "pdf_url": "https://arxiv.org/pdf/2602.16699v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.16699v1",
+    "queried_author": "Greg Durrett",
+    "matching_authors": [
+      "Greg Durrett"
+    ]
+  },
+  {
+    "title": "Scaling Open Discrete Audio Foundation Models with Interleaved Semantic, Acoustic, and Text Tokens",
+    "authors": [
+      "Potsawee Manakul",
+      "Woody Haosheng Gan",
+      "Martijn Bartelds",
+      "Guangzhi Sun",
+      "William Held",
+      "Diyi Yang"
+    ],
+    "summary": "Current audio language models are predominantly text-first, either extending pre-trained text LLM backbones or relying on semantic-only audio tokens, limiting general audio modeling. This paper presents a systematic empirical study of native audio foundation models that apply next-token prediction t...",
+    "published": "Feb 18",
+    "pdf_url": "https://arxiv.org/pdf/2602.16687v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.16687v1",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang",
+      "William Held"
+    ]
+  },
+  {
+    "title": "Helpful to a Fault: Measuring Illicit Assistance in Multi-Turn, Multilingual LLM Agents",
+    "authors": [
+      "Nivya Talokar",
+      "Ayush K Tarun",
+      "Murari Mandal",
+      "Maksym Andriushchenko",
+      "Antoine Bosselut"
+    ],
+    "summary": "LLM-based agents execute real-world workflows via tools and memory. These affordances enable ill-intended adversaries to also use these agents to carry out complex misuse scenarios. Existing agent misuse benchmarks largely test single-prompt instructions, leaving a gap in measuring how agents end up...",
+    "published": "Feb 18",
+    "pdf_url": "https://arxiv.org/pdf/2602.16346v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.16346v1",
+    "queried_author": "Antoine Bosselut",
+    "matching_authors": [
+      "Antoine Bosselut"
+    ]
+  },
+  {
+    "title": "MemoryArena: Benchmarking Agent Memory in Interdependent Multi-Session Agentic Tasks",
+    "authors": [
+      "Zexue He",
+      "Yu Wang",
+      "Churan Zhi",
+      "Yuanzhe Hu",
+      "Tzu-Ping Chen",
+      "Lang Yin",
+      "Ze Chen",
+      "Tong Arthur Wu",
+      "Siru Ouyang",
+      "Zihan Wang",
+      "Jiaxin Pei",
+      "Julian McAuley",
+      "Yejin Choi",
+      "Alex Pentland"
+    ],
+    "summary": "Existing evaluations of agents with memory typically assess memorization and action in isolation. One class of benchmarks evaluates memorization by testing recall of past conversations or text but fails to capture how memory is used to guide future decisions. Another class focuses on agents acting i...",
+    "published": "Feb 18",
+    "pdf_url": "https://arxiv.org/pdf/2602.16313v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.16313v1",
+    "queried_author": "Yejin Choi",
+    "matching_authors": [
+      "Yejin Choi"
+    ]
+  },
+  {
+    "title": "Fast KV Compaction via Attention Matching",
+    "authors": [
+      "Adam Zweiger",
+      "Xinghong Fu",
+      "Han Guo",
+      "Yoon Kim"
+    ],
+    "summary": "Scaling language models to long contexts is often bottlenecked by the size of the key-value (KV) cache. In deployed settings, long contexts are typically managed through compaction in token space via summarization. However, summarization can be highly lossy, substantially harming downstream performa...",
+    "published": "Feb 18",
+    "pdf_url": "https://arxiv.org/pdf/2602.16284v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.16284v1",
+    "queried_author": "Yoon Kim",
+    "matching_authors": [
+      "Yoon Kim"
+    ]
+  },
+  {
+    "title": "Updating Parametric Knowledge with Context Distillation Retains Post-Training Capabilities",
+    "authors": [
+      "Shankar Padmanabhan",
+      "Mustafa Omer Gul",
+      "Tanya Goyal"
+    ],
+    "summary": "Post-training endows pretrained LLMs with a variety of desirable skills, including instruction-following, reasoning, and others. However, these post-trained LLMs only encode knowledge up to a cut-off date, necessitating continual adaptation. Unfortunately, existing solutions cannot simultaneously le...",
+    "published": "Feb 17",
+    "pdf_url": "https://arxiv.org/pdf/2602.16093v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.16093v1",
+    "queried_author": "Tanya Goyal",
+    "matching_authors": [
+      "Tanya Goyal"
+    ]
+  },
+  {
+    "title": "MAEB: Massive Audio Embedding Benchmark",
+    "authors": [
+      "Adnan El Assadi",
+      "Isaac Chung",
+      "Chenghao Xiao",
+      "Roman Solomatin",
+      "Animesh Jha",
+      "Rahul Chand",
+      "Silky Singh",
+      "Kaitlyn Wang",
+      "Ali Sartaz Khan",
+      "Marc Moussa Nasser",
+      "Sufen Fong",
+      "Pengfei He",
+      "Alan Xiao",
+      "Ayush Sunil Munot",
+      "Aditya Shrivastava",
+      "Artem Gazizov",
+      "Niklas Muennighoff",
+      "Kenneth Enevoldsen"
+    ],
+    "summary": "We introduce the Massive Audio Embedding Benchmark (MAEB), a large-scale benchmark covering 30 tasks across speech, music, environmental sounds, and cross-modal audio-text reasoning in 100+ languages. We evaluate 50+ models and find that no single model dominates across all tasks: contrastive audio-...",
+    "published": "Feb 17",
+    "pdf_url": "https://arxiv.org/pdf/2602.16008v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.16008v1",
+    "queried_author": "Niklas Muennighoff",
+    "matching_authors": [
+      "Niklas Muennighoff"
+    ]
+  },
+  {
     "title": "Discovering Implicit Large Language Model Alignment Objectives",
     "authors": [
       "Edward Chen",
@@ -272,8 +417,8 @@
     ],
     "summary": "Language models trained on large-scale datasets have been shown to learn features that encode abstract concepts such as factuality or intent. Such features are traditionally used for test-time monitoring or steering. We present an alternative affordance: features as scalable supervision for open-end...",
     "published": "Feb 10",
-    "pdf_url": "https://arxiv.org/pdf/2602.10067v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.10067v2",
+    "pdf_url": "https://arxiv.org/pdf/2602.10067v3",
+    "arxiv_url": "http://arxiv.org/abs/2602.10067v3",
     "queried_author": "Jack Merullo",
     "matching_authors": [
       "Jack Merullo"
@@ -7435,8 +7580,8 @@
     ],
     "summary": "The ability to combine linguistic guidance from others with direct experience is central to human development, enabling safe and rapid learning in new environments. How do people integrate these two sources of knowledge, and how might AI systems? We present a computational framework that models soci...",
     "published": "Aug 26",
-    "pdf_url": "https://arxiv.org/pdf/2509.00074v1",
-    "arxiv_url": "http://arxiv.org/abs/2509.00074v1",
+    "pdf_url": "https://arxiv.org/pdf/2509.00074v2",
+    "arxiv_url": "http://arxiv.org/abs/2509.00074v2",
     "queried_author": "Jacob Andreas",
     "matching_authors": [
       "Jacob Andreas",
@@ -15336,233 +15481,6 @@
     "matching_authors": [
       "Christopher D Manning",
       "Christopher Potts"
-    ]
-  },
-  {
-    "title": "MedHELM: Holistic Evaluation of Large Language Models for Medical Tasks",
-    "authors": [
-      "Suhana Bedi",
-      "Hejie Cui",
-      "Miguel Fuentes",
-      "Alyssa Unell",
-      "Michael Wornow",
-      "Juan M. Banda",
-      "Nikesh Kotecha",
-      "Timothy Keyes",
-      "Yifan Mai",
-      "Mert Oez",
-      "Hao Qiu",
-      "Shrey Jain",
-      "Leonardo Schettini",
-      "Mehr Kashyap",
-      "Jason Alan Fries",
-      "Akshay Swaminathan",
-      "Philip Chung",
-      "Fateme Nateghi",
-      "Asad Aali",
-      "Ashwin Nayak",
-      "Shivam Vedak",
-      "Sneha S. Jain",
-      "Birju Patel",
-      "Oluseyi Fayanju",
-      "Shreya Shah",
-      "Ethan Goh",
-      "Dong-han Yao",
-      "Brian Soetikno",
-      "Eduardo Reis",
-      "Sergios Gatidis",
-      "Vasu Divi",
-      "Robson Capasso",
-      "Rachna Saralkar",
-      "Chia-Chun Chiang",
-      "Jenelle Jindal",
-      "Tho Pham",
-      "Faraz Ghoddusi",
-      "Steven Lin",
-      "Albert S. Chiou",
-      "Christy Hong",
-      "Mohana Roy",
-      "Michael F. Gensheimer",
-      "Hinesh Patel",
-      "Kevin Schulman",
-      "Dev Dash",
-      "Danton Char",
-      "Lance Downing",
-      "Francois Grolleau",
-      "Kameron Black",
-      "Bethel Mieso",
-      "Aydin Zahedivash",
-      "Wen-wai Yim",
-      "Harshita Sharma",
-      "Tony Lee",
-      "Hannah Kirsch",
-      "Jennifer Lee",
-      "Nerissa Ambers",
-      "Carlene Lugtu",
-      "Aditya Sharma",
-      "Bilal Mawji",
-      "Alex Alekseyev",
-      "Vicky Zhou",
-      "Vikas Kakkar",
-      "Jarrod Helzer",
-      "Anurang Revri",
-      "Yair Bannett",
-      "Roxana Daneshjou",
-      "Jonathan Chen",
-      "Emily Alsentzer",
-      "Keith Morse",
-      "Nirmal Ravi",
-      "Nima Aghaeepour",
-      "Vanessa Kennedy",
-      "Akshay Chaudhari",
-      "Thomas Wang",
-      "Sanmi Koyejo",
-      "Matthew P. Lungren",
-      "Eric Horvitz",
-      "Percy Liang",
-      "Mike Pfeffer",
-      "Nigam H. Shah"
-    ],
-    "summary": "While large language models (LLMs) achieve near-perfect scores on medical licensing exams, these evaluations inadequately reflect the complexity and diversity of real-world clinical practice. We introduce MedHELM, an extensible evaluation framework for assessing LLM performance for medical tasks wit...",
-    "published": "May 26",
-    "pdf_url": "https://arxiv.org/pdf/2505.23802v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.23802v2",
-    "queried_author": "Percy Liang",
-    "matching_authors": [
-      "Percy Liang",
-      "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "AstroVisBench: A Code Benchmark for Scientific Computing and Visualization in Astronomy",
-    "authors": [
-      "Sebastian Antony Joseph",
-      "Syed Murtaza Husain",
-      "Stella S. R. Offner",
-      "St\u00e9phanie Juneau",
-      "Paul Torrey",
-      "Adam S. Bolton",
-      "Juan P. Farias",
-      "Niall Gaffney",
-      "Greg Durrett",
-      "Junyi Jessy Li"
-    ],
-    "summary": "Large Language Models (LLMs) are being explored for applications in scientific research, including their capabilities to synthesize literature, answer research questions, generate research ideas, and even conduct computational experiments. Ultimately, our goal is for these to help scientists derive ...",
-    "published": "May 26",
-    "pdf_url": "https://arxiv.org/pdf/2505.20538v4",
-    "arxiv_url": "http://arxiv.org/abs/2505.20538v4",
-    "queried_author": "Greg Durrett",
-    "matching_authors": [
-      "Greg Durrett"
-    ]
-  },
-  {
-    "title": "Prismatic Synthesis: Gradient-based Data Diversification Boosts Generalization in LLM Reasoning",
-    "authors": [
-      "Jaehun Jung",
-      "Seungju Han",
-      "Ximing Lu",
-      "Skyler Hallinan",
-      "David Acuna",
-      "Shrimai Prabhumoye",
-      "Mostafa Patwary",
-      "Mohammad Shoeybi",
-      "Bryan Catanzaro",
-      "Yejin Choi"
-    ],
-    "summary": "Effective generalization in language models depends critically on the diversity of their training data. Yet existing diversity metrics often fall short of this goal, relying on surface-level heuristics that are decoupled from model behavior. This motivates us to ask: What kind of diversity in traini...",
-    "published": "May 26",
-    "pdf_url": "https://arxiv.org/pdf/2505.20161v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.20161v1",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "FieldWorkArena: Agentic AI Benchmark for Real Field Work Tasks",
-    "authors": [
-      "Atsunori Moteki",
-      "Shoichi Masui",
-      "Fan Yang",
-      "Yueqi Song",
-      "Yonatan Bisk",
-      "Graham Neubig",
-      "Ikuo Kusajima",
-      "Yasuto Watanabe",
-      "Hiroyuki Ishida",
-      "Jun Takahashi",
-      "Shan Jiang"
-    ],
-    "summary": "This paper proposes FieldWorkArena, a benchmark for agentic AI targeting real-world field work. With the recent increase in demand for agentic AI, they are required to monitor and report safety and health incidents, as well as manufacturing-related incidents, that may occur in real-world work enviro...",
-    "published": "May 26",
-    "pdf_url": "https://arxiv.org/pdf/2505.19662v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.19662v2",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
-    ]
-  },
-  {
-    "title": "Rhapsody: A Dataset for Highlight Detection in Podcasts",
-    "authors": [
-      "Younghan Park",
-      "Anuj Diwan",
-      "David Harwath",
-      "Eunsol Choi"
-    ],
-    "summary": "Podcasts have become daily companions for half a billion users. Given the enormous amount of podcast content available, highlights provide a valuable signal that helps viewers get the gist of an episode and decide if they want to invest in listening to it in its entirety. However, identifying highli...",
-    "published": "May 26",
-    "pdf_url": "https://arxiv.org/pdf/2505.19429v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.19429v2",
-    "queried_author": "Eunsol Choi",
-    "matching_authors": [
-      "Eunsol Choi"
-    ]
-  },
-  {
-    "title": "Knoll: Creating a Knowledge Ecosystem for Large Language Models",
-    "authors": [
-      "Dora Zhao",
-      "Diyi Yang",
-      "Michael S. Bernstein"
-    ],
-    "summary": "Large language models are designed to encode general purpose knowledge about the world from Internet data. Yet, a wealth of information falls outside this scope -- ranging from personal preferences to organizational policies, from community-specific advice to up-to-date news -- that users want model...",
-    "published": "May 25",
-    "pdf_url": "https://arxiv.org/pdf/2505.19335v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.19335v2",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang"
-    ]
-  },
-  {
-    "title": "Exploring the limits of strong membership inference attacks on large language models",
-    "authors": [
-      "Jamie Hayes",
-      "Ilia Shumailov",
-      "Christopher A. Choquette-Choo",
-      "Matthew Jagielski",
-      "George Kaissis",
-      "Milad Nasr",
-      "Sahra Ghalebikesabi",
-      "Meenatchi Sundaram Mutu Selva Annamalai",
-      "Niloofar Mireshghallah",
-      "Igor Shilov",
-      "Matthieu Meeus",
-      "Yves-Alexandre de Montjoye",
-      "Katherine Lee",
-      "Franziska Boenisch",
-      "Adam Dziedzic",
-      "A. Feder Cooper"
-    ],
-    "summary": "State-of-the-art membership inference attacks (MIAs) typically require training many reference models, making it difficult to scale these attacks to large pre-trained language models (LLMs). As a result, prior research has either relied on weaker attacks that avoid training references (e.g., fine-tu...",
-    "published": "May 24",
-    "pdf_url": "https://arxiv.org/pdf/2505.18773v3",
-    "arxiv_url": "http://arxiv.org/abs/2505.18773v3",
-    "queried_author": "Niloofar Mireshghallah",
-    "matching_authors": [
-      "Niloofar Mireshghallah"
     ]
   }
 ]
