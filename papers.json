@@ -1,5 +1,91 @@
 [
   {
+    "title": "Reverso: Efficient Time Series Foundation Models for Zero-shot Forecasting",
+    "authors": [
+      "Xinghong Fu",
+      "Yanhong Li",
+      "Georgios Papaioannou",
+      "Yoon Kim"
+    ],
+    "summary": "Learning time series foundation models has been shown to be a promising approach for zero-shot time series forecasting across diverse time series domains. Insofar as scaling has been a critical driver of performance of foundation models in other modalities such as language and vision, much recent wo...",
+    "published": "Feb 19",
+    "pdf_url": "https://arxiv.org/pdf/2602.17634v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.17634v1",
+    "queried_author": "Yoon Kim",
+    "matching_authors": [
+      "Yoon Kim"
+    ]
+  },
+  {
+    "title": "Modeling Distinct Human Interaction in Web Agents",
+    "authors": [
+      "Faria Huq",
+      "Zora Zhiruo Wang",
+      "Zhanqiu Guo",
+      "Venu Arvind Arangarajan",
+      "Tianyue Ou",
+      "Frank Xu",
+      "Shuyan Zhou",
+      "Graham Neubig",
+      "Jeffrey P. Bigham"
+    ],
+    "summary": "Despite rapid progress in autonomous web agents, human involvement remains essential for shaping preferences and correcting agent behavior as tasks unfold. However, current agentic systems lack a principled understanding of when and why humans intervene, often proceeding autonomously past critical d...",
+    "published": "Feb 19",
+    "pdf_url": "https://arxiv.org/pdf/2602.17588v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.17588v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
+    "title": "ODESteer: A Unified ODE-Based Steering Framework for LLM Alignment",
+    "authors": [
+      "Hongjue Zhao",
+      "Haosen Sun",
+      "Jiangtao Kong",
+      "Xiaochang Li",
+      "Qineng Wang",
+      "Liwei Jiang",
+      "Qi Zhu",
+      "Tarek Abdelzaher",
+      "Yejin Choi",
+      "Manling Li",
+      "Huajie Shao"
+    ],
+    "summary": "Activation steering, or representation engineering, offers a lightweight approach to align large language models (LLMs) by manipulating their internal activations at inference time. However, current methods suffer from two key limitations: \\textit{(i)} the lack of a unified theoretical framework for...",
+    "published": "Feb 19",
+    "pdf_url": "https://arxiv.org/pdf/2602.17560v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.17560v1",
+    "queried_author": "Yejin Choi",
+    "matching_authors": [
+      "Yejin Choi"
+    ]
+  },
+  {
+    "title": "Hybrid-Gym: Training Coding Agents to Generalize Across Tasks",
+    "authors": [
+      "Yiqing Xie",
+      "Emmy Liu",
+      "Gaokai Zhang",
+      "Nachiket Kotalwar",
+      "Shubham Gandhi",
+      "Sathwik Acharya",
+      "Xingyao Wang",
+      "Carolyn Rose",
+      "Graham Neubig",
+      "Daniel Fried"
+    ],
+    "summary": "When assessing the quality of coding agents, predominant benchmarks focus on solving single issues on GitHub, such as SWE-Bench. In contrast, in real use, these agents solve more various and complex tasks that involve other skills such as exploring codebases, testing software, and designing architec...",
+    "published": "Feb 18",
+    "pdf_url": "https://arxiv.org/pdf/2602.16819v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.16819v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
     "title": "Calibrate-Then-Act: Cost-Aware Exploration in LLM Agents",
     "authors": [
       "Wenxuan Ding",
@@ -8,8 +94,8 @@
     ],
     "summary": "LLMs are increasingly being used for complex problems which are not necessarily resolved in a single response, but require interacting with an environment to acquire information. In these scenarios, LLMs must reason about inherent cost-uncertainty tradeoffs in when to stop exploring and commit to an...",
     "published": "Feb 18",
-    "pdf_url": "https://arxiv.org/pdf/2602.16699v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.16699v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.16699v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.16699v2",
     "queried_author": "Greg Durrett",
     "matching_authors": [
       "Greg Durrett"
@@ -36,6 +122,56 @@
     ]
   },
   {
+    "title": "When AI Benchmarks Plateau: A Systematic Study of Benchmark Saturation",
+    "authors": [
+      "Mubashara Akhtar",
+      "Anka Reuel",
+      "Prajna Soni",
+      "Sanchit Ahuja",
+      "Pawan Sasanka Ammanamanchi",
+      "Ruchit Rawal",
+      "Vil\u00e9m Zouhar",
+      "Srishti Yadav",
+      "Chenxi Whitehouse",
+      "Dayeon Ki",
+      "Jennifer Mickel",
+      "Leshem Choshen",
+      "Marek \u0160uppa",
+      "Jan Batzner",
+      "Jenny Chim",
+      "Jeba Sania",
+      "Yanan Long",
+      "Hossein A. Rahmani",
+      "Christina Knight",
+      "Yiyang Nan",
+      "Jyoutir Raj",
+      "Yu Fan",
+      "Shubham Singh",
+      "Subramanyam Sahoo",
+      "Eliya Habba",
+      "Usman Gohar",
+      "Siddhesh Pawar",
+      "Robert Scholz",
+      "Arjun Subramonian",
+      "Jingwei Ni",
+      "Mykel Kochenderfer",
+      "Sanmi Koyejo",
+      "Mrinmaya Sachan",
+      "Stella Biderman",
+      "Zeerak Talat",
+      "Avijit Ghosh",
+      "Irene Solaiman"
+    ],
+    "summary": "Artificial Intelligence (AI) benchmarks play a central role in measuring progress in model development and guiding deployment decisions. However, many benchmarks quickly become saturated, meaning that they can no longer differentiate between the best-performing models, diminishing their long-term va...",
+    "published": "Feb 18",
+    "pdf_url": "https://arxiv.org/pdf/2602.16763v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.16763v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
     "title": "Helpful to a Fault: Measuring Illicit Assistance in Multi-Turn, Multilingual LLM Agents",
     "authors": [
       "Nivya Talokar",
@@ -46,8 +182,8 @@
     ],
     "summary": "LLM-based agents execute real-world workflows via tools and memory. These affordances enable ill-intended adversaries to also use these agents to carry out complex misuse scenarios. Existing agent misuse benchmarks largely test single-prompt instructions, leaving a gap in measuring how agents end up...",
     "published": "Feb 18",
-    "pdf_url": "https://arxiv.org/pdf/2602.16346v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.16346v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.16346v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.16346v2",
     "queried_author": "Antoine Bosselut",
     "matching_authors": [
       "Antoine Bosselut"
@@ -15386,101 +15522,6 @@
     "queried_author": "Greg Durrett",
     "matching_authors": [
       "Greg Durrett"
-    ]
-  },
-  {
-    "title": "Measuring Sycophancy of Language Models in Multi-turn Dialogues",
-    "authors": [
-      "Jiseung Hong",
-      "Grace Byun",
-      "Seungone Kim",
-      "Kai Shu",
-      "Jinho D. Choi"
-    ],
-    "summary": "Large Language Models (LLMs) are expected to provide helpful and harmless responses, yet they often exhibit sycophancy--conforming to user beliefs regardless of factual accuracy or ethical soundness. Prior research on sycophancy has primarily focused on single-turn factual correctness, overlooking t...",
-    "published": "May 28",
-    "pdf_url": "https://arxiv.org/pdf/2505.23840v3",
-    "arxiv_url": "http://arxiv.org/abs/2505.23840v3",
-    "queried_author": "Seungone Kim",
-    "matching_authors": [
-      "Seungone Kim"
-    ]
-  },
-  {
-    "title": "Latent Reasoning via Sentence Embedding Prediction",
-    "authors": [
-      "Hyeonbin Hwang",
-      "Byeongguk Jeon",
-      "Seungone Kim",
-      "Jiyeon Kim",
-      "Hoyeon Chang",
-      "Sohee Yang",
-      "Seungpil Won",
-      "Dohaeng Lee",
-      "Youbin Ahn",
-      "Minjoon Seo"
-    ],
-    "summary": "Autoregressive language models (LMs) generate one token at a time, yet human reasoning operates over higher-level abstractions - sentences, propositions, and concepts. This contrast raises a central question- Can LMs likewise learn to reason over structured semantic units rather than raw token seque...",
-    "published": "May 28",
-    "pdf_url": "https://arxiv.org/pdf/2505.22202v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.22202v2",
-    "queried_author": "Seungone Kim",
-    "matching_authors": [
-      "Seungone Kim"
-    ]
-  },
-  {
-    "title": "Hardware-Efficient Attention for Fast Decoding",
-    "authors": [
-      "Ted Zadouri",
-      "Hubert Strauss",
-      "Tri Dao"
-    ],
-    "summary": "LLM decoding is bottlenecked for large batches and long contexts by loading the key-value (KV) cache from high-bandwidth memory, which inflates per-token latency, while the sequential nature of decoding limits parallelism. We analyze the interplay among arithmetic intensity, parallelization, and mod...",
-    "published": "May 27",
-    "pdf_url": "https://arxiv.org/pdf/2505.21487v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.21487v1",
-    "queried_author": "Tri Dao",
-    "matching_authors": [
-      "Tri Dao"
-    ]
-  },
-  {
-    "title": "Words Like Knives: Backstory-Personalized Modeling and Detection of Violent Communication",
-    "authors": [
-      "Jocelyn Shen",
-      "Akhila Yerukola",
-      "Xuhui Zhou",
-      "Cynthia Breazeal",
-      "Maarten Sap",
-      "Hae Won Park"
-    ],
-    "summary": "Conversational breakdowns in close relationships are deeply shaped by personal histories and emotional context, yet most NLP research treats conflict detection as a general task, overlooking the relational dynamics that influence how messages are perceived. In this work, we leverage nonviolent commu...",
-    "published": "May 27",
-    "pdf_url": "https://arxiv.org/pdf/2505.21451v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.21451v2",
-    "queried_author": "Maarten Sap",
-    "matching_authors": [
-      "Maarten Sap"
-    ]
-  },
-  {
-    "title": "Improved Representation Steering for Language Models",
-    "authors": [
-      "Zhengxuan Wu",
-      "Qinan Yu",
-      "Aryaman Arora",
-      "Christopher D. Manning",
-      "Christopher Potts"
-    ],
-    "summary": "Steering methods for language models (LMs) seek to provide fine-grained and interpretable control over model generations by variously changing model inputs, weights, or representations to adjust behavior. Recent work has shown that adjusting weights or representations is often less effective than st...",
-    "published": "May 27",
-    "pdf_url": "https://arxiv.org/pdf/2505.20809v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.20809v1",
-    "queried_author": "Christopher D Manning",
-    "matching_authors": [
-      "Christopher D Manning",
-      "Christopher Potts"
     ]
   }
 ]
