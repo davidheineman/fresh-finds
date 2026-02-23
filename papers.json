@@ -1,5 +1,72 @@
 [
   {
+    "title": "RVR: Retrieve-Verify-Retrieve for Comprehensive Question Answering",
+    "authors": [
+      "Deniz Qian",
+      "Hung-Ting Chen",
+      "Eunsol Choi"
+    ],
+    "summary": "Comprehensively retrieving diverse documents is crucial to address queries that admit a wide range of valid answers. We introduce retrieve-verify-retrieve (RVR), a multi-round retrieval framework designed to maximize answer coverage. Initially, a retriever takes the original query and returns a cand...",
+    "published": "Feb 20",
+    "pdf_url": "https://arxiv.org/pdf/2602.18425v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.18425v1",
+    "queried_author": "Eunsol Choi",
+    "matching_authors": [
+      "Eunsol Choi"
+    ]
+  },
+  {
+    "title": "VeriSoftBench: Repository-Scale Formal Verification Benchmarks for Lean",
+    "authors": [
+      "Yutong Xin",
+      "Qiaochu Chen",
+      "Greg Durrett",
+      "I\u015fil Dillig"
+    ],
+    "summary": "Large language models have achieved striking results in interactive theorem proving, particularly in Lean. However, most benchmarks for LLM-based proof automation are drawn from mathematics in the Mathlib ecosystem, whereas proofs in software verification are developed inside definition-rich codebas...",
+    "published": "Feb 20",
+    "pdf_url": "https://arxiv.org/pdf/2602.18307v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.18307v1",
+    "queried_author": "Greg Durrett",
+    "matching_authors": [
+      "Greg Durrett"
+    ]
+  },
+  {
+    "title": "Agentic Adversarial QA for Improving Domain-Specific LLMs",
+    "authors": [
+      "Vincent Grari",
+      "Ciprian Tomoiaga",
+      "Sylvain Lamprier",
+      "Tatsunori Hashimoto",
+      "Marcin Detyniecki"
+    ],
+    "summary": "Large Language Models (LLMs), despite extensive pretraining on broad internet corpora, often struggle to adapt effectively to specialized domains. There is growing interest in fine-tuning these models for such domains; however, progress is constrained by the scarcity and limited coverage of high-qua...",
+    "published": "Feb 20",
+    "pdf_url": "https://arxiv.org/pdf/2602.18137v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.18137v1",
+    "queried_author": "Tatsunori Hashimoto",
+    "matching_authors": [
+      "Tatsunori Hashimoto"
+    ]
+  },
+  {
+    "title": "Understanding the Fine-Grained Knowledge Capabilities of Vision-Language Models",
+    "authors": [
+      "Dhruba Ghosh",
+      "Yuhui Zhang",
+      "Ludwig Schmidt"
+    ],
+    "summary": "Vision-language models (VLMs) have made substantial progress across a wide range of visual question answering benchmarks, spanning visual reasoning, document understanding, and multimodal dialogue. These improvements are evident in a wide range of VLMs built on a variety of base models, alignment ar...",
+    "published": "Feb 19",
+    "pdf_url": "https://arxiv.org/pdf/2602.17871v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.17871v1",
+    "queried_author": "Ludwig Schmidt",
+    "matching_authors": [
+      "Ludwig Schmidt"
+    ]
+  },
+  {
     "title": "Reverso: Efficient Time Series Foundation Models for Zero-shot Forecasting",
     "authors": [
       "Xinghong Fu",
@@ -15445,83 +15512,6 @@
     "queried_author": "David Bamman",
     "matching_authors": [
       "David Bamman"
-    ]
-  },
-  {
-    "title": "OMNIGUARD: An Efficient Approach for AI Safety Moderation Across Languages and Modalities",
-    "authors": [
-      "Sahil Verma",
-      "Keegan Hines",
-      "Jeff Bilmes",
-      "Charlotte Siska",
-      "Luke Zettlemoyer",
-      "Hila Gonen",
-      "Chandan Singh"
-    ],
-    "summary": "The emerging capabilities of large language models (LLMs) have sparked concerns about their immediate potential for harmful misuse. The core approach to mitigate these concerns is the detection of harmful queries to the model. Current detection approaches are fallible, and are particularly susceptib...",
-    "published": "May 29",
-    "pdf_url": "https://arxiv.org/pdf/2505.23856v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.23856v2",
-    "queried_author": "Luke Zettlemoyer",
-    "matching_authors": [
-      "Luke Zettlemoyer"
-    ]
-  },
-  {
-    "title": "ER-REASON: A Benchmark Dataset for LLM-Based Clinical Reasoning in the Emergency Room",
-    "authors": [
-      "Nikita Mehandru",
-      "Niloufar Golchini",
-      "David Bamman",
-      "Travis Zack",
-      "Melanie F. Molina",
-      "Ahmed Alaa"
-    ],
-    "summary": "Large language models (LLMs) have been extensively evaluated on medical question answering tasks based on licensing exams. However, real-world evaluations often depend on costly human annotators, and existing benchmarks tend to focus on isolated tasks that rarely capture the clinical reasoning or fu...",
-    "published": "May 28",
-    "pdf_url": "https://arxiv.org/pdf/2505.22919v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.22919v2",
-    "queried_author": "David Bamman",
-    "matching_authors": [
-      "David Bamman"
-    ]
-  },
-  {
-    "title": "FlashFormer: Whole-Model Kernels for Efficient Low-Batch Inference",
-    "authors": [
-      "Aniruddha Nrusimha",
-      "William Brandon",
-      "Mayank Mishra",
-      "Yikang Shen",
-      "Rameswar Panda",
-      "Jonathan Ragan-Kelley",
-      "Yoon Kim"
-    ],
-    "summary": "The size and compute characteristics of modern large language models have led to an increased interest in developing specialized kernels tailored for particular training and inference workloads. Existing kernels primarily optimize for compute utilization, targeting the large-batch training and infer...",
-    "published": "May 28",
-    "pdf_url": "https://arxiv.org/pdf/2505.22758v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.22758v2",
-    "queried_author": "Yoon Kim",
-    "matching_authors": [
-      "Yoon Kim"
-    ]
-  },
-  {
-    "title": "Learning Composable Chains-of-Thought",
-    "authors": [
-      "Fangcong Yin",
-      "Zeyu Leo Liu",
-      "Liu Leqi",
-      "Xi Ye",
-      "Greg Durrett"
-    ],
-    "summary": "A common approach for teaching large language models (LLMs) to reason is to train on chain-of-thought (CoT) traces of in-distribution reasoning problems, but such annotated data is costly to obtain for every problem of interest. We want reasoning models to generalize beyond their training distributi...",
-    "published": "May 28",
-    "pdf_url": "https://arxiv.org/pdf/2505.22635v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.22635v1",
-    "queried_author": "Greg Durrett",
-    "matching_authors": [
-      "Greg Durrett"
     ]
   }
 ]
