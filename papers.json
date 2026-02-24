@@ -1,5 +1,132 @@
 [
   {
+    "title": "Agents of Chaos",
+    "authors": [
+      "Natalie Shapira",
+      "Chris Wendler",
+      "Avery Yen",
+      "Gabriele Sarti",
+      "Koyena Pal",
+      "Olivia Floody",
+      "Adam Belfki",
+      "Alex Loftus",
+      "Aditya Ratan Jannali",
+      "Nikhil Prakash",
+      "Jasmine Cui",
+      "Giordano Rogers",
+      "Jannik Brinkmann",
+      "Can Rager",
+      "Amir Zur",
+      "Michael Ripa",
+      "Aruna Sankaranarayanan",
+      "David Atkinson",
+      "Rohit Gandikota",
+      "Jaden Fiotto-Kaufman",
+      "EunJeong Hwang",
+      "Hadas Orgad",
+      "P Sam Sahil",
+      "Negev Taglicht",
+      "Tomer Shabtay",
+      "Atai Ambus",
+      "Nitay Alon",
+      "Shiri Oron",
+      "Ayelet Gordon-Tapiero",
+      "Yotam Kaplan",
+      "Vered Shwartz",
+      "Tamar Rott Shaham",
+      "Christoph Riedl",
+      "Reuth Mirsky",
+      "Maarten Sap",
+      "David Manheim",
+      "Tomer Ullman",
+      "David Bau"
+    ],
+    "summary": "We report an exploratory red-teaming study of autonomous language-model-powered agents deployed in a live laboratory environment with persistent memory, email accounts, Discord access, file systems, and shell execution. Over a two-week period, twenty AI researchers interacted with the agents under b...",
+    "published": "Feb 23",
+    "pdf_url": "https://arxiv.org/pdf/2602.20021v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.20021v1",
+    "queried_author": "Maarten Sap",
+    "matching_authors": [
+      "Maarten Sap"
+    ]
+  },
+  {
+    "title": "Beyond a Single Extractor: Re-thinking HTML-to-Text Extraction for LLM Pretraining",
+    "authors": [
+      "Jeffrey Li",
+      "Josh Gardner",
+      "Doug Kang",
+      "Fangping Shi",
+      "Karanjeet Singh",
+      "Chun-Liang Li",
+      "Herumb Shandilya",
+      "David Hall",
+      "Oncel Tuzel",
+      "Percy Liang",
+      "Ludwig Schmidt",
+      "Hadi Pour Ansari",
+      "Fartash Faghri"
+    ],
+    "summary": "One of the first pre-processing steps for constructing web-scale LLM pretraining datasets involves extracting text from HTML. Despite the immense diversity of web content, existing open-source datasets predominantly apply a single fixed extractor to all webpages. In this work, we investigate whether...",
+    "published": "Feb 23",
+    "pdf_url": "https://arxiv.org/pdf/2602.19548v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.19548v1",
+    "queried_author": "Ludwig Schmidt",
+    "matching_authors": [
+      "Ludwig Schmidt",
+      "Percy Liang"
+    ]
+  },
+  {
+    "title": "Learning to Detect Language Model Training Data via Active Reconstruction",
+    "authors": [
+      "Junjie Oscar Yin",
+      "John X. Morris",
+      "Vitaly Shmatikov",
+      "Sewon Min",
+      "Hannaneh Hajishirzi"
+    ],
+    "summary": "Detecting LLM training data is generally framed as a membership inference attack (MIA) problem. However, conventional MIAs operate passively on fixed model weights, using log-likelihoods or text generations. In this work, we introduce \\textbf{Active Data Reconstruction Attack} (ADRA), a family of MI...",
+    "published": "Feb 22",
+    "pdf_url": "https://arxiv.org/pdf/2602.19020v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.19020v1",
+    "queried_author": "Hannaneh Hajishirzi",
+    "matching_authors": [
+      "Hannaneh Hajishirzi",
+      "John X. Morris",
+      "Junjie Oscar Yin"
+    ]
+  },
+  {
+    "title": "DP-RFT: Learning to Generate Synthetic Text via Differentially Private Reinforcement Fine-Tuning",
+    "authors": [
+      "Fangyuan Xu",
+      "Sihao Chen",
+      "Zinan Lin",
+      "Taiwei Shi",
+      "Sydney Graham",
+      "Pei Zhou",
+      "Mengting Wan",
+      "Alex Stein",
+      "Virginia Estellers",
+      "Charles Chen",
+      "Morris Sharp",
+      "Richard Speyer",
+      "Tadas Baltrusaitis",
+      "Jennifer Neville",
+      "Eunsol Choi",
+      "Longqi Yang"
+    ],
+    "summary": "Differentially private (DP) synthetic data generation plays a pivotal role in developing large language models (LLMs) on private data, where data owners cannot provide eyes-on access to individual examples. Generating DP synthetic data typically involves a difficult trade-off. On one hand, DP finetu...",
+    "published": "Feb 20",
+    "pdf_url": "https://arxiv.org/pdf/2602.18633v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.18633v1",
+    "queried_author": "Eunsol Choi",
+    "matching_authors": [
+      "Eunsol Choi"
+    ]
+  },
+  {
     "title": "RVR: Retrieve-Verify-Retrieve for Comprehensive Question Answering",
     "authors": [
       "Deniz Qian",
@@ -120,10 +247,10 @@
       "Manling Li",
       "Huajie Shao"
     ],
-    "summary": "Activation steering, or representation engineering, offers a lightweight approach to align large language models (LLMs) by manipulating their internal activations at inference time. However, current methods suffer from two key limitations: \\textit{(i)} the lack of a unified theoretical framework for...",
+    "summary": "Activation steering, or representation engineering, offers a lightweight approach to align large language models (LLMs) by manipulating their internal activations at inference time. However, current methods suffer from two key limitations: (i) the lack of a unified theoretical framework for guiding ...",
     "published": "Feb 19",
-    "pdf_url": "https://arxiv.org/pdf/2602.17560v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.17560v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.17560v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.17560v2",
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
@@ -460,8 +587,8 @@
     ],
     "summary": "Large Language Models (LLMs) represent a new frontier of digital infrastructure that can support a wide range of public-sector applications, from general purpose citizen services to specialized and sensitive state functions. When expanding AI access, governments face a set of strategic choices over ...",
     "published": "Feb 13",
-    "pdf_url": "https://arxiv.org/pdf/2602.13033v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.13033v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.13033v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.13033v2",
     "queried_author": "Antoine Bosselut",
     "matching_authors": [
       "Antoine Bosselut",
@@ -806,6 +933,24 @@
     "queried_author": "Noah Goodman",
     "matching_authors": [
       "Noah Goodman"
+    ]
+  },
+  {
+    "title": "The Story is Not the Science: Execution-Grounded Evaluation of Mechanistic Interpretability Research",
+    "authors": [
+      "Xiaoyan Bai",
+      "Alexander Baumgartner",
+      "Haojia Sun",
+      "Ari Holtzman",
+      "Chenhao Tan"
+    ],
+    "summary": "Reproducibility crises across sciences highlight the limitations of the paper-centric review system in assessing the rigor and reproducibility of research. AI agents that autonomously design and generate large volumes of research outputs exacerbate these challenges. In this work, we address the grow...",
+    "published": "Feb 05",
+    "pdf_url": "https://arxiv.org/pdf/2602.18458v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.18458v1",
+    "queried_author": "Ari Holtzman",
+    "matching_authors": [
+      "Ari Holtzman"
     ]
   },
   {
@@ -14509,8 +14654,8 @@
     ],
     "summary": "Recent studies have shown that large language models (LLMs), especially smaller ones, often lack robustness in grade school math (GSM) reasoning. In particular, they tend to experience performance drops when faced with distribution shifts, such as changes to numerical or nominal variables, or insert...",
     "published": "Jun 09",
-    "pdf_url": "https://arxiv.org/pdf/2506.07751v3",
-    "arxiv_url": "http://arxiv.org/abs/2506.07751v3",
+    "pdf_url": "https://arxiv.org/pdf/2506.07751v4",
+    "arxiv_url": "http://arxiv.org/abs/2506.07751v4",
     "queried_author": "Antoine Bosselut",
     "matching_authors": [
       "Antoine Bosselut"
@@ -15424,94 +15569,6 @@
       "Alexander M Rush",
       "Alexander M. Rush",
       "John X. Morris"
-    ]
-  },
-  {
-    "title": "Drop Dropout on Single-Epoch Language Model Pretraining",
-    "authors": [
-      "Houjun Liu",
-      "John Bauer",
-      "Christopher D. Manning"
-    ],
-    "summary": "Originally, dropout was seen as a breakthrough regularization technique that reduced overfitting and improved performance in almost all applications of deep learning by reducing overfitting. Yet, single-epoch pretraining tasks common to modern LLMs yield minimal overfitting, leading to dropout not b...",
-    "published": "May 30",
-    "pdf_url": "https://arxiv.org/pdf/2505.24788v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.24788v1",
-    "queried_author": "Christopher D Manning",
-    "matching_authors": [
-      "Christopher D Manning"
-    ]
-  },
-  {
-    "title": "ScienceMeter: Tracking Scientific Knowledge Updates in Language Models",
-    "authors": [
-      "Yike Wang",
-      "Shangbin Feng",
-      "Yulia Tsvetkov",
-      "Hannaneh Hajishirzi"
-    ],
-    "summary": "Large Language Models (LLMs) are increasingly used to support scientific research, but their knowledge of scientific advancements can quickly become outdated. We introduce ScienceMeter, a new framework for evaluating scientific knowledge update methods over scientific knowledge spanning the past, pr...",
-    "published": "May 30",
-    "pdf_url": "https://arxiv.org/pdf/2505.24302v2",
-    "arxiv_url": "http://arxiv.org/abs/2505.24302v2",
-    "queried_author": "Hannaneh Hajishirzi",
-    "matching_authors": [
-      "Hannaneh Hajishirzi"
-    ]
-  },
-  {
-    "title": "Critical Batch Size Revisited: A Simple Empirical Approach to Large-Batch Language Model Training",
-    "authors": [
-      "William Merrill",
-      "Shane Arora",
-      "Dirk Groeneveld",
-      "Hannaneh Hajishirzi"
-    ],
-    "summary": "The right batch size is important when training language models at scale: a large batch size is necessary for fast training, but a batch size that is too large will harm token efficiency. To navigate this tradeoff, McCandlish et al. (2018) suggest that a critical batch size (CBS), below which traini...",
-    "published": "May 29",
-    "pdf_url": "https://arxiv.org/pdf/2505.23971v3",
-    "arxiv_url": "http://arxiv.org/abs/2505.23971v3",
-    "queried_author": "Hannaneh Hajishirzi",
-    "matching_authors": [
-      "Hannaneh Hajishirzi"
-    ]
-  },
-  {
-    "title": "Scaling up the think-aloud method",
-    "authors": [
-      "Daniel Wurgaft",
-      "Ben Prystawski",
-      "Kanishk Gandhi",
-      "Cedegao E. Zhang",
-      "Joshua B. Tenenbaum",
-      "Noah D. Goodman"
-    ],
-    "summary": "The think-aloud method, where participants voice their thoughts as they solve a task, is a valuable source of rich data about human reasoning processes. Yet, it has declined in popularity in contemporary cognitive science, largely because labor-intensive transcription and annotation preclude large s...",
-    "published": "May 29",
-    "pdf_url": "https://arxiv.org/pdf/2505.23931v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.23931v1",
-    "queried_author": "Noah Goodman",
-    "matching_authors": [
-      "Noah Goodman"
-    ]
-  },
-  {
-    "title": "Tell, Don't Show: Leveraging Language Models' Abstractive Retellings to Model Literary Themes",
-    "authors": [
-      "Li Lucy",
-      "Camilla Griffiths",
-      "Sarah Levine",
-      "Jennifer L. Eberhardt",
-      "Dorottya Demszky",
-      "David Bamman"
-    ],
-    "summary": "Conventional bag-of-words approaches for topic modeling, like latent Dirichlet allocation (LDA), struggle with literary text. Literature challenges lexical methods because narrative language focuses on immersive sensory details instead of abstractive description or exposition: writers are advised to...",
-    "published": "May 29",
-    "pdf_url": "https://arxiv.org/pdf/2505.23166v1",
-    "arxiv_url": "http://arxiv.org/abs/2505.23166v1",
-    "queried_author": "David Bamman",
-    "matching_authors": [
-      "David Bamman"
     ]
   }
 ]
