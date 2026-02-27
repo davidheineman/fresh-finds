@@ -1,10 +1,34 @@
 import requests
 import arxiv
 import json
+from dataclasses import dataclass, field, asdict
+from datetime import datetime
 from typing import List, Dict
 
 RESEARCHERS = 'https://raw.githubusercontent.com/davidheineman/conference-papers/main/constants.py'
 CATEGORIES = {'cs.LG', 'cs.AI', 'cs.CL', 'cs.HC', 'stat.ML'}
+
+
+MAX_ABSTRACT_LEN = 1600
+
+
+@dataclass
+class Paper:
+    title: str
+    authors: List[str]
+    summary: str
+    published: str
+    published_raw: datetime
+    pdf_url: str
+    arxiv_url: str
+    queried_author: str
+    matching_authors: List[str] = field(default_factory=list)
+
+    def to_json_dict(self) -> Dict:
+        d = asdict(self)
+        del d['published_raw']
+        return d
+
 
 def fetch_authors_from_github() -> List[str]:
     """Fetch the authors list from the GitHub repository."""
@@ -28,7 +52,7 @@ def fetch_authors_from_github() -> List[str]:
     return authors
 
 
-def get_recent_papers_for_author(author_name: str, max_results: int | None = None) -> List[Dict]:
+def get_recent_papers_for_author(author_name: str, max_results: int | None = None) -> List[Paper]:
     """Fetch recent papers for a given author from arXiv."""
     print(f"Fetching papers for {author_name}...")
     
@@ -57,24 +81,26 @@ def get_recent_papers_for_author(author_name: str, max_results: int | None = Non
             
             # Get all authors
             authors_list = [author.name for author in result.authors]
+
+            truncated_summary = result.summary[:MAX_ABSTRACT_LEN] + '...' if len(result.summary) > MAX_ABSTRACT_LEN else result.summary
             
-            papers.append({
-                'title': result.title,
-                'authors': authors_list,
-                'summary': result.summary[:300] + '...' if len(result.summary) > 300 else result.summary,
-                'published': pub_date,
-                'published_raw': result.published,
-                'pdf_url': result.pdf_url,
-                'arxiv_url': result.entry_id,
-                'queried_author': author_name,
-                'matching_authors': [author_name]  # Track which author(s) matched
-            })
+            papers.append(Paper(
+                title=result.title,
+                authors=authors_list,
+                summary=truncated_summary,
+                published=pub_date,
+                published_raw=result.published,
+                pdf_url=result.pdf_url,
+                arxiv_url=result.entry_id,
+                queried_author=author_name,
+                matching_authors=[author_name]
+            ))
         
         return papers
     except Exception as e:
         raise RuntimeError(f"Error fetching papers for {author_name}: {e}")
 
-def get_all_recent_papers(authors: List[str], max_per_author: int | None = None) -> List[Dict]:
+def get_all_recent_papers(authors: List[str], max_per_author: int | None = None) -> List[Paper]:
     """Fetch recent papers for all authors."""
     all_papers = []
     
@@ -83,21 +109,21 @@ def get_all_recent_papers(authors: List[str], max_per_author: int | None = None)
         all_papers.extend(papers)
     
     # Sort by publication date (most recent first)
-    all_papers.sort(key=lambda x: x['published_raw'], reverse=True)
+    all_papers.sort(key=lambda x: x.published_raw, reverse=True)
     
     # Remove duplicates (same paper might appear for multiple authors)
     # But merge the matching_authors lists
-    seen_titles = {}
-    unique_papers = []
+    seen_titles: Dict[str, int] = {}
+    unique_papers: List[Paper] = []
     for paper in all_papers:
-        if paper['title'] not in seen_titles:
-            seen_titles[paper['title']] = len(unique_papers)
+        if paper.title not in seen_titles:
+            seen_titles[paper.title] = len(unique_papers)
             unique_papers.append(paper)
         else:
             # Paper already exists, add this queried author to matching_authors
-            existing_idx = seen_titles[paper['title']]
-            if paper['queried_author'] not in unique_papers[existing_idx]['matching_authors']:
-                unique_papers[existing_idx]['matching_authors'].append(paper['queried_author'])
+            existing_idx = seen_titles[paper.title]
+            if paper.queried_author not in unique_papers[existing_idx].matching_authors:
+                unique_papers[existing_idx].matching_authors.append(paper.queried_author)
     
     return unique_papers
 
@@ -122,12 +148,7 @@ def main():
     json_path = os.path.join(script_dir, 'papers.json')
     
     with open(json_path, 'w') as f:
-        # Remove published_raw for JSON serialization
-        papers_for_json = []
-        for p in papers:
-            paper_copy = {k: v for k, v in p.items() if k != 'published_raw'}
-            # Keep matching_authors for JavaScript to use
-            papers_for_json.append(paper_copy)
+        papers_for_json = [p.to_json_dict() for p in papers]
         json.dump(papers_for_json, f, indent=2)
         print(f"\nDone! Saved {len(papers)} papers to papers.json")
 
