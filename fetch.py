@@ -3,13 +3,13 @@ import arxiv
 import json
 from dataclasses import dataclass, field, asdict
 from datetime import datetime
-from typing import List, Dict
+from typing import List, Dict, Set
 
 RESEARCHERS = 'https://raw.githubusercontent.com/davidheineman/conference-papers/main/constants.py'
 CATEGORIES = {'cs.LG', 'cs.AI', 'cs.CL', 'cs.HC', 'stat.ML'}
 
-
 MAX_ABSTRACT_LEN = 1600
+MAX_RESULTS = 4_000
 
 
 @dataclass
@@ -52,80 +52,66 @@ def fetch_authors_from_github() -> List[str]:
     return authors
 
 
-def get_recent_papers_for_author(author_name: str, max_results: int | None = None) -> List[Paper]:
-    """Fetch recent papers for a given author from arXiv."""
-    print(f"Fetching papers for {author_name}...")
-    
-    try:
-        # import time
-        # # Add a small delay to avoid rate limiting
-        # time.sleep(0.5)
-        
-        client = arxiv.Client()
-        search = arxiv.Search(
-            query=f'au:"{author_name}"',
-            max_results=max_results,
-            sort_by=arxiv.SortCriterion.SubmittedDate,
-            sort_order = arxiv.SortOrder.Descending
-        )
-        
-        papers = []
-        for result in client.results(search):
-            # Filter by category - only include papers from allowed categories
-            paper_categories = set(result.categories)
-            if not paper_categories.intersection(CATEGORIES):
-                continue  # Skip papers not in our allowed categories
-            
-            # Format the date without year
-            pub_date = result.published.strftime("%b %d")
-            
-            # Get all authors
-            authors_list = [author.name for author in result.authors]
+def _normalize_name(name: str) -> Set[str]:
+    """Normalize an author name into a set of lowercase tokens (ignoring periods/commas)."""
+    return set(name.lower().replace(".", "").replace(",", "").split())
 
-            truncated_summary = result.summary[:MAX_ABSTRACT_LEN] + '...' if len(result.summary) > MAX_ABSTRACT_LEN else result.summary
-            
-            papers.append(Paper(
-                title=result.title,
-                authors=authors_list,
-                summary=truncated_summary,
-                published=pub_date,
-                published_raw=result.published,
-                pdf_url=result.pdf_url,
-                arxiv_url=result.entry_id,
-                queried_author=author_name,
-                matching_authors=[author_name]
-            ))
-        
-        return papers
-    except Exception as e:
-        raise RuntimeError(f"Error fetching papers for {author_name}: {e}")
 
-def get_all_recent_papers(authors: List[str], max_per_author: int | None = None) -> List[Paper]:
-    """Fetch recent papers for all authors."""
-    all_papers = []
-    
-    for author in authors:
-        papers = get_recent_papers_for_author(author, max_per_author)
-        all_papers.extend(papers)
-    
-    # Sort by publication date (most recent first)
-    all_papers.sort(key=lambda x: x.published_raw, reverse=True)
-    
-    # Remove duplicates (same paper might appear for multiple authors)
-    # But merge the matching_authors lists
-    seen_titles: Dict[str, int] = {}
-    unique_papers: List[Paper] = []
-    for paper in all_papers:
-        if paper.title not in seen_titles:
-            seen_titles[paper.title] = len(unique_papers)
-            unique_papers.append(paper)
-        else:
-            # Paper already exists, add this queried author to matching_authors
-            existing_idx = seen_titles[paper.title]
-            if paper.queried_author not in unique_papers[existing_idx].matching_authors:
-                unique_papers[existing_idx].matching_authors.append(paper.queried_author)
-    
-    return unique_papers
+def _find_matching_authors(paper_authors: List[str], tracked_authors: List[str]) -> List[str]:
+    """Find which tracked authors appear in a paper's author list."""
+    normalized_paper = [_normalize_name(a) for a in paper_authors]
+
+    matches = []
+    for tracked in tracked_authors:
+        tracked_parts = _normalize_name(tracked)
+        for paper_parts in normalized_paper:
+            if tracked_parts == paper_parts:
+                matches.append(tracked)
+                break
+    return matches
+
+
+def get_all_recent_papers(authors: List[str], max_results: int = MAX_RESULTS) -> List[Paper]:
+    """Fetch recent papers for all authors in a single batched arXiv query."""
+    query = " OR ".join(f'au:"{author}"' for author in authors)
+
+    print(f"Querying arXiv for {len(authors)} authors in one request (max {max_results} results)...")
+    client = arxiv.Client(page_size=100, delay_seconds=3, num_retries=5)
+    search = arxiv.Search(
+        query=query,
+        max_results=max_results,
+        sort_by=arxiv.SortCriterion.SubmittedDate,
+        sort_order=arxiv.SortOrder.Descending,
+    )
+
+    papers = []
+    for result in client.results(search):
+        paper_categories = set(result.categories)
+        if not paper_categories.intersection(CATEGORIES):
+            continue
+
+        authors_list = [a.name for a in result.authors]
+        matching = _find_matching_authors(authors_list, authors)
+        if not matching:
+            continue
+
+        truncated_summary = result.summary[:MAX_ABSTRACT_LEN] + '...' if len(result.summary) > MAX_ABSTRACT_LEN else result.summary
+
+        papers.append(Paper(
+            title=result.title,
+            authors=authors_list,
+            summary=truncated_summary,
+            published=result.published.strftime("%b %d"),
+            published_raw=result.published,
+            pdf_url=result.pdf_url,
+            arxiv_url=result.entry_id,
+            queried_author=matching[0],
+            matching_authors=matching,
+        ))
+
+    papers.sort(key=lambda x: x.published_raw, reverse=True)
+    print(f"Fetched {len(papers)} papers matching tracked authors")
+    return papers
 
 
 def main():
@@ -154,4 +140,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
