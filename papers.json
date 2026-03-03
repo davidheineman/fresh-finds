@@ -1,5 +1,106 @@
 [
   {
+    "title": "Robometer: Scaling General-Purpose Robotic Reward Models via Trajectory Comparisons",
+    "authors": [
+      "Anthony Liang",
+      "Yigit Korkmaz",
+      "Jiahui Zhang",
+      "Minyoung Hwang",
+      "Abrar Anwar",
+      "Sidhant Kaushik",
+      "Aditya Shah",
+      "Alex S. Huang",
+      "Luke Zettlemoyer",
+      "Dieter Fox",
+      "Yu Xiang",
+      "Anqi Li",
+      "Andreea Bobu",
+      "Abhishek Gupta",
+      "Stephen Tu",
+      "Erdem Biyik",
+      "Jesse Zhang"
+    ],
+    "summary": "General-purpose robot reward models are typically trained to predict absolute task progress from expert demonstrations, providing only local, frame-level supervision. While effective for expert demonstrations, this paradigm scales poorly to large-scale robotics datasets where failed and suboptimal trajectories are abundant and assigning dense progress labels is ambiguous. We introduce Robometer, a scalable reward modeling framework that combines intra-trajectory progress supervision with inter-trajectory preference supervision. Robometer is trained with a dual objective: a frame-level progress loss that anchors reward magnitude on expert data, and a trajectory-comparison preference loss that imposes global ordering constraints across trajectories of the same task, enabling effective learning from both real and augmented failed trajectories. To support this formulation at scale, we curate RBM-1M, a reward-learning dataset comprising over one million trajectories spanning diverse robot embodiments and tasks, including substantial suboptimal and failure data. Across benchmarks and real-world evaluations, Robometer learns more generalizable reward functions than prior methods and improves robot learning performance across a diverse set of downstream applications. Code, model weights, and videos at https://robometer.github.io/.",
+    "published": "Mar 02",
+    "pdf_url": "https://arxiv.org/pdf/2603.02115v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.02115v1",
+    "queried_author": "Luke Zettlemoyer",
+    "matching_authors": [
+      "Luke Zettlemoyer"
+    ]
+  },
+  {
+    "title": "PanCanBench: A Comprehensive Benchmark for Evaluating Large Language Models in Pancreatic Oncology",
+    "authors": [
+      "Yimin Zhao",
+      "Sheela R. Damle",
+      "Simone E. Dekker",
+      "Scott Geng",
+      "Karly Williams Silva",
+      "Jesse J Hubbard",
+      "Manuel F Fernandez",
+      "Fatima Zelada-Arenas",
+      "Alejandra Alvarez",
+      "Brianne Flores",
+      "Alexis Rodriguez",
+      "Stephen Salerno",
+      "Carrie Wright",
+      "Zihao Wang",
+      "Pang Wei Koh",
+      "Jeffrey T. Leek"
+    ],
+    "summary": "Large language models (LLMs) have achieved expert-level performance on standardized examinations, yet multiple-choice accuracy poorly reflects real-world clinical utility and safety. As patients and clinicians increasingly use LLMs for guidance on complex conditions such as pancreatic cancer, evaluation must extend beyond general medical knowledge. Existing frameworks, such as HealthBench, rely on simulated queries and lack disease-specific depth. Moreover, high rubric-based scores do not ensure factual correctness, underscoring the need to assess hallucinations. We developed a human-in-the-loop pipeline to create expert rubrics for de-identified patient questions from the Pancreatic Cancer Action Network (PanCAN). The resulting benchmark, PanCanBench, includes 3,130 question-specific criteria across 282 authentic patient questions. We evaluated 22 proprietary and open-source LLMs using an LLM-as-a-judge framework, measuring clinical completeness, factual accuracy, and web-search integration. Models showed substantial variation in rubric-based completeness, with scores ranging from 46.5% to 82.3%. Factual errors were common, with hallucination rates (the percentages of responses containing at least one factual error) ranging from 6.0% for Gemini-2.5 Pro and GPT-4o to 53.8% for Llama-3.1-8B. Importantly, newer reasoning-optimized models did not consistently improve factuality: although o3 achieved the highest rubric score, it produced inaccuracies more frequently than other GPT-family models. Web-search integration did not inherently guarantee better responses. The average s...",
+    "published": "Mar 02",
+    "pdf_url": "https://arxiv.org/pdf/2603.01343v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.01343v1",
+    "queried_author": "Pang Wei Koh",
+    "matching_authors": [
+      "Pang Wei Koh"
+    ]
+  },
+  {
+    "title": "How Well Does Agent Development Reflect Real-World Work?",
+    "authors": [
+      "Zora Zhiruo Wang",
+      "Sanidhya Vijayvargiya",
+      "Aspen Chen",
+      "Hanmo Zhang",
+      "Venu Arvind Arangarajan",
+      "Jett Chen",
+      "Valerie Chen",
+      "Diyi Yang",
+      "Daniel Fried",
+      "Graham Neubig"
+    ],
+    "summary": "AI agents are increasingly developed and evaluated on benchmarks relevant to human work, yet it remains unclear how representative these benchmarking efforts are of the labor market as a whole. In this work, we systematically study the relationship between agent development efforts and the distribution of real-world human work by mapping benchmark instances to work domains and skills. We first analyze 43 benchmarks and 72,342 tasks, measuring their alignment with human employment and capital allocation across all 1,016 real-world occupations in the U.S. labor market. We reveal substantial mismatches between agent development that tends to be programming-centric, and the categories in which human labor and economic value are concentrated. Within work areas that agents currently target, we further characterize current agent utility by measuring their autonomy levels, providing practical guidance for agent interaction strategies across work scenarios. Building on these findings, we propose three measurable principles for designing benchmarks that better capture socially important and technically challenging forms of work: coverage, realism, and granular evaluation.",
+    "published": "Mar 01",
+    "pdf_url": "https://arxiv.org/pdf/2603.01203v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.01203v1",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang",
+      "Graham Neubig"
+    ]
+  },
+  {
+    "title": "The Aftermath of DrawEduMath: Vision Language Models Underperform with Struggling Students and Misdiagnose Errors",
+    "authors": [
+      "Li Lucy",
+      "Albert Zhang",
+      "Nathan Anderson",
+      "Ryan Knight",
+      "Kyle Lo"
+    ],
+    "summary": "Effective mathematics education requires identifying and responding to students' mistakes. For AI to support pedagogical applications, models must perform well across different levels of student proficiency. Our work provides an extensive, year-long snapshot of how 11 vision-language models (VLMs) perform on DrawEduMath, a QA benchmark involving real students' handwritten, hand-drawn responses to math problems. We find that models' weaknesses concentrate on a core component of math education: student error. All evaluated VLMs underperform when describing work from students who require more pedagogical help, and across all QA, they struggle the most on questions related to assessing student error. Thus, while VLMs may be optimized to be math problem solving experts, our results suggest that they require alternative development incentives to adequately support educational use cases.",
+    "published": "Mar 01",
+    "pdf_url": "https://arxiv.org/pdf/2603.00925v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.00925v1",
+    "queried_author": "Kyle Lo",
+    "matching_authors": [
+      "Kyle Lo"
+    ]
+  },
+  {
     "title": "Do LLMs Benefit From Their Own Words?",
     "authors": [
       "Jenny Y. Huang",
@@ -185,6 +286,24 @@
     "queried_author": "Christopher Potts",
     "matching_authors": [
       "Christopher Potts"
+    ]
+  },
+  {
+    "title": "Steering Away from Memorization: Reachability-Constrained Reinforcement Learning for Text-to-Image Diffusion",
+    "authors": [
+      "Sathwik Karnik",
+      "Juyeop Kim",
+      "Sanmi Koyejo",
+      "Jong-Seok Lee",
+      "Somil Bansal"
+    ],
+    "summary": "Text-to-image diffusion models often memorize training data, revealing a fundamental failure to generalize beyond the training set. Current mitigation strategies typically sacrifice image quality or prompt alignment to reduce memorization. To address this, we propose Reachability-Aware Diffusion Steering (RADS), an inference-time framework that prevents memorization while preserving generation fidelity. RADS models the diffusion denoising process as a dynamical system and applies concepts from reachability analysis to approximate the \"backward reachable tube\"--the set of intermediate states that inevitably evolve into memorized samples. We then formulate mitigation as a constrained reinforcement learning (RL) problem, where a policy learns to steer the trajectory away from memorization via minimal perturbations in the caption embedding space. Empirical evaluations show that RADS achieves a superior Pareto frontier between generation diversity (SSCD), quality (FID), and alignment (CLIP) compared to state-of-the-art baselines. Crucially, RADS provides robust mitigation without modifying the diffusion backbone, offering a plug-and-play solution for safe generation. Our website is available at: https://s-karnik.github.io/rads-memorization-project-page/.",
+    "published": "Feb 24",
+    "pdf_url": "https://arxiv.org/pdf/2603.00140v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.00140v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
     ]
   },
   {
@@ -5509,10 +5628,10 @@
       "Samuel Marks",
       "Neel Nanda"
     ],
-    "summary": "Large language models (LLMs) can sometimes detect when they are being evaluated and adjust their behavior to appear more aligned, compromising the reliability of safety evaluations. In this paper, we show that adding a steering vector to an LLM's activations can suppress evaluation-awareness and make the model act like it is deployed during evaluation. To study our steering technique, we train an LLM to exhibit evaluation-aware behavior using a two-step training process designed to mimic how this behavior could emerge naturally. First, we perform continued pretraining on documents with factual descriptions of the model (1) using Python type hints during evaluation but not during deployment and (2) recognizing that the presence of a certain evaluation cue always means that it is being tested. Then, we train the model with expert iteration to use Python type hints in evaluation settings. The resulting model is evaluation-aware: it writes type hints in evaluation contexts more than deployment contexts. We find that activation steering can suppress evaluation awareness and make the model act like it is deployed even when the cue is present. Importantly, we constructed our steering vector using the original model before our additional training. Our results suggest that AI evaluators could improve the reliability of safety evaluations by steering models to act like they are deployed.",
+    "summary": "Large language models (LLMs) can sometimes detect when they are being evaluated and adjust their behavior to appear more aligned, compromising the reliability of safety evaluations. In this paper, we show that adding a steering vector to an LLM's activations can suppress evaluation-awareness and make the model act like it is deployed during evaluation. To study our steering technique, we train an LLM to exhibit evaluation-aware behavior using a two-step training process designed to mimic how this behavior could emerge naturally. First, we perform continued pretraining on two sets of documents describing its behavior. The first says that our model uses Python type hints during evaluation but not during deployment. The second says that our model can recognize that the presence of a certain evaluation cue always means that it is being tested. Then, we train the model with expert iteration to use Python type hints in evaluation settings. The resulting model is evaluation-aware: it writes type hints in evaluation contexts more than deployment contexts. We find that activation steering can suppress evaluation awareness and make the model behave during evaluation as it would during deployment. Importantly, we constructed our steering vector using the original model before our additional training. Our results suggest that AI evaluators could improve the reliability of safety evaluations by steering models to act like they are deployed.",
     "published": "Oct 23",
-    "pdf_url": "https://arxiv.org/pdf/2510.20487v4",
-    "arxiv_url": "http://arxiv.org/abs/2510.20487v4",
+    "pdf_url": "https://arxiv.org/pdf/2510.20487v5",
+    "arxiv_url": "http://arxiv.org/abs/2510.20487v5",
     "queried_author": "Neel Nanda",
     "matching_authors": [
       "Neel Nanda"
@@ -6803,8 +6922,8 @@
     ],
     "summary": "The training paradigm for large language models (LLMs) is moving from static datasets to experience-based learning, where agents acquire skills via interacting with complex environments. To facilitate this transition we introduce GEM (General Experience Maker), an open-source environment simulator designed for the age of LLMs. Analogous to OpenAI-Gym for traditional reinforcement learning (RL), GEM provides a standardized framework for the environment-agent interface, including asynchronous vectorized execution for high throughput, and flexible wrappers for easy extensibility. GEM also features a diverse suite of environments, robust integrated tools, and single-file example scripts demonstrating using GEM with five popular RL training frameworks. Along with this, we also provide a set of baselines across 24 environments using REINFORCE with Return Batch Normalization (ReBN), which -- unlike GRPO -- is compatible with the full RL setting of dense per-turn rewards and offers better credit assignment. We further conduct apple-to-apple benchmarking of PPO, GRPO and REINFORCE in both single- and multi-turn settings using GEM to shed light on the algorithmic designs. Lastly, GEM also functions as a convenient evaluation toolkit besides a training environment. We hope this framework can help accelerate future agentic LLM research.",
     "published": "Oct 01",
-    "pdf_url": "https://arxiv.org/pdf/2510.01051v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.01051v1",
+    "pdf_url": "https://arxiv.org/pdf/2510.01051v2",
+    "arxiv_url": "http://arxiv.org/abs/2510.01051v2",
     "queried_author": "Diyi Yang",
     "matching_authors": [
       "Diyi Yang"
@@ -7102,8 +7221,8 @@
     ],
     "summary": "The dominant paradigm for training large reasoning models starts with pre-training using next-token prediction loss on vast amounts of data. Reinforcement learning, while powerful in scaling reasoning, is introduced only as the very last phase of post-training, preceded by supervised fine-tuning. While dominant, is this an optimal way of training? In this paper, we present RLP, an information-driven reinforcement pretraining objective, that brings the core spirit of reinforcement learning -- exploration -- to the last phase of pretraining. The key idea is to treat chain-of-thought as an exploratory action, with rewards computed based on the information gain it provides for predicting future tokens. This training objective essentially encourages the model to think for itself before predicting what comes next, thus teaching an independent thinking behavior earlier in the pretraining. More concretely, the reward signal measures the increase in log-likelihood of the next token when conditioning on both context and a sampled reasoning chain, compared to conditioning on context alone. This approach yields a verifier-free dense reward signal, allowing for efficient training for the full document stream during pretraining. Specifically, RLP reframes reinforcement learning for reasoning as a pretraining objective on ordinary text, bridging the gap between next-token prediction and the emergence of useful chain-of-thought reasoning. Pretraining with RLP on Qwen3-1.7B-Base lifts the overall average across an eight-benchmark math-and-science suite by 19%. With identical post-training, ...",
     "published": "Sep 26",
-    "pdf_url": "https://arxiv.org/pdf/2510.01265v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.01265v1",
+    "pdf_url": "https://arxiv.org/pdf/2510.01265v2",
+    "arxiv_url": "http://arxiv.org/abs/2510.01265v2",
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
@@ -7197,8 +7316,8 @@
     ],
     "summary": "We present DistillKac, a fast image generator that uses the damped wave equation and its stochastic Kac representation to move probability mass at finite speed. In contrast to diffusion models whose reverse time velocities can become stiff and implicitly allow unbounded propagation speed, Kac dynamics enforce finite speed transport and yield globally bounded kinetic energy. Building on this structure, we introduce classifier-free guidance in velocity space that preserves square integrability under mild conditions. We then propose endpoint only distillation that trains a student to match a frozen teacher over long intervals. We prove a stability result that promotes supervision at the endpoints to closeness along the entire path. Experiments demonstrate DistillKac delivers high quality samples with very few function evaluations while retaining the numerical stability benefits of finite speed probability flows.",
     "published": "Sep 25",
-    "pdf_url": "https://arxiv.org/pdf/2509.21513v2",
-    "arxiv_url": "http://arxiv.org/abs/2509.21513v2",
+    "pdf_url": "https://arxiv.org/pdf/2509.21513v3",
+    "arxiv_url": "http://arxiv.org/abs/2509.21513v3",
     "queried_author": "Christopher D Manning",
     "matching_authors": [
       "Christopher D Manning"
@@ -13575,17 +13694,17 @@
     ]
   },
   {
-    "title": "Multiple Streams of Knowledge Retrieval: Enriching and Recalling in Transformers",
+    "title": "Dynamic Weight Grafting: Localizing Finetuned Factual Knowledge in Transformers",
     "authors": [
       "Todd Nief",
       "David Reber",
       "Sean Richardson",
       "Ari Holtzman"
     ],
-    "summary": "When an LLM learns a new fact during finetuning (e.g., new movie releases, newly elected pope, etc.), where does this information go? Are entities enriched with relation information, or do models recall information just-in-time before a prediction? Or, are ``all of the above'' true with LLMs implementing multiple redundant heuristics? Existing localization approaches (e.g., activation patching) are ill-suited for this analysis because they usually \\textit{replace} parts of the residual stream, thus overriding previous information. To fill this gap, we propose \\emph{dynamic weight grafting}, a technique that selectively grafts weights from a finetuned model onto a pretrained model. Using this technique, we show two separate pathways for retrieving finetuned relation information: 1) ``enriching\" the residual stream with relation information while processing the tokens that correspond to an entity (e.g., ``Zendaya'' in ``Zendaya co-starred with John David Washington'') and 2) ``recalling\" this information at the final token position before generating a target fact. In some cases, models need information from both of these pathways to correctly generate finetuned facts while, in other cases, either the ``enrichment\" or ``recall\" pathway alone is sufficient. We localize the ``recall'' pathway to model components -- finding that ``recall\" occurs via both task-specific attention mechanisms and an entity-specific extraction step in the feedforward networks of the final layers before the target prediction. By targeting model components and parameters, as opposed to just activations,...",
+    "summary": "When an LLM learns a new fact during finetuning (e.g., new movie releases, newly elected pope, etc.), where does this information go? Are entities enriched with relation information immediately, or do models recall information just-in-time before a prediction? Or, are \"all of the above\" true, with LLMs implementing multiple redundant heuristics? Existing localization approaches (e.g., activation patching) are ill-suited for this analysis because they usually replace parts of the residual stream, thus overriding previous information. To fill this interpretability gap, we propose dynamic weight grafting, an analysis technique that selectively grafts subsets of weights from a finetuned model onto a pretrained model. Using this technique, we show two separate pathways for retrieving finetuned relation information: 1) \"enriching\" the residual stream with relation information while processing the tokens that correspond to an entity (e.g., \"Zendaya\" in \"Zendaya co-starred with Timoth\u00e9e Chalamet\" and 2) \"recalling\" this information at the final token position before generating a target fact. In some cases, models need information from both of these pathways to correctly generate finetuned facts while, in other cases, either the \"enrichment\" or \"recall\" pathway alone is sufficient. We localize the \"recall\" pathway to model components -- finding that \"recall\" occurs via both task-specific attention mechanisms and an entity-specific extraction step in the feedforward networks of the final layers before prediction. By targeting model components and parameters, as opposed to just activa...",
     "published": "Jun 25",
-    "pdf_url": "https://arxiv.org/pdf/2506.20746v2",
-    "arxiv_url": "http://arxiv.org/abs/2506.20746v2",
+    "pdf_url": "https://arxiv.org/pdf/2506.20746v3",
+    "arxiv_url": "http://arxiv.org/abs/2506.20746v3",
     "queried_author": "Ari Holtzman",
     "matching_authors": [
       "Ari Holtzman"
@@ -15004,8 +15123,8 @@
     ],
     "summary": "The attention mechanism in Transformers is an important primitive for accurate and scalable sequence modeling. Its quadratic-compute and linear-memory complexity however remain significant bottlenecks. Linear attention and state-space models enable linear-time, constant-memory sequence modeling and can moreover be trained efficiently through matmul-rich parallelization across sequence length. However, at their core these models are still RNNs, and thus their use of a fixed-size hidden state to model the context is a fundamental limitation. This paper develops log-linear attention, an attention mechanism that balances linear attention's efficiency and the expressiveness of softmax attention. Log-linear attention replaces the fixed-size hidden state with a logarithmically growing set of hidden states. We show that with a particular growth function, log-linear attention admits a similarly matmul-rich parallel form whose compute cost is log-linear in sequence length. Log-linear attention is a general framework and can be applied on top of existing linear attention variants. As case studies, we instantiate log-linear variants of two recent architectures -- Mamba-2 and Gated DeltaNet -- and find they perform well compared to their linear-time variants.",
     "published": "Jun 05",
-    "pdf_url": "https://arxiv.org/pdf/2506.04761v2",
-    "arxiv_url": "http://arxiv.org/abs/2506.04761v2",
+    "pdf_url": "https://arxiv.org/pdf/2506.04761v3",
+    "arxiv_url": "http://arxiv.org/abs/2506.04761v3",
     "queried_author": "Tri Dao",
     "matching_authors": [
       "Tri Dao",
@@ -15369,120 +15488,6 @@
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
-    ]
-  },
-  {
-    "title": "RewardBench 2: Advancing Reward Model Evaluation",
-    "authors": [
-      "Saumya Malik",
-      "Valentina Pyatkin",
-      "Sander Land",
-      "Jacob Morrison",
-      "Noah A. Smith",
-      "Hannaneh Hajishirzi",
-      "Nathan Lambert"
-    ],
-    "summary": "Reward models are used throughout the post-training of language models to capture nuanced signals from preference data and provide a training target for optimization across instruction following, reasoning, safety, and more domains. The community has begun establishing best practices for evaluating reward models, from the development of benchmarks that test capabilities in specific skill areas to others that test agreement with human preferences. At the same time, progress in evaluation has not been mirrored by the effectiveness of reward models in downstream tasks -- simpler direct alignment algorithms are reported to work better in many cases. This paper introduces RewardBench 2, a new multi-skill reward modeling benchmark designed to bring new, challenging data for accuracy-based reward model evaluation -- models score about 20 points on average lower on RewardBench 2 compared to the first RewardBench -- while being highly correlated with downstream performance. Compared to most other benchmarks, RewardBench 2 sources new human prompts instead of existing prompts from downstream evaluations, facilitating more rigorous evaluation practices. In this paper, we describe our benchmark construction process and report how existing models perform on it, while quantifying how performance on the benchmark correlates with downstream use of the models in both inference-time scaling algorithms, like best-of-N sampling, and RLHF training algorithms like proximal policy optimization.",
-    "published": "Jun 02",
-    "pdf_url": "https://arxiv.org/pdf/2506.01937v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.01937v1",
-    "queried_author": "Hannaneh Hajishirzi",
-    "matching_authors": [
-      "Hannaneh Hajishirzi",
-      "Noah A. Smith"
-    ]
-  },
-  {
-    "title": "Datasheets Aren't Enough: DataRubrics for Automated Quality Metrics and Accountability",
-    "authors": [
-      "Genta Indra Winata",
-      "David Anugraha",
-      "Emmy Liu",
-      "Alham Fikri Aji",
-      "Shou-Yi Hung",
-      "Aditya Parashar",
-      "Patrick Amadeus Irawan",
-      "Ruochen Zhang",
-      "Zheng-Xin Yong",
-      "Jan Christian Blaise Cruz",
-      "Niklas Muennighoff",
-      "Seungone Kim",
-      "Hanyang Zhao",
-      "Sudipta Kar",
-      "Kezia Erina Suryoraharjo",
-      "M. Farid Adilazuarda",
-      "En-Shiun Annie Lee",
-      "Ayu Purwarianti",
-      "Derry Tanti Wijaya",
-      "Monojit Choudhury"
-    ],
-    "summary": "High-quality datasets are fundamental to training and evaluating machine learning models, yet their creation-especially with accurate human annotations-remains a significant challenge. Many dataset paper submissions lack originality, diversity, or rigorous quality control, and these shortcomings are often overlooked during peer review. Submissions also frequently omit essential details about dataset construction and properties. While existing tools such as datasheets aim to promote transparency, they are largely descriptive and do not provide standardized, measurable methods for evaluating data quality. Similarly, metadata requirements at conferences promote accountability but are inconsistently enforced. To address these limitations, this position paper advocates for the integration of systematic, rubric-based evaluation metrics into the dataset review process-particularly as submission volumes continue to grow. We also explore scalable, cost-effective methods for synthetic data generation, including dedicated tools and LLM-as-a-judge approaches, to support more efficient evaluation. As a call to action, we introduce DataRubrics, a structured framework for assessing the quality of both human- and model-generated datasets. Leveraging recent advances in LLM-based evaluation, DataRubrics offers a reproducible, scalable, and actionable solution for dataset quality assessment, enabling both authors and reviewers to uphold higher standards in data-centric research. We also release code to support reproducibility of LLM-based evaluations at https://github.com/datarubrics/datarubr...",
-    "published": "Jun 02",
-    "pdf_url": "https://arxiv.org/pdf/2506.01789v2",
-    "arxiv_url": "http://arxiv.org/abs/2506.01789v2",
-    "queried_author": "Niklas Muennighoff",
-    "matching_authors": [
-      "Niklas Muennighoff",
-      "Seungone Kim"
-    ]
-  },
-  {
-    "title": "The Surprising Effectiveness of Negative Reinforcement in LLM Reasoning",
-    "authors": [
-      "Xinyu Zhu",
-      "Mengzhou Xia",
-      "Zhepei Wei",
-      "Wei-Lin Chen",
-      "Danqi Chen",
-      "Yu Meng"
-    ],
-    "summary": "Reinforcement learning with verifiable rewards (RLVR) is a promising approach for training language models (LMs) on reasoning tasks that elicit emergent long chains of thought (CoTs). Unlike supervised learning, it updates the model using both correct and incorrect samples via policy gradients. To better understand its mechanism, we decompose the learning signal into reinforcing correct responses and penalizing incorrect ones, referred to as Positive and Negative Sample Reinforcement (PSR and NSR), respectively. We train Qwen2.5-Math-7B, Qwen3-4B and Llama-3.1-8B-Instruct on a mathematical reasoning dataset and uncover a surprising result: training with only negative samples -- without reinforcing correct responses -- can be highly effective: it consistently improves performance over the base model across the entire Pass@$k$ spectrum $k$ up to 256), often matching or surpassing PPO and GRPO. In contrast, reinforcing only correct responses improves Pass@1 but degrades performance at higher $k$, due to reduced diversity. These inference-scaling trends highlight that solely penalizing incorrect responses may contribute more to performance than previously recognized. Through gradient analysis, we show that NSR works by suppressing incorrect generations and redistributing probability mass toward other plausible candidates, guided by the model's prior beliefs. It refines the model's existing knowledge rather than introducing entirely new behaviors. Building on this insight, we propose a simple variant of the RL objective that upweights NSR, and show that it consistently improves ...",
-    "published": "Jun 02",
-    "pdf_url": "https://arxiv.org/pdf/2506.01347v2",
-    "arxiv_url": "http://arxiv.org/abs/2506.01347v2",
-    "queried_author": "Danqi Chen",
-    "matching_authors": [
-      "Danqi Chen"
-    ]
-  },
-  {
-    "title": "Existing Large Language Model Unlearning Evaluations Are Inconclusive",
-    "authors": [
-      "Zhili Feng",
-      "Yixuan Even Xu",
-      "Alexander Robey",
-      "Robert Kirk",
-      "Xander Davies",
-      "Yarin Gal",
-      "Avi Schwarzschild",
-      "J. Zico Kolter"
-    ],
-    "summary": "Machine unlearning aims to remove sensitive or undesired data from large language models. However, recent studies suggest that unlearning is often shallow, claiming that removed knowledge can easily be recovered. In this work, we critically examine standard unlearning evaluation practices and uncover key limitations that shake our trust in those findings. First, we show that some evaluations introduce substantial new information into the model, potentially masking true unlearning performance by re-teaching the model during testing. Second, we demonstrate that evaluation outcomes vary significantly across tasks, undermining the generalizability of current evaluation routines. Finally, we find that many evaluations rely on spurious correlations, making their results difficult to trust and interpret. Taken together, these issues suggest that current evaluation protocols may both overstate and understate unlearning success. To address this, we propose two principles for future unlearning evaluations: minimal information injection and downstream task awareness. We validate these principles through a series of targeted experiments, showing how violations of each can lead to misleading conclusions.",
-    "published": "May 31",
-    "pdf_url": "https://arxiv.org/pdf/2506.00688v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.00688v1",
-    "queried_author": "J Zico Kolter",
-    "matching_authors": [
-      "J Zico Kolter"
-    ]
-  },
-  {
-    "title": "WorldGym: World Model as An Environment for Policy Evaluation",
-    "authors": [
-      "Julian Quevedo",
-      "Ansh Kumar Sharma",
-      "Yixiang Sun",
-      "Varad Suryavanshi",
-      "Percy Liang",
-      "Sherry Yang"
-    ],
-    "summary": "Evaluating robot control policies is difficult: real-world testing is costly, and handcrafted simulators require manual effort to improve in realism and generality. We propose a world-model-based policy evaluation environment (WorldGym), an autoregressive, action-conditioned video generation model which serves as a proxy to real world environments. Policies are evaluated via Monte Carlo rollouts in the world model, with a vision-language model providing rewards. We evaluate a set of VLA-based real-robot policies in the world model using only initial frames from real robots, and show that policy success rates within the world model highly correlate with real-world success rates. Moreoever, we show that WorldGym is able to preserve relative policy rankings across different policy versions, sizes, and training checkpoints. Due to requiring only a single start frame as input, the world model further enables efficient evaluation of robot policies' generalization ability on novel tasks and environments. We find that modern VLA-based robot policies still struggle to distinguish object shapes and can become distracted by adversarial facades of objects. While generating highly realistic object interaction remains challenging, WorldGym faithfully emulates robot motions and offers a practical starting point for safe and reproducible policy evaluation before deployment.",
-    "published": "May 31",
-    "pdf_url": "https://arxiv.org/pdf/2506.00613v3",
-    "arxiv_url": "http://arxiv.org/abs/2506.00613v3",
-    "queried_author": "Percy Liang",
-    "matching_authors": [
-      "Percy Liang"
     ]
   }
 ]
