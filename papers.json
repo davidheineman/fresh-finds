@@ -1,5 +1,61 @@
 [
   {
+    "title": "Speculative Speculative Decoding",
+    "authors": [
+      "Tanishq Kumar",
+      "Tri Dao",
+      "Avner May"
+    ],
+    "summary": "Autoregressive decoding is bottlenecked by its sequential nature. Speculative decoding has become a standard way to accelerate inference by using a fast draft model to predict upcoming tokens from a slower target model, and then verifying them in parallel with a single target model forward pass. However, speculative decoding itself relies on a sequential dependence between speculation and verification. We introduce speculative speculative decoding (SSD) to parallelize these operations. While a verification is ongoing, the draft model predicts likely verification outcomes and prepares speculations pre-emptively for them. If the actual verification outcome is then in the predicted set, a speculation can be returned immediately, eliminating drafting overhead entirely. We identify three key challenges presented by speculative speculative decoding, and suggest principled methods to solve each. The result is Saguaro, an optimized SSD algorithm. Our implementation is up to 2x faster than optimized speculative decoding baselines and up to 5x faster than autoregressive decoding with open source inference engines.",
+    "published": "Mar 03",
+    "pdf_url": "https://arxiv.org/pdf/2603.03251v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.03251v1",
+    "queried_author": "Tri Dao",
+    "matching_authors": [
+      "Tri Dao"
+    ]
+  },
+  {
+    "title": "Contextualized Privacy Defense for LLM Agents",
+    "authors": [
+      "Yule Wen",
+      "Yanzhe Zhang",
+      "Jianxun Lian",
+      "Xiaoyuan Yi",
+      "Xing Xie",
+      "Diyi Yang"
+    ],
+    "summary": "LLM agents increasingly act on users' personal information, yet existing privacy defenses remain limited in both design and adaptability. Most prior approaches rely on static or passive defenses, such as prompting and guarding. These paradigms are insufficient for supporting contextual, proactive privacy decisions in multi-step agent execution. We propose Contextualized Defense Instructing (CDI), a new privacy defense paradigm in which an instructor model generates step-specific, context-aware privacy guidance during execution, proactively shaping actions rather than merely constraining or vetoing them. Crucially, CDI is paired with an experience-driven optimization framework that trains the instructor via reinforcement learning (RL), where we convert failure trajectories with privacy violations into learning environments. We formalize baseline defenses and CDI as distinct intervention points in a canonical agent loop, and compare their privacy-helpfulness trade-offs within a unified simulation framework. Results show that our CDI consistently achieves a better balance between privacy preservation (94.2%) and helpfulness (80.6%) than baselines, with superior robustness to adversarial conditions and generalization.",
+    "published": "Mar 03",
+    "pdf_url": "https://arxiv.org/pdf/2603.02983v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.02983v1",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang"
+    ]
+  },
+  {
+    "title": "Real-Time Generation of Game Video Commentary with Multimodal LLMs: Pause-Aware Decoding Approaches",
+    "authors": [
+      "Anum Afzal",
+      "Yuki Saito",
+      "Hiroya Takamura",
+      "Katsuhito Sudoh",
+      "Shinnosuke Takamichi",
+      "Graham Neubig",
+      "Florian Matthes",
+      "Tatsuya Ishigaki"
+    ],
+    "summary": "Real-time video commentary generation provides textual descriptions of ongoing events in videos. It supports accessibility and engagement in domains such as sports, esports, and livestreaming. Commentary generation involves two essential decisions: what to say and when to say it. While recent prompting-based approaches using multimodal large language models (MLLMs) have shown strong performance in content generation, they largely ignore the timing aspect. We investigate whether in-context prompting alone can support real-time commentary generation that is both semantically relevant and well-timed. We propose two prompting-based decoding strategies: 1) a fixed-interval approach, and 2) a novel dynamic interval-based decoding approach that adjusts the next prediction timing based on the estimated duration of the previous utterance. Both methods enable pause-aware generation without any fine-tuning. Experiments on Japanese and English datasets of racing and fighting games show that the dynamic interval-based decoding can generate commentary more closely aligned with human utterance timing and content using prompting alone. We release a multilingual benchmark dataset, trained models, and implementations to support future research on real-time video commentary generation.",
+    "published": "Mar 03",
+    "pdf_url": "https://arxiv.org/pdf/2603.02655v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.02655v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
     "title": "Robometer: Scaling General-Purpose Robotic Reward Models via Trajectory Comparisons",
     "authors": [
       "Anthony Liang",
@@ -3896,8 +3952,8 @@
     ],
     "summary": "We present the first comprehensive evaluation of AI agents against human cybersecurity professionals in a live enterprise environment. We evaluate ten cybersecurity professionals alongside six existing AI agents and ARTEMIS, our new agent scaffold, on a large university network consisting of ~8,000 hosts across 12 subnets. ARTEMIS is a multi-agent framework featuring dynamic prompt generation, arbitrary sub-agents, and automatic vulnerability triaging. In our comparative study, ARTEMIS placed second overall, discovering 9 valid vulnerabilities with an 82% valid submission rate and outperforming 9 of 10 human participants. While existing scaffolds such as Codex and CyAgent underperformed relative to most human participants, ARTEMIS demonstrated technical sophistication and submission quality comparable to the strongest participants. We observe that AI agents offer advantages in systematic enumeration, parallel exploitation, and cost -- certain ARTEMIS variants cost $18/hour versus $60/hour for professional penetration testers. We also identify key capability gaps: AI agents exhibit higher false-positive rates and struggle with GUI-based tasks.",
     "published": "Dec 10",
-    "pdf_url": "https://arxiv.org/pdf/2512.09882v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.09882v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.09882v2",
+    "arxiv_url": "http://arxiv.org/abs/2512.09882v2",
     "queried_author": "J Zico Kolter",
     "matching_authors": [
       "J Zico Kolter",
@@ -6080,8 +6136,8 @@
     ],
     "summary": "Finetuning on narrow domains has become an essential tool to adapt Large Language Models (LLMs) to specific tasks and to create models with known unusual properties that are useful for research. We show that narrow finetuning creates strong biases in LLM activations that can be interpreted to understand the finetuning domain. These biases can be discovered using simple tools from model diffing - the study of differences between models before and after finetuning. In particular, analyzing activation differences on the first few tokens of random text and steering by adding this difference to the model activations produces text similar to the format and general content of the finetuning data. We demonstrate that these analyses contain crucial information by creating an LLM-based interpretability agent to understand the finetuning domain. With access to the bias, the agent performs significantly better compared to baseline agents using simple prompting. Our analysis spans synthetic document finetuning for false facts, emergent misalignment, subliminal learning, and taboo word guessing game models across different architectures (Gemma, LLaMA, Qwen) and scales (1B to 32B parameters). We suspect these biases reflect overfitting and find that mixing pretraining data into the finetuning corpus largely removes them, though residual risks may remain. Our work (1) demonstrates that narrowly finetuned models have salient traces of their training objective in their activations and suggests ways to improve how they are trained, (2) warns AI safety and interpretability researchers that the...",
     "published": "Oct 14",
-    "pdf_url": "https://arxiv.org/pdf/2510.13900v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.13900v1",
+    "pdf_url": "https://arxiv.org/pdf/2510.13900v2",
+    "arxiv_url": "http://arxiv.org/abs/2510.13900v2",
     "queried_author": "Neel Nanda",
     "matching_authors": [
       "Neel Nanda"
@@ -6407,8 +6463,8 @@
     ],
     "summary": "Reasoning LLMs are trained to verbalize their reasoning process, yielding strong gains on complex tasks. This transparency also opens a promising direction: multiple reasoners can directly collaborate on each other's thinking within a shared trajectory, yielding better inference efficiency and exploration. A key prerequisite, however, is the ability to assess the usefulness and build on another model's partial thinking -- we call this off-trajectory reasoning. Our paper investigates a critical question: can standard solo-reasoning training pipelines deliver desired off-trajectory behaviors? We propose twin tests that capture the two extremes of the off-trajectory spectrum, namely Recoverability, which tests whether LLMs can backtrack from \"distractions\" induced by misleading reasoning traces, and Guidability, which tests their ability to build upon correct reasoning from stronger collaborators. Our study evaluates 15 open-weight LLMs (1.5B-32B) and reveals a counterintuitive finding -- \"stronger\" LLMs on benchmarks are often more fragile under distraction. Moreover, all models tested fail to effectively leverage guiding steps from collaborators on problems beyond their inherent capabilities with solve rates remaining under 9.2%. Finally, we conduct control studies to isolate the effects of three factors in post-training on these behaviors: the choice of distillation teacher, the use of RL, and data selection strategy. Our results provide actionable insights for training natively strong reasoning collaborators; e.g., we find that suboptimal recoverability behaviors of teache...",
     "published": "Oct 07",
-    "pdf_url": "https://arxiv.org/pdf/2510.06410v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.06410v1",
+    "pdf_url": "https://arxiv.org/pdf/2510.06410v2",
+    "arxiv_url": "http://arxiv.org/abs/2510.06410v2",
     "queried_author": "Tanya Goyal",
     "matching_authors": [
       "Tanya Goyal"
@@ -6472,10 +6528,10 @@
       "Liwei Jiang",
       "Yejin Choi"
     ],
-    "summary": "Language model post-training has enhanced instruction-following and performance on many downstream tasks, but also comes with an often-overlooked cost on tasks with many possible valid answers. We characterize three desiderata for conditional distributional modeling: in-context steerability, valid output space coverage, and distributional alignment, and document across three model families how current post-training can reduce these properties. In particular, we disambiguate between two kinds of in-context learning: ICL for eliciting existing underlying knowledge or capabilities, and in-context steerability, where a model must use in-context information to override its priors and steer to a novel data generating distribution. To better evaluate and improve these desiderata, we introduce Spectrum Suite, a large-scale resource compiled from >40 data sources and spanning >90 tasks requiring models to steer to and match diverse distributions ranging from varied human preferences to numerical distributions and more. We find that while current post-training techniques help elicit underlying capabilities and knowledge, they hurt models' ability to flexibly steer in-context. To mitigate these issues, we propose Spectrum Tuning, a post-training method using Spectrum Suite to improve steerability and distributional coverage. We find that Spectrum Tuning often improves over pretrained models and their instruction-tuned counterparts, enhancing steerability, spanning more of the output space, and improving distributional alignment on held-out datasets.",
+    "summary": "Language model post-training has enhanced instruction-following and performance on many downstream tasks, but also comes with an often-overlooked cost on tasks with many possible valid answers. On many tasks such as creative writing, synthetic data generation, or steering to diverse preferences, models must cover an entire distribution of outputs, rather than a single correct answer. We characterize three desiderata for conditional distributional modeling: in-context steerability, valid output space coverage, and distributional alignment, and document across three model families how current post-training can reduce these properties. In particular, we disambiguate between two kinds of in-context learning: ICL for eliciting existing underlying knowledge or capabilities, and in-context steerability, where a model must use in-context information to override its priors and steer to a novel data generating distribution. To better evaluate and improve these desiderata, we introduce Spectrum Suite, a large-scale resource compiled from >40 data sources and spanning >90 tasks requiring models to steer to and match diverse distributions ranging from varied human preferences to numerical distributions and more. We find that while current post-training techniques elicit underlying capabilities and knowledge, they hurt models' ability to flexibly steer in-context. To mitigate these issues, we propose Spectrum Tuning, a post-training method using Spectrum Suite to improve steerability and distributional coverage. We find that Spectrum Tuning often improves over pretrained and typical inst...",
     "published": "Oct 07",
-    "pdf_url": "https://arxiv.org/pdf/2510.06084v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.06084v1",
+    "pdf_url": "https://arxiv.org/pdf/2510.06084v2",
+    "arxiv_url": "http://arxiv.org/abs/2510.06084v2",
     "queried_author": "Niloofar Mireshghallah",
     "matching_authors": [
       "Niloofar Mireshghallah",
@@ -7238,8 +7294,8 @@
     ],
     "summary": "The Minimum Description Length (MDL) principle offers a formal framework for applying Occam's razor in machine learning. However, its application to neural networks such as Transformers is challenging due to the lack of a principled, universal measure for model complexity. This paper introduces the theoretical notion of asymptotically optimal description length objectives, grounded in the theory of Kolmogorov complexity. We establish that a minimizer of such an objective achieves optimal compression, for any dataset, up to an additive constant, in the limit as model resource bounds increase. We prove that asymptotically optimal objectives exist for Transformers, building on a new demonstration of their computational universality. We further show that such objectives can be tractable and differentiable by constructing and analyzing a variational objective based on an adaptive Gaussian mixture prior. Our empirical analysis shows that this variational objective selects for a low-complexity solution with strong generalization on an algorithmic task, but standard optimizers fail to find such solutions from a random initialization, highlighting key optimization challenges. More broadly, by providing a theoretical framework for identifying description length objectives with strong asymptotic guarantees, we outline a potential path towards training neural networks that achieve greater compression and generalization.",
     "published": "Sep 26",
-    "pdf_url": "https://arxiv.org/pdf/2509.22445v2",
-    "arxiv_url": "http://arxiv.org/abs/2509.22445v2",
+    "pdf_url": "https://arxiv.org/pdf/2509.22445v3",
+    "arxiv_url": "http://arxiv.org/abs/2509.22445v3",
     "queried_author": "Jacob Eisenstein",
     "matching_authors": [
       "Jacob Eisenstein"
@@ -14026,12 +14082,13 @@
     "title": "LLM Probability Concentration: How Alignment Shrinks the Generative Horizon",
     "authors": [
       "Chenghao Yang",
+      "Sida Li",
       "Ari Holtzman"
     ],
-    "summary": "Despite their impressive capabilities, aligned large language models (LLMs) often generate outputs that lack diversity. What drives this consistency in the generation? We investigate this phenomenon through the lens of probability concentration in the model's output distribution. To quantify this concentration, we introduce the *Branching Factor* (BF)--a token-invariant measure of the effective number of plausible next steps during generation. Our empirical analysis reveals two key findings: (1) BF often decreases as generation progresses, suggesting that LLMs become more predictable as they generate. (2) alignment tuning substantially sharpens the model's output distribution from the outset, reducing BF by nearly an order of magnitude (e.g., from 12 to 1.2) relative to base models. This stark reduction helps explain why aligned models often appear less sensitive to decoding strategies. Building on this insight, we find this consistency has surprising implications for complex reasoning. Aligned Chain-of-Thought (CoT) models (e.g., DeepSeek-distilled models), for instance, leverage this effect; by generating longer reasoning chains, they push generation into later, more deterministic (lower BF) stages, resulting in more stable outputs. We hypothesize that alignment tuning does not fundamentally change a model's behavior, but instead steers it toward stylistic tokens (e.g., ``Sure'') that unlock low-entropy trajectories already present in the base model. This view is supported by nudging experiments, which show prompting base models with such tokens can similarly reduce BF. T...",
+    "summary": "Despite their impressive capabilities, aligned large language models (LLMs) often generate outputs that lack diversity. What drives this consistency in the generation? We investigate this phenomenon through the lens of probability concentration in the model's output distribution. To quantify this concentration, we introduce the *Branching Factor* (BF) -- a token-invariant measure of the effective number of plausible next steps during generation. Our empirical analysis reveals two key findings: (1) BF often decreases as generation progresses, suggesting that LLMs become more predictable as they generate. (2) alignment tuning substantially sharpens the model's output distribution from the outset, reducing BF by a factor of 2-5 overall, and up to an order of magnitude (e.g., from 12 to 1.2) at the beginning positions. This stark reduction helps explain why aligned models often appear less sensitive to decoding strategies. Building on this insight, we find this consistency has surprising implications for complex reasoning. Aligned Chain-of-Thought (CoT) models (e.g., DeepSeek-distilled models), for instance, leverage this effect; by generating longer reasoning chains, they push generation into later, more deterministic (lower BF) stages, resulting in more stable outputs. We hypothesize that alignment tuning does not fundamentally change a model's behavior, but instead steers it toward stylistic tokens (e.g., \"Sure\") that unlock low-entropy trajectories already present in the base model. This view is supported by nudging experiments, which show prompting base models with such to...",
     "published": "Jun 22",
-    "pdf_url": "https://arxiv.org/pdf/2506.17871v2",
-    "arxiv_url": "http://arxiv.org/abs/2506.17871v2",
+    "pdf_url": "https://arxiv.org/pdf/2506.17871v3",
+    "arxiv_url": "http://arxiv.org/abs/2506.17871v3",
     "queried_author": "Ari Holtzman",
     "matching_authors": [
       "Ari Holtzman"
@@ -15367,8 +15424,8 @@
     ],
     "summary": "One of the fundamental problems in digital agents is their lack of understanding of their environment. For instance, a web browsing agent may get lost in unfamiliar websites, uncertain what pages must be visited to achieve its goals. To address this, we propose Go-Browse, a method for automatically collecting diverse and realistic web agent data at scale through structured exploration of web environments. Go-Browse achieves efficient exploration by framing data collection as a graph search, enabling reuse of information across exploration episodes. We instantiate our method on the WebArena benchmark, collecting a dataset of 10K successful task-solving trajectories and 40K interaction steps across 100 URLs. Fine-tuning a 7B parameter language model on this dataset achieves a success rate of 21.7% on the WebArena benchmark, beating GPT-4o mini by 2.4% and exceeding current state-of-the-art results for sub-10B parameter models by 2.9%.",
     "published": "Jun 04",
-    "pdf_url": "https://arxiv.org/pdf/2506.03533v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.03533v1",
+    "pdf_url": "https://arxiv.org/pdf/2506.03533v2",
+    "arxiv_url": "http://arxiv.org/abs/2506.03533v2",
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig"
@@ -15430,64 +15487,6 @@
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig"
-    ]
-  },
-  {
-    "title": "Rewarding the Unlikely: Lifting GRPO Beyond Distribution Sharpening",
-    "authors": [
-      "Andre He",
-      "Daniel Fried",
-      "Sean Welleck"
-    ],
-    "summary": "Reinforcement learning is emerging as a primary driver for improving language model reasoning capabilities. A fundamental question is whether current reinforcement learning algorithms -- such as Group Relative Policy Optimization (GRPO), the de facto standard algorithm used to improve language model reasoning -- merely sharpen the base model's distribution around problems it can already solve. We investigate this question in the context of formal theorem proving, which has access to a perfect verifier. We identify a degenerate rank bias in GRPO in which highly probable trajectories are reinforced and rare ones are neglected. This results in distribution sharpening: the model can solve some problems with fewer samples, but underperforms simply sampling more solutions from the original model. To overcome GRPO's rank bias we introduce unlikeliness reward, a simple method for explicitly up-weighting rare but correct solutions. We show that unlikeliness reward mitigates rank bias and improves pass@$N$ across a large range of $N$ in both synthetic and real theorem proving settings. We also uncover an unexpected link between rank bias and a seemingly mundane hyperparameter -- the number of updates per batch -- that leads to a second, complementary mitigation. We combine our insights into a revised GRPO training recipe for formal theorem proving, yielding an open pipeline that achieves competitive performance to DeepSeek-Prover-V1.5-RL on the miniF2F-test benchmark. We release our implementation at https://github.com/AndreHe02/rewarding-unlikely-release",
-    "published": "Jun 03",
-    "pdf_url": "https://arxiv.org/pdf/2506.02355v2",
-    "arxiv_url": "http://arxiv.org/abs/2506.02355v2",
-    "queried_author": "Sean Welleck",
-    "matching_authors": [
-      "Sean Welleck"
-    ]
-  },
-  {
-    "title": "BehaviorBox: Automated Discovery of Fine-Grained Performance Differences Between Language Models",
-    "authors": [
-      "Lindia Tjuatja",
-      "Graham Neubig"
-    ],
-    "summary": "Language model evaluation is a daunting task: prompts are brittle, corpus-level perplexities are vague, and the choice of benchmarks are endless. Finding examples that show meaningful, generalizable differences between two LMs is crucial to understanding where one model succeeds and another fails. Can this process be done automatically? In this work, we propose methodology for automated comparison of language models that uses performance-aware contextual embeddings to find fine-grained features of text where one LM outperforms another. Our method, which we name BehaviorBox, extracts coherent features that demonstrate differences with respect to the ease of generation between two LMs. Specifically, BehaviorBox finds features that describe groups of words in fine-grained contexts, such as \"conditional 'were' in the phrase 'if you were'\" and \"exclamation marks after emotional statements\", where one model outperforms another within a particular datatset. We apply BehaviorBox to compare models that vary in size, model family, and post-training, and enumerate insights into specific contexts that illustrate meaningful differences in performance which cannot be found by measures such as corpus-level perplexity alone.",
-    "published": "Jun 02",
-    "pdf_url": "https://arxiv.org/pdf/2506.02204v2",
-    "arxiv_url": "http://arxiv.org/abs/2506.02204v2",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
-    ]
-  },
-  {
-    "title": "AI Debate Aids Assessment of Controversial Claims",
-    "authors": [
-      "Salman Rahman",
-      "Sheriff Issaka",
-      "Ashima Suvarna",
-      "Genglin Liu",
-      "James Shiffer",
-      "Jaeyoung Lee",
-      "Md Rizwan Parvez",
-      "Hamid Palangi",
-      "Shi Feng",
-      "Nanyun Peng",
-      "Yejin Choi",
-      "Julian Michael",
-      "Liwei Jiang",
-      "Saadia Gabriel"
-    ],
-    "summary": "As AI grows more powerful, it will increasingly shape how we understand the world. But with this influence comes the risk of amplifying misinformation and deepening social divides-especially on consequential topics where factual accuracy directly impacts well-being. Scalable Oversight aims to ensure AI systems remain truthful even when their capabilities exceed those of their evaluators. Yet when humans serve as evaluators, their own beliefs and biases can impair judgment. We study whether AI debate can guide biased judges toward the truth by having two AI systems debate opposing sides of controversial factuality claims on COVID-19 and climate change where people hold strong prior beliefs. We conduct two studies. Study I recruits human judges with either mainstream or skeptical beliefs who evaluate claims through two protocols: debate (interaction with two AI advisors arguing opposing sides) or consultancy (interaction with a single AI advisor). Study II uses AI judges with and without human-like personas to evaluate the same protocols. In Study I, debate consistently improves human judgment accuracy and confidence calibration, outperforming consultancy by 4-10% across COVID-19 and climate change claims. The improvement is most significant for judges with mainstream beliefs (up to +15.2% accuracy on COVID-19 claims), though debate also helps skeptical judges who initially misjudge claims move toward accurate views (+4.7% accuracy). In Study II, AI judges with human-like personas achieve even higher accuracy (78.5%) than human judges (70.1%) and default AI judges without per...",
-    "published": "Jun 02",
-    "pdf_url": "https://arxiv.org/pdf/2506.02175v2",
-    "arxiv_url": "http://arxiv.org/abs/2506.02175v2",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
     ]
   }
 ]
