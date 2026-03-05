@@ -1,5 +1,59 @@
 [
   {
+    "title": "AgentIR: Reasoning-Aware Retrival for Deep Research Agents",
+    "authors": [
+      "Zijian Chen",
+      "Xueguang Ma",
+      "Shengyao Zhuang",
+      "Jimmy Lin",
+      "Akari Asai",
+      "Victor Zhong"
+    ],
+    "summary": "Deep Research agents are rapidly emerging as primary consumers of modern retrieval systems. Unlike human users who issue and refine queries without documenting their intermediate thought processes, Deep Research agents generate explicit natural language reasoning before each search call, revealing rich intent and contextual information that existing retrievers entirely ignore. To exploit this overlooked signal, we introduce: (1) Reasoning-Aware Retrieval, a retrieval paradigm that jointly embeds the agent's reasoning trace alongside its query; and (2) DR-Synth, a data synthesis method that generates Deep Research retriever training data from standard QA datasets. We demonstrate that both components are independently effective, and their combination yields a trained embedding model, AgentIR-4B, with substantial gains. On the challenging BrowseComp-Plus benchmark, AgentIR-4B achieves 68\\% accuracy with the open-weight agent Tongyi-DeepResearch, compared to 50\\% with conventional embedding models twice its size, and 37\\% with BM25. Code and data are available at: https://texttron.github.io/AgentIR/.",
+    "published": "Mar 04",
+    "pdf_url": "https://arxiv.org/pdf/2603.04384v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.04384v1",
+    "queried_author": "Akari Asai",
+    "matching_authors": [
+      "Akari Asai"
+    ]
+  },
+  {
+    "title": "$\u03c4$-Knowledge: Evaluating Conversational Agents over Unstructured Knowledge",
+    "authors": [
+      "Quan Shi",
+      "Alexandra Zytek",
+      "Pedram Razavi",
+      "Karthik Narasimhan",
+      "Victor Barres"
+    ],
+    "summary": "Conversational agents are increasingly deployed in knowledge-intensive settings, where correct behavior depends on retrieving and applying domain-specific knowledge from large, proprietary, and unstructured corpora during live interactions with users. Yet most existing benchmarks evaluate retrieval or tool use independently of each other, creating a gap in realistic, fully agentic evaluation over unstructured data in long-horizon interactions. We introduce $\u03c4$-Knowledge, an extension of $\u03c4$-Bench for evaluating agents in environments where success depends on coordinating external, natural-language knowledge with tool outputs to produce verifiable, policy-compliant state changes. Our new domain, $\u03c4$-Banking, models realistic fintech customer support workflows in which agents must navigate roughly 700 interconnected knowledge documents while executing tool-mediated account updates. Across embedding-based retrieval and terminal-based search, even frontier models with high reasoning budgets achieve only $\\sim$25.5% pass^1, with reliability degrading sharply over repeated trials. Agents struggle to retrieve the correct documents from densely interlinked knowledge bases and to reason accurately over complex internal policies. Overall, $\u03c4$-Knowledge provides a realistic testbed for developing agents that integrate unstructured knowledge in human-facing deployments.",
+    "published": "Mar 04",
+    "pdf_url": "https://arxiv.org/pdf/2603.04370v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.04370v1",
+    "queried_author": "Karthik Narasimhan",
+    "matching_authors": [
+      "Karthik Narasimhan"
+    ]
+  },
+  {
+    "title": "A Rubric-Supervised Critic from Sparse Real-World Outcomes",
+    "authors": [
+      "Xingyao Wang",
+      "Valerie Chen",
+      "Heng Ji",
+      "Graham Neubig"
+    ],
+    "summary": "Academic benchmarks for coding agents tend to reward autonomous task completion, measured by verifiable rewards such as unit-test success. In contrast, real-world coding agents operate with humans in the loop, where success signals are typically noisy, delayed, and sparse. How can we bridge this gap? In this paper, we propose a process to learn a \"critic\" model from sparse and noisy interaction data, which can then be used both as a reward model for either RL-based training or inference-time scaling. Specifically, we introduce Critic Rubrics, a rubric-based supervision framework with 24 behavioral features that can be derived from human-agent interaction traces alone. Using a semi-supervised objective, we can then jointly predict these rubrics and sparse human feedback (when present). In experiments, we demonstrate that, despite being trained primarily from trace-observable rubrics and sparse real-world outcome proxies, these critics improve best-of-N reranking on SWE-bench (Best@8 +15.9 over Random@8 over the rerankable subset of trajectories), enable early stopping (+17.7 with 83% fewer attempts), and support training-time data curation via critic-selected trajectories.",
+    "published": "Mar 04",
+    "pdf_url": "https://arxiv.org/pdf/2603.03800v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.03800v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
     "title": "Speculative Speculative Decoding",
     "authors": [
       "Tanishq Kumar",
@@ -1018,6 +1072,23 @@
     ]
   },
   {
+    "title": "Compressed Sensing for Capability Localization in Large Language Models",
+    "authors": [
+      "Anna Bair",
+      "Yixuan Even Xu",
+      "Mingjie Sun",
+      "J. Zico Kolter"
+    ],
+    "summary": "Large language models (LLMs) exhibit a wide range of capabilities, including mathematical reasoning, code generation, and linguistic behaviors. We show that many capabilities are highly localized to small subsets of attention heads within Transformer architectures. Zeroing out as few as five task-specific heads can degrade performance by up to $65\\%$ on standard benchmarks measuring the capability of interest, while largely preserving performance on unrelated tasks. We introduce a compressed sensing based method that exploits the sparsity of these heads to identify them via strategic knockouts and a small number of model evaluations. We validate these findings across Llama and Qwen models ranging from 1B to 8B parameters and a diverse set of capabilities including mathematical abilities and code generation, revealing a modular organization in which specialized capabilities are implemented by sparse, functionally distinct components. Overall, our results suggest that capability localization is a general organizational principle of Transformer language models, with implications for interpretability, model editing, and AI safety. Code is released at https://github.com/locuslab/llm-components.",
+    "published": "Feb 11",
+    "pdf_url": "https://arxiv.org/pdf/2603.03335v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.03335v1",
+    "queried_author": "J Zico Kolter",
+    "matching_authors": [
+      "J Zico Kolter"
+    ]
+  },
+  {
     "title": "Cross-Sectional Asset Retrieval via Future-Aligned Soft Contrastive Learning",
     "authors": [
       "Hyeongmin Lee",
@@ -1190,6 +1261,29 @@
     "queried_author": "Neel Nanda",
     "matching_authors": [
       "Neel Nanda"
+    ]
+  },
+  {
+    "title": "HumanLM: Simulating Users with State Alignment Beats Response Imitation",
+    "authors": [
+      "Shirley Wu",
+      "Evelyn Choi",
+      "Arpandeep Khatua",
+      "Zhanghan Wang",
+      "Joy He-Yueya",
+      "Tharindu Cyril Weerasooriya",
+      "Wei Wei",
+      "Diyi Yang",
+      "Jure Leskovec",
+      "James Zou"
+    ],
+    "summary": "Large Language Models (LLMs) are increasingly used to simulate how specific users respond to a given context, enabling more user-centric applications that rely on user feedback. However, existing user simulators mostly imitate surface-level patterns and language styles, which fail to reflect the underlying states of real users (e.g., beliefs and emotions). To address these limitations, we propose a novel training framework, HumanLM, which builds user simulators that accurately reflect real users. Our key insight is that, in addition to generating responses, the model should generate natural-language latent states that align with ground-truth responses through reinforcement learning. These latent states correspond to a set of psychologically grounded state dimensions that drive how real users respond. HumanLM further synthesizes these aligned latent states into responses that accurately represent real users. For extensive evaluation, we develop Humanual, a comprehensive benchmark for simulating real users based on public data. Humanual consists of six large-scale datasets with 26k users and 216k responses in total, spanning diverse tasks such as generating user responses to daily life issues, political blogs, and chat sessions with LLM assistants. Across datasets, HumanLM significantly outperforms alternative approaches, achieving an average relative improvement of 16.3% in alignment scores from an LLM judge. In a real-time simulation study with 111 participants, HumanLM achieves the highest similarity to real user responses and competitive human-likeness scores.",
+    "published": "Feb 07",
+    "pdf_url": "https://arxiv.org/pdf/2603.03303v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.03303v1",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang"
     ]
   },
   {
@@ -5392,8 +5486,8 @@
     ],
     "summary": "Public research results on large-scale supervised finetuning of AI agents remain relatively rare, since the collection of agent training data presents unique challenges. In this work, we argue that the bottleneck is not a lack of underlying data sources, but that a large variety of data is fragmented across heterogeneous formats, tools, and interfaces. To this end, we introduce the agent data protocol (ADP), a light-weight representation language that serves as an \"interlingua\" between agent datasets in diverse formats and unified agent training pipelines downstream. The design of ADP is expressive enough to capture a large variety of tasks, including API/tool use, browsing, coding, software engineering, and general agentic workflows, while remaining simple to parse and train on without engineering at a per-dataset level. In experiments, we unified a broad collection of 13 existing agent training datasets into ADP format, and converted the standardized ADP data into training-ready formats for multiple agent frameworks. We performed SFT on these data, and demonstrated an average performance gain of ~20% over corresponding base models, and delivers state-of-the-art or near-SOTA performance on standard coding, browsing, tool use, and research benchmarks, without domain-specific tuning. All code and data are released publicly, in the hope that ADP could help lower the barrier to standardized, scalable, and reproducible agent training.",
     "published": "Oct 28",
-    "pdf_url": "https://arxiv.org/pdf/2510.24702v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.24702v1",
+    "pdf_url": "https://arxiv.org/pdf/2510.24702v2",
+    "arxiv_url": "http://arxiv.org/abs/2510.24702v2",
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig"
@@ -9098,10 +9192,10 @@
       "Tenghao Huang",
       "Christopher D. Manning"
     ],
-    "summary": "A large portion of real-world data science tasks are complex and require multi-hop web-based interactions: finding appropriate data available on the internet, synthesizing real-time data of various modalities from different locations, and producing summarized analyses. Existing web benchmarks often focus on simplistic interactions, such as form submissions or e-commerce transactions, and often do not require diverse tool-using capabilities required for web based data science. Conversely, traditional data science benchmarks typically concentrate on static, often textually bound datasets and do not assess end-to-end workflows that encompass data acquisition, cleaning, analysis, and insight generation. In response, we introduce WebDS, the first end-to-end web-based data science benchmark. It comprises 870 web-based data science tasks across 29 diverse websites from structured government data portals to unstructured news media, challenging agents to perform complex, multi-step operations requiring the use of tools and heterogeneous data formats that better reflect the realities of modern data analytics. Evaluations of current SOTA LLM agents indicate significant performance gaps in accomplishing these tasks. For instance, Browser Use, which accomplishes 80% of tasks on Web Voyager, successfully completes only 15% of tasks in WebDS, which our analysis suggests is due to new failure modes like poor information grounding, repetitive behavior and shortcut-taking that agents performing WebDS' tasks display. By providing a more robust and realistic testing ground, WebDS sets the stag...",
+    "summary": "Many real-world data science tasks involve complex web-based interactions: finding appropriate data available on the internet, synthesizing multimodal data from different locations, and producing summarized analyses. Existing web benchmarks often focus on simplistic interactions and often do not require diverse tool-using capabilities. Conversely, traditional data science benchmarks typically concentrate on static, highly structured datasets and do not assess end-to-end workflows that encompass data acquisition, cleaning, analysis, and insight generation. In response, we introduce WebDS, the first end-to-end web-based data science benchmark. It comprises 870 web-based data science tasks across 29 diverse websites from structured government data portals to unstructured news media, challenging agents to perform complex, multi-step, tool-based operations, across heterogeneous data formats, to better reflect the realities of modern data analytics. Evaluations of current SOTA LLM agents indicate significant performance gaps in accomplishing these tasks. For instance, Browser Use, which accomplishes $80\\%$ of tasks on WebVoyager, completes only 15% of tasks in WebDS, which our analysis suggests is due to new failure modes, such as poor information grounding, repetitive behavior and shortcut-taking that agents performing WebDS's tasks display. By contrast, humans achieve around 90% accuracy, highlighting a substantial gap between current agents and human performance. By providing a more robust and realistic testing ground, WebDS sets the stage for significant advances in the devel...",
     "published": "Aug 02",
-    "pdf_url": "https://arxiv.org/pdf/2508.01222v1",
-    "arxiv_url": "http://arxiv.org/abs/2508.01222v1",
+    "pdf_url": "https://arxiv.org/pdf/2508.01222v2",
+    "arxiv_url": "http://arxiv.org/abs/2508.01222v2",
     "queried_author": "Christopher D Manning",
     "matching_authors": [
       "Christopher D Manning"
@@ -15398,95 +15492,6 @@
     "matching_authors": [
       "Christopher D Manning",
       "Nelson F. Liu"
-    ]
-  },
-  {
-    "title": "Hanging in the Balance: Pivotal Moments in Crisis Counseling Conversations",
-    "authors": [
-      "Vivian Nguyen",
-      "Lillian Lee",
-      "Cristian Danescu-Niculescu-Mizil"
-    ],
-    "summary": "During a conversation, there can come certain moments where its outcome hangs in the balance. In these pivotal moments, how one responds can put the conversation on substantially different trajectories leading to significantly different outcomes. Systems that can detect when such moments arise could assist conversationalists in domains with highly consequential outcomes, such as mental health crisis counseling.\n  In this work, we introduce an unsupervised computational method for detecting such pivotal moments as they happen, in an online fashion. Our approach relies on the intuition that a moment is pivotal if our expectation of the outcome varies widely depending on what might be said next. By applying our method to crisis counseling conversations, we first validate it by showing that it aligns with human perception -- counselors take significantly longer to respond during moments detected by our method -- and with the eventual conversational trajectory -- which is more likely to change course at these times. We then use our framework to explore the relation of the counselor's response during pivotal moments with the eventual outcome of the session.",
-    "published": "Jun 04",
-    "pdf_url": "https://arxiv.org/pdf/2506.03941v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.03941v1",
-    "queried_author": "Lillian Lee",
-    "matching_authors": [
-      "Lillian Lee"
-    ]
-  },
-  {
-    "title": "Go-Browse: Training Web Agents with Structured Exploration",
-    "authors": [
-      "Apurva Gandhi",
-      "Graham Neubig"
-    ],
-    "summary": "One of the fundamental problems in digital agents is their lack of understanding of their environment. For instance, a web browsing agent may get lost in unfamiliar websites, uncertain what pages must be visited to achieve its goals. To address this, we propose Go-Browse, a method for automatically collecting diverse and realistic web agent data at scale through structured exploration of web environments. Go-Browse achieves efficient exploration by framing data collection as a graph search, enabling reuse of information across exploration episodes. We instantiate our method on the WebArena benchmark, collecting a dataset of 10K successful task-solving trajectories and 40K interaction steps across 100 URLs. Fine-tuning a 7B parameter language model on this dataset achieves a success rate of 21.7% on the WebArena benchmark, beating GPT-4o mini by 2.4% and exceeding current state-of-the-art results for sub-10B parameter models by 2.9%.",
-    "published": "Jun 04",
-    "pdf_url": "https://arxiv.org/pdf/2506.03533v2",
-    "arxiv_url": "http://arxiv.org/abs/2506.03533v2",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
-    ]
-  },
-  {
-    "title": "Adversarial Attacks on Robotic Vision Language Action Models",
-    "authors": [
-      "Eliot Krzysztof Jones",
-      "Alexander Robey",
-      "Andy Zou",
-      "Zachary Ravichandran",
-      "George J. Pappas",
-      "Hamed Hassani",
-      "Matt Fredrikson",
-      "J. Zico Kolter"
-    ],
-    "summary": "The emergence of vision-language-action models (VLAs) for end-to-end control is reshaping the field of robotics by enabling the fusion of multimodal sensory inputs at the billion-parameter scale. The capabilities of VLAs stem primarily from their architectures, which are often based on frontier large language models (LLMs). However, LLMs are known to be susceptible to adversarial misuse, and given the significant physical risks inherent to robotics, questions remain regarding the extent to which VLAs inherit these vulnerabilities. Motivated by these concerns, in this work we initiate the study of adversarial attacks on VLA-controlled robots. Our main algorithmic contribution is the adaptation and application of LLM jailbreaking attacks to obtain complete control authority over VLAs. We find that textual attacks, which are applied once at the beginning of a rollout, facilitate full reachability of the action space of commonly used VLAs and often persist over longer horizons. This differs significantly from LLM jailbreaking literature, as attacks in the real world do not have to be semantically linked to notions of harm. We make all code available at https://github.com/eliotjones1/robogcg .",
-    "published": "Jun 03",
-    "pdf_url": "https://arxiv.org/pdf/2506.03350v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.03350v1",
-    "queried_author": "J Zico Kolter",
-    "matching_authors": [
-      "J Zico Kolter"
-    ]
-  },
-  {
-    "title": "HyperSteer: Activation Steering at Scale with Hypernetworks",
-    "authors": [
-      "Jiuding Sun",
-      "Sidharth Baskaran",
-      "Zhengxuan Wu",
-      "Michael Sklar",
-      "Christopher Potts",
-      "Atticus Geiger"
-    ],
-    "summary": "Steering language models (LMs) by modifying internal activations is a popular approach for controlling text generation. Unsupervised dictionary learning methods, e.g., sparse autoencoders, can be scaled to produce many steering vectors, but lack guarantees on the individual efficacy of each vector and control over the coverage of relevant steering tasks. In contrast, supervised methods for constructing steering vectors are targeted and effective, but require more data collection and training for each additional steering vector produced. In this work, we introduce HyperSteer, a family of hypernetwork-based architectures which are trained end-to-end to generate steering vectors conditioned on the natural language steering prompts and the internals of the steered LM. In our evaluations, we show that scaling HyperSteer with thousands of steering prompts exceeds the performance of state-of-the-art activation steering methods, even on steering prompts never seen during training. Moreover, HyperSteer performs on par with steering-via-prompting.",
-    "published": "Jun 03",
-    "pdf_url": "https://arxiv.org/pdf/2506.03292v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.03292v1",
-    "queried_author": "Christopher Potts",
-    "matching_authors": [
-      "Christopher Potts"
-    ]
-  },
-  {
-    "title": "Coding Agents with Multimodal Browsing are Generalist Problem Solvers",
-    "authors": [
-      "Aditya Bharat Soni",
-      "Boxuan Li",
-      "Xingyao Wang",
-      "Valerie Chen",
-      "Graham Neubig"
-    ],
-    "summary": "Modern human labor is characterized by specialization; we train for years and develop particular tools that allow us to perform well across a variety of tasks. In addition, AI agents have been specialized for domains such as software engineering, web navigation, and workflow automation. However, this results in agents that are good for one thing but fail to generalize beyond their intended scope. One reason for this is that agent developers provide a highly specialized set of tools or make architectural decisions optimized for a specific use case or benchmark. In this work, we ask the question: what is the minimal set of general tools that can be used to achieve high performance across a diverse set of tasks? Our answer is OpenHands-Versa, a generalist agent built with a modest number of general tools: code editing and execution, web search, as well as multimodal web browsing and file access. Importantly, OpenHands-Versa demonstrates superior or competitive performance over leading specialized agents across three diverse and challenging benchmarks: SWE-Bench Multimodal, GAIA, and The Agent Company, outperforming the best-performing previously published results with absolute improvements in success rate of 9.1, 1.3, and 9.1 points respectively. Further, we show how existing state-of-the-art multi-agent systems fail to generalize beyond their target domains. These results demonstrate the feasibility of developing a generalist agent to solve diverse tasks and establish OpenHands-Versa as a strong baseline for future research.",
-    "published": "Jun 03",
-    "pdf_url": "https://arxiv.org/pdf/2506.03011v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.03011v1",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
     ]
   }
 ]
