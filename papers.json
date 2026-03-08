@@ -1,6 +1,141 @@
 [
   {
-    "title": "AgentIR: Reasoning-Aware Retrival for Deep Research Agents",
+    "title": "Censored LLMs as a Natural Testbed for Secret Knowledge Elicitation",
+    "authors": [
+      "Helena Casademunt",
+      "Bartosz Cywi\u0144ski",
+      "Khoi Tran",
+      "Arya Jakkli",
+      "Samuel Marks",
+      "Neel Nanda"
+    ],
+    "summary": "Large language models sometimes produce false or misleading responses. Two approaches to this problem are honesty elicitation -- modifying prompts or weights so that the model answers truthfully -- and lie detection -- classifying whether a given response is false. Prior work evaluates such methods on models specifically trained to lie or conceal information, but these artificial constructions may not resemble naturally-occurring dishonesty. We instead study open-weights LLMs from Chinese developers, which are trained to censor politically sensitive topics: Qwen3 models frequently produce falsehoods about subjects like Falun Gong or the Tiananmen protests while occasionally answering correctly, indicating they possess knowledge they are trained to suppress. Using this as a testbed, we evaluate a suite of elicitation and lie detection techniques. For honesty elicitation, sampling without a chat template, few-shot prompting, and fine-tuning on generic honesty data most reliably increase truthful responses. For lie detection, prompting the censored model to classify its own responses performs near an uncensored-model upper bound, and linear probes trained on unrelated data offer a cheaper alternative. The strongest honesty elicitation techniques also transfer to frontier open-weights models including DeepSeek R1. Notably, no technique fully eliminates false responses. We release all prompts, code, and transcripts.",
+    "published": "Mar 05",
+    "pdf_url": "https://arxiv.org/pdf/2603.05494v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.05494v1",
+    "queried_author": "Neel Nanda",
+    "matching_authors": [
+      "Neel Nanda"
+    ]
+  },
+  {
+    "title": "Reasoning Theater: Disentangling Model Beliefs from Chain-of-Thought",
+    "authors": [
+      "Siddharth Boppana",
+      "Annabel Ma",
+      "Max Loeffler",
+      "Raphael Sarfati",
+      "Eric Bigelow",
+      "Atticus Geiger",
+      "Owen Lewis",
+      "Jack Merullo"
+    ],
+    "summary": "We provide evidence of performative chain-of-thought (CoT) in reasoning models, where a model becomes strongly confident in its final answer, but continues generating tokens without revealing its internal belief. Our analysis compares activation probing, early forced answering, and a CoT monitor across two large models (DeepSeek-R1 671B & GPT-OSS 120B) and find task difficulty-specific differences: The model's final answer is decodable from activations far earlier in CoT than a monitor is able to say, especially for easy recall-based MMLU questions. We contrast this with genuine reasoning in difficult multihop GPQA-Diamond questions. Despite this, inflection points (e.g., backtracking, 'aha' moments) occur almost exclusively in responses where probes show large belief shifts, suggesting these behaviors track genuine uncertainty rather than learned \"reasoning theater.\" Finally, probe-guided early exit reduces tokens by up to 80% on MMLU and 30% on GPQA-Diamond with similar accuracy, positioning attention probing as an efficient tool for detecting performative reasoning and enabling adaptive computation.",
+    "published": "Mar 05",
+    "pdf_url": "https://arxiv.org/pdf/2603.05488v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.05488v1",
+    "queried_author": "Jack Merullo",
+    "matching_authors": [
+      "Jack Merullo"
+    ]
+  },
+  {
+    "title": "FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling",
+    "authors": [
+      "Ted Zadouri",
+      "Markus Hoehnerbach",
+      "Jay Shah",
+      "Timmy Liu",
+      "Vijay Thakkar",
+      "Tri Dao"
+    ],
+    "summary": "Attention, as a core layer of the ubiquitous Transformer architecture, is the bottleneck for large language models and long-context applications. While FlashAttention-3 optimized attention for Hopper GPUs through asynchronous execution and warp specialization, it primarily targets the H100 architecture. The AI industry has rapidly transitioned to deploying Blackwell-based systems such as the B200 and GB200, which exhibit fundamentally different performance characteristics due to asymmetric hardware scaling: tensor core throughput doubles while other functional units (shared memory bandwidth, exponential units) scale more slowly or remain unchanged. We develop several techniques to address these shifting bottlenecks on Blackwell GPUs: (1) redesigned pipelines that exploit fully asynchronous MMA operations and larger tile sizes, (2) software-emulated exponential and conditional softmax rescaling that reduces non-matmul operations, and (3) leveraging tensor memory and the 2-CTA MMA mode to reduce shared memory traffic and atomic adds in the backward pass. We demonstrate that our method, FlashAttention-4, achieves up to 1.3$\\times$ speedup over cuDNN 9.13 and 2.7$\\times$ over Triton on B200 GPUs with BF16, reaching up to 1613 TFLOPs/s (71% utilization). Beyond algorithmic innovations, we implement FlashAttention-4 entirely in CuTe-DSL embedded in Python, achieving 20-30$\\times$ faster compile times compared to traditional C++ template-based approaches while maintaining full expressivity.",
+    "published": "Mar 05",
+    "pdf_url": "https://arxiv.org/pdf/2603.05451v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.05451v1",
+    "queried_author": "Tri Dao",
+    "matching_authors": [
+      "Tri Dao"
+    ]
+  },
+  {
+    "title": "AI+HW 2035: Shaping the Next Decade",
+    "authors": [
+      "Deming Chen",
+      "Jason Cong",
+      "Azalia Mirhoseini",
+      "Christos Kozyrakis",
+      "Subhasish Mitra",
+      "Jinjun Xiong",
+      "Cliff Young",
+      "Anima Anandkumar",
+      "Michael Littman",
+      "Aron Kirschen",
+      "Sophia Shao",
+      "Serge Leef",
+      "Naresh Shanbhag",
+      "Dejan Milojicic",
+      "Michael Schulte",
+      "Gert Cauwenberghs",
+      "Jerry M. Chow",
+      "Tri Dao",
+      "Kailash Gopalakrishnan",
+      "Richard Ho",
+      "Hoshik Kim",
+      "Kunle Olukotun",
+      "David Z. Pan",
+      "Mark Ren",
+      "Dan Roth",
+      "Aarti Singh",
+      "Yizhou Sun",
+      "Yusu Wang",
+      "Yann LeCun",
+      "Ruchir Puri"
+    ],
+    "summary": "Artificial intelligence (AI) and hardware (HW) are advancing at unprecedented rates, yet their trajectories have become inseparably intertwined. The global research community lacks a cohesive, long-term vision to strategically coordinate the development of AI and HW. This fragmentation constrains progress toward holistic, sustainable, and adaptive AI systems capable of learning, reasoning, and operating efficiently across cloud, edge, and physical environments. The future of AI depends not only on scaling intelligence, but on scaling efficiency, achieving exponential gains in intelligence per joule, rather than unbounded compute consumption. Addressing this grand challenge requires rethinking the entire computing stack. This vision paper lays out a 10-year roadmap for AI+HW co-design and co-development, spanning algorithms, architectures, systems, and sustainability. We articulate key insights that redefine scaling around energy efficiency, system-level integration, and cross-layer optimization. We identify key challenges and opportunities, candidly assess potential obstacles and pitfalls, and propose integrated solutions grounded in algorithmic innovation, hardware advances, and software abstraction. Looking ahead, we define what success means in 10 years: achieving a 1000x improvement in efficiency for AI training and inference; enabling energy-aware, self-optimizing systems that seamlessly span cloud, edge, and physical AI; democratizing access to advanced AI infrastructure; and embedding human-centric principles into the design of intelligent systems. Finally, we outlin...",
+    "published": "Mar 05",
+    "pdf_url": "https://arxiv.org/pdf/2603.05225v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.05225v1",
+    "queried_author": "Tri Dao",
+    "matching_authors": [
+      "Tri Dao"
+    ]
+  },
+  {
+    "title": "Replaying pre-training data improves fine-tuning",
+    "authors": [
+      "Suhas Kotha",
+      "Percy Liang"
+    ],
+    "summary": "To obtain a language model for a target domain (e.g. math), the current paradigm is to pre-train on a vast amount of generic web text and then fine-tune on the relatively limited amount of target data. Typically, generic data is only mixed in during fine-tuning to prevent catastrophic forgetting of the generic domain. We surprisingly find that replaying the generic data during fine-tuning can actually improve performance on the (less related) target task. Concretely, in a controlled pre-training environment with 4M target tokens, 4B total tokens, and 150M parameter models, generic replay increases target data efficiency by up to $1.87\\times$ for fine-tuning and $2.06\\times$ for mid-training. We further analyze data schedules that introduce target data during pre-training and find that replay helps more when there is less target data present in pre-training. We demonstrate the success of replay in practice for fine-tuning 8B parameter models, improving agentic web navigation success by $4.5\\%$ and Basque question-answering accuracy by $2\\%$.",
+    "published": "Mar 05",
+    "pdf_url": "https://arxiv.org/pdf/2603.04964v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.04964v1",
+    "queried_author": "Percy Liang",
+    "matching_authors": [
+      "Percy Liang"
+    ]
+  },
+  {
+    "title": "AI-Assisted Moot Courts: Simulating Justice-Specific Questioning in Oral Arguments",
+    "authors": [
+      "Kylie Zhang",
+      "Nimra Nadeem",
+      "Lucia Zheng",
+      "Dominik Stammbach",
+      "Peter Henderson"
+    ],
+    "summary": "In oral arguments, judges probe attorneys with questions about the factual record, legal claims, and the strength of their arguments. To prepare for this questioning, both law schools and practicing attorneys rely on moot courts: practice simulations of appellate hearings. Leveraging a dataset of U.S. Supreme Court oral argument transcripts, we examine whether AI models can effectively simulate justice-specific questioning for moot court-style training. Evaluating oral argument simulation is challenging because there is no single correct question for any given turn. Instead, effective questioning should reflect a combination of desirable qualities, such as anticipating substantive legal issues, detecting logical weaknesses, and maintaining an appropriately adversarial tone. We introduce a two-layer evaluation framework that assesses both the realism and pedagogical usefulness of simulated questions using complementary proxy metrics. We construct and evaluate both prompt-based and agentic oral argument simulators. We find that simulated questions are often perceived as realistic by human annotators and achieve high recall of ground truth substantive legal issues. However, models still face substantial shortcomings, including low diversity in question types and sycophancy. Importantly, these shortcomings would remain undetected under naive evaluation approaches.",
+    "published": "Mar 05",
+    "pdf_url": "https://arxiv.org/pdf/2603.04718v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.04718v1",
+    "queried_author": "Peter Henderson",
+    "matching_authors": [
+      "Peter Henderson"
+    ]
+  },
+  {
+    "title": "AgentIR: Reasoning-Aware Retrieval for Deep Research Agents",
     "authors": [
       "Zijian Chen",
       "Xueguang Ma",
@@ -11,8 +146,8 @@
     ],
     "summary": "Deep Research agents are rapidly emerging as primary consumers of modern retrieval systems. Unlike human users who issue and refine queries without documenting their intermediate thought processes, Deep Research agents generate explicit natural language reasoning before each search call, revealing rich intent and contextual information that existing retrievers entirely ignore. To exploit this overlooked signal, we introduce: (1) Reasoning-Aware Retrieval, a retrieval paradigm that jointly embeds the agent's reasoning trace alongside its query; and (2) DR-Synth, a data synthesis method that generates Deep Research retriever training data from standard QA datasets. We demonstrate that both components are independently effective, and their combination yields a trained embedding model, AgentIR-4B, with substantial gains. On the challenging BrowseComp-Plus benchmark, AgentIR-4B achieves 68\\% accuracy with the open-weight agent Tongyi-DeepResearch, compared to 50\\% with conventional embedding models twice its size, and 37\\% with BM25. Code and data are available at: https://texttron.github.io/AgentIR/.",
     "published": "Mar 04",
-    "pdf_url": "https://arxiv.org/pdf/2603.04384v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.04384v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.04384v2",
+    "arxiv_url": "http://arxiv.org/abs/2603.04384v2",
     "queried_author": "Akari Asai",
     "matching_authors": [
       "Akari Asai"
@@ -6230,8 +6365,8 @@
     ],
     "summary": "Finetuning on narrow domains has become an essential tool to adapt Large Language Models (LLMs) to specific tasks and to create models with known unusual properties that are useful for research. We show that narrow finetuning creates strong biases in LLM activations that can be interpreted to understand the finetuning domain. These biases can be discovered using simple tools from model diffing - the study of differences between models before and after finetuning. In particular, analyzing activation differences on the first few tokens of random text and steering by adding this difference to the model activations produces text similar to the format and general content of the finetuning data. We demonstrate that these analyses contain crucial information by creating an LLM-based interpretability agent to understand the finetuning domain. With access to the bias, the agent performs significantly better compared to baseline agents using simple prompting. Our analysis spans synthetic document finetuning for false facts, emergent misalignment, subliminal learning, and taboo word guessing game models across different architectures (Gemma, LLaMA, Qwen) and scales (1B to 32B parameters). We suspect these biases reflect overfitting and find that mixing pretraining data into the finetuning corpus largely removes them, though residual risks may remain. Our work (1) demonstrates that narrowly finetuned models have salient traces of their training objective in their activations and suggests ways to improve how they are trained, (2) warns AI safety and interpretability researchers that the...",
     "published": "Oct 14",
-    "pdf_url": "https://arxiv.org/pdf/2510.13900v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.13900v2",
+    "pdf_url": "https://arxiv.org/pdf/2510.13900v3",
+    "arxiv_url": "http://arxiv.org/abs/2510.13900v3",
     "queried_author": "Neel Nanda",
     "matching_authors": [
       "Neel Nanda"
@@ -7097,7 +7232,7 @@
     ]
   },
   {
-    "title": "Personalized Reasoning: Just-In-Time Personalization and Why LLMs Fail At It",
+    "title": "PrefDisco: Benchmarking Proactive Personalized Reasoning",
     "authors": [
       "Shuyue Stella Li",
       "Avinandan Bose",
@@ -7107,10 +7242,10 @@
       "Maryam Fazel",
       "Yulia Tsvetkov"
     ],
-    "summary": "Current large language model (LLM) development treats task-solving and preference alignment as separate challenges, optimizing first for objective correctness, then for alignment to aggregated human preferences. This paradigm fails in human-facing applications where solving a problem correctly is insufficient if the response mismatches the user's needs. This challenge intensifies in just-in-time scenarios where no prior user interaction history exists due to cold-start conditions or privacy constraints. LLMs need to identify what they don't know about user preferences, strategically elicit preference values through questioning, then adapt their reasoning processes and responses accordingly -- a complicated chain of cognitive processes which we term personalized reasoning. We introduce PREFDISCO, an evaluation methodology that transforms static benchmarks into interactive personalization tasks using psychologically-grounded personas with sparse preferences. Our framework creates scenarios where identical questions require different reasoning chains depending on user context, as optimal explanation approaches vary by individual expertise and preferences while maintaining factual accuracy. Evaluation of 21 frontier models across 10 tasks reveals 29.0% of naive personalization attempts produce worse preference alignment than generic responses, yet generic responses also fail to serve individual user needs effectively. These findings suggest personalized reasoning requires dedicated development rather than emerging naturally. PREFDISCO establishes personalized reasoning as a mea...",
+    "summary": "Current large language model (LLM) development treats task-solving and preference-alignment as separate challenges, optimizing first for objective correctness, then for alignment to aggregated human preferences. This paradigm fails in human-facing applications where solving a problem correctly is insufficient if the response mismatches the user's needs. This challenge intensifies in just-in-time scenarios where no prior user interaction history exists due to cold-start conditions or privacy constraints. LLMs need to proactively identify what they don't know about the user, strategically elicit preference values through questioning, then adapt their reasoning processes and responses accordingly -- a complicated chain of cognitive processes which we term personalized reasoning. We introduce PrefDisco, an evaluation methodology that transforms static benchmarks into interactive personalization tasks using psychologically-grounded personas with sparse, context-dependent preferences, and define PrefAlign as a fine-grained rubric-based metric for measuring preference alignment. PrefDisco builds scenarios where identical questions require different reasoning chains depending on user context, as optimal explanation approaches vary by individual expertise and preferences while maintaining factual accuracy. Evaluation of 21 frontier models across 10 tasks reveals 29.0% of naive personalization attempts produce worse preference alignment than generic responses, yet generic responses also fail to serve individual user needs. These findings suggest personalized reasoning requires dedica...",
     "published": "Sep 30",
-    "pdf_url": "https://arxiv.org/pdf/2510.00177v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.00177v1",
+    "pdf_url": "https://arxiv.org/pdf/2510.00177v2",
+    "arxiv_url": "http://arxiv.org/abs/2510.00177v2",
     "queried_author": "Pang Wei Koh",
     "matching_authors": [
       "Pang Wei Koh"
@@ -15315,183 +15450,6 @@
     "queried_author": "Jacob Andreas",
     "matching_authors": [
       "Jacob Andreas"
-    ]
-  },
-  {
-    "title": "Recycling the Web: A Method to Enhance Pre-training Data Quality and Quantity for Language Models",
-    "authors": [
-      "Thao Nguyen",
-      "Yang Li",
-      "Olga Golovneva",
-      "Luke Zettlemoyer",
-      "Sewoong Oh",
-      "Ludwig Schmidt",
-      "Xian Li"
-    ],
-    "summary": "Scaling laws predict that the performance of large language models improves with increasing model size and data size. In practice, pre-training has been relying on massive web crawls, using almost all data sources publicly available on the internet so far. However, this pool of natural data does not grow at the same rate as the compute supply. Furthermore, the availability of high-quality texts is even more limited: data filtering pipelines often remove up to 99% of the initial web scrapes to achieve state-of-the-art. To address the \"data wall\" of pre-training scaling, our work explores ways to transform and recycle data discarded in existing filtering processes. We propose REWIRE, REcycling the Web with guIded REwrite, a method to enrich low-quality documents so that they could become useful for training. This in turn allows us to increase the representation of synthetic data in the final pre-training set. Experiments at 1B, 3B and 7B scales of the DCLM benchmark show that mixing high-quality raw texts and our rewritten texts lead to 1.0, 1.3 and 2.5 percentage points improvement respectively across 22 diverse tasks, compared to training on only filtered web data. Training on the raw-synthetic data mix is also more effective than having access to 2x web data. Through further analysis, we demonstrate that about 82% of the mixed in texts come from transforming lower-quality documents that would otherwise be discarded. REWIRE also outperforms related approaches of generating synthetic data, including Wikipedia-style paraphrasing, question-answer synthesizing and knowledge ext...",
-    "published": "Jun 05",
-    "pdf_url": "https://arxiv.org/pdf/2506.04689v3",
-    "arxiv_url": "http://arxiv.org/abs/2506.04689v3",
-    "queried_author": "Ludwig Schmidt",
-    "matching_authors": [
-      "Ludwig Schmidt",
-      "Luke Zettlemoyer"
-    ]
-  },
-  {
-    "title": "HMAR: Efficient Hierarchical Masked Auto-Regressive Image Generation",
-    "authors": [
-      "Hermann Kumbong",
-      "Xian Liu",
-      "Tsung-Yi Lin",
-      "Ming-Yu Liu",
-      "Xihui Liu",
-      "Ziwei Liu",
-      "Daniel Y. Fu",
-      "Christopher R\u00e9",
-      "David W. Romero"
-    ],
-    "summary": "Visual Auto-Regressive modeling (VAR) has shown promise in bridging the speed and quality gap between autoregressive image models and diffusion models. VAR reformulates autoregressive modeling by decomposing an image into successive resolution scales. During inference, an image is generated by predicting all the tokens in the next (higher-resolution) scale, conditioned on all tokens in all previous (lower-resolution) scales. However, this formulation suffers from reduced image quality due to the parallel generation of all tokens in a resolution scale; has sequence lengths scaling superlinearly in image resolution; and requires retraining to change the sampling schedule.\n  We introduce Hierarchical Masked Auto-Regressive modeling (HMAR), a new image generation algorithm that alleviates these issues using next-scale prediction and masked prediction to generate high-quality images with fast sampling. HMAR reformulates next-scale prediction as a Markovian process, wherein the prediction of each resolution scale is conditioned only on tokens in its immediate predecessor instead of the tokens in all predecessor resolutions. When predicting a resolution scale, HMAR uses a controllable multi-step masked generation procedure to generate a subset of the tokens in each step. On ImageNet 256x256 and 512x512 benchmarks, HMAR models match or outperform parameter-matched VAR, diffusion, and autoregressive baselines. We develop efficient IO-aware block-sparse attention kernels that allow HMAR to achieve faster training and inference times over VAR by over 2.5x and 1.75x respectively, as we...",
-    "published": "Jun 04",
-    "pdf_url": "https://arxiv.org/pdf/2506.04421v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.04421v1",
-    "queried_author": "Christopher R\u00e9",
-    "matching_authors": [
-      "Christopher R\u00e9"
-    ]
-  },
-  {
-    "title": "Understanding challenges to the interpretation of disaggregated evaluations of algorithmic fairness",
-    "authors": [
-      "Stephen R. Pfohl",
-      "Natalie Harris",
-      "Chirag Nagpal",
-      "David Madras",
-      "Vishwali Mhasawade",
-      "Olawale Salaudeen",
-      "Awa Dieng",
-      "Shannon Sequeira",
-      "Santiago Arciniegas",
-      "Lillian Sung",
-      "Nnamdi Ezeanochie",
-      "Heather Cole-Lewis",
-      "Katherine Heller",
-      "Sanmi Koyejo",
-      "Alexander D'Amour"
-    ],
-    "summary": "Disaggregated evaluation across subgroups is critical for assessing the fairness of machine learning models, but its uncritical use can mislead practitioners. We show that equal performance across subgroups is an unreliable measure of fairness when data are representative of the relevant populations but reflective of real-world disparities. Furthermore, when data are not representative due to selection bias, both disaggregated evaluation and alternative approaches based on conditional independence testing may be invalid without explicit assumptions regarding the bias mechanism. We use causal graphical models to characterize fairness properties and metric stability across subgroups under different data generating processes. Our framework suggests complementing disaggregated evaluations with explicit causal assumptions and analysis to control for confounding and distribution shift, including conditional independence testing and weighted performance estimation. These findings have broad implications for how practitioners design and interpret model assessments given the ubiquity of disaggregated evaluation.",
-    "published": "Jun 04",
-    "pdf_url": "https://arxiv.org/pdf/2506.04193v2",
-    "arxiv_url": "http://arxiv.org/abs/2506.04193v2",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "OpenThoughts: Data Recipes for Reasoning Models",
-    "authors": [
-      "Etash Guha",
-      "Ryan Marten",
-      "Sedrick Keh",
-      "Negin Raoof",
-      "Georgios Smyrnis",
-      "Hritik Bansal",
-      "Marianna Nezhurina",
-      "Jean Mercat",
-      "Trung Vu",
-      "Zayne Sprague",
-      "Ashima Suvarna",
-      "Benjamin Feuer",
-      "Liangyu Chen",
-      "Zaid Khan",
-      "Eric Frankel",
-      "Sachin Grover",
-      "Caroline Choi",
-      "Niklas Muennighoff",
-      "Shiye Su",
-      "Wanjia Zhao",
-      "John Yang",
-      "Shreyas Pimpalgaonkar",
-      "Kartik Sharma",
-      "Charlie Cheng-Jie Ji",
-      "Yichuan Deng",
-      "Sarah Pratt",
-      "Vivek Ramanujan",
-      "Jon Saad-Falcon",
-      "Jeffrey Li",
-      "Achal Dave",
-      "Alon Albalak",
-      "Kushal Arora",
-      "Blake Wulfe",
-      "Chinmay Hegde",
-      "Greg Durrett",
-      "Sewoong Oh",
-      "Mohit Bansal",
-      "Saadia Gabriel",
-      "Aditya Grover",
-      "Kai-Wei Chang",
-      "Vaishaal Shankar",
-      "Aaron Gokaslan",
-      "Mike A. Merrill",
-      "Tatsunori Hashimoto",
-      "Yejin Choi",
-      "Jenia Jitsev",
-      "Reinhard Heckel",
-      "Maheswaran Sathiamoorthy",
-      "Alexandros G. Dimakis",
-      "Ludwig Schmidt"
-    ],
-    "summary": "Reasoning models have made rapid progress on many benchmarks involving math, code, and science. Yet, there are still many open questions about the best training recipes for reasoning since state-of-the-art models often rely on proprietary datasets with little to no public information available. To address this, the goal of the OpenThoughts project is to create open-source datasets for training reasoning models. After initial explorations, our OpenThoughts2-1M dataset led to OpenThinker2-32B, the first model trained on public reasoning data to match DeepSeek-R1-Distill-32B on standard reasoning benchmarks such as AIME and LiveCodeBench. We then improve our dataset further by systematically investigating each step of our data generation pipeline with 1,000+ controlled experiments, which led to OpenThoughts3. Scaling the pipeline to 1.2M examples and using QwQ-32B as teacher yields our OpenThoughts3-7B model, which achieves state-of-the-art results: 53% on AIME 2025, 51% on LiveCodeBench 06/24-01/25, and 54% on GPQA Diamond - improvements of 15.3, 17.2, and 20.5 percentage points compared to the DeepSeek-R1-Distill-Qwen-7B. All of our datasets and models are available on https://openthoughts.ai.",
-    "published": "Jun 04",
-    "pdf_url": "https://arxiv.org/pdf/2506.04178v2",
-    "arxiv_url": "http://arxiv.org/abs/2506.04178v2",
-    "queried_author": "Greg Durrett",
-    "matching_authors": [
-      "Greg Durrett",
-      "Ludwig Schmidt",
-      "Niklas Muennighoff",
-      "Tatsunori Hashimoto",
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "High Accuracy, Less Talk (HALT): Reliable LLMs through Capability-Aligned Finetuning",
-    "authors": [
-      "Tim Franzmeyer",
-      "Archie Sravankumar",
-      "Lijuan Liu",
-      "Yuning Mao",
-      "Rui Hou",
-      "Sinong Wang",
-      "Jakob N. Foerster",
-      "Luke Zettlemoyer",
-      "Madian Khabsa"
-    ],
-    "summary": "Large Language Models (LLMs) currently respond to every prompt. However, they can produce incorrect answers when they lack knowledge or capability -- a problem known as hallucination. We instead propose post-training an LLM to generate content only when confident in its correctness and to otherwise (partially) abstain. Specifically, our method, HALT, produces capability-aligned post-training data that encodes what the model can and cannot reliably generate. We generate this data by splitting responses of the pretrained LLM into factual fragments (atomic statements or reasoning steps), and use ground truth information to identify incorrect fragments. We achieve capability-aligned finetuning responses by either removing incorrect fragments or replacing them with \"Unsure from Here\" -- according to a tunable threshold that allows practitioners to trade off response completeness and mean correctness of the response's fragments. We finetune four open-source models for biography writing, mathematics, coding, and medicine with HALT for three different trade-off thresholds. HALT effectively trades off response completeness for correctness, increasing the mean correctness of response fragments by 15% on average, while resulting in a 4% improvement in the F1 score (mean of completeness and correctness of the response) compared to the relevant baselines. By tuning HALT for highest correctness, we train a single reliable Llama3-70B model with correctness increased from 51% to 87% across all four domains while maintaining 53% of the response completeness achieved with standard finetuning...",
-    "published": "Jun 04",
-    "pdf_url": "https://arxiv.org/pdf/2506.04051v2",
-    "arxiv_url": "http://arxiv.org/abs/2506.04051v2",
-    "queried_author": "Luke Zettlemoyer",
-    "matching_authors": [
-      "Luke Zettlemoyer"
-    ]
-  },
-  {
-    "title": "Stronger Baselines for Retrieval-Augmented Generation with Long-Context Language Models",
-    "authors": [
-      "Alex Laitenberger",
-      "Christopher D. Manning",
-      "Nelson F. Liu"
-    ],
-    "summary": "With the rise of long-context language models (LMs) capable of processing tens of thousands of tokens in a single context window, do multi-stage retrieval-augmented generation (RAG) pipelines still offer measurable benefits over simpler, single-stage approaches? To assess this question, we conduct a controlled evaluation for QA tasks under systematically scaled token budgets, comparing two recent multi-stage pipelines, ReadAgent and RAPTOR, against three baselines, including DOS RAG (Document's Original Structure RAG), a simple retrieve-then-read method that preserves original passage order. Despite its straightforward design, DOS RAG consistently matches or outperforms more intricate methods on multiple long-context QA benchmarks. We trace this strength to a combination of maintaining source fidelity and document structure, prioritizing recall within effective context windows, and favoring simplicity over added pipeline complexity. We recommend establishing DOS RAG as a simple yet strong baseline for future RAG evaluations, paired with state-of-the-art embedding and language models, and benchmarked under matched token budgets, to ensure that added pipeline complexity is justified by clear performance gains as models continue to improve.",
-    "published": "Jun 04",
-    "pdf_url": "https://arxiv.org/pdf/2506.03989v2",
-    "arxiv_url": "http://arxiv.org/abs/2506.03989v2",
-    "queried_author": "Christopher D Manning",
-    "matching_authors": [
-      "Christopher D Manning",
-      "Nelson F. Liu"
     ]
   }
 ]
