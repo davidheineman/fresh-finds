@@ -1,5 +1,29 @@
 [
   {
+    "title": "Learning Next Action Predictors from Human-Computer Interaction",
+    "authors": [
+      "Omar Shaikh",
+      "Valentin Teutschbein",
+      "Kanishk Gandhi",
+      "Yikun Chi",
+      "Nick Haber",
+      "Thomas Robinson",
+      "Nilam Ram",
+      "Byron Reeves",
+      "Sherry Yang",
+      "Michael S. Bernstein",
+      "Diyi Yang"
+    ],
+    "summary": "Truly proactive AI systems must anticipate what we will do next. This foresight demands far richer information than the sparse signals we type into our prompts -- it demands reasoning over the entire context of what we see and do. We formalize this as next action prediction (NAP): given a sequence of a user's multimodal interactions with a computer (screenshots, clicks, sensor data), predict that user's next action. Progress on this task requires both new data and modeling approaches. To scale data, we annotate longitudinal, naturalistic computer use with vision-language models. We release an open-source pipeline for performing this labeling on private infrastructure, and label over 360K actions across one month of continuous phone usage from 20 users, amounting to 1,800 hours of screen time. We then introduce LongNAP, a user model that combines parametric and in-context learning to reason over long interaction histories. LongNAP is trained via policy gradient methods to generate user-specific reasoning traces given some context; retrieve relevant traces from a library of past traces; and then apply retrieved traces in-context to predict future actions. Using an LLM-as-judge evaluation metric (0-1 similarity to ground truth), LongNAP significantly outperforms supervised finetuning and prompted baselines on held-out data (by 79% and 39% respectively). Additionally, LongNAP generalizes to held out users when trained across individuals. The space of next actions a user might take at any moment is unbounded, spanning thousands of possible outcomes. Despite this, 17.1% of LongNA...",
+    "published": "Mar 06",
+    "pdf_url": "https://arxiv.org/pdf/2603.05923v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.05923v1",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang"
+    ]
+  },
+  {
     "title": "Censored LLMs as a Natural Testbed for Secret Knowledge Elicitation",
     "authors": [
       "Helena Casademunt",
@@ -319,8 +343,8 @@
     ],
     "summary": "AI agents are increasingly developed and evaluated on benchmarks relevant to human work, yet it remains unclear how representative these benchmarking efforts are of the labor market as a whole. In this work, we systematically study the relationship between agent development efforts and the distribution of real-world human work by mapping benchmark instances to work domains and skills. We first analyze 43 benchmarks and 72,342 tasks, measuring their alignment with human employment and capital allocation across all 1,016 real-world occupations in the U.S. labor market. We reveal substantial mismatches between agent development that tends to be programming-centric, and the categories in which human labor and economic value are concentrated. Within work areas that agents currently target, we further characterize current agent utility by measuring their autonomy levels, providing practical guidance for agent interaction strategies across work scenarios. Building on these findings, we propose three measurable principles for designing benchmarks that better capture socially important and technically challenging forms of work: coverage, realism, and granular evaluation.",
     "published": "Mar 01",
-    "pdf_url": "https://arxiv.org/pdf/2603.01203v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.01203v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.01203v2",
+    "arxiv_url": "http://arxiv.org/abs/2603.01203v2",
     "queried_author": "Diyi Yang",
     "matching_authors": [
       "Diyi Yang",
@@ -5881,10 +5905,10 @@
       "Jacob Andreas",
       "Joshua B. Tenenbaum"
     ],
-    "summary": "Many high-stakes applications of AI require forming data-driven hypotheses and making targeted guesses; e.g., in scientific and diagnostic settings. Given limited resources, to what extent do agents based on language models (LMs) act rationally? We develop methods to benchmark and enhance agentic information-seeking, drawing on insights from human behavior. First, we introduce a strategic decision-oriented dialogue task called Collaborative Battleship, in which a partially-informed Captain must balance exploration (asking questions) and action (taking shots), while a fully-informed Spotter must provide accurate answers under an information bottleneck. Compared to human players (N=42), we find that LM agents struggle to ground answers in context, generate informative questions, and select high-value actions. Next, to address these gaps, we develop novel Monte Carlo inference strategies for LMs based on principles from Bayesian Experimental Design (BED). For Spotter agents, our approach boosts accuracy by up to 14.7% absolute over LM-only baselines; for Captain agents, it raises expected information gain (EIG) by up to 0.227 bits (94.2% of the achievable noise ceiling). Combined, these components yield sharper targeting (+0.303-0.374 F1), and enable weaker LMs, such as Llama-4-Scout, to outperform both humans (8% -> 82% win rate) and frontier models (0% -> 67% win rate vs. GPT-5) at ~1% of GPT-5's cost. We replicate these findings on Guess Who? where our methods significantly boost accuracy (+28.3-42.4 p.p.), demonstrating their general applicability for building rational inf...",
+    "summary": "Many emerging applications of AI--from scientific discovery to medical diagnosis--require agents to seek information strategically: forming hypotheses, asking targeted questions, and making decisions under uncertainty. In high-stakes settings with limited resources, do language models (LMs) behave like rational agents? Drawing on insights from human cognition, we develop methods to evaluate and enhance agentic information-seeking. First, we introduce a decision-oriented dialogue task called Collaborative Battleship, in which a Captain must balance exploration (asking questions) and action (taking shots), while a Spotter must supply accurate, contextually-grounded answers. Compared to human players (N=42), we find that many LM agents struggle to ask informative questions, produce accurate answers, and identify high-utility actions. To address these gaps, we develop novel Monte Carlo inference strategies for LMs inspired by Bayesian Experimental Design (BED). For Spotter agents, our approach boosts accuracy by up to 14.7% absolute over LM-only baselines; for Captain agents, it raises expected information gain (EIG) by up to 0.227 bits (94.2% of the achievable noise ceiling). Combined, these components yield sharper targeting (+0.303-0.374 F1), and enable weaker LMs, such as Llama-4-Scout, to outperform both humans (8% -> 82% win rate) and frontier models (0% -> 67% win rate vs. GPT-5) at ~1% of GPT-5's cost. We replicate these findings on Guess Who?, where our methods significantly boost accuracy (+28.3-42.4 p.p.), demonstrating their general applicability for building inform...",
     "published": "Oct 23",
-    "pdf_url": "https://arxiv.org/pdf/2510.20886v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.20886v1",
+    "pdf_url": "https://arxiv.org/pdf/2510.20886v2",
+    "arxiv_url": "http://arxiv.org/abs/2510.20886v2",
     "queried_author": "Jacob Andreas",
     "matching_authors": [
       "Jacob Andreas"
@@ -6287,10 +6311,10 @@
       "James A. Landay",
       "Michael S. Bernstein"
     ],
-    "summary": "Large language models promise a broad set of functions, but when not given a specific objective, they default to milquetoast results such as drafting emails littered with cliches. We demonstrate that inferring the user's in-the-moment objective, then rapidly optimizing for that singular objective, enables LLMs to produce tools, interfaces, and responses that are more responsive and desired. We contribute an architecture for automatically inducing just-in-time objectives by passively observing user behavior, then steering downstream AI systems through generation and evaluation against this objective. Inducing just-in-time objectives (e.g., \"Clarify the abstract's research contribution\") enables automatic generation of tools, e.g., those that critique a draft based on relevant HCI methodologies, anticipate related researchers' reactions, or surface ambiguous terminology. In a series of experiments (N=14, N=205) on participants' own tasks, JIT objectives enable LLM outputs that achieve 66-86% win rates over typical LLMs, and in-person use sessions (N=17) confirm that JIT objectives produce specialized tools unique to each participant.",
+    "summary": "Large language models promise a broad set of functions, but when not given a specific objective, they default to generic results. We demonstrate that inferring the user's in-the-moment objective, then rapidly optimizing for that singular objective, enables LLMs to produce specialized tools, interfaces, and responses. Our work introduces just-in-time objectives, which model a user's goals to specialize LLM systems on the fly. We contribute an architecture for automatically inducing such objectives by passively observing user behavior, then steering downstream AI systems through generation and evaluation against this objective. Inducing just-in-time objectives (e.g., \"Clarify the abstract's research contribution\") enables automatic generation of tools, e.g., those that critique a draft based on relevant HCI methodologies, anticipate related researchers' reactions, or surface ambiguous terminology. In a series of experiments on participants' own tasks, JIT objectives enable LLM outputs that achieve 66-86% win rates over typical LLMs. In-person use sessions confirm that JIT objectives produce specialized tools that are unique to each participant and are rated as significantly higher quality than a standard LLM chat tool.",
     "published": "Oct 16",
-    "pdf_url": "https://arxiv.org/pdf/2510.14591v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.14591v1",
+    "pdf_url": "https://arxiv.org/pdf/2510.14591v2",
+    "arxiv_url": "http://arxiv.org/abs/2510.14591v2",
     "queried_author": "Diyi Yang",
     "matching_authors": [
       "Diyi Yang"
@@ -15433,23 +15457,6 @@
     "queried_author": "Greg Durrett",
     "matching_authors": [
       "Greg Durrett"
-    ]
-  },
-  {
-    "title": "Line of Sight: On Linear Representations in VLLMs",
-    "authors": [
-      "Achyuta Rajaram",
-      "Sarah Schwettmann",
-      "Jacob Andreas",
-      "Arthur Conmy"
-    ],
-    "summary": "Language models can be equipped with multimodal capabilities by fine-tuning on embeddings of visual inputs. But how do such multimodal models represent images in their hidden activations? We explore representations of image concepts within LlaVA-Next, a popular open-source VLLM. We find a diverse set of ImageNet classes represented via linearly decodable features in the residual stream. We show that the features are causal by performing targeted edits on the model output. In order to increase the diversity of the studied linear features, we train multimodal Sparse Autoencoders (SAEs), creating a highly interpretable dictionary of text and image features. We find that although model representations across modalities are quite disjoint, they become increasingly shared in deeper layers.",
-    "published": "Jun 05",
-    "pdf_url": "https://arxiv.org/pdf/2506.04706v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.04706v1",
-    "queried_author": "Jacob Andreas",
-    "matching_authors": [
-      "Jacob Andreas"
     ]
   }
 ]
