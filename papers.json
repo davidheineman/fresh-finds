@@ -170,8 +170,8 @@
     ],
     "summary": "Deep Research agents are rapidly emerging as primary consumers of modern retrieval systems. Unlike human users who issue and refine queries without documenting their intermediate thought processes, Deep Research agents generate explicit natural language reasoning before each search call, revealing rich intent and contextual information that existing retrievers entirely ignore. To exploit this overlooked signal, we introduce: (1) Reasoning-Aware Retrieval, a retrieval paradigm that jointly embeds the agent's reasoning trace alongside its query; and (2) DR-Synth, a data synthesis method that generates Deep Research retriever training data from standard QA datasets. We demonstrate that both components are independently effective, and their combination yields a trained embedding model, AgentIR-4B, with substantial gains. On the challenging BrowseComp-Plus benchmark, AgentIR-4B achieves 68\\% accuracy with the open-weight agent Tongyi-DeepResearch, compared to 50\\% with conventional embedding models twice its size, and 37\\% with BM25. Code and data are available at: https://texttron.github.io/AgentIR/.",
     "published": "Mar 04",
-    "pdf_url": "https://arxiv.org/pdf/2603.04384v2",
-    "arxiv_url": "http://arxiv.org/abs/2603.04384v2",
+    "pdf_url": "https://arxiv.org/pdf/2603.04384v3",
+    "arxiv_url": "http://arxiv.org/abs/2603.04384v3",
     "queried_author": "Akari Asai",
     "matching_authors": [
       "Akari Asai"
@@ -3888,7 +3888,7 @@
     ]
   },
   {
-    "title": "Adaptation of Agentic AI",
+    "title": "Adaptation of Agentic AI: A Survey of Post-Training, Memory, and Skills",
     "authors": [
       "Pengcheng Jiang",
       "Jiacheng Lin",
@@ -3925,10 +3925,10 @@
       "Jimeng Sun",
       "Jiawei Han"
     ],
-    "summary": "Cutting-edge agentic AI systems are built on foundation models that can be adapted to plan, reason, and interact with external tools to perform increasingly complex and specialized tasks. As these systems grow in capability and scope, adaptation becomes a central mechanism for improving performance, reliability, and generalization. In this paper, we unify the rapidly expanding research landscape into a systematic framework that spans both agent adaptations and tool adaptations. We further decompose these into tool-execution-signaled and agent-output-signaled forms of agent adaptation, as well as agent-agnostic and agent-supervised forms of tool adaptation. We demonstrate that this framework helps clarify the design space of adaptation strategies in agentic AI, makes their trade-offs explicit, and provides practical guidance for selecting or switching among strategies during system design. We then review the representative approaches in each category, analyze their strengths and limitations, and highlight key open challenges and future opportunities. Overall, this paper aims to offer a conceptual foundation and practical roadmap for researchers and practitioners seeking to build more capable, efficient, and reliable agentic AI systems.",
+    "summary": "Large language model (LLM) agents are moving beyond prompting alone. ChatGPT marked the rise of general-purpose LLM assistants, DeepSeek showed that on-policy reinforcement learning with verifiable rewards can improve reasoning and tool use, and OpenClaw highlights a newer direction in which agents accumulate persistent memory and reusable skills. Yet the research landscape remains fragmented across post-training, retrieval, memory, and skill systems. This survey studies these developments under a single notion of \\emph{adaptation}: improving an agent, its tools, or their interaction after pretraining. We organize the field with a four-paradigm framework spanning agent adaptation and tool adaptation. On the agent side, A1 (tool-execution-signaled) and A2 (agent-output-signaled) improve the agent itself through supervised fine-tuning, preference optimization, and reinforcement learning with verifiable rewards. On the tool side, T1 (agent-agnostic) provides reusable pre-trained modules any agent can call, while T2 (agent-supervised) uses the agent's outputs to train memory systems, skill libraries, or lightweight subagents. Using this framework, we review post-training methods, adaptive memory architectures, and agent skills; compare their trade-offs in cost, flexibility, and generalization; and summarize evaluation practices across deep research, software development, computer use, and drug discovery. We conclude by outlining open problems in agent-tool co-adaptation, continual learning, safety, and efficient deployment.",
     "published": "Dec 18",
-    "pdf_url": "https://arxiv.org/pdf/2512.16301v2",
-    "arxiv_url": "http://arxiv.org/abs/2512.16301v2",
+    "pdf_url": "https://arxiv.org/pdf/2512.16301v3",
+    "arxiv_url": "http://arxiv.org/abs/2512.16301v3",
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
@@ -7459,10 +7459,10 @@
       "Ari Holtzman",
       "James A. Evans"
     ],
-    "summary": "We develop signatures of capacity familiarity to characterize large language model (LLM) benchmarks and their meaningful overlaps. Benchmark signatures probe the capacity required for benchmark performance. We formally define them as a set of salient tokens drawn from in-the-wild, naturally authored corpora, where LLM token perplexity, reflecting more or less pre-training exposure, becomes highly predictive of LLM benchmark performance. Through a large-scale meta-evaluation, we extract benchmark signatures via stepwise forward selection with linear regressions across 32 LLMs and 88 benchmarks spanning diverse knowledge, coding, logic, instruction following, math, language, reasoning, and world modeling. Our analysis situates signatures in relation to both the semantic similarity of benchmark questions and the correlation of model performance. While performance overlaps are universally high and semantic overlaps remain confined to a narrow mid-range, benchmark signatures prove highly informative in capturing variation, overlap, and divergence. We observe overlap in knowledge and reasoning subtasks, whereas multilingual and cultural benchmarks exhibit less similarity, even compared to cross-task overlap. Notably, performance-level results are strongly influenced by benchmark-orthogonal factors such as question format, highlighting limitations in LLM generalization, the conflation of performance with ability, and issues inherent in current mainstream benchmark agreement studies. Benchmark signatures, however, remain robust to such effects. Ultimately, we identify cross-functio...",
+    "summary": "We introduce benchmark signatures to characterize the capacity demands of LLM benchmarks and their overlaps. Signatures are sets of salient tokens from in-the-wild corpora whose model token perplexity, reflecting training exposure, predicts benchmark performance. We extract them via stepwise forward selection with linear regression in a meta-evaluation spanning 32 LLMs and 89 benchmarks across diverse domains. We then analyze how these signatures relate to both the semantic similarity of benchmark questions and the correlation structure of model performance. While performance correlations are uniformly high and semantic overlaps stay in a narrow mid-range, benchmark signatures reveal more nuanced structure. For instance, they uncover substantial overlap between benchmarks in knowledge and reasoning tasks, whereas benchmarks in culture- and humanity-oriented domains show low similarity with each other. Unlike raw performance correlations, which are influenced by benchmark-orthogonal factors such as question formats, signatures are robust to such confounds. We further identify cross-functional overlaps between logic, math, language, instruction following, and cultural/world modeling, with coding emerging as the most isolated function, interacting only moderately with the ability of detecting missing information. Qualitative analysis shows that only the knowledge signature aligns with actual knowledge, suggesting that LLM semantic organization may differ from human conceptual structure. Together, these findings offer insights into benchmark validity, LLM sensitivities, and the...",
     "published": "Sep 27",
-    "pdf_url": "https://arxiv.org/pdf/2509.23488v3",
-    "arxiv_url": "http://arxiv.org/abs/2509.23488v3",
+    "pdf_url": "https://arxiv.org/pdf/2509.23488v4",
+    "arxiv_url": "http://arxiv.org/abs/2509.23488v4",
     "queried_author": "Ari Holtzman",
     "matching_authors": [
       "Ari Holtzman"
