@@ -754,6 +754,26 @@
     ]
   },
   {
+    "title": "Consensus is Not Verification: Why Crowd Wisdom Strategies Fail for LLM Truthfulness",
+    "authors": [
+      "Yegor Denisov-Blanch",
+      "Joshua Kazdan",
+      "Jessica Chudnovsky",
+      "Rylan Schaeffer",
+      "Sheng Guan",
+      "Soji Adeshina",
+      "Sanmi Koyejo"
+    ],
+    "summary": "Pass@k and other methods of scaling inference compute can improve language model performance in domains with external verifiers, including mathematics and code, where incorrect candidates can be filtered reliably. This raises a natural question: can we similarly scale compute to elicit gains in truthfulness for domains without convenient verification? We show that across five benchmarks and models, surprisingly, it cannot. Even at 25x the inference cost of naive sampling, polling-style aggregation yields no consistent accuracy gains over single-sample baselines and often amplifies shared misconceptions. We find that under uncertainty, models are better at predicting what other models will say within model ensembles than at identifying what is true, revealing a separation between social prediction and truth verification. Across models and benchmarks, aggregation fails to provide a robust truth signal because language model errors are strongly correlated. The source of correlation goes beyond any individual benchmark: we show that even when conditioned on out of distribution random strings and asked to produce pseudo-random outputs, different models produce correlated outputs. Confidence-based weighting provides no benefit because self-reported confidence fails to reliably distinguish correct from incorrect answers. These results delineate a boundary for inference-time scaling: in verified domains, additional samples provide more candidates for a verifier to filter; in unverified domains, additional samples merely reinforce shared misconceptions.",
+    "published": "Feb 20",
+    "pdf_url": "https://arxiv.org/pdf/2603.06612v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.06612v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
     "title": "Understanding the Fine-Grained Knowledge Capabilities of Vision-Language Models",
     "authors": [
       "Dhruba Ghosh",
@@ -1001,6 +1021,28 @@
     "queried_author": "Yoon Kim",
     "matching_authors": [
       "Yoon Kim"
+    ]
+  },
+  {
+    "title": "Scale Dependent Data Duplication",
+    "authors": [
+      "Joshua Kazdan",
+      "Noam Levi",
+      "Rylan Schaeffer",
+      "Jessica Chudnovsky",
+      "Abhay Puri",
+      "Bo He",
+      "Mehmet Donmez",
+      "Sanmi Koyejo",
+      "David Donoho"
+    ],
+    "summary": "Data duplication during pretraining can degrade generalization and lead to memorization, motivating aggressive deduplication pipelines. However, at web scale, it is unclear what constitutes a ``duplicate'': beyond surface-form matches, semantically equivalent documents (e.g. translations) may induce redundant training signals once models become sufficiently capable. Practically, this means that semantic duplicates operate increasingly like exact duplicates during training. We present evidence that duplication is scale-dependent in two ways. First, as model capability increases, cross-entropy loss gradients for semantically equivalent documents become more aligned. Smaller models, by contrast, produce gradients that reflect surface similarity (e.g., shared tokens) rather than semantic similarity. Second, we embedded all 192 million FineWeb-Edu-Dedup documents using EmbeddingGemma-300m. For moderate corpus sizes, the cosine similarity between nearest-neighbors follows an isotropic power law baseline. However, as corpus size grows to hundreds of billions of tokens, the nearest-neighbor similarities deviate sharply, indicating accelerated semantic collisions. Finally, controlled pretraining on data sampled with replacement from pools of finite unique documents shows that limited uniqueness yields mild degradation for small models, but rapidly increasing loss penalties for larger models, breaking naive scaling extrapolation. We derive explicit scaling laws that allow practitioners to estimate deviation from expected scaling due to limited semantic uniqueness of the pretraining c...",
+    "published": "Feb 18",
+    "pdf_url": "https://arxiv.org/pdf/2603.06603v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.06603v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
     ]
   },
   {
@@ -2474,7 +2516,7 @@
     ]
   },
   {
-    "title": "The Algorithmic Gaze: An Audit and Ethnography of the LAION-Aesthetics Predictor Model",
+    "title": "The Algorithmic Gaze of Image Quality Assessment: An Audit and Trace Ethnography of the LAION-Aesthetics Predictor",
     "authors": [
       "Jordan Taylor",
       "William Agnew",
@@ -2482,10 +2524,10 @@
       "Sarah E. Fox",
       "Haiyi Zhu"
     ],
-    "summary": "Visual generative AI models are trained using a one-size-fits-all measure of aesthetic appeal. However, what is deemed \"aesthetic\" is inextricably linked to personal taste and cultural values, raising the question of whose taste is represented in visual generative AI models. In this work, we study an aesthetic evaluation model--LAION Aesthetic Predictor (LAP)--that is widely used to curate datasets to train visual generative image models, like Stable Diffusion, and evaluate the quality of AI-generated images. To understand what LAP measures, we audited the model across three datasets. First, we examined the impact of aesthetic filtering on the LAION-Aesthetics Dataset (approximately 1.2B images), which was curated from LAION-5B using LAP. We find that the LAP disproportionally filters in images with captions mentioning women, while filtering out images with captions mentioning men or LGBTQ+ people. Then, we used LAP to score approximately 330k images across two art datasets, finding the model rates realistic images of landscapes, cityscapes, and portraits from western and Japanese artists most highly. In doing so, the algorithmic gaze of this aesthetic evaluation model reinforces the imperial and male gazes found within western art history. In order to understand where these biases may have originated, we performed a digital ethnography of public materials related to the creation of LAP. We find that the development of LAP reflects the biases we found in our audits, such as the aesthetic scores used to train LAP primarily coming from English-speaking photographers and weste...",
+    "summary": "Visual generative AI models are trained using a one-size-fits-all measure of aesthetic appeal. However, what is deemed \"aesthetic\" is inextricably linked to personal taste and cultural values, raising the question of whose taste is represented in visual generative AI models. In this work, we study an aesthetic evaluation model--LAION-Aesthetics Predictor (LAP)--that is widely used to curate datasets to train visual generative image models, like Stable Diffusion, and evaluate the quality of AI-generated images. To understand what LAP measures, we audited the model across three datasets. First, we examined the impact of aesthetic filtering on the LAION-Aesthetics Dataset (approximately 1.2B images), which was curated from LAION-5B using LAP. We find that the LAP disproportionally filters in images with captions mentioning women, while filtering out images with captions mentioning men or LGBTQ+ people. Then, we used LAP to score approximately 330k images across two art datasets, finding the model rates realistic images of landscapes, cityscapes, and portraits from western and Japanese artists most highly. In doing so, the algorithmic gaze of this aesthetic evaluation model reinforces the imperial and male gazes found within western art history. In order to understand where these biases may have originated, we performed a digital ethnography of public materials related to the creation of LAP. We find that the development of LAP reflects the biases we found in our audits, such as the aesthetic scores used to train LAP primarily coming from English-speaking photographers and west...",
     "published": "Jan 14",
-    "pdf_url": "https://arxiv.org/pdf/2601.09896v2",
-    "arxiv_url": "http://arxiv.org/abs/2601.09896v2",
+    "pdf_url": "https://arxiv.org/pdf/2601.09896v3",
+    "arxiv_url": "http://arxiv.org/abs/2601.09896v3",
     "queried_author": "Maarten Sap",
     "matching_authors": [
       "Maarten Sap"
@@ -15419,44 +15461,6 @@
     "matching_authors": [
       "Colin Raffel",
       "Luca Soldaini"
-    ]
-  },
-  {
-    "title": "Log-Linear Attention",
-    "authors": [
-      "Han Guo",
-      "Songlin Yang",
-      "Tarushii Goel",
-      "Eric P. Xing",
-      "Tri Dao",
-      "Yoon Kim"
-    ],
-    "summary": "The attention mechanism in Transformers is an important primitive for accurate and scalable sequence modeling. Its quadratic-compute and linear-memory complexity however remain significant bottlenecks. Linear attention and state-space models enable linear-time, constant-memory sequence modeling and can moreover be trained efficiently through matmul-rich parallelization across sequence length. However, at their core these models are still RNNs, and thus their use of a fixed-size hidden state to model the context is a fundamental limitation. This paper develops log-linear attention, an attention mechanism that balances linear attention's efficiency and the expressiveness of softmax attention. Log-linear attention replaces the fixed-size hidden state with a logarithmically growing set of hidden states. We show that with a particular growth function, log-linear attention admits a similarly matmul-rich parallel form whose compute cost is log-linear in sequence length. Log-linear attention is a general framework and can be applied on top of existing linear attention variants. As case studies, we instantiate log-linear variants of two recent architectures -- Mamba-2 and Gated DeltaNet -- and find they perform well compared to their linear-time variants.",
-    "published": "Jun 05",
-    "pdf_url": "https://arxiv.org/pdf/2506.04761v3",
-    "arxiv_url": "http://arxiv.org/abs/2506.04761v3",
-    "queried_author": "Tri Dao",
-    "matching_authors": [
-      "Tri Dao",
-      "Yoon Kim"
-    ]
-  },
-  {
-    "title": "SPARTA ALIGNMENT: Collectively Aligning Multiple Language Models through Combat",
-    "authors": [
-      "Yuru Jiang",
-      "Wenxuan Ding",
-      "Shangbin Feng",
-      "Greg Durrett",
-      "Yulia Tsvetkov"
-    ],
-    "summary": "We propose SPARTA ALIGNMENT, an algorithm to collectively align multiple LLMs through competition and combat. To complement a single model's lack of diversity in generation and biases in evaluation, multiple LLMs form a \"sparta tribe\" to compete against each other in fulfilling instructions while serving as judges for the competition of others. For each iteration, one instruction and two models are selected for a duel, the other models evaluate the two responses, and their evaluation scores are aggregated through a adapted elo-ranking based reputation system, where winners/losers of combat gain/lose weight in evaluating others. The peer-evaluated combat results then become preference pairs where the winning response is preferred over the losing one, and all models learn from these preferences at the end of each iteration. SPARTA ALIGNMENT enables the self-evolution of multiple LLMs in an iterative and collective competition process. Extensive experiments demonstrate that SPARTA ALIGNMENT outperforms initial models and 4 self-alignment baselines across 10 out of 12 tasks and datasets with 7.0% average improvement. Further analysis reveals that SPARTA ALIGNMENT generalizes more effectively to unseen tasks and leverages the expertise diversity of participating models to produce more logical, direct and informative outputs.",
-    "published": "Jun 05",
-    "pdf_url": "https://arxiv.org/pdf/2506.04721v3",
-    "arxiv_url": "http://arxiv.org/abs/2506.04721v3",
-    "queried_author": "Greg Durrett",
-    "matching_authors": [
-      "Greg Durrett"
     ]
   }
 ]
