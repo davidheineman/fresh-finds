@@ -1,5 +1,39 @@
 [
   {
+    "title": "CREATE: Testing LLMs for Associative Creativity",
+    "authors": [
+      "Manya Wadhwa",
+      "Tiasa Singha Roy",
+      "Harvey Lederman",
+      "Junyi Jessy Li",
+      "Greg Durrett"
+    ],
+    "summary": "A key component of creativity is associative reasoning: the ability to draw novel yet meaningful connections between concepts. We introduce CREATE, a benchmark designed to evaluate models' capacity for creative associative reasoning. CREATE requires models to generate sets of paths connecting concepts in a model's parametric knowledge. Paths should have high specificity (distinctiveness and closeness of the concept connection) and high diversity (dissimilarity from other paths), and models are scored more highly if they produce a larger set of strong, diverse paths. This task shares demands of real creativity tasks like hypothesis generation, including an extremely large search space, but enables collection of a sizable benchmark with objective answer grading. Evaluation of frontier models shows that the strongest models achieve higher creative utility than others, with the high multiplicity of answers and complexity of the search making benchmark saturation difficult to achieve. Furthermore, our results illustrate that thinking models are not always more effective on our task, even with high token budgets. Recent approaches for creative prompting give some but limited additional improvement. CREATE provides a sandbox for developing new methods to improve models' capacity for associative creativity.",
+    "published": "Mar 10",
+    "pdf_url": "https://arxiv.org/pdf/2603.09970v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.09970v1",
+    "queried_author": "Greg Durrett",
+    "matching_authors": [
+      "Greg Durrett"
+    ]
+  },
+  {
+    "title": "SCENEBench: An Audio Understanding Benchmark Grounded in Assistive and Industrial Use Cases",
+    "authors": [
+      "Laya Iyer",
+      "Angelina Wang",
+      "Sanmi Koyejo"
+    ],
+    "summary": "Advances in large language models (LLMs) have enabled significant capabilities in audio processing, resulting in state-of-the-art models now known as Large Audio Language Models (LALMs). However, minimal work has been done to measure audio understanding beyond automatic speech recognition (ASR). This paper closes that gap by proposing a benchmark suite, SCENEBench (Spatial, Cross-lingual, Environmental, Non-speech Evaluation), that targets a broad form of audio comprehension across four real-world categories: background sound understanding, noise localization, cross-linguistic speech understanding, and vocal characterizer recognition. These four categories are selected based on understudied needs from accessibility technology and industrial noise monitoring. In addition to performance, we also measure model latency. The purpose of this benchmark suite is to assess audio beyond just what words are said - rather, how they are said and the non-speech components of the audio. Because our audio samples are synthetically constructed (e.g., by overlaying two natural audio samples), we further validate our benchmark against 20 natural audio items per task, sub-sampled from existing datasets to match our task criteria, to assess ecological validity. We assess five state-of-the-art LALMs and find critical gaps: performance varies across tasks, with some tasks performing below random chance and others achieving high accuracy. These results provide direction for targeted improvements in model capabilities.",
+    "published": "Mar 10",
+    "pdf_url": "https://arxiv.org/pdf/2603.09853v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.09853v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
     "title": "Learning Next Action Predictors from Human-Computer Interaction",
     "authors": [
       "Omar Shaikh",
@@ -35,8 +69,8 @@
     ],
     "summary": "Large language models sometimes produce false or misleading responses. Two approaches to this problem are honesty elicitation -- modifying prompts or weights so that the model answers truthfully -- and lie detection -- classifying whether a given response is false. Prior work evaluates such methods on models specifically trained to lie or conceal information, but these artificial constructions may not resemble naturally-occurring dishonesty. We instead study open-weights LLMs from Chinese developers, which are trained to censor politically sensitive topics: Qwen3 models frequently produce falsehoods about subjects like Falun Gong or the Tiananmen protests while occasionally answering correctly, indicating they possess knowledge they are trained to suppress. Using this as a testbed, we evaluate a suite of elicitation and lie detection techniques. For honesty elicitation, sampling without a chat template, few-shot prompting, and fine-tuning on generic honesty data most reliably increase truthful responses. For lie detection, prompting the censored model to classify its own responses performs near an uncensored-model upper bound, and linear probes trained on unrelated data offer a cheaper alternative. The strongest honesty elicitation techniques also transfer to frontier open-weights models including DeepSeek R1. Notably, no technique fully eliminates false responses. We release all prompts, code, and transcripts.",
     "published": "Mar 05",
-    "pdf_url": "https://arxiv.org/pdf/2603.05494v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.05494v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.05494v2",
+    "arxiv_url": "http://arxiv.org/abs/2603.05494v2",
     "queried_author": "Neel Nanda",
     "matching_authors": [
       "Neel Nanda"
@@ -15401,67 +15435,6 @@
     "matching_authors": [
       "Diyi Yang",
       "Karthik Narasimhan"
-    ]
-  },
-  {
-    "title": "Just Enough Thinking: Efficient Reasoning with Adaptive Length Penalties Reinforcement Learning",
-    "authors": [
-      "Violet Xiang",
-      "Chase Blagden",
-      "Rafael Rafailov",
-      "Nathan Lile",
-      "Sang Truong",
-      "Chelsea Finn",
-      "Nick Haber"
-    ],
-    "summary": "Large reasoning models (LRMs) achieve higher performance on challenging reasoning tasks by generating more tokens at inference time, but this verbosity often wastes computation on easy problems. Existing solutions, including supervised finetuning on shorter traces, user-controlled budgets, or RL with uniform penalties, either require data curation, manual configuration, or treat all problems alike regardless of difficulty. We introduce Adaptive Length Penalty (ALP), a reinforcement learning objective tailoring generation length to per-prompt solve rate. During training, ALP monitors each prompt's online solve rate through multiple rollouts and adds a differentiable penalty whose magnitude scales inversely with that rate, so confident (easy) prompts incur a high cost for extra tokens while hard prompts remain unhindered. Posttraining DeepScaleR-1.5B with ALP cuts average token usage by 50\\% without significantly dropping performance. Relative to fixed-budget and uniform penalty baselines, ALP redistributes its reduced budget more intelligently by cutting compute on easy prompts and reallocating saved tokens to difficult ones, delivering higher accuracy on the hardest problems with higher cost.",
-    "published": "Jun 05",
-    "pdf_url": "https://arxiv.org/pdf/2506.05256v2",
-    "arxiv_url": "http://arxiv.org/abs/2506.05256v2",
-    "queried_author": "Rafael Rafailov",
-    "matching_authors": [
-      "Rafael Rafailov"
-    ]
-  },
-  {
-    "title": "The Common Pile v0.1: An 8TB Dataset of Public Domain and Openly Licensed Text",
-    "authors": [
-      "Nikhil Kandpal",
-      "Brian Lester",
-      "Colin Raffel",
-      "Sebastian Majstorovic",
-      "Stella Biderman",
-      "Baber Abbasi",
-      "Luca Soldaini",
-      "Enrico Shippole",
-      "A. Feder Cooper",
-      "Aviya Skowron",
-      "John Kirchenbauer",
-      "Shayne Longpre",
-      "Lintang Sutawika",
-      "Alon Albalak",
-      "Zhenlin Xu",
-      "Guilherme Penedo",
-      "Loubna Ben Allal",
-      "Elie Bakouch",
-      "John David Pressman",
-      "Honglu Fan",
-      "Dashiell Stander",
-      "Guangyu Song",
-      "Aaron Gokaslan",
-      "Tom Goldstein",
-      "Brian R. Bartoldson",
-      "Bhavya Kailkhura",
-      "Tyler Murray"
-    ],
-    "summary": "Large language models (LLMs) are typically trained on enormous quantities of unlicensed text, a practice that has led to scrutiny due to possible intellectual property infringement and ethical concerns. Training LLMs on openly licensed text presents a first step towards addressing these issues, but prior data collection efforts have yielded datasets too small or low-quality to produce performant LLMs. To address this gap, we collect, curate, and release the Common Pile v0.1, an eight terabyte collection of openly licensed text designed for LLM pretraining. The Common Pile comprises content from 30 sources that span diverse domains including research papers, code, books, encyclopedias, educational materials, audio transcripts, and more. Crucially, we validate our efforts by training two 7 billion parameter LLMs on text from the Common Pile: Comma v0.1-1T and Comma v0.1-2T, trained on 1 and 2 trillion tokens respectively. Both models attain competitive performance to LLMs trained on unlicensed text with similar computational budgets, such as Llama 1 and 2 7B. In addition to releasing the Common Pile v0.1 itself, we also release the code used in its creation as well as the training mixture and checkpoints for the Comma v0.1 models.",
-    "published": "Jun 05",
-    "pdf_url": "https://arxiv.org/pdf/2506.05209v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.05209v1",
-    "queried_author": "Colin Raffel",
-    "matching_authors": [
-      "Colin Raffel",
-      "Luca Soldaini"
     ]
   }
 ]
