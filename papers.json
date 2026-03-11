@@ -56,8 +56,8 @@
     ],
     "summary": "We provide evidence of performative chain-of-thought (CoT) in reasoning models, where a model becomes strongly confident in its final answer, but continues generating tokens without revealing its internal belief. Our analysis compares activation probing, early forced answering, and a CoT monitor across two large models (DeepSeek-R1 671B & GPT-OSS 120B) and find task difficulty-specific differences: The model's final answer is decodable from activations far earlier in CoT than a monitor is able to say, especially for easy recall-based MMLU questions. We contrast this with genuine reasoning in difficult multihop GPQA-Diamond questions. Despite this, inflection points (e.g., backtracking, 'aha' moments) occur almost exclusively in responses where probes show large belief shifts, suggesting these behaviors track genuine uncertainty rather than learned \"reasoning theater.\" Finally, probe-guided early exit reduces tokens by up to 80% on MMLU and 30% on GPQA-Diamond with similar accuracy, positioning attention probing as an efficient tool for detecting performative reasoning and enabling adaptive computation.",
     "published": "Mar 05",
-    "pdf_url": "https://arxiv.org/pdf/2603.05488v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.05488v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.05488v2",
+    "arxiv_url": "http://arxiv.org/abs/2603.05488v2",
     "queried_author": "Jack Merullo",
     "matching_authors": [
       "Jack Merullo"
@@ -6801,10 +6801,10 @@
       "Srinivasan Iyer",
       "Duc Le"
     ],
-    "summary": "Auto-regressive speech-text models are typically pre-trained on a large number of interleaved sequences of text tokens and raw speech encoded as speech tokens using vector quantization. These models have demonstrated state-of-the-art performance in speech-to-speech understanding and generation benchmarks, together with promising scaling laws, primarily enabled by the representational alignment between text and speech. Nevertheless, they suffer from shortcomings, partly owing to the disproportionately longer sequences of speech tokens in contrast to textual tokens. This results in a large compute imbalance between modalities during pre-training as well as during inference, and a potential hindrance to effectively aligning speech and text, ultimately translating to several orders of magnitude slower scaling laws. We introduce the Latent Speech-Text Transformer (LST), which makes pre-training speech-text models more data-efficient by dynamically and inexpensively aggregating speech tokens into latent speech patches. These patches serve as higher-level units that can either align with corresponding textual units to aid capability transfer or even encapsulate common speech sequences like silences to be more compute-efficient. We show that LST outperforms vanilla approaches on speech-to-speech as well as text-to-text benchmarks in both data- and compute-controlled settings, the former indicating more effective representational alignment and the latter indicating steeper scaling laws for speech-text models. On HellaSwag story completion, LST achieves 6.5% absolute gain in speech a...",
+    "summary": "Auto-regressive speech-text models pre-trained on interleaved text tokens and discretized speech tokens demonstrate strong speech understanding and generation, yet remain substantially less compute-efficient than text LLMs, partly due to the much longer sequences of speech tokens relative to text. This modality imbalance disproportionately allocates pre-training and inference compute to speech, potentially hindering effective cross-modal alignment and slowing performance scaling by orders of magnitude. We introduce the Latent Speech-Text Transformer (LST), which aggregates speech tokens into latent speech patches that serve as higher-level autoregressive units. This design aligns the sequence-modeling granularity between speech and text while improving computational efficiency. The resulting patches can align with textual units to facilitate cross-modal knowledge transfer and compactly capture recurring acoustic patterns such as silence. Across story-completion benchmarks under both compute-controlled and data-controlled settings, LST consistently improves speech accuracy while also improving text performance, achieving up to +6.5% absolute gain on speech HellaSwag in compute-controlled training (+5.3% in data-controlled training). Under compute-controlled scaling from 420M to 1.8B parameters in a near compute-optimal regime, gains grow with scale, and improvements persist up to 7B parameters under fixed-token budgets. These benefits extend to downstream tasks: LST stabilizes ASR adaptation and reduces the effective autoregressive sequence length during ASR and TTS inferenc...",
     "published": "Oct 07",
-    "pdf_url": "https://arxiv.org/pdf/2510.06195v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.06195v1",
+    "pdf_url": "https://arxiv.org/pdf/2510.06195v2",
+    "arxiv_url": "http://arxiv.org/abs/2510.06195v2",
     "queried_author": "Luke Zettlemoyer",
     "matching_authors": [
       "Luke Zettlemoyer",
@@ -6931,7 +6931,7 @@
     ]
   },
   {
-    "title": "AlphaApollo: Orchestrating Foundation Models and Professional Tools into a Self-Evolving System for Deep Agentic Reasoning",
+    "title": "AlphaApollo: A System for Deep Agentic Reasoning",
     "authors": [
       "Zhanke Zhou",
       "Chentao Cao",
@@ -6941,9 +6941,10 @@
       "Xiangyu Lu",
       "Jiangchao Yao",
       "Weikai Huang",
-      "Linrui Xu",
       "Tian Cheng",
-      "Guanyu Jiang",
+      "Jianghangfan Zhang",
+      "Tangyu Jiang",
+      "Linrui Xu",
       "Yiming Zheng",
       "Brando Miranda",
       "Tongliang Liu",
@@ -6951,10 +6952,10 @@
       "Masashi Sugiyama",
       "Bo Han"
     ],
-    "summary": "We present AlphaApollo, a self-evolving agentic reasoning system that aims to address two bottlenecks in foundation model (FM) reasoning-limited model-intrinsic capacity and unreliable test-time iteration. AlphaApollo orchestrates multiple models with professional tools to enable deliberate, verifiable reasoning. It couples (i) a computation tool (Python with numerical and symbolic libraries) and (ii) a retrieval tool (task-relevant external information) to execute exact calculations and ground decisions. The system further supports multi-round, multi-model solution evolution via a shared state map that records candidates, executable checks, and feedback for iterative refinement. In evaluations on AIME 2024/2025 across multiple models, AlphaApollo delivers consistent gains: +5.15% Average@32 and +23.34% Pass@32 for Qwen2.5-14B-Instruct, and +8.91% Average@32 with +26.67% Pass@32 for Llama-3.3-70B-Instruct. Tool-use analysis shows that more than 80% of tool calls are successfully executed, with consistent outperformance of non-tool baselines, thereby lifting the capability ceiling of FMs. More empirical results and implementation details will be updated at https://github.com/tmlr-group/AlphaApollo.",
+    "summary": "We present AlphaApollo, an agentic reasoning system that targets two bottlenecks in foundation-model reasoning: (1) limited reasoning capacity for complex, long-horizon problem solving and (2) unreliable test-time evolution without trustworthy verification. AlphaApollo orchestrates models and tools via three components: (i) multi-turn agentic reasoning, which formalizes model-environment interaction with structured tool calls and responses; (ii) multi-turn agentic learning, which applies turn-level reinforcement learning to optimize tool-use reasoning while decoupling actions from tool responses for stable training; and (iii) multi-round agentic evolution, which refines solutions through a propose-judge-update loop with tool-assisted verifications and long-horizon memory. Across seven math reasoning benchmarks and multiple model scales, AlphaApollo improves performance through reliable tool use (> 85% tool-call success), substantial gains from multi-turn RL (Avg@32: Qwen2.5-1.5B-Instruct 1.07% -> 9.64%, Qwen2.5-7B-Instruct 8.77% -> 20.35%), and improvements from evolution (e.g., Qwen2.5-3B-Instruct 5.27% -> 7.70%, Qwen2.5-14B-Instruct 16.53% -> 21.08%). This project is still ongoing. We welcome feedback from the community and will frequently update the source code and technical report.",
     "published": "Oct 05",
-    "pdf_url": "https://arxiv.org/pdf/2510.06261v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.06261v1",
+    "pdf_url": "https://arxiv.org/pdf/2510.06261v2",
+    "arxiv_url": "http://arxiv.org/abs/2510.06261v2",
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
@@ -14538,10 +14539,10 @@
       "Ye Eun Kim",
       "Antoine Bosselut"
     ],
-    "summary": "Language identification (LID) is a critical step in curating multilingual LLM pretraining corpora from web crawls. While many studies on LID model training focus on collecting diverse training data to improve performance, low-resource languages -- often limited to single-domain data, such as the Bible -- continue to perform poorly. To resolve these class imbalance and bias issues, we propose a novel supervised contrastive learning (SCL) approach to learn domain-invariant representations for low-resource languages. Through an extensive analysis, we show that our approach improves LID performance on out-of-domain data for low-resource languages by 3.2%, demonstrating its effectiveness in enhancing LID models.",
+    "summary": "Language identification (LID) is a critical step in curating multilingual LLM pretraining corpora from web crawls. While many studies on LID model training focus on collecting diverse training data to improve performance, low-resource languages -- often limited to single-domain data, such as the Bible -- continue to perform poorly. To resolve these imbalance and bias issues, we propose a novel supervised contrastive learning (SCL) approach to learn domain-invariant representations for low-resource languages. We show that our approach improves LID performance on out-of-domain data for low-resource languages by 3.2 percentage points, while maintaining its performance for the high-resource languages.",
     "published": "Jun 18",
-    "pdf_url": "https://arxiv.org/pdf/2506.15304v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.15304v1",
+    "pdf_url": "https://arxiv.org/pdf/2506.15304v2",
+    "arxiv_url": "http://arxiv.org/abs/2506.15304v2",
     "queried_author": "Antoine Bosselut",
     "matching_authors": [
       "Antoine Bosselut"
