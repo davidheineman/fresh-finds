@@ -1,5 +1,20 @@
 [
   {
+    "title": "Lost in Backpropagation: The LM Head is a Gradient Bottleneck",
+    "authors": [
+      "Nathan Godey",
+      "Yoav Artzi"
+    ],
+    "summary": "The last layer of neural language models (LMs) projects output features of dimension $D$ to logits in dimension $V$, the size of the vocabulary, where usually $D \\ll V$. This mismatch is known to raise risks of limited expressivity in neural LMs, creating a so-called softmax bottleneck. We show the softmax bottleneck is not only an expressivity bottleneck but also an optimization bottleneck. Backpropagating $V$-dimensional gradients through a rank-$D$ linear layer induces unavoidable compression, which alters the training feedback provided to the vast majority of the parameters. We present a theoretical analysis of this phenomenon and measure empirically that 95-99% of the gradient norm is suppressed by the output layer, resulting in vastly suboptimal update directions. We conduct controlled pretraining experiments showing that the gradient bottleneck makes trivial patterns unlearnable, and drastically affects the training dynamics of LLMs. We argue that this inherent flaw contributes to training inefficiencies at scale independently of the model architecture, and raises the need for new LM head designs.",
+    "published": "Mar 10",
+    "pdf_url": "https://arxiv.org/pdf/2603.10145v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.10145v1",
+    "queried_author": "Yoav Artzi",
+    "matching_authors": [
+      "Yoav Artzi"
+    ]
+  },
+  {
     "title": "CREATE: Testing LLMs for Associative Creativity",
     "authors": [
       "Manya Wadhwa",
@@ -15415,26 +15430,6 @@
     "matching_authors": [
       "Diyi Yang",
       "William Held"
-    ]
-  },
-  {
-    "title": "When Models Know More Than They Can Explain: Quantifying Knowledge Transfer in Human-AI Collaboration",
-    "authors": [
-      "Quan Shi",
-      "Carlos E. Jimenez",
-      "Shunyu Yao",
-      "Nick Haber",
-      "Diyi Yang",
-      "Karthik Narasimhan"
-    ],
-    "summary": "Recent advancements in AI reasoning have driven substantial improvements across diverse tasks. A critical open question is whether these improvements also yields better knowledge transfer: the ability of models to communicate reasoning in ways humans can understand, apply, and learn from. To investigate this, we introduce Knowledge Integration and Transfer Evaluation (KITE), a conceptual and experimental framework for Human-AI knowledge transfer capabilities and conduct the first large-scale human study (N=118) explicitly designed to measure it. In our two-phase setup, humans first ideate with an AI on problem-solving strategies, then independently implement solutions, isolating model explanations' influence on human understanding. Our findings reveal that although model benchmark performance correlates with collaborative outcomes, this relationship is notably inconsistent, featuring significant outliers, indicating that knowledge transfer requires dedicated optimization. Our analysis identifies behavioral and strategic factors mediating successful knowledge transfer. We release our code, dataset, and evaluation framework to support future work on communicatively aligned models.",
-    "published": "Jun 05",
-    "pdf_url": "https://arxiv.org/pdf/2506.05579v2",
-    "arxiv_url": "http://arxiv.org/abs/2506.05579v2",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang",
-      "Karthik Narasimhan"
     ]
   }
 ]
