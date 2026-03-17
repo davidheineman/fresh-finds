@@ -1,5 +1,22 @@
 [
   {
+    "title": "$\u03c4$-Voice: Benchmarking Full-Duplex Voice Agents on Real-World Domains",
+    "authors": [
+      "Soham Ray",
+      "Keshav Dhandhania",
+      "Victor Barres",
+      "Karthik Narasimhan"
+    ],
+    "summary": "Full-duplex voice agents--systems that listen and speak simultaneously--are rapidly moving from research to production. However, existing evaluations address conversational dynamics and task completion in isolation. We introduce $\u03c4$-voice, a benchmark for evaluating voice agents on grounded tasks with real-world complexity: agents must navigate complex multi-turn conversations, adhere to domain policies, and interact with the environment. The framework extends $\u03c4^2$-bench into a novel voice agent benchmark combining verifiable completion of complex grounded tasks, full-duplex interaction, and realistic audio--enabling direct comparison between voice and text performance. A controllable and realistic voice user simulator provides diverse accents, realistic audio environments, and rich turn-taking dynamics; by decoupling simulation from wall-clock time, the user simulator can use the most capable LLM without real-time constraints. We evaluate task completion (pass@1) and voice interaction quality across 278 tasks: while GPT-5 (reasoning) achieves 85%, voice agents reach only 31--51% under clean conditions and 26--38% under realistic conditions with noise and diverse accents--retaining only 30--45% of text capability; qualitative analysis confirms 79--90% of failures stem from agent behavior, suggesting that observed failures primarily reflect agent behavior under our evaluation setup. $\u03c4$-voice provides a reproducible testbed for measuring progress toward voice agents that are natural, conversational, and reliable.",
+    "published": "Mar 14",
+    "pdf_url": "https://arxiv.org/pdf/2603.13686v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.13686v1",
+    "queried_author": "Karthik Narasimhan",
+    "matching_authors": [
+      "Karthik Narasimhan"
+    ]
+  },
+  {
     "title": "Strategic Navigation or Stochastic Search? How Agents and Humans Reason Over Document Collections",
     "authors": [
       "\u0141ukasz Borchmann",
@@ -159,6 +176,24 @@
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "From Refusal Tokens to Refusal Control: Discovering and Steering Category-Specific Refusal Directions",
+    "authors": [
+      "Rishab Alagharu",
+      "Ishneet Sukhvinder Singh",
+      "Shaibi Shamsudeen",
+      "Zhen Wu",
+      "Ashwinee Panda"
+    ],
+    "summary": "Language models are commonly fine-tuned for safety alignment to refuse harmful prompts. One approach fine-tunes them to generate categorical refusal tokens that distinguish different refusal types before responding. In this work, we leverage a version of Llama 3 8B fine-tuned with these categorical refusal tokens to enable inference-time control over fine-grained refusal behavior, improving both safety and reliability. We show that refusal token fine-tuning induces separable, category-aligned directions in the residual stream, which we extract and use to construct categorical steering vectors with a lightweight probe that determines whether to steer toward or away from refusal during inference. In addition, we introduce a learned low-rank combination that mixes these category directions in a whitened, orthonormal steering basis, resulting in a single controllable intervention under activation-space anisotropy, and show that this intervention is transferable across same-architecture model variants without additional training. Across benchmarks, both categorical steering vectors and the low-rank combination consistently reduce over-refusals on benign prompts while increasing refusal rates on harmful prompts, highlighting their utility for multi-category refusal control.",
+    "published": "Mar 09",
+    "pdf_url": "https://arxiv.org/pdf/2603.13359v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.13359v1",
+    "queried_author": "Ashwinee Panda",
+    "matching_authors": [
+      "Ashwinee Panda"
     ]
   },
   {
@@ -530,6 +565,31 @@
     "queried_author": "Kyle Lo",
     "matching_authors": [
       "Kyle Lo"
+    ]
+  },
+  {
+    "title": "Brittlebench: Quantifying LLM robustness via prompt sensitivity",
+    "authors": [
+      "Angelika Romanou",
+      "Mark Ibrahim",
+      "Candace Ross",
+      "Chantal Shaib",
+      "Kerem Okta",
+      "Sam Bell",
+      "Elia Ovalle",
+      "Jesse Dodge",
+      "Antoine Bosselut",
+      "Koustuv Sinha",
+      "Adina Williams"
+    ],
+    "summary": "Existing evaluation methods largely rely on clean, static benchmarks, which can overestimate true model performance by failing to capture the noise and variability inherent in real-world user inputs. This is especially true for language models, which can face human-generated text queries containing mistakes, typos, or alternative ways of phrasing the same question. In this work, we introduce a theoretical framework for quantifying model sensitivity to prompt variants, or brittleness, that can enable us to disentangle data-induced difficulty from prompt-related variability. Using this framework, we design a novel evaluation pipeline, Brittlebench, to holistically evaluate the sensitivity of frontier models. We apply semantics-preserving perturbations to a suite of popular benchmarks, and observe model performance to degrade as much as 12%. However, these perturbations do not affect all models equally: even a single perturbation alters the relative ranking of models in 63% of cases, impacting conclusions about comparative model performance. Decomposing the total variance of both state-of-the-art open-weight and commercial models, we find that semantics-preserving input perturbations can account for up to half of the performance variance for a given model. Brittlebench highlights the need for more robust evaluations and models, and allows us to systematically understand model brittleness.",
+    "published": "Feb 27",
+    "pdf_url": "https://arxiv.org/pdf/2603.13285v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.13285v1",
+    "queried_author": "Antoine Bosselut",
+    "matching_authors": [
+      "Antoine Bosselut",
+      "Jesse Dodge"
     ]
   },
   {
@@ -15196,8 +15256,8 @@
     ],
     "summary": "AI systems will soon have to navigate human environments and make decisions that affect people and other AI agents whose goals and values diverge. Contractualist alignment proposes grounding those decisions in agreements that diverse stakeholders would endorse under the right conditions, yet securing such agreement at scale remains costly and slow -- even for advanced AI. We therefore propose Resource-Rational Contractualism (RRC): a framework where AI systems approximate the agreements rational parties would form by drawing on a toolbox of normatively-grounded, cognitively-inspired heuristics that trade effort for accuracy. An RRC-aligned agent would not only operate efficiently, but also be equipped to dynamically adapt to and interpret the ever-changing human social world.",
     "published": "Jun 20",
-    "pdf_url": "https://arxiv.org/pdf/2506.17434v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.17434v1",
+    "pdf_url": "https://arxiv.org/pdf/2506.17434v2",
+    "arxiv_url": "http://arxiv.org/abs/2506.17434v2",
     "queried_author": "Noah Goodman",
     "matching_authors": [
       "Noah Goodman",
@@ -15371,60 +15431,6 @@
     "queried_author": "Diyi Yang",
     "matching_authors": [
       "Diyi Yang"
-    ]
-  },
-  {
-    "title": "DCRM: A Heuristic to Measure Response Pair Quality in Preference Optimization",
-    "authors": [
-      "Chengyu Huang",
-      "Tanya Goyal"
-    ],
-    "summary": "Recent research has attempted to associate preference optimization (PO) performance with the underlying preference datasets. In this work, our observation is that the differences between the preferred response $y^+$ and dispreferred response $y^-$ influence what LLMs can learn, which may not match the desirable differences to learn. Therefore, we use distance and reward margin to quantify these differences, and combine them to get Distance Calibrated Reward Margin (DCRM), a metric that measures the quality of a response pair for PO. Intuitively, DCRM encourages minimal noisy differences and maximal desired differences. With this, we study 3 types of commonly used preference datasets, classified along two axes: the source of the responses and the preference labeling function. We establish a general correlation between higher DCRM of the training set and better learning outcome. Inspired by this, we propose a best-of-$N^2$ pairing method that selects response pairs with the highest DCRM. Empirically, in various settings, our method produces training datasets that can further improve models' performance on AlpacaEval, MT-Bench, and Arena-Hard over the existing training sets.",
-    "published": "Jun 17",
-    "pdf_url": "https://arxiv.org/pdf/2506.14157v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.14157v1",
-    "queried_author": "Tanya Goyal",
-    "matching_authors": [
-      "Tanya Goyal"
-    ]
-  },
-  {
-    "title": "Sampling from Your Language Model One Byte at a Time",
-    "authors": [
-      "Jonathan Hayase",
-      "Alisa Liu",
-      "Noah A. Smith",
-      "Sewoong Oh"
-    ],
-    "summary": "Tokenization is used almost universally by modern language models, enabling efficient text representation using multi-byte or multi-character tokens. However, prior work has shown that tokenization can introduce distortion into the model's generations, an issue known as the Prompt Boundary Problem (PBP). For example, users are often advised not to end their prompts with a space because it prevents the model from including the space as part of the next token. While this heuristic is effective in English, the underlying PBP continues to affect languages such as Chinese as well as code generation, where tokens often do not line up with word and syntactic boundaries. In this work, we present an inference-time method to convert any autoregressive LM with a BPE tokenizer into a character-level or byte-level LM. Our method efficiently solves the PBP and is also able to unify the vocabularies of language models with different tokenizers, allowing one to ensemble LMs with different tokenizers at inference time or transfer the post-training from one model to another using proxy-tuning. We demonstrate in experiments that the ensemble and proxy-tuned models outperform their constituents on downstream evals. Code is available at https://github.com/SewoongLab/byte-sampler .",
-    "published": "Jun 17",
-    "pdf_url": "https://arxiv.org/pdf/2506.14123v2",
-    "arxiv_url": "http://arxiv.org/abs/2506.14123v2",
-    "queried_author": "Noah A. Smith",
-    "matching_authors": [
-      "Noah A. Smith"
-    ]
-  },
-  {
-    "title": "Verifying the Verifiers: Unveiling Pitfalls and Potentials in Fact Verifiers",
-    "authors": [
-      "Wooseok Seo",
-      "Seungju Han",
-      "Jaehun Jung",
-      "Benjamin Newman",
-      "Seungwon Lim",
-      "Seungbeen Lee",
-      "Ximing Lu",
-      "Yejin Choi",
-      "Youngjae Yu"
-    ],
-    "summary": "Fact verification is essential for ensuring the reliability of LLM applications. In this study, we evaluate 12 pre-trained LLMs and one specialized fact-verifier, including frontier LLMs and open-weight reasoning LLMs, using a collection of examples from 14 fact-checking benchmarks. We share three findings intended to guide future development of more robust fact verifiers. First, we highlight the importance of addressing annotation errors and ambiguity in datasets, demonstrating that approximately 16\\% of ambiguous or incorrectly labeled data substantially influences model rankings. Neglecting this issue may result in misleading conclusions during comparative evaluations, and we suggest using a systematic pipeline utilizing LLM-as-a-judge to help identify these issues at scale. Second, we discover that frontier LLMs with few-shot in-context examples, often overlooked in previous works, achieve top-tier performance. We therefore recommend that future studies include comparisons with these simple yet highly effective baselines. Lastly, despite their effectiveness, frontier LLMs incur substantial costs, motivating the development of small, fine-tuned fact verifiers. We show that these small models still have room for improvement, particularly on instances that require complex reasoning. Encouragingly, we demonstrate that augmenting training with synthetic multi-hop reasoning data significantly enhances their capabilities in such instances. We release our code, model, and dataset at https://github.com/just1nseo/verifying-the-verifiers.",
-    "published": "Jun 16",
-    "pdf_url": "https://arxiv.org/pdf/2506.13342v2",
-    "arxiv_url": "http://arxiv.org/abs/2506.13342v2",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
     ]
   }
 ]
