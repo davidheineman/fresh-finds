@@ -1,5 +1,98 @@
 [
   {
+    "title": "Mamba-3: Improved Sequence Modeling using State Space Principles",
+    "authors": [
+      "Aakash Lahoti",
+      "Kevin Y. Li",
+      "Berlin Chen",
+      "Caitlin Wang",
+      "Aviv Bick",
+      "J. Zico Kolter",
+      "Tri Dao",
+      "Albert Gu"
+    ],
+    "summary": "Scaling inference-time compute has emerged as an important driver of LLM performance, making inference efficiency a central focus of model design alongside model quality. While the current Transformer-based models deliver strong model quality, their quadratic compute and linear memory make inference expensive. This has spurred the development of sub-quadratic models with reduced linear compute and constant memory requirements. However, many recent linear models trade off model quality and capability for algorithmic efficiency, failing on tasks such as state tracking. Moreover, their theoretically linear inference remains hardware-inefficient in practice. Guided by an inference-first perspective, we introduce three core methodological improvements inspired by the state space model (SSM) viewpoint of linear models. We combine: (1) a more expressive recurrence derived from SSM discretization, (2) a complex-valued state update rule that enables richer state tracking, and (3) a multi-input, multi-output (MIMO) formulation for better model performance without increasing decode latency. Together with architectural refinements, our Mamba-3 model achieves significant gains across retrieval, state-tracking, and downstream language modeling tasks. At the 1.5B scale, Mamba-3 improves average downstream accuracy by 0.6 percentage points compared to the next best model (Gated DeltaNet), with Mamba-3's MIMO variant further improving accuracy by another 1.2 points for a total 1.8 point gain. Across state-size experiments, Mamba-3 achieves comparable perplexity to Mamba-2 despite using half...",
+    "published": "Mar 16",
+    "pdf_url": "https://arxiv.org/pdf/2603.15569v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.15569v1",
+    "queried_author": "Albert Gu",
+    "matching_authors": [
+      "Albert Gu",
+      "J Zico Kolter",
+      "Tri Dao"
+    ]
+  },
+  {
+    "title": "Are Dilemmas and Conflicts in LLM Alignment Solvable? A View from Priority Graph",
+    "authors": [
+      "Zhenheng Tang",
+      "Xiang Liu",
+      "Qian Wang",
+      "Eunsol Choi",
+      "Bo Li",
+      "Xiaowen Chu"
+    ],
+    "summary": "As Large Language Models (LLMs) become more powerful and autonomous, they increasingly face conflicts and dilemmas in many scenarios. We first summarize and taxonomize these diverse conflicts. Then, we model the LLM's preferences to make different choices as a priority graph, where instructions and values are nodes, and the edges represent context-specific priorities determined by the model's output distribution. This graph reveals that a unified stable LLM alignment is very challenging, because the graph is neither static nor necessarily consistent in different contexts. Besides, it also reveals a potential vulnerability: priority hacking, where adversaries can craft deceptive contexts to manipulate the graph and bypass safety alignments. To counter this, we propose a runtime verification mechanism, enabling LLMs to query external sources to ground their context and resist manipulation. While this approach enhances robustness, we also acknowledge that many ethical and value dilemmas are philosophically irreducible, posing a long-term, open challenge for the future of AI alignment.",
+    "published": "Mar 16",
+    "pdf_url": "https://arxiv.org/pdf/2603.15527v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.15527v1",
+    "queried_author": "Eunsol Choi",
+    "matching_authors": [
+      "Eunsol Choi"
+    ]
+  },
+  {
+    "title": "Invisible failures in human-AI interactions",
+    "authors": [
+      "Christopher Potts",
+      "Moritz Sudhof"
+    ],
+    "summary": "AI systems fail silently far more often than they fail visibly. In a large-scale quantitative analysis of human-AI interactions from the WildChat dataset, we find that 78% of AI failures are invisible: something went wrong but the user gave no overt indication that there was a problem. These invisible failures cluster into eight archetypes that help us characterize where and how AI systems are failing to meet users' needs. In addition, the archetypes show systematic co-occurrence patterns indicating higher-level failure types. To address the question of whether these archetypes will remain relevant as AI systems become more capable, we also assess failures for whether they are primarily interactional or capability-driven, finding that 91% involve interactional dynamics, and we estimate that 94% of such failures would persist even with a more capable model. Finally, we illustrate how the archetypes help us to identify systematic and variable AI limitations across different usage domains. Overall, we argue that our invisible failure taxonomy can be a key component in reliable failure monitoring for product developers, scientists, and policy makers. Our code and data are available at https://github.com/bigspinai/bigspin-invisible-failure-archetypes",
+    "published": "Mar 16",
+    "pdf_url": "https://arxiv.org/pdf/2603.15423v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.15423v1",
+    "queried_author": "Christopher Potts",
+    "matching_authors": [
+      "Christopher Potts"
+    ]
+  },
+  {
+    "title": "Practicing with Language Models Cultivates Human Empathic Communication",
+    "authors": [
+      "Aakriti Kumar",
+      "Nalin Poungpeth",
+      "Diyi Yang",
+      "Bruce Lambert",
+      "Matthew Groh"
+    ],
+    "summary": "Empathy is central to human connection, yet people often struggle to express it effectively. In blinded evaluations, large language models (LLMs) generate responses that are often judged more empathic than human-written ones. Yet when a response is attributed to AI, recipients feel less heard and validated than when comparable responses are attributed to a human. To probe and address this gap in empathic communication skill, we built Lend an Ear, an experimental conversation platform in which participants are asked to offer empathic support to an LLM role-playing personal and workplace troubles. From 33,938 messages spanning 2,904 text-based conversations between 968 participants and their LLM conversational partners, we derive a data-driven taxonomy of idiomatic empathic expressions in naturalistic dialogue. Based on a pre-registered randomized experiment, we present evidence that a brief LLM coaching intervention offering personalized feedback on how to effectively communicate empathy significantly boosts alignment of participants' communication patterns with normative empathic communication patterns relative to both a control group and a group that received video-based but non-personalized feedback. Moreover, we find evidence for a silent empathy effect that people feel empathy but systematically fail to express it. Nonetheless, participants reliably identify responses aligned with normative empathic communication criteria as more expressive of empathy. Together, these results advance the scientific understanding of how empathy is expressed and valued and demonstrate a s...",
+    "published": "Mar 16",
+    "pdf_url": "https://arxiv.org/pdf/2603.15245v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.15245v1",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang"
+    ]
+  },
+  {
+    "title": "M$^2$RNN: Non-Linear RNNs with Matrix-Valued States for Scalable Language Modeling",
+    "authors": [
+      "Mayank Mishra",
+      "Shawn Tan",
+      "Ion Stoica",
+      "Joseph Gonzalez",
+      "Tri Dao"
+    ],
+    "summary": "Transformers are highly parallel but are limited to computations in the TC$^0$ complexity class, excluding tasks such as entity tracking and code execution that provably require greater expressive power. Motivated by this limitation, we revisit non-linear Recurrent Neural Networks (RNNs) for language modeling and introduce Matrix-to-Matrix RNN (M$^2$RNN): an architecture with matrix-valued hidden states and expressive non-linear state transitions. We demonstrate that the language modeling performance of non-linear RNNs is limited by their state size. We also demonstrate how the state size expansion mechanism enables efficient use of tensor cores. Empirically, M$^2$RNN achieves perfect state tracking generalization at sequence lengths not seen during training. These benefits also translate to large-scale language modeling. In hybrid settings that interleave recurrent layers with attention, Hybrid M$^2$RNN outperforms equivalent Gated DeltaNet hybrids by $0.4$-$0.5$ perplexity points on a 7B MoE model, while using $3\\times$ smaller state sizes for the recurrent layers. Notably, replacing even a single recurrent layer with M$^2$RNN in an existing hybrid architecture yields accuracy gains comparable to Hybrid M$^2$RNN with minimal impact on training throughput. Further, the Hybrid Gated DeltaNet models with a single M$^2$RNN layer also achieve superior long-context generalization, outperforming state-of-the-art hybrid linear attention architectures by up to $8$ points on LongBench. Together, these results establish non-linear RNN layers as a compelling building block for effici...",
+    "published": "Mar 15",
+    "pdf_url": "https://arxiv.org/pdf/2603.14360v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.14360v1",
+    "queried_author": "Tri Dao",
+    "matching_authors": [
+      "Tri Dao"
+    ]
+  },
+  {
     "title": "$\u03c4$-Voice: Benchmarking Full-Duplex Voice Agents on Real-World Domains",
     "authors": [
       "Soham Ray",
@@ -3161,10 +3254,10 @@
       "J. Zico Kolter",
       "Andrew Gordon Wilson"
     ],
-    "summary": "Can we learn more from data than existed in the generating process itself? Can new and useful information be constructed from merely applying deterministic transformations to existing data? Can the learnable content in data be evaluated without considering a downstream task? On these questions, Shannon information and Kolmogorov complexity come up nearly empty-handed, in part because they assume observers with unlimited computational capacity and fail to target the useful information content. In this work, we identify and exemplify three seeming paradoxes in information theory: (1) information cannot be increased by deterministic transformations; (2) information is independent of the order of data; (3) likelihood modeling is merely distribution matching. To shed light on the tension between these results and modern practice, and to quantify the value of data, we introduce epiplexity, a formalization of information capturing what computationally bounded observers can learn from data. Epiplexity captures the structural content in data while excluding time-bounded entropy, the random unpredictable content exemplified by pseudorandom number generators and chaotic dynamical systems. With these concepts, we demonstrate how information can be created with computation, how it depends on the ordering of the data, and how likelihood modeling can produce more complex programs than present in the data generating process itself. We also present practical procedures to estimate epiplexity which we show capture differences across data sources, track with downstream performance, and highli...",
+    "summary": "Can we learn more from data than existed in the generating process itself? Can new and useful information be constructed from merely applying deterministic transformations to existing data? Can the learnable content in data be evaluated without considering a downstream task? On these questions, Shannon information and Kolmogorov complexity come up nearly empty-handed, in part because they assume observers with unlimited computational capacity and do not target the useful information content. In this work, we identify and exemplify three seeming paradoxes in information theory: (1) information cannot be increased by deterministic transformations; (2) information is independent of the order of data; (3) likelihood modeling is merely distribution matching. To shed light on the tension between these results and modern practice, and to quantify the value of data, we introduce epiplexity, a formalization of information capturing what computationally bounded observers can learn from data. Epiplexity captures the structural content in data while excluding time-bounded entropy, the random unpredictable content exemplified by pseudorandom number generators and chaotic dynamical systems. With these concepts, we demonstrate how information can be created with computation, how it depends on the ordering of the data, and how likelihood modeling can produce more complex programs than present in the data generating process itself. We also present practical procedures to estimate epiplexity which we show capture differences across data sources, track with downstream performance, and highlig...",
     "published": "Jan 06",
-    "pdf_url": "https://arxiv.org/pdf/2601.03220v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.03220v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.03220v2",
+    "arxiv_url": "http://arxiv.org/abs/2601.03220v2",
     "queried_author": "J Zico Kolter",
     "matching_authors": [
       "J Zico Kolter",
@@ -15333,104 +15426,6 @@
     "queried_author": "Christopher D Manning",
     "matching_authors": [
       "Christopher D Manning"
-    ]
-  },
-  {
-    "title": "PPMI: Privacy-Preserving LLM Interaction with Socratic Chain-of-Thought Reasoning and Homomorphically Encrypted Vector Databases",
-    "authors": [
-      "Yubeen Bae",
-      "Minchan Kim",
-      "Jaejin Lee",
-      "Sangbum Kim",
-      "Jaehyung Kim",
-      "Yejin Choi",
-      "Niloofar Mireshghallah"
-    ],
-    "summary": "Large language models (LLMs) are increasingly used as personal agents, accessing sensitive user data such as calendars, emails, and medical records. Users currently face a trade-off: They can send private records, many of which are stored in remote databases, to powerful but untrusted LLM providers, increasing their exposure risk. Alternatively, they can run less powerful models locally on trusted devices. We bridge this gap. Our Socratic Chain-of-Thought Reasoning first sends a generic, non-private user query to a powerful, untrusted LLM, which generates a Chain-of-Thought (CoT) prompt and detailed sub-queries without accessing user data. Next, we embed these sub-queries and perform encrypted sub-second semantic search using our Homomorphically Encrypted Vector Database across one million entries of a single user's private data. This represents a realistic scale of personal documents, emails, and records accumulated over years of digital activity. Finally, we feed the CoT prompt and the decrypted records to a local language model and generate the final response. On the LoCoMo long-context QA benchmark, our hybrid framework, combining GPT-4o with a local Llama-3.2-1B model, outperforms using GPT-4o alone by up to 7.1 percentage points. This demonstrates a first step toward systems where tasks are decomposed and split between untrusted strong LLMs and weak local ones, preserving user privacy.",
-    "published": "Jun 19",
-    "pdf_url": "https://arxiv.org/pdf/2506.17336v3",
-    "arxiv_url": "http://arxiv.org/abs/2506.17336v3",
-    "queried_author": "Niloofar Mireshghallah",
-    "matching_authors": [
-      "Niloofar Mireshghallah",
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Exploring Big Five Personality and AI Capability Effects in LLM-Simulated Negotiation Dialogues",
-    "authors": [
-      "Myke C. Cohen",
-      "Zhe Su",
-      "Hsien-Te Kao",
-      "Daniel Nguyen",
-      "Spencer Lynch",
-      "Maarten Sap",
-      "Svitlana Volkova"
-    ],
-    "summary": "This paper presents an evaluation framework for agentic AI systems in mission-critical negotiation contexts, addressing the need for AI agents that can adapt to diverse human operators and stakeholders. Using Sotopia as a simulation testbed, we present two experiments that systematically evaluated how personality traits and AI agent characteristics influence LLM-simulated social negotiation outcomes--a capability essential for a variety of applications involving cross-team coordination and civil-military interactions. Experiment 1 employs causal discovery methods to measure how personality traits impact price bargaining negotiations, through which we found that Agreeableness and Extraversion significantly affect believability, goal achievement, and knowledge acquisition outcomes. Sociocognitive lexical measures extracted from team communications detected fine-grained differences in agents' empathic communication, moral foundations, and opinion patterns, providing actionable insights for agentic AI systems that must operate reliably in high-stakes operational scenarios. Experiment 2 evaluates human-AI job negotiations by manipulating both simulated human personality and AI system characteristics, specifically transparency, competence, adaptability, demonstrating how AI agent trustworthiness impact mission effectiveness. These findings establish a repeatable evaluation methodology for experimenting with AI agent reliability across diverse operator personalities and human-agent team dynamics, directly supporting operational requirements for reliable AI systems. Our work advanc...",
-    "published": "Jun 19",
-    "pdf_url": "https://arxiv.org/pdf/2506.15928v3",
-    "arxiv_url": "http://arxiv.org/abs/2506.15928v3",
-    "queried_author": "Maarten Sap",
-    "matching_authors": [
-      "Maarten Sap"
-    ]
-  },
-  {
-    "title": "Approximating Language Model Training Data from Weights",
-    "authors": [
-      "John X. Morris",
-      "Junjie Oscar Yin",
-      "Woojeong Kim",
-      "Vitaly Shmatikov",
-      "Alexander M. Rush"
-    ],
-    "summary": "Modern language models often have open weights but closed training data. We formalize the problem of data approximation from model weights and propose several baselines and metrics. We develop a gradient-based approach that selects the highest-matching data from a large public text corpus and show its effectiveness at recovering useful data given only weights of the original and finetuned models. Even when none of the true training data is known, our method is able to locate a small subset of public Web documents can be used to train a model to close to the original model performance given models trained for both classification and supervised-finetuning. On the AG News classification task, our method improves performance from 65% (using randomly selected data) to 80%, approaching the expert benchmark of 88%. When applied to a model trained with SFT on MSMARCO web documents, our method reduces perplexity from 3.3 to 2.3, compared to an expert LLAMA model's perplexity of 2.0.",
-    "published": "Jun 18",
-    "pdf_url": "https://arxiv.org/pdf/2506.15553v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.15553v1",
-    "queried_author": "Alexander M Rush",
-    "matching_authors": [
-      "Alexander M Rush",
-      "Alexander M. Rush",
-      "John X. Morris",
-      "Junjie Oscar Yin"
-    ]
-  },
-  {
-    "title": "ConLID: Supervised Contrastive Learning for Low-Resource Language Identification",
-    "authors": [
-      "Negar Foroutan",
-      "Jakhongir Saydaliev",
-      "Ye Eun Kim",
-      "Antoine Bosselut"
-    ],
-    "summary": "Language identification (LID) is a critical step in curating multilingual LLM pretraining corpora from web crawls. While many studies on LID model training focus on collecting diverse training data to improve performance, low-resource languages -- often limited to single-domain data, such as the Bible -- continue to perform poorly. To resolve these imbalance and bias issues, we propose a novel supervised contrastive learning (SCL) approach to learn domain-invariant representations for low-resource languages. We show that our approach improves LID performance on out-of-domain data for low-resource languages by 3.2 percentage points, while maintaining its performance for the high-resource languages.",
-    "published": "Jun 18",
-    "pdf_url": "https://arxiv.org/pdf/2506.15304v2",
-    "arxiv_url": "http://arxiv.org/abs/2506.15304v2",
-    "queried_author": "Antoine Bosselut",
-    "matching_authors": [
-      "Antoine Bosselut"
-    ]
-  },
-  {
-    "title": "StorySage: Conversational Autobiography Writing Powered by a Multi-Agent Framework",
-    "authors": [
-      "Shayan Talaei",
-      "Meijin Li",
-      "Kanu Grover",
-      "James Kent Hippler",
-      "Diyi Yang",
-      "Amin Saberi"
-    ],
-    "summary": "Every individual carries a unique and personal life story shaped by their memories and experiences. However, these memories are often scattered and difficult to organize into a coherent narrative, a challenge that defines the task of autobiography writing. Existing conversational writing assistants tend to rely on generic user interactions and pre-defined guidelines, making it difficult for these systems to capture personal memories and develop a complete biography over time. We introduce StorySage, a user-driven software system designed to meet the needs of a diverse group of users that supports a flexible conversation and a structured approach to autobiography writing. Powered by a multi-agent framework composed of an Interviewer, Session Scribe, Planner, Section Writer, and Session Coordinator, our system iteratively collects user memories, updates their autobiography, and plans for future conversations. In experimental simulations, StorySage demonstrates its ability to navigate multiple sessions and capture user memories across many conversations. User studies (N=28) highlight how StorySage maintains improved conversational flow, narrative completeness, and higher user satisfaction when compared to a baseline. In summary, StorySage contributes both a novel architecture for autobiography writing and insights into how multi-agent systems can enhance human-AI creative partnerships.",
-    "published": "Jun 17",
-    "pdf_url": "https://arxiv.org/pdf/2506.14159v2",
-    "arxiv_url": "http://arxiv.org/abs/2506.14159v2",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang"
     ]
   }
 ]
