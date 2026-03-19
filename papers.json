@@ -1,5 +1,39 @@
 [
   {
+    "title": "Humans and transformer LMs: Abstraction drives language learning",
+    "authors": [
+      "Jasper Jian",
+      "Christopher D. Manning"
+    ],
+    "summary": "Categorization is a core component of human linguistic competence. We investigate how a transformer-based language model (LM) learns linguistic categories by comparing its behaviour over the course of training to behaviours which characterize abstract feature-based and concrete exemplar-based accounts of human language acquisition. We investigate how lexical semantic and syntactic categories emerge using novel divergence-based metrics that track learning trajectories using next-token distributions. In experiments with GPT-2 small, we find that (i) when a construction is learned, abstract class-level behaviour is evident at earlier steps than lexical item-specific behaviour, and (ii) that different linguistic behaviours emerge abruptly in sequence at different points in training, revealing that abstraction plays a key role in how LMs learn. This result informs the models of human language acquisition that LMs may serve as an existence proof for.",
+    "published": "Mar 18",
+    "pdf_url": "https://arxiv.org/pdf/2603.17475v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.17475v1",
+    "queried_author": "Christopher D Manning",
+    "matching_authors": [
+      "Christopher D Manning"
+    ]
+  },
+  {
+    "title": "Argument Reconstruction as Supervision for Critical Thinking in LLMs",
+    "authors": [
+      "Hyun Ryu",
+      "Gyouk Chu",
+      "Gregor Betz",
+      "Eunho Yang",
+      "Carolyn Rose",
+      "Sean Welleck"
+    ],
+    "summary": "To think critically about arguments, human learners are trained to identify, reconstruct, and evaluate arguments. Argument reconstruction is especially important because it makes an argument's underlying inferences explicit. However, it remains unclear whether LLMs can similarly enhance their critical thinking ability by learning to reconstruct arguments. To address this question, we introduce a holistic framework with three contributions. We (1) propose an engine that automatically reconstructs arbitrary arguments (GAAR), (2) synthesize a new high-quality argument reconstruction dataset (Arguinas) using the GAAR engine, and (3) investigate whether learning argument reconstruction benefits downstream critical thinking tasks. Our experimental results show that, across seven critical thinking tasks, models trained to learn argument reconstruction outperform models that do not, with the largest performance gains observed when training on the proposed Arguinas dataset. The source code and dataset will be publicly available.",
+    "published": "Mar 18",
+    "pdf_url": "https://arxiv.org/pdf/2603.17432v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.17432v1",
+    "queried_author": "Sean Welleck",
+    "matching_authors": [
+      "Sean Welleck"
+    ]
+  },
+  {
     "title": "TurnWise: The Gap between Single- and Multi-turn Language Model Capabilities",
     "authors": [
       "Victoria Graf",
@@ -300,8 +334,8 @@
     ],
     "summary": "This paper introduces MR-Search, an in-context meta reinforcement learning (RL) formulation for agentic search with self-reflection. Instead of optimizing a policy within a single independent episode with sparse rewards, MR-Search trains a policy that conditions on past episodes and adapts its search strategy across episodes. MR-Search learns to learn a search strategy with self-reflection, allowing search agents to improve in-context exploration at test-time. Specifically, MR-Search performs cross-episode exploration by generating explicit self-reflections after each episode and leveraging them as additional context to guide subsequent attempts, thereby promoting more effective exploration during test-time. We further introduce a multi-turn RL algorithm that estimates a dense relative advantage at the turn level, enabling fine-grained credit assignment on each episode. Empirical results across various benchmarks demonstrate the advantages of MR-Search over baselines based RL, showing strong generalization and relative improvements of 9.2% to 19.3% across eight benchmarks. Our code and data are available at https://github.com/tengxiao1/MR-Search.",
     "published": "Mar 11",
-    "pdf_url": "https://arxiv.org/pdf/2603.11327v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.11327v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.11327v2",
+    "arxiv_url": "http://arxiv.org/abs/2603.11327v2",
     "queried_author": "Hamish Ivison",
     "matching_authors": [
       "Hamish Ivison",
@@ -15417,67 +15451,6 @@
     "queried_author": "Neel Nanda",
     "matching_authors": [
       "Neel Nanda"
-    ]
-  },
-  {
-    "title": "RoboArena: Distributed Real-World Evaluation of Generalist Robot Policies",
-    "authors": [
-      "Pranav Atreya",
-      "Karl Pertsch",
-      "Tony Lee",
-      "Moo Jin Kim",
-      "Arhan Jain",
-      "Artur Kuramshin",
-      "Clemens Eppner",
-      "Cyrus Neary",
-      "Edward Hu",
-      "Fabio Ramos",
-      "Jonathan Tremblay",
-      "Kanav Arora",
-      "Kirsty Ellis",
-      "Luca Macesanu",
-      "Marcel Torne Villasevil",
-      "Matthew Leonard",
-      "Meedeum Cho",
-      "Ozgur Aslan",
-      "Shivin Dass",
-      "Jie Wang",
-      "William Reger",
-      "Xingfang Yuan",
-      "Xuning Yang",
-      "Abhishek Gupta",
-      "Dinesh Jayaraman",
-      "Glen Berseth",
-      "Kostas Daniilidis",
-      "Roberto Martin-Martin",
-      "Youngwoon Lee",
-      "Percy Liang",
-      "Chelsea Finn",
-      "Sergey Levine"
-    ],
-    "summary": "Comprehensive, unbiased, and comparable evaluation of modern generalist policies is uniquely challenging: existing approaches for robot benchmarking typically rely on heavy standardization, either by specifying fixed evaluation tasks and environments, or by hosting centralized ''robot challenges'', and do not readily scale to evaluating generalist policies across a broad range of tasks and environments. In this work, we propose RoboArena, a new approach for scalable evaluation of generalist robot policies in the real world. Instead of standardizing evaluations around fixed tasks, environments, or locations, we propose to crowd-source evaluations across a distributed network of evaluators. Importantly, evaluators can freely choose the tasks and environments they evaluate on, enabling easy scaling of diversity, but they are required to perform double-blind evaluations over pairs of policies. Then, by aggregating preference feedback from pairwise comparisons across diverse tasks and environments, we can derive a ranking of policies. We instantiate our approach across a network of evaluators at seven academic institutions using the DROID robot platform. Through more than 600 pairwise real-robot evaluation episodes across seven generalist policies, we demonstrate that our crowd-sourced approach can more accurately rank the performance of existing generalist policies than conventional, centralized evaluation approaches, while being more scalable, resilient, and trustworthy. We open our evaluation network to the community and hope that it can enable more accessible comparisons of ...",
-    "published": "Jun 22",
-    "pdf_url": "https://arxiv.org/pdf/2506.18123v2",
-    "arxiv_url": "http://arxiv.org/abs/2506.18123v2",
-    "queried_author": "Percy Liang",
-    "matching_authors": [
-      "Percy Liang"
-    ]
-  },
-  {
-    "title": "LLM Probability Concentration: How Alignment Shrinks the Generative Horizon",
-    "authors": [
-      "Chenghao Yang",
-      "Sida Li",
-      "Ari Holtzman"
-    ],
-    "summary": "Despite their impressive capabilities, aligned large language models (LLMs) often generate outputs that lack diversity. What drives this consistency in the generation? We investigate this phenomenon through the lens of probability concentration in the model's output distribution. To quantify this concentration, we introduce the *Branching Factor* (BF) -- a token-invariant measure of the effective number of plausible next steps during generation. Our empirical analysis reveals two key findings: (1) BF often decreases as generation progresses, suggesting that LLMs become more predictable as they generate. (2) alignment tuning substantially sharpens the model's output distribution from the outset, reducing BF by a factor of 2-5 overall, and up to an order of magnitude (e.g., from 12 to 1.2) at the beginning positions. This stark reduction helps explain why aligned models often appear less sensitive to decoding strategies. Building on this insight, we find this consistency has surprising implications for complex reasoning. Aligned Chain-of-Thought (CoT) models (e.g., DeepSeek-distilled models), for instance, leverage this effect; by generating longer reasoning chains, they push generation into later, more deterministic (lower BF) stages, resulting in more stable outputs. We hypothesize that alignment tuning does not fundamentally change a model's behavior, but instead steers it toward stylistic tokens (e.g., \"Sure\") that unlock low-entropy trajectories already present in the base model. This view is supported by nudging experiments, which show prompting base models with such to...",
-    "published": "Jun 22",
-    "pdf_url": "https://arxiv.org/pdf/2506.17871v3",
-    "arxiv_url": "http://arxiv.org/abs/2506.17871v3",
-    "queried_author": "Ari Holtzman",
-    "matching_authors": [
-      "Ari Holtzman"
     ]
   }
 ]
