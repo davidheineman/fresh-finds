@@ -1,5 +1,120 @@
 [
   {
+    "title": "Reasoning over mathematical objects: on-policy reward modeling and test time aggregation",
+    "authors": [
+      "Pranjal Aggarwal",
+      "Marjan Ghazvininejad",
+      "Seungone Kim",
+      "Ilia Kulikov",
+      "Jack Lanchantin",
+      "Xian Li",
+      "Tianjian Li",
+      "Bo Liu",
+      "Graham Neubig",
+      "Anaelia Ovalle",
+      "Swarnadeep Saha",
+      "Sainbayar Sukhbaatar",
+      "Sean Welleck",
+      "Jason Weston",
+      "Chenxi Whitehouse",
+      "Adina Williams",
+      "Jing Xu",
+      "Ping Yu",
+      "Weizhe Yuan",
+      "Jingyu Zhang",
+      "Wenting Zhao"
+    ],
+    "summary": "The ability to precisely derive mathematical objects is a core requirement for downstream STEM applications, including mathematics, physics, and chemistry, where reasoning must culminate in formally structured expressions. Yet, current LM evaluations of mathematical and scientific reasoning rely heavily on simplified answer formats such as numerical values or multiple choice options due to the convenience of automated assessment. In this paper we provide three contributions for improving reasoning over mathematical objects: (i) we build and release training data and benchmarks for deriving mathematical objects, the Principia suite; (ii) we provide training recipes with strong LLM-judges and verifiers, where we show that on-policy judge training boosts performance; (iii) we show how on-policy training can also be used to scale test-time compute via aggregation. We find that strong LMs such as Qwen3-235B and o3 struggle on Principia, while our training recipes can bring significant improvements over different LLM backbones, while simultaneously improving results on existing numerical and MCQA tasks, demonstrating cross-format generalization of reasoning abilities.",
+    "published": "Mar 19",
+    "pdf_url": "https://arxiv.org/pdf/2603.18886v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.18886v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig",
+      "Sean Welleck",
+      "Seungone Kim"
+    ]
+  },
+  {
+    "title": "ZEBRAARENA: A Diagnostic Simulation Environment for Studying Reasoning-Action Coupling in Tool-Augmented LLMs",
+    "authors": [
+      "Wanjia Zhao",
+      "Ludwig Schmidt",
+      "James Zou",
+      "Vidhisha Balachandran",
+      "Lingjiao Chen"
+    ],
+    "summary": "Tool-augmented large language models (LLMs) must tightly couple multi-step reasoning with external actions, yet existing benchmarks often confound this interplay with complex environment dynamics, memorized knowledge or dataset contamination. In this paper, we introduce ZebraArena, a procedurally generated diagnostic environment for studying reasoning-action coupling in tool-augmented LLMs, with controllable difficulty and a knowledge-minimal design, which limits gains from memorization or dataset contamination. Each task in ZebraArena requires a set of critical information which is available only through targeted tool use, yielding an interpretable interface between external information acquisition and deductive reasoning. This design provides deterministic evaluation via unique solutions, and a theoretical optimal query count for measuring efficient tool use. We show that ZebraArena requires a combination of in-depth reasoning and accurate external tool calling, which remains a challenge as frontier reasoning models such as GPT-5 and Gemini 2.5 Pro only achieves 60% accuracy on the hard instances. We also observe a persistent gaps between theoretical optimality and practical tool usage. For example, GPT-5 uses 70-270% more tool calls than the theoretical optimum. We highlight the key findings in our evaluation, and hope ZebraArena stimulates further research on the interplay between internal reasoning and external action.",
+    "published": "Mar 19",
+    "pdf_url": "https://arxiv.org/pdf/2603.18614v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.18614v1",
+    "queried_author": "Ludwig Schmidt",
+    "matching_authors": [
+      "Ludwig Schmidt"
+    ]
+  },
+  {
+    "title": "Data-efficient pre-training by scaling synthetic megadocs",
+    "authors": [
+      "Konwoo Kim",
+      "Suhas Kotha",
+      "Yejin Choi",
+      "Tatsunori Hashimoto",
+      "Nick Haber",
+      "Percy Liang"
+    ],
+    "summary": "Synthetic data augmentation has emerged as a promising solution when pre-training is constrained by data rather than compute. We study how to design synthetic data algorithms that achieve better loss scaling: not only lowering loss at finite compute but especially as compute approaches infinity. We first show that pre-training on web data mixed with synthetically generated rephrases improves i.i.d. validation loss on the web data, despite the synthetic data coming from an entirely different distribution. With optimal mixing and epoching, loss and benchmark accuracy improve without overfitting as the number of synthetic generations grows, plateauing near $1.48\\times$ data efficiency at 32 rephrases per document. We find even better loss scaling under a new perspective: synthetic generations from the same document can form a single substantially longer megadocument instead of many short documents. We show two ways to construct megadocs: stitching synthetic rephrases from the same web document or stretching a document by inserting rationales. Both methods improve i.i.d. loss, downstream benchmarks, and especially long-context loss relative to simple rephrasing, increasing data efficiency from $1.48\\times$ to $1.80\\times$ at $32$ generations per document. Importantly, the improvement of megadocs over simple rephrasing widens as more synthetic data is generated. Our results show how to design synthetic data algorithms that benefit more from increasing compute when data-constrained.",
+    "published": "Mar 19",
+    "pdf_url": "https://arxiv.org/pdf/2603.18534v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.18534v1",
+    "queried_author": "Percy Liang",
+    "matching_authors": [
+      "Percy Liang",
+      "Tatsunori Hashimoto",
+      "Yejin Choi"
+    ]
+  },
+  {
+    "title": "Multi-Domain Causal Empirical Bayes Under Linear Mixing",
+    "authors": [
+      "Bohan Wu",
+      "Julius von K\u00fcgelgen",
+      "David M. Blei"
+    ],
+    "summary": "Causal representation learning (CRL) aims to learn low-dimensional causal latent variables from high-dimensional observations. While identifiability has been extensively studied for CRL, estimation has been less explored. In this paper, we explore the use of empirical Bayes (EB) to estimate causal representations. In particular, we consider the problem of learning from data from multiple domains, where differences between domains are modeled by interventions in a shared underlying causal model. Multi-domain CRL naturally poses a simultaneous inference problem that EB is designed to tackle. Here, we propose an EB $f$-modeling algorithm that improves the quality of learned causal variables by exploiting invariant structure within and across domains. Specifically, we consider a linear measurement model and interventional priors arising from a shared acyclic SCM. When the graph and intervention targets are known, we develop an EM-style algorithm based on causally structured score matching. We further discuss EB $\\rmg$-modeling in the context of existing CRL approaches. In experiments on synthetic data, our proposed method achieves more accurate estimation than other methods for CRL.",
+    "published": "Mar 19",
+    "pdf_url": "https://arxiv.org/pdf/2603.18404v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.18404v1",
+    "queried_author": "David M. Blei",
+    "matching_authors": [
+      "David M. Blei"
+    ]
+  },
+  {
+    "title": "CodeScout: An Effective Recipe for Reinforcement Learning of Code Search Agents",
+    "authors": [
+      "Lintang Sutawika",
+      "Aditya Bharat Soni",
+      "Bharath Sriraam R R",
+      "Apurva Gandhi",
+      "Taha Yassine",
+      "Sanidhya Vijayvargiya",
+      "Yuchen Li",
+      "Xuhui Zhou",
+      "Yilin Zhang",
+      "Leander Melroy Maben",
+      "Graham Neubig"
+    ],
+    "summary": "A prerequisite for coding agents to perform tasks on large repositories is code localization - the identification of relevant files, classes, and functions to work on. While repository-level code localization has been performed using embedding-based retrieval approaches such as vector search, recent work has focused on developing agents to localize relevant code either as a standalone precursor to or interleaved with performing actual work. Most prior methods on agentic code search equip the agent with complex, specialized tools, such as repository graphs derived from static analysis. In this paper, we demonstrate that, with an effective reinforcement learning recipe, a coding agent equipped with nothing more than a standard Unix terminal can be trained to achieve strong results. Our experiments on three benchmarks (SWE-Bench Verified, Pro, and Lite) reveal that our models consistently achieve superior or competitive performance over 2-18x larger base and post-trained LLMs and sometimes approach performance provided by closed models like Claude Sonnet, even when using specialized scaffolds. Our work particularly focuses on techniques for re-purposing existing coding agent environments for code search, reward design, and RL optimization. We release the resulting model family, CodeScout, along with all our code and data for the community to build upon.",
+    "published": "Mar 18",
+    "pdf_url": "https://arxiv.org/pdf/2603.17829v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.17829v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
     "title": "Humans and transformer LMs: Abstraction drives language learning",
     "authors": [
       "Jasper Jian",
@@ -1170,6 +1285,30 @@
     "matching_authors": [
       "Ludwig Schmidt",
       "Percy Liang"
+    ]
+  },
+  {
+    "title": "TherapyGym: Evaluating and Aligning Clinical Fidelity and Safety in Therapy Chatbots",
+    "authors": [
+      "Fangrui Huang",
+      "Souhad Chbeir",
+      "Arpandeep Khatua",
+      "Sheng Wang",
+      "Sijun Tan",
+      "Kenan Ye",
+      "Lily Bailey",
+      "Merryn Daniel",
+      "Ryan Louie",
+      "Sanmi Koyejo",
+      "Ehsan Adeli"
+    ],
+    "summary": "Large language models (LLMs) are increasingly used for mental-health support; yet prevailing evaluation methods--fluency metrics, preference tests, and generic dialogue benchmarks--fail to capture the clinically critical dimensions of psychotherapy. We introduce THERAPYGYM, a framework that evaluates and improves therapy chatbots along two clinical pillars: fidelity and safety. Fidelity is measured using the Cognitive Therapy Rating Scale (CTRS), implemented as an automated pipeline that scores adherence to CBT techniques over multi-turn sessions. Safety is assessed using a multi-label annotation scheme, covering therapy-specific risks (e.g., failing to address harm or abuse). To mitigate bias and unreliability in LLM-based judges, we further release THERAPYJUDGEBENCH, a validation set of 116 dialogues with 1,270 expert ratings for auditing and calibration against licensed clinicians. THERAPYGYM also serves as a training harness: CTRS and safety-based rewards drive RL with configurable patient simulations spanning diverse symptom profiles. Models trained in THERAPYGYM improve on expert ratings, with average CTRS rising from 0.10 to 0.60 (and 0.16 to 0.59 under LLM judges). Our work enables scalable development of therapy chatbots that are faithful to evidence-based practice and safer in high-stakes use.",
+    "published": "Feb 23",
+    "pdf_url": "https://arxiv.org/pdf/2603.18008v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.18008v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
     ]
   },
   {
@@ -15336,121 +15475,6 @@
     "matching_authors": [
       "Jesse Dodge",
       "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "Thought Anchors: Which LLM Reasoning Steps Matter?",
-    "authors": [
-      "Paul C. Bogdan",
-      "Uzay Macar",
-      "Neel Nanda",
-      "Arthur Conmy"
-    ],
-    "summary": "Current frontier large-language models rely on reasoning to achieve state-of-the-art performance. Many existing interpretability are limited in this area, as standard methods have been designed to study single forward passes of a model rather than the multi-token computational steps that unfold during reasoning. We argue that analyzing reasoning traces at the sentence level is a promising approach to understanding reasoning processes. We introduce a black-box method that measures each sentence's counterfactual importance by repeatedly sampling replacement sentences from the model, filtering for semantically different ones, and continuing the chain of thought from that point onwards to quantify the sentence's impact on the distribution of final answers. We discover that certain sentences can have an outsized impact on the trajectory of the reasoning trace and final answer. We term these sentences \\textit{thought anchors}. These are generally planning or uncertainty management sentences, and specialized attention heads consistently attend from subsequent sentences to thought anchors. We further show that examining sentence-sentence causal links within a reasoning trace gives insight into a model's behavior. Such information can be used to predict a problem's difficulty and the extent different question domains involve sequential or diffuse reasoning. As a proof-of-concept, we demonstrate that our techniques together provide a practical toolkit for analyzing reasoning models by conducting a detailed case study of how the model solves a difficult math problem, finding that our ...",
-    "published": "Jun 23",
-    "pdf_url": "https://arxiv.org/pdf/2506.19143v4",
-    "arxiv_url": "http://arxiv.org/abs/2506.19143v4",
-    "queried_author": "Neel Nanda",
-    "matching_authors": [
-      "Neel Nanda"
-    ]
-  },
-  {
-    "title": "Broken Tokens? Your Language Model can Secretly Handle Non-Canonical Tokenizations",
-    "authors": [
-      "Brian Siyuan Zheng",
-      "Alisa Liu",
-      "Orevaoghene Ahia",
-      "Jonathan Hayase",
-      "Yejin Choi",
-      "Noah A. Smith"
-    ],
-    "summary": "Modern tokenizers employ deterministic algorithms to map text into a single \"canonical\" token sequence, yet the same string can be encoded as many non-canonical tokenizations using the tokenizer vocabulary. In this work, we investigate the robustness of LMs to text encoded with non-canonical tokenizations entirely unseen during training. Surprisingly, when evaluated across 20 benchmarks, we find that instruction-tuned models retain up to 93.4% of their original performance when given a randomly sampled tokenization, and 90.8% with character-level tokenization. We see that overall stronger models tend to be more robust, and robustness diminishes as the tokenization departs farther from the canonical form. Motivated by these results, we then identify settings where non-canonical tokenization schemes can *improve* performance, finding that character-level segmentation improves string manipulation and code understanding tasks by up to +14%, and right-aligned digit grouping enhances large-number arithmetic by +33%. Finally, we investigate the source of this robustness, finding that it arises in the instruction-tuning phase. We show that while both base and post-trained models grasp the semantics of non-canonical tokenizations (perceiving them as containing misspellings), base models try to mimic the imagined mistakes and degenerate into nonsensical output, while post-trained models are committed to fluent responses. Overall, our findings suggest that models are less tied to their tokenizer than previously believed, and demonstrate the promise of intervening on tokenization at in...",
-    "published": "Jun 23",
-    "pdf_url": "https://arxiv.org/pdf/2506.19004v2",
-    "arxiv_url": "http://arxiv.org/abs/2506.19004v2",
-    "queried_author": "Noah A. Smith",
-    "matching_authors": [
-      "Noah A. Smith",
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "OMEGA: Can LLMs Reason Outside the Box in Math? Evaluating Exploratory, Compositional, and Transformative Generalization",
-    "authors": [
-      "Yiyou Sun",
-      "Shawn Hu",
-      "Georgia Zhou",
-      "Ken Zheng",
-      "Hannaneh Hajishirzi",
-      "Nouha Dziri",
-      "Dawn Song"
-    ],
-    "summary": "Recent large-scale language models (LLMs) with long Chain-of-Thought reasoning-such as DeepSeek-R1-have achieved impressive results on Olympiad-level mathematics benchmarks. However, they often rely on a narrow set of strategies and struggle with problems that require a novel way of thinking. To systematically investigate these limitations, we introduce OMEGA-Out-of-distribution Math Problems Evaluation with 3 Generalization Axes-a controlled yet diverse benchmark designed to evaluate three axes of out-of-distribution generalization, inspired by Boden's typology of creativity: (1) Exploratory-applying known problem solving skills to more complex instances within the same problem domain; (2) Compositional-combining distinct reasoning skills, previously learned in isolation, to solve novel problems that require integrating these skills in new and coherent ways; and (3) Transformative-adopting novel, often unconventional strategies by moving beyond familiar approaches to solve problems more effectively. OMEGA consists of programmatically generated training-test pairs derived from templated problem generators across geometry, number theory, algebra, combinatorics, logic, and puzzles, with solutions verified using symbolic, numerical, or graphical methods. We evaluate frontier (or top-tier) LLMs and observe sharp performance degradation as problem complexity increases. Moreover, we fine-tune the Qwen-series models across all generalization settings and observe notable improvements in exploratory generalization, while compositional generalization remains limited and transformativ...",
-    "published": "Jun 23",
-    "pdf_url": "https://arxiv.org/pdf/2506.18880v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.18880v1",
-    "queried_author": "Hannaneh Hajishirzi",
-    "matching_authors": [
-      "Hannaneh Hajishirzi"
-    ]
-  },
-  {
-    "title": "Quantifying Uncertainty in the Presence of Distribution Shifts",
-    "authors": [
-      "Yuli Slavutsky",
-      "David M. Blei"
-    ],
-    "summary": "Neural networks make accurate predictions but often fail to provide reliable uncertainty estimates, especially under covariate distribution shifts between training and testing. To address this problem, we propose a Bayesian framework for uncertainty estimation that explicitly accounts for covariate shifts. While conventional approaches rely on fixed priors, the key idea of our method is an adaptive prior, conditioned on both training and new covariates. This prior naturally increases uncertainty for inputs that lie far from the training distribution in regions where predictive performance is likely to degrade. To efficiently approximate the resulting posterior predictive distribution, we employ amortized variational inference. Finally, we construct synthetic environments by drawing small bootstrap samples from the training data, simulating a range of plausible covariate shift using only the original dataset. We evaluate our method on both synthetic and real-world data. It yields substantially improved uncertainty estimates under distribution shifts.",
-    "published": "Jun 23",
-    "pdf_url": "https://arxiv.org/pdf/2506.18283v2",
-    "arxiv_url": "http://arxiv.org/abs/2506.18283v2",
-    "queried_author": "David M. Blei",
-    "matching_authors": [
-      "David M. Blei"
-    ]
-  },
-  {
-    "title": "Shrinking the Generation-Verification Gap with Weak Verifiers",
-    "authors": [
-      "Jon Saad-Falcon",
-      "E. Kelly Buchanan",
-      "Mayee F. Chen",
-      "Tzu-Heng Huang",
-      "Brendan McLaughlin",
-      "Tanvir Bhathal",
-      "Shang Zhu",
-      "Ben Athiwaratkun",
-      "Frederic Sala",
-      "Scott Linderman",
-      "Azalia Mirhoseini",
-      "Christopher R\u00e9"
-    ],
-    "summary": "Verifiers can improve language model capabilities by scoring and ranking responses from generated candidates. Currently, high-quality verifiers are either unscalable (e.g., humans) or limited in utility (e.g., tools like Lean). While LM judges and reward models have become broadly useful as general-purpose verifiers, a significant performance gap remains between them and oracle verifiers (verifiers with perfect accuracy). To help close this gap, we introduce Weaver, a framework for designing a strong verifier by combining multiple weak, imperfect verifiers. We find weighted ensembles of verifiers, which typically require learning from labeled data, significantly outperform unweighted combinations due to differences in verifier accuracies. To reduce dependency on labeled data, Weaver leverages weak supervision to estimate each verifier's accuracy and combines outputs into a unified score that better reflects true response quality. However, directly applying weak supervision algorithms poses challenges, including inconsistent verifier output formats and handling low-quality verifiers. Weaver addresses these using dataset statistics to normalize outputs and filter specific verifiers. We study Weaver's effectiveness in test-time repeated sampling, where a model generates multiple candidate responses and selects one. Our evaluations show Weaver significantly improves over Pass@1-performance when selecting the first candidate-across reasoning and math tasks, achieving o3-mini-level accuracy with Llama 3.3 70B Instruct as generator, and an ensemble of 70B or smaller judge and rewa...",
-    "published": "Jun 22",
-    "pdf_url": "https://arxiv.org/pdf/2506.18203v2",
-    "arxiv_url": "http://arxiv.org/abs/2506.18203v2",
-    "queried_author": "Christopher R\u00e9",
-    "matching_authors": [
-      "Christopher R\u00e9"
-    ]
-  },
-  {
-    "title": "Understanding Reasoning in Thinking Language Models via Steering Vectors",
-    "authors": [
-      "Constantin Venhoff",
-      "Iv\u00e1n Arcuschin",
-      "Philip Torr",
-      "Arthur Conmy",
-      "Neel Nanda"
-    ],
-    "summary": "Recent advances in large language models (LLMs) have led to the development of thinking language models that generate extensive internal reasoning chains before producing responses. While these models achieve improved performance, controlling their reasoning processes remains challenging. This work presents a steering approach for thinking LLMs by analyzing and manipulating specific reasoning behaviors in DeepSeek-R1-Distill models. Through a systematic experiment on 500 tasks across 10 diverse categories, we identify several reasoning behaviors exhibited by thinking models, including expressing uncertainty, generating examples for hypothesis validation, and backtracking in reasoning chains. We demonstrate that these behaviors are mediated by linear directions in the model's activation space and can be controlled using steering vectors. By extracting and applying these vectors, we provide a method to modulate specific aspects of the model's reasoning process, such as its tendency to backtrack or express uncertainty. Our approach offers practical tools for steering reasoning processes in thinking models in a controlled and interpretable manner. We validate our steering method using three DeepSeek-R1-Distill models, demonstrating consistent control across different model architectures.",
-    "published": "Jun 22",
-    "pdf_url": "https://arxiv.org/pdf/2506.18167v4",
-    "arxiv_url": "http://arxiv.org/abs/2506.18167v4",
-    "queried_author": "Neel Nanda",
-    "matching_authors": [
-      "Neel Nanda"
     ]
   }
 ]
