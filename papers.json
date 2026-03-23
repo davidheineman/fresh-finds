@@ -1,5 +1,26 @@
 [
   {
+    "title": "Pitfalls in Evaluating Interpretability Agents",
+    "authors": [
+      "Tal Haklay",
+      "Nikhil Prakash",
+      "Sana Pandey",
+      "Antonio Torralba",
+      "Aaron Mueller",
+      "Jacob Andreas",
+      "Tamar Rott Shaham",
+      "Yonatan Belinkov"
+    ],
+    "summary": "Automated interpretability systems aim to reduce the need for human labor and scale analysis to increasingly large models and diverse tasks. Recent efforts toward this goal leverage large language models (LLMs) at increasing levels of autonomy, ranging from fixed one-shot workflows to fully autonomous interpretability agents. This shift creates a corresponding need to scale evaluation approaches to keep pace with both the volume and complexity of generated explanations. We investigate this challenge in the context of automated circuit analysis -- explaining the roles of model components when performing specific tasks. To this end, we build an agentic system in which a research agent iteratively designs experiments and refines hypotheses. When evaluated against human expert explanations across six circuit analysis tasks in the literature, the system appears competitive. However, closer examination reveals several pitfalls of replication-based evaluation: human expert explanations can be subjective or incomplete, outcome-based comparisons obscure the research process, and LLM-based systems may reproduce published findings via memorization or informed guessing. To address some of these pitfalls, we propose an unsupervised intrinsic evaluation based on the functional interchangeability of model components. Our work demonstrates fundamental challenges in evaluating complex automated interpretability systems and reveals key limitations of replication-based evaluation.",
+    "published": "Mar 20",
+    "pdf_url": "https://arxiv.org/pdf/2603.20101v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.20101v1",
+    "queried_author": "Jacob Andreas",
+    "matching_authors": [
+      "Jacob Andreas"
+    ]
+  },
+  {
     "title": "FDARxBench: Benchmarking Regulatory and Clinical Reasoning on FDA Generic Drug Assessment",
     "authors": [
       "Betty Xiong",
@@ -448,8 +469,8 @@
     ],
     "summary": "Multimodal agents offer a promising path to automating complex document-intensive workflows. Yet, a critical question remains: do these agents demonstrate genuine strategic reasoning, or merely stochastic trial-and-error search? To address this, we introduce MADQA, a benchmark of 2,250 human-authored questions grounded in 800 heterogeneous PDF documents. Guided by Classical Test Theory, we design it to maximize discriminative power across varying levels of agentic abilities. To evaluate agentic behaviour, we introduce a novel evaluation protocol measuring the accuracy-effort trade-off. Using this framework, we show that while the best agents can match human searchers in raw accuracy, they succeed on largely different questions and rely on brute-force search to compensate for weak strategic planning. They fail to close the nearly 20% gap to oracle performance, persisting in unproductive loops. We release the dataset and evaluation harness to help facilitate the transition from brute-force retrieval to calibrated, efficient reasoning.",
     "published": "Mar 12",
-    "pdf_url": "https://arxiv.org/pdf/2603.12180v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.12180v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.12180v2",
+    "arxiv_url": "http://arxiv.org/abs/2603.12180v2",
     "queried_author": "Cl\u00e9mentine Fourrier",
     "matching_authors": [
       "Cl\u00e9mentine Fourrier"
@@ -15451,24 +15472,6 @@
     "queried_author": "Karthik Narasimhan",
     "matching_authors": [
       "Karthik Narasimhan"
-    ]
-  },
-  {
-    "title": "Report on NSF Workshop on Science of Safe AI",
-    "authors": [
-      "Rajeev Alur",
-      "Greg Durrett",
-      "Hadas Kress-Gazit",
-      "Corina P\u0103s\u0103reanu",
-      "Ren\u00e9 Vidal"
-    ],
-    "summary": "Recent advances in machine learning, particularly the emergence of foundation models, are leading to new opportunities to develop technology-based solutions to societal problems. However, the reasoning and inner workings of today's complex AI models are not transparent to the user, and there are no safety guarantees regarding their predictions. Consequently, to fulfill the promise of AI, we must address the following scientific challenge: how to develop AI-based systems that are not only accurate and performant but also safe and trustworthy?\n  The criticality of safe operation is particularly evident for autonomous systems for control and robotics, and was the catalyst for the Safe Learning Enabled Systems (SLES) program at NSF. For the broader class of AI applications, such as users interacting with chatbots and clinicians receiving treatment recommendations, safety is, while no less important, less well-defined with context-dependent interpretations. This motivated the organization of a day-long workshop, held at University of Pennsylvania on February 26, 2025, to bring together investigators funded by the NSF SLES program with a broader pool of researchers studying AI safety. This report is the result of the discussions in the working groups that addressed different aspects of safety at the workshop. The report articulates a new research agenda focused on developing theory, methods, and tools that will provide the foundations of the next generation of AI-enabled systems.",
-    "published": "Jun 24",
-    "pdf_url": "https://arxiv.org/pdf/2506.22492v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.22492v1",
-    "queried_author": "Greg Durrett",
-    "matching_authors": [
-      "Greg Durrett"
     ]
   }
 ]
