@@ -1,5 +1,26 @@
 [
   {
+    "title": "FDARxBench: Benchmarking Regulatory and Clinical Reasoning on FDA Generic Drug Assessment",
+    "authors": [
+      "Betty Xiong",
+      "Jillian Fisher",
+      "Benjamin Newman",
+      "Meng Hu",
+      "Shivangi Gupta",
+      "Yejin Choi",
+      "Lanyan Fang",
+      "Russ B Altman"
+    ],
+    "summary": "We introduce an expert curated, real-world benchmark for evaluating document-grounded question-answering (QA) motivated by generic drug assessment, using the U.S. Food and Drug Administration (FDA) drug label documents. Drug labels contain rich but heterogeneous clinical and regulatory information, making accurate question answering difficult for current language models. In collaboration with FDA regulatory assessors, we introduce FDARxBench, and construct a multi-stage pipeline for generating high-quality, expert curated, QA examples spanning factual, multi-hop, and refusal tasks, and design evaluation protocols to assess both open-book and closed-book reasoning. Experiments across proprietary and open-weight models reveal substantial gaps in factual grounding, long-context retrieval, and safe refusal behavior. While motivated by FDA generic drug assessment needs, this benchmark also provides a substantial foundation for challenging regulatory-grade evaluation of label comprehension. The benchmark is designed to support evaluation of LLM behavior on drug-label questions.",
+    "published": "Mar 20",
+    "pdf_url": "https://arxiv.org/pdf/2603.19539v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.19539v1",
+    "queried_author": "Yejin Choi",
+    "matching_authors": [
+      "Yejin Choi"
+    ]
+  },
+  {
     "title": "Reasoning over mathematical objects: on-policy reward modeling and test time aggregation",
     "authors": [
       "Pranjal Aggarwal",
@@ -566,6 +587,24 @@
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "Speculating Experts Accelerates Inference for Mixture-of-Experts",
+    "authors": [
+      "Vivan Madan",
+      "Prajwal Singhania",
+      "Abhinav Bhatele",
+      "Tom Goldstein",
+      "Ashwinee Panda"
+    ],
+    "summary": "Mixture-of-Experts (MoE) models have gained popularity as a means of scaling the capacity of large language models (LLMs) while maintaining sparse activations and reduced per-token compute. However, in memory-constrained inference settings, expert weights must be offloaded to CPU, creating a performance bottleneck from CPU-GPU transfers during decoding. We propose an expert prefetching scheme that leverages currently computed internal model representations to speculate future experts, enabling memory transfers to overlap with computation. Across multiple MoE architectures, we demonstrate that future experts can be reliably predicted by these internal representations. We also demonstrate that executing speculated experts generally maintains downstream task accuracy, thus preserving more effective compute-memory overlap by eliminating the need to re-fetch true router-selected experts. Integrated into an optimized inference engine, our approach achieves up to 14\\% reduction in time per output token (TPOT) over on-demand loading of experts from CPU memory. For MoEs where speculative execution alone yields suboptimal accuracy, we further examine lightweight estimators that improve expert prediction hit rates, thereby reducing performance degradation. Our code is released in open-source at https://github.com/axonn-ai/yalis/tree/offload_prefetch.",
+    "published": "Mar 09",
+    "pdf_url": "https://arxiv.org/pdf/2603.19289v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.19289v1",
+    "queried_author": "Ashwinee Panda",
+    "matching_authors": [
+      "Ashwinee Panda"
     ]
   },
   {
@@ -15430,51 +15469,6 @@
     "queried_author": "Greg Durrett",
     "matching_authors": [
       "Greg Durrett"
-    ]
-  },
-  {
-    "title": "From Reproduction to Replication: Evaluating Research Agents with Progressive Code Masking",
-    "authors": [
-      "Gyeongwon James Kim",
-      "Alex Wilf",
-      "Louis-Philippe Morency",
-      "Daniel Fried"
-    ],
-    "summary": "Recent progress in autonomous code generation has fueled excitement around AI agents capable of accelerating scientific discovery by running experiments. However, there is currently no benchmark that evaluates whether such agents can implement scientific ideas when given varied amounts of code as a starting point, interpolating between reproduction (running code) and from-scratch replication (fully re-implementing and running code). We introduce AutoExperiment, a benchmark that evaluates AI agents' ability to implement and run machine learning experiments based on natural language descriptions in research papers. In each task, agents are given a research paper, a codebase with key functions masked out, and a command to run the experiment. The goal is to generate the missing code, execute the experiment in a sandboxed environment, and reproduce the results. AutoExperiment scales in difficulty by varying the number of missing functions $n$, ranging from partial reproduction to full replication. We evaluate state-of-the-art agents and find that performance degrades rapidly as $n$ increases. Agents that can dynamically interact with the environment (e.g. to debug their code) can outperform agents in fixed \"agentless\" harnesses, and there exists a significant gap between single-shot and multi-trial success rates (Pass@1 vs. Pass@5), motivating verifier approaches to our benchmark. Our findings highlight critical challenges in long-horizon code generation, context retrieval, and autonomous experiment execution, establishing AutoExperiment as a new benchmark for evaluating progres...",
-    "published": "Jun 24",
-    "pdf_url": "https://arxiv.org/pdf/2506.19724v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.19724v1",
-    "queried_author": "Daniel Fried",
-    "matching_authors": [
-      "Daniel Fried"
-    ]
-  },
-  {
-    "title": "Position: Machine Learning Conferences Should Establish a \"Refutations and Critiques\" Track",
-    "authors": [
-      "Rylan Schaeffer",
-      "Joshua Kazdan",
-      "Yegor Denisov-Blanch",
-      "Brando Miranda",
-      "Matthias Gerstgrasser",
-      "Susan Zhang",
-      "Andreas Haupt",
-      "Isha Gupta",
-      "Elyas Obbad",
-      "Jesse Dodge",
-      "Jessica Zosa Forde",
-      "Francesco Orabona",
-      "Sanmi Koyejo",
-      "David Donoho"
-    ],
-    "summary": "Science progresses by iteratively advancing and correcting humanity's understanding of the world. In machine learning (ML) research, rapid advancements have led to an explosion of publications, but have also led to misleading, incorrect, flawed or perhaps even fraudulent studies being accepted and sometimes highlighted at ML conferences due to the fallibility of peer review. While such mistakes are understandable, ML conferences do not offer robust processes to help the field systematically correct when such errors are made. This position paper argues that ML conferences should establish a dedicated \"Refutations and Critiques\" (R&C) Track. This R&C Track would provide a high-profile, reputable platform to support vital research that critically challenges prior research, thereby fostering a dynamic self-correcting research ecosystem. We discuss key considerations including track design, review principles, potential pitfalls, and provide an illustrative example submission concerning a recent ICLR 2025 Oral. We conclude that ML conferences should create official, reputable mechanisms to help ML research self-correct.",
-    "published": "Jun 24",
-    "pdf_url": "https://arxiv.org/pdf/2506.19882v3",
-    "arxiv_url": "http://arxiv.org/abs/2506.19882v3",
-    "queried_author": "Jesse Dodge",
-    "matching_authors": [
-      "Jesse Dodge",
-      "Sanmi Koyejo"
     ]
   }
 ]
