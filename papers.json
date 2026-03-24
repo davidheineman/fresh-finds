@@ -1,5 +1,39 @@
 [
   {
+    "title": "Greater accessibility can amplify discrimination in generative AI",
+    "authors": [
+      "Carolin Holtermann",
+      "Minh Duc Bui",
+      "Kaitlyn Zhou",
+      "Valentin Hofmann",
+      "Katharina von der Wense",
+      "Anne Lauscher"
+    ],
+    "summary": "Hundreds of millions of people rely on large language models (LLMs) for education, work, and even healthcare. Yet these models are known to reproduce and amplify social biases present in their training data. Moreover, text-based interfaces remain a barrier for many, for example, users with limited literacy, motor impairments, or mobile-only devices. Voice interaction promises to expand accessibility, but unlike text, speech carries identity cues that users cannot easily mask, raising concerns about whether accessibility gains may come at the cost of equitable treatment. Here we show that audio-enabled LLMs exhibit systematic gender discrimination, shifting responses toward gender-stereotyped adjectives and occupations solely on the basis of speaker voice, and amplifying bias beyond that observed in text-based interaction. Thus, voice interfaces do not merely extend text models to a new modality but introduce distinct bias mechanisms tied to paralinguistic cues. Complementary survey evidence ($n=1,000$) shows that infrequent chatbot users are most hesitant to undisclosed attribute inference and most likely to disengage when such practices are revealed. To demonstrate a potential mitigation strategy, we show that pitch manipulation can systematically regulate gender-discriminatory outputs. Overall, our findings reveal a critical tension in AI development: efforts to expand accessibility through voice interfaces simultaneously create new pathways for discrimination, demanding that fairness and accessibility be addressed in tandem.",
+    "published": "Mar 23",
+    "pdf_url": "https://arxiv.org/pdf/2603.22260v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.22260v1",
+    "queried_author": "Valentin Hofmann",
+    "matching_authors": [
+      "Valentin Hofmann"
+    ]
+  },
+  {
+    "title": "Effective Strategies for Asynchronous Software Engineering Agents",
+    "authors": [
+      "Jiayi Geng",
+      "Graham Neubig"
+    ],
+    "summary": "AI agents have become increasingly capable at isolated software engineering (SWE) tasks such as resolving issues on Github. Yet long-horizon tasks involving multiple interdependent subtasks still pose challenges both with respect to accuracy, and with respect to timely completion. A natural approach to solving these long-horizon tasks in a timely manner is asynchronous multi-agent collaboration, where multiple agents work on different parts of the task at the same time. But effective application of multi-agent systems has proven surprisingly difficult: concurrent edits by multiple agents interfere with each other, dependencies are difficult to synchronize, and combining partial progress into a coherent whole is challenging. On the other hand, human developers have long relied on mature collaboration infrastructure to manage these challenges in large software projects. Inspired by these collaboration primitives, we introduce Centralized Asynchronous Isolated Delegation (CAID), a structured multi-agent coordination paradigm grounded in three core SWE primitives: centralized task delegation, asynchronous execution, and isolated workspaces. CAID constructs dependency-aware task plans through a central manager, executes subtasks concurrently in isolated workspaces, and consolidates progress via structured integration with executable test-based verification. In empirical evaluation, we find that CAID improves accuracy over single-agent baselines by 26.7% absolute on paper reproduction tasks (PaperBench) and 14.3% on Python library development tasks (Commit0). Through systematic a...",
+    "published": "Mar 23",
+    "pdf_url": "https://arxiv.org/pdf/2603.21489v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.21489v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
     "title": "Alignment Whack-a-Mole : Finetuning Activates Verbatim Recall of Copyrighted Books in Large Language Models",
     "authors": [
       "Xinyue Liu",
@@ -8033,6 +8067,26 @@
     ]
   },
   {
+    "title": "BuilderBench: The Building Blocks of Intelligent Agents",
+    "authors": [
+      "Raj Ghugare",
+      "Roger Creus Castanyer",
+      "Catherine Ji",
+      "Kathryn Wantlin",
+      "Jin Schofield",
+      "Karthik Narasimhan",
+      "Benjamin Eysenbach"
+    ],
+    "summary": "Today's AI models learn primarily through mimicry and refining, so it is not surprising that they struggle to solve problems beyond the limits set by existing data. To solve novel problems, agents should acquire skills for exploring and learning through experience. Finding a scalable learning mechanism for developing agents that learn through interaction remains a major open problem. In this work, we introduce BuilderBench, a benchmark to accelerate research into agent pre-training that centers open-ended exploration. BuilderBench requires agents to learn how to build any structure using blocks. BuilderBench is equipped with $(1)$ a hardware accelerated simulator of a robotic agent interacting with various physical blocks, and $(2)$ a task-suite with over 42 diverse target structures that are carefully curated to test an understanding of physics, mathematics, and long-horizon planning. During training, agents have to explore and learn general principles about the environment without any external supervision. During evaluation, agents have to build the unseen target structures from the task suite. Solving these tasks requires a sort of \\emph{embodied reasoning} that is not reflected in words but rather in actions, experimenting with different strategies and piecing them together. Our experiments show that many of these tasks challenge the current iteration of algorithms. Hence, we also provide a ``training wheels'' protocol, in which agents are trained and evaluated to build a single target structure from the task suite. Finally, we provide single-file implementations of six...",
+    "published": "Oct 07",
+    "pdf_url": "https://arxiv.org/pdf/2510.06288v2",
+    "arxiv_url": "http://arxiv.org/abs/2510.06288v2",
+    "queried_author": "Karthik Narasimhan",
+    "matching_authors": [
+      "Karthik Narasimhan"
+    ]
+  },
+  {
     "title": "Learning to Interpret Weight Differences in Language Models",
     "authors": [
       "Avichal Goel",
@@ -15338,62 +15392,6 @@
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "Can Gradient Descent Simulate Prompting?",
-    "authors": [
-      "Eric Zhang",
-      "Leshem Choshen",
-      "Jacob Andreas"
-    ],
-    "summary": "There are two primary ways of incorporating new information into a language model (LM): changing its prompt or changing its parameters, e.g. via fine-tuning. Parameter updates incur no long-term storage cost for model changes. However, for many model updates, prompting is significantly more effective: prompted models can generalize robustly from single examples and draw logical inferences that do not occur under standard fine-tuning. Can models be modified so that fine-tuning does emulate prompting? This paper describes a method for meta-training LMs such that gradient updates emulate the effects of conditioning on new information. Our approach uses tools from gradient-based meta-learning but uses an LM's own prompted predictions as targets, eliminating the need for ground-truth labels. Subsequent gradient descent training recovers some (and occasionally all) of prompted model performance -- showing improvement on the ``reversal curse'' tasks, and answering questions about text passages after a single gradient update. These results suggest that, with appropriate initialization, gradient descent can be surprisingly expressive. Our results suggest new avenues for long-context modeling and offer insight into the generalization capabilities of gradient-based learning.",
-    "published": "Jun 26",
-    "pdf_url": "https://arxiv.org/pdf/2506.20989v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.20989v1",
-    "queried_author": "Jacob Andreas",
-    "matching_authors": [
-      "Jacob Andreas"
-    ]
-  },
-  {
-    "title": "FineWeb2: One Pipeline to Scale Them All -- Adapting Pre-Training Data Processing to Every Language",
-    "authors": [
-      "Guilherme Penedo",
-      "Hynek Kydl\u00ed\u010dek",
-      "Vinko Sabol\u010dec",
-      "Bettina Messmer",
-      "Negar Foroutan",
-      "Amir Hossein Kargaran",
-      "Colin Raffel",
-      "Martin Jaggi",
-      "Leandro Von Werra",
-      "Thomas Wolf"
-    ],
-    "summary": "Pre-training state-of-the-art large language models (LLMs) requires vast amounts of clean and diverse text data. While the open development of large high-quality English pre-training datasets has seen substantial recent progress, training performant multilingual LLMs remains a challenge, in large part due to the inherent difficulty of tailoring filtering and deduplication pipelines to a large number of languages. In this work, we introduce a new pre-training dataset curation pipeline based on FineWeb that can be automatically adapted to support any language. We extensively ablate our pipeline design choices on a set of nine diverse languages, guided by a set of meaningful and informative evaluation tasks that were chosen through a novel selection process based on measurable criteria. Ultimately, we show that our pipeline can be used to create non-English corpora that produce more performant models than prior datasets. We additionally introduce a straightforward and principled approach to rebalance datasets that takes into consideration both duplication count and quality, providing an additional performance uplift. Finally, we scale our pipeline to over 1000 languages using almost 100 Common Crawl snapshots to produce FineWeb2, a new 20 terabyte (5 billion document) multilingual dataset which we release along with our pipeline, training, and evaluation codebases.",
-    "published": "Jun 26",
-    "pdf_url": "https://arxiv.org/pdf/2506.20920v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.20920v1",
-    "queried_author": "Colin Raffel",
-    "matching_authors": [
-      "Colin Raffel"
-    ]
-  },
-  {
-    "title": "The Ideation-Execution Gap: Execution Outcomes of LLM-Generated versus Human Research Ideas",
-    "authors": [
-      "Chenglei Si",
-      "Tatsunori Hashimoto",
-      "Diyi Yang"
-    ],
-    "summary": "Large Language Models (LLMs) have shown promise in accelerating the scientific research pipeline. A key capability for this process is the ability to generate novel research ideas, and prior studies have found settings in which LLM-generated research ideas were judged as more novel than human-expert ideas. However, a good idea should not simply appear to be novel, it should also result in better research after being executed. To test whether AI-generated ideas lead to better research outcomes, we conduct an execution study by recruiting 43 expert researchers to execute randomly-assigned ideas, either written by experts or generated by an LLM. Each expert spent over 100 hours implementing the idea and wrote a 4-page short paper to document the experiments. All the executed projects are then reviewed blindly by expert NLP researchers. Comparing the review scores of the same ideas before and after execution, the scores of the LLM-generated ideas decrease significantly more than expert-written ideas on all evaluation metrics (novelty, excitement, effectiveness, and overall; p < 0.05), closing the gap between LLM and human ideas observed at the ideation stage. When comparing the aggregated review scores from the execution study, we even observe that for many metrics there is a flip in rankings where human ideas score higher than LLM ideas. This ideation-execution gap highlights the limitations of current LLMs in generating truly effective research ideas and the challenge of evaluating research ideas in the absence of execution outcomes.",
-    "published": "Jun 25",
-    "pdf_url": "https://arxiv.org/pdf/2506.20803v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.20803v1",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang",
-      "Tatsunori Hashimoto"
     ]
   }
 ]
