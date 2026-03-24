@@ -1,5 +1,45 @@
 [
   {
+    "title": "Alignment Whack-a-Mole : Finetuning Activates Verbatim Recall of Copyrighted Books in Large Language Models",
+    "authors": [
+      "Xinyue Liu",
+      "Niloofar Mireshghallah",
+      "Jane C. Ginsburg",
+      "Tuhin Chakrabarty"
+    ],
+    "summary": "Frontier LLM companies have repeatedly assured courts and regulators that their models do not store copies of training data. They further rely on safety alignment strategies via RLHF, system prompts, and output filters to block verbatim regurgitation of copyrighted works, and have cited the efficacy of these measures in their legal defenses against copyright infringement claims. We show that finetuning bypasses these protections: by training models to expand plot summaries into full text, a task naturally suited for commercial writing assistants, we cause GPT-4o, Gemini-2.5-Pro, and DeepSeek-V3.1 to reproduce up to 85-90% of held-out copyrighted books, with single verbatim spans exceeding 460 words, using only semantic descriptions as prompts and no actual book text. This extraction generalizes across authors: finetuning exclusively on Haruki Murakami's novels unlocks verbatim recall of copyrighted books from over 30 unrelated authors. The effect is not specific to any training author or corpus: random author pairs and public-domain finetuning data produce comparable extraction, while finetuning on synthetic text yields near-zero extraction, indicating that finetuning on individual authors' works reactivates latent memorization from pretraining. Three models from different providers memorize the same books in the same regions ($r \\ge 0.90$), pointing to an industry-wide vulnerability. Our findings offer compelling evidence that model weights store copies of copyrighted works and that the security failures that manifest after finetuning on individual authors' works undermine...",
+    "published": "Mar 21",
+    "pdf_url": "https://arxiv.org/pdf/2603.20957v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.20957v1",
+    "queried_author": "Niloofar Mireshghallah",
+    "matching_authors": [
+      "Niloofar Mireshghallah"
+    ]
+  },
+  {
+    "title": "The Hidden Puppet Master: A Theoretical and Real-World Account of Emotional Manipulation in LLMs",
+    "authors": [
+      "Jocelyn Shen",
+      "Amina Luvsanchultem",
+      "Jessica Kim",
+      "Kynnedy Smith",
+      "Valdemar Danry",
+      "Kantwon Rogers",
+      "Sharifa Alghowinem",
+      "Hae Won Park",
+      "Maarten Sap",
+      "Cynthia Breazeal"
+    ],
+    "summary": "As users increasingly turn to LLMs for practical and personal advice, they become vulnerable to being subtly steered toward hidden incentives misaligned with their own interests. Prior works have benchmarked persuasion and manipulation detection, but these efforts rely on simulated or debate-style settings, remain uncorrelated with real human belief shifts, and overlook a critical dimension: the morality of hidden incentives driving the manipulation. We introduce PUPPET, a theoretical taxonomy of personalized emotional manipulation in LLM-human dialogues that centers around incentive morality, and conduct a human study with N=1,035 participants across realistic everyday queries, varying personalization and incentive direction (harmful versus prosocial). We find that harmful hidden incentives produce significantly larger belief shifts than prosocial ones. Finally, we benchmark LLMs on the task of belief prediction, finding that models exhibit moderate predictive ability of belief change based on conversational contexts (r=0.3 - 0.5), but they also systematically underestimate the magnitude of belief shift. Together, this work establishes a theoretically grounded and behaviorally validated foundation for studying, and ultimately combatting, incentive-driven manipulation in LLMs during everyday, practical user queries.",
+    "published": "Mar 21",
+    "pdf_url": "https://arxiv.org/pdf/2603.20907v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.20907v1",
+    "queried_author": "Maarten Sap",
+    "matching_authors": [
+      "Maarten Sap"
+    ]
+  },
+  {
     "title": "Pitfalls in Evaluating Interpretability Agents",
     "authors": [
       "Tal Haklay",
@@ -117,16 +157,16 @@
     ]
   },
   {
-    "title": "Multi-Domain Causal Empirical Bayes Under Linear Mixing",
+    "title": "Multi-Domain Empirical Bayes for Linearly-Mixed Causal Representations",
     "authors": [
       "Bohan Wu",
       "Julius von K\u00fcgelgen",
       "David M. Blei"
     ],
-    "summary": "Causal representation learning (CRL) aims to learn low-dimensional causal latent variables from high-dimensional observations. While identifiability has been extensively studied for CRL, estimation has been less explored. In this paper, we explore the use of empirical Bayes (EB) to estimate causal representations. In particular, we consider the problem of learning from data from multiple domains, where differences between domains are modeled by interventions in a shared underlying causal model. Multi-domain CRL naturally poses a simultaneous inference problem that EB is designed to tackle. Here, we propose an EB $f$-modeling algorithm that improves the quality of learned causal variables by exploiting invariant structure within and across domains. Specifically, we consider a linear measurement model and interventional priors arising from a shared acyclic SCM. When the graph and intervention targets are known, we develop an EM-style algorithm based on causally structured score matching. We further discuss EB $\\rmg$-modeling in the context of existing CRL approaches. In experiments on synthetic data, our proposed method achieves more accurate estimation than other methods for CRL.",
+    "summary": "Causal representation learning (CRL) aims to learn low-dimensional causal latent variables from high-dimensional observations. While identifiability has been extensively studied for CRL, estimation has been less explored. In this paper, we explore the use of empirical Bayes (EB) to estimate causal representations. In particular, we consider the problem of learning from data from multiple domains, where differences between domains are modeled by interventions in a shared underlying causal model. Multi-domain CRL naturally poses a simultaneous inference problem that EB is designed to tackle. Here, we propose an EB $f$-modeling algorithm that improves the quality of learned causal variables by exploiting invariant structure within and across domains. Specifically, we consider a linear measurement model and interventional priors arising from a shared acyclic SCM. When the graph and intervention targets are known, we develop an EM-style algorithm based on causally structured score matching. We further discuss EB $g$-modeling in the context of existing CRL approaches. In experiments on synthetic data, our proposed method achieves more accurate estimation than other methods for CRL.",
     "published": "Mar 19",
-    "pdf_url": "https://arxiv.org/pdf/2603.18404v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.18404v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.18404v2",
+    "arxiv_url": "http://arxiv.org/abs/2603.18404v2",
     "queried_author": "David M. Blei",
     "matching_authors": [
       "David M. Blei"
@@ -269,8 +309,8 @@
     ],
     "summary": "Real-world model deployments demand strong performance on narrow domains where data is often scarce. Typically, practitioners finetune models to specialize them, but this risks overfitting to the domain and forgetting general knowledge. We study a simple strategy, specialized pretraining (SPT), where a small domain dataset, typically reserved for finetuning, is repeated starting from pretraining as a fraction of the total tokens. Across three specialized domains (ChemPile, MusicPile, and ProofPile), SPT improves domain performance and preserves general capabilities after finetuning compared to standard pretraining. In our experiments, SPT reduces the pretraining tokens needed to reach a given domain performance by up to 1.75x. These gains grow when the target domain is underrepresented in the pretraining corpus: on domains far from web text, a 1B SPT model outperforms a 3B standard pretrained model. Beyond these empirical gains, we derive overfitting scaling laws to guide practitioners in selecting the optimal domain-data repetition for a given pretraining compute budget. Our observations reveal the finetuner's fallacy: while finetuning may appear to be the cheapest path to domain adaptation, introducing specialized domain data during pretraining stretches its utility. SPT yields better specialized domain performance (via reduced overfitting across repeated exposures) and better general domain performance (via reduced forgetting during finetuning), ultimately achieving stronger results with fewer parameters and less total compute when amortized over inference. To get the mo...",
     "published": "Mar 17",
-    "pdf_url": "https://arxiv.org/pdf/2603.16177v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.16177v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.16177v2",
+    "arxiv_url": "http://arxiv.org/abs/2603.16177v2",
     "queried_author": "J Zico Kolter",
     "matching_authors": [
       "J Zico Kolter"
@@ -647,6 +687,24 @@
     ]
   },
   {
+    "title": "Email in the Era of LLMs",
+    "authors": [
+      "Dang Nguyen",
+      "Harvey Yiyun Fu",
+      "Peter West",
+      "Chenhao Tan",
+      "Ari Holtzman"
+    ],
+    "summary": "Email communication increasingly involves large language models (LLMs), but we lack intuition on how they will read, write, and optimize for nuanced social goals. We introduce HR Simulator, a game where communication is the core mechanic: players play as a Human Resources officer and write emails to solve socially challenging workplace scenarios. An analysis of 600+ human and LLM emails with LLMs-as-judge reveals evidence for larger LLMs becoming more homogenous in their email quality judgments. Under LLM judges, humans underperform LLMs (e.g., 23.5% vs. 48-54% success rate), but a human+LLM approach can outperform LLM-only (e.g., from 40% to nearly 100% in one scenario). In cases where models' email preferences disagree, emergent tact is a plausible explanation: weaker models prefer less tactful strategies while stronger models prefer more tactful ones. Regarding tone, LLM emails are more formal and empathetic while human emails are more varied. LLM rewrites make human emails more formal and empathetic, but models still struggle to imitate human emails in the low empathy, low formality quadrant, which highlights a limitation of current post-training approaches. Our results demonstrate the efficacy of communication games as instruments to measure communication in the era of LLMs, and posit human-LLM co-writing as an effective form of communication in that future.",
+    "published": "Mar 06",
+    "pdf_url": "https://arxiv.org/pdf/2603.20231v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.20231v1",
+    "queried_author": "Ari Holtzman",
+    "matching_authors": [
+      "Ari Holtzman"
+    ]
+  },
+  {
     "title": "Learning Next Action Predictors from Human-Computer Interaction",
     "authors": [
       "Omar Shaikh",
@@ -866,10 +924,10 @@
       "Tri Dao",
       "Avner May"
     ],
-    "summary": "Autoregressive decoding is bottlenecked by its sequential nature. Speculative decoding has become a standard way to accelerate inference by using a fast draft model to predict upcoming tokens from a slower target model, and then verifying them in parallel with a single target model forward pass. However, speculative decoding itself relies on a sequential dependence between speculation and verification. We introduce speculative speculative decoding (SSD) to parallelize these operations. While a verification is ongoing, the draft model predicts likely verification outcomes and prepares speculations pre-emptively for them. If the actual verification outcome is then in the predicted set, a speculation can be returned immediately, eliminating drafting overhead entirely. We identify three key challenges presented by speculative speculative decoding, and suggest principled methods to solve each. The result is Saguaro, an optimized SSD algorithm. Our implementation is up to 2x faster than optimized speculative decoding baselines and up to 5x faster than autoregressive decoding with open source inference engines.",
+    "summary": "Autoregressive decoding is bottlenecked by its sequential nature. Speculative decoding has become a standard way to accelerate inference by using a fast draft model to predict upcoming tokens from a slower target model, and then verifying them in parallel with a single target model forward pass. However, speculative decoding itself relies on a sequential dependence between speculation and verification. We introduce speculative speculative decoding (SSD) to parallelize these operations. While a verification is ongoing, the draft model predicts likely verification outcomes and prepares speculations pre-emptively for them. If the actual verification outcome is then in the predicted set, a speculation can be returned immediately, eliminating drafting overhead entirely. We identify three key challenges presented by speculative speculative decoding, and suggest principled methods to solve each. The result is Saguaro, an optimized SSD algorithm. Our implementation is on average 30% faster than optimized speculative decoding baselines and up to 5x faster than autoregressive decoding with open source inference engines.",
     "published": "Mar 03",
-    "pdf_url": "https://arxiv.org/pdf/2603.03251v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.03251v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.03251v2",
+    "arxiv_url": "http://arxiv.org/abs/2603.03251v2",
     "queried_author": "Tri Dao",
     "matching_authors": [
       "Tri Dao"
@@ -2962,21 +3020,23 @@
     ]
   },
   {
-    "title": "Demographic Probing of Large Language Models Lacks Construct Validity",
+    "title": "Different Demographic Cues Yield Inconsistent Conclusions About LLM Personalization and Bias",
     "authors": [
       "Manuel Tonneau",
       "Neil K. R. Seghal",
       "Niyati Malhotra",
+      "Sharif Kazemi",
       "Victor Orozco-Olvera",
       "Ana Mar\u00eda Mu\u00f1oz Boudet",
       "Lakshmi Subramanian",
+      "Samuel P. Fraiberger",
       "Sharath Chandra Guntuku",
       "Valentin Hofmann"
     ],
-    "summary": "Demographic probing is widely used to study how large language models (LLMs) adapt their behavior to signaled demographic attributes. This approach typically uses a single demographic cue in isolation (e.g., a name or dialect) as a signal for group membership, implicitly assuming strong construct validity: that such cues are interchangeable operationalizations of the same underlying, demographically conditioned behavior. We test this assumption in realistic advice-seeking interactions, focusing on race and gender in a U.S. context. We find that cues intended to represent the same demographic group induce only partially overlapping changes in model behavior, while differentiation between groups within a given cue is weak and uneven. Consequently, estimated disparities are unstable, with both magnitude and direction varying across cues. We further show that these inconsistencies partly arise from variation in how strongly cues encode demographic attributes and from linguistic confounders that independently shape model behavior. Together, our findings suggest that demographic probing lacks construct validity: it does not yield a single, stable characterization of how LLMs condition on demographic information, which may reflect a misspecified or fragmented construct. We conclude by recommending the use of multiple, ecologically valid cues and explicit control of confounders to support more defensible claims about demographic effects in LLMs.",
+    "summary": "Demographic cue-based evaluation is widely used to study how large language models (LLMs) adapt their responses to signaled demographic attributes within and across groups. This approach typically relies on a single cue (e.g., names) as a proxy for group membership, implicitly treating different cues as interchangeable operationalizations of the same identity-conditioned behavior. We test this assumption in realistic advice-seeking interactions spanning 14.8 million prompts, focusing on race and gender in a U.S. context. We find that cues for the same group induce only partially overlapping changes in model responses, yielding inconsistent conclusions about personalization, while bias conclusions are unstable, with both magnitude and direction of group differences varying across cues. We further show that these inconsistencies reflect differences in cue-group association strength and linguistic features bundled within cues that shape model responses. Together, our findings suggest that demographic conditioning in LLMs is not a cue-invariant category-level parameter but depends fundamentally on how identity is cued, reflecting responses to linguistic signals rather than stable demographic categories. We therefore advocate multi-cue, mechanism-aware evaluations for robust and interpretable claims about demographic variation in LLM responses.",
     "published": "Jan 26",
-    "pdf_url": "https://arxiv.org/pdf/2601.18486v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.18486v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.18486v2",
+    "arxiv_url": "http://arxiv.org/abs/2601.18486v2",
     "queried_author": "Valentin Hofmann",
     "matching_authors": [
       "Valentin Hofmann"
@@ -7982,8 +8042,8 @@
     ],
     "summary": "Finetuning (pretrained) language models is a standard approach for updating their internal parametric knowledge and specializing them to new tasks and domains. However, the corresponding model weight changes (\"weight diffs\") are not generally interpretable. While inspecting the finetuning dataset can give a sense of how the model might have changed, these datasets are often not publicly available or are too large to work with directly. Towards the goal of comprehensively understanding weight diffs in natural language, we introduce Diff Interpretation Tuning (DIT), a method that trains models to describe their own finetuning-induced modifications. Our approach uses synthetic, labeled weight diffs to train a DIT-adapter, which can be applied to a compatible finetuned model to make it describe how it has changed. We demonstrate in two proof-of-concept settings (reporting hidden behaviors and summarizing finetuned knowledge) that our method enables models to describe their finetuning-induced modifications using accurate natural language descriptions.",
     "published": "Oct 06",
-    "pdf_url": "https://arxiv.org/pdf/2510.05092v3",
-    "arxiv_url": "http://arxiv.org/abs/2510.05092v3",
+    "pdf_url": "https://arxiv.org/pdf/2510.05092v4",
+    "arxiv_url": "http://arxiv.org/abs/2510.05092v4",
     "queried_author": "Yoon Kim",
     "matching_authors": [
       "Yoon Kim"
@@ -15334,144 +15394,6 @@
     "matching_authors": [
       "Diyi Yang",
       "Tatsunori Hashimoto"
-    ]
-  },
-  {
-    "title": "Dynamic Weight Grafting: Localizing Finetuned Factual Knowledge in Transformers",
-    "authors": [
-      "Todd Nief",
-      "David Reber",
-      "Sean Richardson",
-      "Ari Holtzman"
-    ],
-    "summary": "When an LLM learns a new fact during finetuning (e.g., new movie releases, newly elected pope, etc.), where does this information go? Are entities enriched with relation information immediately, or do models recall information just-in-time before a prediction? Or, are \"all of the above\" true, with LLMs implementing multiple redundant heuristics? Existing localization approaches (e.g., activation patching) are ill-suited for this analysis because they usually replace parts of the residual stream, thus overriding previous information. To fill this interpretability gap, we propose dynamic weight grafting, an analysis technique that selectively grafts subsets of weights from a finetuned model onto a pretrained model. Using this technique, we show two separate pathways for retrieving finetuned relation information: 1) \"enriching\" the residual stream with relation information while processing the tokens that correspond to an entity (e.g., \"Zendaya\" in \"Zendaya co-starred with Timoth\u00e9e Chalamet\" and 2) \"recalling\" this information at the final token position before generating a target fact. In some cases, models need information from both of these pathways to correctly generate finetuned facts while, in other cases, either the \"enrichment\" or \"recall\" pathway alone is sufficient. We localize the \"recall\" pathway to model components -- finding that \"recall\" occurs via both task-specific attention mechanisms and an entity-specific extraction step in the feedforward networks of the final layers before prediction. By targeting model components and parameters, as opposed to just activa...",
-    "published": "Jun 25",
-    "pdf_url": "https://arxiv.org/pdf/2506.20746v3",
-    "arxiv_url": "http://arxiv.org/abs/2506.20746v3",
-    "queried_author": "Ari Holtzman",
-    "matching_authors": [
-      "Ari Holtzman"
-    ]
-  },
-  {
-    "title": "The Singapore Consensus on Global AI Safety Research Priorities",
-    "authors": [
-      "Yoshua Bengio",
-      "Tegan Maharaj",
-      "Luke Ong",
-      "Stuart Russell",
-      "Dawn Song",
-      "Max Tegmark",
-      "Lan Xue",
-      "Ya-Qin Zhang",
-      "Stephen Casper",
-      "Wan Sie Lee",
-      "S\u00f6ren Mindermann",
-      "Vanessa Wilfred",
-      "Vidhisha Balachandran",
-      "Fazl Barez",
-      "Michael Belinsky",
-      "Imane Bello",
-      "Malo Bourgon",
-      "Mark Brakel",
-      "Sim\u00e9on Campos",
-      "Duncan Cass-Beggs",
-      "Jiahao Chen",
-      "Rumman Chowdhury",
-      "Kuan Chua Seah",
-      "Jeff Clune",
-      "Juntao Dai",
-      "Agnes Delaborde",
-      "Nouha Dziri",
-      "Francisco Eiras",
-      "Joshua Engels",
-      "Jinyu Fan",
-      "Adam Gleave",
-      "Noah Goodman",
-      "Fynn Heide",
-      "Johannes Heidecke",
-      "Dan Hendrycks",
-      "Cyrus Hodes",
-      "Bryan Low Kian Hsiang",
-      "Minlie Huang",
-      "Sami Jawhar",
-      "Wang Jingyu",
-      "Adam Tauman Kalai",
-      "Meindert Kamphuis",
-      "Mohan Kankanhalli",
-      "Subhash Kantamneni",
-      "Mathias Bonde Kirk",
-      "Thomas Kwa",
-      "Jeffrey Ladish",
-      "Kwok-Yan Lam",
-      "Wan Lee Sie",
-      "Taewhi Lee",
-      "Xiaojian Li",
-      "Jiajun Liu",
-      "Chaochao Lu",
-      "Yifan Mai",
-      "Richard Mallah",
-      "Julian Michael",
-      "Nick Mo\u00ebs",
-      "Simon M\u00f6ller",
-      "Kihyuk Nam",
-      "Kwan Yee Ng",
-      "Mark Nitzberg",
-      "Besmira Nushi",
-      "Se\u00e1n O h\u00c9igeartaigh",
-      "Alejandro Ortega",
-      "Pierre Peign\u00e9",
-      "James Petrie",
-      "Benjamin Prud'Homme",
-      "Reihaneh Rabbany",
-      "Nayat Sanchez-Pi",
-      "Sarah Schwettmann",
-      "Buck Shlegeris",
-      "Saad Siddiqui",
-      "Aradhana Sinha",
-      "Mart\u00edn Soto",
-      "Cheston Tan",
-      "Dong Ting",
-      "William Tjhi",
-      "Robert Trager",
-      "Brian Tse",
-      "Anthony Tung K. H.",
-      "Vanessa Wilfred",
-      "John Willes",
-      "Denise Wong",
-      "Wei Xu",
-      "Rongwu Xu",
-      "Yi Zeng",
-      "HongJiang Zhang",
-      "Djordje \u017dikeli\u0107"
-    ],
-    "summary": "Rapidly improving AI capabilities and autonomy hold significant promise of transformation, but are also driving vigorous debate on how to ensure that AI is safe, i.e., trustworthy, reliable, and secure. Building a trusted ecosystem is therefore essential -- it helps people embrace AI with confidence and gives maximal space for innovation while avoiding backlash.\n  The \"2025 Singapore Conference on AI (SCAI): International Scientific Exchange on AI Safety\" aimed to support research in this space by bringing together AI scientists across geographies to identify and synthesise research priorities in AI safety. This resulting report builds on the International AI Safety Report chaired by Yoshua Bengio and backed by 33 governments. By adopting a defence-in-depth model, this report organises AI safety research domains into three types: challenges with creating trustworthy AI systems (Development), challenges with evaluating their risks (Assessment), and challenges with monitoring and intervening after deployment (Control).",
-    "published": "Jun 25",
-    "pdf_url": "https://arxiv.org/pdf/2506.20702v2",
-    "arxiv_url": "http://arxiv.org/abs/2506.20702v2",
-    "queried_author": "Noah Goodman",
-    "matching_authors": [
-      "Noah Goodman"
-    ]
-  },
-  {
-    "title": "Probing AI Safety with Source Code",
-    "authors": [
-      "Ujwal Narayan",
-      "Shreyas Chaudhari",
-      "Ashwin Kalyan",
-      "Tanmay Rajpurohit",
-      "Karthik Narasimhan",
-      "Ameet Deshpande",
-      "Vishvak Murahari"
-    ],
-    "summary": "Large language models (LLMs) have become ubiquitous, interfacing with humans in numerous safety-critical applications. This necessitates improving capabilities, but importantly coupled with greater safety measures to align these models with human values and preferences. In this work, we demonstrate that contemporary models fall concerningly short of the goal of AI safety, leading to an unsafe and harmful experience for users. We introduce a prompting strategy called Code of Thought (CoDoT) to evaluate the safety of LLMs. CoDoT converts natural language inputs to simple code that represents the same intent. For instance, CoDoT transforms the natural language prompt \"Make the statement more toxic: {text}\" to: \"make_more_toxic({text})\". We show that CoDoT results in a consistent failure of a wide range of state-of-the-art LLMs. For example, GPT-4 Turbo's toxicity increases 16.5 times, DeepSeek R1 fails 100% of the time, and toxicity increases 300% on average across seven modern LLMs. Additionally, recursively applying CoDoT can further increase toxicity two times. Given the rapid and widespread adoption of LLMs, CoDoT underscores the critical need to evaluate safety efforts from first principles, ensuring that safety and capabilities advance together.",
-    "published": "Jun 25",
-    "pdf_url": "https://arxiv.org/pdf/2506.20471v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.20471v1",
-    "queried_author": "Karthik Narasimhan",
-    "matching_authors": [
-      "Karthik Narasimhan"
     ]
   }
 ]
