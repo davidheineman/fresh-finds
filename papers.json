@@ -74,6 +74,24 @@
     ]
   },
   {
+    "title": "Problems with Chinchilla Approach 2: Systematic Biases in IsoFLOP Parabola Fits",
+    "authors": [
+      "Eric Czech",
+      "Zhiwei Xu",
+      "Yael Elmatad",
+      "Yixin Wang",
+      "William Held"
+    ],
+    "summary": "Chinchilla Approach 2 is among the most widely used methods for fitting neural scaling laws. Its parabolic approximation introduces systematic biases in compute-optimal allocation estimates, even on noise-free synthetic data. Applied to published Llama 3 IsoFLOP data at open frontier compute scales, these biases imply a parameter underallocation corresponding to 6.5% of the $3.8\\times10^{25}$ FLOP training budget and \\$1.4M (90% CI: \\$412K-\\$2.9M) in unnecessary compute at 50% H100 MFU. Simulated multimodal model misallocations show even greater opportunity costs due to higher loss surface asymmetry. Three sources of this error are examined: IsoFLOP sampling grid width (Taylor approximation accuracy), uncentered IsoFLOP sampling, and loss surface asymmetry ($\u03b1\\neq \u03b2$). Chinchilla Approach 3 largely eliminates these biases but is often regarded as less data-efficient, numerically unstable, prone to local minima, and harder to implement. Each concern is shown to be unfounded or addressable, especially when the partially linear structure of the objective is exploited via Variable Projection, enabling unbiased inference on all five loss surface parameters through a two-dimensional optimization that is well-conditioned, analytically differentiable, and amenable to dense, or even exhaustive, grid search. It may serve as a more convenient replacement for Approach 2 or a more scalable alternative for adaptations of Approach 3 to richer scaling law formulations.",
+    "published": "Mar 21",
+    "pdf_url": "https://arxiv.org/pdf/2603.22339v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.22339v1",
+    "queried_author": "William Held",
+    "matching_authors": [
+      "William Held"
+    ]
+  },
+  {
     "title": "Pitfalls in Evaluating Interpretability Agents",
     "authors": [
       "Tal Haklay",
@@ -8079,8 +8097,8 @@
     ],
     "summary": "Today's AI models learn primarily through mimicry and refining, so it is not surprising that they struggle to solve problems beyond the limits set by existing data. To solve novel problems, agents should acquire skills for exploring and learning through experience. Finding a scalable learning mechanism for developing agents that learn through interaction remains a major open problem. In this work, we introduce BuilderBench, a benchmark to accelerate research into agent pre-training that centers open-ended exploration. BuilderBench requires agents to learn how to build any structure using blocks. BuilderBench is equipped with $(1)$ a hardware accelerated simulator of a robotic agent interacting with various physical blocks, and $(2)$ a task-suite with over 42 diverse target structures that are carefully curated to test an understanding of physics, mathematics, and long-horizon planning. During training, agents have to explore and learn general principles about the environment without any external supervision. During evaluation, agents have to build the unseen target structures from the task suite. Solving these tasks requires a sort of \\emph{embodied reasoning} that is not reflected in words but rather in actions, experimenting with different strategies and piecing them together. Our experiments show that many of these tasks challenge the current iteration of algorithms. Hence, we also provide a ``training wheels'' protocol, in which agents are trained and evaluated to build a single target structure from the task suite. Finally, we provide single-file implementations of six...",
     "published": "Oct 07",
-    "pdf_url": "https://arxiv.org/pdf/2510.06288v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.06288v2",
+    "pdf_url": "https://arxiv.org/pdf/2510.06288v3",
+    "arxiv_url": "http://arxiv.org/abs/2510.06288v3",
     "queried_author": "Karthik Narasimhan",
     "matching_authors": [
       "Karthik Narasimhan"
@@ -15374,24 +15392,6 @@
     "queried_author": "David M. Blei",
     "matching_authors": [
       "David M. Blei"
-    ]
-  },
-  {
-    "title": "Interactive Multi-Objective Probabilistic Preference Learning with Soft and Hard Bounds",
-    "authors": [
-      "Edward Chen",
-      "Sang T. Truong",
-      "Natalie Dullerud",
-      "Sanmi Koyejo",
-      "Carlos Guestrin"
-    ],
-    "summary": "High-stakes decision-making involves navigating multiple competing objectives with expensive evaluations. For instance, in brachytherapy, clinicians must balance maximizing tumor coverage (e.g., an aspirational target or soft bound of >95% coverage) against strict organ dose limits (e.g., a non-negotiable hard bound of <601 cGy to the bladder), with each plan evaluation being resource-intensive. Selecting Pareto-optimal solutions that match implicit preferences is challenging, as exhaustive Pareto frontier exploration is computationally and cognitively prohibitive, necessitating interactive frameworks to guide users. While decision-makers (DMs) often possess domain knowledge to narrow the search via such soft-hard bounds, current methods often lack systematic approaches to iteratively refine these multi-faceted preference structures. Critically, DMs must trust their final decision, confident they haven't missed superior alternatives; this trust is paramount in high-consequence scenarios. We present Active-MoSH, an interactive local-global framework designed for this process. Its local component integrates soft-hard bounds with probabilistic preference learning, maintaining distributions over DM preferences and bounds for adaptive Pareto subset refinement. This is guided by an active sampling strategy optimizing exploration-exploitation while minimizing cognitive burden. To build DM trust, Active-MoSH's global component, T-MoSH, leverages multi-objective sensitivity analysis to identify potentially overlooked, high-value points beyond immediate feedback. We demonstrate Activ...",
-    "published": "Jun 27",
-    "pdf_url": "https://arxiv.org/pdf/2506.21887v1",
-    "arxiv_url": "http://arxiv.org/abs/2506.21887v1",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
     ]
   }
 ]
