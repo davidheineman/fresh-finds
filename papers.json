@@ -1,5 +1,26 @@
 [
   {
+    "title": "Synthetic Mixed Training: Scaling Parametric Knowledge Acquisition Beyond RAG",
+    "authors": [
+      "Seungju Han",
+      "Konwoo Kim",
+      "Chanwoo Park",
+      "Benjamin Newman",
+      "Suhas Kotha",
+      "Jaehun Jung",
+      "James Zou",
+      "Yejin Choi"
+    ],
+    "summary": "Synthetic data augmentation helps language models learn new knowledge in data-constrained domains. However, naively scaling existing synthetic data methods by training on more synthetic tokens or using stronger generators yields diminishing returns below the performance of RAG. To break the RAG ceiling, we introduce Synthetic Mixed Training, which combines synthetic QAs and synthetic documents. This leverages their complementary training signals, and enables log-linear improvements as both synthetic data volume and generator strength increase. This allows the model to outperform RAG by a 2.6\\% relative gain on QuaLITY, a long-document reading comprehension benchmark. In addition, we introduce Focal Rewriting, a simple technique for synthetic document generation that explicitly conditions document generation on specific questions, improving the diversity of synthetic documents and yielding a steeper log-linear scaling curve. On QuaLITY, our final recipe trains a Llama 8B model that outperforms RAG by 4.4\\% relatively. Across models and benchmarks (QuaLITY, LongHealth, FinanceBench), our training enables models to beat RAG in five of six settings, outperforms by 2.6\\%, and achieves a 9.1\\% gain when combined with RAG.",
+    "published": "Mar 24",
+    "pdf_url": "https://arxiv.org/pdf/2603.23562v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.23562v1",
+    "queried_author": "Yejin Choi",
+    "matching_authors": [
+      "Yejin Choi"
+    ]
+  },
+  {
     "title": "Greater accessibility can amplify discrimination in generative AI",
     "authors": [
       "Carolin Holtermann",
@@ -43,8 +64,8 @@
     ],
     "summary": "Frontier LLM companies have repeatedly assured courts and regulators that their models do not store copies of training data. They further rely on safety alignment strategies via RLHF, system prompts, and output filters to block verbatim regurgitation of copyrighted works, and have cited the efficacy of these measures in their legal defenses against copyright infringement claims. We show that finetuning bypasses these protections: by training models to expand plot summaries into full text, a task naturally suited for commercial writing assistants, we cause GPT-4o, Gemini-2.5-Pro, and DeepSeek-V3.1 to reproduce up to 85-90% of held-out copyrighted books, with single verbatim spans exceeding 460 words, using only semantic descriptions as prompts and no actual book text. This extraction generalizes across authors: finetuning exclusively on Haruki Murakami's novels unlocks verbatim recall of copyrighted books from over 30 unrelated authors. The effect is not specific to any training author or corpus: random author pairs and public-domain finetuning data produce comparable extraction, while finetuning on synthetic text yields near-zero extraction, indicating that finetuning on individual authors' works reactivates latent memorization from pretraining. Three models from different providers memorize the same books in the same regions ($r \\ge 0.90$), pointing to an industry-wide vulnerability. Our findings offer compelling evidence that model weights store copies of copyrighted works and that the security failures that manifest after finetuning on individual authors' works undermine...",
     "published": "Mar 21",
-    "pdf_url": "https://arxiv.org/pdf/2603.20957v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.20957v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.20957v2",
+    "arxiv_url": "http://arxiv.org/abs/2603.20957v2",
     "queried_author": "Niloofar Mireshghallah",
     "matching_authors": [
       "Niloofar Mireshghallah"
@@ -15374,24 +15395,6 @@
     "queried_author": "Maarten Sap",
     "matching_authors": [
       "Maarten Sap"
-    ]
-  },
-  {
-    "title": "Bayesian Invariance Modeling of Multi-Environment Data",
-    "authors": [
-      "Luhuan Wu",
-      "Mingzhang Yin",
-      "Yixin Wang",
-      "John P. Cunningham",
-      "David M. Blei"
-    ],
-    "summary": "Invariant prediction [Peters et al., 2016] analyzes feature/outcome data from multiple environments to identify invariant features - those with a stable predictive relationship to the outcome. Such features support generalization to new environments and help reveal causal mechanisms. Previous methods have primarily tackled this problem through hypothesis testing or regularized optimization. Here we develop Bayesian Invariant Prediction (BIP), a probabilistic model for invariant prediction. BIP encodes the indices of invariant features as a latent variable and recover them by posterior inference. Under the assumptions of Peters et al. [2016], the BIP posterior targets the true invariant features. We prove that the posterior is consistent and that greater environment heterogeneity leads to faster posterior contraction. To handle many features, we design an efficient variational approximation called VI-BIP. In simulations and real data, we find that BIP and VI-BIP are more accurate and scalable than existing methods for invariant prediction.",
-    "published": "Jun 27",
-    "pdf_url": "https://arxiv.org/pdf/2506.22675v3",
-    "arxiv_url": "http://arxiv.org/abs/2506.22675v3",
-    "queried_author": "David M. Blei",
-    "matching_authors": [
-      "David M. Blei"
     ]
   }
 ]
