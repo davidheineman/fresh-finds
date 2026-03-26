@@ -1,5 +1,77 @@
 [
   {
+    "title": "Composer 2 Technical Report",
+    "authors": [
+      "Cursor Reseach",
+      ":",
+      "Aaron Chan",
+      "Ahmed Shalaby",
+      "Alexander Wettig",
+      "Aman Sanger",
+      "Andrew Zhai",
+      "Anurag Ajay",
+      "Ashvin Nair",
+      "Charlie Snell",
+      "Chen Lu",
+      "Chen Shen",
+      "Emily Jia",
+      "Federico Cassano",
+      "Hanpeng Liu",
+      "Haoyu Chen",
+      "Henry Wildermuth",
+      "Jacob Jackson",
+      "Janet Li",
+      "Jediah Katz",
+      "Jiajun Yao",
+      "Joey Hejna",
+      "Josh Warner",
+      "Julius Vering",
+      "Kevin Frans",
+      "Lee Danilek",
+      "Less Wright",
+      "Lujing Cen",
+      "Luke Melas-Kyriazi",
+      "Michael Truell",
+      "Michiel de Jong",
+      "Naman Jain",
+      "Nate Schmidt",
+      "Nathan Wang",
+      "Niklas Muennighoff",
+      "Oleg Rybkin",
+      "Paul Loh",
+      "Phillip Kravtsov",
+      "Rishabh Yadav",
+      "Sahil Shah",
+      "Sam Kottler",
+      "Alexander M Rush",
+      "Shengtong Zhang",
+      "Shomil Jain",
+      "Sriram Sankar",
+      "Stefan Heule",
+      "Stuart H. Sul",
+      "Sualeh Asif",
+      "Victor Rong",
+      "Wanqi Zhu",
+      "William Lin",
+      "Yuchen Wu",
+      "Yuri Volkov",
+      "Yury Zemlyanskiy",
+      "Zack Holbrook",
+      "Zhiyuan Zhang"
+    ],
+    "summary": "Composer 2 is a specialized model designed for agentic software engineering. The model demonstrates strong long-term planning and coding intelligence while maintaining the ability to efficiently solve problems for interactive use. The model is trained in two phases: first, continued pretraining to improve the model's knowledge and latent coding ability, followed by large-scale reinforcement learning to improve end-to-end coding performance through stronger reasoning, accurate multi-step execution, and coherence on long-horizon realistic coding problems. We develop infrastructure to support training in the same Cursor harness that is used by the deployed model, with equivalent tools and structure, and use environments that match real problems closely. To measure the ability of the model on increasingly difficult tasks, we introduce a benchmark derived from real software engineering problems in large codebases including our own. Composer 2 is a frontier-level coding model and demonstrates a process for training strong domain-specialized models. On our CursorBench evaluations the model achieves a major improvement in accuracy compared to previous Composer models (61.3). On public benchmarks the model scores 61.7 on Terminal-Bench and 73.7 on SWE-bench Multilingual in our harness, comparable to state-of-the-art systems.",
+    "published": "Mar 25",
+    "pdf_url": "https://arxiv.org/pdf/2603.24477v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.24477v1",
+    "queried_author": "Alexander M Rush",
+    "matching_authors": [
+      "Alexander M Rush",
+      "Alexander M. Rush",
+      "Alexander Wettig",
+      "Niklas Muennighoff"
+    ]
+  },
+  {
     "title": "Synthetic Mixed Training: Scaling Parametric Knowledge Acquisition Beyond RAG",
     "authors": [
       "Seungju Han",
@@ -103,10 +175,10 @@
       "Yixin Wang",
       "William Held"
     ],
-    "summary": "Chinchilla Approach 2 is among the most widely used methods for fitting neural scaling laws. Its parabolic approximation introduces systematic biases in compute-optimal allocation estimates, even on noise-free synthetic data. Applied to published Llama 3 IsoFLOP data at open frontier compute scales, these biases imply a parameter underallocation corresponding to 6.5% of the $3.8\\times10^{25}$ FLOP training budget and \\$1.4M (90% CI: \\$412K-\\$2.9M) in unnecessary compute at 50% H100 MFU. Simulated multimodal model misallocations show even greater opportunity costs due to higher loss surface asymmetry. Three sources of this error are examined: IsoFLOP sampling grid width (Taylor approximation accuracy), uncentered IsoFLOP sampling, and loss surface asymmetry ($\u03b1\\neq \u03b2$). Chinchilla Approach 3 largely eliminates these biases but is often regarded as less data-efficient, numerically unstable, prone to local minima, and harder to implement. Each concern is shown to be unfounded or addressable, especially when the partially linear structure of the objective is exploited via Variable Projection, enabling unbiased inference on all five loss surface parameters through a two-dimensional optimization that is well-conditioned, analytically differentiable, and amenable to dense, or even exhaustive, grid search. It may serve as a more convenient replacement for Approach 2 or a more scalable alternative for adaptations of Approach 3 to richer scaling law formulations.",
+    "summary": "Chinchilla Approach 2 is among the most widely used methods for fitting neural scaling laws. Its parabolic approximation introduces systematic biases in compute-optimal allocation estimates, even on noise-free synthetic data. Applied to published Llama 3 IsoFLOP data at open frontier compute scales, these biases imply a parameter underallocation corresponding to 6.5% of the $3.8\\times10^{25}$ FLOP training budget and \\$1.4M (90% CI: \\$412K-\\$2.9M) in unnecessary compute at 50% H100 MFU. Simulated multimodal model misallocations show even greater opportunity costs due to higher loss surface asymmetry. Three sources of this error are examined: IsoFLOP sampling grid width (Taylor approximation accuracy), uncentered IsoFLOP sampling, and loss surface asymmetry ($\u03b1\\neq \u03b2$). Chinchilla Approach 3 largely eliminates these biases but is often regarded as less data-efficient, numerically unstable, prone to local minima, and harder to implement. Each concern is shown to be unfounded or addressable, especially when the partially linear structure of the objective is exploited via Variable Projection, enabling unbiased inference on all five loss surface parameters through a two-dimensional optimization that is well-conditioned, analytically differentiable, and amenable to dense, or even exhaustive, grid search. It may serve as a more convenient replacement for Approach 2 or a more scalable alternative for adaptations of Approach 3 to richer scaling law formulations. See https://github.com/Open-Athena/vpnls for details and https://openathena.ai/scaling-law-analysis for other results from...",
     "published": "Mar 21",
-    "pdf_url": "https://arxiv.org/pdf/2603.22339v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.22339v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.22339v2",
+    "arxiv_url": "http://arxiv.org/abs/2603.22339v2",
     "queried_author": "William Held",
     "matching_authors": [
       "William Held"
@@ -15376,25 +15448,6 @@
     "queried_author": "Ari Holtzman",
     "matching_authors": [
       "Ari Holtzman"
-    ]
-  },
-  {
-    "title": "SoMi-ToM: Evaluating Multi-Perspective Theory of Mind in Embodied Social Interactions",
-    "authors": [
-      "Xianzhe Fan",
-      "Xuhui Zhou",
-      "Chuanyang Jin",
-      "Kolby Nottingham",
-      "Hao Zhu",
-      "Maarten Sap"
-    ],
-    "summary": "Humans continuously infer the states, goals, and behaviors of others by perceiving their surroundings in dynamic, real-world social interactions. However, most Theory of Mind (ToM) benchmarks only evaluate static, text-based scenarios, which have a significant gap compared to real interactions. We propose the SoMi-ToM benchmark, designed to evaluate multi-perspective ToM in embodied multi-agent complex social interactions. This benchmark is based on rich multimodal interaction data generated by the interaction environment SoMi, covering diverse crafting goals and social relationships. Our framework supports multi-level evaluation: (1) first-person evaluation provides multimodal (visual, dialogue, action, etc.) input from a first-person perspective during a task for real-time state inference, (2) third-person evaluation provides complete third-person perspective video and text records after a task for goal and behavior inference. This evaluation method allows for a more comprehensive examination of a model's ToM capabilities from both the subjective immediate experience and the objective global observation. We constructed a challenging dataset containing 35 third-person perspective videos, 363 first-person perspective images, and 1225 expert-annotated multiple-choice questions (three options). On this dataset, we systematically evaluated the performance of human subjects and several state-of-the-art large vision-language models (LVLMs). The results show that LVLMs perform significantly worse than humans on SoMi-ToM: the average accuracy gap between humans and models is 40.1%...",
-    "published": "Jun 29",
-    "pdf_url": "https://arxiv.org/pdf/2506.23046v3",
-    "arxiv_url": "http://arxiv.org/abs/2506.23046v3",
-    "queried_author": "Maarten Sap",
-    "matching_authors": [
-      "Maarten Sap"
     ]
   }
 ]
