@@ -6,8 +6,8 @@ on:
     - cron: '0 0 * * 0,1,2,3,4'
     - cron: '0 1 * * 0,1,2,3,4'
 
-    # Safety sweep — 8 hours later
-    - cron: '0 8 * * 0,1,2,3,4'
+    # Daily 8 AM sweep — runs every day
+    - cron: '0 8 * * *'
   
   # Allow manual trigger
   workflow_dispatch:
