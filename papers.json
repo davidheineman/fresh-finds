@@ -1,5 +1,60 @@
 [
   {
+    "title": "ParaSpeechCLAP: A Dual-Encoder Speech-Text Model for Rich Stylistic Language-Audio Pretraining",
+    "authors": [
+      "Anuj Diwan",
+      "Eunsol Choi",
+      "David Harwath"
+    ],
+    "summary": "We introduce ParaSpeechCLAP, a dual-encoder contrastive model that maps speech and text style captions into a common embedding space, supporting a wide range of intrinsic (speaker-level) and situational (utterance-level) descriptors (such as pitch, texture and emotion) far beyond the narrow set handled by existing models. We train specialized ParaSpeechCLAP-Intrinsic and ParaSpeechCLAP-Situational models alongside a unified ParaSpeechCLAP-Combined model, finding that specialization yields stronger performance on individual style dimensions while the unified model excels on compositional evaluation. We further show that ParaSpeechCLAP-Intrinsic benefits from an additional classification loss and class-balanced training. We demonstrate our models' performance on style caption retrieval, speech attribute classification and as an inference-time reward model that improves style-prompted TTS without additional training. ParaSpeechCLAP outperforms baselines on most metrics across all three applications. Our models and code are released at https://github.com/ajd12342/paraspeechclap .",
+    "published": "Mar 30",
+    "pdf_url": "https://arxiv.org/pdf/2603.28737v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.28737v1",
+    "queried_author": "Eunsol Choi",
+    "matching_authors": [
+      "Eunsol Choi"
+    ]
+  },
+  {
+    "title": "Meta-Harness: End-to-End Optimization of Model Harnesses",
+    "authors": [
+      "Yoonho Lee",
+      "Roshen Nair",
+      "Qizheng Zhang",
+      "Kangwook Lee",
+      "Omar Khattab",
+      "Chelsea Finn"
+    ],
+    "summary": "The performance of large language model (LLM) systems depends not only on model weights, but also on their harness: the code that determines what information to store, retrieve, and present to the model. Yet harnesses are still designed largely by hand, and existing text optimizers are poorly matched to this setting because they compress feedback too aggressively. We introduce Meta-Harness, an outer-loop system that searches over harness code for LLM applications. It uses an agentic proposer that accesses the source code, scores, and execution traces of all prior candidates through a filesystem. On online text classification, Meta-Harness improves over a state-of-the-art context management system by 7.7 points while using 4x fewer context tokens. On retrieval-augmented math reasoning, a single discovered harness improves accuracy on 200 IMO-level problems by 4.7 points on average across five held-out models. On agentic coding, discovered harnesses surpass the best hand-engineered baselines on TerminalBench-2. Together, these results show that richer access to prior experience can enable automated harness engineering.",
+    "published": "Mar 30",
+    "pdf_url": "https://arxiv.org/pdf/2603.28052v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.28052v1",
+    "queried_author": "Omar Khattab",
+    "matching_authors": [
+      "Omar Khattab"
+    ]
+  },
+  {
+    "title": "Multiple-Prediction-Powered Inference",
+    "authors": [
+      "Charlie Cowen-Breen",
+      "Alekh Agarwal",
+      "Stephen Bates",
+      "William W. Cohen",
+      "Jacob Eisenstein",
+      "Amir Globerson",
+      "Adam Fisch"
+    ],
+    "summary": "Statistical estimation often involves tradeoffs between expensive, high-quality measurements and a variety of lower-quality proxies. We introduce Multiple-Prediction-Powered Inference (MultiPPI): a general framework for constructing statistically efficient estimates by optimally allocating resources across these diverse data sources. This work provides theoretical guarantees about the minimax optimality, finite-sample performance, and asymptotic normality of the MultiPPI estimator. Through experiments across three diverse large language model (LLM) evaluation scenarios, we show that MultiPPI consistently achieves lower estimation error than existing baselines. This advantage stems from its budget-adaptive allocation strategy, which strategically combines subsets of models by learning their complex cost and correlation structures.",
+    "published": "Mar 28",
+    "pdf_url": "https://arxiv.org/pdf/2603.27414v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.27414v1",
+    "queried_author": "Jacob Eisenstein",
+    "matching_authors": [
+      "Jacob Eisenstein"
+    ]
+  },
+  {
     "title": "Estimating near-verbatim extraction risk in language models with decoding-constrained beam search",
     "authors": [
       "A. Feder Cooper",
@@ -141,10 +196,10 @@
       "James Zou",
       "Yejin Choi"
     ],
-    "summary": "Synthetic data augmentation helps language models learn new knowledge in data-constrained domains. However, naively scaling existing synthetic data methods by training on more synthetic tokens or using stronger generators yields diminishing returns below the performance of RAG. To break the RAG ceiling, we introduce Synthetic Mixed Training, which combines synthetic QAs and synthetic documents. This leverages their complementary training signals, and enables log-linear improvements as both synthetic data volume and generator strength increase. This allows the model to outperform RAG by a 2.6\\% relative gain on QuaLITY, a long-document reading comprehension benchmark. In addition, we introduce Focal Rewriting, a simple technique for synthetic document generation that explicitly conditions document generation on specific questions, improving the diversity of synthetic documents and yielding a steeper log-linear scaling curve. On QuaLITY, our final recipe trains a Llama 8B model that outperforms RAG by 4.4\\% relatively. Across models and benchmarks (QuaLITY, LongHealth, FinanceBench), our training enables models to beat RAG in five of six settings, outperforms by 2.6\\%, and achieves a 9.1\\% gain when combined with RAG.",
+    "summary": "Synthetic data augmentation helps language models learn new knowledge in data-constrained domains. However, naively scaling existing synthetic data methods by training on more synthetic tokens or using stronger generators yields diminishing returns below the performance of RAG. To break the RAG ceiling, we introduce Synthetic Mixed Training, which combines synthetic QAs and synthetic documents. This leverages their complementary training signals, and enables log-linear improvements as both synthetic data volume and generator strength increase. This allows the model to outperform RAG by a 2.6% relative gain on QuaLITY, a long-document reading comprehension benchmark. In addition, we introduce Focal Rewriting, a simple technique for synthetic document generation that explicitly conditions document generation on specific questions, improving the diversity of synthetic documents and yielding a steeper log-linear scaling curve. On QuaLITY, our final recipe trains a Llama 8B model that outperforms RAG by 4.4% relatively. Across models and benchmarks (QuaLITY, LongHealth, FinanceBench), our training enables models to beat RAG in five of six settings, outperforms by 2.6%, and achieves a 9.1% gain when combined with RAG.",
     "published": "Mar 24",
-    "pdf_url": "https://arxiv.org/pdf/2603.23562v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.23562v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.23562v2",
+    "arxiv_url": "http://arxiv.org/abs/2603.23562v2",
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
@@ -194,8 +249,8 @@
     ],
     "summary": "Frontier LLM companies have repeatedly assured courts and regulators that their models do not store copies of training data. They further rely on safety alignment strategies via RLHF, system prompts, and output filters to block verbatim regurgitation of copyrighted works, and have cited the efficacy of these measures in their legal defenses against copyright infringement claims. We show that finetuning bypasses these protections: by training models to expand plot summaries into full text, a task naturally suited for commercial writing assistants, we cause GPT-4o, Gemini-2.5-Pro, and DeepSeek-V3.1 to reproduce up to 85-90% of held-out copyrighted books, with single verbatim spans exceeding 460 words, using only semantic descriptions as prompts and no actual book text. This extraction generalizes across authors: finetuning exclusively on Haruki Murakami's novels unlocks verbatim recall of copyrighted books from over 30 unrelated authors. The effect is not specific to any training author or corpus: random author pairs and public-domain finetuning data produce comparable extraction, while finetuning on synthetic text yields near-zero extraction, indicating that finetuning on individual authors' works reactivates latent memorization from pretraining. Three models from different providers memorize the same books in the same regions ($r \\ge 0.90$), pointing to an industry-wide vulnerability. Our findings offer compelling evidence that model weights store copies of copyrighted works and that the security failures that manifest after finetuning on individual authors' works undermine...",
     "published": "Mar 21",
-    "pdf_url": "https://arxiv.org/pdf/2603.20957v2",
-    "arxiv_url": "http://arxiv.org/abs/2603.20957v2",
+    "pdf_url": "https://arxiv.org/pdf/2603.20957v3",
+    "arxiv_url": "http://arxiv.org/abs/2603.20957v3",
     "queried_author": "Niloofar Mireshghallah",
     "matching_authors": [
       "Niloofar Mireshghallah"
@@ -234,8 +289,8 @@
     ],
     "summary": "Chinchilla Approach 2 is among the most widely used methods for fitting neural scaling laws. Its parabolic approximation introduces systematic biases in compute-optimal allocation estimates, even on noise-free synthetic data. Applied to published Llama 3 IsoFLOP data at open frontier compute scales, these biases imply a parameter underallocation corresponding to 6.5% of the $3.8\\times10^{25}$ FLOP training budget and \\$1.4M (90% CI: \\$412K-\\$2.9M) in unnecessary compute at 50% H100 MFU. Simulated multimodal model misallocations show even greater opportunity costs due to higher loss surface asymmetry. Three sources of this error are examined: IsoFLOP sampling grid width (Taylor approximation accuracy), uncentered IsoFLOP sampling, and loss surface asymmetry ($\u03b1\\neq \u03b2$). Chinchilla Approach 3 largely eliminates these biases but is often regarded as less data-efficient, numerically unstable, prone to local minima, and harder to implement. Each concern is shown to be unfounded or addressable, especially when the partially linear structure of the objective is exploited via Variable Projection, enabling unbiased inference on all five loss surface parameters through a two-dimensional optimization that is well-conditioned, analytically differentiable, and amenable to dense, or even exhaustive, grid search. It may serve as a more convenient replacement for Approach 2 or a more scalable alternative for adaptations of Approach 3 to richer scaling law formulations. See https://github.com/Open-Athena/vpnls for details and https://openathena.ai/scaling-law-analysis for other results from...",
     "published": "Mar 21",
-    "pdf_url": "https://arxiv.org/pdf/2603.22339v2",
-    "arxiv_url": "http://arxiv.org/abs/2603.22339v2",
+    "pdf_url": "https://arxiv.org/pdf/2603.22339v3",
+    "arxiv_url": "http://arxiv.org/abs/2603.22339v3",
     "queried_author": "William Held",
     "matching_authors": [
       "William Held"
@@ -850,6 +905,23 @@
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "AI Meets Mathematics Education: A Case Study on Supporting an Instructor in a Large Mathematics Class with Context-Aware AI",
+    "authors": [
+      "J\u00e9r\u00e9my Barghorn",
+      "Anna Sotnikova",
+      "Sacha Friedli",
+      "Antoine Bosselut"
+    ],
+    "summary": "Large-enrollment university courses face persistent challenges in providing timely and scalable instructional support. While generative AI holds promise, its effective use depends on reliability and pedagogical alignment. We present a human-centered case study of AI-assisted support in a Calculus I course, implemented in close collaboration with the course instructor. We developed a system to answer students' questions on a discussion forum, fine-tuning a lightweight language model on 2,588 historical student-instructor interactions. The model achieved 75.3% accuracy on a benchmark of 150 representative questions annotated by five instructors, and in 36% of cases, its responses were rated equal to or better than instructor answers. Post-deployment student survey (N = 105) indicated that students valued the alignment of the responses with the course materials and their immediate availability, while still relying on the instructor verification for trust. We highlight the importance of hybrid human-AI workflows for safe and effective course support.",
+    "published": "Mar 09",
+    "pdf_url": "https://arxiv.org/pdf/2603.26679v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.26679v1",
+    "queried_author": "Antoine Bosselut",
+    "matching_authors": [
+      "Antoine Bosselut"
     ]
   },
   {
@@ -15344,118 +15416,6 @@
     "matching_authors": [
       "Pang Wei Koh",
       "Sewon Min"
-    ]
-  },
-  {
-    "title": "SciArena: An Open Evaluation Platform for Non-Verifiable Scientific Literature-Grounded Tasks",
-    "authors": [
-      "Yilun Zhao",
-      "Kaiyan Zhang",
-      "Tiansheng Hu",
-      "Sihong Wu",
-      "Ronan Le Bras",
-      "Charles McGrady",
-      "Taira Anderson",
-      "Jonathan Bragg",
-      "Joseph Chee Chang",
-      "Jesse Dodge",
-      "Matt Latzke",
-      "Yixin Liu",
-      "Xiangru Tang",
-      "Zihang Wang",
-      "Chen Zhao",
-      "Hannaneh Hajishirzi",
-      "Doug Downey",
-      "Arman Cohan"
-    ],
-    "summary": "We present SciArena, an open and collaborative platform for evaluating foundation models on scientific literature-grounded tasks. Unlike traditional benchmarks for scientific literature understanding and synthesis, SciArena engages the research community directly, following the Chatbot Arena evaluation approach of community voting on model comparisons. By leveraging collective intelligence, SciArena offers a community-driven evaluation of model performance on open-ended scientific tasks that demand literature-grounded, long-form responses. The platform currently supports 47 foundation models and has collected over 20,000 votes from human researchers across diverse scientific domains. Our analysis of the data collected so far confirms its high quality. We discuss the results and insights based on the model ranking leaderboard. To further promote research in building model-based automated evaluation systems for literature tasks, we release SciArena-Eval, a meta-evaluation benchmark based on collected preference data. It measures the accuracy of models in judging answer quality by comparing their pairwise assessments with human votes. Our experiments highlight the benchmark's challenges and emphasize the need for more reliable automated evaluation methods.",
-    "published": "Jul 01",
-    "pdf_url": "https://arxiv.org/pdf/2507.01001v2",
-    "arxiv_url": "http://arxiv.org/abs/2507.01001v2",
-    "queried_author": "Hannaneh Hajishirzi",
-    "matching_authors": [
-      "Hannaneh Hajishirzi",
-      "Jesse Dodge"
-    ]
-  },
-  {
-    "title": "La Leaderboard: A Large Language Model Leaderboard for Spanish Varieties and Languages of Spain and Latin America",
-    "authors": [
-      "Mar\u00eda Grandury",
-      "Javier Aula-Blasco",
-      "J\u00falia Falc\u00e3o",
-      "Cl\u00e9mentine Fourrier",
-      "Miguel Gonz\u00e1lez",
-      "Gonzalo Mart\u00ednez",
-      "Gonzalo Santamar\u00eda",
-      "Rodrigo Agerri",
-      "Nuria Aldama",
-      "Luis Chiruzzo",
-      "Javier Conde",
-      "Helena G\u00f3mez",
-      "Marta Guerrero",
-      "Guido Ivetta",
-      "Natalia L\u00f3pez",
-      "Flor Miriam Plaza-del-Arco",
-      "Mar\u00eda Teresa Mart\u00edn-Valdivia",
-      "Helena Montoro",
-      "Carmen Mu\u00f1oz",
-      "Pedro Reviriego",
-      "Leire Rosado",
-      "Alejandro Vaca",
-      "Mar\u00eda Estrella Vallecillo-Rodr\u00edguez",
-      "Jorge Vallego",
-      "Irune Zubiaga"
-    ],
-    "summary": "Leaderboards showcase the current capabilities and limitations of Large Language Models (LLMs). To motivate the development of LLMs that represent the linguistic and cultural diversity of the Spanish-speaking community, we present La Leaderboard, the first open-source leaderboard to evaluate generative LLMs in languages and language varieties of Spain and Latin America. La Leaderboard is a community-driven project that aims to establish an evaluation standard for everyone interested in developing LLMs for the Spanish-speaking community. This initial version combines 66 datasets in Basque, Catalan, Galician, and different Spanish varieties, showcasing the evaluation results of 50 models. To encourage community-driven development of leaderboards in other languages, we explain our methodology, including guidance on selecting the most suitable evaluation setup for each downstream task. In particular, we provide a rationale for using fewer few-shot examples than typically found in the literature, aiming to reduce environmental impact and facilitate access to reproducible results for a broader research community.",
-    "published": "Jul 01",
-    "pdf_url": "https://arxiv.org/pdf/2507.00999v1",
-    "arxiv_url": "http://arxiv.org/abs/2507.00999v1",
-    "queried_author": "Cl\u00e9mentine Fourrier",
-    "matching_authors": [
-      "Cl\u00e9mentine Fourrier"
-    ]
-  },
-  {
-    "title": "LitBench: A Benchmark and Dataset for Reliable Evaluation of Creative Writing",
-    "authors": [
-      "Daniel Fein",
-      "Sebastian Russo",
-      "Violet Xiang",
-      "Kabir Jolly",
-      "Rafael Rafailov",
-      "Nick Haber"
-    ],
-    "summary": "Evaluating creative writing generated by large language models (LLMs) remains challenging because open-ended narratives lack ground truths. Without performant automated evaluation methods, off-the-shelf (OTS) language models are employed as zero-shot judges, yet their reliability is unclear in this context. In pursuit of robust evaluation for creative writing, we introduce LitBench, the first standardized benchmark and paired dataset for creative writing verification, comprising a held-out test set of 2,480 debiased, human-labeled story comparisons drawn from Reddit and a 43,827-pair training corpus of human preference labels. Using LitBench, we (i) benchmark zero-shot LLM judges, (ii) train Bradley Terry and generative reward models, and (iii) conduct an online human study to validate reward model rankings on newly LLM-generated stories. Our benchmark identifies Claude-3.7-Sonnet as the strongest off-the-shelf judge, reaching 73% agreement with human preferences; among trained reward models, Bradley-Terry and Generative reward models both attain an accuracy of 78%, outperforming all off-the-shelf judges. An online human study further confirms that our trained reward models consistently align with human preferences in novel LLM-generated stories. We release LitBench and reward models at https://huggingface.co/collections/SAA-Lab/litbench-68267b5da3aafe58f9e43461, providing a vetted resource for reliable, automated evaluation and optimization of creative writing systems.",
-    "published": "Jul 01",
-    "pdf_url": "https://arxiv.org/pdf/2507.00769v1",
-    "arxiv_url": "http://arxiv.org/abs/2507.00769v1",
-    "queried_author": "Rafael Rafailov",
-    "matching_authors": [
-      "Rafael Rafailov"
-    ]
-  },
-  {
-    "title": "Does Math Reasoning Improve General LLM Capabilities? Understanding Transferability of LLM Reasoning",
-    "authors": [
-      "Maggie Huan",
-      "Yuetai Li",
-      "Tuney Zheng",
-      "Xiaoyu Xu",
-      "Seungone Kim",
-      "Minxin Du",
-      "Radha Poovendran",
-      "Graham Neubig",
-      "Xiang Yue"
-    ],
-    "summary": "Math reasoning has become the poster child of progress in large language models (LLMs), with new models rapidly surpassing human-level performance on benchmarks like MATH and AIME. But as math leaderboards improve week by week, it is worth asking: do these gains reflect broader problem-solving ability or just narrow overfitting? To answer this question, we evaluate over 20 open-weight reasoning-tuned models across a broad suite of tasks, including math, scientific QA, agent planning, coding, and standard instruction-following. We surprisingly find that most models that succeed in math fail to transfer their gains to other domains. To rigorously study this phenomenon, we conduct controlled experiments on Qwen3-14B models using math-only data but different tuning methods. We find that reinforcement learning (RL)-tuned models generalize well across domains, while supervised fine-tuning (SFT)-tuned models often forget general capabilities. Latent-space representation and token-space distribution shift analyses reveal that SFT induces substantial representation and output drift, while RL preserves general-domain structure. Our results suggest a need to rethink standard post-training recipes, particularly the reliance on SFT-distilled data for advancing reasoning models.",
-    "published": "Jul 01",
-    "pdf_url": "https://arxiv.org/pdf/2507.00432v2",
-    "arxiv_url": "http://arxiv.org/abs/2507.00432v2",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig",
-      "Seungone Kim"
     ]
   }
 ]
