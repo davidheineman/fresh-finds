@@ -1,5 +1,21 @@
 [
   {
+    "title": "Concept Training for Human-Aligned Language Models",
+    "authors": [
+      "Christine Zhang",
+      "Dan Jurafsky",
+      "Chen Shani"
+    ],
+    "summary": "The next-token prediction (NTP) objective trains language models to predict a single continuation token at each step. In natural language, however, a prefix can be continued in many valid ways, and even similar meanings may differ in surface form. For example, the sentence ``this website is safe to \\underline{browse}'' could plausibly continue with words such as browse, search, visit, surf, or navigate. While standard NTP training treats these alternatives as mutually exclusive targets, we explore a framework that instead predicts concepts, approximated as sets of semantically related tokens. We show that models trained with concept supervision exhibit stronger alignment with human semantic similarity judgments on multiple lexical benchmarks. These gains are accompanied by lower perplexity on semantically meaningful words (definition in Section 3.1), and a modest increase in global token-level perplexity, reflecting a tradeoff between standard NTP optimization and concept-level supervision. Our results suggest that concept-level objectives can improve semantic alignment while maintaining competitive language modeling performance.",
+    "published": "Mar 31",
+    "pdf_url": "https://arxiv.org/pdf/2603.29123v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.29123v1",
+    "queried_author": "Dan Jurafsky",
+    "matching_authors": [
+      "Dan Jurafsky"
+    ]
+  },
+  {
     "title": "ParaSpeechCLAP: A Dual-Encoder Speech-Text Model for Rich Stylistic Language-Audio Pretraining",
     "authors": [
       "Anuj Diwan",
@@ -15397,25 +15413,6 @@
     "queried_author": "Peter Henderson",
     "matching_authors": [
       "Peter Henderson"
-    ]
-  },
-  {
-    "title": "Frustratingly Simple Retrieval Improves Challenging, Reasoning-Intensive Benchmarks",
-    "authors": [
-      "Xinxi Lyu",
-      "Michael Duan",
-      "Rulin Shao",
-      "Pang Wei Koh",
-      "Sewon Min"
-    ],
-    "summary": "Retrieval-augmented Generation (RAG) has primarily been studied in limited settings, such as factoid question answering; more challenging, reasoning-intensive benchmarks have seen limited success from minimal RAG. In this work, we challenge this prevailing view on established, reasoning-intensive benchmarks: MMLU, MMLU Pro, AGI Eval, GPQA, and MATH. We identify a key missing component in prior work: a usable, web-scale datastore aligned with the breadth of pretraining data. To this end, we introduce CompactDS: a diverse, high-quality, web-scale datastore that achieves high retrieval accuracy and subsecond latency on a single-node. The key insights are (1) most web content can be filtered out without sacrificing coverage, and a compact, high-quality subset is sufficient; and (2) combining in-memory approximate nearest neighbor (ANN) retrieval and on-disk exact search balances speed and recall. Using CompactDS, we show that a minimal RAG pipeline achieves consistent accuracy improvements across all benchmarks and model sizes (8B--70B), with relative gains of 10% on MMLU, 33% on MMLU Pro, 14% on GPQA, and 19% on MATH. No single data source suffices alone, highlighting the importance of diversity of sources (web crawls, curated math, academic papers, textbooks). Finally, we show that our carefully designed in-house datastore matches or outperforms web search engines such as Google Search, as well as recently proposed, complex agent-based RAG systems--all while maintaining simplicity, reproducibility, and self-containment. We release CompactDS and our retrieval pipeline, support...",
-    "published": "Jul 02",
-    "pdf_url": "https://arxiv.org/pdf/2507.01297v2",
-    "arxiv_url": "http://arxiv.org/abs/2507.01297v2",
-    "queried_author": "Pang Wei Koh",
-    "matching_authors": [
-      "Pang Wei Koh",
-      "Sewon Min"
     ]
   }
 ]
