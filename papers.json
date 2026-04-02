@@ -1,5 +1,23 @@
 [
   {
+    "title": "Agent psychometrics: Task-level performance prediction in agentic coding benchmarks",
+    "authors": [
+      "Chris Ge",
+      "Daria Kryvosheieva",
+      "Daniel Fried",
+      "Uzay Girit",
+      "Kaivalya Hariharan"
+    ],
+    "summary": "As the focus in LLM-based coding shifts from static single-step code generation to multi-step agentic interaction with tools and environments, understanding which tasks will challenge agents and why becomes increasingly difficult. This is compounded by current practice: agent performance is typically measured by aggregate pass rates on benchmarks, but single-number metrics obscure the diversity of tasks within a benchmark. We present a framework for predicting success or failure on individual tasks tailored to the agentic coding regime. Our approach augments Item Response Theory (IRT) with rich features extracted from tasks, including issue statements, repository contexts, solutions, and test cases, and introduces a novel decomposition of agent ability into LLM and scaffold ability components. This parameterization enables us to aggregate evaluation data across heterogeneous leaderboards and accurately predict task-level performance for unseen benchmarks, as well as unseen LLM-scaffold combinations. Our methods have practical utility for benchmark designers, who can better calibrate the difficulty of their new tasks without running computationally expensive agent evaluations.",
+    "published": "Apr 01",
+    "pdf_url": "https://arxiv.org/pdf/2604.00594v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.00594v1",
+    "queried_author": "Daniel Fried",
+    "matching_authors": [
+      "Daniel Fried"
+    ]
+  },
+  {
     "title": "Concept Training for Human-Aligned Language Models",
     "authors": [
       "Christine Zhang",
@@ -5895,7 +5913,7 @@
     ]
   },
   {
-    "title": "Structured Prompting Enables More Robust Evaluation of Language Models",
+    "title": "Structured Prompts Improve Evaluation of Language Models",
     "authors": [
       "Asad Aali",
       "Muhammad Ahmed Mohsin",
@@ -5916,10 +5934,10 @@
       "Nigam H. Shah",
       "Akshay S. Chaudhari"
     ],
-    "summary": "As language models (LMs) are increasingly adopted across domains, high-quality benchmarking frameworks that accurately estimate performance are essential for guiding deployment decisions. While frameworks such as Holistic Evaluation of Language Models (HELM) enable broad evaluation across tasks, they often rely on fixed prompts that fail to generalize across LMs, yielding unrepresentative performance estimates. Unless we approximate each LM's ceiling (maximum achievable via changes to the prompt), we risk underestimating performance. Declarative prompting frameworks, such as DSPy, offer a scalable alternative to manual prompt engineering by crafting structured prompts that can be optimized per task. However, such frameworks have not been systematically evaluated across established benchmarks. We present a reproducible DSPy+HELM framework that introduces structured prompting methods which elicit reasoning, enabling more accurate LM benchmarking. Using four prompting methods, we evaluate four frontier LMs across seven benchmarks (general/medical domain) against existing HELM baseline scores. We find that without structured prompting: (i) HELM underestimates LM performance (by 4% average), (ii) performance estimates vary more across benchmarks ($+$2% standard deviation), (iii) performance gaps are misrepresented (leaderboard rankings flip on 3/7 benchmarks), and (iv) introducing chain-of-thought reduces LM sensitivity to prompt design (smaller $\u0394$ across prompts). To our knowledge, this is the first benchmarking study to systematically integrate structured prompting into an es...",
+    "summary": "As language models (LMs) are increasingly adopted across domains, high-quality benchmarking frameworks are essential for guiding deployment decisions. In practice, however, frameworks such as Holistic Evaluation of Language Models (HELM) typically evaluate models under a single static prompt configuration, even though model behavior depends strongly on prompt choice. As a result, reported scores can reflect prompt choice as much as model capability. Declarative prompting frameworks such as DSPy offer a scalable way to evaluate models under a set of structured prompting strategies rather than a static prompt configuration. We present a reproducible DSPy+HELM framework for studying how prompt choice impacts reported benchmark outcomes. Using five prompting methods, we evaluate four frontier and two open-source LMs across seven benchmarks against existing HELM baseline scores. By evaluating LMs across a family of prompt configurations, we find that prompt choice can materially impact leaderboard outcomes. In particular, structured prompting improves performance (by 6% on average), alters comparisons (leaderboard rankings shift on 5/7 benchmarks), with most gains coming from introducing chain-of-thought, and little additional benefit from more advanced optimizers. To our knowledge, this is the first study to systematically integrate structured prompting into an established evaluation framework and quantify how prompt choice alone can impact benchmark conclusions. We open-source (i) DSPy+HELM Evaluation (https://github.com/stanford-crfm/helm/pull/3893) and (ii) Prompt Optimizati...",
     "published": "Nov 25",
-    "pdf_url": "https://arxiv.org/pdf/2511.20836v2",
-    "arxiv_url": "http://arxiv.org/abs/2511.20836v2",
+    "pdf_url": "https://arxiv.org/pdf/2511.20836v3",
+    "arxiv_url": "http://arxiv.org/abs/2511.20836v3",
     "queried_author": "Christopher Potts",
     "matching_authors": [
       "Christopher Potts",
@@ -15390,29 +15408,6 @@
     "queried_author": "Antoine Bosselut",
     "matching_authors": [
       "Antoine Bosselut"
-    ]
-  },
-  {
-    "title": "Penalizing Transparency? How AI Disclosure and Author Demographics Shape Human and AI Judgments About Writing",
-    "authors": [
-      "Inyoung Cheong",
-      "Alicia Guo",
-      "Mina Lee",
-      "Zhehui Liao",
-      "Kowe Kadoma",
-      "Dongyoung Go",
-      "Joseph Chee Chang",
-      "Peter Henderson",
-      "Mor Naaman",
-      "Amy X. Zhang"
-    ],
-    "summary": "As AI integrates in various types of human writing, calls for transparency around AI assistance are growing. However, if transparency operates on uneven ground and certain identity groups bear a heavier cost for being honest, then the burden of openness becomes asymmetrical. This study investigates how AI disclosure statement affects perceptions of writing quality, and whether these effects vary by the author's race and gender. Through a large-scale controlled experiment, both human raters (n = 1,970) and LLM raters (n = 2,520) evaluated a single human-written news article while disclosure statements and author demographics were systematically varied. This approach reflects how both human and algorithmic decisions now influence access to opportunities (e.g., hiring, promotion) and social recognition (e.g., content recommendation algorithms). We find that both human and LLM raters consistently penalize disclosed AI use. However, only LLM raters exhibit demographic interaction effects: they favor articles attributed to women or Black authors when no disclosure is present. But these advantages disappear when AI assistance is revealed. These findings illuminate the complex relationships between AI disclosure and author identity, highlighting disparities between machine and human evaluation patterns.",
-    "published": "Jul 02",
-    "pdf_url": "https://arxiv.org/pdf/2507.01418v1",
-    "arxiv_url": "http://arxiv.org/abs/2507.01418v1",
-    "queried_author": "Peter Henderson",
-    "matching_authors": [
-      "Peter Henderson"
     ]
   }
 ]
