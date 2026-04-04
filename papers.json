@@ -1,5 +1,62 @@
 [
   {
+    "title": "No Single Best Model for Diversity: Learning a Router for Sample Diversity",
+    "authors": [
+      "Yuhan Liu",
+      "Fangyuan Xu",
+      "Vishakh Padmakumar",
+      "Daphne Ippolito",
+      "Eunsol Choi"
+    ],
+    "summary": "When posed with prompts that permit a large number of valid answers, comprehensively generating them is the first step towards satisfying a wide range of users. In this paper, we study methods to elicit a comprehensive set of valid responses. To evaluate this, we introduce \\textbf{diversity coverage}, a metric that measures the total quality scores assigned to each \\textbf{unique} answer in the predicted answer set relative to the best possible answer set with the same number of answers. Using this metric, we evaluate 18 LLMs, finding no single model dominates at generating diverse responses to a wide range of open-ended prompts. Yet, per each prompt, there exists a model that outperforms all other models significantly at generating a diverse answer set. Motivated by this finding, we introduce a router that predicts the best model for each query. On NB-Wildchat, our trained router outperforms the single best model baseline (26.3% vs $23.8%). We further show generalization to an out-of-domain dataset (NB-Curated) as well as different answer-generation prompting strategies. Our work lays foundation for studying generating comprehensive answers when we have access to a suite of models.",
+    "published": "Apr 02",
+    "pdf_url": "https://arxiv.org/pdf/2604.02319v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.02319v1",
+    "queried_author": "Eunsol Choi",
+    "matching_authors": [
+      "Eunsol Choi"
+    ]
+  },
+  {
+    "title": "LiveMathematicianBench: A Live Benchmark for Mathematician-Level Reasoning with Proof Sketches",
+    "authors": [
+      "Linyang He",
+      "Qiyao Yu",
+      "Hanze Dong",
+      "Baohao Liao",
+      "Xinxing Xu",
+      "Micah Goldblum",
+      "Jiang Bian",
+      "Nima Mesgarani"
+    ],
+    "summary": "Mathematical reasoning is a hallmark of human intelligence, and whether large language models (LLMs) can meaningfully perform it remains a central question in artificial intelligence and cognitive science. As LLMs are increasingly integrated into scientific workflows, rigorous evaluation of their mathematical capabilities becomes a practical necessity. Existing benchmarks are limited by synthetic settings and data contamination. We present LiveMathematicianBench, a dynamic multiple-choice benchmark for research-level mathematical reasoning built from recent arXiv papers published after model training cutoffs. By grounding evaluation in newly published theorems, it provides a realistic testbed beyond memorized patterns. The benchmark introduces a thirteen-category logical taxonomy of theorem types (e.g., implication, equivalence, existence, uniqueness), enabling fine-grained evaluation across reasoning forms. It employs a proof-sketch-guided distractor pipeline that uses high-level proof strategies to construct plausible but invalid answer choices reflecting misleading proof directions, increasing sensitivity to genuine understanding over surface-level matching. We also introduce a substitution-resistant mechanism to distinguish answer recognition from substantive reasoning. Evaluation shows the benchmark is far from saturated: Gemini-3.1-pro-preview, the best model, achieves only 43.5%. Under substitution-resistant evaluation, accuracy drops sharply: GPT-5.4 scores highest at 30.6%, while Gemini-3.1-pro-preview falls to 17.6%, below the 20% random baseline. A dual-mode prot...",
+    "published": "Apr 02",
+    "pdf_url": "https://arxiv.org/pdf/2604.01754v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.01754v1",
+    "queried_author": "Micah Goldblum",
+    "matching_authors": [
+      "Micah Goldblum"
+    ]
+  },
+  {
+    "title": "Model Merging via Data-Free Covariance Estimation",
+    "authors": [
+      "Marawan Gamal Abdel Hameed",
+      "Derek Tam",
+      "Pascal Jr Tikeng Notsawo",
+      "Colin Raffel",
+      "Guillaume Rabusseau"
+    ],
+    "summary": "Model merging provides a way of cheaply combining individual models to produce a model that inherits each individual's capabilities. While some merging methods can approach the performance of multitask training, they are often heuristically motivated and lack theoretical justification. A principled alternative is to pose model merging as a layer-wise optimization problem that directly minimizes interference between tasks. However, this formulation requires estimating per-layer covariance matrices from data, which may not be available when performing merging. In contrast, many of the heuristically-motivated methods do not require auxiliary data, making them practically advantageous. In this work, we revisit the interference minimization framework and show that, under certain conditions, covariance matrices can be estimated directly from difference matrices, eliminating the need for data while also reducing computational costs. We validate our approach across vision and language benchmarks on models ranging from 86M parameters to 7B parameters, outperforming previous data-free state-of-the-art merging methods",
+    "published": "Apr 01",
+    "pdf_url": "https://arxiv.org/pdf/2604.01329v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.01329v1",
+    "queried_author": "Colin Raffel",
+    "matching_authors": [
+      "Colin Raffel"
+    ]
+  },
+  {
     "title": "Agent psychometrics: Task-level performance prediction in agentic coding benchmarks",
     "authors": [
       "Chris Ge",
@@ -15350,64 +15407,6 @@
     "queried_author": "Percy Liang",
     "matching_authors": [
       "Percy Liang"
-    ]
-  },
-  {
-    "title": "Understanding and Improving Length Generalization in Recurrent Models",
-    "authors": [
-      "Ricardo Buitrago Ruiz",
-      "Albert Gu"
-    ],
-    "summary": "Recently, recurrent models such as state space models and linear attention have become popular due to their linear complexity in the sequence length. Thanks to their recurrent nature, in principle they can process arbitrarily long sequences, but their performance sometimes drops considerably beyond their training context lengths-i.e. they fail to length generalize. In this work, we provide comprehensive empirical and theoretical analysis to support the unexplored states hypothesis, which posits that models fail to length generalize when during training they are only exposed to a limited subset of the distribution of all attainable states (i.e. states that would be attained if the recurrence was applied to long sequences). Furthermore, we investigate simple training interventions that aim to increase the coverage of the states that the model is trained on, e.g. by initializing the state with Gaussian noise or with the final state of a different input sequence. With only 500 post-training steps ($\\sim 0.1\\%$ of the pre-training budget), these interventions enable length generalization for sequences that are orders of magnitude longer than the training context (e.g. $2k\\longrightarrow 128k$) and show improved performance in long context tasks, thus presenting a simple and efficient way to enable robust length generalization in general recurrent models.",
-    "published": "Jul 03",
-    "pdf_url": "https://arxiv.org/pdf/2507.02782v2",
-    "arxiv_url": "http://arxiv.org/abs/2507.02782v2",
-    "queried_author": "Albert Gu",
-    "matching_authors": [
-      "Albert Gu"
-    ]
-  },
-  {
-    "title": "Optimas: Optimizing Compound AI Systems with Globally Aligned Local Rewards",
-    "authors": [
-      "Shirley Wu",
-      "Parth Sarthi",
-      "Shiyu Zhao",
-      "Aaron Lee",
-      "Herumb Shandilya",
-      "Adrian Mladenic Grobelnik",
-      "Nurendra Choudhary",
-      "Eddie Huang",
-      "Karthik Subbian",
-      "Linjun Zhang",
-      "Diyi Yang",
-      "James Zou",
-      "Jure Leskovec"
-    ],
-    "summary": "Compound AI systems integrating multiple components, such as Large Language Models, specialized tools, and traditional machine learning models, are increasingly deployed to solve complex real-world tasks. However, optimizing compound systems remains challenging due to their non-differentiable structures and diverse configuration types across components, including prompts, hyperparameters, and model parameters. To address this challenge, we propose Optimas, a unified framework for effective optimization of compound systems. The core idea of Optimas is to maintain one Local Reward Function (LRF) per component, each satisfying a local-global alignment property, i.e., each component's local reward correlates with the global system performance. In each iteration, Optimas efficiently adapts the LRFs to maintain this property while simultaneously maximizing each component's local reward. This approach enables independent updates of heterogeneous configurations using the designated optimization method, while ensuring that local improvements consistently lead to performance gains. We present extensive evaluations across five real-world compound systems to demonstrate that Optimas outperforms strong baselines by an average improvement of 11.92%, offering a general and effective approach for improving compound systems. Our website is at https://optimas.stanford.edu.",
-    "published": "Jul 03",
-    "pdf_url": "https://arxiv.org/pdf/2507.03041v4",
-    "arxiv_url": "http://arxiv.org/abs/2507.03041v4",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang"
-    ]
-  },
-  {
-    "title": "Challenges for AI in Multimodal STEM Assessments: a Human-AI Comparison",
-    "authors": [
-      "Aymeric de Chillaz",
-      "Anna Sotnikova",
-      "Patrick Jermann",
-      "Antoine Bosselut"
-    ],
-    "summary": "Generative AI systems have rapidly advanced, with multimodal input capabilities enabling reasoning beyond text-based tasks. In education, these advancements could influence assessment design and question answering, presenting both opportunities and challenges. To investigate these effects, we introduce a high-quality dataset of 201 university-level STEM questions, manually annotated with features such as image type, role, problem complexity, and question format. Our study analyzes how these features affect generative AI performance compared to students. We evaluate four model families with five prompting strategies, comparing results to the average of 546 student responses per question. Although the best model correctly answers on average 58.5 % of the questions using majority vote aggregation, human participants consistently outperform AI on questions involving visual components. Interestingly, human performance remains stable across question features but varies by subject, whereas AI performance is susceptible to both subject matter and question features. Finally, we provide actionable insights for educators, demonstrating how question design can enhance academic integrity by leveraging features that challenge current AI systems without increasing the cognitive burden for students.",
-    "published": "Jul 02",
-    "pdf_url": "https://arxiv.org/pdf/2507.03013v1",
-    "arxiv_url": "http://arxiv.org/abs/2507.03013v1",
-    "queried_author": "Antoine Bosselut",
-    "matching_authors": [
-      "Antoine Bosselut"
     ]
   }
 ]
