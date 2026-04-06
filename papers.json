@@ -1,5 +1,64 @@
 [
   {
+    "title": "Verbalizing LLMs' assumptions to explain and control sycophancy",
+    "authors": [
+      "Myra Cheng",
+      "Isabel Sieh",
+      "Humishka Zope",
+      "Sunny Yu",
+      "Lujain Ibrahim",
+      "Aryaman Arora",
+      "Jared Moore",
+      "Desmond Ong",
+      "Dan Jurafsky",
+      "Diyi Yang"
+    ],
+    "summary": "LLMs can be socially sycophantic, affirming users when they ask questions like \"am I in the wrong?\" rather than providing genuine assessment. We hypothesize that this behavior arises from incorrect assumptions about the user, like underestimating how often users are seeking information over reassurance. We present Verbalized Assumptions, a framework for eliciting these assumptions from LLMs. Verbalized Assumptions provide insight into LLM sycophancy, delusion, and other safety issues, e.g., the top bigram in LLMs' assumptions on social sycophancy datasets is ``seeking validation.'' We provide evidence for a causal link between Verbalized Assumptions and sycophantic model behavior: our assumption probes (linear probes trained on internal representations of these assumptions) enable interpretable fine-grained steering of social sycophancy. We explore why LLMs default to sycophantic assumptions: on identical queries, people expect more objective and informative responses from AI than from other humans, but LLMs trained on human-human conversation do not account for this difference in expectations. Our work contributes a new understanding of assumptions as a mechanism for sycophancy.",
+    "published": "Apr 03",
+    "pdf_url": "https://arxiv.org/pdf/2604.03058v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.03058v1",
+    "queried_author": "Dan Jurafsky",
+    "matching_authors": [
+      "Dan Jurafsky",
+      "Diyi Yang"
+    ]
+  },
+  {
+    "title": "Making Written Theorems Explorable by Grounding Them in Formal Representations",
+    "authors": [
+      "Hita Kambhamettu",
+      "Will Crichton",
+      "Sean Welleck",
+      "Harrison Goldstein",
+      "Andrew Head"
+    ],
+    "summary": "LLM-generated explanations can make technical content more accessible, but there is a ceiling on what they can support interactively. Because LLM outputs are static text, they cannot be executed or stepped through. We argue that grounding explanations in a formalized representation enables interactive affordances beyond what static text supports. We instantiate this idea for mathematical proof comprehension with explorable theorems, a system that uses LLMs to translate a theorem and its written proof into Lean, a programming language for machine-checked proofs, and links the written proof with the Lean code. Readers can work through the proof at a step-level granularity, test custom examples or counterexamples, and trace the logical dependencies bridging each step. Each worked-out step is produced by executing the Lean proof on that example and extracting its intermediate state. A user study ($n = 16$) shows potential advantages of this approach: in a proof-reading task, participants who had access to the provided explorability features gave better, more correct, and more detailed answers to comprehension questions, demonstrating a stronger overall understanding of the underlying mathematics.",
+    "published": "Apr 03",
+    "pdf_url": "https://arxiv.org/pdf/2604.02598v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.02598v1",
+    "queried_author": "Sean Welleck",
+    "matching_authors": [
+      "Sean Welleck"
+    ]
+  },
+  {
+    "title": "Failing to Falsify: Evaluating and Mitigating Confirmation Bias in Language Models",
+    "authors": [
+      "Ayush Rajesh Jhaveri",
+      "Anthony GX-Chen",
+      "Ilia Sucholutsky",
+      "Eunsol Choi"
+    ],
+    "summary": "Confirmation bias, the tendency to seek evidence that supports rather than challenges one's belief, hinders one's reasoning ability. We examine whether large language models (LLMs) exhibit confirmation bias by adapting the rule-discovery study from human psychology: given a sequence of three numbers (a \"triple\"), an agent engages in an interactive feedback loop where it (1) proposes a new triple, (2) receives feedback on whether it satisfies the hidden rule, and (3) guesses the rule. Across eleven LLMs of multiple families and scales, we find that LLMs exhibit confirmation bias, often proposing triples to confirm their hypothesis rather than trying to falsify it. This leads to slower and less frequent discovery of the hidden rule. We further explore intervention strategies (e.g., encouraging the agent to consider counter examples) developed for humans. We find prompting LLMs with such instruction consistently decreases confirmation bias in LLMs, improving rule discovery rates from 42% to 56% on average. Lastly, we mitigate confirmation bias by distilling intervention-induced behavior into LLMs, showing promising generalization to a new task, the Blicket test. Our work shows that confirmation bias is a limitation of LLMs in hypothesis exploration, and that it can be mitigated via injecting interventions designed for humans.",
+    "published": "Apr 02",
+    "pdf_url": "https://arxiv.org/pdf/2604.02485v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.02485v1",
+    "queried_author": "Eunsol Choi",
+    "matching_authors": [
+      "Eunsol Choi"
+    ]
+  },
+  {
     "title": "No Single Best Model for Diversity: Learning a Router for Sample Diversity",
     "authors": [
       "Yuhan Liu",
@@ -2740,8 +2799,8 @@
     ],
     "summary": "Speculative decoding can significantly accelerate LLM serving, yet most deployments today disentangle speculator training from serving, treating speculator training as a standalone offline modeling problem. We show that this decoupled formulation introduces substantial deployment and adaptation lag: (1) high time-to-serve, since a speculator must be trained offline for a considerable period before deployment; (2) delayed utility feedback, since the true end-to-end decoding speedup is only known after training and cannot be inferred reliably from acceptance rate alone due to model-architecture and system-level overheads; and (3) domain-drift degradation, as the target model is repurposed to new domains and the speculator becomes stale and less effective.\n  To address these issues, we present Aurora, a unified training-serving system that closes the loop by continuously learning a speculator directly from live inference traces. Aurora reframes online speculator learning as an asynchronous reinforcement-learning problem: accepted tokens provide positive feedback, while rejected speculator proposals provide implicit negative feedback that we exploit to improve sample efficiency. Our design integrates an SGLang-based inference server with an asynchronous training server, enabling hot-swapped speculator updates without service interruption. Crucially, Aurora supports day-0 deployment: a speculator can be served immediately and rapidly adapted to live traffic, improving system performance while providing immediate utility feedback. Across experiments, Aurora achieves a 1.5x day-0 ...",
     "published": "Feb 06",
-    "pdf_url": "https://arxiv.org/pdf/2602.06932v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.06932v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.06932v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.06932v2",
     "queried_author": "Percy Liang",
     "matching_authors": [
       "Percy Liang",
@@ -9227,13 +9286,14 @@
       "Jerry Weihong Liu",
       "Ke Alexander Wang",
       "David M. Zoltowski",
+      "Leo Kozachkov",
       "Christopher R\u00e9",
       "Scott W. Linderman"
     ],
-    "summary": "Harnessing parallelism in seemingly sequential models is a central challenge for modern machine learning. Several approaches have been proposed for evaluating sequential processes in parallel using fixed-point methods, like Newton, Picard, and Jacobi iterations. In this work, we show that these methods can be understood within a common framework based on linear dynamical systems (LDSs), where different iteration schemes arise naturally as approximate linearizations of a nonlinear recursion. This unifying view highlights shared principles behind these techniques and clarifies when particular fixed-point methods are most likely to be effective. By bridging diverse algorithms through the language of LDSs, our framework provides a clearer theoretical foundation for parallelizing sequential models and points toward new opportunities for efficient and scalable computation.",
+    "summary": "Harnessing parallelism in seemingly sequential models is a central challenge for modern machine learning. Several approaches have been proposed for evaluating sequential processes in parallel using iterative fixed-point methods, like Newton, Picard, and Jacobi iterations. In this work, we show that these methods can be understood within a common framework based on linear dynamical systems (LDSs), where different iteration schemes arise naturally as approximate linearizations of a nonlinear recursion. Moreover, we theoretically analyze the rates of convergence of these methods, and we verify the predictions of this theory with several case studies. This unifying framework highlights shared principles behind these techniques and clarifies when particular fixed-point methods are most likely to be effective. By bridging diverse algorithms through the language of LDSs, the framework provides a clearer theoretical foundation for parallelizing sequential models and points toward new opportunities for efficient and scalable computation.",
     "published": "Sep 26",
-    "pdf_url": "https://arxiv.org/pdf/2509.21716v1",
-    "arxiv_url": "http://arxiv.org/abs/2509.21716v1",
+    "pdf_url": "https://arxiv.org/pdf/2509.21716v2",
+    "arxiv_url": "http://arxiv.org/abs/2509.21716v2",
     "queried_author": "Christopher R\u00e9",
     "matching_authors": [
       "Christopher R\u00e9"
@@ -15330,83 +15390,6 @@
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "LLM Hypnosis: Exploiting User Feedback for Unauthorized Knowledge Injection to All Users",
-    "authors": [
-      "Almog Hilel",
-      "Idan Shenfeld",
-      "Jacob Andreas",
-      "Leshem Choshen"
-    ],
-    "summary": "We describe a vulnerability in language models (LMs) trained with user feedback, whereby a single user can persistently alter LM knowledge and behavior given only the ability to provide prompts and upvote / downvote feedback on LM outputs. To implement the attack, the attacker prompts the LM to stochastically output either a \"poisoned\" or benign response, then upvotes the poisoned response or downvotes the benign one. When feedback signals are used in a subsequent preference tuning behavior, LMs exhibit increased probability of producing poisoned responses even in contexts without malicious prompts. We show that this attack can be used to (1) insert factual knowledge the model did not previously possess, (2) modify code generation patterns in ways that introduce exploitable security flaws, and (3) inject fake financial news. Our finding both identifies a new qualitative feature of language model preference tuning (showing that it even highly restricted forms of preference data can be used to exert fine-grained control over behavior), and a new attack mechanism for LMs trained with user feedback (extending work on pretraining-time data poisoning and deployment-time prompt injection).",
-    "published": "Jul 03",
-    "pdf_url": "https://arxiv.org/pdf/2507.02850v2",
-    "arxiv_url": "http://arxiv.org/abs/2507.02850v2",
-    "queried_author": "Jacob Andreas",
-    "matching_authors": [
-      "Jacob Andreas"
-    ]
-  },
-  {
-    "title": "Generalizing Verifiable Instruction Following",
-    "authors": [
-      "Valentina Pyatkin",
-      "Saumya Malik",
-      "Victoria Graf",
-      "Hamish Ivison",
-      "Shengyi Huang",
-      "Pradeep Dasigi",
-      "Nathan Lambert",
-      "Hannaneh Hajishirzi"
-    ],
-    "summary": "A crucial factor for successful human and AI interaction is the ability of language models or chatbots to follow human instructions precisely. A common feature of instructions are output constraints like ``only answer with yes or no\" or ``mention the word `abrakadabra' at least 3 times\" that the user adds to craft a more useful answer. Even today's strongest models struggle with fulfilling such constraints. We find that most models strongly overfit on a small set of verifiable constraints from the benchmarks that test these abilities, a skill called precise instruction following, and are not able to generalize well to unseen output constraints. We introduce a new benchmark, IFBench, to evaluate precise instruction following generalization on 58 new, diverse, and challenging verifiable out-of-domain constraints. In addition, we perform an extensive analysis of how and on what data models can be trained to improve precise instruction following generalization. Specifically, we carefully design constraint verification modules and show that reinforcement learning with verifiable rewards (RLVR) significantly improves instruction following. In addition to IFBench, we release 29 additional new hand-annotated training constraints and verification functions, RLVR training prompts, and code.",
-    "published": "Jul 03",
-    "pdf_url": "https://arxiv.org/pdf/2507.02833v3",
-    "arxiv_url": "http://arxiv.org/abs/2507.02833v3",
-    "queried_author": "Hamish Ivison",
-    "matching_authors": [
-      "Hamish Ivison",
-      "Hannaneh Hajishirzi"
-    ]
-  },
-  {
-    "title": "Establishing Best Practices for Building Rigorous Agentic Benchmarks",
-    "authors": [
-      "Yuxuan Zhu",
-      "Tengjun Jin",
-      "Yada Pruksachatkun",
-      "Andy Zhang",
-      "Shu Liu",
-      "Sasha Cui",
-      "Sayash Kapoor",
-      "Shayne Longpre",
-      "Kevin Meng",
-      "Rebecca Weiss",
-      "Fazl Barez",
-      "Rahul Gupta",
-      "Jwala Dhamala",
-      "Jacob Merizian",
-      "Mario Giulianelli",
-      "Harry Coppock",
-      "Cozmin Ududec",
-      "Jasjeet Sekhon",
-      "Jacob Steinhardt",
-      "Antony Kellermann",
-      "Sarah Schwettmann",
-      "Matei Zaharia",
-      "Ion Stoica",
-      "Percy Liang",
-      "Daniel Kang"
-    ],
-    "summary": "Benchmarks are essential for quantitatively tracking progress in AI. As AI agents become increasingly capable, researchers and practitioners have introduced agentic benchmarks to evaluate agents on complex, real-world tasks. These benchmarks typically measure agent capabilities by evaluating task outcomes via specific reward designs. However, we show that many agentic benchmarks have issues in task setup or reward design. For example, SWE-bench Verified uses insufficient test cases, while TAU-bench counts empty responses as successful. Such issues can lead to under- or overestimation of agents' performance by up to 100% in relative terms. To make agentic evaluation rigorous, we introduce the Agentic Benchmark Checklist (ABC), a set of guidelines that we synthesized from our benchmark-building experience, a survey of best practices, and previously reported issues. When applied to CVE-Bench, a benchmark with a particularly complex evaluation design, ABC reduces the performance overestimation by 33%.",
-    "published": "Jul 03",
-    "pdf_url": "https://arxiv.org/pdf/2507.02825v5",
-    "arxiv_url": "http://arxiv.org/abs/2507.02825v5",
-    "queried_author": "Percy Liang",
-    "matching_authors": [
-      "Percy Liang"
     ]
   }
 ]
