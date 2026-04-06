@@ -16,3 +16,18 @@ python fetch.py
 # click “Load unpacked”.
 # select chrome/
 ```
+
+### push to trmnl
+
+```sh
+# set env vars for your trmnl
+export TRMNL_API_KEY="..."
+export TRMNL_USER_API_KEY="..."
+export TRMNL_PLUGIN_UUID="..."
+export TRMNL_MAC_ADDRESS="..."
+
+# pull sdk
+pip install git+https://github.com/davidheineman/trmnl.git
+
+python terminal.py
+```

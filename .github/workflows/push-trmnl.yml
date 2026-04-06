@@ -1,0 +1,37 @@
+name: push to trmnl
+
+on:
+  workflow_run:
+    workflows:
+      - update papers
+    types:
+      - completed
+
+jobs:
+  push-trmnl:
+    if: github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_branch }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install "git+https://github.com/davidheineman/trmnl.git" requests
+
+      - name: Push papers to TRMNL
+        env:
+          TRMNL_API_KEY: ${{ secrets.TRMNL_API_KEY }}
+          TRMNL_USER_API_KEY: ${{ secrets.TRMNL_USER_API_KEY }}
+          TRMNL_PLUGIN_UUID: ${{ secrets.TRMNL_PLUGIN_UUID }}
+          TRMNL_MAC_ADDRESS: ${{ secrets.TRMNL_MAC_ADDRESS }}
+        run: python terminal.py
