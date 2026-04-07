@@ -1,5 +1,45 @@
 [
   {
+    "title": "Vero: An Open RL Recipe for General Visual Reasoning",
+    "authors": [
+      "Gabriel Sarch",
+      "Linrong Cai",
+      "Qunzhong Wang",
+      "Haoyang Wu",
+      "Danqi Chen",
+      "Zhuang Liu"
+    ],
+    "summary": "What does it take to build a visual reasoner that works across charts, science, spatial understanding, and open-ended tasks? The strongest vision-language models (VLMs) show such broad visual reasoning is within reach, but the recipe behind them remains unclear, locked behind proprietary reinforcement learning (RL) pipelines with non-public data. We introduce Vero, a family of fully open VLMs that matches or exceeds existing open-weight models across diverse visual reasoning tasks. We scale RL data and rewards across six broad task categories, constructing Vero-600K, a 600K-sample dataset from 59 datasets, and designing task-routed rewards that handle heterogeneous answer formats. Vero achieves state-of-the-art performance, improving over four base models by 3.7-5.5 points on average across VeroEval, our suite of 30 challenging benchmarks. Starting from Qwen3-VL-8B-Instruct, Vero outperforms Qwen3-VL-8B-Thinking on 23 of 30 benchmarks without additional proprietary thinking data. When trained from the same base model, Vero-600K exceeds existing RL datasets across task categories. Systematic ablations reveal that different task categories elicit qualitatively distinct reasoning patterns that transfer poorly in isolation, suggesting that broad data coverage is the primary driver of strong RL scaling. All data, code, and models are released.",
+    "published": "Apr 06",
+    "pdf_url": "https://arxiv.org/pdf/2604.04917v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.04917v1",
+    "queried_author": "Danqi Chen",
+    "matching_authors": [
+      "Danqi Chen"
+    ]
+  },
+  {
+    "title": "IDIOLEX: Unified and Continuous Representations for Idiolectal and Stylistic Variation",
+    "authors": [
+      "Anjali Kantharuban",
+      "Aarohi Srivastava",
+      "Fahim Faisal",
+      "Orevaoghene Ahia",
+      "Antonios Anastasopoulos",
+      "David Chiang",
+      "Yulia Tsvetkov",
+      "Graham Neubig"
+    ],
+    "summary": "Existing sentence representations primarily encode what a sentence says, rather than how it is expressed, even though the latter is important for many applications. In contrast, we develop sentence representations that capture style and dialect, decoupled from semantic content. We call this the task of idiolectal representation learning. We introduce IDIOLEX, a framework for training models that combines supervision from a sentence's provenance with linguistic features of a sentence's content, to learn a continuous representation of each sentence's style and dialect. We evaluate the approach on dialects of both Arabic and Spanish. The learned representations capture meaningful variation and transfer across domains for analysis and classification. We further explore the use of these representations as training objectives for stylistically aligning language models. Our results suggest that jointly modeling individual and community-level variation provides a useful perspective for studying idiolect and supports downstream applications requiring sensitivity to stylistic differences, such as developing diverse and accessible LLMs.",
+    "published": "Apr 06",
+    "pdf_url": "https://arxiv.org/pdf/2604.04704v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.04704v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
     "title": "Large Language Models Align with the Human Brain during Creative Thinking",
     "authors": [
       "Mete Ismayilzada",
@@ -1578,9 +1618,9 @@
       "Mark Ibrahim",
       "Candace Ross",
       "Chantal Shaib",
-      "Kerem Okta",
-      "Sam Bell",
-      "Elia Ovalle",
+      "Kerem Oktar",
+      "Samuel J. Bell",
+      "Anaelia Ovalle",
       "Jesse Dodge",
       "Antoine Bosselut",
       "Koustuv Sinha",
@@ -1588,8 +1628,8 @@
     ],
     "summary": "Existing evaluation methods largely rely on clean, static benchmarks, which can overestimate true model performance by failing to capture the noise and variability inherent in real-world user inputs. This is especially true for language models, which can face human-generated text queries containing mistakes, typos, or alternative ways of phrasing the same question. In this work, we introduce a theoretical framework for quantifying model sensitivity to prompt variants, or brittleness, that can enable us to disentangle data-induced difficulty from prompt-related variability. Using this framework, we design a novel evaluation pipeline, Brittlebench, to holistically evaluate the sensitivity of frontier models. We apply semantics-preserving perturbations to a suite of popular benchmarks, and observe model performance to degrade as much as 12%. However, these perturbations do not affect all models equally: even a single perturbation alters the relative ranking of models in 63% of cases, impacting conclusions about comparative model performance. Decomposing the total variance of both state-of-the-art open-weight and commercial models, we find that semantics-preserving input perturbations can account for up to half of the performance variance for a given model. Brittlebench highlights the need for more robust evaluations and models, and allows us to systematically understand model brittleness.",
     "published": "Feb 27",
-    "pdf_url": "https://arxiv.org/pdf/2603.13285v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.13285v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.13285v2",
+    "arxiv_url": "http://arxiv.org/abs/2603.13285v2",
     "queried_author": "Antoine Bosselut",
     "matching_authors": [
       "Antoine Bosselut",
@@ -9472,10 +9512,10 @@
       "Wenxuan Wang",
       "Maarten Sap"
     ],
-    "summary": "Large language models (LLMs) are increasingly deployed to simulate human collective behaviors, yet the methodological rigor of these \"AI societies\" remains under-explored. Through a systematic audit of 42 recent studies, we identify six pervasive flaws-spanning agent profiles, interaction, memory, control, unawareness, and realism (PIMMUR). Our analysis reveals that 90.7% of studies violate at least one principle, undermining simulation validity. We demonstrate that frontier LLMs correctly identify the underlying social experiment in 47.6% of cases, while 65.3% of prompts exert excessive control that pre-determines outcomes. By reproducing five representative experiments (e.g., telephone game), we show that reported collective phenomena often vanish or reverse when PIMMUR principles are enforced, suggesting that many \"emergent\" behaviors are methodological artifacts rather than genuine social dynamics. Our findings suggest that current AI simulations may capture model-specific biases rather than universal human social behaviors, raising critical concerns about the use of LLMs as scientific proxies for human society.",
+    "summary": "Large language models (LLMs) are increasingly deployed to simulate human collective behaviors, yet the methodological rigor of these \"AI societies\" remains under-explored. Through a systematic audit of 39 recent studies, we identify six pervasive flaws-spanning agent profiles, interaction, memory, control, unawareness, and realism (PIMMUR). Our analysis reveals that 89.7% of studies violate at least one principle, undermining simulation validity. We demonstrate that frontier LLMs correctly identify the underlying social experiment in 50.8% of cases, while 61.0% of prompts exert excessive control that pre-determines outcomes. By reproducing five representative experiments (e.g., telephone game), we show that reported collective phenomena often vanish or reverse when PIMMUR principles are enforced, suggesting that many \"emergent\" behaviors are methodological artifacts rather than genuine social dynamics. Our findings suggest that current AI simulations may capture model-specific biases rather than universal human social behaviors, raising critical concerns about the use of LLMs as scientific proxies for human society.",
     "published": "Sep 22",
-    "pdf_url": "https://arxiv.org/pdf/2509.18052v2",
-    "arxiv_url": "http://arxiv.org/abs/2509.18052v2",
+    "pdf_url": "https://arxiv.org/pdf/2509.18052v3",
+    "arxiv_url": "http://arxiv.org/abs/2509.18052v3",
     "queried_author": "Maarten Sap",
     "matching_authors": [
       "Maarten Sap"
@@ -11913,48 +11953,6 @@
     "matching_authors": [
       "Graham Neubig",
       "Maarten Sap"
-    ]
-  },
-  {
-    "title": "Agentic-R1: Distilled Dual-Strategy Reasoning",
-    "authors": [
-      "Weihua Du",
-      "Pranjal Aggarwal",
-      "Sean Welleck",
-      "Yiming Yang"
-    ],
-    "summary": "Current long chain-of-thought (long-CoT) models excel at mathematical reasoning but rely on slow and error-prone natural language traces. Tool-augmented agents address arithmetic via code execution, but often falter on complex logical tasks. We introduce a fine-tuning framework, DualDistill, that distills complementary reasoning strategies from multiple teachers into a unified student model. Using this approach, we train Agentic-R1, which dynamically selects the optimal strategy for each query, invoking tools for arithmetic and algorithmic problems, and using text-based reasoning for abstract ones. Our method improves accuracy across a range of tasks, including both computation-intensive and standard benchmarks, demonstrating the effectiveness of multi-strategy distillation in achieving robust and efficient reasoning. Our project is available at https://github.com/StigLidu/DualDistill",
-    "published": "Jul 08",
-    "pdf_url": "https://arxiv.org/pdf/2507.05707v2",
-    "arxiv_url": "http://arxiv.org/abs/2507.05707v2",
-    "queried_author": "Sean Welleck",
-    "matching_authors": [
-      "Sean Welleck"
-    ]
-  },
-  {
-    "title": "Deep Research Comparator: A Platform For Fine-grained Human Annotations of Deep Research Agents",
-    "authors": [
-      "Prahaladh Chandrahasan",
-      "Jiahe Jin",
-      "Zhihan Zhang",
-      "Tevin Wang",
-      "Andy Tang",
-      "Lucy Mo",
-      "Morteza Ziyadi",
-      "Leonardo F. R. Ribeiro",
-      "Zimeng Qiu",
-      "Markus Dreyer",
-      "Akari Asai",
-      "Chenyan Xiong"
-    ],
-    "summary": "Effectively evaluating deep research agents that autonomously search the web, analyze information, and generate reports remains a major challenge, particularly when it comes to assessing long reports and giving detailed feedback on their intermediate steps. To address these gaps, we introduce Deep Research Comparator, a platform that offers a holistic framework for deep research agent hosting, side-by-side comparison, fine-grained human feedback collection, and ranking calculation. Given a user query, our platform displays the final reports from two different agents along with their intermediate steps during generation. Annotators can evaluate the overall quality of final reports based on side-by-side comparison, and also provide detailed feedback separately by assessing intermediate steps or specific text spans within the final report. Furthermore, we develop Simple Deepresearch, an end-to-end agent scaffold. This scaffold serves as a baseline that facilitates the easy integration of various large language models to transform them into deep research agents for evaluation. To demonstrate the platform's utility for deep research agent development, we have collected real user preference data from 17 annotators on three deep research agents. A demo video of our platform can be found at https://www.youtube.com/watch?v=g4d2dnbdseg.",
-    "published": "Jul 07",
-    "pdf_url": "https://arxiv.org/pdf/2507.05495v2",
-    "arxiv_url": "http://arxiv.org/abs/2507.05495v2",
-    "queried_author": "Akari Asai",
-    "matching_authors": [
-      "Akari Asai"
     ]
   }
 ]
