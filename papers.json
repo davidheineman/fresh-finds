@@ -17,6 +17,35 @@
     ]
   },
   {
+    "title": "RAGEN-2: Reasoning Collapse in Agentic RL",
+    "authors": [
+      "Zihan Wang",
+      "Chi Gui",
+      "Xing Jin",
+      "Qineng Wang",
+      "Licheng Liu",
+      "Kangrui Wang",
+      "Shiqi Chen",
+      "Linjie Li",
+      "Zhengyuan Yang",
+      "Pingyue Zhang",
+      "Yiping Lu",
+      "Jiajun Wu",
+      "Li Fei-Fei",
+      "Lijuan Wang",
+      "Yejin Choi",
+      "Manling Li"
+    ],
+    "summary": "RL training of multi-turn LLM agents is inherently unstable, and reasoning quality directly determines task performance. Entropy is widely used to track reasoning stability. However, entropy only measures diversity within the same input, and cannot tell whether reasoning actually responds to different inputs. In RAGEN-2, we find that even with stable entropy, models can rely on fixed templates that look diverse but are input-agnostic. We call this template collapse, a failure mode invisible to entropy and all existing metrics. To diagnose this failure, we decompose reasoning quality into within-input diversity (Entropy) and cross-input distinguishability (Mutual Information, MI), and introduce a family of mutual information proxies for online diagnosis. Across diverse tasks, mutual information correlates with final performance much more strongly than entropy, making it a more reliable proxy for reasoning quality. We further explain template collapse with a signal-to-noise ratio (SNR) mechanism. Low reward variance weakens task gradients, letting regularization terms dominate and erase cross-input reasoning differences. To address this, we propose SNR-Aware Filtering to select high-signal prompts per iteration using reward variance as a lightweight proxy. Across planning, math reasoning, web navigation, and code execution, the method consistently improves both input dependence and task performance.",
+    "published": "Apr 07",
+    "pdf_url": "https://arxiv.org/pdf/2604.06268v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.06268v1",
+    "queried_author": "Yejin Choi",
+    "matching_authors": [
+      "Yejin Choi"
+    ]
+  },
+  {
     "title": "Document Optimization for Black-Box Retrieval via Reinforcement Learning",
     "authors": [
       "Omri Uzan",
@@ -11934,22 +11963,6 @@
     "queried_author": "Antoine Bosselut",
     "matching_authors": [
       "Antoine Bosselut"
-    ]
-  },
-  {
-    "title": "Humans overrely on overconfident language models, across languages",
-    "authors": [
-      "Neil Rathi",
-      "Dan Jurafsky",
-      "Kaitlyn Zhou"
-    ],
-    "summary": "As large language models (LLMs) are deployed globally, it is crucial that their responses are calibrated across languages to accurately convey uncertainty and limitations. Prior work shows that LLMs are linguistically overconfident in English, leading users to overrely on confident generations. However, the usage and interpretation of epistemic markers (e.g., 'I think it's') differs sharply across languages. Here, we study the risks of multilingual linguistic (mis)calibration, overconfidence, and overreliance across five languages to evaluate LLM safety in a global context. Our work finds that overreliance risks are high across languages. We first analyze the distribution of LLM-generated epistemic markers and observe that LLMs are overconfident across languages, frequently generating strengtheners even as part of incorrect responses. Model generations are, however, sensitive to documented cross-linguistic variation in usage: for example, models generate the most markers of uncertainty in Japanese and the most markers of certainty in German and Mandarin. Next, we measure human reliance rates across languages, finding that reliance behaviors differ cross-linguistically: for example, participants are significantly more likely to discount expressions of uncertainty in Japanese than in English (i.e., ignore their 'hedging' function and rely on generations that contain them). Taken together, these results indicate a high risk of reliance on overconfident model generations across languages. Our findings highlight the challenges of multilingual linguistic calibration and stress th...",
-    "published": "Jul 08",
-    "pdf_url": "https://arxiv.org/pdf/2507.06306v2",
-    "arxiv_url": "http://arxiv.org/abs/2507.06306v2",
-    "queried_author": "Dan Jurafsky",
-    "matching_authors": [
-      "Dan Jurafsky"
     ]
   }
 ]
