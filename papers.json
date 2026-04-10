@@ -1,5 +1,114 @@
 [
   {
+    "title": "What do Language Models Learn and When? The Implicit Curriculum Hypothesis",
+    "authors": [
+      "Emmy Liu",
+      "Kaiser Sun",
+      "Millicent Li",
+      "Isabelle Lee",
+      "Lindia Tjuatja",
+      "Jen-tse Huang",
+      "Graham Neubig"
+    ],
+    "summary": "Large language models (LLMs) can perform remarkably complex tasks, yet the fine-grained details of how these capabilities emerge during pretraining remain poorly understood. Scaling laws on validation loss tell us how much a model improves with additional compute, but not what skills it acquires in which order. To remedy this, we propose the Implicit Curriculum Hypothesis: pretraining follows a compositional and predictable curriculum across models and data mixtures. We test this by designing a suite of simple, composable tasks spanning retrieval, morphological transformations, coreference, logical reasoning, and mathematics. Using these tasks, we track emergence points across four model families spanning sizes from 410M-13B parameters. We find that emergence orderings of when models reach fixed accuracy thresholds are strikingly consistent ($\u03c1= .81$ across 45 model pairs), and that composite tasks most often emerge after their component tasks. Furthermore, we find that this structure is encoded in model representations: tasks with similar function vector representations also tend to follow similar trajectories in training. By using the space of representations derived from our task set, we can effectively predict the training trajectories of simple held-out compositional tasks throughout the course of pretraining ($R^2 = .68$-$.84$ across models) without previously evaluating them. Together, these results suggest that pretraining is more structured than loss curves reveal: skills emerge in a compositional order that is consistent across models and readable from their inter...",
+    "published": "Apr 09",
+    "pdf_url": "https://arxiv.org/pdf/2604.08510v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.08510v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
+    "title": "Synthetic Data for any Differentiable Target",
+    "authors": [
+      "Tristan Thrush",
+      "Sung Min Park",
+      "Herman Brunborg",
+      "Luke Bailey",
+      "Marcel Roed",
+      "Neil Band",
+      "Christopher Potts",
+      "Tatsunori Hashimoto"
+    ],
+    "summary": "What are the limits of controlling language models via synthetic training data? We develop a reinforcement learning (RL) primitive, the Dataset Policy Gradient (DPG), which can precisely optimize synthetic data generators to produce a dataset of targeted examples. When used for supervised fine-tuning (SFT) of a target model, these examples cause the target model to do well on a differentiable metric of our choice. Our approach achieves this by taking exact data attribution via higher-order gradients and using those scores as policy gradient rewards. We prove that this procedure closely approximates the true, intractable gradient for the synthetic data generator. To illustrate the potential of DPG, we show that, using only SFT on generated examples, we can cause the target model's LM head weights to (1) embed a QR code, (2) embed the pattern $\\texttt{67}$, and (3) have lower $\\ell^2$ norm. We additionally show that we can cause the generator to (4) rephrase inputs in a new language and (5) produce a specific UUID, even though neither of these objectives is conveyed in the generator's input prompts. These findings suggest that DPG is a powerful and flexible technique for shaping model properties using only synthetic training examples.",
+    "published": "Apr 09",
+    "pdf_url": "https://arxiv.org/pdf/2604.08423v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.08423v1",
+    "queried_author": "Christopher Potts",
+    "matching_authors": [
+      "Christopher Potts",
+      "Tatsunori Hashimoto"
+    ]
+  },
+  {
+    "title": "Squeeze Evolve: Unified Multi-Model Orchestration for Verifier-Free Evolution",
+    "authors": [
+      "Monishwaran Maheswaran",
+      "Leon Lakhani",
+      "Zhongzhu Zhou",
+      "Shijia Yang",
+      "Junxiong Wang",
+      "Coleman Hooper",
+      "Yuezhou Hu",
+      "Rishabh Tiwari",
+      "Jue Wang",
+      "Harman Singh",
+      "Qingyang Wu",
+      "Yuqing Jian",
+      "Ce Zhang",
+      "Kurt Keutzer",
+      "Tri Dao",
+      "Xiaoxia Wu",
+      "Ben Athiwaratkun",
+      "James Zou",
+      "Chenfeng Xu"
+    ],
+    "summary": "We show that verifier-free evolution is bottlenecked by both diversity and efficiency: without external correction, repeated evolution accelerates collapse toward narrow modes, while the uniform use of a high-cost model wastes compute and quickly becomes economically impractical. We introduce Squeeze Evolve, a unified multi-model orchestration framework for verifier-free evolutionary inference. Our approach is guided by a simple principle: allocate model capability where it has the highest marginal utility. Stronger models are reserved for high-impact stages, while cheaper models handle the other stages at much lower costs. This principle addresses diversity and cost-efficiency jointly while remaining lightweight. Squeeze Evolve naturally supports open-source, closed-source, and mixed-model deployments. Across AIME 2025, HMMT 2025, LiveCodeBench V6, GPQA-Diamond, ARC-AGI-V2, and multimodal vision benchmarks, such as MMMU-Pro and BabyVision, Squeeze Evolve consistently improves the cost-capability frontier over single-model evolution and achieves new state-of-the-art results on several tasks. Empirically, Squeeze Evolve reduces API cost by up to $\\sim$3$\\times$ and increases fixed-budget serving throughput by up to $\\sim$10$\\times$. Moreover, on discovery tasks, Squeeze Evolve is the first verifier-free evolutionary method to match, and in some cases exceed, the performance of verifier-based evolutionary methods.",
+    "published": "Apr 09",
+    "pdf_url": "https://arxiv.org/pdf/2604.07725v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.07725v1",
+    "queried_author": "Tri Dao",
+    "matching_authors": [
+      "Tri Dao"
+    ]
+  },
+  {
+    "title": "Behavior Latticing: Inferring User Motivations from Unstructured Interactions",
+    "authors": [
+      "Dora Zhao",
+      "Michelle S. Lam",
+      "Diyi Yang",
+      "Michael S. Bernstein"
+    ],
+    "summary": "A long-standing vision of computing is the personal AI system: one that understands us well enough to address our underlying needs. Today's AI focuses on what users do, ignoring why they might be doing such things in the first place. As a result, AI systems default to optimizing or repeating existing behaviors (e.g., user has ChatGPT complete their homework) even when they run counter to users' needs (e.g., gaining subject expertise). Instead we require systems that can make connections across observations, synthesizing them into insights about the motivations underlying these behaviors (e.g., user's ongoing commitments make it difficult to prioritize learning despite expressed desire to do so). We introduce an architecture for building user understanding through behavior latticing, connecting seemingly disparate behaviors, synthesizing them into insights, and repeating this process over long spans of interaction data. Doing so affords new capabilities, including being able to infer users' needs rather than just their tasks and connecting subtle patterns to produce conclusions that users themselves may not have previously realized. In an evaluation, we validate that behavior latticing produces accurate insights about the user with significantly greater interpretive depth compared to state-of-the-art approaches. To demonstrate the new interactive capabilities that behavior lattices afford, we instantiate a personal AI agent steered by user insights, finding that our agent is significantly better at addressing users' needs while still providing immediate utility.",
+    "published": "Apr 08",
+    "pdf_url": "https://arxiv.org/pdf/2604.07629v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.07629v1",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang"
+    ]
+  },
+  {
+    "title": "Generative Experiences for Digital Mental Health Interventions: Evidence from a Randomized Study",
+    "authors": [
+      "Ananya Bhattacharjee",
+      "Michael Liut",
+      "Matthew J\u00f6rke",
+      "Diyi Yang",
+      "Emma Brunskill"
+    ],
+    "summary": "Digital mental health (DMH) tools have extensively explored personalization of interventions to users' needs and contexts. However, this personalization often targets what support is provided, not how it is experienced. Even well-matched content can fail when the interaction format misaligns with how someone can engage. We introduce generative experience as a paradigm for DMH support, where the intervention experience is composed at runtime. We instantiate this in GUIDE, a system that generates personalized intervention content and multimodal interaction structure through rubric-guided generation of modular components. In a preregistered study with N = 237 participants, GUIDE significantly reduced stress (p = .02) and improved the user experience (p = .04) compared to an LLM-based cognitive restructuring control. GUIDE also supported diverse forms of reflection and action through varied interaction flows, while revealing tensions around personalization across the interaction sequence. This work lays the foundation for interventions that dynamically shape how support is experienced and enacted in digital settings.",
+    "published": "Apr 08",
+    "pdf_url": "https://arxiv.org/pdf/2604.07558v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.07558v1",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang"
+    ]
+  },
+  {
     "title": "Gym-Anything: Turn any Software into an Agent Environment",
     "authors": [
       "Pranjal Aggarwal",
@@ -670,6 +779,36 @@
     ]
   },
   {
+    "title": "Nemotron-Cascade 2: Post-Training LLMs with Cascade RL and Multi-Domain On-Policy Distillation",
+    "authors": [
+      "Zhuolin Yang",
+      "Zihan Liu",
+      "Yang Chen",
+      "Wenliang Dai",
+      "Boxin Wang",
+      "Sheng-Chieh Lin",
+      "Chankyu Lee",
+      "Yangyi Chen",
+      "Dongfu Jiang",
+      "Jiafan He",
+      "Renjie Pi",
+      "Grace Lam",
+      "Nayeon Lee",
+      "Alexander Bukharin",
+      "Mohammad Shoeybi",
+      "Bryan Catanzaro",
+      "Wei Ping"
+    ],
+    "summary": "We introduce Nemotron-Cascade 2, an open 30B MoE model with 3B activated parameters that delivers best-in-class reasoning and strong agentic capabilities. Despite its compact size, its mathematical and coding reasoning performance approaches that of frontier open models. It is the second open-weight LLM, after DeepSeekV3.2-Speciale-671B-A37B, to achieve Gold Medal-level performance in the 2025 International Mathematical Olympiad (IMO), the International Olympiad in Informatics (IOI), and the ICPC World Finals, demonstrating remarkably high intelligence density with 20x fewer parameters. In contrast to Nemotron-Cascade 1, the key technical advancements are as follows. After SFT on a meticulously curated dataset, we substantially expand Cascade RL to cover a much broader spectrum of reasoning and agentic domains. Furthermore, we introduce multi-domain on-policy distillation from the strongest intermediate teacher models for each domain throughout the Cascade RL process, allowing us to efficiently recover benchmark regressions and sustain strong performance gains along the way. We release the collection of model checkpoint and training data.",
+    "published": "Mar 19",
+    "pdf_url": "https://arxiv.org/pdf/2603.19220v2",
+    "arxiv_url": "http://arxiv.org/abs/2603.19220v2",
+    "queried_author": "Mohammad Shoeybi",
+    "matching_authors": [
+      "Mohammad Shoeybi"
+    ]
+  },
+  {
     "title": "Reasoning over mathematical objects: on-policy reward modeling and test time aggregation",
     "authors": [
       "Pranjal Aggarwal",
@@ -1060,6 +1199,38 @@
     ]
   },
   {
+    "title": "MMOU: A Massive Multi-Task Omni Understanding and Reasoning Benchmark for Long and Complex Real-World Videos",
+    "authors": [
+      "Arushi Goel",
+      "Sreyan Ghosh",
+      "Vatsal Agarwal",
+      "Nishit Anand",
+      "Kaousheik Jayakumar",
+      "Lasha Koroshinadze",
+      "Yao Xu",
+      "Katie Lyons",
+      "James Case",
+      "Karan Sapra",
+      "Kevin J. Shih",
+      "Siddharth Gururani",
+      "Abhinav Shrivastava",
+      "Ramani Duraiswami",
+      "Dinesh Manocha",
+      "Andrew Tao",
+      "Bryan Catanzaro",
+      "Mohammad Shoeybi",
+      "Wei Ping"
+    ],
+    "summary": "Multimodal Large Language Models (MLLMs) have shown strong performance in visual and audio understanding when evaluated in isolation. However, their ability to jointly reason over omni-modal (visual, audio, and textual) signals in long and complex videos remains largely unexplored. We introduce MMOU, a new benchmark designed to systematically evaluate multimodal understanding and reasoning under these challenging, real-world conditions. MMOU consists of 15,000 carefully curated questions paired with 9038 web-collected videos of varying length, spanning diverse domains and exhibiting rich, tightly coupled audio-visual content. The benchmark covers 13 fundamental skill categories, all of which require integrating evidence across modalities and time. All questions are manually annotated across multiple turns by professional annotators, ensuring high quality and reasoning fidelity. We evaluate 20+ state-of-the-art open-source and proprietary multimodal models on MMOU. The results expose substantial performance gaps: the best closed-source model achieves only 64.2% accuracy, while the strongest open-source model reaches just 46.8%. Our results highlight the challenges of long-form omni-modal understanding, revealing that current models frequently fail to apply even fundamental skills in long videos. Through detailed analysis, we further identify systematic failure modes and provide insights into where and why current models break.",
+    "published": "Mar 14",
+    "pdf_url": "https://arxiv.org/pdf/2603.14145v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.14145v1",
+    "queried_author": "Mohammad Shoeybi",
+    "matching_authors": [
+      "Mohammad Shoeybi"
+    ]
+  },
+  {
     "title": "$\u03c4$-Voice: Benchmarking Full-Duplex Voice Agents on Real-World Domains",
     "authors": [
       "Soham Ray",
@@ -1289,6 +1460,64 @@
     "queried_author": "Ashwinee Panda",
     "matching_authors": [
       "Ashwinee Panda"
+    ]
+  },
+  {
+    "title": "Scalable Training of Mixture-of-Experts Models with Megatron Core",
+    "authors": [
+      "Zijie Yan",
+      "Hongxiao Bai",
+      "Xin Yao",
+      "Dennis Liu",
+      "Tong Liu",
+      "Hongbin Liu",
+      "Pingtian Li",
+      "Evan Wu",
+      "Shiqing Fan",
+      "Li Tao",
+      "Robin Zhang",
+      "Yuzhong Wang",
+      "Shifang Xu",
+      "Jack Chang",
+      "Xuwen Chen",
+      "Kunlun Li",
+      "Yan Bai",
+      "Gao Deng",
+      "Nan Zheng",
+      "Vijay Anand Korthikanti",
+      "Abhinav Khattar",
+      "Ethan He",
+      "Soham Govande",
+      "Sangkug Lym",
+      "Zhongbo Zhu",
+      "Qi Zhang",
+      "Haochen Yuan",
+      "Xiaowei Ren",
+      "Deyu Fu",
+      "Tailai Ma",
+      "Shunkang Zhang",
+      "Jiang Shao",
+      "Ray Wang",
+      "Vasudevan Rengasamy",
+      "Rachit Garg",
+      "Santosh Bhavani",
+      "Xipeng Li",
+      "Chandler Zhou",
+      "David Wu",
+      "Yingcan Wei",
+      "Ashwath Aithal",
+      "Michael Andersch",
+      "Mohammad Shoeybi",
+      "Jiajie Yao",
+      "June Yang"
+    ],
+    "summary": "Scaling Mixture-of-Experts (MoE) training introduces systems challenges absent in dense models. Because each token activates only a subset of experts, this sparsity allows total parameters to grow much faster than per-token computation, creating coupled constraints across memory, communication, and computation. Optimizing one dimension often shifts pressure to another, demanding co-design across the full system stack.\n  We address these challenges for MoE training through integrated optimizations spanning memory (fine-grained recomputation, offloading, etc.), communication (optimized dispatchers, overlapping, etc.), and computation (Grouped GEMM, fusions, CUDA Graphs, etc.). The framework also provides Parallel Folding for flexible multi-dimensional parallelism, low-precision training support for FP8 and NVFP4, and efficient long-context training. On NVIDIA GB300 and GB200, it achieves 1,233/1,048 TFLOPS/GPU for DeepSeek-V3-685B and 974/919 TFLOPS/GPU for Qwen3-235B. As a performant, scalable, and production-ready open-source solution, it has been used across academia and industry for training MoE models ranging from billions to trillions of parameters on clusters scaling up to thousands of GPUs.\n  This report explains how these techniques work, their trade-offs, and their interactions at the systems level, providing practical guidance for scaling MoE models with Megatron Core.",
+    "published": "Mar 08",
+    "pdf_url": "https://arxiv.org/pdf/2603.07685v2",
+    "arxiv_url": "http://arxiv.org/abs/2603.07685v2",
+    "queried_author": "Mohammad Shoeybi",
+    "matching_authors": [
+      "Mohammad Shoeybi"
     ]
   },
   {
@@ -1864,6 +2093,25 @@
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
+    ]
+  },
+  {
+    "title": "On Data Engineering for Scaling LLM Terminal Capabilities",
+    "authors": [
+      "Renjie Pi",
+      "Grace Lam",
+      "Mohammad Shoeybi",
+      "Pooya Jannaty",
+      "Bryan Catanzaro",
+      "Wei Ping"
+    ],
+    "summary": "Despite rapid recent progress in the terminal capabilities of large language models, the training data strategies behind state-of-the-art terminal agents remain largely undisclosed. We address this gap through a systematic study of data engineering practices for terminal agents, making two key contributions: (1) Terminal-Task-Gen, a lightweight synthetic task generation pipeline that supports seed-based and skill-based task construction, and (2) a comprehensive analysis of data and training strategies, including filtering, curriculum learning, long context training, and scaling behavior. Our pipeline yields Terminal-Corpus, a large-scale open-source dataset for terminal tasks. Using this dataset, we train Nemotron-Terminal, a family of models initialized from Qwen3(8B, 14B, 32B) that achieve substantial gains on Terminal-Bench 2.0: Nemotron-Terminal-8B improves from 2.5% to 13.0% Nemotron-Terminal-14B improves from 4.0% to 20.2%, and Nemotron-Terminal-32B improves from 3.4% to 27.4%, matching the performance of significantly larger models. To accelerate research in this domain, we open-source our model checkpoints and most of our synthetic datasets at https://huggingface.co/collections/nvidia/nemotron-terminal.",
+    "published": "Feb 24",
+    "pdf_url": "https://arxiv.org/pdf/2602.21193v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.21193v1",
+    "queried_author": "Mohammad Shoeybi",
+    "matching_authors": [
+      "Mohammad Shoeybi"
     ]
   },
   {
@@ -2672,6 +2920,43 @@
       "Hannaneh Hajishirzi",
       "Kyle Lo",
       "Luca Soldaini"
+    ]
+  },
+  {
+    "title": "Extending Puzzle for Mixture-of-Experts Reasoning Models with Application to GPT-OSS Acceleration",
+    "authors": [
+      "Akhiad Bercovich",
+      "Nir Ailon",
+      "Vladimir Anisimov",
+      "Tomer Asida",
+      "Nave Assaf",
+      "Mohammad Dabbah",
+      "Ido Galil",
+      "Amnon Geifman",
+      "Yonatan Geifman",
+      "Izhak Golan",
+      "Roi Koren",
+      "Itay Levy",
+      "Zach Moshe",
+      "Pavlo Molchanov",
+      "Najeeb Nabwani",
+      "Mostofa Patwary",
+      "Omri Puny",
+      "Tomer Ronen",
+      "Itamar Schen",
+      "Elad Segal",
+      "Ido Shahaf",
+      "Oren Tropp",
+      "Ran Zilberstein",
+      "Ran El-Yaniv"
+    ],
+    "summary": "Reasoning-focused LLMs improve answer quality by generating longer reasoning traces, but the additional tokens dramatically increase serving cost, motivating inference optimization. We extend and apply Puzzle, a post-training neural architecture search (NAS) framework, to gpt-oss-120B to produce gpt-oss-puzzle-88B, a deployment-optimized derivative. Our approach combines heterogeneous MoE expert pruning, selective replacement of full-context attention with window attention, FP8 KV-cache quantization with calibrated scales, and post-training reinforcement learning to recover accuracy, while maintaining low generation length. In terms of per-token speeds, on an 8XH100 node we achieve 1.63X and 1.22X throughput speedups in long-context and short-context settings, respectively. gpt-oss-puzzle-88B also delivers throughput speedups of 2.82X on a single NVIDIA H100 GPU. However, because token counts can change with reasoning effort and model variants, per-token throughput (tok/s) and latency (ms/token) do not necessarily lead to end-to-end speedups: a 2X throughput gain is erased if traces grow 2X. Conversely, throughput gains can be spent on more reasoning tokens to improve accuracy; we therefore advocate request-level efficiency metrics that normalize throughput by tokens generated and trace an accuracy--speed frontier across reasoning efforts. We show that gpt-oss-puzzle-88B improves over gpt-oss-120B along the entire frontier, delivering up to 1.29X higher request-level efficiency. Across various benchmarks, gpt-oss-puzzle-88B matches or slightly exceeds the parent on suite-av...",
+    "published": "Feb 12",
+    "pdf_url": "https://arxiv.org/pdf/2602.11937v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.11937v2",
+    "queried_author": "Mostofa Patwary",
+    "matching_authors": [
+      "Mostofa Patwary"
     ]
   },
   {
@@ -3668,6 +3953,36 @@
     "queried_author": "Eunsol Choi",
     "matching_authors": [
       "Eunsol Choi"
+    ]
+  },
+  {
+    "title": "LatentMoE: Toward Optimal Accuracy per FLOP and Parameter in Mixture of Experts",
+    "authors": [
+      "Venmugil Elango",
+      "Nidhi Bhatia",
+      "Roger Waleffe",
+      "Rasoul Shafipour",
+      "Tomer Asida",
+      "Abhinav Khattar",
+      "Nave Assaf",
+      "Maximilian Golub",
+      "Joey Guman",
+      "Tiyasa Mitra",
+      "Ritchie Zhao",
+      "Ritika Borkar",
+      "Ran Zilberstein",
+      "Mostofa Patwary",
+      "Mohammad Shoeybi",
+      "Bita Rouhani"
+    ],
+    "summary": "Mixture of Experts (MoEs) have become a central component of many state-of-the-art open-source and proprietary large language models. Despite their widespread adoption, it remains unclear how close existing MoE architectures are to optimal with respect to inference cost, as measured by accuracy per floating-point operation and per parameter. In this work, we revisit MoE design from a hardware-software co-design perspective, grounded in empirical and theoretical considerations. We characterize key performance bottlenecks across diverse deployment regimes, spanning offline high-throughput execution and online, latency-critical inference. Guided by these insights, we introduce LatentMoE, a new model architecture resulting from systematic design exploration and optimized for maximal accuracy per unit of compute. Empirical design space exploration at scales of up to 95B parameters and over a 1T-token training horizon, together with supporting theoretical analysis, shows that LatentMoE consistently outperforms standard MoE architectures in terms of accuracy per FLOP and per parameter. Given its strong performance, the LatentMoE architecture has been adopted by the flagship Nemotron-3 Super and Ultra models and scaled to substantially larger regimes, including longer token horizons and larger model sizes, as reported in Nvidia et al. (arXiv:2512.20856).",
+    "published": "Jan 26",
+    "pdf_url": "https://arxiv.org/pdf/2601.18089v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.18089v1",
+    "queried_author": "Mostofa Patwary",
+    "matching_authors": [
+      "Mostofa Patwary",
+      "Mohammad Shoeybi"
     ]
   },
   {
@@ -4930,7 +5245,9 @@
     "arxiv_url": "http://arxiv.org/abs/2512.20856v1",
     "queried_author": "Yejin Choi",
     "matching_authors": [
-      "Yejin Choi"
+      "Yejin Choi",
+      "Mostofa Patwary",
+      "Mohammad Shoeybi"
     ]
   },
   {
@@ -5257,7 +5574,9 @@
     "arxiv_url": "http://arxiv.org/abs/2512.20848v1",
     "queried_author": "Yejin Choi",
     "matching_authors": [
-      "Yejin Choi"
+      "Yejin Choi",
+      "Mostofa Patwary",
+      "Mohammad Shoeybi"
     ]
   },
   {
@@ -5740,6 +6059,31 @@
       "Maarten Sap",
       "Noah A. Smith",
       "Pang Wei Koh"
+    ]
+  },
+  {
+    "title": "Nemotron-Cascade: Scaling Cascaded Reinforcement Learning for General-Purpose Reasoning Models",
+    "authors": [
+      "Boxin Wang",
+      "Chankyu Lee",
+      "Nayeon Lee",
+      "Sheng-Chieh Lin",
+      "Wenliang Dai",
+      "Yang Chen",
+      "Yangyi Chen",
+      "Zhuolin Yang",
+      "Zihan Liu",
+      "Mohammad Shoeybi",
+      "Bryan Catanzaro",
+      "Wei Ping"
+    ],
+    "summary": "Building general-purpose reasoning models with reinforcement learning (RL) entails substantial cross-domain heterogeneity, including large variation in inference-time response lengths and verification latency. Such variability complicates the RL infrastructure, slows training, and makes training curriculum (e.g., response length extension) and hyperparameter selection challenging. In this work, we propose cascaded domain-wise reinforcement learning (Cascade RL) to develop Nemotron-Cascade, capable of operating in both instruct and deep thinking modes, without any performance gap relative to a thinking-only counterpart. Departing from conventional approaches that blend heterogeneous prompts from different domains, Cascade RL orchestrates sequential, domain-wise RL, reducing engineering complexity and delivering state-of-the-art performance across a wide range of benchmarks. Notably, RLHF for alignment, when used as a pre-step, boosts the model's reasoning ability far beyond mere preference optimization, and subsequent domain-wise RLVR stages rarely degrade the benchmark performance attained in earlier domains and may even improve it (see an illustration in Figure 1). Our 14B model, after RL, outperforms its SFT teacher, DeepSeek-R1-0528, on LiveCodeBench v5/v6/Pro and achieves silver-medal performance in the 2025 International Olympiad in Informatics (IOI). We transparently share our training and data recipes.",
+    "published": "Dec 15",
+    "pdf_url": "https://arxiv.org/pdf/2512.13607v2",
+    "arxiv_url": "http://arxiv.org/abs/2512.13607v2",
+    "queried_author": "Mohammad Shoeybi",
+    "matching_authors": [
+      "Mohammad Shoeybi"
     ]
   },
   {
@@ -6391,6 +6735,36 @@
     ]
   },
   {
+    "title": "Nemotron Elastic: Towards Efficient Many-in-One Reasoning LLMs",
+    "authors": [
+      "Ali Taghibakhshi",
+      "Sharath Turuvekere Sreenivas",
+      "Saurav Muralidharan",
+      "Ruisi Cai",
+      "Marcin Chochowski",
+      "Ameya Sunil Mahabaleshwarkar",
+      "Yoshi Suhara",
+      "Oluwatobi Olabiyi",
+      "Daniel Korzekwa",
+      "Mostofa Patwary",
+      "Mohammad Shoeybi",
+      "Jan Kautz",
+      "Bryan Catanzaro",
+      "Ashwath Aithal",
+      "Nima Tajbakhsh",
+      "Pavlo Molchanov"
+    ],
+    "summary": "Training a family of large language models targeting multiple scales and deployment objectives is prohibitively expensive, requiring separate training runs for each different size. Recent work on model compression through pruning and knowledge distillation has reduced this cost; however, this process still incurs hundreds of billions of tokens worth of training cost per compressed model. In this paper, we present Nemotron Elastic, a framework for building reasoning-oriented LLMs, including hybrid Mamba-Attention architectures, that embed multiple nested submodels within a single parent model, each optimized for different deployment configurations and budgets. Each of these submodels shares weights with the parent model and can be extracted zero-shot during deployment without additional training or fine-tuning. We enable this functionality through an end-to-end trained router, tightly coupled to a two-stage training curriculum designed specifically for reasoning models. We additionally introduce group-aware SSM elastification that preserves Mamba's structural constraints, heterogeneous MLP elastification, normalized MSE-based layer importance for improved depth selection, and knowledge distillation enabling simultaneous multi-budget optimization. We apply Nemotron Elastic to the Nemotron Nano V2 12B model, simultaneously producing a 9B and a 6B model using only 110B training tokens; this results in over 360x cost reduction compared to training model families from scratch, and around 7x compared to SoTA compression techniques. Each of the nested models performs on par or bett...",
+    "published": "Nov 20",
+    "pdf_url": "https://arxiv.org/pdf/2511.16664v1",
+    "arxiv_url": "http://arxiv.org/abs/2511.16664v1",
+    "queried_author": "Mostofa Patwary",
+    "matching_authors": [
+      "Mostofa Patwary",
+      "Mohammad Shoeybi"
+    ]
+  },
+  {
     "title": "ARC Is a Vision Problem!",
     "authors": [
       "Keya Hu",
@@ -6524,6 +6898,30 @@
     "queried_author": "Percy Liang",
     "matching_authors": [
       "Percy Liang"
+    ]
+  },
+  {
+    "title": "Music Flamingo: Scaling Music Understanding in Audio Language Models",
+    "authors": [
+      "Sreyan Ghosh",
+      "Arushi Goel",
+      "Lasha Koroshinadze",
+      "Sang-gil Lee",
+      "Zhifeng Kong",
+      "Joao Felipe Santos",
+      "Ramani Duraiswami",
+      "Dinesh Manocha",
+      "Wei Ping",
+      "Mohammad Shoeybi",
+      "Bryan Catanzaro"
+    ],
+    "summary": "We introduce Music Flamingo, a novel large audio-language model designed to advance music (including song) understanding in foundational audio models. While audio-language research has progressed rapidly, music remains challenging due to its dynamic, layered, and information-dense nature. Progress has been further limited by the difficulty of scaling open audio understanding models, primarily because of the scarcity of high-quality music data and annotations. As a result, prior models are restricted to producing short, high-level captions, answering only surface-level questions, and showing limited generalization across diverse musical cultures. To address these challenges, we curate MF-Skills, a large-scale dataset labeled through a multi-stage pipeline that yields rich captions and question-answer pairs covering harmony, structure, timbre, lyrics, and cultural context. We fine-tune an enhanced Audio Flamingo 3 backbone on MF-Skills and further strengthen multiple skills relevant to music understanding. To improve the model's reasoning abilities, we introduce a post-training recipe: we first cold-start with MF-Think, a novel chain-of-thought dataset grounded in music theory, followed by GRPO-based reinforcement learning with custom rewards. Music Flamingo achieves state-of-the-art results across 10+ benchmarks for music understanding and reasoning, establishing itself as a generalist and musically intelligent audio-language model. Beyond strong empirical results, Music Flamingo sets a new standard for advanced music understanding by demonstrating how models can move from s...",
+    "published": "Nov 13",
+    "pdf_url": "https://arxiv.org/pdf/2511.10289v1",
+    "arxiv_url": "http://arxiv.org/abs/2511.10289v1",
+    "queried_author": "Mohammad Shoeybi",
+    "matching_authors": [
+      "Mohammad Shoeybi"
     ]
   },
   {
@@ -6884,6 +7282,144 @@
     "queried_author": "Yoon Kim",
     "matching_authors": [
       "Yoon Kim"
+    ]
+  },
+  {
+    "title": "NVIDIA Nemotron Nano V2 VL",
+    "authors": [
+      "NVIDIA",
+      ":",
+      "Amala Sanjay Deshmukh",
+      "Kateryna Chumachenko",
+      "Tuomas Rintamaki",
+      "Matthieu Le",
+      "Tyler Poon",
+      "Danial Mohseni Taheri",
+      "Ilia Karmanov",
+      "Guilin Liu",
+      "Jarno Seppanen",
+      "Guo Chen",
+      "Karan Sapra",
+      "Zhiding Yu",
+      "Adi Renduchintala",
+      "Charles Wang",
+      "Peter Jin",
+      "Arushi Goel",
+      "Mike Ranzinger",
+      "Lukas Voegtle",
+      "Philipp Fischer",
+      "Timo Roman",
+      "Wei Ping",
+      "Boxin Wang",
+      "Zhuolin Yang",
+      "Nayeon Lee",
+      "Shaokun Zhang",
+      "Fuxiao Liu",
+      "Zhiqi Li",
+      "Di Zhang",
+      "Greg Heinrich",
+      "Hongxu Yin",
+      "Song Han",
+      "Pavlo Molchanov",
+      "Parth Mannan",
+      "Yao Xu",
+      "Jane Polak Scowcroft",
+      "Tom Balough",
+      "Subhashree Radhakrishnan",
+      "Paris Zhang",
+      "Sean Cha",
+      "Ratnesh Kumar",
+      "Zaid Pervaiz Bhat",
+      "Jian Zhang",
+      "Darragh Hanley",
+      "Pritam Biswas",
+      "Jesse Oliver",
+      "Kevin Vasques",
+      "Roger Waleffe",
+      "Duncan Riach",
+      "Oluwatobi Olabiyi",
+      "Ameya Sunil Mahabaleshwarkar",
+      "Bilal Kartal",
+      "Pritam Gundecha",
+      "Khanh Nguyen",
+      "Alexandre Milesi",
+      "Eugene Khvedchenia",
+      "Ran Zilberstein",
+      "Ofri Masad",
+      "Natan Bagrov",
+      "Nave Assaf",
+      "Tomer Asida",
+      "Daniel Afrimi",
+      "Amit Zuker",
+      "Netanel Haber",
+      "Zhiyu Cheng",
+      "Jingyu Xin",
+      "Di Wu",
+      "Nik Spirin",
+      "Maryam Moosaei",
+      "Roman Ageev",
+      "Vanshil Atul Shah",
+      "Yuting Wu",
+      "Daniel Korzekwa",
+      "Unnikrishnan Kizhakkemadam Sreekumar",
+      "Wanli Jiang",
+      "Padmavathy Subramanian",
+      "Alejandra Rico",
+      "Sandip Bhaskar",
+      "Saeid Motiian",
+      "Kedi Wu",
+      "Annie Surla",
+      "Chia-Chih Chen",
+      "Hayden Wolff",
+      "Matthew Feinberg",
+      "Melissa Corpuz",
+      "Marek Wawrzos",
+      "Eileen Long",
+      "Aastha Jhunjhunwala",
+      "Paul Hendricks",
+      "Farzan Memarian",
+      "Benika Hall",
+      "Xin-Yu Wang",
+      "David Mosallanezhad",
+      "Soumye Singhal",
+      "Luis Vega",
+      "Katherine Cheung",
+      "Krzysztof Pawelec",
+      "Michael Evans",
+      "Katherine Luna",
+      "Jie Lou",
+      "Erick Galinkin",
+      "Akshay Hazare",
+      "Kaustubh Purandare",
+      "Ann Guan",
+      "Anna Warno",
+      "Chen Cui",
+      "Yoshi Suhara",
+      "Shibani Likhite",
+      "Seph Mard",
+      "Meredith Price",
+      "Laya Sleiman",
+      "Saori Kaji",
+      "Udi Karpas",
+      "Kari Briski",
+      "Joey Conway",
+      "Michael Lightstone",
+      "Jan Kautz",
+      "Mohammad Shoeybi",
+      "Mostofa Patwary",
+      "Jonathen Cohen",
+      "Oleksii Kuchaiev",
+      "Andrew Tao",
+      "Bryan Catanzaro"
+    ],
+    "summary": "We introduce Nemotron Nano V2 VL, the latest model of the Nemotron vision-language series designed for strong real-world document understanding, long video comprehension, and reasoning tasks. Nemotron Nano V2 VL delivers significant improvements over our previous model, Llama-3.1-Nemotron-Nano-VL-8B, across all vision and text domains through major enhancements in model architecture, datasets, and training recipes. Nemotron Nano V2 VL builds on Nemotron Nano V2, a hybrid Mamba-Transformer LLM, and innovative token reduction techniques to achieve higher inference throughput in long document and video scenarios. We are releasing model checkpoints in BF16, FP8, and FP4 formats and sharing large parts of our datasets, recipes and training code.",
+    "published": "Nov 06",
+    "pdf_url": "https://arxiv.org/pdf/2511.03929v2",
+    "arxiv_url": "http://arxiv.org/abs/2511.03929v2",
+    "queried_author": "Mostofa Patwary",
+    "matching_authors": [
+      "Mostofa Patwary",
+      "Mohammad Shoeybi"
     ]
   },
   {
@@ -7482,6 +8018,27 @@
     "matching_authors": [
       "Daniel Fried",
       "Yoav Artzi"
+    ]
+  },
+  {
+    "title": "Multi-Agent Evolve: LLM Self-Improve through Co-evolution",
+    "authors": [
+      "Yixing Chen",
+      "Yiding Wang",
+      "Siqi Zhu",
+      "Haofei Yu",
+      "Tao Feng",
+      "Muhan Zhang",
+      "Mostofa Patwary",
+      "Jiaxuan You"
+    ],
+    "summary": "Reinforcement Learning (RL) has demonstrated significant potential in enhancing the reasoning capabilities of large language models (LLMs). However, the success of RL for LLMs heavily relies on human-curated datasets and verifiable rewards, which limit their scalability and generality. Recent Self-Play RL methods, inspired by the success of the paradigm in games and Go, aim to enhance LLM reasoning capabilities without human-annotated data. However, their methods primarily depend on a grounded environment for feedback (e.g., a Python interpreter or a game engine); extending them to general domains remains challenging. To address these challenges, we propose Multi-Agent Evolve (MAE), a framework that enables LLMs to self-evolve in solving diverse tasks, including mathematics, reasoning, and general knowledge Q&A. The core design of MAE is based on a triplet of interacting agents (Proposer, Solver, Judge) that are instantiated from a single LLM, and applies reinforcement learning to optimize their behaviors. The Proposer generates questions, the Solver attempts solutions, and the Judge evaluates both while co-evolving. Experiments on Qwen2.5-3B-Instruct demonstrate that MAE achieves an average improvement of 4.54% on multiple benchmarks. These results highlight MAE as a scalable, data-efficient method for enhancing the general reasoning abilities of LLMs with minimal reliance on human-curated supervision.",
+    "published": "Oct 27",
+    "pdf_url": "https://arxiv.org/pdf/2510.23595v3",
+    "arxiv_url": "http://arxiv.org/abs/2510.23595v3",
+    "queried_author": "Mostofa Patwary",
+    "matching_authors": [
+      "Mostofa Patwary"
     ]
   },
   {
@@ -8234,6 +8791,33 @@
     "queried_author": "Sewon Min",
     "matching_authors": [
       "Sewon Min"
+    ]
+  },
+  {
+    "title": "UALM: Unified Audio Language Model for Understanding, Generation and Reasoning",
+    "authors": [
+      "Jinchuan Tian",
+      "Sang-gil Lee",
+      "Zhifeng Kong",
+      "Sreyan Ghosh",
+      "Arushi Goel",
+      "Chao-Han Huck Yang",
+      "Wenliang Dai",
+      "Zihan Liu",
+      "Hanrong Ye",
+      "Shinji Watanabe",
+      "Mohammad Shoeybi",
+      "Bryan Catanzaro",
+      "Rafael Valle",
+      "Wei Ping"
+    ],
+    "summary": "Recent advances in the audio language modeling (ALM) domain tackle audio understanding and text-to-audio generation as separate tasks. Very few studies attempt to unify these tasks -- an essential step toward advanced multimodal reasoning. This paper introduces U}nified Audio Language Model (UALM), which aims to unify audio understanding, text-to-audio generation, and multimodal reasoning in a single model. To achieve this goal, we first present UALM-Gen, a text-to-audio language model that directly predicts audio tokens and is comparable to state-of-the-art diffusion-based models. We then demonstrate, using proper data blending, training recipes, and inference techniques, that our single UALM model matches the quality of state-of-the-art specialized models in audio understanding, text-to-audio generation, and text reasoning. Furthermore, we present UALM-Reason, a multimodal reasoning model that utilizes both text and audio in the intermediate thinking steps to facilitate complex generation tasks. To our knowledge, this is the first demonstration in audio research of cross-modal generative reasoning, with its effectiveness confirmed by subjective evaluations.",
+    "published": "Oct 13",
+    "pdf_url": "https://arxiv.org/pdf/2510.12000v1",
+    "arxiv_url": "http://arxiv.org/abs/2510.12000v1",
+    "queried_author": "Mohammad Shoeybi",
+    "matching_authors": [
+      "Mohammad Shoeybi"
     ]
   },
   {
@@ -9220,6 +9804,110 @@
     ]
   },
   {
+    "title": "Pretraining Large Language Models with NVFP4",
+    "authors": [
+      "NVIDIA",
+      "Felix Abecassis",
+      "Anjulie Agrusa",
+      "Dong Ahn",
+      "Jonah Alben",
+      "Stefania Alborghetti",
+      "Michael Andersch",
+      "Sivakumar Arayandi",
+      "Alexis Bjorlin",
+      "Aaron Blakeman",
+      "Evan Briones",
+      "Ian Buck",
+      "Bryan Catanzaro",
+      "Muya Chang",
+      "Jinhang Choi",
+      "Mike Chrzanowski",
+      "Eric Chung",
+      "Victor Cui",
+      "Steve Dai",
+      "Bita Darvish Rouhani",
+      "Carlo del Mundo",
+      "Deena Donia",
+      "Burc Eryilmaz",
+      "Henry Estela",
+      "Abhinav Goel",
+      "Oleg Goncharov",
+      "Yugi Guvvala",
+      "Robert Hesse",
+      "Russell Hewett",
+      "Herbert Hum",
+      "Ujval Kapasi",
+      "Brucek Khailany",
+      "Mikail Khona",
+      "Nick Knight",
+      "Alex Kondratenko",
+      "Ronny Krashinsky",
+      "Ben Lanir",
+      "Simon Layton",
+      "Michael Lightstone",
+      "Daniel Lo",
+      "Paulius Micikevicius",
+      "Asit Mishra",
+      "Tim Moon",
+      "Deepak Narayanan",
+      "Chao Ni",
+      "Abhijit Paithankar",
+      "Satish Pasumarthi",
+      "Ankit Patel",
+      "Mostofa Patwary",
+      "Ashwin Poojary",
+      "Gargi Prasad",
+      "Sweta Priyadarshi",
+      "Yigong Qin",
+      "Xiaowei Ren",
+      "Oleg Rybakov",
+      "Charbel Sakr",
+      "Sanjeev Satheesh",
+      "Stas Sergienko",
+      "Pasha Shamis",
+      "Kirthi Shankar",
+      "Nishant Sharma",
+      "Mohammad Shoeybi",
+      "Michael Siu",
+      "Misha Smelyanskiy",
+      "Darko Stosic",
+      "Dusan Stosic",
+      "Bor-Yiing Su",
+      "Frank Sun",
+      "Nima Tajbakhsh",
+      "Shelby Thomas",
+      "Przemek Tredak",
+      "Evgeny Tsykunov",
+      "Gandhi Vaithilingam",
+      "Aditya Vavre",
+      "Rangharajan Venkatesan",
+      "Roger Waleffe",
+      "Qiyu Wan",
+      "Hexin Wang",
+      "Mengdi Wang",
+      "Lizzie Wei",
+      "Hao Wu",
+      "Evan Wu",
+      "Keith Wyss",
+      "Ning Xu",
+      "Jinze Xue",
+      "Charlene Yang",
+      "Yujia Zhai",
+      "Ruoxi Zhang",
+      "Jingyang Zhu",
+      "Zhongbo Zhu"
+    ],
+    "summary": "Large Language Models (LLMs) today are powerful problem solvers across many domains, and they continue to get stronger as they scale in model size, training set size, and training set quality, as shown by extensive research and experimentation across the industry. Training a frontier model today requires on the order of tens to hundreds of yottaflops, which is a massive investment of time, compute, and energy. Improving pretraining efficiency is therefore essential to enable the next generation of even more capable LLMs. While 8-bit floating point (FP8) training is now widely adopted, transitioning to even narrower precision, such as 4-bit floating point (FP4), could unlock additional improvements in computational speed and resource utilization. However, quantization at this level poses challenges to training stability, convergence, and implementation, notably for large-scale models trained on long token horizons.\n  In this study, we introduce a novel approach for stable and accurate training of large language models (LLMs) using the NVFP4 format. Our method integrates Random Hadamard transforms (RHT) to bound block-level outliers, employs a two-dimensional quantization scheme for consistent representations across both the forward and backward passes, utilizes stochastic rounding for unbiased gradient estimation, and incorporates selective high-precision layers. We validate our approach by training a 12-billion-parameter model on 10 trillion tokens -- the longest publicly documented training run in 4-bit precision to date. Our results show that the model trained with our NV...",
+    "published": "Sep 29",
+    "pdf_url": "https://arxiv.org/pdf/2509.25149v2",
+    "arxiv_url": "http://arxiv.org/abs/2509.25149v2",
+    "queried_author": "Mostofa Patwary",
+    "matching_authors": [
+      "Mostofa Patwary",
+      "Mohammad Shoeybi"
+    ]
+  },
+  {
     "title": "Humanline: Online Alignment as Perceptual Loss",
     "authors": [
       "Sijia Liu",
@@ -9331,7 +10019,9 @@
     "arxiv_url": "http://arxiv.org/abs/2510.03264v1",
     "queried_author": "Yejin Choi",
     "matching_authors": [
-      "Yejin Choi"
+      "Yejin Choi",
+      "Mostofa Patwary",
+      "Mohammad Shoeybi"
     ]
   },
   {
@@ -9398,7 +10088,9 @@
     "arxiv_url": "http://arxiv.org/abs/2510.01265v2",
     "queried_author": "Yejin Choi",
     "matching_authors": [
-      "Yejin Choi"
+      "Yejin Choi",
+      "Mostofa Patwary",
+      "Mohammad Shoeybi"
     ]
   },
   {
@@ -10456,6 +11148,26 @@
     ]
   },
   {
+    "title": "Nemotron-CC-Math: A 133 Billion-Token-Scale High Quality Math Pretraining Dataset",
+    "authors": [
+      "Rabeeh Karimi Mahabadi",
+      "Sanjeev Satheesh",
+      "Shrimai Prabhumoye",
+      "Mostofa Patwary",
+      "Mohammad Shoeybi",
+      "Bryan Catanzaro"
+    ],
+    "summary": "Pretraining large language models (LLMs) on high-quality, structured data such as mathematics and code substantially enhances reasoning capabilities. However, existing math-focused datasets built from Common Crawl suffer from degraded quality due to brittle extraction heuristics, lossy HTML-to-text conversion, and the failure to reliably preserve mathematical structure. In this work, we introduce Nemotron-CC-Math, a large-scale, high-quality mathematical corpus constructed from Common Crawl using a novel, domain-agnostic pipeline specifically designed for robust scientific text extraction.\n  Unlike previous efforts, our pipeline recovers math across various formats (e.g., MathJax, KaTeX, MathML) by leveraging layout-aware rendering with lynx and a targeted LLM-based cleaning stage. This approach preserves the structural integrity of equations and code blocks while removing boilerplate, standardizing notation into LaTeX representation, and correcting inconsistencies.\n  We collected a large, high-quality math corpus, namely Nemotron-CC-Math-3+ (133B tokens) and Nemotron-CC-Math-4+ (52B tokens). Notably, Nemotron-CC-Math-4+ not only surpasses all prior open math datasets-including MegaMath, FineMath, and OpenWebMath-but also contains 5.5 times more tokens than FineMath-4+, which was previously the highest-quality math pretraining dataset. When used to pretrain a Nemotron-T 8B model, our corpus yields +4.8 to +12.6 gains on MATH and +4.6 to +14.3 gains on MBPP+ over strong baselines, while also improving general-domain performance on MMLU and MMLU-Stem.\n  We present the first p...",
+    "published": "Aug 20",
+    "pdf_url": "https://arxiv.org/pdf/2508.15096v1",
+    "arxiv_url": "http://arxiv.org/abs/2508.15096v1",
+    "queried_author": "Mostofa Patwary",
+    "matching_authors": [
+      "Mostofa Patwary",
+      "Mohammad Shoeybi"
+    ]
+  },
+  {
     "title": "NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model",
     "authors": [
       "NVIDIA",
@@ -10682,7 +11394,9 @@
     "arxiv_url": "http://arxiv.org/abs/2508.14444v4",
     "queried_author": "Yejin Choi",
     "matching_authors": [
-      "Yejin Choi"
+      "Yejin Choi",
+      "Mostofa Patwary",
+      "Mohammad Shoeybi"
     ]
   },
   {
@@ -11514,455 +12228,6 @@
     "queried_author": "Niloofar Mireshghallah",
     "matching_authors": [
       "Niloofar Mireshghallah"
-    ]
-  },
-  {
-    "title": "Beyond Binary Rewards: Training LMs to Reason About Their Uncertainty",
-    "authors": [
-      "Mehul Damani",
-      "Isha Puri",
-      "Stewart Slocum",
-      "Idan Shenfeld",
-      "Leshem Choshen",
-      "Yoon Kim",
-      "Jacob Andreas"
-    ],
-    "summary": "When language models (LMs) are trained via reinforcement learning (RL) to generate natural language \"reasoning chains\", their performance improves on a variety of difficult question answering tasks. Today, almost all successful applications of RL for reasoning use binary reward functions that evaluate the correctness of LM outputs. Because such reward functions do not penalize guessing or low-confidence outputs, they often have the unintended side-effect of degrading calibration and increasing the rate at which LMs generate incorrect responses (or \"hallucinate\") in other problem domains. This paper describes RLCR (Reinforcement Learning with Calibration Rewards), an approach to training reasoning models that jointly improves accuracy and calibrated confidence estimation. During RLCR, LMs generate both predictions and numerical confidence estimates after reasoning. They are trained to optimize a reward function that augments a binary correctness score with a Brier score -- a scoring rule for confidence estimates that incentivizes calibrated prediction. We first prove that this reward function (or any analogous reward function that uses a bounded, proper scoring rule) yields models whose predictions are both accurate and well-calibrated. We next show that across diverse datasets, RLCR substantially improves calibration with no loss in accuracy, on both in-domain and out-of-domain evaluations -- outperforming both ordinary RL training and classifiers trained to assign post-hoc confidence scores. While ordinary RL hurts calibration, RLCR improves it. Finally, we demonstrate tha...",
-    "published": "Jul 22",
-    "pdf_url": "https://arxiv.org/pdf/2507.16806v1",
-    "arxiv_url": "http://arxiv.org/abs/2507.16806v1",
-    "queried_author": "Jacob Andreas",
-    "matching_authors": [
-      "Jacob Andreas",
-      "Yoon Kim"
-    ]
-  },
-  {
-    "title": "Steering Out-of-Distribution Generalization with Concept Ablation Fine-Tuning",
-    "authors": [
-      "Helena Casademunt",
-      "Caden Juang",
-      "Adam Karvonen",
-      "Samuel Marks",
-      "Senthooran Rajamanoharan",
-      "Neel Nanda"
-    ],
-    "summary": "Fine-tuning large language models (LLMs) can lead to unintended out-of-distribution generalization. Standard approaches to this problem rely on modifying training data, for example by adding data that better specify the intended generalization. However, this is not always practical. We introduce Concept Ablation Fine-Tuning (CAFT), a technique that leverages interpretability tools to control how LLMs generalize from fine-tuning, without needing to modify the training data or otherwise use data from the target distribution. Given a set of directions in an LLM's latent space corresponding to undesired concepts, CAFT works by ablating these concepts with linear projections during fine-tuning, steering the model away from unintended generalizations. We successfully apply CAFT to three fine-tuning tasks, including emergent misalignment, a phenomenon where LLMs fine-tuned on a narrow task generalize to give egregiously misaligned responses to general questions. Without any changes to the fine-tuning data, CAFT reduces misaligned responses by 10x without degrading performance on the training distribution. Overall, CAFT represents a novel approach for steering LLM generalization without modifying training data.",
-    "published": "Jul 22",
-    "pdf_url": "https://arxiv.org/pdf/2507.16795v2",
-    "arxiv_url": "http://arxiv.org/abs/2507.16795v2",
-    "queried_author": "Neel Nanda",
-    "matching_authors": [
-      "Neel Nanda"
-    ]
-  },
-  {
-    "title": "Zebra-CoT: A Dataset for Interleaved Vision Language Reasoning",
-    "authors": [
-      "Ang Li",
-      "Charles Wang",
-      "Deqing Fu",
-      "Kaiyu Yue",
-      "Zikui Cai",
-      "Wang Bill Zhu",
-      "Ollie Liu",
-      "Peng Guo",
-      "Willie Neiswanger",
-      "Furong Huang",
-      "Tom Goldstein",
-      "Micah Goldblum"
-    ],
-    "summary": "Humans often use visual aids, for example diagrams or sketches, when solving complex problems. Training multimodal models to do the same, known as Visual Chain of Thought (Visual CoT), is challenging due to: (1) poor off-the-shelf visual CoT performance, which hinders reinforcement learning, and (2) the lack of high-quality visual CoT training data. We introduce $\\textbf{Zebra-CoT}$, a diverse large-scale dataset with 182,384 samples, containing logically coherent interleaved text-image reasoning traces. We focus on four categories of tasks where sketching or visual reasoning is especially natural, spanning scientific questions such as geometry, physics, and algorithms; 2D visual reasoning tasks like visual search and jigsaw puzzles; 3D reasoning tasks including 3D multi-hop inference, embodied and robot planning; visual logic problems and strategic games like chess. Fine-tuning the Anole-7B model on the Zebra-CoT training corpus results in an improvement of +12% in our test-set accuracy and yields up to +13% performance gain on standard VLM benchmark evaluations. Fine-tuning Bagel-7B yields a model that generates high-quality interleaved visual reasoning chains, underscoring Zebra-CoT's effectiveness for developing multimodal reasoning abilities. We open-source our dataset and models to support development and evaluation of visual CoT.",
-    "published": "Jul 22",
-    "pdf_url": "https://arxiv.org/pdf/2507.16746v2",
-    "arxiv_url": "http://arxiv.org/abs/2507.16746v2",
-    "queried_author": "Micah Goldblum",
-    "matching_authors": [
-      "Micah Goldblum"
-    ]
-  },
-  {
-    "title": "Distributional Machine Unlearning via Selective Data Removal",
-    "authors": [
-      "Youssef Allouah",
-      "Rachid Guerraoui",
-      "Sanmi Koyejo"
-    ],
-    "summary": "Machine learning systems increasingly face requirements to remove entire domains of information--such as toxic language or biases--rather than individual user data. This task presents a dilemma: full removal of the unwanted domain data is computationally expensive, while random partial removal is statistically inefficient. We find that a domain's statistical influence is often concentrated in a small subset of its data samples, suggesting a path between ineffective partial removal and unnecessary complete removal. We formalize this as distributional unlearning: a framework to select a small subset that balances forgetting an unwanted distribution while preserving a desired one. Using Kullback-Leibler divergence constraints, we derive the exact removal-preservation Pareto frontier for Gaussian distributions and prove that models trained on the edited data achieve corresponding log-loss bounds. We propose a distance-based selection algorithm and show it is quadratically more sample-efficient than random removal in the challenging low-divergence regime. Experiments across synthetic, text, and image datasets (Jigsaw, CIFAR-10, SMS spam) show our method requires 15-82% less deletion than full removal for strong unlearning effects, e.g., halving initial forget set accuracy. Ultimately, by showing a small forget set often suffices, our framework lays the foundations for more scalable and rigorous subpopulation unlearning.",
-    "published": "Jul 20",
-    "pdf_url": "https://arxiv.org/pdf/2507.15112v4",
-    "arxiv_url": "http://arxiv.org/abs/2507.15112v4",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "The Invisible Leash: Why RLVR May or May Not Escape Its Origin",
-    "authors": [
-      "Fang Wu",
-      "Weihao Xuan",
-      "Ximing Lu",
-      "Mingjie Liu",
-      "Yi Dong",
-      "Zaid Harchaoui",
-      "Yejin Choi"
-    ],
-    "summary": "Recent advances highlight Reinforcement Learning with Verifiable Rewards (RLVR) as a promising method for enhancing LLMs' capabilities. However, it remains unclear whether the current practice of RLVR truly expands a model's reasoning boundary or mainly amplifies high-reward outputs that the base model already knows, thereby improving precision. This study presents an empirical investigation that provides fresh insights into the limits of RLVR. We examine how RLVR can operate as a support-constrained optimization mechanism that may restrict the discovery of entirely original solutions, remaining constrained by the base model's initial distribution. We also identify an entropy-reward trade-off: while RLVR reliably enhances precision, it may progressively narrow exploration and potentially overlook correct yet underrepresented solutions. Extensive empirical experiments validate that while RLVR consistently improves \\texttt{pass@1}, \\textit{the shrinkage of empirical support generally outweighs the expansion of empirical support under larger sampling budgets}, failing to recover correct answers that were previously accessible to the base model. Interestingly, while RLVR sometimes increases token-level entropy, it results in greater uncertainty at each generation step and declining answer-level entropy. This indicates that these seemingly more uncertain paths ultimately converge onto a smaller set of distinct answers. Taken together, we reveal potential limits of RLVR in extending reasoning horizons. Breaking this invisible leash requires future innovations that seed probabilit...",
-    "published": "Jul 20",
-    "pdf_url": "https://arxiv.org/pdf/2507.14843v4",
-    "arxiv_url": "http://arxiv.org/abs/2507.14843v4",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Inverse Scaling in Test-Time Compute",
-    "authors": [
-      "Aryo Pradipta Gema",
-      "Alexander H\u00e4gele",
-      "Runjin Chen",
-      "Andy Arditi",
-      "Jacob Goldman-Wetzler",
-      "Kit Fraser-Taliente",
-      "Henry Sleight",
-      "Linda Petrini",
-      "Julian Michael",
-      "Beatrice Alex",
-      "Pasquale Minervini",
-      "Yanda Chen",
-      "Joe Benton",
-      "Ethan Perez"
-    ],
-    "summary": "We construct evaluation tasks where extending the reasoning length of Large Reasoning Models (LRMs) deteriorates performance, exhibiting an inverse scaling relationship between test-time compute and accuracy. Our evaluation tasks span four categories: simple counting tasks with distractors, regression tasks with spurious features, deduction tasks with constraint tracking, and advanced AI risks. We identify five distinct failure modes when models reason for longer: 1) Claude models become increasingly distracted by irrelevant information; 2) OpenAI o-series models resist distractors but overfit to problem framings; 3) models shift from reasonable priors to spurious correlations; 4) all models show difficulties in maintaining focus on complex deductive tasks; and 5) extended reasoning may amplify concerning behaviors, with Claude Sonnet 4 showing increased expressions of self-preservation. These findings suggest that while test-time compute scaling remains promising for improving model capabilities, it may inadvertently reinforce problematic reasoning patterns. Our results demonstrate the importance of evaluating models across diverse reasoning lengths to identify and address these failure modes in LRMs.",
-    "published": "Jul 19",
-    "pdf_url": "https://arxiv.org/pdf/2507.14417v2",
-    "arxiv_url": "http://arxiv.org/abs/2507.14417v2",
-    "queried_author": "Ethan Perez",
-    "matching_authors": [
-      "Ethan Perez"
-    ]
-  },
-  {
-    "title": "Intent-Aware Schema Generation And Refinement For Literature Review Tables",
-    "authors": [
-      "Vishakh Padmakumar",
-      "Joseph Chee Chang",
-      "Kyle Lo",
-      "Doug Downey",
-      "Aakanksha Naik"
-    ],
-    "summary": "The increasing volume of academic literature makes it essential for researchers to organize, compare, and contrast collections of documents. Large language models (LLMs) can support this process by generating schemas defining shared aspects along which to compare papers. However, progress on schema generation has been slow due to: (i) ambiguity in reference-based evaluations, and (ii) lack of editing/refinement methods. Our work is the first to address both issues. First, we present an approach for augmenting unannotated table corpora with \\emph{synthesized intents}, and apply it to create a dataset for studying schema generation conditioned on a given information need, thus reducing ambiguity. With this dataset, we show how incorporating table intents significantly improves baseline performance in reconstructing reference schemas. We start by comprehensively benchmarking several single-shot schema generation methods, including prompted LLM workflows and fine-tuned models, showing that smaller, open-weight models can be fine-tuned to be competitive with state-of-the-art prompted LLMs. Next, we propose several LLM-based schema refinement techniques and show that these can further improve schemas generated by these methods.",
-    "published": "Jul 18",
-    "pdf_url": "https://arxiv.org/pdf/2507.19521v2",
-    "arxiv_url": "http://arxiv.org/abs/2507.19521v2",
-    "queried_author": "Kyle Lo",
-    "matching_authors": [
-      "Kyle Lo"
-    ]
-  },
-  {
-    "title": "AudioJudge: Understanding What Works in Large Audio Model Based Speech Evaluation",
-    "authors": [
-      "Potsawee Manakul",
-      "Woody Haosheng Gan",
-      "Michael J. Ryan",
-      "Ali Sartaz Khan",
-      "Warit Sirichotedumrong",
-      "Kunat Pipatanakul",
-      "William Held",
-      "Diyi Yang"
-    ],
-    "summary": "Current speech evaluation suffers from two critical limitations: the need and difficulty of designing specialized systems targeting individual audio characteristics, and poor correlation between automatic evaluation methods and human preferences. This work presents a systematic study of Large Audio Model (LAM) as a Judge, AudioJudge, investigating whether it can provide a unified evaluation framework that addresses both challenges. We systematically explore AudioJudge across audio characteristic detection tasks, including pronunciation, speaking rate, speaker identification and speech quality, and system-level human preference simulation for automated benchmarking. We investigate different prompt engineering strategies, finding that audio concatenation combined with in-context learning significantly improves performance across both audio characteristic detection and human preference simulation tasks. We further introduce a multi-aspect ensemble AudioJudge to enable general-purpose multi-aspect audio evaluation. This method decomposes speech assessment into specialized judges for lexical content, speech quality, and paralinguistic features, achieving up to 0.91 Spearman correlation with human preferences on our system ranking benchmark. Robustness analysis reveals that while LAMs maintain strong performance under acoustic noise, they exhibit significant verbosity and positional biases that require careful mitigation.",
-    "published": "Jul 17",
-    "pdf_url": "https://arxiv.org/pdf/2507.12705v1",
-    "arxiv_url": "http://arxiv.org/abs/2507.12705v1",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang",
-      "William Held"
-    ]
-  },
-  {
-    "title": "Reasoning-Finetuning Repurposes Latent Representations in Base Models",
-    "authors": [
-      "Jake Ward",
-      "Chuqiao Lin",
-      "Constantin Venhoff",
-      "Neel Nanda"
-    ],
-    "summary": "Backtracking, an emergent behavior elicited by reasoning fine-tuning, has been shown to be a key mechanism in reasoning models' enhanced capabilities. Prior work has succeeded in manipulating this behavior via steering vectors, but the underlying mechanism remains poorly understood. In this work, we show that the emergence of backtracking in DeepSeek-R1-Distill-Llama-8B is in part driven by a repurposed direction already present in base model activations. Specifically, we identify a direction in base Llama-3.1-8B's residual stream which systematically induces backtracking when used to steer the distilled reasoning model, and find that the effects of steering with this direction cannot be trivially explained by token-level attributes. We further find that this direction does not induce backtracking in the base model, suggesting that the reasoning finetuning process repurposes pre-existing representations to form new behavioral circuits. Additionally, we hypothesize that this direction is one of several which may work together to mediate backtracking. Our findings offer a compelling picture that reasoning-finetuned models repurpose pre-existing base model representations, rather than learn new capabilities from scratch.",
-    "published": "Jul 16",
-    "pdf_url": "https://arxiv.org/pdf/2507.12638v1",
-    "arxiv_url": "http://arxiv.org/abs/2507.12638v1",
-    "queried_author": "Neel Nanda",
-    "matching_authors": [
-      "Neel Nanda"
-    ]
-  },
-  {
-    "title": "Scaling Up RL: Unlocking Diverse Reasoning in LLMs via Prolonged Training",
-    "authors": [
-      "Mingjie Liu",
-      "Shizhe Diao",
-      "Jian Hu",
-      "Ximing Lu",
-      "Xin Dong",
-      "Hao Zhang",
-      "Alexander Bukharin",
-      "Shaokun Zhang",
-      "Jiaqi Zeng",
-      "Makesh Narsimhan Sreedhar",
-      "Gerald Shen",
-      "David Mosallanezhad",
-      "Di Zhang",
-      "Jonas Yang",
-      "June Yang",
-      "Oleksii Kuchaiev",
-      "Guilin Liu",
-      "Zhiding Yu",
-      "Pavlo Molchanov",
-      "Yejin Choi",
-      "Jan Kautz",
-      "Yi Dong"
-    ],
-    "summary": "Recent advancements in reasoning-focused language models such as OpenAI's O1 and DeepSeek-R1 have shown that scaling test-time computation-through chain-of-thought reasoning and iterative exploration-can yield substantial improvements on complex tasks like mathematics and code generation. These breakthroughs have been driven by large-scale reinforcement learning (RL), particularly when combined with verifiable reward signals that provide objective and grounded supervision. In this report, we investigate the effects of prolonged reinforcement learning on a small language model across a diverse set of reasoning domains. Our work identifies several key ingredients for effective training, including the use of verifiable reward tasks, enhancements to Group Relative Policy Optimization (GRPO), and practical techniques to improve training stability and generalization. We introduce controlled KL regularization, clipping ratio, and periodic reference policy resets as critical components for unlocking long-term performance gains. Our model achieves significant improvements over strong baselines, including +14.7% on math, +13.9% on coding, and +54.8% on logic puzzle tasks. To facilitate continued research, we release our model publicly.",
-    "published": "Jul 16",
-    "pdf_url": "https://arxiv.org/pdf/2507.12507v1",
-    "arxiv_url": "http://arxiv.org/abs/2507.12507v1",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "MetaLint: Generalizable Idiomatic Code Quality Analysis through Instruction-Following and Easy-to-Hard Generalization",
-    "authors": [
-      "Atharva Naik",
-      "Lawanya Baghel",
-      "Dhakshin Govindarajan",
-      "Darsh Agrawal",
-      "Daniel Fried",
-      "Carolyn Rose"
-    ],
-    "summary": "Large Language Models excel at code generation but struggle with code quality analysis, where best practices evolve and cannot be fully captured by static training data. We introduce MetaLint, a training framework that treats code quality analysis as detecting best practice violations from high-level specifications over semantic code fragments (code idioms). Instead of training on a fixed set of rules, MetaLint reorganizes supervision around dynamically specified best practices using synthetic linter-derived labels, integrated with instruction-following and preference optimization. This encourages extrapolation to more complex, unseen best practices at test time, consistent with easy-to-hard generalization without retraining. To evaluate MetaLint, we create a new benchmark of hard-to-detect best practices inspired by Python Enhancement Proposals. Across this benchmark, MetaLint improves generalization to unseen best practices. Qwen3-4B achieves a 2.7x detection F-score gain (25.9% -> 70.4%), the highest recall, and a 26.7% localization F-score, matching larger models such as o3-mini. These gains generalize across programming languages, model families, scales, reasoning settings, and linter sources.",
-    "published": "Jul 15",
-    "pdf_url": "https://arxiv.org/pdf/2507.11687v3",
-    "arxiv_url": "http://arxiv.org/abs/2507.11687v3",
-    "queried_author": "Daniel Fried",
-    "matching_authors": [
-      "Daniel Fried"
-    ]
-  },
-  {
-    "title": "Chain of Thought Monitorability: A New and Fragile Opportunity for AI Safety",
-    "authors": [
-      "Tomek Korbak",
-      "Mikita Balesni",
-      "Elizabeth Barnes",
-      "Yoshua Bengio",
-      "Joe Benton",
-      "Joseph Bloom",
-      "Mark Chen",
-      "Alan Cooney",
-      "Allan Dafoe",
-      "Anca Dragan",
-      "Scott Emmons",
-      "Owain Evans",
-      "David Farhi",
-      "Ryan Greenblatt",
-      "Dan Hendrycks",
-      "Marius Hobbhahn",
-      "Evan Hubinger",
-      "Geoffrey Irving",
-      "Erik Jenner",
-      "Daniel Kokotajlo",
-      "Victoria Krakovna",
-      "Shane Legg",
-      "David Lindner",
-      "David Luan",
-      "Aleksander M\u0105dry",
-      "Julian Michael",
-      "Neel Nanda",
-      "Dave Orr",
-      "Jakub Pachocki",
-      "Ethan Perez",
-      "Mary Phuong",
-      "Fabien Roger",
-      "Joshua Saxe",
-      "Buck Shlegeris",
-      "Mart\u00edn Soto",
-      "Eric Steinberger",
-      "Jasmine Wang",
-      "Wojciech Zaremba",
-      "Bowen Baker",
-      "Rohin Shah",
-      "Vlad Mikulik"
-    ],
-    "summary": "AI systems that \"think\" in human language offer a unique opportunity for AI safety: we can monitor their chains of thought (CoT) for the intent to misbehave. Like all other known AI oversight methods, CoT monitoring is imperfect and allows some misbehavior to go unnoticed. Nevertheless, it shows promise and we recommend further research into CoT monitorability and investment in CoT monitoring alongside existing safety methods. Because CoT monitorability may be fragile, we recommend that frontier model developers consider the impact of development decisions on CoT monitorability.",
-    "published": "Jul 15",
-    "pdf_url": "https://arxiv.org/pdf/2507.11473v2",
-    "arxiv_url": "http://arxiv.org/abs/2507.11473v2",
-    "queried_author": "Ethan Perez",
-    "matching_authors": [
-      "Ethan Perez",
-      "Neel Nanda"
-    ]
-  },
-  {
-    "title": "Seq vs Seq: An Open Suite of Paired Encoders and Decoders",
-    "authors": [
-      "Orion Weller",
-      "Kathryn Ricci",
-      "Marc Marone",
-      "Antoine Chaffin",
-      "Dawn Lawrie",
-      "Benjamin Van Durme"
-    ],
-    "summary": "The large language model (LLM) community focuses almost exclusively on decoder-only language models, since they are easier to use for text generation. However, a large subset of the community still uses encoder-only models for tasks such as classification or retrieval. Previous work has attempted to compare these architectures, but is forced to make comparisons with models that have different numbers of parameters, training techniques, and datasets. We introduce the SOTA open-data Ettin suite of models: paired encoder-only and decoder-only models ranging from 17 million parameters to 1 billion, trained on up to 2 trillion tokens. Using the same recipe for both encoder-only and decoder-only models produces SOTA recipes in both categories for their respective sizes, beating ModernBERT as an encoder and Llama 3.2 and SmolLM2 as decoders. Like previous work, we find that encoder-only models excel at classification and retrieval tasks while decoders excel at generative tasks. However, we show that adapting a decoder model to encoder tasks (and vice versa) through continued training is subpar compared to using only the reverse objective (i.e. a 400M encoder outperforms a 1B decoder on MNLI, and vice versa for generative tasks). We open-source all artifacts of this study including training data, training order segmented by checkpoint, and 200+ checkpoints to allow future work to analyze or extend all aspects of training.",
-    "published": "Jul 15",
-    "pdf_url": "https://arxiv.org/pdf/2507.11412v2",
-    "arxiv_url": "http://arxiv.org/abs/2507.11412v2",
-    "queried_author": "Orion Weller",
-    "matching_authors": [
-      "Orion Weller"
-    ]
-  },
-  {
-    "title": "The Curious Case of Factuality Finetuning: Models' Internal Beliefs Can Improve Factuality",
-    "authors": [
-      "Benjamin Newman",
-      "Abhilasha Ravichander",
-      "Jaehun Jung",
-      "Rui Xin",
-      "Hamish Ivison",
-      "Yegor Kuznetsov",
-      "Pang Wei Koh",
-      "Yejin Choi"
-    ],
-    "summary": "Language models are prone to hallucination - generating text that is factually incorrect. Finetuning models on high-quality factual information can potentially reduce hallucination, but concerns remain; obtaining factual gold data can be expensive and training on correct but unfamiliar data may potentially lead to even more downstream hallucination. What data should practitioners finetune on to mitigate hallucinations in language models? In this work, we study the relationship between the factuality of finetuning data and the prevalence of hallucinations in long-form generation tasks. Counterintuitively, we find that finetuning on factual gold data is not as helpful as finetuning on model-generated data that models believe to be factual. Next, we evaluate filtering strategies applied on both factual gold data and model-generated data, and find that finetuning on model-generated data that is filtered by models' own internal judgments often leads to better overall factuality compared to other configurations: training on gold data filtered by models' judgments, training on gold data alone, or training on model-generated data that is supported by gold data. These factuality improvements transfer across three domains we study, suggesting that a models' own beliefs can provide a powerful signal for factuality.",
-    "published": "Jul 11",
-    "pdf_url": "https://arxiv.org/pdf/2507.08371v1",
-    "arxiv_url": "http://arxiv.org/abs/2507.08371v1",
-    "queried_author": "Hamish Ivison",
-    "matching_authors": [
-      "Hamish Ivison",
-      "Pang Wei Koh",
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Simple Mechanistic Explanations for Out-Of-Context Reasoning",
-    "authors": [
-      "Atticus Wang",
-      "Joshua Engels",
-      "Oliver Clive-Griffin",
-      "Senthooran Rajamanoharan",
-      "Neel Nanda"
-    ],
-    "summary": "Out-of-context reasoning (OOCR) is a phenomenon in which fine-tuned LLMs exhibit surprisingly deep out-of-distribution generalization. Rather than learning shallow heuristics, they implicitly internalize and act on the consequences of observations scattered throughout the fine-tuning data. In this work, we investigate this phenomenon mechanistically and find that many instances of OOCR in the literature have a simple explanation: the LoRA fine-tuning essentially adds a constant steering vector, steering the model towards a general concept. This improves performance on the fine-tuning task and in many other concept-related domains, causing the surprising generalization. Moreover, we can directly train steering vectors for these tasks from scratch, which also induces OOCR. We find that our results hold even for a task that seems like it must involve conditional behavior (model backdoors); it turns out that unconditionally adding a steering vector is sufficient. Overall, our work presents one explanation of what gets learned during fine-tuning for OOCR tasks, contributing to the key question of why LLMs can reason out of context, an advanced capability that is highly relevant to their safe and reliable deployment.",
-    "published": "Jul 10",
-    "pdf_url": "https://arxiv.org/pdf/2507.08218v2",
-    "arxiv_url": "http://arxiv.org/abs/2507.08218v2",
-    "queried_author": "Neel Nanda",
-    "matching_authors": [
-      "Neel Nanda"
-    ]
-  },
-  {
-    "title": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling",
-    "authors": [
-      "Sukjun Hwang",
-      "Brandon Wang",
-      "Albert Gu"
-    ],
-    "summary": "Major progress on language models (LMs) in recent years has largely resulted from moving away from specialized models designed for specific tasks, to general models based on powerful architectures (e.g. the Transformer) that learn everything from raw data. Despite this trend, pre-processing steps such as tokenization remain a barrier to true end-to-end foundation models. We introduce a collection of new techniques that enable a dynamic chunking mechanism which automatically learns content- and context- dependent segmentation strategies learned jointly with the rest of the model. Incorporating this into an explicit hierarchical network (H-Net) allows replacing the (implicitly hierarchical) tokenization-LM-detokenization pipeline with a single model learned fully end-to-end. When compute- and data- matched, an H-Net with one stage of hierarchy operating at the byte level outperforms a strong Transformer language model operating over BPE tokens. Iterating the hierarchy to multiple stages further increases its performance by modeling multiple levels of abstraction, demonstrating significantly better scaling with data and matching the token-based Transformer of twice its size. H-Nets pretrained on English show significantly increased character-level robustness, and qualitatively learn meaningful data-dependent chunking strategies without any heuristics or explicit supervision. Finally, the H-Net's improvement over tokenized pipelines is further increased in languages and modalities with weaker tokenization heuristics, such as Chinese and code, or DNA sequences (nearly 4x improve...",
-    "published": "Jul 10",
-    "pdf_url": "https://arxiv.org/pdf/2507.07955v2",
-    "arxiv_url": "http://arxiv.org/abs/2507.07955v2",
-    "queried_author": "Albert Gu",
-    "matching_authors": [
-      "Albert Gu"
-    ]
-  },
-  {
-    "title": "Small Batch Size Training for Language Models: When Vanilla SGD Works, and Why Gradient Accumulation Is Wasteful",
-    "authors": [
-      "Martin Marek",
-      "Sanae Lotfi",
-      "Aditya Somasundaram",
-      "Andrew Gordon Wilson",
-      "Micah Goldblum"
-    ],
-    "summary": "Conventional wisdom dictates that small batch sizes make language model pretraining and fine-tuning unstable, motivating gradient accumulation, which trades off the number of optimizer steps for a proportional increase in batch size. While it is common to decrease the learning rate for smaller batch sizes, other hyperparameters are often held fixed. In this work, we revisit small batch sizes all the way down to batch size one, and we propose a rule for scaling Adam hyperparameters to small batch sizes. In particular, rather than holding the decay rate of the second moment fixed across batch sizes, we propose to hold its half-life fixed in terms of tokens. We find that small batch sizes (1) train stably, (2) are consistently more robust to hyperparameter choices, (3) achieve equal or better per-FLOP performance than larger batch sizes, and (4) notably enable stable language model training with vanilla SGD, even without momentum, despite storing no optimizer state. Building on these results, we provide practical recommendations for selecting a batch size and setting optimizer hyperparameters. We further recommend against gradient accumulation unless training on multiple devices with multiple model replicas. Finally, we show that a small batch size combined with an optimizer with a small state size can provide the performance benefits of full fine-tuning while maintaining a similar memory footprint to LoRA.",
-    "published": "Jul 09",
-    "pdf_url": "https://arxiv.org/pdf/2507.07101v4",
-    "arxiv_url": "http://arxiv.org/abs/2507.07101v4",
-    "queried_author": "Micah Goldblum",
-    "matching_authors": [
-      "Micah Goldblum"
-    ]
-  },
-  {
-    "title": "FlexOlmo: Open Language Models for Flexible Data Use",
-    "authors": [
-      "Weijia Shi",
-      "Akshita Bhagia",
-      "Kevin Farhat",
-      "Niklas Muennighoff",
-      "Pete Walsh",
-      "Jacob Morrison",
-      "Dustin Schwenk",
-      "Shayne Longpre",
-      "Jake Poznanski",
-      "Allyson Ettinger",
-      "Daogao Liu",
-      "Margaret Li",
-      "Dirk Groeneveld",
-      "Mike Lewis",
-      "Wen-tau Yih",
-      "Luca Soldaini",
-      "Kyle Lo",
-      "Noah A. Smith",
-      "Luke Zettlemoyer",
-      "Pang Wei Koh",
-      "Hannaneh Hajishirzi",
-      "Ali Farhadi",
-      "Sewon Min"
-    ],
-    "summary": "We introduce FlexOlmo, a new class of language models (LMs) that supports (1) distributed training without data sharing, where different model parameters are independently trained on closed datasets, and (2) data-flexible inference, where these parameters along with their associated data can be flexibly included or excluded from model inferences with no further training. FlexOlmo employs a mixture-of-experts (MoE) architecture where each expert is trained independently on closed datasets and later integrated through a new domain-informed routing without any joint training. FlexOlmo is trained on FlexMix, a corpus we curate comprising publicly available datasets alongside seven domain-specific sets, representing realistic approximations of closed sets. We evaluate models with up to 37 billion parameters (20 billion active) on 31 diverse downstream tasks. We show that a general expert trained on public data can be effectively combined with independently trained experts from other data owners, leading to an average 41% relative improvement while allowing users to opt out of certain data based on data licensing or permission requirements. Our approach also outperforms prior model merging methods by 10.1% on average and surpasses the standard MoE trained without data restrictions using the same training FLOPs. Altogether, this research presents a solution for both data owners and researchers in regulated industries with sensitive or protected data. FlexOlmo enables benefiting from closed data while respecting data owners' preferences by keeping their data local and supporting fi...",
-    "published": "Jul 09",
-    "pdf_url": "https://arxiv.org/pdf/2507.07024v4",
-    "arxiv_url": "http://arxiv.org/abs/2507.07024v4",
-    "queried_author": "Hannaneh Hajishirzi",
-    "matching_authors": [
-      "Hannaneh Hajishirzi",
-      "Kyle Lo",
-      "Luca Soldaini",
-      "Luke Zettlemoyer",
-      "Mike Lewis",
-      "Niklas Muennighoff",
-      "Noah A. Smith",
-      "Pang Wei Koh",
-      "Sewon Min"
-    ]
-  },
-  {
-    "title": "PERK: Long-Context Reasoning as Parameter-Efficient Test-Time Learning",
-    "authors": [
-      "Zeming Chen",
-      "Angelika Romanou",
-      "Gail Weiss",
-      "Antoine Bosselut"
-    ],
-    "summary": "Long-context reasoning requires accurately identifying relevant information in extensive, noisy input contexts. Previous research shows that using test-time learning to encode context directly into model parameters can effectively enable reasoning over noisy information. However, meta-learning methods for enabling test-time learning are prohibitively memory-intensive, preventing their application to long context settings. In this work, we propose PERK (Parameter Efficient Reasoning over Knowledge), a scalable approach for learning to encode long input contexts using gradient updates to a lightweight model adapter at test time. Specifically, PERK employs two nested optimization loops in a meta-training phase. The inner loop rapidly encodes contexts into a low-rank adapter (LoRA) that serves as a parameter-efficient memory module for the base model. Concurrently, the outer loop learns to use the updated adapter to accurately recall and reason over relevant information from the encoded long context. Our evaluations on several long-context reasoning tasks show that PERK significantly outperforms the standard prompt-based long-context baseline, achieving average absolute performance gains of up to 90% for smaller models (GPT-2) and up to 27% for our largest evaluated model, Qwen-2.5-0.5B. In general, PERK is more robust to reasoning complexity, length extrapolation, and the locations of relevant information in contexts. Finally, we show that while PERK is memory-intensive during training, it scales more efficiently at inference time than prompt-based long-context inference.",
-    "published": "Jul 08",
-    "pdf_url": "https://arxiv.org/pdf/2507.06415v2",
-    "arxiv_url": "http://arxiv.org/abs/2507.06415v2",
-    "queried_author": "Antoine Bosselut",
-    "matching_authors": [
-      "Antoine Bosselut"
     ]
   }
 ]
