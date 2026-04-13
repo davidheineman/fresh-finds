@@ -64,7 +64,10 @@ def fetch_papers(count: int = 8, url: str = PAPERS_URL) -> list[dict[str, str]]:
     raw = requests.get(url, timeout=30).json()
     papers = []
     for entry in raw[:count]:
-        authors = ", ".join(entry.get("authors", []))
+        author_list = entry.get("authors", [])
+        if len(author_list) > 10:
+            author_list = author_list[:5] + ["..."] + author_list[-5:]
+        authors = ", ".join(author_list)
         papers.append({
             "title": entry.get("title", ""),
             "authors": authors,
