@@ -1,5 +1,76 @@
 [
   {
+    "title": "EXAONE 4.5 Technical Report",
+    "authors": [
+      "Eunbi Choi",
+      "Kibong Choi",
+      "Sehyun Chun",
+      "Seokhee Hong",
+      "Junwon Hwang",
+      "Hyojin Jeon",
+      "Ahra Jo",
+      "Hyunjik Jo",
+      "Yeonsik Jo",
+      "Joonkee Kim",
+      "Seonghwan Kim",
+      "Soyeon Kim",
+      "Sunkyoung Kim",
+      "Yireun Kim",
+      "Yongil Kim",
+      "Changhun Lee",
+      "Haeju Lee",
+      "Jinsik Lee",
+      "Kyungmin Lee",
+      "Sangha Park",
+      "Kwangrok Ryoo",
+      "Minju Seo",
+      "Sejong Yang",
+      "Heuiyeen Yeen",
+      "Hwan Chang",
+      "Stanley Jungkyu Choi",
+      "Yejin Choi",
+      "Kyubeen Han",
+      "Joonwon Jang",
+      "Kijeong Jeon",
+      "Geunyeong Jeong",
+      "Gerrard Jeongwon Jo",
+      "Jiyeon Jung",
+      "Daeseong Kim",
+      "Dohoon Kim",
+      "Dohyun Kim",
+      "Hyunseo Kim",
+      "Minu Kim",
+      "Myoungshin Kim",
+      "Youchul Kim",
+      "Byungoh Ko",
+      "Christopher Lee",
+      "Edward Hwayoung Lee",
+      "Honglak Lee",
+      "Jiyoung Lee",
+      "Sangeun Lee",
+      "Seungwon Lim",
+      "Woohyung Lim",
+      "Jueun Mun",
+      "Jaewoo Park",
+      "Jimin Park",
+      "Jinho Park",
+      "Yongmin Park",
+      "Wooseok Seo",
+      "Yongwoo Song",
+      "Sihyuk Yi",
+      "Kyungjae Yoo",
+      "Sangyeon Yoon"
+    ],
+    "summary": "This technical report introduces EXAONE 4.5, the first open-weight vision language model released by LG AI Research. EXAONE 4.5 is architected by integrating a dedicated visual encoder into the existing EXAONE 4.0 framework, enabling native multimodal pretraining over both visual and textual modalities. The model is trained on large-scale data with careful curation, particularly emphasizing document-centric corpora that align with LG's strategic application domains. This targeted data design enables substantial performance gains in document understanding and related tasks, while also delivering broad improvements across general language capabilities. EXAONE 4.5 extends context length up to 256K tokens, facilitating long-context reasoning and enterprise-scale use cases. Comparative evaluations demonstrate that EXAONE 4.5 achieves competitive performance in general benchmarks while outperforming state-of-the-art models of similar scale in document understanding and Korean contextual reasoning. As part of LG's ongoing effort toward practical industrial deployment, EXAONE 4.5 is designed to be continuously extended with additional domains and application scenarios to advance AI for a better life.",
+    "published": "Apr 09",
+    "pdf_url": "https://arxiv.org/pdf/2604.08644v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.08644v1",
+    "queried_author": "Yejin Choi",
+    "matching_authors": [
+      "Yejin Choi"
+    ]
+  },
+  {
     "title": "What do Language Models Learn and When? The Implicit Curriculum Hypothesis",
     "authors": [
       "Emmy Liu",
@@ -305,8 +376,8 @@
     ],
     "summary": "LLMs can be socially sycophantic, affirming users when they ask questions like \"am I in the wrong?\" rather than providing genuine assessment. We hypothesize that this behavior arises from incorrect assumptions about the user, like underestimating how often users are seeking information over reassurance. We present Verbalized Assumptions, a framework for eliciting these assumptions from LLMs. Verbalized Assumptions provide insight into LLM sycophancy, delusion, and other safety issues, e.g., the top bigram in LLMs' assumptions on social sycophancy datasets is ``seeking validation.'' We provide evidence for a causal link between Verbalized Assumptions and sycophantic model behavior: our assumption probes (linear probes trained on internal representations of these assumptions) enable interpretable fine-grained steering of social sycophancy. We explore why LLMs default to sycophantic assumptions: on identical queries, people expect more objective and informative responses from AI than from other humans, but LLMs trained on human-human conversation do not account for this difference in expectations. Our work contributes a new understanding of assumptions as a mechanism for sycophancy.",
     "published": "Apr 03",
-    "pdf_url": "https://arxiv.org/pdf/2604.03058v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.03058v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.03058v2",
+    "arxiv_url": "http://arxiv.org/abs/2604.03058v2",
     "queried_author": "Dan Jurafsky",
     "matching_authors": [
       "Dan Jurafsky",
@@ -314,7 +385,7 @@
     ]
   },
   {
-    "title": "Making Written Theorems Explorable by Grounding Them in Formal Representations",
+    "title": "Explorable Theorems: Making Written Theorems Explorable by Grounding Them in Formal Representations",
     "authors": [
       "Hita Kambhamettu",
       "Will Crichton",
@@ -324,8 +395,8 @@
     ],
     "summary": "LLM-generated explanations can make technical content more accessible, but there is a ceiling on what they can support interactively. Because LLM outputs are static text, they cannot be executed or stepped through. We argue that grounding explanations in a formalized representation enables interactive affordances beyond what static text supports. We instantiate this idea for mathematical proof comprehension with explorable theorems, a system that uses LLMs to translate a theorem and its written proof into Lean, a programming language for machine-checked proofs, and links the written proof with the Lean code. Readers can work through the proof at a step-level granularity, test custom examples or counterexamples, and trace the logical dependencies bridging each step. Each worked-out step is produced by executing the Lean proof on that example and extracting its intermediate state. A user study ($n = 16$) shows potential advantages of this approach: in a proof-reading task, participants who had access to the provided explorability features gave better, more correct, and more detailed answers to comprehension questions, demonstrating a stronger overall understanding of the underlying mathematics.",
     "published": "Apr 03",
-    "pdf_url": "https://arxiv.org/pdf/2604.02598v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.02598v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.02598v2",
+    "arxiv_url": "http://arxiv.org/abs/2604.02598v2",
     "queried_author": "Sean Welleck",
     "matching_authors": [
       "Sean Welleck"
@@ -359,8 +430,8 @@
     ],
     "summary": "When posed with prompts that permit a large number of valid answers, comprehensively generating them is the first step towards satisfying a wide range of users. In this paper, we study methods to elicit a comprehensive set of valid responses. To evaluate this, we introduce \\textbf{diversity coverage}, a metric that measures the total quality scores assigned to each \\textbf{unique} answer in the predicted answer set relative to the best possible answer set with the same number of answers. Using this metric, we evaluate 18 LLMs, finding no single model dominates at generating diverse responses to a wide range of open-ended prompts. Yet, per each prompt, there exists a model that outperforms all other models significantly at generating a diverse answer set. Motivated by this finding, we introduce a router that predicts the best model for each query. On NB-Wildchat, our trained router outperforms the single best model baseline (26.3% vs $23.8%). We further show generalization to an out-of-domain dataset (NB-Curated) as well as different answer-generation prompting strategies. Our work lays foundation for studying generating comprehensive answers when we have access to a suite of models.",
     "published": "Apr 02",
-    "pdf_url": "https://arxiv.org/pdf/2604.02319v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.02319v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.02319v2",
+    "arxiv_url": "http://arxiv.org/abs/2604.02319v2",
     "queried_author": "Eunsol Choi",
     "matching_authors": [
       "Eunsol Choi"
@@ -3028,8 +3099,8 @@
     ],
     "summary": "Genomic foundation models have the potential to decode DNA syntax, yet face a fundamental tradeoff in their input representation. Standard fixed-vocabulary tokenizers fragment biologically meaningful motifs such as codons and regulatory elements, while nucleotide-level models preserve biological coherence but incur prohibitive computational costs for long contexts. We introduce dnaHNet, a state-of-the-art tokenizer-free autoregressive model that segments and models genomic sequences end-to-end. Using a differentiable dynamic chunking mechanism, dnaHNet compresses raw nucleotides into latent tokens adaptively, balancing compression with predictive accuracy. Pretrained on prokaryotic genomes, dnaHNet outperforms leading architectures including StripedHyena2 in scaling and efficiency. This recursive chunking yields quadratic FLOP reductions, enabling $>3 \\times$ inference speedup over Transformers. On zero-shot tasks, dnaHNet achieves superior performance in predicting protein variant fitness and gene essentiality, while automatically discovering hierarchical biological structures without supervision. These results establish dnaHNet as a scalable, interpretable framework for next-generation genomic modeling.",
     "published": "Feb 11",
-    "pdf_url": "https://arxiv.org/pdf/2602.10603v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.10603v2",
+    "pdf_url": "https://arxiv.org/pdf/2602.10603v3",
+    "arxiv_url": "http://arxiv.org/abs/2602.10603v3",
     "queried_author": "Albert Gu",
     "matching_authors": [
       "Albert Gu"
@@ -3702,10 +3773,10 @@
       "Ethan Perez",
       "Jascha Sohl-Dickstein"
     ],
-    "summary": "As AI becomes more capable, we entrust it with more general and consequential tasks. The risks from failure grow more severe with increasing task scope. It is therefore important to understand how extremely capable AI models will fail: Will they fail by systematically pursuing goals we do not intend? Or will they fail by being a hot mess, and taking nonsensical actions that do not further any goal? We operationalize this question using a bias-variance decomposition of the errors made by AI models: An AI's \\emph{incoherence} on a task is measured over test-time randomness as the fraction of its error that stems from variance rather than bias in task outcome. Across all tasks and frontier models we measure, the longer models spend reasoning and taking actions, \\emph{the more incoherent} their failures become. Incoherence changes with model scale in a way that is experiment dependent. However, in several settings, larger, more capable models are more incoherent than smaller models. Consequently, scale alone seems unlikely to eliminate incoherence. Instead, as more capable AIs pursue harder tasks, requiring more sequential action and thought, our results predict failures to be accompanied by more incoherent behavior. This suggests a future where AIs sometimes cause industrial accidents (due to unpredictable misbehavior), but are less likely to exhibit consistent pursuit of a misaligned goal. This increases the relative importance of alignment research targeting reward hacking or goal misspecification.",
+    "summary": "As AI becomes more capable, we entrust it with more general and consequential tasks. The risks from failure grow more severe with increasing task scope. It is therefore important to understand how extremely capable AI models will fail: Will they fail by systematically pursuing goals we do not intend? Or will they fail by being a hot mess, and taking nonsensical actions that do not further any goal? We operationalize this question using a bias-variance decomposition of the errors made by AI models: An AI's \\emph{error-incoherence} on a task is measured over test-time randomness as the fraction of its error that stems from variance rather than bias in task outcome. Across all tasks and frontier models we measure, the longer models spend reasoning and taking actions, \\emph{the more incoherent} their failures become. Error-incoherence changes with model scale in a way that is experiment dependent. However, in several settings, larger, more capable models are more incoherent than smaller models. Consequently, scale alone seems unlikely to eliminate error-incoherence. Instead, as more capable AIs pursue harder tasks, requiring more sequential action and thought, our results predict failures to be accompanied by more incoherent behavior. This suggests a future where AIs sometimes cause industrial accidents (due to unpredictable misbehavior), but are less likely to exhibit consistent pursuit of a misaligned goal. This increases the relative importance of alignment research targeting reward hacking or goal misspecification.",
     "published": "Jan 30",
-    "pdf_url": "https://arxiv.org/pdf/2601.23045v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.23045v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.23045v2",
+    "arxiv_url": "http://arxiv.org/abs/2601.23045v2",
     "queried_author": "Ethan Perez",
     "matching_authors": [
       "Ethan Perez"
@@ -4358,8 +4429,8 @@
     ],
     "summary": "Multilingual language models (LMs) promise broader NLP access, yet current systems deliver uneven performance across the world's languages. This survey examines why these gaps persist and whether they reflect intrinsic linguistic difficulty or modeling artifacts. We organize the literature around two questions: do linguistic disparities arise from representation and allocation choices (e.g., tokenization, encoding, data exposure, parameter sharing) rather than inherent complexity; and which design choices mitigate inequities across typologically diverse languages. We review linguistic features, such as orthography, morphology, lexical diversity, syntax, information density, and typological distance, linking each to concrete modeling mechanisms. Gaps often shrink when segmentation, encoding, and data exposure are normalized, suggesting much apparent difficulty stems from current modeling choices. We synthesize these insights into design recommendations for tokenization, sampling, architectures, and evaluation to support more balanced multilingual LMs.",
     "published": "Jan 12",
-    "pdf_url": "https://arxiv.org/pdf/2601.07220v2",
-    "arxiv_url": "http://arxiv.org/abs/2601.07220v2",
+    "pdf_url": "https://arxiv.org/pdf/2601.07220v3",
+    "arxiv_url": "http://arxiv.org/abs/2601.07220v3",
     "queried_author": "Dan Jurafsky",
     "matching_authors": [
       "Dan Jurafsky"
@@ -6340,10 +6411,10 @@
       "Mengye Ren",
       "Greg Durrett"
     ],
-    "summary": "Reasoning models leveraging long chains of thought employ various cognitive skills, such as verification of their answers, backtracking, retrying by an alternate method, and more. Previous work has shown that when a base language model exhibits these skills, training that model further with reinforcement learning (RL) can learn to leverage them. How can we get models to leverage skills that aren't exhibited by base models? Our work, SkillFactory, is a method for fine-tuning models to roughly learn these skills during a supervised fine-tuning (SFT) stage prior to RL. Our approach does not rely on distillation from a stronger model, but instead uses samples from the model itself, rearranged to provide training data in the format of those skills. These \"silver\" SFT traces may be imperfect, but are nevertheless effective for priming a model to acquire skills during RL. Our evaluation shows that (1) starting from SkillFactory SFT initialization helps a model to generalize to harder variants of a task post-RL, despite lower performance pre-RL; (2) cognitive skills are indeed used by the model; (3) RLed SkillFactory models are more robust to regression on out-of-domain tasks than RLed base models. Our work suggests that inductive biases learned prior to RL help models learn robust cognitive skill use.",
+    "summary": "Reasoning models leveraging long chains of thought employ various cognitive skills, such as verification of their answers, backtracking, retrying by an alternate method, and more. Previous work has shown that when a base language model exhibits these skills, training that model further with reinforcement learning (RL) can learn to leverage them. How can we get models to leverage skills that aren't exhibited by base models? Our work, SkillFactory, is a method for fine-tuning models to roughly learn these skills during a supervised fine-tuning (SFT) stage prior to RL. Our approach does not rely on distillation from a stronger model, but instead uses samples from the model itself, rearranged to provide training data in the format of those skills. These \"silver\" SFT traces may be imperfect, but are nevertheless effective for priming a model to acquire skills during RL. Our evaluation shows that (1) starting from SkillFactory SFT initialization helps a model to generalize to harder variants of a task post-RL, despite lower performance pre-RL;(2) cognitive skills are indeed used by the model; (3) RLed SkillFactory models are more robust to regression on out-of-domain tasks than RLed base models. Our work suggests that inductive biases learned prior to RL help models learn robust cognitive skill use.",
     "published": "Dec 03",
-    "pdf_url": "https://arxiv.org/pdf/2512.04072v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.04072v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.04072v2",
+    "arxiv_url": "http://arxiv.org/abs/2512.04072v2",
     "queried_author": "Greg Durrett",
     "matching_authors": [
       "Greg Durrett"
@@ -12209,25 +12280,6 @@
     "queried_author": "Christopher D Manning",
     "matching_authors": [
       "Christopher D Manning"
-    ]
-  },
-  {
-    "title": "Bob's Confetti: Phonetic Memorization Attacks in Music and Video Generation",
-    "authors": [
-      "Jaechul Roh",
-      "Zachary Novack",
-      "Yuefeng Peng",
-      "Niloofar Mireshghallah",
-      "Taylor Berg-Kirkpatrick",
-      "Amir Houmansadr"
-    ],
-    "summary": "Generative AI systems for music and video commonly use text-based filters to prevent regurgitation of copyrighted material. We expose a significant vulnerability in this approach by introducing Adversarial PhoneTic Prompting (APT), a novel attack that bypasses these safeguards by exploiting phonetic memorization--the tendency of models to bind sub-lexical acoustic patterns (phonemes, rhyme, stress, cadence) to memorized copyrighted content. APT replaces iconic lyrics with homophonic but semantically unrelated alternatives (e.g., \"mom's spaghetti\" becomes \"Bob's confetti\"), preserving phonetic structure while evading lexical filters. We evaluate APT on leading lyrics-to-song models (Suno, YuE) across English and Korean songs spanning rap, pop, and K-pop. APT achieves 91% average similarity to copyrighted originals, versus 13.7% for random lyrics and 42.2% for semantic paraphrases. Embedding analysis confirms the mechanism: YuE's text encoder treats APT-modified lyrics as near-identical to originals (cosine similarity 0.90) while Sentence-BERT semantic similarity drops to 0.71, showing the model encodes phonetic structure over meaning. This vulnerability extends cross-modally--Veo 3 reconstructs visual scenes from original music videos when prompted with APT lyrics alone, despite no visual cues in the prompt. We further show that phonetic-semantic defense signatures fail, as APT prompts exhibit higher semantic similarity than benign paraphrases. Our findings reveal that sub-lexical acoustic structure acts as a cross-modal retrieval key, rendering current copyright filters sys...",
-    "published": "Jul 23",
-    "pdf_url": "https://arxiv.org/pdf/2507.17937v4",
-    "arxiv_url": "http://arxiv.org/abs/2507.17937v4",
-    "queried_author": "Niloofar Mireshghallah",
-    "matching_authors": [
-      "Niloofar Mireshghallah"
     ]
   }
 ]
