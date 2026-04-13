@@ -1,5 +1,25 @@
 [
   {
+    "title": "Large Language Models Generate Harmful Content Using a Distinct, Unified Mechanism",
+    "authors": [
+      "Hadas Orgad",
+      "Boyi Wei",
+      "Kaden Zheng",
+      "Martin Wattenberg",
+      "Peter Henderson",
+      "Seraphina Goldfarb-Tarrant",
+      "Yonatan Belinkov"
+    ],
+    "summary": "Large language models (LLMs) undergo alignment training to avoid harmful behaviors, yet the resulting safeguards remain brittle: jailbreaks routinely bypass them, and fine-tuning on narrow domains can induce ``emergent misalignment'' that generalizes broadly. Whether this brittleness reflects a fundamental lack of coherent internal organization for harmfulness remains unclear. Here we use targeted weight pruning as a causal intervention to probe the internal organization of harmfulness in LLMs. We find that harmful content generation depends on a compact set of weights that are general across harm types and distinct from benign capabilities. Aligned models exhibit a greater compression of harm generation weights than unaligned counterparts, indicating that alignment reshapes harmful representations internally--despite the brittleness of safety guardrails at the surface level. This compression explains emergent misalignment: if weights of harmful capabilities are compressed, fine-tuning that engages these weights in one domain can trigger broad misalignment. Consistent with this, pruning harm generation weights in a narrow domain substantially reduces emergent misalignment. Notably, LLMs harmful generation capability is dissociated from how they recognize and explain such content. Together, these results reveal a coherent internal structure for harmfulness in LLMs that may serve as a foundation for more principled approaches to safety.",
+    "published": "Apr 10",
+    "pdf_url": "https://arxiv.org/pdf/2604.09544v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.09544v1",
+    "queried_author": "Peter Henderson",
+    "matching_authors": [
+      "Peter Henderson"
+    ]
+  },
+  {
     "title": "EXAONE 4.5 Technical Report",
     "authors": [
       "Eunbi Choi",
@@ -137,8 +157,8 @@
     ],
     "summary": "We show that verifier-free evolution is bottlenecked by both diversity and efficiency: without external correction, repeated evolution accelerates collapse toward narrow modes, while the uniform use of a high-cost model wastes compute and quickly becomes economically impractical. We introduce Squeeze Evolve, a unified multi-model orchestration framework for verifier-free evolutionary inference. Our approach is guided by a simple principle: allocate model capability where it has the highest marginal utility. Stronger models are reserved for high-impact stages, while cheaper models handle the other stages at much lower costs. This principle addresses diversity and cost-efficiency jointly while remaining lightweight. Squeeze Evolve naturally supports open-source, closed-source, and mixed-model deployments. Across AIME 2025, HMMT 2025, LiveCodeBench V6, GPQA-Diamond, ARC-AGI-V2, and multimodal vision benchmarks, such as MMMU-Pro and BabyVision, Squeeze Evolve consistently improves the cost-capability frontier over single-model evolution and achieves new state-of-the-art results on several tasks. Empirically, Squeeze Evolve reduces API cost by up to $\\sim$3$\\times$ and increases fixed-budget serving throughput by up to $\\sim$10$\\times$. Moreover, on discovery tasks, Squeeze Evolve is the first verifier-free evolutionary method to match, and in some cases exceed, the performance of verifier-based evolutionary methods.",
     "published": "Apr 09",
-    "pdf_url": "https://arxiv.org/pdf/2604.07725v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.07725v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.07725v2",
+    "arxiv_url": "http://arxiv.org/abs/2604.07725v2",
     "queried_author": "Tri Dao",
     "matching_authors": [
       "Tri Dao"
@@ -12264,22 +12284,6 @@
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig"
-    ]
-  },
-  {
-    "title": "A New Pair of GloVes",
-    "authors": [
-      "Riley Carlson",
-      "John Bauer",
-      "Christopher D. Manning"
-    ],
-    "summary": "This report documents, describes, and evaluates new 2024 English GloVe (Global Vectors for Word Representation) models. While the original GloVe models built in 2014 have been widely used and found useful, languages and the world continue to evolve and we thought that current usage could benefit from updated models. Moreover, the 2014 models were not carefully documented as to the exact data versions and preprocessing that were used, and we rectify this by documenting these new models. We trained two sets of word embeddings using Wikipedia, Gigaword, and a subset of Dolma. Evaluation through vocabulary comparison, direct testing, and NER tasks shows that the 2024 vectors incorporate new culturally and linguistically relevant words, perform comparably on structural tasks like analogy and similarity, and demonstrate improved performance on recent, temporally dependent NER datasets such as non-Western newswire data.",
-    "published": "Jul 24",
-    "pdf_url": "https://arxiv.org/pdf/2507.18103v1",
-    "arxiv_url": "http://arxiv.org/abs/2507.18103v1",
-    "queried_author": "Christopher D Manning",
-    "matching_authors": [
-      "Christopher D Manning"
     ]
   }
 ]
