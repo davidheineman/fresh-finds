@@ -1,5 +1,53 @@
 [
   {
+    "title": "HealthAdminBench: Evaluating Computer-Use Agents on Healthcare Administration Tasks",
+    "authors": [
+      "Suhana Bedi",
+      "Ryan Welch",
+      "Ethan Steinberg",
+      "Michael Wornow",
+      "Taeil Matthew Kim",
+      "Haroun Ahmed",
+      "Peter Sterling",
+      "Bravim Purohit",
+      "Qurat Akram",
+      "Angelic Acosta",
+      "Esther Nubla",
+      "Pritika Sharma",
+      "Michael A. Pfeffer",
+      "Sanmi Koyejo",
+      "Nigam H. Shah"
+    ],
+    "summary": "Healthcare administration accounts for over $1 trillion in annual spending, making it a promising target for LLM-based computer-use agents (CUAs). While clinical applications of LLMs have received significant attention, no benchmark exists for evaluating CUAs on end-to-end administrative workflows. To address this gap, we introduce HealthAdminBench, a benchmark comprising four realistic GUI environments: an EHR, two payer portals, and a fax system, and 135 expert-defined tasks spanning three administrative task types: Prior Authorization, Appeals and Denials Management, and Durable Medical Equipment (DME) Order Processing. Each task is decomposed into fine-grained, verifiable subtasks, yielding 1,698 evaluation points. We evaluate seven agent configurations under multiple prompting and observation settings and find that, despite strong subtask performance, end-to-end reliability remains low: the best-performing agent (Claude Opus 4.6 CUA) achieves only 36.3 percent task success, while GPT-5.4 CUA attains the highest subtask success rate (82.8 percent). These results reveal a substantial gap between current agent capabilities and the demands of real-world administrative workflows. HealthAdminBench provides a rigorous foundation for evaluating progress toward safe and reliable automation of healthcare administrative workflows.",
+    "published": "Apr 10",
+    "pdf_url": "https://arxiv.org/pdf/2604.09937v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.09937v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "Spoiler Alert: Narrative Forecasting as a Metric for Tension in LLM Storytelling",
+    "authors": [
+      "Peiqi Sui",
+      "Yutong Zhu",
+      "Tianyi Cheng",
+      "Peter West",
+      "Richard Jean So",
+      "Hoyt Long",
+      "Ari Holtzman"
+    ],
+    "summary": "LLMs have so far failed both to generate consistently compelling stories and to recognize this failure--on the leading creative-writing benchmark (EQ-Bench), LLM judges rank zero-shot AI stories above New Yorker short stories, a gold standard for literary fiction. We argue that existing rubrics overlook a key dimension of compelling human stories: narrative tension. We introduce the 100-Endings metric, which walks through a story sentence by sentence: at each position, a model predicts how the story will end 100 times given only the text so far, and we measure tension as how often predictions fail to match the ground truth. Beyond the mismatch rate, the sentence-level curve yields complementary statistics, such as inflection rate, a geometric measure of how frequently the curve reverses direction, tracking twists and revelations. Unlike rubric-based judges, 100-Endings correctly ranks New Yorker stories far above LLM outputs. Grounded in narratological principles, we design a story-generation pipeline using structural constraints, including analysis of story templates, idea formulation, and narrative scaffolding. Our pipeline significantly increases narrative tension as measured by the 100-Endings metric, while maintaining performance on the EQ-Bench leaderboard.",
+    "published": "Apr 10",
+    "pdf_url": "https://arxiv.org/pdf/2604.09854v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.09854v1",
+    "queried_author": "Ari Holtzman",
+    "matching_authors": [
+      "Ari Holtzman"
+    ]
+  },
+  {
     "title": "Large Language Models Generate Harmful Content Using a Distinct, Unified Mechanism",
     "authors": [
       "Hadas Orgad",
@@ -7881,8 +7929,8 @@
     ],
     "summary": "Human feedback can alter language models in unpredictable and undesirable ways, as practitioners lack a clear understanding of what feedback data encodes. While prior work studies preferences over certain attributes (e.g., length or sycophancy), automatically extracting relevant features without pre-specifying hypotheses remains challenging. We introduce What's In My Human Feedback? (WIMHF), a method to explain feedback data using sparse autoencoders. WIMHF characterizes both (1) the preferences a dataset is capable of measuring and (2) the preferences that the annotators actually express. Across 7 datasets, WIMHF identifies a small number of human-interpretable features that account for the majority of the preference prediction signal achieved by black-box models. These features reveal a wide diversity in what humans prefer, and the role of dataset-level context: for example, users on Reddit prefer informality and jokes, while annotators in HH-RLHF and PRISM disprefer them. WIMHF also surfaces potentially unsafe preferences, such as that LMArena users tend to vote against refusals, often in favor of toxic content. The learned features enable effective data curation: re-labeling the harmful examples in Arena yields large safety gains (+37%) with no cost to general performance. They also allow fine-grained personalization: on the Community Alignment dataset, we learn annotator-specific weights over subjective features that improve preference prediction. WIMHF provides a human-centered analysis method for practitioners to better understand and use preference data.",
     "published": "Oct 30",
-    "pdf_url": "https://arxiv.org/pdf/2510.26202v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.26202v1",
+    "pdf_url": "https://arxiv.org/pdf/2510.26202v2",
+    "arxiv_url": "http://arxiv.org/abs/2510.26202v2",
     "queried_author": "Sewon Min",
     "matching_authors": [
       "Sewon Min"
@@ -10204,6 +10252,7 @@
   {
     "title": "Position: The Hidden Costs and Measurement Gaps of Reinforcement Learning with Verifiable Rewards",
     "authors": [
+      "Fang Wu",
       "Aaron Tu",
       "Weihao Xuan",
       "Heli Qi",
@@ -10217,25 +10266,20 @@
       "Bing Hu",
       "Hanqun Cao",
       "Wenqi Shi",
-      "Tianang Leng",
       "Rui Yang",
-      "Yingjian Chen",
-      "Ziqi Wang",
-      "Irene Li",
       "Nan Liu",
       "Huaxiu Yao",
-      "Li Erran Li",
       "Ge Liu",
+      "Li Erran Li",
       "Amin Saberi",
       "Naoto Yokoya",
       "Jure Leskovec",
-      "Yejin Choi",
-      "Fang Wu"
+      "Yejin Choi"
     ],
-    "summary": "Reinforcement learning with verifiable rewards (RLVR) is a practical and scalable approach to enhancing large language models in areas such as math, code, and other structured tasks. Two questions motivate this paper: how much of the reported gains survive under strictly parity-controlled evaluation, and whether RLVR is cost-free or exacts a measurable tax. We argue that progress is real, but gains are often overstated due to three forces - an RLVR tax, evaluation pitfalls, and data contamination. Using a partial-prompt contamination audit and matched-budget reproductions across base and RL models, we show that several headline gaps shrink or vanish under clean, parity-controlled evaluation. We then propose a tax-aware training and evaluation protocol that co-optimizes accuracy, grounding, and calibrated abstention and standardizes budgeting and provenance checks. Applied to recent RLVR setups, this protocol yields more reliable estimates of reasoning gains and, in several cases, revises prior conclusions. Our position is constructive: RLVR is valuable and industry-ready; we advocate keeping its practical benefits while prioritizing reliability, safety, and measurement.",
+    "summary": "Reinforcement learning with verifiable rewards (RLVR) is a practical, scalable way to improve large language models on math, code, and other structured tasks. However, we argue that many headline RLVR gains are not yet well validated because reports often conflate policy improvement with three confounds: (i) budget mismatch between RLVR and baseline evaluation, (ii) attempt inflation and calibration drift that convert abstentions into confident answers, and (iii) data contamination in benchmarks. Using budget-matched reproductions and partial-prompt contamination probes, we find that several widely cited gaps shrink substantially or disappear once budgets, prompts, and dataset versions are matched, and contaminated sets are treated as memorization probes rather than evidence of reasoning. This does not mean that RLVR is ineffective, but it implies that current measurements often overstate capability gains and obscure reliability costs. We therefore propose a compact, tax-aware minimum standard for RLVR training and evaluation: budget-matched saturation curves with variance, calibration, and abstention tracking, one judge robustness stress test when LLM judges are used, and an explicit contamination screen. With these controls, RLVR remains effective and deployable in verifiable domains, but reasoning gains should be treated as provisional without them.",
     "published": "Sep 26",
-    "pdf_url": "https://arxiv.org/pdf/2509.21882v1",
-    "arxiv_url": "http://arxiv.org/abs/2509.21882v1",
+    "pdf_url": "https://arxiv.org/pdf/2509.21882v2",
+    "arxiv_url": "http://arxiv.org/abs/2509.21882v2",
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
@@ -12247,43 +12291,6 @@
     "queried_author": "Ludwig Schmidt",
     "matching_authors": [
       "Ludwig Schmidt"
-    ]
-  },
-  {
-    "title": "Fishers for Free? Approximating the Fisher Information Matrix by Recycling the Squared Gradient Accumulator",
-    "authors": [
-      "YuXin Li",
-      "Felix Dangel",
-      "Derek Tam",
-      "Colin Raffel"
-    ],
-    "summary": "The diagonal of a model's Fisher Information Matrix (the \"Fisher diagonal\") has frequently been used as a way to measure parameter sensitivity. Typically, the Fisher diagonal is estimated via squared sampled gradients of the model's likelihood with respect to its parameters, averaged over a few hundred or thousand examples -- a process which incurs nontrivial computational costs. At the same time, adaptive gradient methods like the ubiquitous Adam optimizer compute a moving average of the squared gradient over the course of training. This paper therefore explores whether an approximation of the Fisher diagonal can be obtained \"for free\" by recycling the squared gradient accumulator that has already been computed over the course of training. Through a comprehensive set of experiments covering five applications of the Fisher diagonal, we demonstrate that the \"Squisher\" (SQUared gradient accumulator as an approximation of the FISHER) consistently performs similarly to the Fisher diagonal while outperforming baseline methods. Additionally, we clarify the exact differences between the Squisher and the Fisher diagonal and provide empirical quantification of their respective impact.",
-    "published": "Jul 24",
-    "pdf_url": "https://arxiv.org/pdf/2507.18807v1",
-    "arxiv_url": "http://arxiv.org/abs/2507.18807v1",
-    "queried_author": "Colin Raffel",
-    "matching_authors": [
-      "Colin Raffel"
-    ]
-  },
-  {
-    "title": "Checklists Are Better Than Reward Models For Aligning Language Models",
-    "authors": [
-      "Vijay Viswanathan",
-      "Yanchao Sun",
-      "Shuang Ma",
-      "Xiang Kong",
-      "Meng Cao",
-      "Graham Neubig",
-      "Tongshuang Wu"
-    ],
-    "summary": "Language models must be adapted to understand and follow user instructions. Reinforcement learning is widely used to facilitate this -- typically using fixed criteria such as \"helpfulness\" and \"harmfulness\". In our work, we instead propose using flexible, instruction-specific criteria as a means of broadening the impact that reinforcement learning can have in eliciting instruction following. We propose \"Reinforcement Learning from Checklist Feedback\" (RLCF). From instructions, we extract checklists and evaluate how well responses satisfy each item - using both AI judges and specialized verifier programs - then combine these scores to compute rewards for RL. We compare RLCF with other alignment methods applied to a strong instruction following model (Qwen2.5-7B-Instruct) on five widely-studied benchmarks -- RLCF is the only method to improve performance on every benchmark, including a 4-point boost in hard satisfaction rate on FollowBench, a 6-point increase on InFoBench, and a 3-point rise in win rate on Arena-Hard. These results establish checklist feedback as a key tool for improving language models' support of queries that express a multitude of needs.",
-    "published": "Jul 24",
-    "pdf_url": "https://arxiv.org/pdf/2507.18624v2",
-    "arxiv_url": "http://arxiv.org/abs/2507.18624v2",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
     ]
   }
 ]
