@@ -1,5 +1,40 @@
 [
   {
+    "title": "Asking What Matters: Reward-Driven Clarification for Software Engineering Tasks",
+    "authors": [
+      "Sanidhya Vijayvargiya",
+      "Vijay Viswanathan",
+      "Graham Neubig"
+    ],
+    "summary": "Humans often specify tasks incompletely, so assistants must know when and how to ask clarifying questions. However, effective clarification remains challenging in software engineering tasks as not all missing information is equally valuable, and questions must target information users can realistically provide. We study clarification in real software engineering tasks by quantifying which types of information most affect task success and which questions elicit useful responses from simulated users. Using Shapley attribution and distributional comparisons, we identify two key properties of effective clarification: task relevance (which information predicts success) and user answerability (what users can realistically provide). We operationalize these properties as multi-stage reinforcement learning rewards to train CLARITI, an 8B-parameter clarification module, that matches GPT-5's resolution rate on underspecified issues while generating 41% fewer questions. Our results suggest that grounding reward design in empirical analysis of information impact and user answerability improves clarification efficiency.",
+    "published": "Apr 16",
+    "pdf_url": "https://arxiv.org/pdf/2604.14624v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.14624v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
+    "title": "\"I Just Don't Want My Work Being Fed Into The AI Blender\": Queer Artists on Refusing and Resisting Generative AI",
+    "authors": [
+      "Jordan Taylor",
+      "Joel Mire",
+      "Alicia DeVrio",
+      "Maarten Sap",
+      "Haiyi Zhu",
+      "Sarah E. Fox"
+    ],
+    "summary": "Art-making is a collective social activity through which queer people engage in political resistance, develop identities, archive queer memory, and form community. However, in recent years, generative AI has disrupted queer artistic communities. Through 15 semi-structured interviews, we examine how queer artists are making sense of the encroachment of GenAI into their art worlds. Our findings surface significant tensions between the relationality of our participants' queer art practices and the perceived anti-relationality of GenAI development and use. We detail how our participants refuse and resist GenAI use and development in response and highlight the limited role our participants saw for GenAI within art-making, such as the queer aesthetic potential of surreal image models. Drawing on queer theory, we discuss how CSCW researchers might support queer artists by refusing dominant AI imaginaries and supporting queer world-building.",
+    "published": "Apr 15",
+    "pdf_url": "https://arxiv.org/pdf/2604.14266v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.14266v1",
+    "queried_author": "Maarten Sap",
+    "matching_authors": [
+      "Maarten Sap"
+    ]
+  },
+  {
     "title": "How Can We Synthesize High-Quality Pretraining Data? A Systematic Study of Prompt Design, Generator Model, and Source Data",
     "authors": [
       "Joel Niklaus",
@@ -2879,7 +2914,7 @@
     ]
   },
   {
-    "title": "DySCO: Dynamic Attention-Scaling Decoding for Long-Context LMs",
+    "title": "DySCO: Dynamic Attention-Scaling Decoding for Long-Context Language Models",
     "authors": [
       "Xi Ye",
       "Wuwei Zhang",
@@ -2887,10 +2922,10 @@
       "Howard Yen",
       "Danqi Chen"
     ],
-    "summary": "Understanding and reasoning over long contexts is a crucial capability for language models (LMs). Although recent models support increasingly long context windows, their accuracy often deteriorates as input length grows. In practice, models often struggle to keep attention aligned with the most relevant context throughout decoding. In this work, we propose DySCO, a novel decoding algorithm for improving long-context reasoning. DySCO leverages retrieval heads--a subset of attention heads specialized for long-context retrieval--to identify task-relevant tokens at each decoding step and explicitly up-weight them. By doing so, DySCO dynamically adjusts attention during generation to better utilize relevant context. The method is training-free and can be applied directly to any off-the-shelf LMs. Across multiple instruction-tuned and reasoning models, DySCO consistently improves performance on challenging long-context reasoning benchmarks, yielding relative gains of up to 25% on MRCR and LongBenchV2 at 128K context length with modest additional compute. Further analysis highlights the importance of both dynamic attention rescaling and retrieval-head-guided selection for the effectiveness of the method, while providing interpretability insights into decoding-time attention behavior. Our code is available at https://github.com/princeton-pli/DySCO.",
+    "summary": "Understanding and reasoning over long contexts is a crucial capability for language models (LMs). Although recent models support increasingly long context windows, their accuracy often deteriorates as input length grows. In practice, models often struggle to keep attention aligned with the most relevant context throughout decoding. In this work, we propose DYSCO, a novel decoding algorithm for improving long-context reasoning. DYSCO leverages retrieval heads--a subset of attention heads specialized for longcontext retrieval--to identify task-relevant tokens at each decoding step and explicitly up-weight them. By doing so, DYSCO dynamically adjusts attention during generation to better utilize relevant context. The method is training-free and can be applied directly to any off-the-shelf LMs. Across multiple instruction-tuned and reasoning models, DYSCO consistently improves performance on challenging long-context reasoning benchmarks, yielding relative gains of up to 25% on MRCR and LongBenchV2 at 128K context length with modest additional compute. Further analysis highlights the importance of both dynamic attention rescaling and retrievalhead guided selection for the effectiveness of the method, while providing interpretability insights into decoding-time attention behavior. Our code is available at https://github.com/princeton-pli/DySCO.",
     "published": "Feb 25",
-    "pdf_url": "https://arxiv.org/pdf/2602.22175v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.22175v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.22175v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.22175v2",
     "queried_author": "Danqi Chen",
     "matching_authors": [
       "Danqi Chen"
@@ -6693,8 +6728,8 @@
     ],
     "summary": "Reading stories evokes rich interpretive, affective, and evaluative responses, such as inferences about narrative intent or judgments about characters. Yet, computational models of reader response are limited, preventing nuanced analyses. To address this gap, we introduce SocialStoryFrames, a formalism for distilling plausible inferences about reader response, such as perceived author intent, explanatory and predictive reasoning, affective responses, and value judgments, using conversational context and a taxonomy grounded in narrative theory, linguistic pragmatics, and psychology. We develop two models, SSF-Generator and SSF-Classifier, validated through human surveys (N=382 participants) and expert annotations, respectively. We conduct pilot analyses to showcase the utility of the formalism for studying storytelling at scale. Specifically, applying our models to SSF-Corpus, a curated dataset of 6,140 social media stories from diverse contexts, we characterize the frequency and interdependence of storytelling intents, and we compare and contrast narrative practices (and their diversity) across communities. By linking fine-grained, context-sensitive modeling with a generic taxonomy of reader responses, SocialStoryFrames enable new research into storytelling in online communities.",
     "published": "Dec 17",
-    "pdf_url": "https://arxiv.org/pdf/2512.15925v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.15925v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.15925v2",
+    "arxiv_url": "http://arxiv.org/abs/2512.15925v2",
     "queried_author": "Maarten Sap",
     "matching_authors": [
       "Maarten Sap"
@@ -12783,47 +12818,6 @@
     "matching_authors": [
       "Danqi Chen",
       "Yejin Choi"
-    ]
-  },
-  {
-    "title": "I Have No Mouth, and I Must Rhyme: Uncovering Internal Phonetic Representations in LLaMA 3.2",
-    "authors": [
-      "Oliver McLaughlin",
-      "Arjun Khurana",
-      "Jack Merullo"
-    ],
-    "summary": "Large language models demonstrate proficiency on phonetic tasks, such as rhyming, without explicit phonetic or auditory grounding. In this work, we investigate how \\verb|Llama-3.2-1B-Instruct| represents token-level phonetic information. Our results suggest that Llama uses a rich internal model of phonemes to complete phonetic tasks. We provide evidence for high-level organization of phoneme representations in its latent space. In doing so, we also identify a ``phoneme mover head\" which promotes phonetic information during rhyming tasks. We visualize the output space of this head and find that, while notable differences exist, Llama learns a model of vowels similar to the standard IPA vowel chart for humans, despite receiving no direct supervision to do so.",
-    "published": "Aug 04",
-    "pdf_url": "https://arxiv.org/pdf/2508.02527v2",
-    "arxiv_url": "http://arxiv.org/abs/2508.02527v2",
-    "queried_author": "Jack Merullo",
-    "matching_authors": [
-      "Jack Merullo"
-    ]
-  },
-  {
-    "title": "WebDS: An End-to-End Benchmark for Web-based Data Science",
-    "authors": [
-      "Ethan Hsu",
-      "Hong Meng Yam",
-      "Ines Bouissou",
-      "Aaron Murali John",
-      "Raj Thota",
-      "Josh Koe",
-      "Vivek Sarath Putta",
-      "G K Dharesan",
-      "Alexander Spangher",
-      "Shikhar Murty",
-      "Tenghao Huang",
-      "Christopher D. Manning"
-    ],
-    "summary": "Many real-world data science tasks involve complex web-based interactions: finding appropriate data available on the internet, synthesizing multimodal data from different locations, and producing summarized analyses. Existing web benchmarks often focus on simplistic interactions and often do not require diverse tool-using capabilities. Conversely, traditional data science benchmarks typically concentrate on static, highly structured datasets and do not assess end-to-end workflows that encompass data acquisition, cleaning, analysis, and insight generation. In response, we introduce WebDS, the first end-to-end web-based data science benchmark. It comprises 870 web-based data science tasks across 29 diverse websites from structured government data portals to unstructured news media, challenging agents to perform complex, multi-step, tool-based operations, across heterogeneous data formats, to better reflect the realities of modern data analytics. Evaluations of current SOTA LLM agents indicate significant performance gaps in accomplishing these tasks. For instance, Browser Use, which accomplishes $80\\%$ of tasks on WebVoyager, completes only 15% of tasks in WebDS, which our analysis suggests is due to new failure modes, such as poor information grounding, repetitive behavior and shortcut-taking that agents performing WebDS's tasks display. By contrast, humans achieve around 90% accuracy, highlighting a substantial gap between current agents and human performance. By providing a more robust and realistic testing ground, WebDS sets the stage for significant advances in the devel...",
-    "published": "Aug 02",
-    "pdf_url": "https://arxiv.org/pdf/2508.01222v2",
-    "arxiv_url": "http://arxiv.org/abs/2508.01222v2",
-    "queried_author": "Christopher D Manning",
-    "matching_authors": [
-      "Christopher D Manning"
     ]
   }
 ]
