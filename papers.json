@@ -614,11 +614,11 @@
     "published": "Apr 14",
     "pdf_url": "https://arxiv.org/pdf/2604.12374v1",
     "arxiv_url": "http://arxiv.org/abs/2604.12374v1",
-    "queried_author": "Yejin Choi",
+    "queried_author": "Mohammad Shoeybi",
     "matching_authors": [
-      "Yejin Choi",
+      "Mohammad Shoeybi",
       "Mostofa Patwary",
-      "Mohammad Shoeybi"
+      "Yejin Choi"
     ]
   },
   {
@@ -721,6 +721,24 @@
     "queried_author": "David M. Blei",
     "matching_authors": [
       "David M. Blei"
+    ]
+  },
+  {
+    "title": "You Only Judge Once: Multi-response Reward Modeling in a Single Forward Pass",
+    "authors": [
+      "Yinuo Yang",
+      "Zixian Ma",
+      "Manasi Ganti",
+      "Jieyu Zhang",
+      "Ranjay Krishna"
+    ],
+    "summary": "We present a discriminative multimodal reward model that scores all candidate responses in a single forward pass. Conventional discriminative reward models evaluate each response independently, requiring multiple forward passes, one for each potential response. Our approach concatenates multiple responses with separator tokens and applies cross-entropy over their scalar scores, enabling direct comparative reasoning and efficient $N$-way preference learning. The multi-response design also yields up to $N\\times$ wall-clock speedup and FLOPs reduction over conventional single-response scoring. To enable $N$-way reward evaluation beyond existing pairwise benchmarks, we construct two new benchmarks: (1) MR$^2$Bench-Image contains human-annotated rankings over responses from 8 diverse models; (2) MR$^2$Bench-Video is a large-scale video-based reward benchmark derived from 94K crowdsourced pairwise human judgments over video question-answering spanning 19 models, denoised via preference graph ensemble. Both benchmarks provide 4-response evaluation variants sampled from the full rankings. Built on a 4B vision-language backbone with LoRA fine-tuning and a lightweight MLP value head, our model achieves state-of-the-art results on six multimodal reward benchmarks, including MR$^2$Bench-Image, MR$^2$Bench-Video, and four other existing benchmarks. Our model outperforms existing larger generative and discriminative reward models. We further demonstrate that our reward model, when used in reinforcement learning with GRPO, produces improved policy models that maintain performance across s...",
+    "published": "Apr 13",
+    "pdf_url": "https://arxiv.org/pdf/2604.10966v2",
+    "arxiv_url": "http://arxiv.org/abs/2604.10966v2",
+    "queried_author": "Ranjay Krishna",
+    "matching_authors": [
+      "Ranjay Krishna"
     ]
   },
   {
@@ -1350,6 +1368,30 @@
     ]
   },
   {
+    "title": "MolmoPoint: Better Pointing for VLMs with Grounding Tokens",
+    "authors": [
+      "Christopher Clark",
+      "Yue Yang",
+      "Jae Sung Park",
+      "Zixian Ma",
+      "Jieyu Zhang",
+      "Rohun Tripathi",
+      "Mohammadreza Salehi",
+      "Sangho Lee",
+      "Taira Anderson",
+      "Winson Han",
+      "Ranjay Krishna"
+    ],
+    "summary": "Grounding has become a fundamental capability of vision-language models (VLMs). Most existing VLMs point by generating coordinates as part of their text output, which requires learning a complicated coordinate system and results in a high token count. Instead, we propose a more intuitive pointing mechanism that directly selects the visual tokens that contain the target concept. Our model generates a special pointing token that cross-attends to the input image or video tokens and selects the appropriate one. To make this model more fine-grained, we follow these pointing tokens with an additional special token that selects a fine-grained subpatch within the initially selected region, and then a third token that specifies a location within that subpatch. We further show that performance improves by generating points sequentially in a consistent order, encoding the relative position of the previously selected point, and including a special no-more-points class when selecting visual tokens. Using this method, we set a new state-of-the-art on image pointing (70.7% on PointBench), set a new state-of-the-art among fully open models on GUI pointing (61.1% on ScreenSpotPro), and improve video pointing (59.1% human preference win rate vs. a text coordinate baseline) and tracking (+6.3% gain on Molmo2Track). We additionally show that our method achieves much higher sample efficiency and discuss the qualitative differences that emerge from this design change.",
+    "published": "Mar 30",
+    "pdf_url": "https://arxiv.org/pdf/2603.28069v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.28069v1",
+    "queried_author": "Ranjay Krishna",
+    "matching_authors": [
+      "Ranjay Krishna"
+    ]
+  },
+  {
     "title": "Meta-Harness: End-to-End Optimization of Model Harnesses",
     "authors": [
       "Yoonho Lee",
@@ -1386,6 +1428,31 @@
     "queried_author": "Jacob Eisenstein",
     "matching_authors": [
       "Jacob Eisenstein"
+    ]
+  },
+  {
+    "title": "PerceptionComp: A Video Benchmark for Complex Perception-Centric Reasoning",
+    "authors": [
+      "Shaoxuan Li",
+      "Zhixuan Zhao",
+      "Hanze Deng",
+      "Zirun Ma",
+      "Shulin Tian",
+      "Zuyan Liu",
+      "Yushi Hu",
+      "Haoning Wu",
+      "Yuhao Dong",
+      "Benlin Liu",
+      "Ziwei Liu",
+      "Ranjay Krishna"
+    ],
+    "summary": "We introduce PerceptionComp, a manually annotated benchmark for complex, long-horizon, perception-centric video reasoning. PerceptionComp is designed so that no single moment is sufficient: answering each question requires multiple temporally separated pieces of visual evidence and compositional constraints under conjunctive and sequential logic, spanning perceptual subtasks such as objects, attributes, relations, locations, actions, and events, and requiring skills including semantic recognition, visual correspondence, temporal reasoning, and spatial reasoning. The benchmark contains 1,114 highly complex questions on 279 videos from diverse domains including city walk tours, indoor villa tours, video games, and extreme outdoor sports, with 100% manual annotation. Human studies show that PerceptionComp requires substantial test-time thinking and repeated perception steps: participants take much longer than on prior benchmarks, and accuracy drops to near chance (18.97%) when rewatching is disallowed. State-of-the-art MLLMs also perform substantially worse on PerceptionComp than on existing benchmarks: the best model in our evaluation, Gemini-3-Flash, reaches only 45.96% accuracy in the five-choice setting, while open-source models remain below 40%. These results suggest that perception-centric long-horizon video reasoning remains a major bottleneck, and we hope PerceptionComp will help drive progress in perceptual reasoning.",
+    "published": "Mar 27",
+    "pdf_url": "https://arxiv.org/pdf/2603.26653v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.26653v1",
+    "queried_author": "Ranjay Krishna",
+    "matching_authors": [
+      "Ranjay Krishna"
     ]
   },
   {
@@ -1444,6 +1511,28 @@
     "queried_author": "Maarten Sap",
     "matching_authors": [
       "Maarten Sap"
+    ]
+  },
+  {
+    "title": "VFIG: Vectorizing Complex Figures in SVG with Vision-Language Models",
+    "authors": [
+      "Qijia He",
+      "Xunmei Liu",
+      "Hammaad Memon",
+      "Ziang Li",
+      "Zixian Ma",
+      "Jaemin Cho",
+      "Jason Ren",
+      "Daniel S Weld",
+      "Ranjay Krishna"
+    ],
+    "summary": "Scalable Vector Graphics (SVG) are an essential format for technical illustration and digital design, offering precise resolution independence and flexible semantic editability. In practice, however, original vector source files are frequently lost or inaccessible, leaving only \"flat\" rasterized versions (e.g., PNG or JPEG) that are difficult to modify or scale. Manually reconstructing these figures is a prohibitively labor-intensive process, requiring specialized expertise to recover the original geometric intent. To bridge this gap, we propose VFIG, a family of Vision-Language Models trained for complex and high-fidelity figure-to-SVG conversion. While this task is inherently data-driven, existing datasets are typically small-scale and lack the complexity of professional diagrams. We address this by introducing VFIG-DATA, a large-scale dataset of 66K high-quality figure-SVG pairs, curated from a diverse mix of real-world paper figures and procedurally generated diagrams. Recognizing that SVGs are composed of recurring primitives and hierarchical local structures, we introduce a coarse-to-fine training curriculum that begins with supervised fine-tuning (SFT) to learn atomic primitives and transitions to reinforcement learning (RL) refinement to optimize global diagram fidelity, layout consistency, and topological edge cases. Finally, we introduce VFIG-BENCH, a comprehensive evaluation suite with novel metrics designed to measure the structural integrity of complex figures. VFIG achieves state-of-the-art performance among open-source models and performs on par with GPT-5.2,...",
+    "published": "Mar 25",
+    "pdf_url": "https://arxiv.org/pdf/2603.24575v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.24575v1",
+    "queried_author": "Ranjay Krishna",
+    "matching_authors": [
+      "Ranjay Krishna"
     ]
   },
   {
@@ -1778,6 +1867,29 @@
     ]
   },
   {
+    "title": "Counting Circuits: Mechanistic Interpretability of Visual Reasoning in Large Vision-Language Models",
+    "authors": [
+      "Liwei Che",
+      "Zhiyu Xue",
+      "Yihao Quan",
+      "Benlin Liu",
+      "Zeru Shi",
+      "Michelle Hurst",
+      "Jacob Feldman",
+      "Ruixiang Tang",
+      "Ranjay Krishna",
+      "Vladimir Pavlovic"
+    ],
+    "summary": "Counting serves as a simple but powerful test of a Large Vision-Language Model's (LVLM's) reasoning; it forces the model to identify each individual object and then add them all up. In this study, we investigate how LVLMs implement counting using controlled synthetic and real-world benchmarks, combined with mechanistic analyses. Our results show that LVLMs display a human-like counting behavior, with precise performance on small numerosities and noisy estimation for larger quantities. We introduce two novel interpretability methods, Visual Activation Patching and HeadLens, and use them to uncover a structured \"counting circuit\" that is largely shared across a variety of visual reasoning tasks. Building on these insights, we propose a lightweight intervention strategy that exploits simple and abundantly available synthetic images to fine-tune arbitrary pretrained LVLMs exclusively on counting. Despite the narrow scope of this fine-tuning, the intervention not only enhances counting accuracy on in-distribution synthetic data, but also yields an average improvement of +8.36% on out-of-distribution counting benchmarks and an average gain of +1.54% on complex, general visual reasoning tasks for Qwen2.5-VL. These findings highlight the central, influential role of counting in visual reasoning and suggest a potential pathway for improving overall visual reasoning capabilities through targeted enhancement of counting mechanisms.",
+    "published": "Mar 19",
+    "pdf_url": "https://arxiv.org/pdf/2603.18523v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.18523v1",
+    "queried_author": "Ranjay Krishna",
+    "matching_authors": [
+      "Ranjay Krishna"
+    ]
+  },
+  {
     "title": "Multi-Domain Empirical Bayes for Linearly-Mixed Causal Representations",
     "authors": [
       "Bohan Wu",
@@ -1791,6 +1903,27 @@
     "queried_author": "David M. Blei",
     "matching_authors": [
       "David M. Blei"
+    ]
+  },
+  {
+    "title": "Unified Spatio-Temporal Token Scoring for Efficient Video VLMs",
+    "authors": [
+      "Jianrui Zhang",
+      "Yue Yang",
+      "Rohun Tripathi",
+      "Winson Han",
+      "Ranjay Krishna",
+      "Christopher Clark",
+      "Yong Jae Lee",
+      "Sangho Lee"
+    ],
+    "summary": "Token pruning is essential for enhancing the computational efficiency of vision-language models (VLMs), particularly for video-based tasks where temporal redundancy is prevalent. Prior approaches typically prune tokens either (1) within the vision transformer (ViT) exclusively for unimodal perception tasks such as action recognition and object segmentation, without adapting to downstream vision-language tasks; or (2) only within the LLM while leaving the ViT output intact, often requiring complex text-conditioned token selection mechanisms. In this paper, we introduce Spatio-Temporal Token Scoring (STTS), a simple and lightweight module that prunes vision tokens across both the ViT and the LLM without text conditioning or token merging, and is fully compatible with end-to-end training. By learning how to score temporally via an auxiliary loss and spatially via LLM downstream gradients, aided by our efficient packing algorithm, STTS prunes 50% of vision tokens throughout the entire architecture, resulting in a 62% improvement in efficiency during both training and inference with only a 0.7% drop in average performance across 13 short and long video QA tasks. Efficiency gains increase with more sampled frames per video. Applying test-time scaling for long-video QA further yields performance gains of 0.5-1% compared to the baseline. Overall, STTS represents a novel, simple yet effective technique for unified, architecture-wide vision token pruning.",
+    "published": "Mar 18",
+    "pdf_url": "https://arxiv.org/pdf/2603.18004v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.18004v1",
+    "queried_author": "Ranjay Krishna",
+    "matching_authors": [
+      "Ranjay Krishna"
     ]
   },
   {
@@ -2125,6 +2258,26 @@
     ]
   },
   {
+    "title": "vla-eval: A Unified Evaluation Harness for Vision-Language-Action Models",
+    "authors": [
+      "Suhwan Choi",
+      "Yunsung Lee",
+      "Yubeen Park",
+      "Chris Dongjoo Kim",
+      "Ranjay Krishna",
+      "Dieter Fox",
+      "Youngjae Yu"
+    ],
+    "summary": "Vision Language Action VLA models are typically evaluated using per benchmark scripts maintained independently by each model repository, leading to duplicated code, dependency conflicts, and underspecified protocols. We present vla eval, an open source evaluation harness that decouples model inference from benchmark execution through a WebSocket msgpack protocol with Docker based environment isolation. Models integrate once by implementing a single predict() method; benchmarks integrate once via a four method interface; the full cross evaluation matrix works automatically. A complete evaluation requires only two commands: vla eval serve and vla eval run. The framework supports 13 simulation benchmarks and six model servers. Parallel evaluation via episode sharding and batch inference achieves a 47x throughput improvement, completing 2000 LIBERO episodes in about 18 minutes. Using this infrastructure, we conduct a reproducibility audit of a published VLA model across three benchmarks, finding that all three closely reproduce published values while uncovering undocumented requirements ambiguous termination semantics and hidden normalization statistics that can silently distort results. We additionally release a VLA leaderboard aggregating 657 published results across 17 benchmarks. Framework, evaluation configs, and all reproduction results are publicly available.",
+    "published": "Mar 14",
+    "pdf_url": "https://arxiv.org/pdf/2603.13966v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.13966v1",
+    "queried_author": "Ranjay Krishna",
+    "matching_authors": [
+      "Ranjay Krishna"
+    ]
+  },
+  {
     "title": "$\u03c4$-Voice: Benchmarking Full-Duplex Voice Agents on Real-World Domains",
     "authors": [
       "Soham Ray",
@@ -2252,6 +2405,28 @@
       "Graham Neubig",
       "Maarten Sap",
       "Sean Welleck"
+    ]
+  },
+  {
+    "title": "Video-Based Reward Modeling for Computer-Use Agents",
+    "authors": [
+      "Linxin Song",
+      "Jieyu Zhang",
+      "Huanxin Sheng",
+      "Taiwei Shi",
+      "Gupta Rahul",
+      "Yang Liu",
+      "Ranjay Krishna",
+      "Jian Kang",
+      "Jieyu Zhao"
+    ],
+    "summary": "Computer-using agents (CUAs) are becoming increasingly capable; however, it remains difficult to scale evaluation of whether a trajectory truly fulfills a user instruction. In this work, we study reward modeling from execution video: a sequence of keyframes from an agent trajectory that is independent of the agent's internal reasoning or actions. Although video-execution modeling is method-agnostic, it presents key challenges, including highly redundant layouts and subtle, localized cues that determine success. We introduce Execution Video Reward 53k (ExeVR-53k), a dataset of 53k high-quality video--task--reward triplets. We further propose adversarial instruction translation to synthesize negative samples with step-level annotations. To enable learning from long, high-resolution execution videos, we design spatiotemporal token pruning, which removes homogeneous regions and persistent tokens while preserving decisive UI changes. Building on these components, we fine-tune an Execution Video Reward Model (ExeVRM) that takes only a user instruction and a video-execution sequence to predict task success. Our ExeVRM 8B achieves 84.7% accuracy and 87.7% recall on video-execution assessment, outperforming strong proprietary models such as GPT-5.2 and Gemini-3 Pro across Ubuntu, macOS, Windows, and Android, while providing more precise temporal attribution. These results show that video-execution reward modeling can serve as a scalable, model-agnostic evaluator for CUAs.",
+    "published": "Mar 10",
+    "pdf_url": "https://arxiv.org/pdf/2603.10178v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.10178v1",
+    "queried_author": "Ranjay Krishna",
+    "matching_authors": [
+      "Ranjay Krishna"
     ]
   },
   {
@@ -2454,6 +2629,23 @@
     "queried_author": "Diyi Yang",
     "matching_authors": [
       "Diyi Yang"
+    ]
+  },
+  {
+    "title": "When Rubrics Fail: Error Enumeration as Reward in Reference-Free RL Post-Training for Virtual Try-On",
+    "authors": [
+      "Wisdom Ikezogwo",
+      "Mehmet Saygin Seyfioglu",
+      "Ranjay Krishna",
+      "Karim Bouyarmane"
+    ],
+    "summary": "Reinforcement learning with verifiable rewards (RLVR) and Rubrics as Rewards (RaR) have driven strong gains in domains with clear correctness signals and even in subjective domains by synthesizing evaluation criteria from ideal reference answers. But many real-world tasks admit multiple valid outputs and lack the single ideal answer that rubric generation depends on. We identify this reference-free setting as a gap in current post-training methods and propose Implicit Error Counting (IEC) to fill it. Instead of checking what a response gets right against a rubric, IEC enumerates what it gets wrong, applying severity-weighted scores across task-relevant axes and converting them into calibrated per-aspect rewards. We show that na\u00efve explicit enumeration is too noisy for stable optimization, and that two design choices: implicit score emission and group calibration are necessary to make error counting a reliable reward. As a case study, we validate IEC on virtual try-on (VTO), a domain that is simultaneously too constrained for holistic scoring and too permissive for rubric-based evaluation: subtle garment errors are unacceptable, yet many output variations are correct. We introduce Cascaded Error Counting (CEC) as an evaluation metric, which tracks human preferences well (60% top-1 vs. 30% others), and curate Mismatch-DressCode (MDressBench), a benchmark with maximal attribute mismatch to stress-test reward designs. On MDressBench, IEC outperforms RaR across all metrics (CEC: 5.31 vs. 5.60 on flat references; 5.20 vs. 5.53 on non-flat). On VITON-HD and DressCode, IEC matches ...",
+    "published": "Mar 05",
+    "pdf_url": "https://arxiv.org/pdf/2603.05659v2",
+    "arxiv_url": "http://arxiv.org/abs/2603.05659v2",
+    "queried_author": "Ranjay Krishna",
+    "matching_authors": [
+      "Ranjay Krishna"
     ]
   },
   {
@@ -2865,6 +3057,25 @@
     ]
   },
   {
+    "title": "Scale Can't Overcome Pragmatics: The Impact of Reporting Bias on Vision-Language Reasoning",
+    "authors": [
+      "Amita Kamath",
+      "Jack Hessel",
+      "Khyathi Chandu",
+      "Jena D. Hwang",
+      "Kai-Wei Chang",
+      "Ranjay Krishna"
+    ],
+    "summary": "The lack of reasoning capabilities in Vision-Language Models (VLMs) has remained at the forefront of research discourse. We posit that this behavior stems from a reporting bias in their training data. That is, how people communicate about visual content by default omits tacit information needed to supervise some types of reasoning; e.g., \"at the game today!\" is a more likely caption than \"a photo of 37 people standing behind a field\". We investigate the data underlying the popular VLMs OpenCLIP, LLaVA-1.5 and Molmo through the lens of theories from pragmatics, and find that reporting bias results in insufficient representation of four reasoning skills (spatial, temporal, negation, and counting), despite the corpora being of web-scale, and/or synthetically generated. With a set of curated benchmarks, we demonstrate that: (i) VLMs perform poorly on the aforementioned types of reasoning suppressed in the training data by reporting bias; (ii) contrary to popular belief, scaling data size, model size, and to multiple languages does not result in emergence of these skills by default; but, promisingly, (iii) incorporating annotations specifically collected to obtain tacit information is effective. Our findings highlight the need for more intentional training data curation methods, rather than counting on scale for emergence of reasoning capabilities.",
+    "published": "Feb 26",
+    "pdf_url": "https://arxiv.org/pdf/2602.23351v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.23351v1",
+    "queried_author": "Ranjay Krishna",
+    "matching_authors": [
+      "Ranjay Krishna"
+    ]
+  },
+  {
     "title": "Bridging Latent Reasoning and Target-Language Generation via Retrieval-Transition Heads",
     "authors": [
       "Shaswat Patel",
@@ -3174,6 +3385,28 @@
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "TOPReward: Token Probabilities as Hidden Zero-Shot Rewards for Robotics",
+    "authors": [
+      "Shirui Chen",
+      "Cole Harrison",
+      "Ying-Chun Lee",
+      "Angela Jin Yang",
+      "Zhongzheng Ren",
+      "Lillian J. Ratliff",
+      "Jiafei Duan",
+      "Dieter Fox",
+      "Ranjay Krishna"
+    ],
+    "summary": "While Vision-Language-Action (VLA) models have seen rapid progress in pretraining, their advancement in Reinforcement Learning (RL) remains hampered by low sample efficiency and sparse rewards in real-world settings. Developing generalizable process reward models is essential for providing the fine-grained feedback necessary to bridge this gap, yet existing temporal value functions often fail to generalize beyond their training domains. We introduce TOPReward, a novel, probabilistically grounded temporal value function that leverages the latent world knowledge of pretrained video Vision-Language Models (VLMs) to estimate robotic task progress. Unlike prior methods that prompt VLMs to directly output progress values, which are prone to numerical misrepresentation, TOPReward extracts task progress directly from the VLM's internal token logits. In zero-shot evaluations across 130+ distinct real-world tasks and multiple robot platforms (e.g., Franka, YAM, SO-100/101), TOPReward achieves 0.947 mean Value-Order Correlation (VOC) on Qwen3-VL, dramatically outperforming the state-of-the-art GVL baseline which achieves near-zero correlation on the same open-source model. We further demonstrate that TOPReward serves as a versatile tool for downstream applications, including success detection and reward-aligned behavior cloning.",
+    "published": "Feb 22",
+    "pdf_url": "https://arxiv.org/pdf/2602.19313v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.19313v1",
+    "queried_author": "Ranjay Krishna",
+    "matching_authors": [
+      "Ranjay Krishna"
     ]
   },
   {
@@ -3753,6 +3986,25 @@
     ]
   },
   {
+    "title": "Imitating What Works: Simulation-Filtered Modular Policy Learning from Human Videos",
+    "authors": [
+      "Albert J. Zhai",
+      "Kuo-Hao Zeng",
+      "Jiasen Lu",
+      "Ali Farhadi",
+      "Shenlong Wang",
+      "Wei-Chiu Ma"
+    ],
+    "summary": "The ability to learn manipulation skills by watching videos of humans has the potential to unlock a new source of highly scalable data for robot learning. Here, we tackle prehensile manipulation, in which tasks involve grasping an object before performing various post-grasp motions. Human videos offer strong signals for learning the post-grasp motions, but they are less useful for learning the prerequisite grasping behaviors, especially for robots without human-like hands. A promising way forward is to use a modular policy design, leveraging a dedicated grasp generator to produce stable grasps. However, arbitrary stable grasps are often not task-compatible, hindering the robot's ability to perform the desired downstream motion. To address this challenge, we present Perceive-Simulate-Imitate (PSI), a framework for training a modular manipulation policy using human video motion data processed by paired grasp-trajectory filtering in simulation. This simulation step extends the trajectory data with grasp suitability labels, which allows for supervised learning of task-oriented grasping capabilities. We show through real-world experiments that our framework can be used to learn precise manipulation skills efficiently without any robot data, resulting in significantly more robust performance than using a grasp generator naively.",
+    "published": "Feb 13",
+    "pdf_url": "https://arxiv.org/pdf/2602.13197v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.13197v1",
+    "queried_author": "Ali Farhadi",
+    "matching_authors": [
+      "Ali Farhadi"
+    ]
+  },
+  {
     "title": "Buy versus Build an LLM: A Decision Framework for Governments",
     "authors": [
       "Jiahao Lu",
@@ -3867,6 +4119,46 @@
     "queried_author": "Albert Gu",
     "matching_authors": [
       "Albert Gu"
+    ]
+  },
+  {
+    "title": "MolmoSpaces: A Large-Scale Open Ecosystem for Robot Navigation and Manipulation",
+    "authors": [
+      "Yejin Kim",
+      "Wilbert Pumacay",
+      "Omar Rayyan",
+      "Max Argus",
+      "Winson Han",
+      "Eli VanderBilt",
+      "Jordi Salvador",
+      "Abhay Deshpande",
+      "Rose Hendrix",
+      "Snehal Jauhri",
+      "Shuo Liu",
+      "Nur Muhammad Mahi Shafiullah",
+      "Maya Guru",
+      "Ainaz Eftekhar",
+      "Karen Farley",
+      "Donovan Clay",
+      "Jiafei Duan",
+      "Arjun Guru",
+      "Piper Wolters",
+      "Alvaro Herrasti",
+      "Ying-Chun Lee",
+      "Georgia Chalvatzaki",
+      "Yuchen Cui",
+      "Ali Farhadi",
+      "Dieter Fox",
+      "Ranjay Krishna"
+    ],
+    "summary": "Deploying robots at scale demands robustness to the long tail of everyday situations. The countless variations in scene layout, object geometry, and task specifications that characterize real environments are vast and underrepresented in existing robot benchmarks. Measuring this level of generalization requires infrastructure at a scale and diversity that physical evaluation alone cannot provide. We introduce MolmoSpaces, a fully open ecosystem to support large-scale benchmarking of robot policies. MolmoSpaces consists of over 230k diverse indoor environments, ranging from handcrafted household scenes to procedurally generated multiroom houses, populated with 130k richly annotated object assets, including 48k manipulable objects with 42M stable grasps. Crucially, these environments are simulator-agnostic, supporting popular options such as MuJoCo, Isaac, and ManiSkill. The ecosystem supports the full spectrum of embodied tasks: static and mobile manipulation, navigation, and multiroom long-horizon tasks requiring coordinated perception, planning, and interaction across entire indoor environments. We also design MolmoSpaces-Bench, a benchmark suite of 8 tasks in which robots interact with our diverse scenes and richly annotated objects. Our experiments show MolmoSpaces-Bench exhibits strong sim-to-real correlation (R = 0.96, \\r{ho} = 0.98), confirm newer and stronger zero-shot policies outperform earlier versions in our benchmarks, and identify key sensitivities to prompt phrasing, initial joint positions, and camera occlusion. Through MolmoSpaces and its open-source assets ...",
+    "published": "Feb 11",
+    "pdf_url": "https://arxiv.org/pdf/2602.11337v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.11337v2",
+    "queried_author": "Ali Farhadi",
+    "matching_authors": [
+      "Ali Farhadi",
+      "Ranjay Krishna"
     ]
   },
   {
@@ -4284,8 +4576,9 @@
     "published": "Feb 04",
     "pdf_url": "https://arxiv.org/pdf/2602.07055v1",
     "arxiv_url": "http://arxiv.org/abs/2602.07055v1",
-    "queried_author": "Yejin Choi",
+    "queried_author": "Ranjay Krishna",
     "matching_authors": [
+      "Ranjay Krishna",
       "Yejin Choi"
     ]
   },
@@ -4748,6 +5041,24 @@
     ]
   },
   {
+    "title": "SERA: Soft-Verified Efficient Repository Agents",
+    "authors": [
+      "Ethan Shen",
+      "Danny Tormoen",
+      "Saurabh Shah",
+      "Ali Farhadi",
+      "Tim Dettmers"
+    ],
+    "summary": "Open-weight coding agents should hold a fundamental advantage over closed-source systems: they can be specialized to private codebases, encoding repository-specific information directly in their weights. Yet the cost and complexity of training has kept this advantage theoretical. We show it is now practical. We present Soft-Verified Efficient Repository Agents (SERA), an efficient method for training coding agents that enables the rapid and cheap creation of agents specialized to private codebases. Using only supervised finetuning (SFT), SERA achieves state-of-the-art results among fully open-source (open data, method, code) models while matching the performance of frontier open-weight models like Devstral-Small-2. Creating SERA models is 26x cheaper than reinforcement learning and 57x cheaper than previous synthetic data methods to reach equivalent performance. Our method, Soft Verified Generation (SVG), generates thousands of trajectories from a single code repository. Combined with cost-efficiency, this enables specialization to private codebases. Beyond repository specialization, we apply SVG to a larger corpus of codebases, generating over 200,000 synthetic trajectories. We use this dataset to provide detailed analysis of scaling laws, ablations, and confounding factors for training coding agents. Overall, we believe our work will greatly accelerate research on open coding agents and showcase the advantage of open-source models that can specialize to private codebases. We release SERA as the first model in Ai2's Open Coding Agents series, along with all our code, data,...",
+    "published": "Jan 28",
+    "pdf_url": "https://arxiv.org/pdf/2601.20789v2",
+    "arxiv_url": "http://arxiv.org/abs/2601.20789v2",
+    "queried_author": "Ali Farhadi",
+    "matching_authors": [
+      "Ali Farhadi"
+    ]
+  },
+  {
     "title": "What's the plan? Metrics for implicit planning in LLMs and their application to rhyme generation and question answering",
     "authors": [
       "Jim Maar",
@@ -4801,6 +5112,26 @@
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig"
+    ]
+  },
+  {
+    "title": "AdaReasoner: Dynamic Tool Orchestration for Iterative Visual Reasoning",
+    "authors": [
+      "Mingyang Song",
+      "Haoyu Sun",
+      "Jiawei Gu",
+      "Linjie Li",
+      "Luxin Xu",
+      "Ranjay Krishna",
+      "Yu Cheng"
+    ],
+    "summary": "When humans face problems beyond their immediate capabilities, they rely on tools, providing a promising paradigm for improving visual reasoning in multimodal large language models (MLLMs). Effective reasoning, therefore, hinges on knowing which tools to use, when to invoke them, and how to compose them over multiple steps, even when faced with new tools or new tasks. We introduce \\textbf{AdaReasoner}, a family of multimodal models that learn tool use as a general reasoning skill rather than as tool-specific or explicitly supervised behavior. AdaReasoner is enabled by (i) a scalable data curation pipeline exposing models to long-horizon, multi-step tool interactions; (ii) Tool-GRPO, a reinforcement learning algorithm that optimizes tool selection and sequencing based on end-task success; and (iii) an adaptive learning mechanism that dynamically regulates tool usage. Together, these components allow models to infer tool utility from task context and intermediate outcomes, enabling coordination of multiple tools and generalization to unseen tools. Empirically, AdaReasoner exhibits strong tool-adaptive and generalization behaviors: it autonomously adopts beneficial tools, suppresses irrelevant ones, and adjusts tool usage frequency based on task demands, despite never being explicitly trained to do so. These capabilities translate into state-of-the-art performance across challenging benchmarks, improving the 7B base model by +24.9\\% on average and surpassing strong proprietary systems such as GPT-5 on multiple tasks, including VSP and Jigsaw.",
+    "published": "Jan 26",
+    "pdf_url": "https://arxiv.org/pdf/2601.18631v2",
+    "arxiv_url": "http://arxiv.org/abs/2601.18631v2",
+    "queried_author": "Ranjay Krishna",
+    "matching_authors": [
+      "Ranjay Krishna"
     ]
   },
   {
@@ -4873,10 +5204,10 @@
     "published": "Jan 26",
     "pdf_url": "https://arxiv.org/pdf/2601.18089v1",
     "arxiv_url": "http://arxiv.org/abs/2601.18089v1",
-    "queried_author": "Mostofa Patwary",
+    "queried_author": "Mohammad Shoeybi",
     "matching_authors": [
-      "Mostofa Patwary",
-      "Mohammad Shoeybi"
+      "Mohammad Shoeybi",
+      "Mostofa Patwary"
     ]
   },
   {
@@ -5186,6 +5517,41 @@
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig"
+    ]
+  },
+  {
+    "title": "Molmo2: Open Weights and Data for Vision-Language Models with Video Understanding and Grounding",
+    "authors": [
+      "Christopher Clark",
+      "Jieyu Zhang",
+      "Zixian Ma",
+      "Jae Sung Park",
+      "Mohammadreza Salehi",
+      "Rohun Tripathi",
+      "Sangho Lee",
+      "Zhongzheng Ren",
+      "Chris Dongjoo Kim",
+      "Yinuo Yang",
+      "Vincent Shao",
+      "Yue Yang",
+      "Weikai Huang",
+      "Ziqi Gao",
+      "Taira Anderson",
+      "Jianrui Zhang",
+      "Jitesh Jain",
+      "George Stoica",
+      "Winson Han",
+      "Ali Farhadi",
+      "Ranjay Krishna"
+    ],
+    "summary": "Today's strongest video-language models (VLMs) remain proprietary. The strongest open-weight models either rely on synthetic data from proprietary VLMs, effectively distilling from them, or do not disclose their training data or recipe. As a result, the open-source community lacks the foundations needed to improve on the state-of-the-art video (and image) language models. Crucially, many downstream applications require more than just high-level video understanding; they require grounding -- either by pointing or by tracking in pixels. Even proprietary models lack this capability. We present Molmo2, a new family of VLMs that are state-of-the-art among open-source models and demonstrate exceptional new capabilities in point-driven grounding in single image, multi-image, and video tasks. Our key contribution is a collection of 7 new video datasets and 2 multi-image datasets, including a dataset of highly detailed video captions for pre-training, a free-form video Q&A dataset for fine-tuning, a new object tracking dataset with complex queries, and an innovative new video pointing dataset, all collected without the use of closed VLMs. We also present a training recipe for this data utilizing an efficient packing and message-tree encoding scheme, and show bi-directional attention on vision tokens and a novel token-weight strategy improves performance. Our best-in-class 8B model outperforms others in the class of open weight and data models on short videos, counting, and captioning, and is competitive on long-videos. On video-grounding Molmo2 significantly outperforms existing ope...",
+    "published": "Jan 15",
+    "pdf_url": "https://arxiv.org/pdf/2601.10611v4",
+    "arxiv_url": "http://arxiv.org/abs/2601.10611v4",
+    "queried_author": "Ali Farhadi",
+    "matching_authors": [
+      "Ali Farhadi",
+      "Ranjay Krishna"
     ]
   },
   {
@@ -6137,11 +6503,11 @@
     "published": "Dec 24",
     "pdf_url": "https://arxiv.org/pdf/2512.20856v1",
     "arxiv_url": "http://arxiv.org/abs/2512.20856v1",
-    "queried_author": "Yejin Choi",
+    "queried_author": "Mohammad Shoeybi",
     "matching_authors": [
-      "Yejin Choi",
+      "Mohammad Shoeybi",
       "Mostofa Patwary",
-      "Mohammad Shoeybi"
+      "Yejin Choi"
     ]
   },
   {
@@ -6466,11 +6832,11 @@
     "published": "Dec 23",
     "pdf_url": "https://arxiv.org/pdf/2512.20848v1",
     "arxiv_url": "http://arxiv.org/abs/2512.20848v1",
-    "queried_author": "Yejin Choi",
+    "queried_author": "Mohammad Shoeybi",
     "matching_authors": [
-      "Yejin Choi",
+      "Mohammad Shoeybi",
       "Mostofa Patwary",
-      "Mohammad Shoeybi"
+      "Yejin Choi"
     ]
   },
   {
@@ -6649,7 +7015,8 @@
     "arxiv_url": "http://arxiv.org/abs/2512.16853v1",
     "queried_author": "Luke Zettlemoyer",
     "matching_authors": [
-      "Luke Zettlemoyer"
+      "Luke Zettlemoyer",
+      "Ranjay Krishna"
     ]
   },
   {
@@ -6944,6 +7311,7 @@
     "matching_authors": [
       "Akari Asai",
       "Alexander Wettig",
+      "Ali Farhadi",
       "Hamish Ivison",
       "Hannaneh Hajishirzi",
       "Ian Magnusson",
@@ -6994,6 +7362,72 @@
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig"
+    ]
+  },
+  {
+    "title": "Mull-Tokens: Modality-Agnostic Latent Thinking",
+    "authors": [
+      "Arijit Ray",
+      "Ahmed Abdelkader",
+      "Chengzhi Mao",
+      "Bryan A. Plummer",
+      "Kate Saenko",
+      "Ranjay Krishna",
+      "Leonidas Guibas",
+      "Wen-Sheng Chu"
+    ],
+    "summary": "Reasoning goes beyond language; the real world requires reasoning about space, time, affordances, and much more that words alone cannot convey. Existing multimodal models exploring the potential of reasoning with images are brittle and do not scale. They rely on calling specialist tools, costly generation of images, or handcrafted reasoning data to switch between text and image thoughts. Instead, we offer a simpler alternative -- Mull-Tokens -- modality-agnostic latent tokens pre-trained to hold intermediate information in either image or text modalities to let the model think free-form towards the correct answer. We investigate best practices to train Mull-Tokens inspired by latent reasoning frameworks. We first train Mull-Tokens using supervision from interleaved text-image traces, and then fine-tune without any supervision by only using the final answers. Across four challenging spatial reasoning benchmarks involving tasks such as solving puzzles and taking different perspectives, we demonstrate that Mull-Tokens improve upon several baselines utilizing text-only reasoning or interleaved image-text reasoning, achieving a +3% average improvement and up to +16% on a puzzle solving reasoning-heavy split compared to our strongest baseline. Adding to conversations around challenges in grounding textual and visual reasoning, Mull-Tokens offers a simple solution to abstractly think in multiple modalities.",
+    "published": "Dec 11",
+    "pdf_url": "https://arxiv.org/pdf/2512.10941v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.10941v1",
+    "queried_author": "Ranjay Krishna",
+    "matching_authors": [
+      "Ranjay Krishna"
+    ]
+  },
+  {
+    "title": "OmniView: An All-Seeing Diffusion Model for 3D and 4D View Synthesis",
+    "authors": [
+      "Xiang Fan",
+      "Sharath Girish",
+      "Vivek Ramanujan",
+      "Chaoyang Wang",
+      "Ashkan Mirzaei",
+      "Petr Sushko",
+      "Aliaksandr Siarohin",
+      "Sergey Tulyakov",
+      "Ranjay Krishna"
+    ],
+    "summary": "Prior approaches injecting camera control into diffusion models have focused on specific subsets of 4D consistency tasks: novel view synthesis, text-to-video with camera control, image-to-video, amongst others. Therefore, these fragmented approaches are trained on disjoint slices of available 3D/4D data. We introduce OmniView, a unified framework that generalizes across a wide range of 4D consistency tasks. Our method separately represents space, time, and view conditions, enabling flexible combinations of these inputs. For example, OmniView can synthesize novel views from static, dynamic, and multiview inputs, extrapolate trajectories forward and backward in time, and create videos from text or image prompts with full camera control. OmniView is competitive with task-specific models across diverse benchmarks and metrics, improving image quality scores among camera-conditioned diffusion models by up to 33\\% in multiview NVS LLFF dataset, 60\\% in dynamic NVS Neural 3D Video benchmark, 20\\% in static camera control on RE-10K, and reducing camera trajectory errors by 4x in text-conditioned video generation. With strong generalizability in one model, OmniView demonstrates the feasibility of a generalist 4D video model. Project page is available at https://snap-research.github.io/OmniView/",
+    "published": "Dec 11",
+    "pdf_url": "https://arxiv.org/pdf/2512.10940v2",
+    "arxiv_url": "http://arxiv.org/abs/2512.10940v2",
+    "queried_author": "Ranjay Krishna",
+    "matching_authors": [
+      "Ranjay Krishna"
+    ]
+  },
+  {
+    "title": "Agile Deliberation: Concept Deliberation for Subjective Visual Classification",
+    "authors": [
+      "Leijie Wang",
+      "Otilia Stretcu",
+      "Wei Qiao",
+      "Thomas Denby",
+      "Krishnamurthy Viswanathan",
+      "Enming Luo",
+      "Chun-Ta Lu",
+      "Tushar Dogra",
+      "Ranjay Krishna",
+      "Ariel Fuxman"
+    ],
+    "summary": "From content moderation to content curation, applications requiring vision classifiers for visual concepts are rapidly expanding. Existing human-in-the-loop approaches typically assume users begin with a clear, stable concept understanding to be able to provide high-quality supervision. In reality, users often start with a vague idea and must iteratively refine it through \"concept deliberation\", a practice we uncovered through structured interviews with content moderation experts. We operationalize the common strategies in deliberation used by real content moderators into a human-in-the-loop framework called \"Agile Deliberation\" that explicitly supports evolving and subjective concepts. The system supports users in defining the concept for themselves by exposing them to borderline cases. The system does this with two deliberation stages: (1) concept scoping, which decomposes the initial concept into a structured hierarchy of sub-concepts, and (2) concept iteration, which surfaces semantically borderline examples for user reflection and feedback to iteratively align an image classifier with the user's evolving intent. Since concept deliberation is inherently subjective and interactive, we painstakingly evaluate the framework through 18 user sessions, each 1.5h long, rather than standard benchmarking datasets. We find that Agile Deliberation achieves 7.5% higher F1 scores than automated decomposition baselines and more than 3% higher than manual deliberation, while participants reported clearer conceptual understanding and lower cognitive effort.",
+    "published": "Dec 11",
+    "pdf_url": "https://arxiv.org/pdf/2512.10821v2",
+    "arxiv_url": "http://arxiv.org/abs/2512.10821v2",
+    "queried_author": "Ranjay Krishna",
+    "matching_authors": [
+      "Ranjay Krishna"
     ]
   },
   {
@@ -7652,10 +8086,10 @@
     "published": "Nov 20",
     "pdf_url": "https://arxiv.org/pdf/2511.16664v1",
     "arxiv_url": "http://arxiv.org/abs/2511.16664v1",
-    "queried_author": "Mostofa Patwary",
+    "queried_author": "Mohammad Shoeybi",
     "matching_authors": [
-      "Mostofa Patwary",
-      "Mohammad Shoeybi"
+      "Mohammad Shoeybi",
+      "Mostofa Patwary"
     ]
   },
   {
@@ -7723,6 +8157,46 @@
     "matching_authors": [
       "Percy Liang",
       "Tri Dao"
+    ]
+  },
+  {
+    "title": "OlmoEarth: Stable Latent Image Modeling for Multimodal Earth Observation",
+    "authors": [
+      "Henry Herzog",
+      "Favyen Bastani",
+      "Yawen Zhang",
+      "Gabriel Tseng",
+      "Joseph Redmon",
+      "Hadrien Sablon",
+      "Ryan Park",
+      "Jacob Morrison",
+      "Alexandra Buraczynski",
+      "Karen Farley",
+      "Joshua Hansen",
+      "Andrew Howe",
+      "Patrick Alan Johnson",
+      "Mark Otterlee",
+      "Ted Schmitt",
+      "Hunter Pitelka",
+      "Stephen Daspit",
+      "Rachel Ratner",
+      "Christopher Wilhelm",
+      "Sebastian Wood",
+      "Mike Jacobi",
+      "Hannah Kerner",
+      "Evan Shelhamer",
+      "Ali Farhadi",
+      "Ranjay Krishna",
+      "Patrick Beukema"
+    ],
+    "summary": "Earth observation data presents a unique challenge: it is spatial like images, sequential like video or text, and highly multimodal. We present OlmoEarth: a multimodal, spatio-temporal foundation model that employs a novel self-supervised learning formulation, masking strategy, and loss all designed for the Earth observation domain. OlmoEarth achieves state-of-the-art performance compared to 12 other foundation models across a variety of research benchmarks and real-world tasks from external partners. When evaluating embeddings OlmoEarth achieves the best performance on 15 out of 24 tasks, and with full fine-tuning it is the best on 19 of 29 tasks. We deploy OlmoEarth as the backbone of an end-to-end platform for data collection, labeling, training, and inference of Earth observation models. The OlmoEarth Platform puts frontier foundation models and powerful data management tools into the hands of non-profits and NGOs working to solve the world's biggest problems. OlmoEarth source code, training data, and pre-trained weights are available at $\\href{https://github.com/allenai/olmoearth_pretrain}{\\text{https://github.com/allenai/olmoearth_pretrain}}$.",
+    "published": "Nov 17",
+    "pdf_url": "https://arxiv.org/pdf/2511.13655v1",
+    "arxiv_url": "http://arxiv.org/abs/2511.13655v1",
+    "queried_author": "Ali Farhadi",
+    "matching_authors": [
+      "Ali Farhadi",
+      "Ranjay Krishna"
     ]
   },
   {
@@ -8310,10 +8784,10 @@
     "published": "Nov 06",
     "pdf_url": "https://arxiv.org/pdf/2511.03929v2",
     "arxiv_url": "http://arxiv.org/abs/2511.03929v2",
-    "queried_author": "Mostofa Patwary",
+    "queried_author": "Mohammad Shoeybi",
     "matching_authors": [
-      "Mostofa Patwary",
-      "Mohammad Shoeybi"
+      "Mohammad Shoeybi",
+      "Mostofa Patwary"
     ]
   },
   {
@@ -9419,8 +9893,9 @@
     "published": "Oct 19",
     "pdf_url": "https://arxiv.org/pdf/2510.16907v1",
     "arxiv_url": "http://arxiv.org/abs/2510.16907v1",
-    "queried_author": "Yejin Choi",
+    "queried_author": "Ranjay Krishna",
     "matching_authors": [
+      "Ranjay Krishna",
       "Yejin Choi"
     ]
   },
@@ -9918,6 +10393,27 @@
     ]
   },
   {
+    "title": "Synthetic Object Compositions for Scalable and Accurate Learning in Detection, Segmentation, and Grounding",
+    "authors": [
+      "Weikai Huang",
+      "Jieyu Zhang",
+      "Taoyang Jia",
+      "Chenhao Zheng",
+      "Ziqi Gao",
+      "Jae Sung Park",
+      "Winson Han",
+      "Ranjay Krishna"
+    ],
+    "summary": "Visual grouping -- operationalized through tasks such as instance segmentation, visual grounding, and object detection -- enables applications ranging from robotic perception to photo editing. These fundamental problems in computer vision are powered by large-scale, painstakingly annotated datasets. Despite their impact, these datasets are costly to build, biased in coverage, and difficult to scale. Synthetic datasets offer a promising alternative but struggle with flexibility, accuracy, and compositional diversity.\n  We introduce Synthetic Object Compositions (SOC), an accurate and scalable data synthesis pipeline via a novel object-centric composition strategy. It composes high-quality synthetic object segments into new images using 3D geometric layout augmentation and camera configuration augmentation with generative harmonization and mask-area-weighted blending, yielding accurate and diverse masks, boxes, and referring expressions.\n  Models trained on just 100K of our synthetic images outperform those trained on larger real datasets (GRIT 20M, V3Det 200K) and synthetic pipelines (Copy-Paste, X-Paste, SynGround, SegGen) by +24-36% -- achieving +10.9 AP on LVIS and +8.4 NAcc on gRefCOCO. Beyond the general open-vocabulary setup, SOC also enables controllable dataset construction for different use cases and boosts performance in both low-data and closed-vocabulary scenarios.\n  Augmenting LVIS and COCO with synthetic object segments delivers strong performance across different real-data scales and yields even greater improvements under extremely limited real-data conditions...",
+    "published": "Oct 10",
+    "pdf_url": "https://arxiv.org/pdf/2510.09110v4",
+    "arxiv_url": "http://arxiv.org/abs/2510.09110v4",
+    "queried_author": "Ranjay Krishna",
+    "matching_authors": [
+      "Ranjay Krishna"
+    ]
+  },
+  {
     "title": "RefGrader: Automated Grading of Mathematical Competition Proofs using Agentic Workflows",
     "authors": [
       "Hamed Mahdavi",
@@ -10187,6 +10683,24 @@
     "queried_author": "Jacob Andreas",
     "matching_authors": [
       "Jacob Andreas"
+    ]
+  },
+  {
+    "title": "Visual Representations inside the Language Model",
+    "authors": [
+      "Benlin Liu",
+      "Amita Kamath",
+      "Madeleine Grunde-McLaughlin",
+      "Winson Han",
+      "Ranjay Krishna"
+    ],
+    "summary": "Despite interpretability work analyzing VIT encoders and transformer activations, we don't yet understand why Multimodal Language Models (MLMs) struggle on perception-heavy tasks. We offer an under-studied perspective by examining how popular MLMs (LLaVA-OneVision, Qwen2.5-VL, and Llama-3-LLaVA-NeXT) process their visual key-value tokens. We first study the flow of visual information through the language model, finding that image value tokens encode sufficient information to perform several perception-heavy tasks zero-shot: segmentation, semantic correspondence, temporal correspondence, and referring expression detection. We find that while the language model does augment the visual information received from the projection of input visual encodings-which we reveal correlates with overall MLM perception capability-it contains less visual information on several tasks than the equivalent visual encoder (SigLIP) that has not undergone MLM finetuning. Further, we find that the visual information corresponding to input-agnostic image key tokens in later layers of language models contains artifacts which reduce perception capability of the overall MLM. Next, we discuss controlling visual information in the language model, showing that adding a text prefix to the image input improves perception capabilities of visual representations. Finally, we reveal that if language models were able to better control their visual information, their perception would significantly improve; e.g., in 33.3% of Art Style questions in the BLINK benchmark, perception information present in the language ...",
+    "published": "Oct 06",
+    "pdf_url": "https://arxiv.org/pdf/2510.04819v1",
+    "arxiv_url": "http://arxiv.org/abs/2510.04819v1",
+    "queried_author": "Ranjay Krishna",
+    "matching_authors": [
+      "Ranjay Krishna"
     ]
   },
   {
@@ -10795,10 +11309,10 @@
     "published": "Sep 29",
     "pdf_url": "https://arxiv.org/pdf/2509.25149v2",
     "arxiv_url": "http://arxiv.org/abs/2509.25149v2",
-    "queried_author": "Mostofa Patwary",
+    "queried_author": "Mohammad Shoeybi",
     "matching_authors": [
-      "Mostofa Patwary",
-      "Mohammad Shoeybi"
+      "Mohammad Shoeybi",
+      "Mostofa Patwary"
     ]
   },
   {
@@ -10911,11 +11425,11 @@
     "published": "Sep 26",
     "pdf_url": "https://arxiv.org/pdf/2510.03264v1",
     "arxiv_url": "http://arxiv.org/abs/2510.03264v1",
-    "queried_author": "Yejin Choi",
+    "queried_author": "Mohammad Shoeybi",
     "matching_authors": [
-      "Yejin Choi",
+      "Mohammad Shoeybi",
       "Mostofa Patwary",
-      "Mohammad Shoeybi"
+      "Yejin Choi"
     ]
   },
   {
@@ -10980,11 +11494,11 @@
     "published": "Sep 26",
     "pdf_url": "https://arxiv.org/pdf/2510.01265v2",
     "arxiv_url": "http://arxiv.org/abs/2510.01265v2",
-    "queried_author": "Yejin Choi",
+    "queried_author": "Mohammad Shoeybi",
     "matching_authors": [
-      "Yejin Choi",
+      "Mohammad Shoeybi",
       "Mostofa Patwary",
-      "Mohammad Shoeybi"
+      "Yejin Choi"
     ]
   },
   {
@@ -11493,6 +12007,25 @@
     ]
   },
   {
+    "title": "Rethinking Human Preference Evaluation of LLM Rationales",
+    "authors": [
+      "Ziang Li",
+      "Manasi Ganti",
+      "Zixian Ma",
+      "Helena Vasconcelos",
+      "Qijia He",
+      "Ranjay Krishna"
+    ],
+    "summary": "Large language models (LLMs) often generate natural language rationales -- free-form explanations that help improve performance on complex reasoning tasks and enhance interpretability for human users. However, evaluating these rationales remains challenging. While recent work has relied on binary preference judgments from humans or LLM judges, such evaluations are often opaque and coarse-grained, offering limited insight into what makes one rationale better than another. In this work, we rethink preference evaluation for LLM-generated rationales by asking: (1) What attributes define good rationales? (2) Can human preferences be explained by these attributes? (3) Can attribute-based evaluation overcome the limitations of binary comparisons? We identify a set of key rationale attributes from prior literature and assess them using automatic metrics, LLM judgments, and human annotations. We then analyze two standard human preference datasets MT Bench and Chatbot Arena using SHAP to identify which attributes best explain human preference outcomes. Finally, we re-evaluate model-generated rationales using attribute-specific ELO scores, revealing more nuanced model comparisons and insights. Our findings suggest that fine-grained attribute evaluations can better characterize rationale quality and guide future research toward more interpretable and reliable evaluation practices.",
+    "published": "Sep 14",
+    "pdf_url": "https://arxiv.org/pdf/2509.11026v1",
+    "arxiv_url": "http://arxiv.org/abs/2509.11026v1",
+    "queried_author": "Ranjay Krishna",
+    "matching_authors": [
+      "Ranjay Krishna"
+    ]
+  },
+  {
     "title": "FRIT: Using Causal Importance to Improve Chain-of-Thought Faithfulness",
     "authors": [
       "Anand Swaroop",
@@ -11764,6 +12297,28 @@
     ]
   },
   {
+    "title": "Reinforced Visual Perception with Tools",
+    "authors": [
+      "Zetong Zhou",
+      "Dongping Chen",
+      "Zixian Ma",
+      "Zhihan Hu",
+      "Mingyang Fu",
+      "Sinan Wang",
+      "Yao Wan",
+      "Zhou Zhao",
+      "Ranjay Krishna"
+    ],
+    "summary": "Visual reasoning, a cornerstone of human intelligence, encompasses complex perceptual and logical processes essential for solving diverse visual problems. While advances in computer vision have produced powerful models for various perceptual tasks, leveraging these for general visual reasoning remains challenging. Prior work demonstrates that augmenting LLMs with vision models via supervised finetuning improves performance, but faces key limitations such as expensive data generation, reliance on careful data filtering, and poor generalization. To address these issues, we propose ReVPT to enhance multi-modal LLMs' abilities to reason about and use visual tools through reinforcement learning. We introduce a novel RL algorithm based on GRPO, designed to train models to reason with a suite of four visual tools. Through extensive experiments, we show that our method achieves state-of-the-art performance on several perception-heavy benchmarks, including SAT, CV-Bench, BLINK and MMStar, significantly outperforming the supervised and text-based RL finetuning baselines. Notably, Our ReVPT-3B and ReVPT-7B outperform the instruct models by 9.03% and 9.44% on CV-Bench. Finally, we bring to the community new insights on RL-based visual tool-usage through extensive ablations. Our code is available at https://github.com/ls-kelvin/REVPT.",
+    "published": "Sep 01",
+    "pdf_url": "https://arxiv.org/pdf/2509.01656v1",
+    "arxiv_url": "http://arxiv.org/abs/2509.01656v1",
+    "queried_author": "Ranjay Krishna",
+    "matching_authors": [
+      "Ranjay Krishna"
+    ]
+  },
+  {
     "title": "Statutory Construction and Interpretation for Artificial Intelligence",
     "authors": [
       "Luxi He",
@@ -11967,857 +12522,6 @@
     "queried_author": "Neel Nanda",
     "matching_authors": [
       "Neel Nanda"
-    ]
-  },
-  {
-    "title": "UQ: Assessing Language Models on Unsolved Questions",
-    "authors": [
-      "Fan Nie",
-      "Ken Ziyu Liu",
-      "Zihao Wang",
-      "Rui Sun",
-      "Wei Liu",
-      "Weijia Shi",
-      "Huaxiu Yao",
-      "Linjun Zhang",
-      "Andrew Y. Ng",
-      "James Zou",
-      "Sanmi Koyejo",
-      "Yejin Choi",
-      "Percy Liang",
-      "Niklas Muennighoff"
-    ],
-    "summary": "Benchmarks shape progress in AI research. A useful benchmark should be both difficult and realistic: questions should challenge frontier models while also reflecting real-world usage. Yet, current paradigms face a difficulty-realism tension: exam-style benchmarks are often made artificially difficult with limited real-world value, while benchmarks based on real user interaction often skew toward easy, high-frequency problems. In this work, we explore a radically different paradigm: assessing models on unsolved questions. Rather than a static benchmark scored once, we curate unsolved questions and evaluate models asynchronously over time with validator-assisted screening and community verification. We introduce UQ, a testbed of 500 challenging, diverse questions sourced from Stack Exchange, spanning topics from CS theory and math to sci-fi and history, probing capabilities including reasoning, factuality, and browsing. UQ is difficult and realistic by construction: unsolved questions are often hard and naturally arise when humans seek answers, thus solving them yields direct real-world value. Our contributions are threefold: (1) UQ-Dataset and its collection pipeline combining rule-based filters, LLM judges, and human review to ensure question quality (e.g., well-defined and difficult); (2) UQ-Validators, compound validation strategies that leverage the generator-validator gap to provide evaluation signals and pre-screen candidate solutions for human review; and (3) UQ-Platform, an open platform where experts collectively verify questions and solutions. The top model passes ...",
-    "published": "Aug 25",
-    "pdf_url": "https://arxiv.org/pdf/2508.17580v1",
-    "arxiv_url": "http://arxiv.org/abs/2508.17580v1",
-    "queried_author": "Niklas Muennighoff",
-    "matching_authors": [
-      "Niklas Muennighoff",
-      "Percy Liang",
-      "Sanmi Koyejo",
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Towards Safeguarding LLM Fine-tuning APIs against Cipher Attacks",
-    "authors": [
-      "Jack Youstra",
-      "Mohammed Mahfoud",
-      "Yang Yan",
-      "Henry Sleight",
-      "Ethan Perez",
-      "Mrinank Sharma"
-    ],
-    "summary": "Large language model fine-tuning APIs enable widespread model customization, yet pose significant safety risks. Recent work shows that adversaries can exploit access to these APIs to bypass model safety mechanisms by encoding harmful content in seemingly harmless fine-tuning data, evading both human monitoring and standard content filters. We formalize the fine-tuning API defense problem, and introduce the Cipher Fine-tuning Robustness benchmark (CIFR), a benchmark for evaluating defense strategies' ability to retain model safety in the face of cipher-enabled attackers while achieving the desired level of fine-tuning functionality. We include diverse cipher encodings and families, with some kept exclusively in the test set to evaluate for generalization across unseen ciphers and cipher families. We then evaluate different defenses on the benchmark and train probe monitors on model internal activations from multiple fine-tunes. We show that probe monitors achieve over 99% detection accuracy, generalize to unseen cipher variants and families, and compare favorably to state-of-the-art monitoring approaches. We open-source CIFR and the code to reproduce our experiments to facilitate further research in this critical area. Code and data are available online https://github.com/JackYoustra/safe-finetuning-api",
-    "published": "Aug 23",
-    "pdf_url": "https://arxiv.org/pdf/2508.17158v1",
-    "arxiv_url": "http://arxiv.org/abs/2508.17158v1",
-    "queried_author": "Ethan Perez",
-    "matching_authors": [
-      "Ethan Perez"
-    ]
-  },
-  {
-    "title": "Zero-shot Multimodal Document Retrieval via Cross-modal Question Generation",
-    "authors": [
-      "Yejin Choi",
-      "Jaewoo Park",
-      "Janghan Yoon",
-      "Saejin Kim",
-      "Jaehyun Jeon",
-      "Youngjae Yu"
-    ],
-    "summary": "Rapid advances in Multimodal Large Language Models (MLLMs) have expanded information retrieval beyond purely textual inputs, enabling retrieval from complex real world documents that combine text and visuals. However, most documents are private either owned by individuals or confined within corporate silos and current retrievers struggle when faced with unseen domains or languages. To address this gap, we introduce PREMIR, a simple yet effective framework that leverages the broad knowledge of an MLLM to generate cross modal pre questions (preQs) before retrieval. Unlike earlier multimodal retrievers that compare embeddings in a single vector space, PREMIR leverages preQs from multiple complementary modalities to expand the scope of matching to the token level. Experiments show that PREMIR achieves state of the art performance on out of distribution benchmarks, including closed domain and multilingual settings, outperforming strong baselines across all retrieval metrics. We confirm the contribution of each component through in depth ablation studies, and qualitative analyses of the generated preQs further highlight the model's robustness in real world settings.",
-    "published": "Aug 23",
-    "pdf_url": "https://arxiv.org/pdf/2508.17079v1",
-    "arxiv_url": "http://arxiv.org/abs/2508.17079v1",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Nemotron-CC-Math: A 133 Billion-Token-Scale High Quality Math Pretraining Dataset",
-    "authors": [
-      "Rabeeh Karimi Mahabadi",
-      "Sanjeev Satheesh",
-      "Shrimai Prabhumoye",
-      "Mostofa Patwary",
-      "Mohammad Shoeybi",
-      "Bryan Catanzaro"
-    ],
-    "summary": "Pretraining large language models (LLMs) on high-quality, structured data such as mathematics and code substantially enhances reasoning capabilities. However, existing math-focused datasets built from Common Crawl suffer from degraded quality due to brittle extraction heuristics, lossy HTML-to-text conversion, and the failure to reliably preserve mathematical structure. In this work, we introduce Nemotron-CC-Math, a large-scale, high-quality mathematical corpus constructed from Common Crawl using a novel, domain-agnostic pipeline specifically designed for robust scientific text extraction.\n  Unlike previous efforts, our pipeline recovers math across various formats (e.g., MathJax, KaTeX, MathML) by leveraging layout-aware rendering with lynx and a targeted LLM-based cleaning stage. This approach preserves the structural integrity of equations and code blocks while removing boilerplate, standardizing notation into LaTeX representation, and correcting inconsistencies.\n  We collected a large, high-quality math corpus, namely Nemotron-CC-Math-3+ (133B tokens) and Nemotron-CC-Math-4+ (52B tokens). Notably, Nemotron-CC-Math-4+ not only surpasses all prior open math datasets-including MegaMath, FineMath, and OpenWebMath-but also contains 5.5 times more tokens than FineMath-4+, which was previously the highest-quality math pretraining dataset. When used to pretrain a Nemotron-T 8B model, our corpus yields +4.8 to +12.6 gains on MATH and +4.6 to +14.3 gains on MBPP+ over strong baselines, while also improving general-domain performance on MMLU and MMLU-Stem.\n  We present the first p...",
-    "published": "Aug 20",
-    "pdf_url": "https://arxiv.org/pdf/2508.15096v1",
-    "arxiv_url": "http://arxiv.org/abs/2508.15096v1",
-    "queried_author": "Mostofa Patwary",
-    "matching_authors": [
-      "Mostofa Patwary",
-      "Mohammad Shoeybi"
-    ]
-  },
-  {
-    "title": "NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model",
-    "authors": [
-      "NVIDIA",
-      ":",
-      "Aarti Basant",
-      "Abhijit Khairnar",
-      "Abhijit Paithankar",
-      "Abhinav Khattar",
-      "Adithya Renduchintala",
-      "Aditya Malte",
-      "Akhiad Bercovich",
-      "Akshay Hazare",
-      "Alejandra Rico",
-      "Aleksander Ficek",
-      "Alex Kondratenko",
-      "Alex Shaposhnikov",
-      "Alexander Bukharin",
-      "Ali Taghibakhshi",
-      "Amelia Barton",
-      "Ameya Sunil Mahabaleshwarkar",
-      "Amy Shen",
-      "Andrew Tao",
-      "Ann Guan",
-      "Anna Shors",
-      "Anubhav Mandarwal",
-      "Arham Mehta",
-      "Arun Venkatesan",
-      "Ashton Sharabiani",
-      "Ashwath Aithal",
-      "Ashwin Poojary",
-      "Ayush Dattagupta",
-      "Balaram Buddharaju",
-      "Banghua Zhu",
-      "Barnaby Simkin",
-      "Bilal Kartal",
-      "Bita Darvish Rouhani",
-      "Bobby Chen",
-      "Boris Ginsburg",
-      "Brandon Norick",
-      "Brian Yu",
-      "Bryan Catanzaro",
-      "Charles Wang",
-      "Charlie Truong",
-      "Chetan Mungekar",
-      "Chintan Patel",
-      "Chris Alexiuk",
-      "Christian Munley",
-      "Christopher Parisien",
-      "Dan Su",
-      "Daniel Afrimi",
-      "Daniel Korzekwa",
-      "Daniel Rohrer",
-      "Daria Gitman",
-      "David Mosallanezhad",
-      "Deepak Narayanan",
-      "Dima Rekesh",
-      "Dina Yared",
-      "Dmytro Pykhtar",
-      "Dong Ahn",
-      "Duncan Riach",
-      "Eileen Long",
-      "Elliott Ning",
-      "Eric Chung",
-      "Erick Galinkin",
-      "Evelina Bakhturina",
-      "Gargi Prasad",
-      "Gerald Shen",
-      "Haifeng Qian",
-      "Haim Elisha",
-      "Harsh Sharma",
-      "Hayley Ross",
-      "Helen Ngo",
-      "Herman Sahota",
-      "Hexin Wang",
-      "Hoo Chang Shin",
-      "Hua Huang",
-      "Iain Cunningham",
-      "Igor Gitman",
-      "Ivan Moshkov",
-      "Jaehun Jung",
-      "Jan Kautz",
-      "Jane Polak Scowcroft",
-      "Jared Casper",
-      "Jian Zhang",
-      "Jiaqi Zeng",
-      "Jimmy Zhang",
-      "Jinze Xue",
-      "Jocelyn Huang",
-      "Joey Conway",
-      "John Kamalu",
-      "Jonathan Cohen",
-      "Joseph Jennings",
-      "Julien Veron Vialard",
-      "Junkeun Yi",
-      "Jupinder Parmar",
-      "Kari Briski",
-      "Katherine Cheung",
-      "Katherine Luna",
-      "Keith Wyss",
-      "Keshav Santhanam",
-      "Kezhi Kong",
-      "Krzysztof Pawelec",
-      "Kumar Anik",
-      "Kunlun Li",
-      "Kushan Ahmadian",
-      "Lawrence McAfee",
-      "Laya Sleiman",
-      "Leon Derczynski",
-      "Luis Vega",
-      "Maer Rodrigues de Melo",
-      "Makesh Narsimhan Sreedhar",
-      "Marcin Chochowski",
-      "Mark Cai",
-      "Markus Kliegl",
-      "Marta Stepniewska-Dziubinska",
-      "Matvei Novikov",
-      "Mehrzad Samadi",
-      "Meredith Price",
-      "Meriem Boubdir",
-      "Michael Boone",
-      "Michael Evans",
-      "Michal Bien",
-      "Michal Zawalski",
-      "Miguel Martinez",
-      "Mike Chrzanowski",
-      "Mohammad Shoeybi",
-      "Mostofa Patwary",
-      "Namit Dhameja",
-      "Nave Assaf",
-      "Negar Habibi",
-      "Nidhi Bhatia",
-      "Nikki Pope",
-      "Nima Tajbakhsh",
-      "Nirmal Kumar Juluru",
-      "Oleg Rybakov",
-      "Oleksii Hrinchuk",
-      "Oleksii Kuchaiev",
-      "Oluwatobi Olabiyi",
-      "Pablo Ribalta",
-      "Padmavathy Subramanian",
-      "Parth Chadha",
-      "Pavlo Molchanov",
-      "Peter Dykas",
-      "Peter Jin",
-      "Piotr Bialecki",
-      "Piotr Januszewski",
-      "Pradeep Thalasta",
-      "Prashant Gaikwad",
-      "Prasoon Varshney",
-      "Pritam Gundecha",
-      "Przemek Tredak",
-      "Rabeeh Karimi Mahabadi",
-      "Rajen Patel",
-      "Ran El-Yaniv",
-      "Ranjit Rajan",
-      "Ria Cheruvu",
-      "Rima Shahbazyan",
-      "Ritika Borkar",
-      "Ritu Gala",
-      "Roger Waleffe",
-      "Ruoxi Zhang",
-      "Russell J. Hewett",
-      "Ryan Prenger",
-      "Sahil Jain",
-      "Samuel Kriman",
-      "Sanjeev Satheesh",
-      "Saori Kaji",
-      "Sarah Yurick",
-      "Saurav Muralidharan",
-      "Sean Narenthiran",
-      "Seonmyeong Bak",
-      "Sepehr Sameni",
-      "Seungju Han",
-      "Shanmugam Ramasamy",
-      "Shaona Ghosh",
-      "Sharath Turuvekere Sreenivas",
-      "Shelby Thomas",
-      "Shizhe Diao",
-      "Shreya Gopal",
-      "Shrimai Prabhumoye",
-      "Shubham Toshniwal",
-      "Shuoyang Ding",
-      "Siddharth Singh",
-      "Siddhartha Jain",
-      "Somshubra Majumdar",
-      "Soumye Singhal",
-      "Stefania Alborghetti",
-      "Syeda Nahida Akter",
-      "Terry Kong",
-      "Tim Moon",
-      "Tomasz Hliwiak",
-      "Tomer Asida",
-      "Tony Wang",
-      "Tugrul Konuk",
-      "Twinkle Vashishth",
-      "Tyler Poon",
-      "Udi Karpas",
-      "Vahid Noroozi",
-      "Venkat Srinivasan",
-      "Vijay Korthikanti",
-      "Vikram Fugro",
-      "Vineeth Kalluru",
-      "Vitaly Kurin",
-      "Vitaly Lavrukhin",
-      "Wasi Uddin Ahmad",
-      "Wei Du",
-      "Wonmin Byeon",
-      "Ximing Lu",
-      "Xin Dong",
-      "Yashaswi Karnati",
-      "Yejin Choi",
-      "Yian Zhang",
-      "Ying Lin",
-      "Yonggan Fu",
-      "Yoshi Suhara",
-      "Zhen Dong",
-      "Zhiyu Li",
-      "Zhongbo Zhu",
-      "Zijia Chen"
-    ],
-    "summary": "We introduce Nemotron-Nano-9B-v2, a hybrid Mamba-Transformer language model designed to increase throughput for reasoning workloads while achieving state-of-the-art accuracy compared to similarly-sized models. Nemotron-Nano-9B-v2 builds on the Nemotron-H architecture, in which the majority of the self-attention layers in the common Transformer architecture are replaced with Mamba-2 layers, to achieve improved inference speed when generating the long thinking traces needed for reasoning. We create Nemotron-Nano-9B-v2 by first pre-training a 12-billion-parameter model (Nemotron-Nano-12B-v2-Base) on 20 trillion tokens using an FP8 training recipe. After aligning Nemotron-Nano-12B-v2-Base, we employ the Minitron strategy to compress and distill the model with the goal of enabling inference on up to 128k tokens on a single NVIDIA A10G GPU (22GiB of memory, bfloat16 precision). Compared to existing similarly-sized models (e.g., Qwen3-8B), we show that Nemotron-Nano-9B-v2 achieves on-par or better accuracy on reasoning benchmarks while achieving up to 6x higher inference throughput in reasoning settings like 8k input and 16k output tokens. We are releasing Nemotron-Nano-9B-v2, Nemotron-Nano12B-v2-Base, and Nemotron-Nano-9B-v2-Base checkpoints along with the majority of our pre- and post-training datasets on Hugging Face.",
-    "published": "Aug 20",
-    "pdf_url": "https://arxiv.org/pdf/2508.14444v4",
-    "arxiv_url": "http://arxiv.org/abs/2508.14444v4",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi",
-      "Mostofa Patwary",
-      "Mohammad Shoeybi"
-    ]
-  },
-  {
-    "title": "Signal and Noise: A Framework for Reducing Uncertainty in Language Model Evaluation",
-    "authors": [
-      "David Heineman",
-      "Valentin Hofmann",
-      "Ian Magnusson",
-      "Yuling Gu",
-      "Noah A. Smith",
-      "Hannaneh Hajishirzi",
-      "Kyle Lo",
-      "Jesse Dodge"
-    ],
-    "summary": "Developing large language models is expensive and involves making decisions with small experiments, typically by evaluating on large, multi-task evaluation suites. In this work, we analyze specific properties which make a benchmark more reliable for such decisions, and interventions to design higher-quality evaluation benchmarks. We introduce two key metrics that show differences in current benchmarks: signal, a benchmark's ability to separate better models from worse models, and noise, a benchmark's sensitivity to random variability between training steps. We demonstrate that benchmarks with a better signal-to-noise ratio are more reliable when making decisions at small scale, and those with less noise have lower scaling law prediction error. These results suggest that improving signal or noise will lead to more useful benchmarks, so we introduce three interventions designed to directly affect signal or noise. For example, we propose that switching to a metric that has better signal and noise (e.g., perplexity rather than accuracy) leads to better reliability and improved scaling law error. We also find that filtering noisy subtasks, to improve an aggregate signal-to-noise ratio, leads to more reliable multi-task evaluations. We also find that averaging the output of a model's intermediate checkpoints to reduce noise leads to consistent improvements. We conclude by recommending that those creating new benchmarks, or selecting which existing benchmarks to use, aim for high signal and low noise. We use 30 benchmarks for these experiments, and 375 open-weight language models ...",
-    "published": "Aug 18",
-    "pdf_url": "https://arxiv.org/pdf/2508.13144v1",
-    "arxiv_url": "http://arxiv.org/abs/2508.13144v1",
-    "queried_author": "Hannaneh Hajishirzi",
-    "matching_authors": [
-      "Hannaneh Hajishirzi",
-      "Ian Magnusson",
-      "Jesse Dodge",
-      "Kyle Lo",
-      "Noah A. Smith",
-      "Valentin Hofmann"
-    ]
-  },
-  {
-    "title": "OptimalThinkingBench: Evaluating Over and Underthinking in LLMs",
-    "authors": [
-      "Pranjal Aggarwal",
-      "Seungone Kim",
-      "Jack Lanchantin",
-      "Sean Welleck",
-      "Jason Weston",
-      "Ilia Kulikov",
-      "Swarnadeep Saha"
-    ],
-    "summary": "Thinking LLMs solve complex tasks at the expense of increased compute and overthinking on simpler problems, while non-thinking LLMs are faster and cheaper but underthink on harder reasoning problems. This has led to the development of separate thinking and non-thinking LLM variants, leaving the onus of selecting the optimal model for each query on the end user. We introduce OptimalThinkingBench, a unified benchmark that jointly evaluates overthinking and underthinking in LLMs and also encourages the development of optimally-thinking models that balance performance and efficiency. Our benchmark comprises two sub-benchmarks: OverthinkingBench, featuring simple math and general queries in 72 domains, and UnderthinkingBench, containing 11 challenging reasoning tasks along with harder math problems. Using novel thinking-adjusted accuracy metrics, we extensively evaluate 33 different thinking and non-thinking models and show that no model is able to optimally think on our benchmark. Thinking models often overthink for hundreds of tokens on the simplest user queries without improving performance. In contrast, large non-thinking models underthink, often falling short of much smaller thinking models. We further explore several methods to encourage optimal thinking, but find that these approaches often improve on one sub-benchmark at the expense of the other, highlighting the need for better unified and optimal models in the future.",
-    "published": "Aug 18",
-    "pdf_url": "https://arxiv.org/pdf/2508.13141v2",
-    "arxiv_url": "http://arxiv.org/abs/2508.13141v2",
-    "queried_author": "Sean Welleck",
-    "matching_authors": [
-      "Sean Welleck",
-      "Seungone Kim"
-    ]
-  },
-  {
-    "title": "Analyzing Information Sharing and Coordination in Multi-Agent Planning",
-    "authors": [
-      "Tianyue Ou",
-      "Saujas Vaduguru",
-      "Daniel Fried"
-    ],
-    "summary": "Multi-agent systems (MASs) have pushed the boundaries of large language model (LLM) agents in domains such as web research and software engineering. However, long-horizon, multi-constraint planning tasks involve conditioning on detailed information and satisfying complex interdependent constraints, which can pose a challenge for these systems. In this study, we construct an LLM-based MAS for a travel planning task which is representative of these challenges. We evaluate the impact of a notebook to facilitate information sharing, and evaluate an orchestrator agent to improve coordination in free form conversation between agents. We find that the notebook reduces errors due to hallucinated details by 18%, while an orchestrator directs the MAS to focus on and further reduce errors by up to 13.5% within focused sub-areas. Combining both mechanisms achieves a 25% final pass rate on the TravelPlanner benchmark, a 17.5% absolute improvement over the single-agent baseline's 7.5% pass rate. These results highlight the potential of structured information sharing and reflective orchestration as key components in MASs for long horizon planning with LLMs.",
-    "published": "Aug 18",
-    "pdf_url": "https://arxiv.org/pdf/2508.12981v1",
-    "arxiv_url": "http://arxiv.org/abs/2508.12981v1",
-    "queried_author": "Daniel Fried",
-    "matching_authors": [
-      "Daniel Fried"
-    ]
-  },
-  {
-    "title": "AI Behavioral Science",
-    "authors": [
-      "Matthew O. Jackson",
-      "Qiaozhu Me",
-      "Stephanie W. Wang",
-      "Yutong Xie",
-      "Walter Yuan",
-      "Seth Benzell",
-      "Erik Brynjolfsson",
-      "Colin F. Camerer",
-      "James Evans",
-      "Brian Jabarian",
-      "Jon Kleinberg",
-      "Juanjuan Meng",
-      "Sendhil Mullainathan",
-      "Asuman Ozdaglar",
-      "Thomas Pfeiffer",
-      "Moshe Tennenholtz",
-      "Robb Willer",
-      "Diyi Yang",
-      "Teng Ye"
-    ],
-    "summary": "We discuss the three main areas comprising the new and emerging field of \"AI Behavioral Science\". This includes not only how AI can enhance research in the behavioral sciences, but also how the behavioral sciences can be used to study and better design AI and to understand how the world will change as AI and humans interact in increasingly layered and complex ways.",
-    "published": "Aug 17",
-    "pdf_url": "https://arxiv.org/pdf/2509.13323v1",
-    "arxiv_url": "http://arxiv.org/abs/2509.13323v1",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang"
-    ]
-  },
-  {
-    "title": "Searching for Privacy Risks in LLM Agents via Simulation",
-    "authors": [
-      "Yanzhe Zhang",
-      "Diyi Yang"
-    ],
-    "summary": "The widespread deployment of LLM-based agents is likely to introduce a critical privacy threat: malicious agents that proactively engage others in multi-turn interactions to extract sensitive information. However, the evolving nature of such dynamic dialogues makes it challenging to anticipate emerging vulnerabilities and design effective defenses. To tackle this problem, we present a search-based framework that alternates between improving attack and defense strategies through the simulation of privacy-critical agent interactions. Specifically, we employ LLMs as optimizers to analyze simulation trajectories and iteratively propose new agent instructions. To explore the strategy space more efficiently, we further utilize parallel search with multiple threads and cross-thread propagation. Through this process, we find that attack strategies escalate from direct requests to sophisticated tactics, such as impersonation and consent forgery, while defenses evolve from simple rule-based constraints to robust identity-verification state machines. The discovered attacks and defenses transfer across diverse scenarios and backbone models, demonstrating strong practical utility for building privacy-aware agents.",
-    "published": "Aug 14",
-    "pdf_url": "https://arxiv.org/pdf/2508.10880v2",
-    "arxiv_url": "http://arxiv.org/abs/2508.10880v2",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang"
-    ]
-  },
-  {
-    "title": "The Surprising Effectiveness of Membership Inference with Simple N-Gram Coverage",
-    "authors": [
-      "Skyler Hallinan",
-      "Jaehun Jung",
-      "Melanie Sclar",
-      "Ximing Lu",
-      "Abhilasha Ravichander",
-      "Sahana Ramnath",
-      "Yejin Choi",
-      "Sai Praneeth Karimireddy",
-      "Niloofar Mireshghallah",
-      "Xiang Ren"
-    ],
-    "summary": "Membership inference attacks serves as useful tool for fair use of language models, such as detecting potential copyright infringement and auditing data leakage. However, many current state-of-the-art attacks require access to models' hidden states or probability distribution, which prevents investigation into more widely-used, API-access only models like GPT-4. In this work, we introduce N-Gram Coverage Attack, a membership inference attack that relies solely on text outputs from the target model, enabling attacks on completely black-box models. We leverage the observation that models are more likely to memorize and subsequently generate text patterns that were commonly observed in their training data. Specifically, to make a prediction on a candidate member, N-Gram Coverage Attack first obtains multiple model generations conditioned on a prefix of the candidate. It then uses n-gram overlap metrics to compute and aggregate the similarities of these outputs with the ground truth suffix; high similarities indicate likely membership. We first demonstrate on a diverse set of existing benchmarks that N-Gram Coverage Attack outperforms other black-box methods while also impressively achieving comparable or even better performance to state-of-the-art white-box attacks - despite having access to only text outputs. Interestingly, we find that the success rate of our method scales with the attack compute budget - as we increase the number of sequences generated from the target model conditioned on the prefix, attack performance tends to improve. Having verified the accuracy of our m...",
-    "published": "Aug 13",
-    "pdf_url": "https://arxiv.org/pdf/2508.09603v1",
-    "arxiv_url": "http://arxiv.org/abs/2508.09603v1",
-    "queried_author": "Niloofar Mireshghallah",
-    "matching_authors": [
-      "Niloofar Mireshghallah",
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "OpenCUA: Open Foundations for Computer-Use Agents",
-    "authors": [
-      "Xinyuan Wang",
-      "Bowen Wang",
-      "Dunjie Lu",
-      "Junlin Yang",
-      "Tianbao Xie",
-      "Junli Wang",
-      "Jiaqi Deng",
-      "Xiaole Guo",
-      "Yiheng Xu",
-      "Chen Henry Wu",
-      "Zhennan Shen",
-      "Zhuokai Li",
-      "Ryan Li",
-      "Xiaochuan Li",
-      "Junda Chen",
-      "Boyuan Zheng",
-      "Peihang Li",
-      "Fangyu Lei",
-      "Ruisheng Cao",
-      "Yeqiao Fu",
-      "Dongchan Shin",
-      "Martin Shin",
-      "Jiarui Hu",
-      "Yuyan Wang",
-      "Jixuan Chen",
-      "Yuxiao Ye",
-      "Danyang Zhang",
-      "Dikang Du",
-      "Hao Hu",
-      "Huarong Chen",
-      "Zaida Zhou",
-      "Haotian Yao",
-      "Ziwei Chen",
-      "Qizheng Gu",
-      "Yipu Wang",
-      "Heng Wang",
-      "Diyi Yang",
-      "Victor Zhong",
-      "Flood Sung",
-      "Y. Charles",
-      "Zhilin Yang",
-      "Tao Yu"
-    ],
-    "summary": "Vision-language models have demonstrated impressive capabilities as computer-use agents (CUAs) capable of automating diverse computer tasks. As their commercial potential grows, critical details of the most capable CUA systems remain closed. As these agents will increasingly mediate digital interactions and execute consequential decisions on our behalf, the research community needs access to open CUA frameworks to study their capabilities, limitations, and risks. To bridge this gap, we propose OpenCUA, a comprehensive open-source framework for scaling CUA data and foundation models. Our framework consists of: (1) an annotation infrastructure that seamlessly captures human computer-use demonstrations; (2) AgentNet, the first large-scale computer-use task dataset spanning 3 operating systems and 200+ applications and websites; (3) a scalable pipeline that transforms demonstrations into state-action pairs with reflective long Chain-of-Thought reasoning that sustain robust performance gains as data scales. Our end-to-end agent models demonstrate strong performance across CUA benchmarks. In particular, OpenCUA-72B achieves an average success rate of 45.0% on OSWorld-Verified, establishing a new state-of-the-art (SOTA) among open-source models. Further analysis confirms that our approach generalizes well across domains and benefits significantly from increased test-time computation. We release our annotation tool, datasets, code, and models to build open foundations for further CUA research.",
-    "published": "Aug 12",
-    "pdf_url": "https://arxiv.org/pdf/2508.09123v3",
-    "arxiv_url": "http://arxiv.org/abs/2508.09123v3",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang"
-    ]
-  },
-  {
-    "title": "OverFill: Two-Stage Models for Efficient Language Model Decoding",
-    "authors": [
-      "Woojeong Kim",
-      "Junxiong Wang",
-      "Jing Nathan Yan",
-      "Mohamed Abdelfattah",
-      "Alexander M. Rush"
-    ],
-    "summary": "Large language models (LLMs) excel across diverse tasks but face significant deployment challenges due to high inference costs. LLM inference comprises prefill (compute-bound) and decode (memory-bound) stages, with decode dominating latency particularly for long sequences. Current decoder-only models handle both stages uniformly, despite their distinct computational profiles. We propose OverFill, which decouples these stages to optimize accuracy-efficiency tradeoffs. OverFill begins with a full model for prefill, processing system and user inputs in parallel. It then switches to a dense pruned model, while generating tokens sequentially. Leveraging more compute during prefill, OverFill improves generation quality with minimal latency overhead. Our 3B-to-1B OverFill configuration outperforms 1B pruned models by 83.2%, while the 8B-to-3B configuration improves over 3B pruned models by 79.2% on average across standard benchmarks. OverFill matches the performance of same-sized models trained from scratch, while using significantly less training data. Our code is available at https://github.com/friendshipkim/overfill.",
-    "published": "Aug 11",
-    "pdf_url": "https://arxiv.org/pdf/2508.08446v1",
-    "arxiv_url": "http://arxiv.org/abs/2508.08446v1",
-    "queried_author": "Alexander M Rush",
-    "matching_authors": [
-      "Alexander M Rush",
-      "Alexander M. Rush"
-    ]
-  },
-  {
-    "title": "LL3M: Large Language 3D Modelers",
-    "authors": [
-      "Sining Lu",
-      "Guan Chen",
-      "Nam Anh Dinh",
-      "Itai Lang",
-      "Ari Holtzman",
-      "Rana Hanocka"
-    ],
-    "summary": "We present LL3M, a multi-agent system that leverages pretrained large language models (LLMs) to generate 3D assets by writing interpretable Python code in Blender. We break away from the typical generative approach that learns from a collection of 3D data. Instead, we reformulate shape generation as a code-writing task, enabling greater modularity, editability, and integration with artist workflows. Given a text prompt, LL3M coordinates a team of specialized LLM agents to plan, retrieve, write, debug, and refine Blender scripts that generate and edit geometry and appearance. The generated code works as a high-level, interpretable, human-readable, well-documented representation of scenes and objects, making full use of sophisticated Blender constructs (e.g. B-meshes, geometry modifiers, shader nodes) for diverse, unconstrained shapes, materials, and scenes. This code presents many avenues for further agent and human editing and experimentation via code tweaks or procedural parameters. This medium naturally enables a co-creative loop in our system: agents can automatically self-critique using code and visuals, while iterative user instructions provide an intuitive way to refine assets. A shared code context across agents enables awareness of previous attempts, and a retrieval-augmented generation knowledge base built from Blender API documentation, BlenderRAG, equips agents with examples, types, and functions empowering advanced modeling operations and code correctness. We demonstrate the effectiveness of LL3M across diverse shape categories, style and material edits, and use...",
-    "published": "Aug 11",
-    "pdf_url": "https://arxiv.org/pdf/2508.08228v1",
-    "arxiv_url": "http://arxiv.org/abs/2508.08228v1",
-    "queried_author": "Ari Holtzman",
-    "matching_authors": [
-      "Ari Holtzman"
-    ]
-  },
-  {
-    "title": "1-2-3 Check: Enhancing Contextual Privacy in LLM via Multi-Agent Reasoning",
-    "authors": [
-      "Wenkai Li",
-      "Liwen Sun",
-      "Zhenxiang Guan",
-      "Xuhui Zhou",
-      "Maarten Sap"
-    ],
-    "summary": "Addressing contextual privacy concerns remains challenging in interactive settings where large language models (LLMs) process information from multiple sources (e.g., summarizing meetings with private and public information). We introduce a multi-agent framework that decomposes privacy reasoning into specialized subtasks (extraction, classification), reducing the information load on any single agent while enabling iterative validation and more reliable adherence to contextual privacy norms. To understand how privacy errors emerge and propagate, we conduct a systematic ablation over information-flow topologies, revealing when and why upstream detection mistakes cascade into downstream leakage. Experiments on the ConfAIde and PrivacyLens benchmark with several open-source and closed-sourced LLMs demonstrate that our best multi-agent configuration substantially reduces private information leakage (\\textbf{18\\%} on ConfAIde and \\textbf{19\\%} on PrivacyLens with GPT-4o) while preserving the fidelity of public content, outperforming single-agent baselines. These results highlight the promise of principled information-flow design in multi-agent systems for contextual privacy with LLMs.",
-    "published": "Aug 11",
-    "pdf_url": "https://arxiv.org/pdf/2508.07667v3",
-    "arxiv_url": "http://arxiv.org/abs/2508.07667v3",
-    "queried_author": "Maarten Sap",
-    "matching_authors": [
-      "Maarten Sap"
-    ]
-  },
-  {
-    "title": "Position: Beyond Sensitive Attributes, ML Fairness Should Quantify Structural Injustice via Social Determinants",
-    "authors": [
-      "Zeyu Tang",
-      "Alex John London",
-      "Atoosa Kasirzadeh",
-      "Sarah Stewart de Ramirez",
-      "Peter Spirtes",
-      "Kun Zhang",
-      "Sanmi Koyejo"
-    ],
-    "summary": "Algorithmic fairness research has largely framed unfairness as discrimination along sensitive attributes. However, this approach limits visibility into unfairness as structural injustice instantiated through social determinants, which are contextual variables that shape attributes and outcomes without pertaining to specific individuals. This position paper argues that the field should quantify structural injustice via social determinants, beyond sensitive attributes. Drawing on cross-disciplinary insights, we argue that prevailing technical paradigms fail to adequately capture unfairness as structural injustice, because contexts are potentially treated as noise to be normalized rather than signal to be audited. We further demonstrate the practical urgency of this shift through a theoretical model of college admissions, a demographic study using U.S. census data, and a high-stakes domain application regarding breast cancer screening within an integrated U.S. healthcare system. Our results indicate that mitigation strategies centered solely on sensitive attributes can introduce new forms of structural injustice. We contend that auditing structural injustice through social determinants must precede mitigation, and call for new technical developments that move beyond sensitive-attribute-centered notions of fairness as non-discrimination.",
-    "published": "Aug 10",
-    "pdf_url": "https://arxiv.org/pdf/2508.08337v2",
-    "arxiv_url": "http://arxiv.org/abs/2508.08337v2",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "Grounding Multilingual Multimodal LLMs With Cultural Knowledge",
-    "authors": [
-      "Jean de Dieu Nyandwi",
-      "Yueqi Song",
-      "Simran Khanuja",
-      "Graham Neubig"
-    ],
-    "summary": "Multimodal Large Language Models excel in high-resource settings, but often misinterpret long-tail cultural entities and underperform in low-resource languages. To address this gap, we propose a data-centric approach that directly grounds MLLMs in cultural knowledge. Leveraging a large scale knowledge graph from Wikidata, we collect images that represent culturally significant entities, and generate synthetic multilingual visual question answering data. The resulting dataset, CulturalGround, comprises 22 million high-quality, culturally-rich VQA pairs spanning 42 countries and 39 languages. We train an open-source MLLM CulturalPangea on CulturalGround, interleaving standard multilingual instruction-tuning data to preserve general abilities. CulturalPangea achieves state-of-the-art performance among open models on various culture-focused multilingual multimodal benchmarks, outperforming prior models by an average of 5.0 without degrading results on mainstream vision-language tasks. Our findings show that our targeted, culturally grounded approach could substantially narrow the cultural gap in MLLMs and offer a practical path towards globally inclusive multimodal systems.",
-    "published": "Aug 10",
-    "pdf_url": "https://arxiv.org/pdf/2508.07414v2",
-    "arxiv_url": "http://arxiv.org/abs/2508.07414v2",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
-    ]
-  },
-  {
-    "title": "Post-training for Efficient Communication via Convention Formation",
-    "authors": [
-      "Yilun Hua",
-      "Evan Wang",
-      "Yoav Artzi"
-    ],
-    "summary": "Humans communicate with increasing efficiency in multi-turn interactions, by adapting their language and forming ad-hoc conventions. In contrast, prior work shows that LLMs do not naturally show this behavior. We develop a post-training process to develop this ability through targeted fine-tuning on heuristically identified demonstrations of convention formation. We evaluate with two new benchmarks focused on this capability. First, we design a focused, cognitively-motivated interaction benchmark that consistently elicits strong convention formation trends in humans. Second, we create a new document-grounded reference completion task that reflects in-the-wild convention formation behavior. Our studies show significantly improved convention formation abilities in post-trained LLMs across the two evaluation methods.",
-    "published": "Aug 08",
-    "pdf_url": "https://arxiv.org/pdf/2508.06482v1",
-    "arxiv_url": "http://arxiv.org/abs/2508.06482v1",
-    "queried_author": "Yoav Artzi",
-    "matching_authors": [
-      "Yoav Artzi"
-    ]
-  },
-  {
-    "title": "Devstral: Fine-tuning Language Models for Coding Agent Applications",
-    "authors": [
-      "Abhinav Rastogi",
-      "Adam Yang",
-      "Albert Q. Jiang",
-      "Alexander H. Liu",
-      "Alexandre Sablayrolles",
-      "Am\u00e9lie H\u00e9liou",
-      "Am\u00e9lie Martin",
-      "Anmol Agarwal",
-      "Andy Ehrenberg",
-      "Andy Lo",
-      "Antoine Roux",
-      "Arthur Darcet",
-      "Arthur Mensch",
-      "Baptiste Bout",
-      "Baptiste Rozi\u00e8re",
-      "Baudouin De Monicault",
-      "Chris Bamford",
-      "Christian Wallenwein",
-      "Christophe Renaudin",
-      "Cl\u00e9mence Lanfranchi",
-      "Cl\u00e9ment Denoix",
-      "Corentin Barreau",
-      "Darius Dabert Devon Mizelle",
-      "Diego de las Casas",
-      "Elliot Chane-Sane",
-      "Emilien Fugier",
-      "Emma Bou Hanna",
-      "Gabrielle Berrada",
-      "Gauthier Delerce",
-      "Gauthier Guinet",
-      "Georgii Novikov",
-      "Graham Neubig",
-      "Guillaume Lample",
-      "Guillaume Martin",
-      "Himanshu Jaju",
-      "Jan Ludziejewski",
-      "Jason Rute",
-      "Jean-Malo Delignon",
-      "JeanHadrien Chabran",
-      "Joachim Studnia",
-      "Joep Barmentlo",
-      "Jonas Amar",
-      "Josselin Somerville Roberts",
-      "Julien Denize",
-      "Karan Saxena",
-      "Karmesh Yadav",
-      "Kartik Khandelwal",
-      "Khyathi Raghavi Chandu",
-      "Kush Jain",
-      "L\u00e9lio Renard Lavaud",
-      "L\u00e9onard Blier",
-      "Lingxiao Zhao",
-      "Louis Martin",
-      "Lucile Saulnier",
-      "Luyu Gao",
-      "Marie Pellat",
-      "Mathilde Guillaumin",
-      "Mathis Felardos",
-      "Matthieu Dinot",
-      "Maxime Darrin",
-      "Maximilian Augustin",
-      "Micka\u00ebl Seznec",
-      "Neha Gupta",
-      "Nikhil Raghuraman",
-      "Olivier Duchenne",
-      "Patricia Wang",
-      "Patrick von Platen",
-      "Patryk Saffer",
-      "Paul Jacob",
-      "Paul Wambergue",
-      "Paula Kurylowicz",
-      "Philom\u00e8ne Chagniot",
-      "Pierre Stock",
-      "Pravesh Agrawal",
-      "R\u00e9mi Delacourt",
-      "Roman Soletskyi",
-      "Romain Sauvestre",
-      "Sagar Vaze",
-      "Sanchit Gandhi",
-      "Sandeep Subramanian",
-      "Shashwat Dalal",
-      "Siddharth Gandhi",
-      "Soham Ghosh",
-      "Srijan Mishra",
-      "Sumukh Aithal",
-      "Szymon Antoniak",
-      "Teven Le Scao",
-      "Thibaut Lavril",
-      "Thibault Schueller",
-      "Thomas Foubert",
-      "Thomas Robert",
-      "Thomas Wang",
-      "Timoth\u00e9e Lacroix",
-      "Tom Bewley",
-      "Valeriia Nemychnikova",
-      "Victor Paltz",
-      "Virgile Richard",
-      "Wen-Ding Li",
-      "William Marshall",
-      "Xingyao Wang",
-      "Xuanyu Zhang",
-      "Yihan Wan",
-      "Yunhao Tang"
-    ],
-    "summary": "We introduce Devstral-Small, a lightweight open source model for code agents with the best performance among models below 100B size. In this technical report, we give an overview of how we design and develop a model and craft specializations in agentic software development. The resulting model, Devstral-Small is a small 24B model, fast and easy to serve. Despite its size, Devstral-Small still attains competitive performance compared to models more than an order of magnitude larger.",
-    "published": "Aug 08",
-    "pdf_url": "https://arxiv.org/pdf/2509.25193v1",
-    "arxiv_url": "http://arxiv.org/abs/2509.25193v1",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
-    ]
-  },
-  {
-    "title": "Let's Measure Information Step-by-Step: LLM-Based Evaluation Beyond Vibes",
-    "authors": [
-      "Zachary Robertson",
-      "Sanmi Koyejo"
-    ],
-    "summary": "We study evaluation of AI systems without ground truth by exploiting a link between strategic gaming and information loss. We analyze which information-theoretic mechanisms resist adversarial manipulation, extending finite-sample bounds to show that bounded f-divergences (e.g., total variation distance) maintain polynomial guarantees under attacks while unbounded measures (e.g., KL divergence) degrade exponentially. To implement these mechanisms, we model the overseer as an agent and characterize incentive-compatible scoring rules as f-mutual information objectives. Under adversarial attacks, TVD-MI maintains effectiveness (area under curve 0.70-0.77) while traditional judge queries are near change (AUC $\\approx$ 0.50), demonstrating that querying the same LLM for information relationships rather than quality judgments provides both theoretical and practical robustness. The mechanisms decompose pairwise evaluations into reliable item-level quality scores without ground truth, addressing a key limitation of traditional peer prediction. We release preregistration and code.",
-    "published": "Aug 07",
-    "pdf_url": "https://arxiv.org/pdf/2508.05469v2",
-    "arxiv_url": "http://arxiv.org/abs/2508.05469v2",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "Parity-Aware Byte-Pair Encoding: Improving Cross-lingual Fairness in Tokenization",
-    "authors": [
-      "Negar Foroutan",
-      "Clara Meister",
-      "Debjit Paul",
-      "Joel Niklaus",
-      "Sina Ahmadi",
-      "Antoine Bosselut",
-      "Rico Sennrich"
-    ],
-    "summary": "Tokenization is the first -- and often least scrutinized -- step of most NLP pipelines. Standard algorithms for learning tokenizers rely on frequency-based objectives, which favor languages dominant in the training data and consequently leave lower-resource languages with tokenizations that are disproportionately longer, morphologically implausible, or even riddled with <UNK> placeholders. This phenomenon ultimately amplifies computational and financial inequalities between users from different language backgrounds. To remedy this, we introduce Parity-aware Byte Pair Encoding (BPE), a variant of the widely-used BPE algorithm. At every merge step, Parity-aware BPE maximizes the compression gain of the currently worst-compressed language, trading a small amount of global compression for cross-lingual parity. We find empirically that Parity-aware BPE leads to more equitable token counts across languages, with negligible impact on global compression rate and no substantial effect on language-model performance in downstream tasks.",
-    "published": "Aug 06",
-    "pdf_url": "https://arxiv.org/pdf/2508.04796v2",
-    "arxiv_url": "http://arxiv.org/abs/2508.04796v2",
-    "queried_author": "Antoine Bosselut",
-    "matching_authors": [
-      "Antoine Bosselut"
-    ]
-  },
-  {
-    "title": "Multi-module GRPO: Composing Policy Gradients and Prompt Optimization for Language Model Programs",
-    "authors": [
-      "Noah Ziems",
-      "Dilara Soylu",
-      "Lakshya A Agrawal",
-      "Isaac Miller",
-      "Liheng Lai",
-      "Chen Qian",
-      "Kaiqiang Song",
-      "Meng Jiang",
-      "Dan Klein",
-      "Matei Zaharia",
-      "Karel D'Oosterlinck",
-      "Christopher Potts",
-      "Omar Khattab"
-    ],
-    "summary": "Group Relative Policy Optimization (GRPO) has proven to be an effective tool for post-training language models (LMs). However, AI systems are increasingly expressed as modular programs that mix together multiple LM calls with distinct prompt templates and other tools, and it is not clear how best to leverage GRPO to improve these systems. We begin to address this challenge by defining mmGRPO, a simple multi-module generalization of GRPO that groups LM calls by module across rollouts and handles variable-length and interrupted trajectories. We find that mmGRPO, composed with automatic prompt optimization, improves accuracy by 11% on average across classification, many-hop search, and privacy-preserving delegation tasks against the post-trained LM, and by 5% against prompt optimization on its own. We open-source mmGRPO in DSPy as the dspy.GRPO optimizer.",
-    "published": "Aug 06",
-    "pdf_url": "https://arxiv.org/pdf/2508.04660v1",
-    "arxiv_url": "http://arxiv.org/abs/2508.04660v1",
-    "queried_author": "Christopher Potts",
-    "matching_authors": [
-      "Christopher Potts",
-      "Omar Khattab"
-    ]
-  },
-  {
-    "title": "Putnam-AXIOM: A Functional and Static Benchmark for Measuring Higher Level Mathematical Reasoning in LLMs",
-    "authors": [
-      "Aryan Gulati",
-      "Brando Miranda",
-      "Eric Chen",
-      "Emily Xia",
-      "Kai Fronsdal",
-      "Bruno Dumont",
-      "Elyas Obbad",
-      "Sanmi Koyejo"
-    ],
-    "summary": "Current mathematical reasoning benchmarks for large language models (LLMs) are approaching saturation, with some achieving > 90% accuracy, and are increasingly compromised by training-set contamination. We introduce Putnam-AXIOM, a benchmark of 522 university-level competition problems drawn from the prestigious William Lowell Putnam Mathematical Competition, and Putnam-AXIOM Variation, an unseen companion set of 100 functional variants generated by programmatically perturbing variables and constants. The variation protocol produces an unlimited stream of equally difficult, unseen instances -- yielding a contamination-resilient test bed. On the Original set, OpenAI's o1-preview -- the strongest evaluated model -- scores 41.9%, but its accuracy drops by 19.6% (46.8% relative decrease) on the paired Variations. The remaining eighteen models show the same downward trend, ten of them with non-overlapping 95% confidence intervals. These gaps suggest memorization and highlight the necessity of dynamic benchmarks. We complement \"boxed\" accuracy with Teacher-Forced Accuracy (TFA), a lightweight metric that directly scores reasoning traces and automates natural language proof evaluations. Putnam-AXIOM therefore provides a rigorous, contamination-resilient evaluation framework for assessing advanced mathematical reasoning of LLMs. Data and evaluation code are publicly available at https://github.com/brando90/putnam-axiom.",
-    "published": "Aug 05",
-    "pdf_url": "https://arxiv.org/pdf/2508.08292v2",
-    "arxiv_url": "http://arxiv.org/abs/2508.08292v2",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "Goedel-Prover-V2: Scaling Formal Theorem Proving with Scaffolded Data Synthesis and Self-Correction",
-    "authors": [
-      "Yong Lin",
-      "Shange Tang",
-      "Bohan Lyu",
-      "Ziran Yang",
-      "Jui-Hui Chung",
-      "Haoyu Zhao",
-      "Lai Jiang",
-      "Yihan Geng",
-      "Jiawei Ge",
-      "Jingruo Sun",
-      "Jiayun Wu",
-      "Jiri Gesi",
-      "Ximing Lu",
-      "David Acuna",
-      "Kaiyu Yang",
-      "Hongzhou Lin",
-      "Yejin Choi",
-      "Danqi Chen",
-      "Sanjeev Arora",
-      "Chi Jin"
-    ],
-    "summary": "We introduce Goedel-Prover-V2, a series of open-source language models that set a new state-of-the-art in automated theorem proving. Built on the standard expert iteration and reinforcement learning pipeline, our approach incorporates three key innovations: (1) Scaffolded data synthesis: We generate synthetic tasks of increasing difficulty to train the model to master increasingly complex theorems; (2) Verifier-guided self-correction: We enable the model to iteratively revise its proofs by leveraging feedback from the Lean compiler; (3) Model averaging: We merge model checkpoints to mitigate the decrease in model output diversity in later stages of training. Our small model, Goedel-Prover-V2-8B, reaches 84.6% pass@32 on MiniF2F and outperforms DeepSeek-Prover-V2-671B under the same metric, despite being 80X smaller. Our flagship model, Goedel-Prover-V2-32B, achieves 88.1% on MiniF2F at pass@32 in standard mode and 90.4% in self-correction mode, outperforming prior SOTA by a large margin. Additionally, our flagship model solves 86 problems on PutnamBench at pass@184, securing the first place among open-source models on the leaderboard, surpassing DeepSeek-Prover-V2-671B's record of solving 47 problems by pass@1024 with a significantly smaller model size and compute budget. At the time of its release (July-August 2025), Goedel-Prover-V2 achieves the strongest overall performance among all open-source theorem provers. It also ranks among the top-performing models--including closed-source systems with publicly reported performance--under a constrained test-time compute budget. ...",
-    "published": "Aug 05",
-    "pdf_url": "https://arxiv.org/pdf/2508.03613v1",
-    "arxiv_url": "http://arxiv.org/abs/2508.03613v1",
-    "queried_author": "Danqi Chen",
-    "matching_authors": [
-      "Danqi Chen",
-      "Yejin Choi"
     ]
   }
 ]
