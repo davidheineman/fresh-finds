@@ -1,5 +1,47 @@
 [
   {
+    "title": "Detecting and Suppressing Reward Hacking with Gradient Fingerprints",
+    "authors": [
+      "Songtao Wang",
+      "Quang Hieu Pham",
+      "Fangcong Yin",
+      "Xinpeng Wang",
+      "Jocelyn Qiaochu Chen",
+      "Greg Durrett",
+      "Xi Ye"
+    ],
+    "summary": "Reinforcement learning with verifiable rewards (RLVR) typically optimizes for outcome rewards without imposing constraints on intermediate reasoning. This leaves training susceptible to reward hacking, where models exploit loopholes (e.g., spurious patterns in training data) in the reward function to achieve high scores without solving the intended task. These reward-hacking behaviors are often implicit, as the intermediate chain-of-thought (CoT) may appear plausible on the surface, limiting the effectiveness of purely text-based monitoring. We propose Gradient Fingerprint (GRIFT), a method for detecting reward hacking using models' internal computations. Given a prompt and a model-generated CoT, GRIFT computes gradients of the CoT conditioned on the prompt and compresses them into a compact representation, which is then used to assess whether the CoT reflects reward hacking behavior. Across verifiable reasoning benchmarks spanning math, code, and logical reasoning, GRIFT substantially outperforms strong baselines, including CoT Monitor and TRACE, achieving over 25% relative improvement in detecting reward hacking behavior. Moreover, integrating GRIFT into the rejection fine-tuning pipeline for reasoning tasks reduces reward hacking and improves performance on the true task objective. Our results highlight a promising direction of leveraging gradient level representations for assessing the quality of CoT reasoning traces. Our code is available at: https://github.com/songtao-x/reward_hack.",
+    "published": "Apr 17",
+    "pdf_url": "https://arxiv.org/pdf/2604.16242v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.16242v1",
+    "queried_author": "Greg Durrett",
+    "matching_authors": [
+      "Greg Durrett"
+    ]
+  },
+  {
+    "title": "Imperfectly Cooperative Human-AI Interactions: Comparing the Impacts of Human and AI Attributes in Simulated and User Studies",
+    "authors": [
+      "Myke C. Cohen",
+      "Mingqian Zheng",
+      "Neel Bhandari",
+      "Hsien-Te Kao",
+      "Xuhui Zhou",
+      "Daniel Nguyen",
+      "Laura Cassani",
+      "Maarten Sap",
+      "Svitlana Volkova"
+    ],
+    "summary": "AI design characteristics and human personality traits each impact the quality and outcomes of human-AI interactions. However, their relative and joint impacts are underexplored in imperfectly cooperative scenarios, where people and AI only have partially aligned goals and objectives. This study compares a purely simulated dataset comprising 2,000 simulations and a parallel human subjects experiment involving 290 human participants to investigate these effects across two scenario categories: (1) hiring negotiations between human job candidates and AI hiring agents; and (2) human-AI transactions wherein AI agents may conceal information to maximize internal goals. We examine user Extraversion and Agreeableness alongside AI design characteristics, including Adaptability, Expertise, and chain-of-thought Transparency. Our causal discovery analysis extends performance-focused evaluations by integrating scenario-based outcomes, communication analysis, and questionnaire measures. Results reveal divergences between purely simulated and human study datasets, and between scenario types. In simulation experiments, personality traits and AI attributes were comparatively influential. Yet, with actual human subjects, AI attributes -- particularly transparency -- were much more impactful. We discuss how these divergences vary across different interaction contexts, offering crucial insights for the future of human-centered AI agents.",
+    "published": "Apr 17",
+    "pdf_url": "https://arxiv.org/pdf/2604.15607v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.15607v1",
+    "queried_author": "Maarten Sap",
+    "matching_authors": [
+      "Maarten Sap"
+    ]
+  },
+  {
     "title": "Asking What Matters: Reward-Driven Clarification for Software Engineering Tasks",
     "authors": [
       "Sanidhya Vijayvargiya",
@@ -1172,8 +1214,8 @@
     ],
     "summary": "Recent work has demonstrated the potential of non-transformer language models, especially linear recurrent neural networks (RNNs) and hybrid models that mix recurrence and attention. Yet there is no consensus on whether the potential benefits of these new architectures justify the risk and effort of scaling them up. To address this, we provide evidence for the advantages of hybrid models over pure transformers on several fronts. First, theoretically, we show that hybrid models do not merely inherit the expressivity of transformers and linear RNNs, but can express tasks beyond both, such as code execution. Putting this theory to practice, we train Olmo Hybrid, a 7B-parameter model largely comparable to Olmo 3 7B but with the sliding window layers replaced by Gated DeltaNet layers. We show that Olmo Hybrid outperforms Olmo 3 across standard pretraining and mid-training evaluations, demonstrating the benefit of hybrid models in a controlled, large-scale setting. We find that the hybrid model scales significantly more efficiently than the transformer, explaining its higher performance. However, its unclear why greater expressivity on specific formal problems should result in better scaling or superior performance on downstream tasks unrelated to those problems. To explain this apparent gap, we return to theory and argue why increased expressivity should translate to better scaling efficiency, completing the loop. Overall, our results suggest that hybrid models mixing attention and recurrent layers are a powerful extension to the language modeling paradigm: not merely to reduce ...",
     "published": "Apr 03",
-    "pdf_url": "https://arxiv.org/pdf/2604.03444v2",
-    "arxiv_url": "http://arxiv.org/abs/2604.03444v2",
+    "pdf_url": "https://arxiv.org/pdf/2604.03444v3",
+    "arxiv_url": "http://arxiv.org/abs/2604.03444v3",
     "queried_author": "Hannaneh Hajishirzi",
     "matching_authors": [
       "Hannaneh Hajishirzi",
@@ -2268,10 +2310,10 @@
       "Dieter Fox",
       "Youngjae Yu"
     ],
-    "summary": "Vision Language Action VLA models are typically evaluated using per benchmark scripts maintained independently by each model repository, leading to duplicated code, dependency conflicts, and underspecified protocols. We present vla eval, an open source evaluation harness that decouples model inference from benchmark execution through a WebSocket msgpack protocol with Docker based environment isolation. Models integrate once by implementing a single predict() method; benchmarks integrate once via a four method interface; the full cross evaluation matrix works automatically. A complete evaluation requires only two commands: vla eval serve and vla eval run. The framework supports 13 simulation benchmarks and six model servers. Parallel evaluation via episode sharding and batch inference achieves a 47x throughput improvement, completing 2000 LIBERO episodes in about 18 minutes. Using this infrastructure, we conduct a reproducibility audit of a published VLA model across three benchmarks, finding that all three closely reproduce published values while uncovering undocumented requirements ambiguous termination semantics and hidden normalization statistics that can silently distort results. We additionally release a VLA leaderboard aggregating 657 published results across 17 benchmarks. Framework, evaluation configs, and all reproduction results are publicly available.",
+    "summary": "Vision-Language-Action (VLA) models are increasingly evaluated across multiple simulation benchmarks, yet adding each benchmark to an evaluation pipeline requires resolving incompatible dependencies, matching underspecified evaluation protocols, and reverse-engineering undocumented preprocessing. This burden scales with the number of models and benchmarks, making comprehensive evaluation impractical for most teams. We present vla-eval, an open-source evaluation harness that eliminates this per-benchmark cost by decoupling model inference from benchmark execution through a WebSocket+msgpack protocol with Docker-based environment isolation. Models integrate once by implementing a single predict() method; benchmarks integrate once via a four-method interface; the full cross-evaluation matrix works automatically. The framework supports 14 simulation benchmarks and six model servers. Parallel evaluation via episode sharding and batch inference achieves up to 47x wall-clock speedup, completing 2,000 LIBERO episodes in ~18 minutes. To validate the framework, we reproduce published scores across six VLA codebases and three benchmarks, documenting previously undocumented pitfalls. We additionally release a VLA leaderboard aggregating 657 published results across 17 benchmarks. Framework, evaluation configs, and all reproduction results are publicly available at https://github.com/allenai/vla-evaluation-harness and https://allenai.github.io/vla-evaluation-harness/leaderboard.",
     "published": "Mar 14",
-    "pdf_url": "https://arxiv.org/pdf/2603.13966v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.13966v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.13966v2",
+    "arxiv_url": "http://arxiv.org/abs/2603.13966v2",
     "queried_author": "Ranjay Krishna",
     "matching_authors": [
       "Ranjay Krishna"
@@ -8825,8 +8867,8 @@
     ],
     "summary": "Conversational AI is constrained in many real-world settings where only one side of a dialogue can be recorded, such as telemedicine, call centers, and smart glasses. We formalize this as the one-sided conversation problem (1SC): inferring and learning from one side of a conversation. We study two tasks: (1) reconstructing the missing speaker's turns for real-time use cases, and (2) generating summaries from one-sided transcripts. Evaluating prompting and finetuned models on MultiWOZ, DailyDialog, and Candor with both human A/B testing and LLM-as-a-judge metrics, we find that access to one future turn and information about utterance length improves reconstruction, placeholder prompting helps to mitigate hallucination, and while large models generate promising reconstructions with prompting, smaller models require finetuning. Further, high-quality summaries can be generated without reconstructing missing turns. We present 1SC as a novel challenge and report promising results that mark a step toward privacy-aware conversational AI.",
     "published": "Nov 04",
-    "pdf_url": "https://arxiv.org/pdf/2511.03056v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.03056v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.03056v2",
+    "arxiv_url": "http://arxiv.org/abs/2511.03056v2",
     "queried_author": "Noah A. Smith",
     "matching_authors": [
       "Noah A. Smith"
@@ -12485,43 +12527,6 @@
     "matching_authors": [
       "Jacob Andreas",
       "Noah Goodman"
-    ]
-  },
-  {
-    "title": "Generative Interfaces for Language Models",
-    "authors": [
-      "Jiaqi Chen",
-      "Yanzhe Zhang",
-      "Yutong Zhang",
-      "Yijia Shao",
-      "Diyi Yang"
-    ],
-    "summary": "Large language models (LLMs) are increasingly seen as assistants, copilots, and consultants, capable of supporting a wide range of tasks through natural conversation. However, most systems remain constrained by a linear request-response format that often makes interactions inefficient in multi-turn, information-dense, and exploratory tasks. To address these limitations, we propose Generative Interfaces for Language Models, a paradigm in which LLMs respond to user queries by proactively generating user interfaces (UIs) that enable more adaptive and interactive engagement. Our framework leverages structured interface-specific representations and iterative refinements to translate user queries into task-specific UIs. For systematic evaluation, we introduce a multidimensional assessment framework that compares generative interfaces with traditional chat-based ones across diverse tasks, interaction patterns, and query types, capturing functional, interactive, and emotional aspects of user experience. Results show that generative interfaces consistently outperform conversational ones, with up to a 72% improvement in human preference. These findings clarify when and why users favor generative interfaces, paving the way for future advancements in human-AI interaction.",
-    "published": "Aug 26",
-    "pdf_url": "https://arxiv.org/pdf/2508.19227v2",
-    "arxiv_url": "http://arxiv.org/abs/2508.19227v2",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang"
-    ]
-  },
-  {
-    "title": "Real-Time Detection of Hallucinated Entities in Long-Form Generation",
-    "authors": [
-      "Oscar Obeso",
-      "Andy Arditi",
-      "Javier Ferrando",
-      "Joshua Freeman",
-      "Cameron Holmes",
-      "Neel Nanda"
-    ],
-    "summary": "Large language models are now routinely used in high-stakes applications where hallucinations can cause serious harm, such as medical consultations or legal advice. Existing hallucination detection methods, however, are impractical for real-world use, as they are either limited to short factual queries or require costly external verification. We present a cheap, scalable method for real-time identification of hallucinated tokens in long-form generations, and scale it effectively to 70B parameter models. Our approach targets entity-level hallucinations-e.g., fabricated names, dates, citations-rather than claim-level, thereby naturally mapping to token-level labels and enabling streaming detection. We develop an annotation methodology that leverages web search to annotate model responses with grounded labels indicating which tokens correspond to fabricated entities. This dataset enables us to train effective hallucination classifiers with simple and efficient methods such as linear probes. Evaluating across four model families, our classifiers consistently outperform baselines on long-form responses, including more expensive methods such as semantic entropy (e.g., AUC 0.90 vs 0.71 for Llama-3.3-70B), and are also an improvement in short-form question-answering settings. Despite being trained only to detect hallucinated entities, our probes effectively detect incorrect answers in mathematical reasoning tasks, indicating generalization beyond entities. While our annotation methodology is expensive, we find that annotated responses from one model can be used to train effective c...",
-    "published": "Aug 26",
-    "pdf_url": "https://arxiv.org/pdf/2509.03531v2",
-    "arxiv_url": "http://arxiv.org/abs/2509.03531v2",
-    "queried_author": "Neel Nanda",
-    "matching_authors": [
-      "Neel Nanda"
     ]
   }
 ]
