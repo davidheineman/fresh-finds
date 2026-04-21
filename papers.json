@@ -1,5 +1,115 @@
 [
   {
+    "title": "When Can LLMs Learn to Reason with Weak Supervision?",
+    "authors": [
+      "Salman Rahman",
+      "Jingyan Shen",
+      "Anna Mordvina",
+      "Hamid Palangi",
+      "Saadia Gabriel",
+      "Pavel Izmailov"
+    ],
+    "summary": "Large language models have achieved significant reasoning improvements through reinforcement learning with verifiable rewards (RLVR). Yet as model capabilities grow, constructing high-quality reward signals becomes increasingly difficult, making it essential to understand when RLVR can succeed under weaker forms of supervision. We conduct a systematic empirical study across diverse model families and reasoning domains under three weak supervision settings: scarce data, noisy rewards, and self-supervised proxy rewards. We find that generalization is governed by training reward saturation dynamics: models that generalize exhibit a prolonged pre-saturation phase during which training reward and downstream performance climb together, while models that saturate rapidly memorize rather than learn. We identify reasoning faithfulness, defined as the extent to which intermediate steps logically support the final answer, as the pre-RL property that predicts which regime a model falls into, while output diversity alone is uninformative. Motivated by these findings, we disentangle the contributions of continual pre-training and supervised fine-tuning, finding that SFT on explicit reasoning traces is necessary for generalization under weak supervision, while continual pre-training on domain data amplifies the effect. Applied together to Llama3.2-3B-Base, these interventions enable generalization across all three settings where the base model previously failed.",
+    "published": "Apr 20",
+    "pdf_url": "https://arxiv.org/pdf/2604.18574v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.18574v1",
+    "queried_author": "Pavel Izmailov",
+    "matching_authors": [
+      "Pavel Izmailov"
+    ]
+  },
+  {
+    "title": "Train Separately, Merge Together: Modular Post-Training with Mixture-of-Experts",
+    "authors": [
+      "Jacob Morrison",
+      "Sanjay Adhikesaven",
+      "Akshita Bhagia",
+      "Matei Zaharia",
+      "Noah A. Smith",
+      "Sewon Min"
+    ],
+    "summary": "Extending a fully post-trained language model with new domain capabilities is fundamentally limited by monolithic training paradigms: retraining from scratch is expensive and scales poorly, while continued training often degrades existing capabilities. We present BAR (Branch-Adapt-Route), which trains independent domain experts, each through its own mid-training, supervised finetuning, and reinforcement learning pipeline, and composes them via a Mixture-of-Experts architecture with lightweight router training. Unlike retraining approaches that mix all domains and require full reprocessing for any update (with cost scaling quadratically), BAR enables updating individual experts independently with linear cost scaling and no degradation to existing domains. At the 7B scale, with experts for math, code, tool use, and safety, BAR achieves an overall score of 49.1 (averaged across 7 evaluation categories), matching or exceeding re-training baselines (47.8 without mid-training, 50.5 with). We further show that modular training provides a structural advantage: by isolating each domain, it avoids the catastrophic forgetting that occurs when late-stage RL degrades capabilities from earlier training stages, while significantly reducing the cost and complexity of updating or adding a domain. Together, these results suggest that decoupled, expert-based training is a scalable alternative to monolithic retraining for extending language models.",
+    "published": "Apr 20",
+    "pdf_url": "https://arxiv.org/pdf/2604.18473v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.18473v1",
+    "queried_author": "Noah A. Smith",
+    "matching_authors": [
+      "Noah A. Smith",
+      "Sewon Min"
+    ]
+  },
+  {
+    "title": "Poly-EPO: Training Exploratory Reasoning Models",
+    "authors": [
+      "Ifdita Hasan Orney",
+      "Jubayer Ibn Hamid",
+      "Shreya S Ramanujam",
+      "Shirley Wu",
+      "Hengyuan Hu",
+      "Noah Goodman",
+      "Dorsa Sadigh",
+      "Chelsea Finn"
+    ],
+    "summary": "Exploration is a cornerstone of learning from experience: it enables agents to find solutions to complex problems, generalize to novel ones, and scale performance with test-time compute. In this paper, we present a framework for post-training language models (LMs) that explicitly encourages optimistic exploration and promotes a synergy between exploration and exploitation. The central idea is to train the LM to generate sets of responses that are collectively accurate under the reward function and exploratory in their reasoning strategies. We first develop a general recipe for optimizing LMs with set reinforcement learning (set RL) under arbitrary objective functions, showing how standard RL algorithms can be adapted to this setting through a modification to the advantage computation. We then propose Polychromic Exploratory Policy Optimization (Poly-EPO), which instantiates this framework with an objective that explicitly synergizes exploration and exploitation. Across a range of reasoning benchmarks, we show that Poly-EPO improves generalization, as evidenced by higher pass@$k$ coverage, preserves greater diversity in model generations, and effectively scales with test-time compute.",
+    "published": "Apr 19",
+    "pdf_url": "https://arxiv.org/pdf/2604.17654v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.17654v1",
+    "queried_author": "Noah Goodman",
+    "matching_authors": [
+      "Noah Goodman"
+    ]
+  },
+  {
+    "title": "HorizonBench: Long-Horizon Personalization with Evolving Preferences",
+    "authors": [
+      "Shuyue Stella Li",
+      "Bhargavi Paranjape",
+      "Kerem Oktar",
+      "Zhongyao Ma",
+      "Gelin Zhou",
+      "Lin Guan",
+      "Na Zhang",
+      "Sem Park",
+      "Lin Chen",
+      "Diyi Yang",
+      "Yulia Tsvetkov",
+      "Asli Celikyilmaz"
+    ],
+    "summary": "User preferences evolve across months of interaction, and tracking them requires inferring when a stated preference has been changed by a subsequent life event. We define this problem as long-horizon personalization and observe that progress on it is limited by data availability and measurement, with no existing resource providing both naturalistic long-horizon interactions and the ground-truth provenance needed to diagnose why models fail. We introduce a data generator that produces conversations from a structured mental state graph, yielding ground-truth provenance for every preference change across 6-month timelines, and from it construct HorizonBench, a benchmark of 4,245 items from 360 simulated users with 6-month conversation histories averaging ~4,300 turns and ~163K tokens. HorizonBench provides a testbed for long-context modeling, memory-augmented architectures, theory-of-mind reasoning, and user modeling. Across 25 frontier models, the best model reaches 52.8% and most score at or below the 20% chance baseline. When these models err on evolved preferences, over a third of the time they select the user's originally stated value without tracking the updated user state. This belief-update failure persists across context lengths and expression explicitness levels, identifying state-tracking capability as the primary bottleneck for long-horizon personalization.",
+    "published": "Apr 19",
+    "pdf_url": "https://arxiv.org/pdf/2604.17283v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.17283v1",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang"
+    ]
+  },
+  {
+    "title": "AdaExplore: Failure-Driven Adaptation and Diversity-Preserving Search for Efficient Kernel Generation",
+    "authors": [
+      "Weihua Du",
+      "Jingming Zhuo",
+      "Yixin Dong",
+      "Andre Wang He",
+      "Weiwei Sun",
+      "Zeyu Zheng",
+      "Manupa Karunaratne",
+      "Ivan Fox",
+      "Tim Dettmers",
+      "Tianqi Chen",
+      "Yiming Yang",
+      "Sean Welleck"
+    ],
+    "summary": "Recent large language model (LLM) agents have shown promise in using execution feedback for test-time adaptation. However, robust self-improvement remains far from solved: most approaches still treat each problem instance independently, without accumulating reusable knowledge. This limitation is particularly pronounced in domain-specific languages such as Triton, which are underrepresented in LLM pretraining data. Their strict constraints and non-linear optimization landscape further make naive generation and local refinement unreliable. We propose AdaExplore, an agent framework that enables self-improvement via accumulated execution feedback for performance-critical kernel code generation through two complementary stages: failure-driven adaptation and diversity-preserving search, jointly improving correctness and optimization performance without additional fine-tuning or external knowledge. In the adaptation stage, the agent synthesizes tasks and converts recurring failures into a reusable memory of validity rules, helping subsequent generations remain within the feasible set. In the search stage, the agent organizes candidate kernels as a tree and alternates between small local refinements and larger structural regeneration, allowing it to explore the optimization landscape beyond local optima. Experiments on kernel runtime optimization benchmarks validate these gains: AdaExplore achieves 3.12x and 1.72x speedups on KernelBench Level-2 and Level-3, respectively, within 100 steps, and continues to improve with additional computation.",
+    "published": "Apr 17",
+    "pdf_url": "https://arxiv.org/pdf/2604.16625v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.16625v1",
+    "queried_author": "Sean Welleck",
+    "matching_authors": [
+      "Sean Welleck"
+    ]
+  },
+  {
     "title": "Detecting and Suppressing Reward Hacking with Gradient Fingerprints",
     "authors": [
       "Songtao Wang",
@@ -39,6 +149,36 @@
     "queried_author": "Maarten Sap",
     "matching_authors": [
       "Maarten Sap"
+    ]
+  },
+  {
+    "title": "Scaling Test-Time Compute for Agentic Coding",
+    "authors": [
+      "Joongwon Kim",
+      "Wannan Yang",
+      "Kelvin Niu",
+      "Hongming Zhang",
+      "Yun Zhu",
+      "Eryk Helenowski",
+      "Ruan Silva",
+      "Zhengxing Chen",
+      "Srinivasan Iyer",
+      "Manzil Zaheer",
+      "Daniel Fried",
+      "Hannaneh Hajishirzi",
+      "Sanjeev Arora",
+      "Gabriel Synnaeve",
+      "Ruslan Salakhutdinov",
+      "Anirudh Goyal"
+    ],
+    "summary": "Test-time scaling has become a powerful way to improve large language models. However, existing methods are best suited to short, bounded outputs that can be directly compared, ranked or refined. Long-horizon coding agents violate this premise: each attempt produces an extended trajectory of actions, observations, errors, and partial progress taken by the agent. In this setting, the main challenge is no longer generating more attempts, but representing prior experience in a form that can be effectively selected from and reused. We propose a test-time scaling framework for agentic coding based on compact representations of rollout trajectories. Our framework converts each rollout into a structured summary that preserves its salient hypotheses, progress, and failure modes while discarding low-signal trace details. This representation enables two complementary forms of inference-time scaling. For parallel scaling, we introduce Recursive Tournament Voting (RTV), which recursively narrows a population of rollout summaries through small-group comparisons. For sequential scaling, we adapt Parallel-Distill-Refine (PDR) to the agentic setting by conditioning new rollouts on summaries distilled from prior attempts. Our method consistently improves the performance of frontier coding agents across SWE-Bench Verified and Terminal-Bench v2.0. For example, by using our method Claude-4.5-Opus improves from 70.9% to 77.6% on SWE-Bench Verified (mini-SWE-agent) and 46.9% to 59.1% on Terminal-Bench v2.0 (Terminus 1). Our results suggest that test-time scaling for long-horizon agents is fundam...",
+    "published": "Apr 16",
+    "pdf_url": "https://arxiv.org/pdf/2604.16529v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.16529v1",
+    "queried_author": "Daniel Fried",
+    "matching_authors": [
+      "Daniel Fried",
+      "Hannaneh Hajishirzi"
     ]
   },
   {
@@ -2017,10 +2157,10 @@
       "Carolyn Rose",
       "Sean Welleck"
     ],
-    "summary": "To think critically about arguments, human learners are trained to identify, reconstruct, and evaluate arguments. Argument reconstruction is especially important because it makes an argument's underlying inferences explicit. However, it remains unclear whether LLMs can similarly enhance their critical thinking ability by learning to reconstruct arguments. To address this question, we introduce a holistic framework with three contributions. We (1) propose an engine that automatically reconstructs arbitrary arguments (GAAR), (2) synthesize a new high-quality argument reconstruction dataset (Arguinas) using the GAAR engine, and (3) investigate whether learning argument reconstruction benefits downstream critical thinking tasks. Our experimental results show that, across seven critical thinking tasks, models trained to learn argument reconstruction outperform models that do not, with the largest performance gains observed when training on the proposed Arguinas dataset. The source code and dataset will be publicly available.",
+    "summary": "To think critically about arguments, human learners are trained to identify, reconstruct, and evaluate arguments. Argument reconstruction is especially important because it makes an argument's underlying inferences explicit. However, it remains unclear whether LLMs can similarly enhance their critical thinking ability by learning to reconstruct arguments. To address this question, we introduce a holistic framework with three contributions. We (1) propose an engine that automatically reconstructs arbitrary arguments (GAAR), (2) synthesize a new high-quality argument reconstruction dataset (Arguinas) using the GAAR engine, and (3) investigate whether learning argument reconstruction benefits downstream critical thinking tasks. Our experimental results show that, across seven critical thinking tasks, models trained to learn argument reconstruction outperform models that do not, with the largest performance gains observed when training on the proposed Arguinas dataset.",
     "published": "Mar 18",
-    "pdf_url": "https://arxiv.org/pdf/2603.17432v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.17432v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.17432v2",
+    "arxiv_url": "http://arxiv.org/abs/2603.17432v2",
     "queried_author": "Sean Welleck",
     "matching_authors": [
       "Sean Welleck"
@@ -2126,10 +2266,10 @@
       "Jordan Lee Boyd-Graber",
       "Aakanksha Naik"
     ],
-    "summary": "Deep Research (DR) tools (e.g. OpenAI DR) help researchers cope with ballooning publishing counts. Such tools can synthesize scientific papers to answer researchers' queries, but lack understanding of their users. We change that in MyScholarQA (MySQA), a personalized DR tool that: 1) infers a profile of a user's research interests; 2) proposes personalized actions for a user's input query; and 3) writes a multi-section report for the query that follows user-approved actions. We first test MySQA with NLP's standard protocol: we design a benchmark of synthetic users and LLM judges, where MySQA beats baselines in citation metrics and personalized action-following. However, we suspect this process does not cover all aspects of personalized DR users value, so we interview users in an online version of MySQA to unmask them. We reveal nine nuanced errors of personalized DR undetectable by our LLM judges, and we study qualitative feedback to form lessons for future DR design. In all, we argue for a pillar of personalization that easy-to-use LLM judges can lead NLP to overlook: real progress in personalization is only possible with real users.",
+    "summary": "Deep Research (DR) systems help researchers cope with ballooning publishing counts. Such tools synthesize scientific papers to answer research queries, but lack understanding of their users. We address this with MyScholarQA (MySQA), a personalized DR agent that: 1) infers a profile with a user's research interests; 2) proposes personalized actions for a user's input query; and 3) writes a multi-section report for the query that follows user-approved actions. We first test MySQA with NLP's standard protocol: we build a benchmark with synthetic users and LLM judges, where MySQA beats baselines in citation metrics and personalized action-following. However, we suspect this process does not cover all aspects of personalized DR users value, so we interview users in an online version of MySQA to unmask them. We reveal nine nuanced errors of personalized DR undetectable by our LLM judges, and we study qualitative feedback to form lessons for future DR design. In all, we argue for a pillar of personalization that easy-to-use LLM judges can lead NLP to overlook: real progress in personalization is only possible with real users.",
     "published": "Mar 17",
-    "pdf_url": "https://arxiv.org/pdf/2603.16120v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.16120v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.16120v2",
+    "arxiv_url": "http://arxiv.org/abs/2603.16120v2",
     "queried_author": "Eunsol Choi",
     "matching_authors": [
       "Eunsol Choi"
@@ -4515,10 +4655,10 @@
       "Rachel Rudinger",
       "Jordan Lee Boyd-Graber"
     ],
-    "summary": "Multiple-choice question answering (MCQA) is standard in NLP, but benchmarks lack rigorous quality control. We present BenchMarker, an education-inspired toolkit using LLM judges to flag three common MCQ flaws: 1) contamination - items appearing exactly online; 2) shortcuts - cues in the choices that enable guessing; and 3) writing errors - structural/grammatical issues based on a 19-rule education rubric. We validate BenchMarker with human annotations, then run the tool to audit 12 benchmarks, revealing: 2) contaminated MCQs tend to inflate accuracy, while writing errors tend to lower it and change rankings beyond random; and 3) prior benchmark repairs address their targeted issues (i.e., lowering accuracy with LLM-written distractors), but inadvertently add new flaws (i.e. implausible distractors, many correct answers). Overall, flaws in MCQs degrade NLP evaluation, but education research offers a path forward. We release BenchMarker to bridge the fields and improve MCQA benchmark design.",
+    "summary": "Multiple-choice question answering (MCQA) is standard in NLP, but benchmarks lack rigorous quality control. We present BenchMarker, an education-inspired toolkit using LLM judges to flag three common MCQ flaws: 1) contamination: items appearing exactly online; 2) shortcuts: cues in the choices that enable guessing; and 3) writing errors: structural/grammatical issues based on a 19-rule education rubric. We validate BenchMarker with human annotations, then run the tool to audit 12 benchmarks, revealing: 1) flaws persist in MCQA benchmarks, especially automatically-made and crowdsourced data - we detect 47% of TruthfulQA appears online and 100% of HellaSwag violates multiple writing rules; 2) contaminated MCQs tend to inflate accuracy, while writing errors tend to lower it and change rankings beyond random; and 3) prior benchmark repairs address their targeted issues (i.e., lowering accuracy with LLM-written distractors), but inadvertently add new flaws (i.e. implausible distractors, many correct answers). Overall, flaws in MCQs degrade NLP evaluation, but education research offers a path forward. We release BenchMarker to bridge the fields and improve MCQA benchmark design.",
     "published": "Feb 05",
-    "pdf_url": "https://arxiv.org/pdf/2602.06221v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.06221v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.06221v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.06221v2",
     "queried_author": "Eunsol Choi",
     "matching_authors": [
       "Eunsol Choi"
@@ -5074,8 +5214,8 @@
     ],
     "summary": "Advancing beyond single monolithic language models (LMs), recent research increasingly recognizes the importance of model collaboration, where multiple LMs collaborate, compose, and complement each other. Existing research on this topic has mostly been disparate and disconnected, from different research communities, and lacks rigorous comparison. To consolidate existing research and establish model collaboration as a school of thought, we present MoCo: a one-stop Python library of executing, benchmarking, and comparing model collaboration algorithms at scale. MoCo features 26 model collaboration methods, spanning diverse levels of cross-model information exchange such as routing, text, logit, and model parameters. MoCo integrates 25 evaluation datasets spanning reasoning, QA, code, safety, and more, while users could flexibly bring their own data. Extensive experiments with MoCo demonstrate that most collaboration strategies outperform models without collaboration in 61.0% of (model, data) settings on average, with the most effective methods outperforming by up to 25.8%. We further analyze the scaling of model collaboration strategies, the training/inference efficiency of diverse methods, highlight that the collaborative system solves problems where single LMs struggle, and discuss future work in model collaboration, all made possible by MoCo. We envision MoCo as a valuable toolkit to facilitate and turbocharge the quest for an open, modular, decentralized, and collaborative AI future.",
     "published": "Jan 29",
-    "pdf_url": "https://arxiv.org/pdf/2601.21257v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.21257v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.21257v2",
+    "arxiv_url": "http://arxiv.org/abs/2601.21257v2",
     "queried_author": "Luke Zettlemoyer",
     "matching_authors": [
       "Luke Zettlemoyer",
@@ -7825,10 +7965,10 @@
       "Nicholas Matthew Boffi",
       "Max Simchowitz"
     ],
-    "summary": "Log-likelihood evaluation enables important capabilities in generative models, including model comparison, certain fine-tuning objectives, and many downstream applications. Yet paradoxically, some of today's best generative models -- diffusion and flow-based models -- still require hundreds to thousands of neural function evaluations (NFEs) to compute a single likelihood. While recent distillation methods have successfully accelerated sampling to just a few steps, they achieve this at the cost of likelihood tractability: existing approaches either abandon likelihood computation entirely or still require expensive integration over full trajectories. We present fast flow joint distillation (F2D2), a framework that simultaneously reduces the number of NFEs required for both sampling and likelihood evaluation by two orders of magnitude. Our key insight is that in continuous normalizing flows, the coupled ODEs for sampling and likelihood are computed from a shared underlying velocity field, allowing us to jointly distill both the sampling trajectory and cumulative divergence using a single model. F2D2 is modular, compatible with existing flow-based few-step sampling models, and requires only an additional divergence prediction head. Experiments demonstrate F2D2's capability of achieving accurate log-likelihood with few-step evaluations while maintaining high sample quality, solving a long-standing computational bottleneck in flow-based generative models. As an application of our approach, we propose a lightweight self-guidance method that enables a 2-step MeanFlow to outperform ...",
+    "summary": "Log-likelihood evaluation enables important capabilities in generative models, including model comparison, certain fine-tuning objectives, and many downstream applications. Yet paradoxically, some of today's best generative models -- diffusion and flow-based models -- still require hundreds to thousands of neural function evaluations (NFEs) to compute a single likelihood. While recent distillation methods have successfully accelerated sampling to just a few steps, they achieve this at the cost of likelihood tractability: existing approaches either abandon likelihood computation entirely or still require expensive integration over full trajectories. We present fast flow joint distillation (F2D2), a framework that simultaneously reduces the number of NFEs required for both sampling and likelihood evaluation by two orders of magnitude. Our key insight is that in continuous normalizing flows, the coupled ODEs for sampling and likelihood are computed from a shared underlying velocity field, allowing us to jointly distill both the sampling trajectory and cumulative divergence using a single flow map. F2D2 is modular, compatible with existing flow-based few-step sampling models, and requires only an additional divergence prediction head. Experiments demonstrate F2D2's capability of achieving accurate log-likelihood with few-step evaluations while maintaining high sample quality, solving a long-standing computational bottleneck in flow-based generative models. As an application of our approach, we propose a lightweight self-guidance method that enables a 2-step MeanFlow to outperfo...",
     "published": "Dec 02",
-    "pdf_url": "https://arxiv.org/pdf/2512.02636v2",
-    "arxiv_url": "http://arxiv.org/abs/2512.02636v2",
+    "pdf_url": "https://arxiv.org/pdf/2512.02636v3",
+    "arxiv_url": "http://arxiv.org/abs/2512.02636v3",
     "queried_author": "Albert Gu",
     "matching_authors": [
       "Albert Gu",
@@ -10313,7 +10453,7 @@
     "title": "Emergent Misalignment via In-Context Learning: Narrow in-context examples can produce broadly misaligned LLMs",
     "authors": [
       "Nikita Afonin",
-      "Nikita Andriyanov",
+      "Nikita Andriianov",
       "Vahagn Hovhannisyan",
       "Nikhil Bageshpura",
       "Kyle Liu",
@@ -10325,10 +10465,10 @@
       "Alexander Panchenko",
       "Mikhail Seleznyov"
     ],
-    "summary": "Recent work has shown that narrow finetuning can produce broadly misaligned LLMs, a phenomenon termed emergent misalignment (EM). While concerning, these findings were limited to finetuning and activation steering, leaving out in-context learning (ICL). We therefore ask: does EM emerge in ICL? We find that it does: across four model families (Gemini, Kimi-K2, Grok, and Qwen), narrow in-context examples cause models to produce misaligned responses to benign, unrelated queries. With 16 in-context examples, EM rates range from 1\\% to 24\\% depending on model and domain, appearing with as few as 2 examples. Neither larger model scale nor explicit reasoning provides reliable protection. We formulate and test a hypothesis, which explains in-context EM as conflict between safety objectives and context-following behavior. Consistent with this, instructing models to prioritize safety reduces EM while prioritizing context-following increases it. These findings establish ICL as a previously underappreciated vector for emergent misalignment that operates without parameter modification and resists simple scaling-based solutions.",
+    "summary": "Recent work has shown that narrow finetuning can produce broadly misaligned LLMs, a phenomenon termed emergent misalignment (EM). While concerning, these findings were limited to finetuning and activation steering, leaving out in-context learning (ICL). We therefore ask: does EM emerge in ICL? We find that it does: across four model families (Gemini, Kimi-K2, Grok, and Qwen), narrow in-context examples cause models to produce misaligned responses to benign, unrelated queries. With 16 in-context examples, EM rates range from 1% to 24% depending on model and domain, appearing with as few as 2 examples. Neither larger model scale nor explicit reasoning provides reliable protection, and larger models are typically even more susceptible. Next, we formulate and test a hypothesis, which explains in-context EM as conflict between safety objectives and context-following behavior. Consistent with this, instructing models to prioritize safety reduces EM while prioritizing context-following increases it. These findings establish ICL as a previously underappreciated vector for emergent misalignment that resists simple scaling-based solutions.",
     "published": "Oct 13",
-    "pdf_url": "https://arxiv.org/pdf/2510.11288v3",
-    "arxiv_url": "http://arxiv.org/abs/2510.11288v3",
+    "pdf_url": "https://arxiv.org/pdf/2510.11288v4",
+    "arxiv_url": "http://arxiv.org/abs/2510.11288v4",
     "queried_author": "Ashwinee Panda",
     "matching_authors": [
       "Ashwinee Panda"
@@ -12412,121 +12552,6 @@
     "queried_author": "Omar Khattab",
     "matching_authors": [
       "Omar Khattab"
-    ]
-  },
-  {
-    "title": "AHELM: A Holistic Evaluation of Audio-Language Models",
-    "authors": [
-      "Tony Lee",
-      "Haoqin Tu",
-      "Chi Heem Wong",
-      "Zijun Wang",
-      "Siwei Yang",
-      "Yifan Mai",
-      "Yuyin Zhou",
-      "Cihang Xie",
-      "Percy Liang"
-    ],
-    "summary": "Evaluations of audio-language models (ALMs) -- multimodal models that take interleaved audio and text as input and output text -- are hindered by the lack of standardized benchmarks; most benchmarks measure only one or two capabilities and omit evaluative aspects such as fairness or safety. Furthermore, comparison across models is difficult as separate evaluations test a limited number of models and use different prompting methods and inference parameters. To address these shortfalls, we introduce AHELM, a benchmark that aggregates various datasets -- including 2 new synthetic audio-text datasets called PARADE, which evaluates the ALMs on avoiding stereotypes, and CoRe-Bench, which measures reasoning over conversational audio through inferential multi-turn question answering -- to holistically measure the performance of ALMs across 10 aspects we have identified as important to the development and usage of ALMs: audio perception, knowledge, reasoning, emotion detection, bias, fairness, multilinguality, robustness, toxicity, and safety. We also standardize the prompts, inference parameters, and evaluation metrics to ensure equitable comparisons across models. We test 14 open-weight and closed-API ALMs from 3 developers and 3 additional simple baseline systems each consisting of an automatic speech recognizer and a language model. Our results show that while Gemini 2.5 Pro ranks top in 5 out of 10 aspects, it exhibits group unfairness ($p=0.01$) on ASR tasks whereas most of the other models do not. We also find that the baseline systems perform reasonably well on AHELM, with o...",
-    "published": "Aug 29",
-    "pdf_url": "https://arxiv.org/pdf/2508.21376v2",
-    "arxiv_url": "http://arxiv.org/abs/2508.21376v2",
-    "queried_author": "Percy Liang",
-    "matching_authors": [
-      "Percy Liang"
-    ]
-  },
-  {
-    "title": "RelP: Faithful and Efficient Circuit Discovery in Language Models via Relevance Patching",
-    "authors": [
-      "Farnoush Rezaei Jafari",
-      "Oliver Eberle",
-      "Ashkan Khakzar",
-      "Neel Nanda"
-    ],
-    "summary": "Activation patching is a standard method in mechanistic interpretability for localizing the components of a model responsible for specific behaviors, but it is computationally expensive to apply at scale. Attribution patching offers a faster, gradient-based approximation, yet suffers from noise and reduced reliability in deep, highly non-linear networks. In this work, we introduce Relevance Patching (RelP), which replaces the local gradients in attribution patching with propagation coefficients derived from Layer-wise Relevance Propagation (LRP). LRP propagates the network's output backward through the layers, redistributing relevance to lower-level components according to local propagation rules that ensure properties such as relevance conservation or improved signal-to-noise ratio. Like attribution patching, RelP requires only two forward passes and one backward pass, maintaining computational efficiency while improving faithfulness. We validate RelP across a range of models and tasks, showing that it more accurately approximates activation patching than standard attribution patching, particularly when analyzing residual stream and MLP outputs in the Indirect Object Identification (IOI) task. For instance, for MLP outputs in GPT-2 Large, attribution patching achieves a Pearson correlation of 0.006, whereas RelP reaches 0.956, highlighting the improvement offered by RelP. Additionally, we compare the faithfulness of sparse feature circuits identified by RelP and Integrated Gradients (IG), showing that RelP achieves comparable faithfulness without the extra computational co...",
-    "published": "Aug 28",
-    "pdf_url": "https://arxiv.org/pdf/2508.21258v2",
-    "arxiv_url": "http://arxiv.org/abs/2508.21258v2",
-    "queried_author": "Neel Nanda",
-    "matching_authors": [
-      "Neel Nanda"
-    ]
-  },
-  {
-    "title": "On the Theoretical Limitations of Embedding-Based Retrieval",
-    "authors": [
-      "Orion Weller",
-      "Michael Boratko",
-      "Iftekhar Naim",
-      "Jinhyuk Lee"
-    ],
-    "summary": "Vector embeddings have been tasked with an ever-increasing set of retrieval tasks over the years, with a nascent rise in using them for reasoning, instruction-following, coding, and more. These new benchmarks push embeddings to work for any query and any notion of relevance that could be given. While prior works have pointed out theoretical limitations of vector embeddings, there is a common assumption that these difficulties are exclusively due to unrealistic queries, and those that are not can be overcome with better training data and larger models. In this work, we demonstrate that we may encounter these theoretical limitations in realistic settings with extremely simple queries. We connect known results in learning theory, showing that the number of top-k subsets of documents capable of being returned as the result of some query is limited by the dimension of the embedding. We empirically show that this holds true even if we directly optimize on the test set with free parameterized embeddings. Using free embeddings, we then demonstrate that returning all pairs of documents requires a relatively high dimension. We then create a realistic dataset called LIMIT that stress tests embedding models based on these theoretical results, and observe that even state-of-the-art models fail on this dataset despite the simple nature of the task. Our work shows the limits of embedding models under the existing single vector paradigm and calls for future research to develop new techniques that can resolve this fundamental limitation.",
-    "published": "Aug 28",
-    "pdf_url": "https://arxiv.org/pdf/2508.21038v2",
-    "arxiv_url": "http://arxiv.org/abs/2508.21038v2",
-    "queried_author": "Orion Weller",
-    "matching_authors": [
-      "Orion Weller"
-    ]
-  },
-  {
-    "title": "OLMoASR: Open Models and Data for Training Robust Speech Recognition Models",
-    "authors": [
-      "Huong Ngo",
-      "Matt Deitke",
-      "Martijn Bartelds",
-      "Sarah Pratt",
-      "Josh Gardner",
-      "Matt Jordan",
-      "Ludwig Schmidt"
-    ],
-    "summary": "Improvements in training data scale and quality have led to significant advances, yet its influence in speech recognition remains underexplored. In this paper, we present a large-scale dataset, OLMoASR-Pool, and series of models, OLMoASR, to study and develop robust zero-shot speech recognition models. Beginning from OLMoASR-Pool, a collection of 3M hours of English audio and 17M transcripts, we design text heuristic filters to remove low-quality or mistranscribed data. Our curation pipeline produces a new dataset containing 1M hours of high-quality audio-transcript pairs, which we call OLMoASR-Mix. We use OLMoASR-Mix to train the OLMoASR-Mix suite of models, ranging from 39M (tiny.en) to 1.5B (large.en) parameters. Across all model scales, OLMoASR achieves comparable average performance to OpenAI's Whisper on short and long-form speech recognition benchmarks. Notably, OLMoASR-medium.en attains a 12.8\\% and 11.0\\% word error rate (WER) that is on par with Whisper's largest English-only model Whisper-medium.en's 12.4\\% and 10.5\\% WER for short and long-form recognition respectively (at equivalent parameter count). OLMoASR-Pool, OLMoASR models, and filtering, training and evaluation code will be made publicly available to further research on robust speech processing.",
-    "published": "Aug 28",
-    "pdf_url": "https://arxiv.org/pdf/2508.20869v1",
-    "arxiv_url": "http://arxiv.org/abs/2508.20869v1",
-    "queried_author": "Ludwig Schmidt",
-    "matching_authors": [
-      "Ludwig Schmidt"
-    ]
-  },
-  {
-    "title": "Evaluating Language Model Reasoning about Confidential Information",
-    "authors": [
-      "Dylan Sam",
-      "Alexander Robey",
-      "Andy Zou",
-      "Matt Fredrikson",
-      "J. Zico Kolter"
-    ],
-    "summary": "As language models are increasingly deployed as autonomous agents in high-stakes settings, ensuring that they reliably follow user-defined rules has become a critical safety concern. To this end, we study whether language models exhibit contextual robustness, or the capability to adhere to context-dependent safety specifications. For this analysis, we develop a benchmark (PasswordEval) that measures whether language models can correctly determine when a user request is authorized (i.e., with a correct password). We find that current open- and closed-source models struggle with this seemingly simple task, and that, perhaps surprisingly, reasoning capabilities do not generally improve performance. In fact, we find that reasoning traces frequently leak confidential information, which calls into question whether reasoning traces should be exposed to users in such applications. We also scale the difficulty of our evaluation along multiple axes: (i) by adding adversarial user pressure through various jailbreaking strategies, and (ii) through longer multi-turn conversations where password verification is more challenging. Overall, our results suggest that current frontier models are not well-suited to handling confidential information, and that reasoning capabilities may need to be trained in a different manner to make them safer for release in high-stakes settings.",
-    "published": "Aug 27",
-    "pdf_url": "https://arxiv.org/pdf/2508.19980v1",
-    "arxiv_url": "http://arxiv.org/abs/2508.19980v1",
-    "queried_author": "J Zico Kolter",
-    "matching_authors": [
-      "J Zico Kolter"
-    ]
-  },
-  {
-    "title": "Language and Experience: A Computational Model of Social Learning in Complex Tasks",
-    "authors": [
-      "C\u00e9dric Colas",
-      "Tracey Mills",
-      "Ben Prystawski",
-      "Michael Henry Tessler",
-      "Noah Goodman",
-      "Jacob Andreas",
-      "Joshua Tenenbaum"
-    ],
-    "summary": "The ability to combine linguistic guidance from others with direct experience is central to human development, enabling safe and rapid learning in new environments. How do people integrate these two sources of knowledge, and how might AI systems? We present a computational framework that models social learning as joint probabilistic inference over structured, executable world models given sensorimotor and linguistic data. We make this possible by turning a pretrained language model into a probabilistic model of how humans share advice conditioned on their beliefs, allowing our agents both to generate advice for others and to interpret linguistic input as evidence during Bayesian inference. Using behavioral experiments and simulations across 10 video games, we show how linguistic guidance can shape exploration and accelerate learning by reducing risky interactions and speeding up key discoveries in both humans and models. We further explore how knowledge can accumulate across generations through iterated learning experiments and demonstrate successful knowledge transfer between humans and models -- revealing how structured, language-compatible representations might enable human-machine collaborative learning.",
-    "published": "Aug 26",
-    "pdf_url": "https://arxiv.org/pdf/2509.00074v2",
-    "arxiv_url": "http://arxiv.org/abs/2509.00074v2",
-    "queried_author": "Jacob Andreas",
-    "matching_authors": [
-      "Jacob Andreas",
-      "Noah Goodman"
     ]
   }
 ]
