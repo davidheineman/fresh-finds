@@ -1,5 +1,24 @@
 [
   {
+    "title": "Micro Language Models Enable Instant Responses",
+    "authors": [
+      "Wen Cheng",
+      "Tuochao Chen",
+      "Karim Helwani",
+      "Sriram Srinivasan",
+      "Luke Zettlemoyer",
+      "Shyamnath Gollakota"
+    ],
+    "summary": "Edge devices such as smartwatches and smart glasses cannot continuously run even the smallest 100M-1B parameter language models due to power and compute constraints, yet cloud inference introduces multi-second latencies that break the illusion of a responsive assistant. We introduce micro language models ($\u03bc$LMs): ultra-compact models (8M-30M parameters) that instantly generate the first 4-8 words of a contextually grounded response on-device, while a cloud model completes it; thus, masking the cloud latency. We show that useful language generation survives at this extreme scale with our models matching several 70M-256M-class existing models. We design a collaborative generation framework that reframes the cloud model as a continuator rather than a respondent, achieving seamless mid-sentence handoffs and structured graceful recovery via three error correction methods when the local opener goes wrong. Empirical results show that $\u03bc$LMs can initiate responses that larger models complete seamlessly, demonstrating that orders-of-magnitude asymmetric collaboration is achievable and unlocking responsive AI for extremely resource-constrained devices. The model checkpoint and demo are available at https://github.com/Sensente/micro_language_model_swen_project.",
+    "published": "Apr 21",
+    "pdf_url": "https://arxiv.org/pdf/2604.19642v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.19642v1",
+    "queried_author": "Luke Zettlemoyer",
+    "matching_authors": [
+      "Luke Zettlemoyer"
+    ]
+  },
+  {
     "title": "Do LLMs Game Formalization? Evaluating Faithfulness in Logical Reasoning",
     "authors": [
       "Kyuhee Kim",
@@ -12538,27 +12557,6 @@
     "queried_author": "Ranjay Krishna",
     "matching_authors": [
       "Ranjay Krishna"
-    ]
-  },
-  {
-    "title": "Statutory Construction and Interpretation for Artificial Intelligence",
-    "authors": [
-      "Luxi He",
-      "Nimra Nadeem",
-      "Michel Liao",
-      "Howard Chen",
-      "Danqi Chen",
-      "Mariano-Florentino Cu\u00e9llar",
-      "Peter Henderson"
-    ],
-    "summary": "AI systems are increasingly governed by natural language principles, yet a key challenge arising from reliance on language remains underexplored: interpretive ambiguity. As in legal systems, ambiguity arises both from how these principles are written and how they are applied. But while legal systems use institutional safeguards to manage such ambiguity, such as transparent appellate review policing interpretive constraints, AI alignment pipelines offer no comparable protections. Different interpretations of the same rule can lead to inconsistent or unstable model behavior. Drawing on legal theory, we identify key gaps in current alignment pipelines by examining how legal systems constrain ambiguity at both the rule creation and rule application steps. We then propose a computational framework that mirrors two legal mechanisms: (1) a rule refinement pipeline that minimizes interpretive disagreement by revising ambiguous rules (analogous to agency rulemaking or iterative legislative action), and (2) prompt-based interpretive constraints that reduce inconsistency in rule application (analogous to legal canons that guide judicial discretion). We evaluate our framework on a 5,000-scenario subset of the WildChat dataset and show that both interventions significantly improve judgment consistency across a panel of reasonable interpreters. Our approach offers a first step toward systematically managing interpretive ambiguity, an essential step for building more robust, law-following AI systems.",
-    "published": "Sep 01",
-    "pdf_url": "https://arxiv.org/pdf/2509.01186v1",
-    "arxiv_url": "http://arxiv.org/abs/2509.01186v1",
-    "queried_author": "Danqi Chen",
-    "matching_authors": [
-      "Danqi Chen",
-      "Peter Henderson"
     ]
   }
 ]
