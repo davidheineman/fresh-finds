@@ -1,5 +1,45 @@
 [
   {
+    "title": "Do LLMs Game Formalization? Evaluating Faithfulness in Logical Reasoning",
+    "authors": [
+      "Kyuhee Kim",
+      "Auguste Poiroux",
+      "Antoine Bosselut"
+    ],
+    "summary": "Formal verification guarantees proof validity but not formalization faithfulness. For natural-language logical reasoning, where models construct axiom systems from scratch without library constraints, this gap between valid proofs and faithful translations is especially acute. We investigate whether frontier models exploit this gap when generating Lean 4 proofs, a behavior we term formalization gaming.\n  We evaluate GPT-5 and DeepSeek-R1 on 303 first-order logic problems (203 from FOLIO, 100 from Multi-LogiEval), comparing unified generation against a two-stage pipeline that separates formalization from proving. Despite compilation rates of 87-99%, we find no evidence of systematic gaming in unified generation: models prefer reporting failure over forcing proofs, even under prompting designed to encourage it. However, unfaithfulness that evades our detection signals may still occur. The two-stage pipeline reveals two distinct modes of unfaithfulness: GPT-5 fabricates axioms during proof generation, a reactive fallback detectable via cross-stage comparison, while DeepSeek-R1 mistranslates premises during formalization, producing internally consistent outputs that evade detection entirely. These findings show that high compilation rates or accuracies should not be equated with faithful reasoning. Code and data are available at https://github.com/koreankiwi99/formalization-gaming.",
+    "published": "Apr 21",
+    "pdf_url": "https://arxiv.org/pdf/2604.19459v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.19459v1",
+    "queried_author": "Antoine Bosselut",
+    "matching_authors": [
+      "Antoine Bosselut"
+    ]
+  },
+  {
+    "title": "SAW-INT4: System-Aware 4-Bit KV-Cache Quantization for Real-World LLM Serving",
+    "authors": [
+      "Jinda Jia",
+      "Jisen Li",
+      "Zhongzhu Zhou",
+      "Jung Hwan Heo",
+      "Jue Wang",
+      "Tri Dao",
+      "Shuaiwen Leon Song",
+      "Ben Athiwaratkun",
+      "Chenfeng Xu",
+      "Tianyi Zhang",
+      "Xiaoxia Wu"
+    ],
+    "summary": "KV-cache memory is a major bottleneck in real-world LLM serving, where systems must simultaneously support latency-sensitive small-batch requests and high-throughput concurrent workloads. Although many KV-cache compression methods improve offline accuracy or compression ratio, they often violate practical serving constraints such as paged memory layouts, regular memory access, and fused attention execution, limiting their effectiveness in deployment.\n  In this work, we identify the minimal set of 4-bit KV-cache quantization methods that remain viable under these constraints. Our central finding is that a simple design--token-wise INT4 quantization with block-diagonal Hadamard rotation--consistently achieves the best accuracy-efficiency trade-off. Across multiple models and benchmarks, this approach recovers nearly all of the accuracy lost by naive INT4, while more complex methods such as vector quantization and Hessian-aware quantization provide only marginal additional gains once serving compatibility is taken into account.\n  To make this practical, we implement a fused rotation-quantization kernel that integrates directly into paged KV-cache layouts and introduces zero measurable end-to-end overhead, matching plain INT4 throughput across concurrency levels. Our results show that effective KV-cache compression is fundamentally a systems co-design problem: under real serving constraints, lightweight block-diagonal Hadamard rotation is a viable method that delivers near-lossless accuracy without sacrificing serving efficiency.",
+    "published": "Apr 21",
+    "pdf_url": "https://arxiv.org/pdf/2604.19157v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.19157v1",
+    "queried_author": "Tri Dao",
+    "matching_authors": [
+      "Tri Dao"
+    ]
+  },
+  {
     "title": "When Can LLMs Learn to Reason with Weak Supervision?",
     "authors": [
       "Salman Rahman",
@@ -12519,39 +12559,6 @@
     "matching_authors": [
       "Danqi Chen",
       "Peter Henderson"
-    ]
-  },
-  {
-    "title": "Social World Models",
-    "authors": [
-      "Xuhui Zhou",
-      "Jiarui Liu",
-      "Akhila Yerukola",
-      "Hyunwoo Kim",
-      "Maarten Sap"
-    ],
-    "summary": "Humans intuitively navigate social interactions by simulating unspoken dynamics and reasoning about others' perspectives, even with limited information. In contrast, AI systems struggle to structure and reason about implicit social contexts, as they lack explicit representations for unobserved dynamics such as intentions, beliefs, and evolving social states. In this paper, we introduce the concept of social world models (SWMs) to characterize the complex social dynamics. To operationalize SWMs, we introduce a novel structured social world representation formalism (S3AP), which captures the evolving states, actions, and mental states of agents, addressing the lack of explicit structure in traditional free-text-based inputs. Through comprehensive experiments across five social reasoning benchmarks, we show that S3AP significantly enhances LLM performance-achieving a +51% improvement on FANToM over OpenAI's o1. Our ablations further reveal that these gains are driven by the explicit modeling of hidden mental states, which proves more effective than a wide range of baseline methods. Finally, we introduce an algorithm for social world models using S3AP, which enables AI agents to build models of their interlocutors and predict their next actions and mental states. Empirically, S3AP-enabled social world models yield up to +18% improvement on the SOTOPIA multi-turn social interaction benchmark. Our findings highlight the promise of S3AP as a powerful, general-purpose representation for social world states, enabling the development of more socially-aware systems that better navigat...",
-    "published": "Aug 30",
-    "pdf_url": "https://arxiv.org/pdf/2509.00559v2",
-    "arxiv_url": "http://arxiv.org/abs/2509.00559v2",
-    "queried_author": "Maarten Sap",
-    "matching_authors": [
-      "Maarten Sap"
-    ]
-  },
-  {
-    "title": "Reasoning-Intensive Regression",
-    "authors": [
-      "Diane Tchuindjo",
-      "Omar Khattab"
-    ],
-    "summary": "AI researchers and practitioners increasingly apply large language models (LLMs) to what we call reasoning-intensive regression (RiR), i.e., deducing subtle numerical scores from text. Unlike standard language regression tasks, e.g., for sentiment or similarity, RiR often appears instead in ad-hoc problems such as rubric-based scoring, modeling dense rewards in complex environments, or domain-specific retrieval, where much deeper analysis of context is required while only limited task-specific training data and computation are available. We cast four realistic problems as RiR tasks to establish an initial benchmark, and use that to test our hypothesis that prompting frozen LLMs and finetuning Transformer encoders via gradient descent will both often struggle in RiR. We then propose MENTAT, a simple and lightweight method that combines batch-reflective prompt optimization with neural ensemble learning. MENTAT achieves up to 65% improvement over both baselines, though substantial room remains for future advances in RiR.",
-    "published": "Aug 29",
-    "pdf_url": "https://arxiv.org/pdf/2508.21762v2",
-    "arxiv_url": "http://arxiv.org/abs/2508.21762v2",
-    "queried_author": "Omar Khattab",
-    "matching_authors": [
-      "Omar Khattab"
     ]
   }
 ]
