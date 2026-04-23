@@ -1,5 +1,79 @@
 [
   {
+    "title": "Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL",
+    "authors": [
+      "Zhaofeng Wu",
+      "Shiqi Wang",
+      "Boya Peng",
+      "Anuj Goyal",
+      "Melanie Kambadur",
+      "Sebastian Ruder",
+      "Yoon Kim",
+      "Chloe Bi"
+    ],
+    "summary": "Modern language models demonstrate impressive coding capabilities in common programming languages (PLs), such as C++ and Python, but their performance in lower-resource PLs is often limited by training data availability. In principle, however, most programming skills are universal across PLs, so the capability acquired in one PL should transfer to others. In this work, we propose the task of zero-shot cross-programming-language transfer for code RL. We find that, for Llama-3.1, RL training for code generation in a source PL fails to improve, and sometimes even degrades, the performance on other target PLs. To address this, we hypothesize that effective RL transfer requires a generalizable SFT initialization before RL. We thus propose **Parallel-SFT**, an SFT strategy that incorporates \"parallel programs\" -- functionally equivalent code implemented in multiple PLs -- into the data mixture. We demonstrate that this improves transferability: when we subsequently perform RL on our Parallel-SFT model, we observe better generalization to unseen PLs. Analysis of the model internal representations reveals that Parallel-SFT leads to a more functionality-centric latent space, where equivalent programs across PLs are more tightly clustered, which we hypothesize to contribute to the improved transferability.",
+    "published": "Apr 22",
+    "pdf_url": "https://arxiv.org/pdf/2604.20835v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.20835v1",
+    "queried_author": "Yoon Kim",
+    "matching_authors": [
+      "Yoon Kim"
+    ]
+  },
+  {
+    "title": "SWE-chat: Coding Agent Interactions From Real Users in the Wild",
+    "authors": [
+      "Joachim Baumann",
+      "Vishakh Padmakumar",
+      "Xiang Li",
+      "John Yang",
+      "Diyi Yang",
+      "Sanmi Koyejo"
+    ],
+    "summary": "AI coding agents are being adopted at scale, yet we lack empirical evidence on how people actually use them and how much of their output is useful in practice. We present SWE-chat, the first large-scale dataset of real coding agent sessions collected from open-source developers in the wild. The dataset currently contains 6,000 sessions, comprising more than 63,000 user prompts and 355,000 agent tool calls. SWE-chat is a living dataset; our collection pipeline automatically and continually discovers and processes sessions from public repositories. Leveraging SWE-chat, we provide an initial empirical characterization of real-world coding agent usage and failure modes. We find that coding patterns are bimodal: in 41% of sessions, agents author virtually all committed code (\"vibe coding\"), while in 23%, humans write all code themselves. Despite rapidly improving capabilities, coding agents remain inefficient in natural settings. Just 44% of all agent-produced code survives into user commits, and agent-written code introduces more security vulnerabilities than code authored by humans. Furthermore, users push back against agent outputs -- through corrections, failure reports, and interruptions -- in 44% of all turns. By capturing complete interaction traces with human vs. agent code authorship attribution, SWE-chat provides an empirical foundation for moving beyond curated benchmarks towards an evidence-based understanding of how AI agents perform in real developer workflows.",
+    "published": "Apr 22",
+    "pdf_url": "https://arxiv.org/pdf/2604.20779v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.20779v1",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang",
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "Scaling Self-Play with Self-Guidance",
+    "authors": [
+      "Luke Bailey",
+      "Kaiyue Wen",
+      "Kefan Dong",
+      "Tatsunori Hashimoto",
+      "Tengyu Ma"
+    ],
+    "summary": "LLM self-play algorithms are notable in that, in principle, nothing bounds their learning: a Conjecturer model creates problems for a Solver, and both improve together. However, in practice, existing LLM self-play methods do not scale well with large amounts of compute, instead hitting learning plateaus. We argue this is because over long training runs, the Conjecturer learns to hack its reward, collapsing to artificially complex problems that do not help the Solver improve. To overcome this, we introduce Self-Guided Self-Play (SGS), a self-play algorithm in which the language model itself guides the Conjecturer away from degeneracy. In SGS, the model takes on three roles: Solver, Conjecturer, and a Guide that scores synthetic problems by their relevance to unsolved target problems and how clean and natural they are, providing supervision against Conjecturer collapse. Our core hypothesis is that language models can assess whether a subproblem is useful for achieving a goal. We evaluate the scaling properties of SGS by running training for significantly longer than prior works and by fitting scaling laws to cumulative solve rate curves. Applying SGS to formal theorem proving in Lean4, we find that it surpasses the asymptotic solve rate of our strongest RL baseline in fewer than 80 rounds of self-play and enables a 7B parameter model, after 200 rounds of self-play, to solve more problems than a 671B parameter model pass@4.",
+    "published": "Apr 22",
+    "pdf_url": "https://arxiv.org/pdf/2604.20209v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.20209v1",
+    "queried_author": "Tatsunori Hashimoto",
+    "matching_authors": [
+      "Tatsunori Hashimoto"
+    ]
+  },
+  {
+    "title": "Temporally Extended Mixture-of-Experts Models",
+    "authors": [
+      "Zeyu Shen",
+      "Peter Henderson"
+    ],
+    "summary": "Mixture-of-Experts models, now popular for scaling capacity at fixed inference speed, switch experts at nearly every token. Once a model outgrows available GPU memory, this churn can render optimizations like offloading and pre-fetching ineffective. We make the case that the options framework in reinforcement learning is a perfect match to tackle this problem, and argue for temporally extended mixture-of-experts layers. Building on the option-critic framework with deliberation costs, we add a controller to each layer that learns when to switch expert sets and which to load. By applying this to gpt-oss-20b with low-rank adapters and a self-distillation reward, our method reduces switch rates from over 50% to below 5% while retaining up to 90% of base-model accuracy on MATH, MMLU, and MMMLU. This shows that even existing pre-trained models can be converted to temporally extended MoEs with lightweight training, with the deliberation cost allowing model trainers to trade off switching rates against capability. We hope this opens a principled path, grounded in the options framework, for memory-efficient serving and continual learning in ever-growing MoE models.",
+    "published": "Apr 22",
+    "pdf_url": "https://arxiv.org/pdf/2604.20156v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.20156v1",
+    "queried_author": "Peter Henderson",
+    "matching_authors": [
+      "Peter Henderson"
+    ]
+  },
+  {
     "title": "Micro Language Models Enable Instant Responses",
     "authors": [
       "Wen Cheng",
@@ -9046,10 +9120,10 @@
       "Robert Brennan",
       "Graham Neubig"
     ],
-    "summary": "Agents are now used widely in the process of software development, but building production-ready software engineering agents is a complex task. Deploying software agents effectively requires flexibility in implementation and experimentation, reliable and secure execution, and interfaces for users to interact with agents. In this paper, we present the OpenHands Software Agent SDK, a toolkit for implementing software development agents that satisfy these desiderata. This toolkit is a complete architectural redesign of the agent components of the popular OpenHands framework for software development agents, which has 64k+ GitHub stars. To achieve flexibility, we design a simple interface for implementing agents that requires only a few lines of code in the default case, but is easily extensible to more complex, full-featured agents with features such as custom tools, memory management, and more. For security and reliability, it delivers seamless local-to-remote execution portability, integrated REST/WebSocket services. For interaction with human users, it can connect directly to a variety of interfaces, such as visual workspaces (VS Code, VNC, browser), command-line interfaces, and APIs. Compared with existing SDKs from OpenAI, Claude, and Google, OpenHands uniquely integrates native sandboxed execution, lifecycle control, model-agnostic multi-LLM routing, and built-in security analysis. Empirical results on SWE-Bench Verified and GAIA benchmarks demonstrate strong performance. Put together, these elements allow the OpenHands Software Agent SDK to provide a practical foundation...",
+    "summary": "Agents are now used widely in the process of software development, but building production-ready software engineering agents is a complex task. Deploying software agents effectively requires flexibility in implementation and experimentation, reliable and secure execution, and interfaces for users to interact with agents. In this paper, we present the OpenHands Software Agent SDK, a toolkit for implementing software development agents that satisfy these desiderata. This toolkit is a complete architectural redesign of the agent components of the popular OpenHands framework for software development agents.\n  To achieve flexibility, we design a simple interface for implementing agents that requires only a few lines of code in the default case, but is easily extensible to more complex full-featured agents with features such as custom tools, memory management, and more. For security and reliability, it delivers seamless local-to-remote execution portability, integrated REST/WebSocket services. For interaction with human users, it can connect directly to a variety of interfaces, such as visual workspaces (VSCode, VNC, browser), command-line interfaces, and APIs. Compared with existing SDKs from OpenAI, Claude and Google, OpenHands uniquely integrates native sandboxed execution, lifecycle control, model-agnostic multi-LLM routing, and built-in security analysis. We validate the architecture empirically: production deployment data shows that V1 substantially reduces system-attributable failures over V0 with negligible event-sourcing overhead, and evaluations across multiple models a...",
     "published": "Nov 05",
-    "pdf_url": "https://arxiv.org/pdf/2511.03690v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.03690v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.03690v2",
+    "arxiv_url": "http://arxiv.org/abs/2511.03690v2",
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig"
@@ -12483,80 +12557,6 @@
     "queried_author": "Ashwinee Panda",
     "matching_authors": [
       "Ashwinee Panda"
-    ]
-  },
-  {
-    "title": "SpecEval: Evaluating Model Adherence to Behavior Specifications",
-    "authors": [
-      "Ahmed Ahmed",
-      "Kevin Klyman",
-      "Yi Zeng",
-      "Sanmi Koyejo",
-      "Percy Liang"
-    ],
-    "summary": "Companies that develop foundation models publish behavioral guidelines they pledge their models will follow, but it remains unclear if models actually do so. While providers such as OpenAI, Anthropic, and Google have published detailed specifications describing both desired safety constraints and qualitative traits for their models, there has been no systematic audit of adherence to these guidelines. We introduce an automated framework that audits models against their providers specifications by parsing behavioral statements, generating targeted prompts, and using models to judge adherence. Our central focus is on three way consistency between a provider specification, its model outputs, and its own models as judges; an extension of prior two way generator validator consistency. This establishes a necessary baseline: at minimum, a foundation model should consistently satisfy the developer behavioral specifications when judged by the developer evaluator models. We apply our framework to 16 models from six developers across more than 100 behavioral statements, finding systematic inconsistencies including compliance gaps of up to 20 percent across providers.",
-    "published": "Sep 02",
-    "pdf_url": "https://arxiv.org/pdf/2509.02464v2",
-    "arxiv_url": "http://arxiv.org/abs/2509.02464v2",
-    "queried_author": "Percy Liang",
-    "matching_authors": [
-      "Percy Liang",
-      "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "Fantastic Pretraining Optimizers and Where to Find Them",
-    "authors": [
-      "Kaiyue Wen",
-      "David Hall",
-      "Tengyu Ma",
-      "Percy Liang"
-    ],
-    "summary": "AdamW has long been the dominant optimizer in language model pretraining, despite numerous claims that alternative optimizers offer 1.4 to 2x speedup. We posit that two methodological shortcomings have obscured fair comparisons and hindered practical adoption: (i) unequal hyperparameter tuning and (ii) limited or misleading evaluation setups. To address these two issues, we conduct a systematic study of ten deep learning optimizers across four model scales (0.1B-1.2B parameters) and data-to-model ratios (1-8x the Chinchilla optimum). We find that fair and informative comparisons require rigorous hyperparameter tuning and evaluations across a range of model scales and data-to-model ratios, performed at the end of training. First, optimal hyperparameters for one optimizer may be suboptimal for another, making blind hyperparameter transfer unfair. Second, the actual speedup of many proposed optimizers over well-tuned baselines is lower than claimed and decreases with model size to only 1.1x for 1.2B parameter models. Thirdly, comparing intermediate checkpoints before reaching the target training budgets can be misleading, as rankings between two optimizers can flip during training due to learning rate decay. Through our thorough investigation, we find that all the fastest optimizers such as Muon and Soap, use matrices as preconditioners -- multiplying gradients with matrices rather than entry-wise scalars. However, the speedup of matrix-based optimizers is inversely proportional to model scale, decreasing from 1.4x over AdamW for 0.1B parameter models to merely 1.1x for 1.2B p...",
-    "published": "Sep 02",
-    "pdf_url": "https://arxiv.org/pdf/2509.02046v2",
-    "arxiv_url": "http://arxiv.org/abs/2509.02046v2",
-    "queried_author": "Percy Liang",
-    "matching_authors": [
-      "Percy Liang"
-    ]
-  },
-  {
-    "title": "Reinforcement Learning for Machine Learning Engineering Agents",
-    "authors": [
-      "Sherry Yang",
-      "Joy He-Yueya",
-      "Percy Liang"
-    ],
-    "summary": "Existing agents for solving tasks such as ML engineering rely on prompting powerful language models. As a result, these agents do not improve with more experience. In this paper, we show that agents backed by weaker models that improve via reinforcement learning (RL) can outperform agents backed by much larger, but static models. We identify two major challenges with RL in this setting. First, actions can take a variable amount of time (e.g., executing code for different solutions), which leads to asynchronous policy gradient updates that favor faster but suboptimal solutions. To tackle variable-duration actions, we propose duration-aware gradient updates in a distributed asynchronous RL framework to amplify high-cost but high-reward actions. Second, using only test split performance as a reward provides limited feedback. A program that is nearly correct is treated the same as one that fails entirely. To address this, we propose environment instrumentation to offer partial credit, distinguishing almost-correct programs from those that fail early (e.g., during data loading). Environment instrumentation uses a separate static language model to insert print statement to an existing program to log the agent's experimental progress, from which partial credit can be extracted as reward signals for learning. Our experimental results on MLEBench suggest that performing gradient updates on a much smaller model (Qwen2.5-3B) trained with RL outperforms prompting a much larger model (Claude-3.5-Sonnet) with agent scaffolds, by an average of 22% across 12 Kaggle tasks.",
-    "published": "Sep 01",
-    "pdf_url": "https://arxiv.org/pdf/2509.01684v1",
-    "arxiv_url": "http://arxiv.org/abs/2509.01684v1",
-    "queried_author": "Percy Liang",
-    "matching_authors": [
-      "Percy Liang"
-    ]
-  },
-  {
-    "title": "Reinforced Visual Perception with Tools",
-    "authors": [
-      "Zetong Zhou",
-      "Dongping Chen",
-      "Zixian Ma",
-      "Zhihan Hu",
-      "Mingyang Fu",
-      "Sinan Wang",
-      "Yao Wan",
-      "Zhou Zhao",
-      "Ranjay Krishna"
-    ],
-    "summary": "Visual reasoning, a cornerstone of human intelligence, encompasses complex perceptual and logical processes essential for solving diverse visual problems. While advances in computer vision have produced powerful models for various perceptual tasks, leveraging these for general visual reasoning remains challenging. Prior work demonstrates that augmenting LLMs with vision models via supervised finetuning improves performance, but faces key limitations such as expensive data generation, reliance on careful data filtering, and poor generalization. To address these issues, we propose ReVPT to enhance multi-modal LLMs' abilities to reason about and use visual tools through reinforcement learning. We introduce a novel RL algorithm based on GRPO, designed to train models to reason with a suite of four visual tools. Through extensive experiments, we show that our method achieves state-of-the-art performance on several perception-heavy benchmarks, including SAT, CV-Bench, BLINK and MMStar, significantly outperforming the supervised and text-based RL finetuning baselines. Notably, Our ReVPT-3B and ReVPT-7B outperform the instruct models by 9.03% and 9.44% on CV-Bench. Finally, we bring to the community new insights on RL-based visual tool-usage through extensive ablations. Our code is available at https://github.com/ls-kelvin/REVPT.",
-    "published": "Sep 01",
-    "pdf_url": "https://arxiv.org/pdf/2509.01656v1",
-    "arxiv_url": "http://arxiv.org/abs/2509.01656v1",
-    "queried_author": "Ranjay Krishna",
-    "matching_authors": [
-      "Ranjay Krishna"
     ]
   }
 ]
