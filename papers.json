@@ -1,5 +1,60 @@
 [
   {
+    "title": "Seeing Fast and Slow: Learning the Flow of Time in Videos",
+    "authors": [
+      "Yen-Siang Wu",
+      "Rundong Luo",
+      "Jingsen Zhu",
+      "Tao Tu",
+      "Ali Farhadi",
+      "Matthew Wallingford",
+      "Yu-Chiang Frank Wang",
+      "Steve Marschner",
+      "Wei-Chiu Ma"
+    ],
+    "summary": "How can we tell whether a video has been sped up or slowed down? How can we generate videos at different speeds? Although videos have been central to modern computer vision research, little attention has been paid to perceiving and controlling the passage of time. In this paper, we study time as a learnable visual concept and develop models for reasoning about and manipulating the flow of time in videos. We first exploit the multimodal cues and temporal structure naturally present in videos to learn, in a self-supervised manner, to detect speed changes and estimate playback speed. We then show that these learned temporal reasoning models enable us to curate the largest slow-motion video dataset to date from noisy in-the-wild sources. Such slow-motion footage, typically filmed by high-speed cameras, contains substantially richer temporal detail than standard videos. Using this data, we further develop models capable of temporal control, including speed-conditioned video generation, which produces motion at specified playback speed, and temporal super-resolution, which tranforms low-FPS, blurry videos into high-FPS sequences with fine-grained temporal details. Our findings highlight time as a manipulable, perceptual dimension in video learning, opening doors to temporally controllable video generation, temporal forensics detection, and potentially richer world-models that understand how events unfold over time.",
+    "published": "Apr 23",
+    "pdf_url": "https://arxiv.org/pdf/2604.21931v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.21931v1",
+    "queried_author": "Ali Farhadi",
+    "matching_authors": [
+      "Ali Farhadi"
+    ]
+  },
+  {
+    "title": "Alignment has a Fantasia Problem",
+    "authors": [
+      "Nathanael Jo",
+      "Zoe De Simone",
+      "Mitchell Gordon",
+      "Ashia Wilson"
+    ],
+    "summary": "Modern AI assistants are trained to follow instructions, implicitly assuming that users can clearly articulate their goals and the kind of assistance they need. Decades of behavioral research, however, show that people often engage with AI systems before their goals are fully formed. When AI systems treat prompts as complete expressions of intent, they can appear to be useful or convenient, but not necessarily aligned with the users' needs. We call these failures Fantasia interactions. We argue that Fantasia interactions demand a rethinking of alignment research: rather than treating users as rational oracles, AI should provide cognitive support by actively helping users form and refine their intent through time. This requires an interdisciplinary approach that bridges machine learning, interface design, and behavioral science. We synthesize insights from these fields to characterize the mechanisms and failures of Fantasia interactions. We then show why existing interventions are insufficient, and propose a research agenda for designing and evaluating AI systems that better help humans navigate uncertainty in their tasks.",
+    "published": "Apr 23",
+    "pdf_url": "https://arxiv.org/pdf/2604.21827v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.21827v1",
+    "queried_author": "Mitchell Gordon",
+    "matching_authors": [
+      "Mitchell Gordon"
+    ]
+  },
+  {
+    "title": "Hyperloop Transformers",
+    "authors": [
+      "Abbas Zeitoun",
+      "Lucas Torroba-Hennigen",
+      "Yoon Kim"
+    ],
+    "summary": "LLM architecture research generally aims to maximize model quality subject to fixed compute/latency budgets. However, many applications of interest such as edge and on-device deployment are further constrained by the model's memory footprint, thus motivating parameter-efficient architectures for language modeling. This paper describes a simple architecture that improves the parameter-efficiency of LLMs. Our architecture makes use of looped Transformers as a core primitive, which reuse Transformer layers across depth and are thus more parameter-efficient than ordinary (depth-matched) Transformers. We organize the looped Transformer into three blocks--begin, middle, and end blocks--where each block itself consists of multiple Transformer layers, and only the middle block is applied recurrently across depth. We augment the looped middle block with hyper-connections (Xie et al., 2026), which expand the residual stream into matrix-valued residual streams. Hyper-connections are applied only after each loop, and therefore add minimal new parameters and compute cost. Across various model scales, we find that our Hyper-Connected Looped Transformer (Hyperloop Transformer) is able to outperform depth-matched Transformer and mHC Transformer baselines despite using approximately 50% fewer parameters. The outperformance persists through post-training weight quantization, thus positioning Hyperloop Transformers as an attractive architecture for memory-efficient language modeling.",
+    "published": "Apr 23",
+    "pdf_url": "https://arxiv.org/pdf/2604.21254v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.21254v1",
+    "queried_author": "Yoon Kim",
+    "matching_authors": [
+      "Yoon Kim"
+    ]
+  },
+  {
     "title": "Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL",
     "authors": [
       "Zhaofeng Wu",
@@ -13,8 +68,8 @@
     ],
     "summary": "Modern language models demonstrate impressive coding capabilities in common programming languages (PLs), such as C++ and Python, but their performance in lower-resource PLs is often limited by training data availability. In principle, however, most programming skills are universal across PLs, so the capability acquired in one PL should transfer to others. In this work, we propose the task of zero-shot cross-programming-language transfer for code RL. We find that, for Llama-3.1, RL training for code generation in a source PL fails to improve, and sometimes even degrades, the performance on other target PLs. To address this, we hypothesize that effective RL transfer requires a generalizable SFT initialization before RL. We thus propose **Parallel-SFT**, an SFT strategy that incorporates \"parallel programs\" -- functionally equivalent code implemented in multiple PLs -- into the data mixture. We demonstrate that this improves transferability: when we subsequently perform RL on our Parallel-SFT model, we observe better generalization to unseen PLs. Analysis of the model internal representations reveals that Parallel-SFT leads to a more functionality-centric latent space, where equivalent programs across PLs are more tightly clustered, which we hypothesize to contribute to the improved transferability.",
     "published": "Apr 22",
-    "pdf_url": "https://arxiv.org/pdf/2604.20835v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.20835v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.20835v2",
+    "arxiv_url": "http://arxiv.org/abs/2604.20835v2",
     "queried_author": "Yoon Kim",
     "matching_authors": [
       "Yoon Kim"
@@ -130,6 +185,25 @@
     "queried_author": "Tri Dao",
     "matching_authors": [
       "Tri Dao"
+    ]
+  },
+  {
+    "title": "Beyond One Output: Visualizing and Comparing Distributions of Language Model Generations",
+    "authors": [
+      "Emily Reif",
+      "Claire Yang",
+      "Jared Hwang",
+      "Deniz Nazar",
+      "Noah A. Smith",
+      "Jeff Heer"
+    ],
+    "summary": "Users typically interact with and evaluate language models via single outputs, but each output is just one sample from a broad distribution of possible completions. This interaction hides distributional structure such as modes, uncommon edge cases, and sensitivity to small prompt changes, leading users to over-generalize from anecdotes when iterating on prompts for open-ended tasks. Informed by a formative study with researchers who use LMs (n=13) examining when stochasticity matters in practice, how they reason about distributions over language, and where current workflows break down, we introduce GROVE. GROVE is an interactive visualization that represents multiple LM generations as overlapping paths through a text graph, revealing shared structure, branching points, and clusters while preserving access to raw outputs. We evaluate across three crowdsourced user studies (N=47, 44, and 40 participants) targeting complementary distributional tasks. Our results support a hybrid workflow: graph summaries improve structural judgments such as assessing diversity, while direct output inspection remains stronger for detail-oriented questions.",
+    "published": "Apr 20",
+    "pdf_url": "https://arxiv.org/pdf/2604.18724v2",
+    "arxiv_url": "http://arxiv.org/abs/2604.18724v2",
+    "queried_author": "Noah A. Smith",
+    "matching_authors": [
+      "Noah A. Smith"
     ]
   },
   {
@@ -8878,8 +8952,8 @@
     ],
     "summary": "A common approach to mechanistic interpretability is to causally manipulate model representations via targeted interventions in order to understand what those representations encode. Here we ask whether such interventions create out-of-distribution (divergent) representations, and whether this raises concerns about how faithful their resulting explanations are to the target model in its natural state. First, we demonstrate theoretically and empirically that common causal intervention techniques often do shift internal representations away from the natural distribution of the target model. Then, we provide a theoretical analysis of two cases of such divergences: \"harmless\" divergences that occur in the behavioral null-space of the layer(s) of interest, and \"pernicious\" divergences that activate hidden network pathways and cause dormant behavioral changes. Finally, in an effort to mitigate the pernicious cases, we apply and modify the Counterfactual Latent (CL) loss from Grant (2025) allowing representations from causal interventions to remain closer to the natural distribution, reducing the likelihood of harmful divergences while preserving the interpretive power of the interventions. Together, these results highlight a path towards more reliable interpretability methods.",
     "published": "Nov 06",
-    "pdf_url": "https://arxiv.org/pdf/2511.04638v4",
-    "arxiv_url": "http://arxiv.org/abs/2511.04638v4",
+    "pdf_url": "https://arxiv.org/pdf/2511.04638v5",
+    "arxiv_url": "http://arxiv.org/abs/2511.04638v5",
     "queried_author": "Christopher Potts",
     "matching_authors": [
       "Christopher Potts"
@@ -10300,8 +10374,8 @@
     ],
     "summary": "Real-world settings where language models (LMs) are deployed -- in domains spanning healthcare, finance, and other forms of knowledge work -- require models to grapple with incomplete information and reason under uncertainty. Yet most LM evaluations focus on problems with well-defined answers and success criteria. This gap exists in part because natural problems involving uncertainty are difficult to construct: given that LMs have access to most of the same knowledge as humans, it is non-trivial to design questions for which LMs will struggle to produce correct answers, but which humans can answer reliably. As a result, LM performance on reasoning under uncertainty remains poorly characterized. To address this gap, we introduce OpenEstimate, an extensible, multi-domain benchmark for evaluating LMs on numerical estimation tasks that require models to synthesize significant amounts of background information and express predictions as probabilistic priors. We assess these priors for accuracy and calibration, quantifying their usefulness relative to samples from the true distribution of interest. Across six frontier LMs, we find that LM-elicited priors are often inaccurate and overconfident. Performance improves modestly depending on how uncertainty is elicited from the model, but is largely unaffected by changes in sampling strategy, reasoning effort, or prompt design. The OpenEstimate benchmark thus offers a challenging evaluation for frontier LMs and a platform for developing models that are better at probabilistic estimation and reasoning under uncertainty.",
     "published": "Oct 16",
-    "pdf_url": "https://arxiv.org/pdf/2510.15096v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.15096v1",
+    "pdf_url": "https://arxiv.org/pdf/2510.15096v2",
+    "arxiv_url": "http://arxiv.org/abs/2510.15096v2",
     "queried_author": "Jacob Andreas",
     "matching_authors": [
       "Jacob Andreas"
@@ -12481,82 +12555,6 @@
     "queried_author": "Orion Weller",
     "matching_authors": [
       "Orion Weller"
-    ]
-  },
-  {
-    "title": "Audits Under Resource, Data, and Access Constraints: Scaling Laws For Less Discriminatory Alternatives",
-    "authors": [
-      "Sarah H. Cen",
-      "Salil Goyal",
-      "Zaynah Javed",
-      "Ananya Karthik",
-      "Percy Liang",
-      "Daniel E. Ho"
-    ],
-    "summary": "AI audits play a critical role in AI accountability and safety. One branch of the law for which AI audits are particularly salient is anti-discrimination law. Several areas of anti-discrimination law implicate the \"less discriminatory alternative\" (LDA) requirement, in which a protocol (e.g., model) is defensible if no less discriminatory protocol that achieves comparable performance can be found with a reasonable amount of effort. Notably, the burden of proving an LDA exists typically falls on the claimant (the party alleging discrimination). This creates a significant hurdle in AI cases, as the claimant would seemingly need to train a less discriminatory yet high-performing model, a task requiring resources and expertise beyond most litigants. Moreover, developers often shield information about and access to their model and training data as trade secrets, making it difficult to reproduce a similar model from scratch.\n  In this work, we present a procedure enabling claimants to determine if an LDA exists, even when they have limited compute, data, information, and model access. We focus on the setting in which fairness is given by demographic parity and performance by binary cross-entropy loss. As our main result, we provide a novel closed-form upper bound for the loss-fairness Pareto frontier (PF). We show how the claimant can use it to fit a PF in the \"low-resource regime,\" then extrapolate the PF that applies to the (large) model being contested, all without training a single large model. The expression thus serves as a scaling law for loss-fairness PFs. To use this sca...",
-    "published": "Sep 06",
-    "pdf_url": "https://arxiv.org/pdf/2509.05627v1",
-    "arxiv_url": "http://arxiv.org/abs/2509.05627v1",
-    "queried_author": "Percy Liang",
-    "matching_authors": [
-      "Percy Liang"
-    ]
-  },
-  {
-    "title": "Ad hoc conventions generalize to new referents",
-    "authors": [
-      "Anya Ji",
-      "Claire Augusta Bergey",
-      "Ron Eliav",
-      "Yoav Artzi",
-      "Robert D. Hawkins"
-    ],
-    "summary": "How do people talk about things they've never talked about before? One view suggests that a new shared naming system establishes an arbitrary link to a specific target, like proper names that cannot extend beyond their bearers. An alternative view proposes that forming a shared way of describing objects involves broader conceptual alignment, reshaping each individual's semantic space in ways that should generalize to new referents. We test these competing accounts in a dyadic communication study (N=302) leveraging the recently-released KiloGram dataset containing over 1,000 abstract tangram images. After pairs of participants coordinated on referential conventions for one set of images through repeated communication, we measured the extent to which their descriptions aligned for undiscussed images. We found strong evidence for generalization: partners showed increased alignment relative to their pre-test labels. Generalization also decayed nonlinearly with visual similarity (consistent with Shepard's law) and was robust across levels of the images' nameability. These findings suggest that ad hoc conventions are not arbitrary labels but reflect genuine conceptual coordination, with implications for theories of reference and the design of more adaptive language agents.",
-    "published": "Sep 06",
-    "pdf_url": "https://arxiv.org/pdf/2509.05566v1",
-    "arxiv_url": "http://arxiv.org/abs/2509.05566v1",
-    "queried_author": "Yoav Artzi",
-    "matching_authors": [
-      "Yoav Artzi"
-    ]
-  },
-  {
-    "title": "Crosscoding Through Time: Tracking Emergence & Consolidation Of Linguistic Representations Throughout LLM Pretraining",
-    "authors": [
-      "Deniz Bayazit",
-      "Aaron Mueller",
-      "Antoine Bosselut"
-    ],
-    "summary": "Large language models (LLMs) learn non-trivial abstractions during pretraining, like detecting irregular plural noun subjects. However, it is not well understood when and how specific linguistic abilities emerge as traditional evaluation methods such as benchmarking fail to reveal how models acquire concepts and capabilities. To bridge this gap and better understand model training at the concept level, we use sparse crosscoders to discover and align features across model checkpoints. Using this approach, we track the evolution of linguistic features during pretraining. We train crosscoders between open-sourced checkpoint triplets with significant performance and representation shifts, and introduce a novel metric, Relative Indirect Effects (RelIE), to trace training stages at which individual features become causally important for task performance. We show that crosscoders can detect feature emergence, maintenance, and discontinuation during pretraining. Our approach is architecture-agnostic and scalable, offering a promising path toward more interpretable and fine-grained analysis of representation learning throughout pretraining.",
-    "published": "Sep 05",
-    "pdf_url": "https://arxiv.org/pdf/2509.05291v1",
-    "arxiv_url": "http://arxiv.org/abs/2509.05291v1",
-    "queried_author": "Antoine Bosselut",
-    "matching_authors": [
-      "Antoine Bosselut"
-    ]
-  },
-  {
-    "title": "DynaGuard: A Dynamic Guardian Model With User-Defined Policies",
-    "authors": [
-      "Monte Hoover",
-      "Vatsal Baherwani",
-      "Neel Jain",
-      "Khalid Saifullah",
-      "Joseph Vincent",
-      "Chirag Jain",
-      "Melissa Kazemi Rad",
-      "C. Bayan Bruss",
-      "Ashwinee Panda",
-      "Tom Goldstein"
-    ],
-    "summary": "Guardian models play a crucial role in ensuring the safety and ethical behavior of user-facing AI applications by enforcing guardrails and detecting harmful content. While standard guardian models are limited to predefined, static harm categories, we introduce DynaGuard, a suite of dynamic guardian models offering novel flexibility by evaluating text based on user-defined policies, and DynaBench, a dataset for training and evaluating dynamic guardian models. Our models provide both rapid detection of policy violations and a chain-of-thought reasoning option that articulate and justify model outputs. Critically, DynaGuard not only surpasses static models in detection accuracy on traditional safety categories, but is competitive with frontier reasoning models on free-form policy violations, all in a fraction of the time. This makes DynaGuard an critical tool for language model guardrails.",
-    "published": "Sep 02",
-    "pdf_url": "https://arxiv.org/pdf/2509.02563v3",
-    "arxiv_url": "http://arxiv.org/abs/2509.02563v3",
-    "queried_author": "Ashwinee Panda",
-    "matching_authors": [
-      "Ashwinee Panda"
     ]
   }
 ]
