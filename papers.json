@@ -1,5 +1,23 @@
 [
   {
+    "title": "Outcome Rewards Do Not Guarantee Verifiable or Causally Important Reasoning",
+    "authors": [
+      "Qinan Yu",
+      "Alexa Tartaglini",
+      "Peter Hase",
+      "Carlos Guestrin",
+      "Christopher Potts"
+    ],
+    "summary": "Reinforcement Learning from Verifiable Rewards (RLVR) on chain-of-thought reasoning has become a standard part of language model post-training recipes. A common assumption is that the reasoning chains trained through RLVR reliably represent how a model gets to its answer. In this paper, we develop two metrics for critically examining this assumption: Causal Importance of Reasoning (CIR), which measures the cumulative effect of reasoning tokens on the final answer, and Sufficiency of Reasoning (SR), which measures whether a verifier can arrive at an unambiguous answer based on the reasoning alone. Through experiments with the Qwen2.5 model series and ReasoningGym tasks, we find that: (1) while RLVR does improve task accuracy, it does not reliably improve CIR or SR, calling the role of reasoning in model performance into question; (2) a small amount of SFT before RLVR can be a remedy for low CIR and SR; and (3) CIR and SR can be improved even without SFT by applying auxiliary CIR/SR rewards on top of the outcome-based reward. This joint reward matches the accuracy of RLVR while also leading to causally important and sufficient reasoning. These results show that RLVR does not always lead models to rely on reasoning in the way that is commonly thought, but this issue can be remedied with simple modifications to the post-training procedure.",
+    "published": "Apr 23",
+    "pdf_url": "https://arxiv.org/pdf/2604.22074v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.22074v1",
+    "queried_author": "Christopher Potts",
+    "matching_authors": [
+      "Christopher Potts"
+    ]
+  },
+  {
     "title": "Seeing Fast and Slow: Learning the Flow of Time in Videos",
     "authors": [
       "Yen-Siang Wu",
@@ -4915,10 +4933,10 @@
       "Ashwinee Panda",
       "Tom Goldstein"
     ],
-    "summary": "Existing techniques for accelerating language model inference, such as speculative decoding, require training auxiliary speculator models and building and deploying complex inference pipelines. We consider a new approach for converting a pretrained autoregressive language model from a slow single next token prediction model into a fast standalone multi-token prediction model using a simple online distillation objective. The final model retains the exact same implementation as the pretrained initial checkpoint and is deployable without the addition of any auxiliary verifier or other specialized inference code. On GSM8K, our method produces models that can decode more than $3\\times$ faster on average at $<5\\%$ drop in accuracy relative to single token decoding performance.",
+    "summary": "Existing techniques for accelerating language model inference, such as speculative decoding, require training auxiliary speculator models and building and deploying complex inference pipelines. We consider a new approach for converting a pretrained autoregressive language model from a slow single next token prediction model into a fast standalone multi-token prediction model using a simple online distillation objective. The final model retains the exact same implementation as the pretrained initial checkpoint and is deployable without the addition of any auxiliary verifier or other specialized inference code. Our method produces models that decode more than $3\\times$ faster at $<5\\%$ drop in accuracy on GSM8K relative to the single token decoding performance of the same checkpoint.",
     "published": "Feb 05",
-    "pdf_url": "https://arxiv.org/pdf/2602.06019v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.06019v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.06019v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.06019v2",
     "queried_author": "Ashwinee Panda",
     "matching_authors": [
       "Ashwinee Panda",
@@ -12536,25 +12554,6 @@
     "queried_author": "Yoon Kim",
     "matching_authors": [
       "Yoon Kim"
-    ]
-  },
-  {
-    "title": "mmBERT: A Modern Multilingual Encoder with Annealed Language Learning",
-    "authors": [
-      "Marc Marone",
-      "Orion Weller",
-      "William Fleshman",
-      "Eugene Yang",
-      "Dawn Lawrie",
-      "Benjamin Van Durme"
-    ],
-    "summary": "Encoder-only languages models are frequently used for a variety of standard machine learning tasks, including classification and retrieval. However, there has been a lack of recent research for encoder models, especially with respect to multilingual models. We introduce mmBERT, an encoder-only language model pretrained on 3T tokens of multilingual text in over 1800 languages. To build mmBERT we introduce several novel elements, including an inverse mask ratio schedule and an inverse temperature sampling ratio. We add over 1700 low-resource languages to the data mix only during the decay phase, showing that it boosts performance dramatically and maximizes the gains from the relatively small amount of training data. Despite only including these low-resource languages in the short decay phase we achieve similar classification performance to models like OpenAI's o3 and Google's Gemini 2.5 Pro. Overall, we show that mmBERT significantly outperforms the previous generation of models on classification and retrieval tasks -- on both high and low-resource languages.",
-    "published": "Sep 08",
-    "pdf_url": "https://arxiv.org/pdf/2509.06888v1",
-    "arxiv_url": "http://arxiv.org/abs/2509.06888v1",
-    "queried_author": "Orion Weller",
-    "matching_authors": [
-      "Orion Weller"
     ]
   }
 ]
