@@ -1,5 +1,30 @@
 [
   {
+    "title": "DRACULA: Hunting for the Actions Users Want Deep Research Agents to Execute",
+    "authors": [
+      "Nishant Balepur",
+      "Malachi Hamada",
+      "Varsha Kishore",
+      "Sergey Feldman",
+      "Amanpreet Singh",
+      "Pao Siangliulue",
+      "Joseph Chee Chang",
+      "Rachel Rudinger",
+      "Eunsol Choi",
+      "Jordan Lee Boyd-Graber",
+      "Doug Downey",
+      "Aakanksha Naik"
+    ],
+    "summary": "Scientific Deep Research (DR) agents answer user queries by synthesizing research papers into multi-section reports. User feedback can improve their utility, but existing protocols only score the final report, making it hard to study and learn which intermediate actions DR agents should take to improve reports. We collect DRACULA, the first dataset with user feedback on intermediate actions for DR. Over five weeks, nineteen expert CS researchers ask queries to a DR system that proposes actions (e.g., \"Add a section on datasets\"). Our users select actions they prefer, then judge whether an output report applied their selections successfully, yielding 8,103 action preferences and 5,230 execution judgments. After confirming a DR agent can execute DRACULA's actions, we study the predictability of user-preferred actions via simulation-how well LLMs predict the actions users select-a step toward learning to generate useful actions. We discover: (1) LLM judges initially struggle to predict action selections, but improve most when using a user's full selection history, rather than self-reported or extrapolated user context signals; (2) Users' selections for the same query differ based on unstated goals, bottlenecking simulation and motivating affordances that let users steer reports; and (3) Our simulation results inform an online intervention that generates new actions based on the user's past interactions, which users pick most often in follow-up studies. Overall, while work extensively studies execution, DRACULA reveals a key challenge is deciding which actions to execute in the...",
+    "published": "Apr 26",
+    "pdf_url": "https://arxiv.org/pdf/2604.23815v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.23815v1",
+    "queried_author": "Eunsol Choi",
+    "matching_authors": [
+      "Eunsol Choi"
+    ]
+  },
+  {
     "title": "V-GRPO: Online Reinforcement Learning for Denoising Generative Models Is Easier than You Think",
     "authors": [
       "Bingda Tang",
@@ -12529,32 +12554,6 @@
     "queried_author": "Luke Zettlemoyer",
     "matching_authors": [
       "Luke Zettlemoyer"
-    ]
-  },
-  {
-    "title": "The ML-SUPERB 2.0 Challenge: Towards Inclusive ASR Benchmarking for All Language Varieties",
-    "authors": [
-      "William Chen",
-      "Chutong Meng",
-      "Jiatong Shi",
-      "Martijn Bartelds",
-      "Shih-Heng Wang",
-      "Hsiu-Hsuan Wang",
-      "Rafael Mosquera",
-      "Sara Hincapie",
-      "Dan Jurafsky",
-      "Antonis Anastasopoulos",
-      "Hung-yi Lee",
-      "Karen Livescu",
-      "Shinji Watanabe"
-    ],
-    "summary": "Recent improvements in multilingual ASR have not been equally distributed across languages and language varieties. To advance state-of-the-art (SOTA) ASR models, we present the Interspeech 2025 ML-SUPERB 2.0 Challenge. We construct a new test suite that consists of data from 200+ languages, accents, and dialects to evaluate SOTA multilingual speech models. The challenge also introduces an online evaluation server based on DynaBench, allowing for flexibility in model design and architecture for participants. The challenge received 5 submissions from 3 teams, all of which outperformed our baselines. The best-performing submission achieved an absolute improvement in LID accuracy of 23% and a reduction in CER of 18% when compared to the best baseline on a general multilingual test set. On accented and dialectal data, the best submission obtained 30.2% lower CER and 15.7% higher LID accuracy, showing the importance of community challenges in making speech technologies more inclusive.",
-    "published": "Sep 08",
-    "pdf_url": "https://arxiv.org/pdf/2509.07139v1",
-    "arxiv_url": "http://arxiv.org/abs/2509.07139v1",
-    "queried_author": "Dan Jurafsky",
-    "matching_authors": [
-      "Dan Jurafsky"
     ]
   }
 ]
