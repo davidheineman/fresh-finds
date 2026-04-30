@@ -1,5 +1,54 @@
 [
   {
+    "title": "FlowBot: Inducing LLM Workflows with Bilevel Optimization and Textual Gradients",
+    "authors": [
+      "Hongyeon Yu",
+      "Young-Bum Kim",
+      "Yoon Kim"
+    ],
+    "summary": "LLM workflows, which coordinate structured calls to individual LLMs (each augmented with varying instructions and tools) to achieve a particular goal, offer a promising path towards extending the capabilities of LLMs and building powerful systems that can tackle diverse tasks. However, existing approaches for building such workflows generally rely on human-crafted pipelines and prompts, which presents a substantial bottleneck in real world deployment. How can automatically induce and optimize such workflows in a data-driven way? This paper describes a simple data-driven approach for automatically inducing LLM workflows. We formulate workflow induction as a bilevel optimization problem: an outer loop which optimizes a high-level sketch of the workflow (in particular how the LLM calls should be structured), and an inner loop which optimizes each individual LLM call one-by one. Both loops are optimized with ``textual gradients'' where for the inner loop we optimize each component in a modular way through ``backpropagating'' textual gradients layer-by-layer. We find that LLM workflows discovered through our \\textsc{FlowBot} (work\\textbf{flow} induction through \\textbf{b}ilevel \\textbf{o}ptimization and \\textbf{t}extual gradients) approach performs competitively against strong baselines that make use of human-crafted or automatically-generated workflows.",
+    "published": "Apr 29",
+    "pdf_url": "https://arxiv.org/pdf/2604.26258v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.26258v1",
+    "queried_author": "Yoon Kim",
+    "matching_authors": [
+      "Yoon Kim"
+    ]
+  },
+  {
+    "title": "Lifting Embodied World Models for Planning and Control",
+    "authors": [
+      "Alex N. Wang",
+      "Trevor Darrell",
+      "Pavel Izmailov",
+      "Yutong Bai",
+      "Amir Bar"
+    ],
+    "summary": "World models of embodied agents predict future observations conditioned on an action taken by the agent. For complex embodiments, action spaces are high-dimensional and difficult to specify: for example, precisely controlling a human agent requires specifying the motion of each joint. This makes the world model hard to control and expensive to plan with as search-based methods like CEM scale poorly with action dimensionality. To address this issue, we train a lightweight policy that maps high-level actions to sequences of low-level joint actions. Composing this policy with the frozen world model produces a lifted world model that predicts a sequence of future observations from a single high-level action. We instantiate this framework for a human-like embodiment, defining the high-level action space as a small set of 2D waypoints annotated on the current observation frame, each specifying a near-term goal position for a leaf joint (pelvis, head, hands). Waypoints are low-dimensional, visually interpretable, and easy to specify manually or to search over. We show that the lifted world model substantially outperforms searching directly in low-level joint space ($3.8\\times$ lower mean joint error to the goal pose), while remaining more compute-efficient and generalizing to environments unseen by the policy.",
+    "published": "Apr 28",
+    "pdf_url": "https://arxiv.org/pdf/2604.26182v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.26182v1",
+    "queried_author": "Pavel Izmailov",
+    "matching_authors": [
+      "Pavel Izmailov"
+    ]
+  },
+  {
+    "title": "Robust Representation Learning through Explicit Environment Modeling",
+    "authors": [
+      "Yuli Slavutsky",
+      "David M. Blei"
+    ],
+    "summary": "We consider learning from labeled data collected across multiple environments, where the data distribution may vary across these environments. This problem is commonly approached from a causal perspective, seeking invariant representations that retain causal factors while discarding spurious ones. However, this framework assumes that the environment has no direct effect on the target. In contrast, we consider settings in which this assumption fails, but still aim to learn representations that support robust prediction on average across previously unseen environments. To this end, we study representations learned by explicitly modeling variation across environments and then marginalizing that variation out. We analyze the resulting representations and characterize when they are preferable to those learned by causal invariant-representation methods. We propose a concrete method based on generalized random-intercept models, a class of predictors in which such marginalization is possible, and study their generalization properties. Empirically, we show that these models outperform invariant-learning methods across a range of challenging settings.",
+    "published": "Apr 28",
+    "pdf_url": "https://arxiv.org/pdf/2604.26128v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.26128v1",
+    "queried_author": "David M. Blei",
+    "matching_authors": [
+      "David M. Blei"
+    ]
+  },
+  {
     "title": "A paradox of AI fluency",
     "authors": [
       "Christopher Potts",
@@ -12687,72 +12736,6 @@
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Harnessing Optimization Dynamics for Curvature-Informed Model Merging",
-    "authors": [
-      "Pouria Mahdavinia",
-      "Hamed Mahdavi",
-      "Niloofar Mireshghallah",
-      "Mehrdad Mahdavi"
-    ],
-    "summary": "Model merging is an effective post-training strategy for composing capabilities in large language models without joint retraining. We study this in the supervised fine-tuning (SFT) stage, where multiple capability-based SFT checkpoints -- spanning math, code, precise instruction following, general instruction following, and knowledge recall -- must be consolidated into a single model. We introduce Optimization Trajectory Aware (OTA) Merging, a curvature-aware aggregation that leverages optimizer second-moment statistics as a diagonal curvature proxy to reweight parameter edits and mitigate interference. Complementing OTA, we propose Fast Fisher Grafting (FFG), a curvature-driven task-localization step that sparsifies conflicting or low-importance edits. FFG induces extremely low-rank masks concentrated in early attention query/key projections and token embeddings, exploiting shared curvature across capabilities. We further develop a memory-light compression of the second moments that preserves OTA's effect. Across diverse capability-based SFT checkpoints, OTA+FFG improves merged-model quality over strong weight-space baselines, reduces negative transfer, and remains robust across sparsity levels. Analyses reveal substantial curvature overlap between checkpoints, offering a novel lens on why simple linear merging can be effective in practice. Ablations confirm that FFG is critical for reducing task interference and that the compressed second moments retain the gains of the full formulation. To facilitate reproducibility, we open-source all code, training and evaluation scrip...",
-    "published": "Sep 14",
-    "pdf_url": "https://arxiv.org/pdf/2509.11167v1",
-    "arxiv_url": "http://arxiv.org/abs/2509.11167v1",
-    "queried_author": "Niloofar Mireshghallah",
-    "matching_authors": [
-      "Niloofar Mireshghallah"
-    ]
-  },
-  {
-    "title": "Fluid Language Model Benchmarking",
-    "authors": [
-      "Valentin Hofmann",
-      "David Heineman",
-      "Ian Magnusson",
-      "Kyle Lo",
-      "Jesse Dodge",
-      "Maarten Sap",
-      "Pang Wei Koh",
-      "Chun Wang",
-      "Hannaneh Hajishirzi",
-      "Noah A. Smith"
-    ],
-    "summary": "Language model (LM) benchmarking faces several challenges: comprehensive evaluations are costly, benchmarks often fail to measure the intended capabilities, and evaluation quality can degrade due to labeling errors and benchmark saturation. Although various strategies have been proposed to mitigate these issues, they tend to address individual aspects in isolation, neglecting broader questions about overall evaluation quality. Here, we introduce Fluid Benchmarking, a new evaluation approach that advances LM benchmarking across multiple dimensions. Inspired by psychometrics, Fluid Benchmarking is based on the insight that the relative value of benchmark items depends on an LM's capability level, suggesting that evaluation should adapt to each LM. Methodologically, Fluid Benchmarking estimates an item response model based on existing LM evaluation results and uses the inferred quantities to select evaluation items dynamically, similar to computerized adaptive testing in education. In our experiments, we compare Fluid Benchmarking against the common practice of random item sampling as well as more sophisticated baselines, including alternative methods grounded in item response theory. We examine four dimensions -- efficiency, validity, variance, and saturation -- and find that Fluid Benchmarking achieves superior performance in all of them (e.g., higher validity and less variance on MMLU with fifty times fewer items). Our analysis shows that the two components of Fluid Benchmarking have distinct effects: item response theory, used to map performance into a latent ability space...",
-    "published": "Sep 14",
-    "pdf_url": "https://arxiv.org/pdf/2509.11106v1",
-    "arxiv_url": "http://arxiv.org/abs/2509.11106v1",
-    "queried_author": "Hannaneh Hajishirzi",
-    "matching_authors": [
-      "Hannaneh Hajishirzi",
-      "Ian Magnusson",
-      "Jesse Dodge",
-      "Kyle Lo",
-      "Maarten Sap",
-      "Noah A. Smith",
-      "Pang Wei Koh",
-      "Valentin Hofmann"
-    ]
-  },
-  {
-    "title": "Rethinking Human Preference Evaluation of LLM Rationales",
-    "authors": [
-      "Ziang Li",
-      "Manasi Ganti",
-      "Zixian Ma",
-      "Helena Vasconcelos",
-      "Qijia He",
-      "Ranjay Krishna"
-    ],
-    "summary": "Large language models (LLMs) often generate natural language rationales -- free-form explanations that help improve performance on complex reasoning tasks and enhance interpretability for human users. However, evaluating these rationales remains challenging. While recent work has relied on binary preference judgments from humans or LLM judges, such evaluations are often opaque and coarse-grained, offering limited insight into what makes one rationale better than another. In this work, we rethink preference evaluation for LLM-generated rationales by asking: (1) What attributes define good rationales? (2) Can human preferences be explained by these attributes? (3) Can attribute-based evaluation overcome the limitations of binary comparisons? We identify a set of key rationale attributes from prior literature and assess them using automatic metrics, LLM judgments, and human annotations. We then analyze two standard human preference datasets MT Bench and Chatbot Arena using SHAP to identify which attributes best explain human preference outcomes. Finally, we re-evaluate model-generated rationales using attribute-specific ELO scores, revealing more nuanced model comparisons and insights. Our findings suggest that fine-grained attribute evaluations can better characterize rationale quality and guide future research toward more interpretable and reliable evaluation practices.",
-    "published": "Sep 14",
-    "pdf_url": "https://arxiv.org/pdf/2509.11026v1",
-    "arxiv_url": "http://arxiv.org/abs/2509.11026v1",
-    "queried_author": "Ranjay Krishna",
-    "matching_authors": [
-      "Ranjay Krishna"
     ]
   }
 ]
