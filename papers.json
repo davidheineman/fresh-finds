@@ -1,5 +1,48 @@
 [
   {
+    "title": "Do Sparse Autoencoders Capture Concept Manifolds?",
+    "authors": [
+      "Usha Bhalla",
+      "Thomas Fel",
+      "Can Rager",
+      "Sheridan Feucht",
+      "Tal Haklay",
+      "Daniel Wurgaft",
+      "Siddharth Boppana",
+      "Matthew Kowal",
+      "Vasudev Shyam",
+      "Jack Merullo",
+      "Atticus Geiger",
+      "Ekdeep Singh Lubana"
+    ],
+    "summary": "Sparse autoencoders (SAEs) are widely used to extract interpretable features from neural network representations, often under the implicit assumption that concepts correspond to independent linear directions. However, a growing body of evidence suggests that many concepts are instead organized along low-dimensional manifolds encoding continuous geometric relationships. This raises three basic questions: what does it mean for an SAE to capture a manifold, when do existing SAE architectures do so, and how? We develop a theoretical framework that answers these questions and show that SAEs can capture manifolds in two fundamentally different ways: globally, by allocating a compact group of atoms whose linear span contains the entire manifold, or locally, by distributing it across features that each selectively tile a restricted region of the underlying geometry. Empirically, we find that SAEs suboptimally recover continuous structures, mixing the global subspace and local tiling solutions in a fragmented regime we call dilution. This explains why manifold structure is rarely visible at the level of individual concepts and motivates post-hoc unsupervised discovery methods that search for coherent groups of atoms rather than isolated directions. More broadly, our results suggest that future representation learning methods should treat geometric objects, not just individual directions, as the basic units of interpretability.",
+    "published": "Apr 30",
+    "pdf_url": "https://arxiv.org/pdf/2604.28119v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.28119v1",
+    "queried_author": "Jack Merullo",
+    "matching_authors": [
+      "Jack Merullo"
+    ]
+  },
+  {
+    "title": "Useless but Safe? Benchmarking Utility Recovery with User Intent Clarification in Multi-Turn Conversations",
+    "authors": [
+      "Mingqian Zheng",
+      "Malia Morgan",
+      "Liwei Jiang",
+      "Carolyn Rose",
+      "Maarten Sap"
+    ],
+    "summary": "Current LLM safety alignment techniques improve model robustness against adversarial attacks, but overlook whether and how LLMs can recover helpfulness when benign users clarify their intent. We introduce CarryOnBench, the first interactive benchmark that measures whether LLMs can revise their interpretation of user intent and recover utility, while remaining safe through multi-turn conversations. Starting from 398 seemingly harmful queries with benign underlying intents, we simulate 5,970 conversations by varying user follow-up sequences, evaluating 14 models on both intent-aligned utility and safety. CarryOnBench yields 1,866 different conversation flows of 4--12 turns, totaling 23,880 model responses. We design Ben-Util, a checklist-based metric that evaluates how well each model response fulfills the user's benign information need using atomic items. At turn one, models fulfill only 10.5--37.6% of the user's benign information need. When the same query includes the benign intent upfront, models fulfill 25.1--72.1%, confirming that models withhold information due to intent misinterpretation, not limited knowledge. With benign clarifications in multi-turn conversations, 13 of 14 models approach or exceed this single-turn baseline, yet recovery cost varies across models. We identify three failure modes invisible to single-turn evaluations: utility lock-in, where a model rarely updates despite clarification; unsafe recovery, where a model updates at disproportionate safety cost; and repetitive recovery, where a model recycles prior responses rather than providing new inform...",
+    "published": "Apr 29",
+    "pdf_url": "https://arxiv.org/pdf/2604.27093v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.27093v1",
+    "queried_author": "Maarten Sap",
+    "matching_authors": [
+      "Maarten Sap"
+    ]
+  },
+  {
     "title": "FlowBot: Inducing LLM Workflows with Bilevel Optimization and Textual Gradients",
     "authors": [
       "Hongyeon Yu",
@@ -8157,8 +8200,8 @@
     ],
     "summary": "Reasoning goes beyond language; the real world requires reasoning about space, time, affordances, and much more that words alone cannot convey. Existing multimodal models exploring the potential of reasoning with images are brittle and do not scale. They rely on calling specialist tools, costly generation of images, or handcrafted reasoning data to switch between text and image thoughts. Instead, we offer a simpler alternative -- Mull-Tokens -- modality-agnostic latent tokens pre-trained to hold intermediate information in either image or text modalities to let the model think free-form towards the correct answer. We investigate best practices to train Mull-Tokens inspired by latent reasoning frameworks. We first train Mull-Tokens using supervision from interleaved text-image traces, and then fine-tune without any supervision by only using the final answers. Across four challenging spatial reasoning benchmarks involving tasks such as solving puzzles and taking different perspectives, we demonstrate that Mull-Tokens improve upon several baselines utilizing text-only reasoning or interleaved image-text reasoning, achieving a +3% average improvement and up to +16% on a puzzle solving reasoning-heavy split compared to our strongest baseline. Adding to conversations around challenges in grounding textual and visual reasoning, Mull-Tokens offers a simple solution to abstractly think in multiple modalities.",
     "published": "Dec 11",
-    "pdf_url": "https://arxiv.org/pdf/2512.10941v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.10941v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.10941v2",
+    "arxiv_url": "http://arxiv.org/abs/2512.10941v2",
     "queried_author": "Ranjay Krishna",
     "matching_authors": [
       "Ranjay Krishna"
@@ -12694,48 +12737,6 @@
     "queried_author": "Antoine Bosselut",
     "matching_authors": [
       "Antoine Bosselut"
-    ]
-  },
-  {
-    "title": "Large Language Models Discriminate Against Speakers of German Dialects",
-    "authors": [
-      "Minh Duc Bui",
-      "Carolin Holtermann",
-      "Valentin Hofmann",
-      "Anne Lauscher",
-      "Katharina von der Wense"
-    ],
-    "summary": "Dialects represent a significant component of human culture and are found across all regions of the world. In Germany, more than 40% of the population speaks a regional dialect (Adler and Hansen, 2022). However, despite cultural importance, individuals speaking dialects often face negative societal stereotypes. We examine whether such stereotypes are mirrored by large language models (LLMs). We draw on the sociolinguistic literature on dialect perception to analyze traits commonly associated with dialect speakers. Based on these traits, we assess the dialect naming bias and dialect usage bias expressed by LLMs in two tasks: an association task and a decision task. To assess a model's dialect usage bias, we construct a novel evaluation corpus that pairs sentences from seven regional German dialects (e.g., Alemannic and Bavarian) with their standard German counterparts. We find that: (1) in the association task, all evaluated LLMs exhibit significant dialect naming and dialect usage bias against German dialect speakers, reflected in negative adjective associations; (2) all models reproduce these dialect naming and dialect usage biases in their decision making; and (3) contrary to prior work showing minimal bias with explicit demographic mentions, we find that explicitly labeling linguistic demographics--German dialect speakers--amplifies bias more than implicit cues like dialect usage.",
-    "published": "Sep 17",
-    "pdf_url": "https://arxiv.org/pdf/2509.13835v1",
-    "arxiv_url": "http://arxiv.org/abs/2509.13835v1",
-    "queried_author": "Valentin Hofmann",
-    "matching_authors": [
-      "Valentin Hofmann"
-    ]
-  },
-  {
-    "title": "A deep reinforcement learning platform for antibiotic discovery",
-    "authors": [
-      "Hanqun Cao",
-      "Marcelo D. T. Torres",
-      "Jingjie Zhang",
-      "Zijun Gao",
-      "Fang Wu",
-      "Chunbin Gu",
-      "Jure Leskovec",
-      "Yejin Choi",
-      "Cesar de la Fuente-Nunez",
-      "Guangyong Chen",
-      "Pheng-Ann Heng"
-    ],
-    "summary": "Antimicrobial resistance (AMR) is projected to cause up to 10 million deaths annually by 2050, underscoring the urgent need for new antibiotics. Here we present ApexAmphion, a deep-learning framework for de novo design of antibiotics that couples a 6.4-billion-parameter protein language model with reinforcement learning. The model is first fine-tuned on curated peptide data to capture antimicrobial sequence regularities, then optimised with proximal policy optimization against a composite reward that combines predictions from a learned minimum inhibitory concentration (MIC) classifier with differentiable physicochemical objectives. In vitro evaluation of 100 designed peptides showed low MIC values (nanomolar range in some cases) for all candidates (100% hit rate). Moreover, 99 our of 100 compounds exhibited broad-spectrum antimicrobial activity against at least two clinically relevant bacteria. The lead molecules killed bacteria primarily by potently targeting the cytoplasmic membrane. By unifying generation, scoring and multi-objective optimization with deep reinforcement learning in a single pipeline, our approach rapidly produces diverse, potent candidates, offering a scalable route to peptide antibiotics and a platform for iterative steering toward potency and developability within hours.",
-    "published": "Sep 16",
-    "pdf_url": "https://arxiv.org/pdf/2509.18153v1",
-    "arxiv_url": "http://arxiv.org/abs/2509.18153v1",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
     ]
   }
 ]
