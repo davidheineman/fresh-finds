@@ -1,6 +1,7 @@
 import requests
 import arxiv
 import json
+import time
 from dataclasses import dataclass, field, asdict
 from datetime import datetime
 from typing import List, Dict, Set
@@ -76,7 +77,7 @@ def get_all_recent_papers(authors: List[str], max_results: int = MAX_RESULTS) ->
     query = " OR ".join(f'au:"{author}"' for author in authors)
 
     print(f"Querying arXiv for {len(authors)} authors in one request (max {max_results} results)...")
-    client = arxiv.Client(page_size=100, delay_seconds=3, num_retries=5)
+    client = arxiv.Client(page_size=100, delay_seconds=10, num_retries=10)
     search = arxiv.Search(
         query=query,
         max_results=max_results,
@@ -85,7 +86,28 @@ def get_all_recent_papers(authors: List[str], max_results: int = MAX_RESULTS) ->
     )
 
     papers = []
-    for result in client.results(search):
+    total_seen = 0
+    backoff = 30
+    max_backoff = 300
+    retries_left = 5
+    results_iter = client.results(search)
+
+    while True:
+        try:
+            result = next(results_iter)
+            total_seen += 1
+        except StopIteration:
+            break
+        except arxiv.HTTPError as e:
+            if "429" in str(e) and retries_left > 0:
+                retries_left -= 1
+                print(f"Hit arXiv 429 rate limit. Backing off {backoff}s ({retries_left} retries left)...")
+                time.sleep(backoff)
+                backoff = min(backoff * 2, max_backoff)
+                results_iter = client.results(search, offset=total_seen)
+                continue
+            raise
+
         paper_categories = set(result.categories)
         if not paper_categories.intersection(CATEGORIES):
             continue
