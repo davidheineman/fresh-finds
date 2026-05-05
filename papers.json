@@ -1,5 +1,30 @@
 [
   {
+    "title": "VideoNet: A Large-Scale Dataset for Domain-Specific Action Recognition",
+    "authors": [
+      "Tanush Yadav",
+      "Mohammadreza Salehi",
+      "Jae Sung Park",
+      "Vivek Ramanujan",
+      "Hannaneh Hajishirzi",
+      "Yejin Choi",
+      "Ali Farhadi",
+      "Rohun Tripathi",
+      "Ranjay Krishna"
+    ],
+    "summary": "Videos are unique in their ability to capture actions which transcend multiple frames. Accordingly, for many years action recognition was the quintessential task for video understanding. Unfortunately, due to a lack of sufficiently diverse and challenging data, modern vision-language models (VLMs) are no longer evaluated on their action recognition capabilities. To revitalize action recognition in the era of VLMs, we advocate for a returned focus on domain-specific actions. To this end, we introduce VideoNet, a domain-specific action recognition benchmark covering 1,000 distinct actions from 37 domains. We begin with a multiple-choice evaluation setting, where the difference between closed and open models is stark: Gemini 3.1 Pro attains 69.9% accuracy while Qwen3-VL-8B gets a mere 45.0%. To understand why VLMs struggle on VideoNet, we relax the questions into a binary setting, where random chance is 50%. Still, Qwen achieves only 59.2% accuracy. Further relaxing the evaluation setup, we provide $k\\in\\{1,2,3\\}$ in-context examples of the action. Some models excel in the few-shot setting, while others falter; Qwen improves $+7.0\\%$, while Gemini declines $-4.8\\%$. Notably, these gains fall short of the $+13.6\\%$ improvement in non-expert humans when given few-shot examples. Finding that VLMs struggle to fully exploit in-context examples, we shift from test-time improvements to the training side. We collect the first large-scale training dataset for domain-specific actions, totaling nearly 500k video question-answer pairs. Fine-tuning a Molmo2-4B model on our data, we surpass...",
+    "published": "May 04",
+    "pdf_url": "https://arxiv.org/pdf/2605.02834v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.02834v1",
+    "queried_author": "Ali Farhadi",
+    "matching_authors": [
+      "Ali Farhadi",
+      "Hannaneh Hajishirzi",
+      "Ranjay Krishna",
+      "Yejin Choi"
+    ]
+  },
+  {
     "title": "Compute Optimal Tokenization",
     "authors": [
       "Tomasz Limisiewicz",
@@ -805,8 +830,8 @@
     ],
     "summary": "Exploration is a cornerstone of learning from experience: it enables agents to find solutions to complex problems, generalize to novel ones, and scale performance with test-time compute. In this paper, we present a framework for post-training language models (LMs) that explicitly encourages optimistic exploration and promotes a synergy between exploration and exploitation. The central idea is to train the LM to generate sets of responses that are collectively accurate under the reward function and exploratory in their reasoning strategies. We first develop a general recipe for optimizing LMs with set reinforcement learning (set RL) under arbitrary objective functions, showing how standard RL algorithms can be adapted to this setting through a modification to the advantage computation. We then propose Polychromic Exploratory Policy Optimization (Poly-EPO), which instantiates this framework with an objective that explicitly synergizes exploration and exploitation. Across a range of reasoning benchmarks, we show that Poly-EPO improves generalization, as evidenced by higher pass@$k$ coverage, preserves greater diversity in model generations, and effectively scales with test-time compute.",
     "published": "Apr 19",
-    "pdf_url": "https://arxiv.org/pdf/2604.17654v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.17654v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.17654v2",
+    "arxiv_url": "http://arxiv.org/abs/2604.17654v2",
     "queried_author": "Noah Goodman",
     "matching_authors": [
       "Noah Goodman"
@@ -12641,25 +12666,6 @@
     "queried_author": "J Zico Kolter",
     "matching_authors": [
       "J Zico Kolter"
-    ]
-  },
-  {
-    "title": "The Sound of Syntax: Finetuning and Comprehensive Evaluation of Language Models for Speech Pathology",
-    "authors": [
-      "Fagun Patel",
-      "Duc Q. Nguyen",
-      "Sang T. Truong",
-      "Jody Vaynshtok",
-      "Sanmi Koyejo",
-      "Nick Haber"
-    ],
-    "summary": "According to the U.S. National Institutes of Health, more than 3.4 million children experience speech disorders that require clinical intervention. The number of speech-language pathologists (SLPs) is roughly 20 times fewer than the number of affected children, highlighting a significant gap in children's care and a pressing need for technological support that improves the productivity of SLPs. State-of-the-art multimodal language models (MLMs) show promise for supporting SLPs, but their use remains underexplored largely due to a limited understanding of their performance in high-stakes clinical settings. To address this gap, we collaborate with domain experts to develop a taxonomy of real-world use cases of MLMs in speech-language pathologies. Building on this taxonomy, we introduce the first comprehensive benchmark for evaluating MLM across five core use cases, each containing 1,000 manually annotated data points. This benchmark includes robustness and sensitivity tests under various settings, including background noise, speaker gender, and accent. Our evaluation of 15 state-of-the-art MLMs reveals that no single model consistently outperforms others across all tasks. Notably, we find systematic disparities, with models performing better on male speakers, and observe that chain-of-thought prompting can degrade performance on classification tasks with large label spaces and narrow decision boundaries. Furthermore, we study fine-tuning MLMs on domain-specific data, achieving improvements of over 10\\% compared to base models. These findings highlight both the potential and l...",
-    "published": "Sep 20",
-    "pdf_url": "https://arxiv.org/pdf/2509.16765v2",
-    "arxiv_url": "http://arxiv.org/abs/2509.16765v2",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
     ]
   }
 ]
