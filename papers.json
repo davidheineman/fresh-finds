@@ -1,5 +1,88 @@
 [
   {
+    "title": "EvoLM: Self-Evolving Language Models through Co-Evolved Discriminative Rubrics",
+    "authors": [
+      "Shuyue Stella Li",
+      "Rui Xin",
+      "Teng Xiao",
+      "Yike Wang",
+      "Rulin Shao",
+      "Zoey Hao",
+      "Melanie Sclar",
+      "Sewoong Oh",
+      "Faeze Brahman",
+      "Pang Wei Koh",
+      "Yulia Tsvetkov"
+    ],
+    "summary": "Language models encode substantial evaluative knowledge from pretraining, yet current post-training methods rely on external supervision (human annotations, proprietary models, or scalar reward models) to produce reward signals. Each imposes a ceiling. Human judgment cannot supervise capabilities beyond its own, proprietary APIs create dependencies, and verifiable rewards cover only domains with ground-truth answers. Self-improvement from a model's own evaluative capacity is a reward source that scales with the model itself, yet remains largely untapped by current methods. We introduce EVOLM, a post-training method that structures this capacity into explicit discriminative rubrics and uses them as training signal. EVOLM trains two capabilities within a single language model in alternation: (1) a rubric generator producing instance-specific evaluation criteria optimized for discriminative utility, which maximizes a small frozen judge's ability to distinguish preferred from dispreferred responses; and (2) a policy trained using those rubric-conditioned scores as reward. All preference signals are constructed from the policy's own outputs via temporal contrast with earlier checkpoints, requiring no human annotation or external supervision. EVOLM trains a Qwen3-8B model to generate rubrics that outperform GPT-4.1 on RewardBench-2 by 25.7%. The co-trained policy achieves 69.3% average on the OLMo3-Adapt suite, outperforming policies trained with GPT-4.1 prompted rubrics by 3.9% and with the state-of-the-art 8B reward model SkyWork-RM by 16%. Overall, EVOLM demonstrates that stru...",
+    "published": "May 05",
+    "pdf_url": "https://arxiv.org/pdf/2605.03871v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.03871v1",
+    "queried_author": "Pang Wei Koh",
+    "matching_authors": [
+      "Pang Wei Koh"
+    ]
+  },
+  {
+    "title": "ProgramBench: Can Language Models Rebuild Programs From Scratch?",
+    "authors": [
+      "John Yang",
+      "Kilian Lieret",
+      "Jeffrey Ma",
+      "Parth Thakkar",
+      "Dmitrii Pedchenko",
+      "Sten Sootla",
+      "Emily McMilin",
+      "Pengcheng Yin",
+      "Rui Hou",
+      "Gabriel Synnaeve",
+      "Diyi Yang",
+      "Ofir Press"
+    ],
+    "summary": "Turning ideas into full software projects from scratch has become a popular use case for language models. Agents are being deployed to seed, maintain, and grow codebases over extended periods with minimal human oversight. Such settings require models to make high-level software architecture decisions. However, existing benchmarks measure focused, limited tasks such as fixing a single bug or developing a single, specified feature. We therefore introduce ProgramBench to measure the ability of software engineering agents to develop software holisitically. In ProgramBench, given only a program and its documentation, agents must architect and implement a codebase that matches the reference executable's behavior. End-to-end behavioral tests are generated via agent-driven fuzzing, enabling evaluation without prescribing implementation structure. Our 200 tasks range from compact CLI tools to widely used software such as FFmpeg, SQLite, and the PHP interpreter. We evaluate 9 LMs and find that none fully resolve any task, with the best model passing 95\\% of tests on only 3\\% of tasks. Models favor monolithic, single-file implementations that diverge sharply from human-written code.",
+    "published": "May 05",
+    "pdf_url": "https://arxiv.org/pdf/2605.03546v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.03546v1",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang"
+    ]
+  },
+  {
+    "title": "RAG over Thinking Traces Can Improve Reasoning Tasks",
+    "authors": [
+      "Negar Arabzadeh",
+      "Wenjie Ma",
+      "Sewon Min",
+      "Matei Zaharia"
+    ],
+    "summary": "Retrieval-augmented generation (RAG) has proven effective for knowledge-intensive tasks, but is widely believed to offer limited benefit for reasoning-intensive problems such as math and code generation. We challenge this assumption by showing that the limitation lies not in RAG itself, but in the choice of corpus. Instead of retrieving documents, we propose retrieving thinking traces, i.e., intermediate thinking trajectories generated during problem solving attempts. We show that thinking traces are already a strong retrieval source, and further introduce T3, an offline method that transforms them into structured, retrieval-friendly representations, to improve usability. Using these traces as a corpus, a simple retrieve-then-generate pipeline consistently improves reasoning performance across strong models and benchmarks such as AIME 2025--2026, LiveCodeBench, and GPQA-Diamond, outperforming both non-RAG baselines and retrieval over standard web corpora. For instance, on AIME, RAG with traces generated by Gemini-2-thinking achieves relative gains of +56.3%, +8.6%, and +7.6% for Gemini-2.5-Flash, GPT-OSS-120B, and GPT-5, respectively, even though these are more recent models. Interestingly, RAG on T3 also incurs little or no extra inference cost, and can even reduce inference cost by up to $15%$. Overall, our results suggest that thinking traces are an effective retrieval corpus for reasoning tasks, and transforming them into structured, compact, or diagnostic representations unlocks even stronger gains. Code available at https://github.com/Narabzad/t3.",
+    "published": "May 05",
+    "pdf_url": "https://arxiv.org/pdf/2605.03344v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.03344v1",
+    "queried_author": "Sewon Min",
+    "matching_authors": [
+      "Sewon Min"
+    ]
+  },
+  {
+    "title": "Stop Automating Peer Review Without Rigorous Evaluation",
+    "authors": [
+      "Joachim Baumann",
+      "Jiaxin Pei",
+      "Sanmi Koyejo",
+      "Dirk Hovy"
+    ],
+    "summary": "Large language models offer a tempting solution to address the peer review crisis. This position paper argues that today's AI systems should not be used to produce paper reviews. We ground this position in an empirical comparison of human- versus AI-generated ICLR 2026 reviews and an evaluation of the effect of automated paper rewriting on different AI reviewers. We identify two critical issues: 1) AI reviewers exhibit a hivemind effect of excessive agreement within and across papers that reduces perspective diversity. 2) AI review scores are trivially gameable through paper laundering: prompting an LLM to rewrite a paper could significantly increase the scores from AI reviewers, demonstrating that LLM reviewers are easy to game through stylistic changes rather than scientific results. However, non-gameability and review diversity are necessary but not sufficient conditions for automation. We argue that addressing the peer review crisis requires a science of peer review automation -- not general-purpose LLMs deployed without rigorous evaluation.",
+    "published": "May 04",
+    "pdf_url": "https://arxiv.org/pdf/2605.03202v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.03202v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
     "title": "VideoNet: A Large-Scale Dataset for Domain-Specific Action Recognition",
     "authors": [
       "Tanush Yadav",
@@ -14,8 +97,8 @@
     ],
     "summary": "Videos are unique in their ability to capture actions which transcend multiple frames. Accordingly, for many years action recognition was the quintessential task for video understanding. Unfortunately, due to a lack of sufficiently diverse and challenging data, modern vision-language models (VLMs) are no longer evaluated on their action recognition capabilities. To revitalize action recognition in the era of VLMs, we advocate for a returned focus on domain-specific actions. To this end, we introduce VideoNet, a domain-specific action recognition benchmark covering 1,000 distinct actions from 37 domains. We begin with a multiple-choice evaluation setting, where the difference between closed and open models is stark: Gemini 3.1 Pro attains 69.9% accuracy while Qwen3-VL-8B gets a mere 45.0%. To understand why VLMs struggle on VideoNet, we relax the questions into a binary setting, where random chance is 50%. Still, Qwen achieves only 59.2% accuracy. Further relaxing the evaluation setup, we provide $k\\in\\{1,2,3\\}$ in-context examples of the action. Some models excel in the few-shot setting, while others falter; Qwen improves $+7.0\\%$, while Gemini declines $-4.8\\%$. Notably, these gains fall short of the $+13.6\\%$ improvement in non-expert humans when given few-shot examples. Finding that VLMs struggle to fully exploit in-context examples, we shift from test-time improvements to the training side. We collect the first large-scale training dataset for domain-specific actions, totaling nearly 500k video question-answer pairs. Fine-tuning a Molmo2-4B model on our data, we surpass...",
     "published": "May 04",
-    "pdf_url": "https://arxiv.org/pdf/2605.02834v1",
-    "arxiv_url": "http://arxiv.org/abs/2605.02834v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.02834v2",
+    "arxiv_url": "http://arxiv.org/abs/2605.02834v2",
     "queried_author": "Ali Farhadi",
     "matching_authors": [
       "Ali Farhadi",
@@ -91,6 +174,48 @@
     "queried_author": "Ari Holtzman",
     "matching_authors": [
       "Ari Holtzman"
+    ]
+  },
+  {
+    "title": "Proteo-R1: Reasoning Foundation Models for De Novo Protein Design",
+    "authors": [
+      "Fang Wu",
+      "Weihao Xuan",
+      "Heli Qi",
+      "Hanqun Cao",
+      "Heng-Jui Chang",
+      "Zeqi Zhou",
+      "Haokai Zhao",
+      "Ma Jian",
+      "Carl Ma",
+      "Yu-Chi Cheng",
+      "Kuan Pang",
+      "Xiangru Tang",
+      "Zehong Wang",
+      "Guanlue Li",
+      "Hanchen Wang",
+      "Kejun Ying",
+      "Pan Lu",
+      "Chiho Im",
+      "Seungju Han",
+      "Peng Xia",
+      "Tinson Xu",
+      "Yinxi Li",
+      "Deyao Zhu",
+      "Pheng-Ann Heng",
+      "Naoto Yokoya",
+      "Masashi Sugiyama",
+      "Li Erran Li",
+      "Jure Leskovec",
+      "Yejin Choi"
+    ],
+    "summary": "Deep learning in \\emph{de novo} protein design has achieved atomic-level fidelity. However, existing models remain largely non-deliberative: they directly synthesize molecular geometries without explicitly reasoning about which residues or interactions are functionally essential. As a result, design decisions are entangled with continuous sampling dynamics, limiting interpretability, controllability, and systematic reuse of biochemical knowledge. We introduce \\textbf{Proteo-R1}, a reasoning-guided protein design framework that explicitly decouples \\emph{molecular understanding} from \\emph{geometric generation}. Proteo-R1 adopts a dual-expert architecture in which a multimodal large language model (MLLM) serves as an \\emph{understanding expert}, analyzing protein sequences, structures, and textual context to identify key functional residues that govern binding and specificity. These residue-level decisions are then passed as hard constraints to a separate diffusion-based \\emph{generation expert}, which performs conditional co-design while respecting the fixed interaction anchors. This factorization mirrors how human experts approach molecular engineering: first, reasoning about critical interactions, then optimizing geometry subject to those constraints. By operationalizing reasoning as explicit residue-level commitments rather than latent textual guidance, Proteo-R1 achieves stable, interpretable, and modular integration of LLM reasoning with state-of-the-art geometric generative models. Code, data, and demos are available at https://smiles724.github.io/r1/.",
+    "published": "May 01",
+    "pdf_url": "https://arxiv.org/pdf/2605.02937v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.02937v1",
+    "queried_author": "Yejin Choi",
+    "matching_authors": [
+      "Yejin Choi"
     ]
   },
   {
@@ -830,8 +955,8 @@
     ],
     "summary": "Exploration is a cornerstone of learning from experience: it enables agents to find solutions to complex problems, generalize to novel ones, and scale performance with test-time compute. In this paper, we present a framework for post-training language models (LMs) that explicitly encourages optimistic exploration and promotes a synergy between exploration and exploitation. The central idea is to train the LM to generate sets of responses that are collectively accurate under the reward function and exploratory in their reasoning strategies. We first develop a general recipe for optimizing LMs with set reinforcement learning (set RL) under arbitrary objective functions, showing how standard RL algorithms can be adapted to this setting through a modification to the advantage computation. We then propose Polychromic Exploratory Policy Optimization (Poly-EPO), which instantiates this framework with an objective that explicitly synergizes exploration and exploitation. Across a range of reasoning benchmarks, we show that Poly-EPO improves generalization, as evidenced by higher pass@$k$ coverage, preserves greater diversity in model generations, and effectively scales with test-time compute.",
     "published": "Apr 19",
-    "pdf_url": "https://arxiv.org/pdf/2604.17654v2",
-    "arxiv_url": "http://arxiv.org/abs/2604.17654v2",
+    "pdf_url": "https://arxiv.org/pdf/2604.17654v3",
+    "arxiv_url": "http://arxiv.org/abs/2604.17654v3",
     "queried_author": "Noah Goodman",
     "matching_authors": [
       "Noah Goodman"
@@ -3806,8 +3931,8 @@
     ],
     "summary": "Autoregressive decoding is bottlenecked by its sequential nature. Speculative decoding has become a standard way to accelerate inference by using a fast draft model to predict upcoming tokens from a slower target model, and then verifying them in parallel with a single target model forward pass. However, speculative decoding itself relies on a sequential dependence between speculation and verification. We introduce speculative speculative decoding (SSD) to parallelize these operations. While a verification is ongoing, the draft model predicts likely verification outcomes and prepares speculations pre-emptively for them. If the actual verification outcome is then in the predicted set, a speculation can be returned immediately, eliminating drafting overhead entirely. We identify three key challenges presented by speculative speculative decoding, and suggest principled methods to solve each. The result is Saguaro, an optimized SSD algorithm. Our implementation is on average 30% faster than optimized speculative decoding baselines and up to 5x faster than autoregressive decoding with open source inference engines.",
     "published": "Mar 03",
-    "pdf_url": "https://arxiv.org/pdf/2603.03251v2",
-    "arxiv_url": "http://arxiv.org/abs/2603.03251v2",
+    "pdf_url": "https://arxiv.org/pdf/2603.03251v3",
+    "arxiv_url": "http://arxiv.org/abs/2603.03251v3",
     "queried_author": "Tri Dao",
     "matching_authors": [
       "Tri Dao"
@@ -12569,103 +12694,6 @@
     "queried_author": "Seungone Kim",
     "matching_authors": [
       "Seungone Kim"
-    ]
-  },
-  {
-    "title": "RL Grokking Recipe: How Does RL Unlock and Transfer New Algorithms in LLMs?",
-    "authors": [
-      "Yiyou Sun",
-      "Yuhan Cao",
-      "Pohao Huang",
-      "Haoyue Bai",
-      "Hannaneh Hajishirzi",
-      "Nouha Dziri",
-      "Dawn Song"
-    ],
-    "summary": "It remains an open question whether LLMs can acquire or generalize genuinely new reasoning strategies, beyond the sharpened skills encoded in their parameters during pre-training or post-training. To attempt to answer this debate, we introduce DELTA-Code -- Distributional Evaluation of Learnability and Transferrability in Algorithmic Coding -- a controlled benchmark of synthetic coding problem families designed to probe two fundamental aspects: learnability -- can LLMs, through reinforcement learning (RL), solve problem families where pretrained models exhibit failure with large enough attempts (pass@K=0)? -- and transferrability -- if learnability happens, can such skills transfer systematically to out-of-distribution (OOD) test sets? Unlike prior public coding datasets, DELTA isolates reasoning skills through templated problem generators and introduces fully OOD problem families that demand novel strategies rather than tool invocation or memorized patterns. Our experiments reveal a striking grokking phase transition: after an extended period with near-zero reward, RL-trained models abruptly climb to near-perfect accuracy. To enable learnability on previously unsolvable problem families, we explore key training ingredients such as staged warm-up with dense rewards, experience replay, curriculum training, and verification-in-the-loop. Beyond learnability, we use DELTA to evaluate transferability or generalization along exploratory, compositional, and transformative axes, as well as cross-family transfer. Results show solid gains within families and for recomposed skills, bu...",
-    "published": "Sep 25",
-    "pdf_url": "https://arxiv.org/pdf/2509.21016v2",
-    "arxiv_url": "http://arxiv.org/abs/2509.21016v2",
-    "queried_author": "Hannaneh Hajishirzi",
-    "matching_authors": [
-      "Hannaneh Hajishirzi"
-    ]
-  },
-  {
-    "title": "Language Models that Think, Chat Better",
-    "authors": [
-      "Adithya Bhaskar",
-      "Xi Ye",
-      "Danqi Chen"
-    ],
-    "summary": "Reinforcement learning with verifiable rewards (RLVR) improves language model reasoning by using rule-based rewards in verifiable domains such as mathematics and code. However, RLVR leads to limited generalization for open-ended tasks -- such as writing outline essays or making meal plans -- where humans reason routinely. This paper shows that the RLVR paradigm is effective beyond verifiable domains, and introduces **RL** with **M**odel-rewarded **T**hinking (**RLMT**) for general-purpose chat capabilities. Using diverse real-world prompts, RLMT requires LMs to generate long CoT reasoning before response, and optimizes them with online RL against a preference-based reward model used in RLHF. Across 40 training runs on Llama-3.1-8B and Qwen-2.5-7B (both base and instruct) and multiple optimization algorithms (DPO, PPO, and GRPO), RLMT consistently outperforms standard RLHF pipelines. This includes substantial gains of 3-7 points on three chat benchmarks (AlpacaEval2, WildBench, and ArenaHardV2), along with 1-3 point improvements on other tasks like creative writing and general knowledge. Our best 8B model surpasses GPT-4o in chat and creative writing and rivals Claude-3.7-Sonnet (Thinking). RLMT can also be applied directly to base models without an SFT stage, akin to R1-Zero training. Remarkably, with only 7K prompts, Llama-3.1-8B base trained with our RLMT recipe outperforms Llama-3.1-8B-Instruct post-trained with a complex multi-staged pipeline with 25M+ examples. We close with qualitative and quantitative analyses of how trained models plan their responses. Our results r...",
-    "published": "Sep 24",
-    "pdf_url": "https://arxiv.org/pdf/2509.20357v1",
-    "arxiv_url": "http://arxiv.org/abs/2509.20357v1",
-    "queried_author": "Danqi Chen",
-    "matching_authors": [
-      "Danqi Chen"
-    ]
-  },
-  {
-    "title": "False Friends Are Not Foes: Investigating Vocabulary Overlap in Multilingual Language Models",
-    "authors": [
-      "Julie Kallini",
-      "Dan Jurafsky",
-      "Christopher Potts",
-      "Martijn Bartelds"
-    ],
-    "summary": "Subword tokenizers trained on multilingual corpora naturally produce overlapping tokens across languages. Does token overlap facilitate cross-lingual transfer or instead introduce interference between languages? Prior work offers mixed evidence, partly due to varied setups and confounders, such as token frequency or subword segmentation granularity. To address this question, we devise a controlled experiment where we train bilingual autoregressive models on multiple language pairs under systematically varied vocabulary overlap settings. Crucially, we explore a new dimension to understanding how overlap affects transfer: the semantic similarity of tokens shared across languages. We first analyze our models' hidden representations and find that overlap of any kind creates embedding spaces that capture cross-lingual semantic relationships, while this effect is much weaker in models with disjoint vocabularies. On XNLI and XQuAD, we find that models with overlap outperform models with disjoint vocabularies, and that transfer performance generally improves as overlap increases. Overall, our findings highlight the advantages of token overlap in multilingual models and show that substantial shared vocabulary remains a beneficial design choice for multilingual tokenizers.",
-    "published": "Sep 23",
-    "pdf_url": "https://arxiv.org/pdf/2509.18750v2",
-    "arxiv_url": "http://arxiv.org/abs/2509.18750v2",
-    "queried_author": "Christopher Potts",
-    "matching_authors": [
-      "Christopher Potts",
-      "Dan Jurafsky"
-    ]
-  },
-  {
-    "title": "The PIMMUR Principles: Ensuring Validity in Collective Behavior of LLM Societies",
-    "authors": [
-      "Jiaxu Zhou",
-      "Jen-tse Huang",
-      "Xuhui Zhou",
-      "Man Ho Lam",
-      "Xintao Wang",
-      "Hao Zhu",
-      "Wenxuan Wang",
-      "Maarten Sap"
-    ],
-    "summary": "Large language models (LLMs) are increasingly deployed to simulate human collective behaviors, yet the methodological rigor of these \"AI societies\" remains under-explored. Through a systematic audit of 39 recent studies, we identify six pervasive flaws-spanning agent profiles, interaction, memory, control, unawareness, and realism (PIMMUR). Our analysis reveals that 89.7% of studies violate at least one principle, undermining simulation validity. We demonstrate that frontier LLMs correctly identify the underlying social experiment in 50.8% of cases, while 61.0% of prompts exert excessive control that pre-determines outcomes. By reproducing five representative experiments (e.g., telephone game), we show that reported collective phenomena often vanish or reverse when PIMMUR principles are enforced, suggesting that many \"emergent\" behaviors are methodological artifacts rather than genuine social dynamics. Our findings suggest that current AI simulations may capture model-specific biases rather than universal human social behaviors, raising critical concerns about the use of LLMs as scientific proxies for human society.",
-    "published": "Sep 22",
-    "pdf_url": "https://arxiv.org/pdf/2509.18052v3",
-    "arxiv_url": "http://arxiv.org/abs/2509.18052v3",
-    "queried_author": "Maarten Sap",
-    "matching_authors": [
-      "Maarten Sap"
-    ]
-  },
-  {
-    "title": "D-REX: A Benchmark for Detecting Deceptive Reasoning in Large Language Models",
-    "authors": [
-      "Satyapriya Krishna",
-      "Andy Zou",
-      "Rahul Gupta",
-      "Eliot Krzysztof Jones",
-      "Nick Winter",
-      "Dan Hendrycks",
-      "J. Zico Kolter",
-      "Matt Fredrikson",
-      "Spyros Matsoukas"
-    ],
-    "summary": "The safety and alignment of Large Language Models (LLMs) are critical for their responsible deployment. Current evaluation methods predominantly focus on identifying and preventing overtly harmful outputs. However, they often fail to address a more insidious failure mode: models that produce benign-appearing outputs while operating on malicious or deceptive internal reasoning. This vulnerability, often triggered by sophisticated system prompt injections, allows models to bypass conventional safety filters, posing a significant, underexplored risk. To address this gap, we introduce the Deceptive Reasoning Exposure Suite (D-REX), a novel dataset designed to evaluate the discrepancy between a model's internal reasoning process and its final output. D-REX was constructed through a competitive red-teaming exercise where participants crafted adversarial system prompts to induce such deceptive behaviors. Each sample in D-REX contains the adversarial system prompt, an end-user's test query, the model's seemingly innocuous response, and, crucially, the model's internal chain-of-thought, which reveals the underlying malicious intent. Our benchmark facilitates a new, essential evaluation task: the detection of deceptive alignment. We demonstrate that D-REX presents a significant challenge for existing models and safety mechanisms, highlighting the urgent need for new techniques that scrutinize the internal processes of LLMs, not just their final outputs.",
-    "published": "Sep 22",
-    "pdf_url": "https://arxiv.org/pdf/2509.17938v1",
-    "arxiv_url": "http://arxiv.org/abs/2509.17938v1",
-    "queried_author": "J Zico Kolter",
-    "matching_authors": [
-      "J Zico Kolter"
     ]
   }
 ]
