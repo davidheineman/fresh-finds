@@ -45,7 +45,8 @@
     "arxiv_url": "http://arxiv.org/abs/2605.03546v1",
     "queried_author": "Diyi Yang",
     "matching_authors": [
-      "Diyi Yang"
+      "Diyi Yang",
+      "Ofir Press"
     ]
   },
   {
@@ -127,7 +128,9 @@
     "queried_author": "Luke Zettlemoyer",
     "matching_authors": [
       "Luke Zettlemoyer",
-      "Mike Lewis"
+      "Mike Lewis",
+      "Margaret Li",
+      "Alisa Liu"
     ]
   },
   {
@@ -215,7 +218,8 @@
     "arxiv_url": "http://arxiv.org/abs/2605.02937v1",
     "queried_author": "Yejin Choi",
     "matching_authors": [
-      "Yejin Choi"
+      "Yejin Choi",
+      "Jure Leskovec"
     ]
   },
   {
@@ -675,7 +679,8 @@
     "arxiv_url": "http://arxiv.org/abs/2604.22074v1",
     "queried_author": "Christopher Potts",
     "matching_authors": [
-      "Christopher Potts"
+      "Christopher Potts",
+      "Carlos Guestrin"
     ]
   },
   {
@@ -1142,6 +1147,26 @@
     "queried_author": "Colin Raffel",
     "matching_authors": [
       "Colin Raffel"
+    ]
+  },
+  {
+    "title": "KumoRFM-2: Scaling Foundation Models for Relational Learning",
+    "authors": [
+      "Valter Hudovernik",
+      "Federico L\u00f3pez",
+      "Vid Kocijan",
+      "Akihiro Nitta",
+      "Jan Eric Lenssen",
+      "Jure Leskovec",
+      "Matthias Fey"
+    ],
+    "summary": "We introduce KumoRFM-2, the next iteration of a pre-trained foundation model for relational data. KumoRFM-2 supports in-context learning as well as fine-tuning and is applicable to a wide range of predictive tasks. In contrast to tabular foundation models, KumoRFM-2 natively operates on relational data, processing one or more connected tables simultaneously without manual table flattening or target variable generation, all while preserving temporal consistency. KumoRFM-2 leverages a large corpus of synthetic and real-world data to pre-train across four axes: the row and column dimensions at the individual table level, and the foreign key and cross-sample dimensions at the database level. In contrast to its predecessor, KumoRFM-2 injects task information as early as possible, enabling sharper selection of task-relevant columns and improved robustness to noisy data. Through extensive experiments on 41 challenging benchmarks and analysis around expressivity and sensitivity, we demonstrate that KumoRFM-2 outperforms supervised and foundational approaches by up to 8%, while maintaining strong performance under extreme settings of cold start and noisy data. To our knowledge, this is the first time a few-shot foundation model has been shown to surpass supervised approaches on common benchmark tasks, with performance further improving upon fine-tuning. Finally, while KumoRFM-1 was limited to small-scale in-memory datasets, KumoRFM-2 scales to billion-scale relational datasets.",
+    "published": "Apr 14",
+    "pdf_url": "https://arxiv.org/pdf/2604.12596v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.12596v1",
+    "queried_author": "Jure Leskovec",
+    "matching_authors": [
+      "Jure Leskovec"
     ]
   },
   {
@@ -1703,7 +1728,8 @@
     "matching_authors": [
       "Mohammad Shoeybi",
       "Mostofa Patwary",
-      "Yejin Choi"
+      "Yejin Choi",
+      "Alisa Liu"
     ]
   },
   {
@@ -4009,6 +4035,25 @@
     ]
   },
   {
+    "title": "According to Me: Long-Term Personalized Referential Memory QA",
+    "authors": [
+      "Jingbiao Mei",
+      "Jinghong Chen",
+      "Guangyu Yang",
+      "Xinyu Hou",
+      "Margaret Li",
+      "Bill Byrne"
+    ],
+    "summary": "Personalized AI assistants must recall and reason over long-term user memory, which naturally spans multiple modalities and sources such as images, videos, and emails. However, existing Long-term Memory benchmarks focus primarily on dialogue history, failing to capture realistic personalized references grounded in lived experience. We introduce ATM-Bench, the first benchmark for multimodal, multi-source personalized referential Memory QA. ATM-Bench contains approximately four years of privacy-preserving personal memory data and human-annotated question-answer pairs with ground-truth memory evidence, including queries that require resolving personal references, multi-evidence reasoning from multi-source and handling conflicting evidence. We propose Schema-Guided Memory (SGM) to structurally represent memory items originated from different sources. In experiments, we implement 5 state-of-the-art memory systems along with a standard RAG baseline and evaluate variants with different memory ingestion, retrieval, and answer generation techniques. We find poor performance (under 20\\% accuracy) on the ATM-Bench-Hard set, and that SGM improves performance over Descriptive Memory commonly adopted in prior works. Code available at: https://github.com/JingbiaoMei/ATM-Bench",
+    "published": "Mar 02",
+    "pdf_url": "https://arxiv.org/pdf/2603.01990v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.01990v1",
+    "queried_author": "Margaret Li",
+    "matching_authors": [
+      "Margaret Li"
+    ]
+  },
+  {
     "title": "PanCanBench: A Comprehensive Benchmark for Evaluating Large Language Models in Pancreatic Oncology",
     "authors": [
       "Yimin Zhao",
@@ -4983,7 +5028,8 @@
     "arxiv_url": "http://arxiv.org/abs/2602.15338v1",
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
-      "Sanmi Koyejo"
+      "Sanmi Koyejo",
+      "Carlos Guestrin"
     ]
   },
   {
@@ -5048,7 +5094,8 @@
     "queried_author": "Pang Wei Koh",
     "matching_authors": [
       "Pang Wei Koh",
-      "Sanmi Koyejo"
+      "Sanmi Koyejo",
+      "Carlos Guestrin"
     ]
   },
   {
@@ -5108,6 +5155,30 @@
     "matching_authors": [
       "Antoine Bosselut",
       "Pang Wei Koh"
+    ]
+  },
+  {
+    "title": "RelBench v2: A Large-Scale Benchmark and Repository for Relational Data",
+    "authors": [
+      "Justin Gu",
+      "Rishabh Ranjan",
+      "Charilaos Kanatsoulis",
+      "Haiming Tang",
+      "Martin Jurkovic",
+      "Valter Hudovernik",
+      "Mark Znidar",
+      "Pranshu Chaturvedi",
+      "Parth Shroff",
+      "Fengyu Li",
+      "Jure Leskovec"
+    ],
+    "summary": "Relational deep learning (RDL) has emerged as a powerful paradigm for learning directly on relational databases by modeling entities and their relationships across multiple interconnected tables. As this paradigm evolves toward larger models and relational foundation models, scalable and realistic benchmarks are essential for enabling systematic evaluation and progress. In this paper, we introduce RelBench v2, a major expansion of the RelBench benchmark for RDL. RelBench v2 adds four large-scale relational datasets spanning scholarly publications, enterprise resource planning, consumer platforms, and clinical records, increasing the benchmark to 11 datasets comprising over 22 million rows across 29 tables. We further introduce autocomplete tasks, a new class of predictive objectives that require models to infer missing attribute values directly within relational tables while respecting temporal constraints, expanding beyond traditional forecasting tasks constructed via SQL queries. In addition, RelBench v2 expands beyond its native datasets by integrating external benchmarks and evaluation frameworks: we translate event streams from the Temporal Graph Benchmark into relational schemas for unified relational-temporal evaluation, interface with ReDeLEx to provide uniform access to 70+ real-world databases suitable for pretraining, and incorporate 4DBInfer datasets and tasks to broaden multi-table prediction coverage. Experimental results demonstrate that RDL models consistently outperform single-table baselines across autocomplete, forecasting, and recommendation tasks, highl...",
+    "published": "Feb 13",
+    "pdf_url": "https://arxiv.org/pdf/2602.12606v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.12606v1",
+    "queried_author": "Jure Leskovec",
+    "matching_authors": [
+      "Jure Leskovec"
     ]
   },
   {
@@ -5383,6 +5454,48 @@
     ]
   },
   {
+    "title": "Predictive Query Language: A Domain-Specific Language for Predictive Modeling on Relational Databases",
+    "authors": [
+      "Vid Kocijan",
+      "Jinu Sunil",
+      "Jan Eric Lenssen",
+      "Viman Deb",
+      "Xinwei Xe",
+      "Federico Reyes Gomez",
+      "Matthias Fey",
+      "Jure Leskovec"
+    ],
+    "summary": "The purpose of predictive modeling on relational data is to predict future or missing values in a relational database, for example, future purchases of a user, risk of readmission of the patient, or the likelihood that a financial transaction is fraudulent. Typically powered by machine learning methods, predictive models are used in recommendations, financial fraud detection, supply chain optimization, and other systems, providing billions of predictions every day. However, training a machine learning model requires manual work to extract the required training examples - prediction entities and target labels - from the database, which is slow, laborious, and prone to mistakes. Here, we present the Predictive Query Language (PQL), an SQL-inspired declarative language for defining predictive tasks on relational databases. PQL allows specifying a predictive task in a single declarative query, enabling the automatic computation of training labels for a large variety of machine learning tasks, such as regression, classification, time-series forecasting, and recommender systems. PQL is already successfully integrated and used in a collection of use cases as part of a predictive AI platform. The versatility of the language can be demonstrated through its many ongoing use cases, including financial fraud, item recommendations, and workload prediction. We demonstrate its versatile design through two implementations; one for small-scale, low-latency use and one that can handle large-scale databases.",
+    "published": "Feb 10",
+    "pdf_url": "https://arxiv.org/pdf/2602.09572v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.09572v2",
+    "queried_author": "Jure Leskovec",
+    "matching_authors": [
+      "Jure Leskovec"
+    ]
+  },
+  {
+    "title": "Are Language Models Sensitive to Morally Irrelevant Distractors?",
+    "authors": [
+      "Andrew Shaw",
+      "Christina Hahn",
+      "Catherine Rasgaitis",
+      "Yash Mishra",
+      "Alisa Liu",
+      "Natasha Jaques",
+      "Yulia Tsvetkov",
+      "Amy X. Zhang"
+    ],
+    "summary": "With the rapid development and uptake of large language models (LLMs) across high-stakes settings, it is increasingly important to ensure that LLMs behave in ways that align with human values. Existing moral benchmarks prompt LLMs with value statements, moral scenarios, or psychological questionnaires, with the implicit underlying assumption that LLMs report somewhat stable moral preferences. However, moral psychology research has shown that human moral judgements are sensitive to morally irrelevant situational factors, such as smelling cinnamon rolls or the level of ambient noise, thereby challenging moral theories that assume the stability of human moral judgements. Here, we draw inspiration from this \"situationist\" view of moral psychology to evaluate whether LLMs exhibit similar cognitive moral biases to humans. We curate a novel multimodal dataset of 60 \"moral distractors\" from existing psychological datasets of emotionally-valenced images and narratives which have no moral relevance to the situation presented. After injecting these distractors into existing moral benchmarks to measure their effects on LLM responses, we find that moral distractors can shift the moral judgements of LLMs by over 30% even in low-ambiguity scenarios, highlighting the need for more contextual moral evaluations and more nuanced cognitive moral modeling of LLMs.",
+    "published": "Feb 10",
+    "pdf_url": "https://arxiv.org/pdf/2602.09416v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.09416v1",
+    "queried_author": "Alisa Liu",
+    "matching_authors": [
+      "Alisa Liu"
+    ]
+  },
+  {
     "title": "iGRPO: Self-Feedback-Driven LLM Reasoning",
     "authors": [
       "Ali Hatamizadeh",
@@ -5474,7 +5587,8 @@
     "arxiv_url": "http://arxiv.org/abs/2603.03303v1",
     "queried_author": "Diyi Yang",
     "matching_authors": [
-      "Diyi Yang"
+      "Diyi Yang",
+      "Jure Leskovec"
     ]
   },
   {
@@ -5797,6 +5911,27 @@
     ]
   },
   {
+    "title": "PluRel: Synthetic Data unlocks Scaling Laws for Relational Foundation Models",
+    "authors": [
+      "Vignesh Kothapalli",
+      "Rishabh Ranjan",
+      "Valter Hudovernik",
+      "Vijay Prakash Dwivedi",
+      "Johannes Hoffart",
+      "Carlos Guestrin",
+      "Jure Leskovec"
+    ],
+    "summary": "Relational Foundation Models (RFMs) facilitate data-driven decision-making by learning from complex multi-table databases. However, the diverse relational databases needed to train such models are rarely public due to privacy constraints. While there are methods to generate synthetic tabular data of arbitrary size, incorporating schema structure and primary--foreign key connectivity for multi-table generation remains challenging. Here we introduce PluRel, a framework to synthesize multi-tabular relational databases from scratch. In a step-by-step fashion, PluRel models (1) schemas with directed graphs, (2) inter-table primary-foreign key connectivity with bipartite graphs, and, (3) feature distributions in tables via conditional causal mechanisms. The design space across these stages supports the synthesis of a wide range of diverse databases, while being computationally lightweight. Using PluRel, we observe for the first time that (1) RFM pretraining loss exhibits power-law scaling with the number of synthetic databases and total pretraining tokens, (2) scaling the number of synthetic databases improves generalization to real databases, and (3) synthetic pretraining yields strong base models for continued pretraining on real databases. Overall, our framework and results position synthetic data scaling as a promising paradigm for RFMs.",
+    "published": "Feb 03",
+    "pdf_url": "https://arxiv.org/pdf/2602.04029v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.04029v1",
+    "queried_author": "Jure Leskovec",
+    "matching_authors": [
+      "Jure Leskovec",
+      "Carlos Guestrin"
+    ]
+  },
+  {
     "title": "Antidistillation Fingerprinting",
     "authors": [
       "Yixuan Even Xu",
@@ -5962,7 +6097,8 @@
     "queried_author": "Noah A. Smith",
     "matching_authors": [
       "Noah A. Smith",
-      "Yejin Choi"
+      "Yejin Choi",
+      "Alisa Liu"
     ]
   },
   {
@@ -6126,6 +6262,30 @@
     ]
   },
   {
+    "title": "Reinforcement Learning via Self-Distillation",
+    "authors": [
+      "Jonas H\u00fcbotter",
+      "Frederike L\u00fcbeck",
+      "Lejs Behric",
+      "Anton Baumann",
+      "Marco Bagatella",
+      "Daniel Marta",
+      "Ido Hakimi",
+      "Idan Shenfeld",
+      "Thomas Kleine Buening",
+      "Carlos Guestrin",
+      "Andreas Krause"
+    ],
+    "summary": "Large language models are increasingly post-trained with reinforcement learning in verifiable domains such as code and math. Yet, current methods for reinforcement learning with verifiable rewards (RLVR) learn only from a scalar outcome reward per attempt, creating a severe credit-assignment bottleneck. Many verifiable environments actually provide rich textual feedback, such as runtime errors or judge evaluations, that explain why an attempt failed. We formalize this setting as reinforcement learning with rich feedback and introduce Self-Distillation Policy Optimization (SDPO), which converts tokenized feedback into a dense learning signal without any external teacher or explicit reward model. SDPO treats the current model conditioned on feedback as a self-teacher and distills its feedback-informed next-token predictions back into the policy. In this way, SDPO leverages the model's ability to retrospectively identify its own mistakes in-context. Across scientific reasoning, tool use, and competitive programming on LiveCodeBench v6, SDPO improves sample efficiency and final accuracy over strong RLVR baselines. Notably, SDPO also outperforms baselines in standard RLVR environments that only return scalar feedback by using successful rollouts as implicit feedback for failed attempts. Finally, applying SDPO to individual questions at test time accelerates discovery on difficult binary-reward tasks, achieving the same discovery probability as best-of-k sampling or multi-turn conversations with 3x fewer attempts.",
+    "published": "Jan 28",
+    "pdf_url": "https://arxiv.org/pdf/2601.20802v2",
+    "arxiv_url": "http://arxiv.org/abs/2601.20802v2",
+    "queried_author": "Carlos Guestrin",
+    "matching_authors": [
+      "Carlos Guestrin"
+    ]
+  },
+  {
     "title": "SERA: Soft-Verified Efficient Repository Agents",
     "authors": [
       "Ethan Shen",
@@ -6141,6 +6301,27 @@
     "queried_author": "Ali Farhadi",
     "matching_authors": [
       "Ali Farhadi"
+    ]
+  },
+  {
+    "title": "Improving Diffusion Language Model Decoding through Joint Search in Generation Order and Token Space",
+    "authors": [
+      "Yangyi Shen",
+      "Tianjian Feng",
+      "Jiaqi Han",
+      "Wen Wang",
+      "Tianlang Chen",
+      "Chunhua Shen",
+      "Jure Leskovec",
+      "Stefano Ermon"
+    ],
+    "summary": "Diffusion Language Models (DLMs) offer order-agnostic generation that can explore many possible decoding trajectories. However, current decoding methods commit to a single trajectory, limiting exploration in trajectory space. We introduce Order-Token Search to explore this space through jointly searching over generation order and token values. Its core is a likelihood estimator that scores denoising actions, enabling stable pruning and efficient exploration of diverse trajectories. Across mathematical reasoning and coding benchmarks, Order-Token Search consistently outperforms baselines on GSM8K, MATH500, Countdown, and HumanEval (3.1%, 3.8%, 7.9%, and 6.8% absolute over backbone), matching or surpassing diffu-GRPO post-trained d1-LLaDA. Our work establishes joint search as a key component for advancing decoding in DLMs.",
+    "published": "Jan 28",
+    "pdf_url": "https://arxiv.org/pdf/2601.20339v2",
+    "arxiv_url": "http://arxiv.org/abs/2601.20339v2",
+    "queried_author": "Jure Leskovec",
+    "matching_authors": [
+      "Jure Leskovec"
     ]
   },
   {
@@ -6316,7 +6497,8 @@
     "arxiv_url": "http://arxiv.org/abs/2601.16175v2",
     "queried_author": "Yejin Choi",
     "matching_authors": [
-      "Yejin Choi"
+      "Yejin Choi",
+      "Carlos Guestrin"
     ]
   },
   {
@@ -6887,6 +7069,25 @@
     ]
   },
   {
+    "title": "Surface-based Molecular Design with Multi-modal Flow Matching",
+    "authors": [
+      "Fang Wu",
+      "Zhengyuan Zhou",
+      "Shuting Jin",
+      "Xiangxiang Zeng",
+      "Jure Leskovec",
+      "Jinbo Xu"
+    ],
+    "summary": "Therapeutic peptides show promise in targeting previously undruggable binding sites, with recent advancements in deep generative models enabling full-atom peptide co-design for specific protein receptors. However, the critical role of molecular surfaces in protein-protein interactions (PPIs) has been underexplored. To bridge this gap, we propose an omni-design peptides generation paradigm, called SurfFlow, a novel surface-based generative algorithm that enables comprehensive co-design of sequence, structure, and surface for peptides. SurfFlow employs a multi-modality conditional flow matching (CFM) architecture to learn distributions of surface geometries and biochemical properties, enhancing peptide binding accuracy. Evaluated on the comprehensive PepMerge benchmark, SurfFlow consistently outperforms full-atom baselines across all metrics. These results highlight the advantages of considering molecular surfaces in de novo peptide discovery and demonstrate the potential of integrating multiple protein modalities for more effective therapeutic peptide discovery.",
+    "published": "Jan 08",
+    "pdf_url": "https://arxiv.org/pdf/2601.04506v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.04506v1",
+    "queried_author": "Jure Leskovec",
+    "matching_authors": [
+      "Jure Leskovec"
+    ]
+  },
+  {
     "title": "Accommodation and Epistemic Vigilance: A Pragmatic Account of Why LLMs Fail to Challenge Harmful Beliefs",
     "authors": [
       "Myra Cheng",
@@ -7168,7 +7369,9 @@
     "matching_authors": [
       "Sanmi Koyejo",
       "Tatsunori Hashimoto",
-      "Yejin Choi"
+      "Yejin Choi",
+      "Jure Leskovec",
+      "Carlos Guestrin"
     ]
   },
   {
@@ -7592,7 +7795,8 @@
     "matching_authors": [
       "Mohammad Shoeybi",
       "Mostofa Patwary",
-      "Yejin Choi"
+      "Yejin Choi",
+      "Alisa Liu"
     ]
   },
   {
@@ -7921,7 +8125,8 @@
     "matching_authors": [
       "Mohammad Shoeybi",
       "Mostofa Patwary",
-      "Yejin Choi"
+      "Yejin Choi",
+      "Alisa Liu"
     ]
   },
   {
@@ -8405,7 +8610,8 @@
       "Luke Zettlemoyer",
       "Maarten Sap",
       "Noah A. Smith",
-      "Pang Wei Koh"
+      "Pang Wei Koh",
+      "Alisa Liu"
     ]
   },
   {
@@ -9583,6 +9789,27 @@
     ]
   },
   {
+    "title": "SWE-fficiency: Can Language Models Optimize Real-World Repositories on Real Workloads?",
+    "authors": [
+      "Jeffrey Jian Ma",
+      "Milad Hashemi",
+      "Amir Yazdanbakhsh",
+      "Kevin Swersky",
+      "Ofir Press",
+      "Enhui Li",
+      "Vijay Janapa Reddi",
+      "Parthasarathy Ranganathan"
+    ],
+    "summary": "Optimizing the performance of large-scale software repositories demands expertise in code reasoning and software engineering (SWE) to reduce runtime while preserving program correctness. However, most benchmarks emphasize what to fix rather than how to fix code. We introduce SWE-fficiency, a benchmark for evaluating repository-level performance optimization on real workloads. Our suite contains 498 tasks across nine widely used data-science, machine-learning, and HPC repositories (e.g., numpy, pandas, scipy): given a complete codebase and a slow workload, an agent must investigate code semantics, localize bottlenecks and relevant tests, and produce a patch that matches or exceeds expert speedup while passing the same unit tests. To enable this how-to-fix evaluation, our automated pipeline scrapes GitHub pull requests for performance-improving edits, combining keyword filtering, static analysis, coverage tooling, and execution validation to both confirm expert speedup baselines and identify relevant repository unit tests. Empirical evaluation of state-of-the-art agents reveals significant underperformance. On average, agents achieve less than 0.15x the expert speedup: agents struggle in localizing optimization opportunities, reasoning about execution across functions, and maintaining correctness in proposed edits. We release the benchmark and accompanying data pipeline to facilitate research on automated performance engineering and long-horizon software reasoning.",
+    "published": "Nov 08",
+    "pdf_url": "https://arxiv.org/pdf/2511.06090v2",
+    "arxiv_url": "http://arxiv.org/abs/2511.06090v2",
+    "queried_author": "Ofir Press",
+    "matching_authors": [
+      "Ofir Press"
+    ]
+  },
+  {
     "title": "Reinforcement Learning Improves Traversal of Hierarchical Knowledge in LLMs",
     "authors": [
       "Renfei Zhang",
@@ -10127,7 +10354,8 @@
     "queried_author": "Diyi Yang",
     "matching_authors": [
       "Diyi Yang",
-      "Ludwig Schmidt"
+      "Ludwig Schmidt",
+      "Ofir Press"
     ]
   },
   {
@@ -10515,7 +10743,8 @@
     "queried_author": "Maarten Sap",
     "matching_authors": [
       "Maarten Sap",
-      "Yejin Choi"
+      "Yejin Choi",
+      "Margaret Li"
     ]
   },
   {
@@ -11539,6 +11768,29 @@
     ]
   },
   {
+    "title": "TGM: a Modular and Efficient Library for Machine Learning on Temporal Graphs",
+    "authors": [
+      "Jacob Chmura",
+      "Shenyang Huang",
+      "Tran Gia Bao Ngo",
+      "Ali Parviz",
+      "Farimah Poursafaei",
+      "Jure Leskovec",
+      "Michael Bronstein",
+      "Guillaume Rabusseau",
+      "Matthias Fey",
+      "Reihaneh Rabbany"
+    ],
+    "summary": "Well-designed open-source software drives progress in Machine Learning (ML) research. While static graph ML enjoys mature frameworks like PyTorch Geometric and DGL, ML for temporal graphs (TG), networks that evolve over time, lacks comparable infrastructure. Existing TG libraries are often tailored to specific architectures, hindering support for diverse models in this rapidly evolving field. Additionally, the divide between continuous- and discrete-time dynamic graph methods (CTDG and DTDG) limits direct comparisons and idea transfer. To address these gaps, we introduce Temporal Graph Modelling (TGM), a research-oriented library for ML on temporal graphs, the first to unify CTDG and DTDG approaches. TGM offers first-class support for dynamic node features, time-granularity conversions, and native handling of link-, node-, and graph-level tasks. Empirically, TGM achieves an average 7.8x speedup across multiple models, datasets, and tasks compared to the widely used DyGLib, and an average 175x speedup on graph discretization relative to available implementations. Beyond efficiency, we show in our experiments how TGM unlocks entirely new research possibilities by enabling dynamic graph property prediction and time-driven training paradigms, opening the door to questions previously impractical to study. TGM is available at https://github.com/tgm-team/tgm",
+    "published": "Oct 08",
+    "pdf_url": "https://arxiv.org/pdf/2510.07586v1",
+    "arxiv_url": "http://arxiv.org/abs/2510.07586v1",
+    "queried_author": "Jure Leskovec",
+    "matching_authors": [
+      "Jure Leskovec"
+    ]
+  },
+  {
     "title": "Base Models Know How to Reason, Thinking Models Learn When",
     "authors": [
       "Constantin Venhoff",
@@ -11604,6 +11856,30 @@
     "queried_author": "Tanya Goyal",
     "matching_authors": [
       "Tanya Goyal"
+    ]
+  },
+  {
+    "title": "Relational Transformer: Toward Zero-Shot Foundation Models for Relational Data",
+    "authors": [
+      "Rishabh Ranjan",
+      "Valter Hudovernik",
+      "Mark Znidar",
+      "Charilaos Kanatsoulis",
+      "Roshan Upendra",
+      "Mahmoud Mohammadi",
+      "Joe Meyer",
+      "Tom Palczewski",
+      "Carlos Guestrin",
+      "Jure Leskovec"
+    ],
+    "summary": "Pretrained transformers readily adapt to new sequence modeling tasks via zero-shot prompting, but relational domains still lack architectures that transfer across datasets and tasks. The core challenge is the diversity of relational data, with varying heterogeneous schemas, graph structures and functional dependencies. In this paper, we present the Relational Transformer (RT) architecture, which can be pretrained on diverse relational databases and directly applied to unseen datasets and tasks without task- or dataset-specific fine-tuning, or retrieval of in-context examples. RT (i) incorporates task specification via task table prompting, (ii) tokenizes cells with table/column metadata, (iii) is pretrained via masked token prediction, and (iv) utilizes a novel Relational Attention mechanism over columns, rows, and primary-foreign key links. Pretrained on RelBench datasets spanning tasks such as churn and sales forecasting, RT attains strong zero-shot performance, averaging 93% of fully supervised AUROC on binary classification tasks with a single forward pass of a 22M parameter model, as opposed to 84% for a 27B LLM. Fine-tuning yields state-of-the-art results with high sample efficiency. Our experimental analyses show that RT's zero-shot transfer leverages task context, relational attention patterns and schema semantics. Overall, RT provides a practical path toward foundation models for relational data. Code, models, data: https://github.com/snap-stanford/relational-transformer.",
+    "published": "Oct 07",
+    "pdf_url": "https://arxiv.org/pdf/2510.06377v3",
+    "arxiv_url": "http://arxiv.org/abs/2510.06377v3",
+    "queried_author": "Jure Leskovec",
+    "matching_authors": [
+      "Jure Leskovec",
+      "Carlos Guestrin"
     ]
   },
   {
@@ -12198,6 +12474,83 @@
     ]
   },
   {
+    "title": "Probing the Critical Point (CritPt) of AI Reasoning: a Frontier Physics Research Benchmark",
+    "authors": [
+      "Minhui Zhu",
+      "Minyang Tian",
+      "Xiaocheng Yang",
+      "Tianci Zhou",
+      "Lifan Yuan",
+      "Penghao Zhu",
+      "Eli Chertkov",
+      "Shengyan Liu",
+      "Yufeng Du",
+      "Ziming Ji",
+      "Indranil Das",
+      "Junyi Cao",
+      "Yufeng Du",
+      "Jiabin Yu",
+      "Peixue Wu",
+      "Jinchen He",
+      "Yifan Su",
+      "Yikun Jiang",
+      "Yujie Zhang",
+      "Chang Liu",
+      "Ze-Min Huang",
+      "Weizhen Jia",
+      "Yunkai Wang",
+      "Farshid Jafarpour",
+      "Yong Zhao",
+      "Xinan Chen",
+      "Jessie Shelton",
+      "Aaron W. Young",
+      "John Bartolotta",
+      "Wenchao Xu",
+      "Yue Sun",
+      "Anjun Chu",
+      "Victor Colussi",
+      "Chris Akers",
+      "Nathan Brooks",
+      "Wenbo Fu",
+      "Jinchao Zhao",
+      "Marvin Qi",
+      "Anqi Mu",
+      "Yubo Yang",
+      "Allen Zang",
+      "Yang Lyu",
+      "Peizhi Mai",
+      "Christopher Wilson",
+      "Xuefei Guo",
+      "Juntai Zhou",
+      "Daniel Inafuku",
+      "Chi Xue",
+      "Luyu Gao",
+      "Ze Yang",
+      "Ya\u00efr Hein",
+      "Yonatan Kahn",
+      "Kevin Zhou",
+      "Di Luo",
+      "John Drew Wilson",
+      "Jarrod T. Reilly",
+      "Dmytro Bandak",
+      "Ofir Press",
+      "Liang Yang",
+      "Xueying Wang",
+      "Hao Tong",
+      "Nicolas Chia",
+      "Eliu Huerta",
+      "Hao Peng"
+    ],
+    "summary": "While large language models (LLMs) with reasoning capabilities are progressing rapidly on high-school math competitions and coding, can they reason effectively through complex, open-ended challenges found in frontier physics research? And crucially, what kinds of reasoning tasks do physicists want LLMs to assist with? To address these questions, we present the CritPt (Complex Research using Integrated Thinking - Physics Test, pronounced \"critical point\"), the first benchmark designed to test LLMs on unpublished, research-level reasoning tasks that broadly covers modern physics research areas, including condensed matter, quantum physics, atomic, molecular & optical physics, astrophysics, high energy physics, mathematical physics, statistical physics, nuclear physics, nonlinear dynamics, fluid dynamics and biophysics. CritPt consists of 71 composite research challenges designed to simulate full-scale research projects at the entry level, which are also decomposed to 190 simpler checkpoint tasks for more fine-grained insights. All problems are newly created by 50+ active physics researchers based on their own research. Every problem is hand-curated to admit a guess-resistant and machine-verifiable answer and is evaluated by an automated grading pipeline heavily customized for advanced physics-specific output formats. We find that while current state-of-the-art LLMs show early promise on isolated checkpoints, they remain far from being able to reliably solve full research-scale challenges: the best average accuracy among base models is only 5.7%, achieved by GPT-5 (high), moder...",
+    "published": "Sep 30",
+    "pdf_url": "https://arxiv.org/pdf/2509.26574v3",
+    "arxiv_url": "http://arxiv.org/abs/2509.26574v3",
+    "queried_author": "Ofir Press",
+    "matching_authors": [
+      "Ofir Press"
+    ]
+  },
+  {
     "title": "Auto-ARGUE: LLM-Based Report Generation Evaluation",
     "authors": [
       "William Walden",
@@ -12221,6 +12574,23 @@
     "queried_author": "Orion Weller",
     "matching_authors": [
       "Orion Weller"
+    ]
+  },
+  {
+    "title": "RFG: Test-Time Scaling for Diffusion Large Language Model Reasoning with Reward-Free Guidance",
+    "authors": [
+      "Tianlang Chen",
+      "Minkai Xu",
+      "Jure Leskovec",
+      "Stefano Ermon"
+    ],
+    "summary": "Diffusion large language models (dLLMs) have shown great potential in large-scale language modeling, and there is an increasing interest in further improving the capacity to solve complex problems by guiding the reasoning process step by step. Common practice for autoregressive language models typically learns a process reward model with dense annotation for each intermediate step. However, this is challenging for dLLMs where the generation is in an any-order fashion and intermediate states are partially masked sentences. To this end, in this paper, we propose reward-free guidance (RFG), a principled method for guiding the reasoning trajectory of dLLMs without explicit process reward. The key idea of RFG is to parameterize the process reward by log-likelihood ratios of the enhanced and reference dLLMs, where the enhanced model can be easily obtained by any off-the-shelf dLLM that has been post-trained with reinforcement learning (RL) or supervised fine-tuning (SFT). We provide theoretical justification that RFG induces the reward-guided sampling distribution with no additional reward. We conduct comprehensive experiments on four challenging mathematical reasoning and code generation benchmarks using a diverse suite of dLLMs enhanced with various post-training methods. RFG consistently yields significant improvements across all tasks and model types, achieving accuracy gains of up to 9.2%. These findings establish RFG as a general training-free framework that scales test-time reasoning without reliance on external reward models.",
+    "published": "Sep 29",
+    "pdf_url": "https://arxiv.org/pdf/2509.25604v1",
+    "arxiv_url": "http://arxiv.org/abs/2509.25604v1",
+    "queried_author": "Jure Leskovec",
+    "matching_authors": [
+      "Jure Leskovec"
     ]
   },
   {
@@ -12398,302 +12768,6 @@
     "matching_authors": [
       "Mohammad Shoeybi",
       "Mostofa Patwary"
-    ]
-  },
-  {
-    "title": "Humanline: Online Alignment as Perceptual Loss",
-    "authors": [
-      "Sijia Liu",
-      "Niklas Muennighoff",
-      "Kawin Ethayarajh"
-    ],
-    "summary": "Online alignment (e.g., GRPO) is generally more performant than offline alignment (e.g., DPO) -- but why? Drawing on prospect theory from behavioral economics, we propose a human-centric explanation. We prove that online on-policy sampling better approximates the human-perceived distribution of what the model can produce, and PPO/GRPO-style clipping -- originally introduced to just stabilize training -- recovers a perceptual bias in how humans perceive probability. In this sense, PPO/GRPO act as perceptual losses already. Our theory further suggests that the online/offline dichotomy is itself incidental to maximizing human utility, since we can achieve the same effect by selectively training on any data in a manner that mimics human perception, rather than restricting ourselves to online on-policy data. Doing so would allow us to post-train more quickly, cheaply, and flexibly without sacrificing performance. To this end, we propose a design pattern that explicitly incorporates perceptual distortions of probability into objectives like DPO/KTO/GRPO, creating humanline variants of them. Surprisingly, we find that these humanline variants, even when trained with offline off-policy data, can match the performance of their online counterparts (on both verifiable and unverifiable tasks) while running up to 6x faster.",
-    "published": "Sep 29",
-    "pdf_url": "https://arxiv.org/pdf/2509.24207v2",
-    "arxiv_url": "http://arxiv.org/abs/2509.24207v2",
-    "queried_author": "Niklas Muennighoff",
-    "matching_authors": [
-      "Niklas Muennighoff"
-    ]
-  },
-  {
-    "title": "Pretraining Scaling Laws for Generative Evaluations of Language Models",
-    "authors": [
-      "Rylan Schaeffer",
-      "Noam Levi",
-      "Brando Miranda",
-      "Sanmi Koyejo"
-    ],
-    "summary": "Neural scaling laws have driven the field's ever-expanding exponential growth in parameters, data and compute. While scaling behaviors for pretraining losses and discriminative benchmarks are well established, generative benchmarks such as mathematical problem-solving or software engineering remain under-explored. We propose and evaluate three different pretraining scaling laws for fitting pass-at-$k$ on generative evaluations and for predicting pass-at-$k$ of the most expensive model using cheaper models. Our three scaling laws differ in the covariates used: (1) pretraining compute, (2) model parameters and pretraining tokens, (3) log likelihoods of gold reference solutions. First, we demonstrate that generative evaluations introduce new hyperparameters (in our setting, $k$) that act as a control lever for scaling behavior, modulating both the scaling law parameters and the predictability of performance. Second, we identify a stark difference in parameter stability: while the compute and parameters+tokens laws stabilize for only the last $\\mathord{\\sim}1.5\\mathord{-}2.5$ orders of magnitude, the gold reference likelihood law is uniquely stable, converging across $\\mathord{\\sim}5$ orders. Third, in terms of predictive performance, we find all three scaling laws perform comparably, although the compute law predicts slightly worse for small $k$ and the gold reference law predicts slightly worse for large $k$. Finally, we establish a theoretical connection, proving that the compute scaling law emerges as the compute-optimal envelope of the parameters-and-tokens law. Our framew...",
-    "published": "Sep 28",
-    "pdf_url": "https://arxiv.org/pdf/2509.24012v2",
-    "arxiv_url": "http://arxiv.org/abs/2509.24012v2",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "Evaluating the Robustness of Chinchilla Compute-Optimal Scaling",
-    "authors": [
-      "Rylan Schaeffer",
-      "Noam Levi",
-      "Andreas Kirsch",
-      "Theo Guenais",
-      "Brando Miranda",
-      "Elyas Obbad",
-      "Sanmi Koyejo"
-    ],
-    "summary": "Hoffman et al (2022)'s Chinchilla paper introduced the principle of compute-optimal scaling, laying a foundation for future scaling of language models. In the years since, however, valid concerns about Chinchilla have been raised: wide confidence intervals, discrepancies between its three approaches, and incongruities with other scaling laws. This raises a critical question for the field: Can practitioners still rely on Chinchilla's prescriptions? Our work demonstrates the answer is yes. We begin by uncovering that the model parameters central to Chinchilla's analyses were ambiguous: three interpretations are possible, with relative differences between different interpretations of model parameters as high as 15.2%. We find that, perhaps surprisingly, which model parameters are used for the analyses do not meaningfully affect key results: the scaling law estimates and the compute-optimal tokens-to-parameter ratio. Indeed, under one interpretation, the tokens-to-parameter ratio becomes more constant with the target compute budget. We then ask how distorted the Chinchilla model parameters could have been without meaningfully affecting the key results. By deliberately perturbing model parameters in four structured ways, we find that key Chinchilla results are most sensitive to additive or systematic errors, which can alter the otherwise flat trend of the optimal tokens-to-parameter ratio, but overall, Chinchilla's key results withstand sizable perturbations. Altogether, our findings offer the field renewed confidence in Chinchilla as a durable guide for scaling language models.",
-    "published": "Sep 28",
-    "pdf_url": "https://arxiv.org/pdf/2509.23963v1",
-    "arxiv_url": "http://arxiv.org/abs/2509.23963v1",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "Mapping Overlaps in Benchmarks through Perplexity in the Wild",
-    "authors": [
-      "Siyang Wu",
-      "Honglin Bao",
-      "Sida Li",
-      "Ari Holtzman",
-      "James A. Evans"
-    ],
-    "summary": "We introduce benchmark signatures to characterize the capacity demands of LLM benchmarks and their overlaps. Signatures are sets of salient tokens from in-the-wild corpora whose model token perplexity, reflecting training exposure, predicts benchmark performance. We extract them via stepwise forward selection with linear regression in a meta-evaluation spanning 32 LLMs and 89 benchmarks across diverse domains. We then analyze how these signatures relate to both the semantic similarity of benchmark questions and the correlation structure of model performance. While performance correlations are uniformly high and semantic overlaps stay in a narrow mid-range, benchmark signatures reveal more nuanced structure. For instance, they uncover substantial overlap between benchmarks in knowledge and reasoning tasks, whereas benchmarks in culture- and humanity-oriented domains show low similarity with each other. Unlike raw performance correlations, which are influenced by benchmark-orthogonal factors such as question formats, signatures are robust to such confounds. We further identify cross-functional overlaps between logic, math, language, instruction following, and cultural/world modeling, with coding emerging as the most isolated function, interacting only moderately with the ability of detecting missing information. Qualitative analysis shows that only the knowledge signature aligns with actual knowledge, suggesting that LLM semantic organization may differ from human conceptual structure. Together, these findings offer insights into benchmark validity, LLM sensitivities, and the...",
-    "published": "Sep 27",
-    "pdf_url": "https://arxiv.org/pdf/2509.23488v4",
-    "arxiv_url": "http://arxiv.org/abs/2509.23488v4",
-    "queried_author": "Ari Holtzman",
-    "matching_authors": [
-      "Ari Holtzman"
-    ]
-  },
-  {
-    "title": "Multiplayer Nash Preference Optimization",
-    "authors": [
-      "Fang Wu",
-      "Xu Huang",
-      "Weihao Xuan",
-      "Zhiwei Zhang",
-      "Yijia Xiao",
-      "Guancheng Wan",
-      "Xiaomin Li",
-      "Bing Hu",
-      "Peng Xia",
-      "Jure Leskovec",
-      "Yejin Choi"
-    ],
-    "summary": "Reinforcement learning from human feedback (RLHF) has emerged as the standard paradigm for aligning large language models with human preferences. However, reward-based methods grounded in the Bradley-Terry assumption struggle to capture the nontransitivity and heterogeneity of real-world preferences. To address this, recent studies have reframed alignment as a two-player Nash game, giving rise to Nash learning from human feedback (NLHF). While this perspective has inspired algorithms such as INPO, ONPO, and EGPO that offer strong theoretical and empirical guarantees, they remain fundamentally restricted to two-player interactions, introducing a single-opponent bias that fails to capture the full complexity of realistic preference structures. This work introduces Multiplayer Nash Preference Optimization (MNPO), a novel framework that generalizes NLHF to the multiplayer regime. It formulates alignment as an n-player game, where each policy competes against a population of opponents while being regularized toward a reference model. We demonstrate that MNPO inherits the equilibrium guarantees of two-player methods while enabling richer competitive dynamics and improved coverage of diverse preference structures. Comprehensive empirical evaluation shows that MNPO consistently outperforms existing NLHF baselines on instruction-following benchmarks, achieving superior alignment quality under heterogeneous annotator conditions and mixed-policy evaluation scenarios. Together, these results establish MNPO as a principled and scalable framework for aligning LLMs with complex, non-trans...",
-    "published": "Sep 27",
-    "pdf_url": "https://arxiv.org/pdf/2509.23102v3",
-    "arxiv_url": "http://arxiv.org/abs/2509.23102v3",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Front-Loading Reasoning: The Synergy between Pretraining and Post-Training Data",
-    "authors": [
-      "Syeda Nahida Akter",
-      "Shrimai Prabhumoye",
-      "Eric Nyberg",
-      "Mostofa Patwary",
-      "Mohammad Shoeybi",
-      "Yejin Choi",
-      "Bryan Catanzaro"
-    ],
-    "summary": "The prevailing paradigm for enhancing the reasoning abilities of LLMs revolves around post-training on high-quality, reasoning-intensive data. While emerging literature suggests that reasoning data is increasingly incorporated also during the mid-training stage-a practice that is relatively more proprietary and less openly characterized-the role of such data in pretraining remains unclear. In particular, due to the opaqueness of pretraining corpora in most frontier models, the effect of reasoning data introduced at different phases of pre- and/or post-training is relatively less reported in the scientific literature. This raises several important questions: Is adding reasoning data earlier during pretraining any better than introducing it during post-training? Could earlier inclusion risk overfitting and harm generalization, or instead establish durable foundations that later fine-tuning cannot recover? We conduct the first systematic study of how reasoning data-varying in scale, diversity, and quality-affects LLM performance when introduced at different stages of training. We find that front-loading reasoning data into pretraining is critical (19% avg gain), establishing foundational capabilities that cannot be fully replicated by later-stage SFT, even with more data. We uncover an asymmetric principle for optimal data allocation: pretraining benefits most from broad diversity in reasoning patterns (11% avg gain), while SFT is more sensitive to data quality (15% avg gain). We show that high-quality pretraining data has latent effects, activated only after SFT, and that nai...",
-    "published": "Sep 26",
-    "pdf_url": "https://arxiv.org/pdf/2510.03264v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.03264v1",
-    "queried_author": "Mohammad Shoeybi",
-    "matching_authors": [
-      "Mohammad Shoeybi",
-      "Mostofa Patwary",
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Adaptive Margin RLHF via Preference over Preferences",
-    "authors": [
-      "Yaswanth Chittepu",
-      "Prasann Singhal",
-      "Greg Durrett",
-      "Scott Niekum"
-    ],
-    "summary": "Margin-based optimization is fundamental to improving generalization and robustness in classification tasks. In the context of reward model learning from preferences within Reinforcement Learning from Human Feedback (RLHF), existing methods typically rely on no margins, fixed margins, or margins that are simplistic functions of preference ratings. However, such formulations often fail to account for the varying strengths of different preferences, for example some preferences are associated with larger margins between responses, or they rely on noisy margin information derived from ratings. We argue that modeling the strength of preferences can lead to better generalization and more faithful alignment. Furthermore, many existing methods that use adaptive margins assume access to accurate preference scores, which can be difficult for humans to provide reliably. We propose an approach that leverages preferences over preferences, that is annotations indicating which of two preferences reflects a stronger distinction. We use this ordinal signal to infer adaptive margins on a per-datapoint basis. We introduce an extension to Direct Preference Optimization (DPO), DPO-PoP, that incorporates adaptive margins from preference-over-preference supervision, enabling improved discriminative and generative performance. Empirically, our method outperforms vanilla DPO, DPO with fixed margins, and DPO with ground-truth margins on the UltraFeedback dataset. Additionally, we show that there is a tradeoff between discriminative and generative performance: improving test classification accuracy, ...",
-    "published": "Sep 26",
-    "pdf_url": "https://arxiv.org/pdf/2509.22851v3",
-    "arxiv_url": "http://arxiv.org/abs/2509.22851v3",
-    "queried_author": "Greg Durrett",
-    "matching_authors": [
-      "Greg Durrett"
-    ]
-  },
-  {
-    "title": "Learning Human-Perceived Fakeness in AI-Generated Videos via Multimodal LLMs",
-    "authors": [
-      "Xingyu Fu",
-      "Siyi Liu",
-      "Yinuo Xu",
-      "Pan Lu",
-      "Guangqiuse Hu",
-      "Tianbo Yang",
-      "Taran Anantasagar",
-      "Christopher Shen",
-      "Yikai Mao",
-      "Yuanzhe Liu",
-      "Keyush Shah",
-      "Chung Un Lee",
-      "Yejin Choi",
-      "James Zou",
-      "Dan Roth",
-      "Chris Callison-Burch"
-    ],
-    "summary": "Can humans identify AI-generated (fake) videos and provide grounded reasons? While video generation models have advanced rapidly, a critical dimension -- whether humans can detect deepfake traces within a generated video, i.e., spatiotemporal grounded visual artifacts that reveal a video as machine generated -- has been largely overlooked. We introduce DeeptraceReward, the first fine-grained, spatially- and temporally- aware benchmark that annotates human-perceived fake traces for video generation reward. The dataset comprises 4.3K detailed annotations across 3.3K high-quality generated videos. Each annotation provides a natural-language explanation, pinpoints a bounding-box region containing the perceived trace, and marks precise onset and offset timestamps. We consolidate these annotations into 9 major categories of deepfake traces that lead humans to identify a video as AI-generated, and train multimodal language models (LMs) as reward models to mimic human judgments and localizations. On DeeptraceReward, our 7B reward model outperforms GPT-5 by 34.7% on average across fake clue identification, grounding, and explanation. Interestingly, we observe a consistent difficulty gradient: binary fake v.s. real classification is substantially easier than fine-grained deepfake trace detection; within the latter, performance degrades from natural language explanations (easiest), to spatial grounding, to temporal labeling (hardest). By foregrounding human-perceived deepfake traces, DeeptraceReward provides a rigorous testbed and training signal for socially aware and trustworthy vid...",
-    "published": "Sep 26",
-    "pdf_url": "https://arxiv.org/pdf/2509.22646v2",
-    "arxiv_url": "http://arxiv.org/abs/2509.22646v2",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "RLP: Reinforcement as a Pretraining Objective",
-    "authors": [
-      "Ali Hatamizadeh",
-      "Syeda Nahida Akter",
-      "Shrimai Prabhumoye",
-      "Jan Kautz",
-      "Mostofa Patwary",
-      "Mohammad Shoeybi",
-      "Bryan Catanzaro",
-      "Yejin Choi"
-    ],
-    "summary": "The dominant paradigm for training large reasoning models starts with pre-training using next-token prediction loss on vast amounts of data. Reinforcement learning, while powerful in scaling reasoning, is introduced only as the very last phase of post-training, preceded by supervised fine-tuning. While dominant, is this an optimal way of training? In this paper, we present RLP, an information-driven reinforcement pretraining objective, that brings the core spirit of reinforcement learning -- exploration -- to the last phase of pretraining. The key idea is to treat chain-of-thought as an exploratory action, with rewards computed based on the information gain it provides for predicting future tokens. This training objective essentially encourages the model to think for itself before predicting what comes next, thus teaching an independent thinking behavior earlier in the pretraining. More concretely, the reward signal measures the increase in log-likelihood of the next token when conditioning on both context and a sampled reasoning chain, compared to conditioning on context alone. This approach yields a verifier-free dense reward signal, allowing for efficient training for the full document stream during pretraining. Specifically, RLP reframes reinforcement learning for reasoning as a pretraining objective on ordinary text, bridging the gap between next-token prediction and the emergence of useful chain-of-thought reasoning. Pretraining with RLP on Qwen3-1.7B-Base lifts the overall average across an eight-benchmark math-and-science suite by 19%. With identical post-training, ...",
-    "published": "Sep 26",
-    "pdf_url": "https://arxiv.org/pdf/2510.01265v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.01265v2",
-    "queried_author": "Mohammad Shoeybi",
-    "matching_authors": [
-      "Mohammad Shoeybi",
-      "Mostofa Patwary",
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Bridging Kolmogorov Complexity and Deep Learning: Asymptotically Optimal Description Length Objectives for Transformers",
-    "authors": [
-      "Peter Shaw",
-      "James Cohan",
-      "Jacob Eisenstein",
-      "Kristina Toutanova"
-    ],
-    "summary": "The Minimum Description Length (MDL) principle offers a formal framework for applying Occam's razor in machine learning. However, its application to neural networks such as Transformers is challenging due to the lack of a principled, universal measure for model complexity. This paper introduces the theoretical notion of asymptotically optimal description length objectives, grounded in the theory of Kolmogorov complexity. We establish that a minimizer of such an objective achieves optimal compression, for any dataset, up to an additive constant, in the limit as model resource bounds increase. We prove that asymptotically optimal objectives exist for Transformers, building on a new demonstration of their computational universality. We further show that such objectives can be tractable and differentiable by constructing and analyzing a variational objective based on an adaptive Gaussian mixture prior. Our empirical analysis shows that this variational objective selects for a low-complexity solution with strong generalization on an algorithmic task, but standard optimizers fail to find such solutions from a random initialization, highlighting key optimization challenges. More broadly, by providing a theoretical framework for identifying description length objectives with strong asymptotic guarantees, we outline a potential path towards training neural networks that achieve greater compression and generalization.",
-    "published": "Sep 26",
-    "pdf_url": "https://arxiv.org/pdf/2509.22445v3",
-    "arxiv_url": "http://arxiv.org/abs/2509.22445v3",
-    "queried_author": "Jacob Eisenstein",
-    "matching_authors": [
-      "Jacob Eisenstein"
-    ]
-  },
-  {
-    "title": "Position: The Hidden Costs and Measurement Gaps of Reinforcement Learning with Verifiable Rewards",
-    "authors": [
-      "Fang Wu",
-      "Aaron Tu",
-      "Weihao Xuan",
-      "Heli Qi",
-      "Xu Huang",
-      "Qingcheng Zeng",
-      "Shayan Talaei",
-      "Yijia Xiao",
-      "Peng Xia",
-      "Xiangru Tang",
-      "Yuchen Zhuang",
-      "Bing Hu",
-      "Hanqun Cao",
-      "Wenqi Shi",
-      "Rui Yang",
-      "Nan Liu",
-      "Huaxiu Yao",
-      "Ge Liu",
-      "Li Erran Li",
-      "Amin Saberi",
-      "Naoto Yokoya",
-      "Jure Leskovec",
-      "Yejin Choi"
-    ],
-    "summary": "Reinforcement learning with verifiable rewards (RLVR) is a practical, scalable way to improve large language models on math, code, and other structured tasks. However, we argue that many headline RLVR gains are not yet well validated because reports often conflate policy improvement with three confounds: (i) budget mismatch between RLVR and baseline evaluation, (ii) attempt inflation and calibration drift that convert abstentions into confident answers, and (iii) data contamination in benchmarks. Using budget-matched reproductions and partial-prompt contamination probes, we find that several widely cited gaps shrink substantially or disappear once budgets, prompts, and dataset versions are matched, and contaminated sets are treated as memorization probes rather than evidence of reasoning. This does not mean that RLVR is ineffective, but it implies that current measurements often overstate capability gains and obscure reliability costs. We therefore propose a compact, tax-aware minimum standard for RLVR training and evaluation: budget-matched saturation curves with variance, calibration, and abstention tracking, one judge robustness stress test when LLM judges are used, and an explicit contamination screen. With these controls, RLVR remains effective and deployable in verifiable domains, but reasoning gains should be treated as provisional without them.",
-    "published": "Sep 26",
-    "pdf_url": "https://arxiv.org/pdf/2509.21882v2",
-    "arxiv_url": "http://arxiv.org/abs/2509.21882v2",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "A Unifying Framework for Parallelizing Sequential Models with Linear Dynamical Systems",
-    "authors": [
-      "Xavier Gonzalez",
-      "E. Kelly Buchanan",
-      "Hyun Dong Lee",
-      "Jerry Weihong Liu",
-      "Ke Alexander Wang",
-      "David M. Zoltowski",
-      "Leo Kozachkov",
-      "Christopher R\u00e9",
-      "Scott W. Linderman"
-    ],
-    "summary": "Harnessing parallelism in seemingly sequential models is a central challenge for modern machine learning. Several approaches have been proposed for evaluating sequential processes in parallel using iterative fixed-point methods, like Newton, Picard, and Jacobi iterations. In this work, we show that these methods can be understood within a common framework based on linear dynamical systems (LDSs), where different iteration schemes arise naturally as approximate linearizations of a nonlinear recursion. Moreover, we theoretically analyze the rates of convergence of these methods, and we verify the predictions of this theory with several case studies. This unifying framework highlights shared principles behind these techniques and clarifies when particular fixed-point methods are most likely to be effective. By bridging diverse algorithms through the language of LDSs, the framework provides a clearer theoretical foundation for parallelizing sequential models and points toward new opportunities for efficient and scalable computation.",
-    "published": "Sep 26",
-    "pdf_url": "https://arxiv.org/pdf/2509.21716v2",
-    "arxiv_url": "http://arxiv.org/abs/2509.21716v2",
-    "queried_author": "Christopher R\u00e9",
-    "matching_authors": [
-      "Christopher R\u00e9"
-    ]
-  },
-  {
-    "title": "DistillKac: Few-Step Image Generation via Damped Wave Equations",
-    "authors": [
-      "Weiqiao Han",
-      "Chenlin Meng",
-      "Christopher D. Manning",
-      "Stefano Ermon"
-    ],
-    "summary": "We present DistillKac, a fast image generator that uses the damped wave equation and its stochastic Kac representation to move probability mass at finite speed. In contrast to diffusion models whose reverse time velocities can become stiff and implicitly allow unbounded propagation speed, Kac dynamics enforce finite speed transport and yield globally bounded kinetic energy. Building on this structure, we introduce classifier-free guidance in velocity space that preserves square integrability under mild conditions. We then propose endpoint only distillation that trains a student to match a frozen teacher over long intervals. We prove a stability result that promotes supervision at the endpoints to closeness along the entire path. Experiments demonstrate DistillKac delivers high quality samples with very few function evaluations while retaining the numerical stability benefits of finite speed probability flows.",
-    "published": "Sep 25",
-    "pdf_url": "https://arxiv.org/pdf/2509.21513v3",
-    "arxiv_url": "http://arxiv.org/abs/2509.21513v3",
-    "queried_author": "Christopher D Manning",
-    "matching_authors": [
-      "Christopher D Manning"
-    ]
-  },
-  {
-    "title": "VideoJudge: Bootstrapping Enables Scalable Supervision of MLLM-as-a-Judge for Video Understanding",
-    "authors": [
-      "Abdul Waheed",
-      "Zhen Wu",
-      "Dareen Alharthi",
-      "Seungone Kim",
-      "Bhiksha Raj"
-    ],
-    "summary": "Precisely evaluating video understanding models remains challenging: commonly used metrics such as BLEU, ROUGE, and BERTScore fail to capture the fineness of human judgment, while obtaining such judgments through manual evaluation is costly. Recent work has explored using large language models (LLMs) or multimodal LLMs (MLLMs) as evaluators, but their extension to video understanding remains relatively unexplored. In this work, we introduce VideoJudge, a 3B and 7B-sized MLLM judge specialized to evaluate outputs from video understanding models (\\textit{i.e.}, text responses conditioned on videos). To train VideoJudge, our recipe builds on the interplay between a generator and an evaluator: the generator is prompted to produce responses conditioned on a target rating, and responses not matching the evaluator's rating are discarded. Across three out of four meta-evaluation benchmarks, VideoJudge-7B outperforms larger MLLM judge baselines such as Qwen2.5-VL (32B and 72B). Notably, we find that LLM judges (Qwen3) models perform worse than MLLM judges (Qwen2.5-VL) and long chain-of-thought reasoning does not improve performance, indicating that providing video inputs is crucial for evaluation of video understanding tasks.",
-    "published": "Sep 25",
-    "pdf_url": "https://arxiv.org/pdf/2509.21451v1",
-    "arxiv_url": "http://arxiv.org/abs/2509.21451v1",
-    "queried_author": "Seungone Kim",
-    "matching_authors": [
-      "Seungone Kim"
     ]
   }
 ]
