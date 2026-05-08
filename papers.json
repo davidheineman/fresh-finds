@@ -1,5 +1,55 @@
 [
   {
+    "title": "EMO: Pretraining Mixture of Experts for Emergent Modularity",
+    "authors": [
+      "Ryan Wang",
+      "Akshita Bhagia",
+      "Sewon Min"
+    ],
+    "summary": "Large language models are typically deployed as monolithic systems, requiring the full model even when applications need only a narrow subset of capabilities, e.g., code, math, or domain-specific knowledge. Mixture-of-Experts (MoEs) seemingly offer a potential alternative by activating only a subset of experts per input, but in practice, restricting inference to a subset of experts for a given domain leads to severe performance degradation. This limits their practicality in memory-constrained settings, especially as models grow larger and sparser. We introduce EMO, an MoE designed for modularity-the independent use and composition of expert subsets-without requiring human-defined priors. Our key idea is to encourage tokens from similar domains to rely on similar experts. Since tokens within a document often share a domain, EMO restricts them to select experts from a shared pool, while allowing different documents to use different pools. This simple constraint enables coherent expert groupings to emerge during pretraining using document boundaries alone. We pretrain a 1B-active, 14B-total EMO on 1T tokens. As a full model, it matches standard MoE performance. Crucially, it enables selective expert use: retaining only 25% (12.5%) of experts incurs just a 1% (3%) absolute drop, whereas standard MoEs break under the same setting. We further find that expert subsets in EMO specialize at semantic levels (e.g., domains such as math or code), in contrast to the low-level syntactic specialization observed in standard MoEs. Altogether, our results demonstrate a path toward modular, m...",
+    "published": "May 07",
+    "pdf_url": "https://arxiv.org/pdf/2605.06663v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.06663v1",
+    "queried_author": "Sewon Min",
+    "matching_authors": [
+      "Sewon Min"
+    ]
+  },
+  {
+    "title": "Recursive Agent Optimization",
+    "authors": [
+      "Apurva Gandhi",
+      "Satyaki Chakraborty",
+      "Xiangjun Wang",
+      "Aviral Kumar",
+      "Graham Neubig"
+    ],
+    "summary": "We introduce Recursive Agent Optimization (RAO), a reinforcement learning approach for training recursive agents: agents that can spawn and delegate sub-tasks to new instantiations of themselves recursively. Recursive agents implement an inference-time scaling algorithm that naturally allows agents to scale to longer contexts and generalize to more difficult problems via divide-and-conquer. RAO provides a method to train models to best take advantage of such recursive inference, teaching agents when and how to delegate and communicate. We find that recursive agents trained in this way enjoy better training efficiency, can scale to tasks that go beyond the model's context window, generalize to tasks much harder than the ones the agent was trained on, and can enjoy reduced wall-clock time compared to single-agent systems.",
+    "published": "May 07",
+    "pdf_url": "https://arxiv.org/pdf/2605.06639v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.06639v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
+    "title": "OBLIQ-Bench: Exposing Overlooked Bottlenecks in Modern Retrievers with Latent and Implicit Queries",
+    "authors": [
+      "Diane Tchuindjo",
+      "Devavrat Shah",
+      "Omar Khattab"
+    ],
+    "summary": "Retrieval benchmarks are increasingly saturating, but we argue that efficient search is far from a solved problem. We identify a class of queries we call oblique, which seek documents that instantiate a latent pattern, like finding all tweets that express an implicit stance, chat logs that demonstrate a particular failure mode, or transcripts that match an abstract scenario. We study three mechanisms through which obliqueness may arise and introduce OBLIQ-Bench, a suite of five oblique search problems over real long-tail corpora. OBLIQ-Bench exposes an overlooked asymmetry between retrieval and verification, where reasoning LLMs reliably recognize latent relevance whenever relevant documents are surfaced, but even sophisticated retrieval pipelines fail to surface most relevant documents in the first place. We hope that OBLIQ-Bench will drive research into retrieval architectures that efficiently capture latent patterns and implicit signals in large corpora.",
+    "published": "May 07",
+    "pdf_url": "https://arxiv.org/pdf/2605.06235v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.06235v1",
+    "queried_author": "Omar Khattab",
+    "matching_authors": [
+      "Omar Khattab"
+    ]
+  },
+  {
     "title": "Implicit Representations of Grammaticality in Language Models",
     "authors": [
       "Yingshan Susan Wang",
@@ -188,6 +238,38 @@
     ]
   },
   {
+    "title": "Beyond Semantic Similarity: Rethinking Retrieval for Agentic Search via Direct Corpus Interaction",
+    "authors": [
+      "Zhuofeng Li",
+      "Haoxiang Zhang",
+      "Cong Wei",
+      "Pan Lu",
+      "Ping Nie",
+      "Yi Lu",
+      "Yuyang Bai",
+      "Shangbin Feng",
+      "Hangxiao Zhu",
+      "Ming Zhong",
+      "Yuyu Zhang",
+      "Jianwen Xie",
+      "Yejin Choi",
+      "James Zou",
+      "Jiawei Han",
+      "Wenhu Chen",
+      "Jimmy Lin",
+      "Dongfu Jiang",
+      "Yu Zhang"
+    ],
+    "summary": "Modern retrieval systems, whether lexical or semantic, expose a corpus through a fixed similarity interface that compresses access into a single top-k retrieval step before reasoning. This abstraction is efficient, but for agentic search, it becomes a bottleneck: exact lexical constraints, sparse clue conjunctions, local context checks, and multi-step hypothesis refinement are difficult to implement by calling a conventional off-the-shelf retriever, and evidence filtered out early cannot be recovered by stronger downstream reasoning. Agentic tasks further exacerbate this limitation because they require agents to orchestrate multiple steps, including discovering intermediate entities, combining weak clues, and revising the plan after observing partial evidence. To tackle the limitation, we study direct corpus interaction (DCI), where an agent searches the raw corpus directly with general-purpose terminal tools (e.g., grep, file reads, shell commands, lightweight scripts), without any embedding model, vector index, or retrieval API. This approach requires no offline indexing and adapts naturally to evolving local corpora. Across IR benchmarks and end-to-end agentic search tasks, this simple setup substantially outperforms strong sparse, dense, and reranking baselines on several BRIGHT and BEIR datasets, and attains strong accuracy on BrowseComp-Plus and multi-hop QA without relying on any conventional semantic retriever. Our results indicate that as language agents become stronger, retrieval quality depends not only on reasoning ability but also on the resolution of the inter...",
+    "published": "May 03",
+    "pdf_url": "https://arxiv.org/pdf/2605.05242v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.05242v1",
+    "queried_author": "Yejin Choi",
+    "matching_authors": [
+      "Yejin Choi"
+    ]
+  },
+  {
     "title": "Compute Optimal Tokenization",
     "authors": [
       "Tomasz Limisiewicz",
@@ -204,12 +286,12 @@
     "published": "May 02",
     "pdf_url": "https://arxiv.org/pdf/2605.01188v1",
     "arxiv_url": "http://arxiv.org/abs/2605.01188v1",
-    "queried_author": "Luke Zettlemoyer",
+    "queried_author": "Alisa Liu",
     "matching_authors": [
+      "Alisa Liu",
       "Luke Zettlemoyer",
-      "Mike Lewis",
       "Margaret Li",
-      "Alisa Liu"
+      "Mike Lewis"
     ]
   },
   {
@@ -295,10 +377,10 @@
     "published": "May 01",
     "pdf_url": "https://arxiv.org/pdf/2605.02937v1",
     "arxiv_url": "http://arxiv.org/abs/2605.02937v1",
-    "queried_author": "Yejin Choi",
+    "queried_author": "Jure Leskovec",
     "matching_authors": [
-      "Yejin Choi",
-      "Jure Leskovec"
+      "Jure Leskovec",
+      "Yejin Choi"
     ]
   },
   {
@@ -756,10 +838,10 @@
     "published": "Apr 23",
     "pdf_url": "https://arxiv.org/pdf/2604.22074v1",
     "arxiv_url": "http://arxiv.org/abs/2604.22074v1",
-    "queried_author": "Christopher Potts",
+    "queried_author": "Carlos Guestrin",
     "matching_authors": [
-      "Christopher Potts",
-      "Carlos Guestrin"
+      "Carlos Guestrin",
+      "Christopher Potts"
     ]
   },
   {
@@ -1803,12 +1885,12 @@
     "published": "Apr 14",
     "pdf_url": "https://arxiv.org/pdf/2604.12374v1",
     "arxiv_url": "http://arxiv.org/abs/2604.12374v1",
-    "queried_author": "Mohammad Shoeybi",
+    "queried_author": "Alisa Liu",
     "matching_authors": [
+      "Alisa Liu",
       "Mohammad Shoeybi",
       "Mostofa Patwary",
-      "Yejin Choi",
-      "Alisa Liu"
+      "Yejin Choi"
     ]
   },
   {
@@ -2141,6 +2223,25 @@
     "matching_authors": [
       "Christopher Potts",
       "Tatsunori Hashimoto"
+    ]
+  },
+  {
+    "title": "Distributed Multi-Layer Editing for Rule-Level Knowledge in Large Language Models",
+    "authors": [
+      "Yating Wang",
+      "Wenting Zhao",
+      "Yaqi Zhao",
+      "Yongshun Gong",
+      "Yilong Yin",
+      "Haoliang Sun"
+    ],
+    "summary": "Large language models store not only isolated facts but also rules that support reasoning across symbolic expressions, natural language explanations, and concrete instances. Yet most model editing methods are built for fact-level knowledge, assuming that a target edit can be achieved through a localized intervention. This assumption does not hold for rule-level knowledge, where a single rule must remain consistent across multiple interdependent forms. We investigate this problem through a mechanistic study of rule-level knowledge editing. To support this study, we extend the RuleEdit benchmark from 80 to 200 manually verified rules spanning mathematics and physics. Fine-grained causal tracing reveals a form-specific organization of rule knowledge in transformer layers: formulas and descriptions are concentrated in earlier layers, while instances are more associated with middle layers. These results suggest that rule knowledge is not uniformly localized, and therefore cannot be reliably edited by a single-layer or contiguous-block intervention. Based on this insight, we propose Distributed Multi-Layer Editing (DMLE), which applies a shared early-layer update to formulas and descriptions and a separate middle-layer update to instances. While remaining competitive on standard editing metrics, DMLE achieves substantially stronger rule-level editing performance. On average, it improves instance portability and rule understanding by 13.91 and 50.19 percentage points, respectively, over the strongest baseline across GPT-J-6B, Qwen2.5-7B, Qwen2-7B, and LLaMA-3-8B. The code is avail...",
+    "published": "Apr 09",
+    "pdf_url": "https://arxiv.org/pdf/2604.08284v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.08284v1",
+    "queried_author": "Wenting Zhao",
+    "matching_authors": [
+      "Wenting Zhao"
     ]
   },
   {
@@ -3014,7 +3115,8 @@
     "matching_authors": [
       "Graham Neubig",
       "Sean Welleck",
-      "Seungone Kim"
+      "Seungone Kim",
+      "Wenting Zhao"
     ]
   },
   {
@@ -4011,6 +4113,34 @@
     ]
   },
   {
+    "title": "Position: Vector Prompt Interfaces Should Be Exposed to Enable Customization of Large Language Models",
+    "authors": [
+      "Liangwei Yang",
+      "Shiyu Wang",
+      "Haolin Chen",
+      "Rithesh Murthy",
+      "Ming Zhu",
+      "Jielin Qiu",
+      "Zixiang Chen",
+      "Juntao Tan",
+      "Jianguo Zhang",
+      "Zhiwei Liu",
+      "Wenting Zhao",
+      "Silvio Savarese",
+      "Caiming Xiong",
+      "Huan Wang",
+      "Shelby Heinecke"
+    ],
+    "summary": "As large language models (LLMs) transition from research prototypes to real-world systems, customization has emerged as a central bottleneck. While text prompts can already customize LLM behavior, we argue that text-only prompting does not constitute a suitable control interface for scalable, stable, and inference-only customization. This position paper argues that model providers should expose \\emph{vector prompt inputs} as part of the public interface for customizing LLMs. We support this position with diagnostic evidence showing that vector prompt tuning continues to improve with increasing supervision whereas text-based prompt optimization saturates early, and that vector prompts exhibit dense, global attention patterns indicative of a distinct control mechanism. We further discuss why inference-only customization is increasingly important under realistic deployment constraints, and why exposing vector prompts need not fundamentally increase model leakage risk under a standard black-box threat model. We conclude with a call to action for the community to rethink prompt interfaces as a core component of LLM customization.",
+    "published": "Mar 04",
+    "pdf_url": "https://arxiv.org/pdf/2603.04292v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.04292v1",
+    "queried_author": "Wenting Zhao",
+    "matching_authors": [
+      "Wenting Zhao"
+    ]
+  },
+  {
     "title": "A Rubric-Supervised Critic from Sparse Real-World Outcomes",
     "authors": [
       "Xingyao Wang",
@@ -4205,6 +4335,39 @@
     ]
   },
   {
+    "title": "Qwen3-Coder-Next Technical Report",
+    "authors": [
+      "Ruisheng Cao",
+      "Mouxiang Chen",
+      "Jiawei Chen",
+      "Zeyu Cui",
+      "Yunlong Feng",
+      "Binyuan Hui",
+      "Yuheng Jing",
+      "Kaixin Li",
+      "Mingze Li",
+      "Junyang Lin",
+      "Zeyao Ma",
+      "Kashun Shum",
+      "Xuwu Wang",
+      "Jinxi Wei",
+      "Jiaxi Yang",
+      "Jiajun Zhang",
+      "Lei Zhang",
+      "Zongmeng Zhang",
+      "Wenting Zhao",
+      "Fan Zhou"
+    ],
+    "summary": "We present Qwen3-Coder-Next, an open-weight language model specialized for coding agents. Qwen3-Coder-Next is an 80-billion-parameter model that activates only 3 billion parameters during inference, enabling strong coding capability with efficient inference. In this work, we explore how far strong training recipes can push the capability limits of models with small parameter footprints. To achieve this, we perform agentic training through large-scale synthesis of verifiable coding tasks paired with executable environments, allowing learning directly from environment feedback via mid-training and reinforcement learning. Across agent-centric benchmarks including SWE-Bench and Terminal-Bench, Qwen3-Coder-Next achieves competitive performance relative to its active parameter count. We release both base and instruction-tuned open-weight versions to support research and real-world coding agent development.",
+    "published": "Feb 28",
+    "pdf_url": "https://arxiv.org/pdf/2603.00729v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.00729v1",
+    "queried_author": "Wenting Zhao",
+    "matching_authors": [
+      "Wenting Zhao"
+    ]
+  },
+  {
     "title": "Brittlebench: Quantifying LLM robustness via prompt sensitivity",
     "authors": [
       "Angelika Romanou",
@@ -4263,6 +4426,35 @@
     "queried_author": "Jacob Eisenstein",
     "matching_authors": [
       "Jacob Eisenstein"
+    ]
+  },
+  {
+    "title": "AudioCapBench: Quick Evaluation on Audio Captioning across Sound, Music, and Speech",
+    "authors": [
+      "Jielin Qiu",
+      "Jianguo Zhang",
+      "Zixiang Chen",
+      "Liangwei Yang",
+      "Ming Zhu",
+      "Juntao Tan",
+      "Haolin Chen",
+      "Wenting Zhao",
+      "Rithesh Murthy",
+      "Roshan Ram",
+      "Akshara Prabhakar",
+      "Shelby Heinecke",
+      "Caiming",
+      "Xiong",
+      "Silvio Savarese",
+      "Huan Wang"
+    ],
+    "summary": "We introduce AudioCapBench, a benchmark for evaluating audio captioning capabilities of large multimodal models. \\method covers three distinct audio domains, including environmental sound, music, and speech, with 1,000 curated evaluation samples drawn from established datasets. We evaluate 13 models across two providers (OpenAI, Google Gemini) using both reference-based metrics (METEOR, BLEU, ROUGE-L) and an LLM-as-Judge framework that scores predictions on three orthogonal dimensions: \\textit{accuracy} (semantic correctness), \\textit{completeness} (coverage of reference content), and \\textit{hallucination} (absence of fabricated content). Our results reveal that Gemini models generally outperform OpenAI models on overall captioning quality, with Gemini~3~Pro achieving the highest overall score (6.00/10), while OpenAI models exhibit lower hallucination rates. All models perform best on speech captioning and worst on music captioning. We release the benchmark as well as evaluation code to facilitate reproducible audio understanding research.",
+    "published": "Feb 27",
+    "pdf_url": "https://arxiv.org/pdf/2602.23649v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.23649v1",
+    "queried_author": "Wenting Zhao",
+    "matching_authors": [
+      "Wenting Zhao"
     ]
   },
   {
@@ -5105,10 +5297,10 @@
     "published": "Feb 17",
     "pdf_url": "https://arxiv.org/pdf/2602.15338v1",
     "arxiv_url": "http://arxiv.org/abs/2602.15338v1",
-    "queried_author": "Sanmi Koyejo",
+    "queried_author": "Carlos Guestrin",
     "matching_authors": [
-      "Sanmi Koyejo",
-      "Carlos Guestrin"
+      "Carlos Guestrin",
+      "Sanmi Koyejo"
     ]
   },
   {
@@ -5170,11 +5362,11 @@
     "published": "Feb 14",
     "pdf_url": "https://arxiv.org/pdf/2602.13666v1",
     "arxiv_url": "http://arxiv.org/abs/2602.13666v1",
-    "queried_author": "Pang Wei Koh",
+    "queried_author": "Carlos Guestrin",
     "matching_authors": [
+      "Carlos Guestrin",
       "Pang Wei Koh",
-      "Sanmi Koyejo",
-      "Carlos Guestrin"
+      "Sanmi Koyejo"
     ]
   },
   {
@@ -5953,6 +6145,31 @@
     ]
   },
   {
+    "title": "Scaling Agentic Verifier for Competitive Coding",
+    "authors": [
+      "Zeyao Ma",
+      "Jing Zhang",
+      "Xiaokang Zhang",
+      "Jiaxi Yang",
+      "Zongmeng Zhang",
+      "Jiajun Zhang",
+      "Yuheng Jing",
+      "Lei Zhang",
+      "Hao Zheng",
+      "Wenting Zhao",
+      "Junyang Lin",
+      "Binyuan Hui"
+    ],
+    "summary": "Large language models (LLMs) have demonstrated strong coding capabilities but still struggle to solve competitive programming problems correctly in a single attempt. Execution-based re-ranking offers a promising test-time scaling strategy, yet existing methods are constrained by either difficult test case generation or inefficient random input sampling. To address this limitation, we propose Agentic Verifier, an execution-based agent that actively reasons about program behaviors and searches for highly discriminative test inputs that expose behavioral discrepancies among candidate solutions. Through multi-turn interaction with code execution environments, the verifier iteratively refines the candidate input generator and produces targeted counterexamples rather than blindly sampling inputs. We train the verifier to acquire this discriminative input generation capability via a scalable pipeline combining large-scale data synthesis, rejection fine-tuning, and agentic reinforcement learning. Extensive experiments across five competitive programming benchmarks demonstrate consistent improvements over strong execution-based baselines, achieving up to +10-15% absolute gains in Best@K accuracy. Further analysis reveals clear test-time scaling behavior and highlights the verifier's broader potential beyond reranking.",
+    "published": "Feb 04",
+    "pdf_url": "https://arxiv.org/pdf/2602.04254v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.04254v1",
+    "queried_author": "Wenting Zhao",
+    "matching_authors": [
+      "Wenting Zhao"
+    ]
+  },
+  {
     "title": "Learning to Reason in 13 Parameters",
     "authors": [
       "John X. Morris",
@@ -6004,10 +6221,10 @@
     "published": "Feb 03",
     "pdf_url": "https://arxiv.org/pdf/2602.04029v1",
     "arxiv_url": "http://arxiv.org/abs/2602.04029v1",
-    "queried_author": "Jure Leskovec",
+    "queried_author": "Carlos Guestrin",
     "matching_authors": [
-      "Jure Leskovec",
-      "Carlos Guestrin"
+      "Carlos Guestrin",
+      "Jure Leskovec"
     ]
   },
   {
@@ -6117,6 +6334,37 @@
     ]
   },
   {
+    "title": "SWE-Universe: Scale Real-World Verifiable Environments to Millions",
+    "authors": [
+      "Mouxiang Chen",
+      "Lei Zhang",
+      "Yunlong Feng",
+      "Xuwu Wang",
+      "Wenting Zhao",
+      "Ruisheng Cao",
+      "Jiaxi Yang",
+      "Jiawei Chen",
+      "Mingze Li",
+      "Zeyao Ma",
+      "Hao Ge",
+      "Zongmeng Zhang",
+      "Zeyu Cui",
+      "Dayiheng Liu",
+      "Jingren Zhou",
+      "Jianling Sun",
+      "Junyang Lin",
+      "Binyuan Hui"
+    ],
+    "summary": "We propose SWE-Universe, a scalable and efficient framework for automatically constructing real-world software engineering (SWE) verifiable environments from GitHub pull requests (PRs). To overcome the prevalent challenges of automatic building, such as low production yield, weak verifiers, and prohibitive cost, our framework utilizes a building agent powered by an efficient custom-trained model. This agent employs iterative self-verification and in-loop hacking detection to ensure the reliable generation of high-fidelity, verifiable tasks. Using this method, we scale the number of real-world multilingual SWE environments to a million scale (807,693). We demonstrate the profound value of our environments through large-scale agentic mid-training and reinforcement learning. Finally, we applied this technique to Qwen3-Max-Thinking and achieved a score of 75.3% on SWE-Bench Verified. Our work provides both a critical resource and a robust methodology to advance the next generation of coding agents.",
+    "published": "Feb 02",
+    "pdf_url": "https://arxiv.org/pdf/2602.02361v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.02361v1",
+    "queried_author": "Wenting Zhao",
+    "matching_authors": [
+      "Wenting Zhao"
+    ]
+  },
+  {
     "title": "The Shape of Beliefs: Geometry, Dynamics, and Interventions along Representation Manifolds of Language Models' Posteriors",
     "authors": [
       "Rapha\u00ebl Sarfati",
@@ -6174,11 +6422,11 @@
     "published": "Jan 30",
     "pdf_url": "https://arxiv.org/pdf/2601.23223v2",
     "arxiv_url": "http://arxiv.org/abs/2601.23223v2",
-    "queried_author": "Noah A. Smith",
+    "queried_author": "Alisa Liu",
     "matching_authors": [
+      "Alisa Liu",
       "Noah A. Smith",
-      "Yejin Choi",
-      "Alisa Liu"
+      "Yejin Choi"
     ]
   },
   {
@@ -6575,10 +6823,10 @@
     "published": "Jan 22",
     "pdf_url": "https://arxiv.org/pdf/2601.16175v2",
     "arxiv_url": "http://arxiv.org/abs/2601.16175v2",
-    "queried_author": "Yejin Choi",
+    "queried_author": "Carlos Guestrin",
     "matching_authors": [
-      "Yejin Choi",
-      "Carlos Guestrin"
+      "Carlos Guestrin",
+      "Yejin Choi"
     ]
   },
   {
@@ -7445,13 +7693,13 @@
     "published": "Dec 29",
     "pdf_url": "https://arxiv.org/pdf/2512.23675v2",
     "arxiv_url": "http://arxiv.org/abs/2512.23675v2",
-    "queried_author": "Sanmi Koyejo",
+    "queried_author": "Carlos Guestrin",
     "matching_authors": [
+      "Carlos Guestrin",
+      "Jure Leskovec",
       "Sanmi Koyejo",
       "Tatsunori Hashimoto",
-      "Yejin Choi",
-      "Jure Leskovec",
-      "Carlos Guestrin"
+      "Yejin Choi"
     ]
   },
   {
@@ -7871,12 +8119,12 @@
     "published": "Dec 24",
     "pdf_url": "https://arxiv.org/pdf/2512.20856v1",
     "arxiv_url": "http://arxiv.org/abs/2512.20856v1",
-    "queried_author": "Mohammad Shoeybi",
+    "queried_author": "Alisa Liu",
     "matching_authors": [
+      "Alisa Liu",
       "Mohammad Shoeybi",
       "Mostofa Patwary",
-      "Yejin Choi",
-      "Alisa Liu"
+      "Yejin Choi"
     ]
   },
   {
@@ -8201,12 +8449,12 @@
     "published": "Dec 23",
     "pdf_url": "https://arxiv.org/pdf/2512.20848v1",
     "arxiv_url": "http://arxiv.org/abs/2512.20848v1",
-    "queried_author": "Mohammad Shoeybi",
+    "queried_author": "Alisa Liu",
     "matching_authors": [
+      "Alisa Liu",
       "Mohammad Shoeybi",
       "Mostofa Patwary",
-      "Yejin Choi",
-      "Alisa Liu"
+      "Yejin Choi"
     ]
   },
   {
@@ -8247,6 +8495,29 @@
     "queried_author": "Yoon Kim",
     "matching_authors": [
       "Yoon Kim"
+    ]
+  },
+  {
+    "title": "SweRank+: Multilingual, Multi-Turn Code Ranking for Software Issue Localization",
+    "authors": [
+      "Revanth Gangi Reddy",
+      "Ye Liu",
+      "Wenting Zhao",
+      "JaeHyeok Doo",
+      "Tarun Suresh",
+      "Daniel Lee",
+      "Caiming Xiong",
+      "Yingbo Zhou",
+      "Semih Yavuz",
+      "Shafiq Joty"
+    ],
+    "summary": "Maintaining large-scale, multilingual codebases hinges on accurately localizing issues, which requires mapping natural-language error descriptions to the relevant functions that need to be modified. However, existing ranking approaches are often Python-centric and perform a single-pass search over the codebase. This work introduces SweRank+, a framework that couples SweRankMulti, a cross-lingual code ranking tool, with SweRankAgent, an agentic search setup, for iterative, multi-turn reasoning over the code repository. SweRankMulti comprises a code embedding retriever and a listwise LLM reranker, and is trained using a carefully curated large-scale issue localization dataset spanning multiple popular programming languages. SweRankAgent adopts an agentic search loop that moves beyond single-shot localization with a memory buffer to reason and accumulate relevant localization candidates over multiple turns. Our experiments on issue localization benchmarks spanning various languages demonstrate new state-of-the-art performance with SweRankMulti, while SweRankAgent further improves localization over single-pass ranking.",
+    "published": "Dec 23",
+    "pdf_url": "https://arxiv.org/pdf/2512.20482v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.20482v1",
+    "queried_author": "Wenting Zhao",
+    "matching_authors": [
+      "Wenting Zhao"
     ]
   },
   {
@@ -8682,6 +8953,7 @@
       "Akari Asai",
       "Alexander Wettig",
       "Ali Farhadi",
+      "Alisa Liu",
       "Hamish Ivison",
       "Hannaneh Hajishirzi",
       "Ian Magnusson",
@@ -8690,8 +8962,7 @@
       "Luke Zettlemoyer",
       "Maarten Sap",
       "Noah A. Smith",
-      "Pang Wei Koh",
-      "Alisa Liu"
+      "Pang Wei Koh"
     ]
   },
   {
@@ -9906,6 +10177,28 @@
     ]
   },
   {
+    "title": "Self-Abstraction from Grounded Experience for Plan-Guided Policy Refinement",
+    "authors": [
+      "Hiroaki Hayashi",
+      "Bo Pang",
+      "Wenting Zhao",
+      "Ye Liu",
+      "Akash Gokul",
+      "Srijan Bansal",
+      "Caiming Xiong",
+      "Semih Yavuz",
+      "Yingbo Zhou"
+    ],
+    "summary": "Large language model (LLM) based agents are increasingly used to tackle software engineering tasks that require multi-step reasoning and code modification, demonstrating promising yet limited performance. However, most existing LLM agents typically operate within static execution frameworks, lacking a principled mechanism to learn and self-improve from their own experience and past rollouts. As a result, their performance remains bounded by the initial framework design and the underlying LLM's capabilities. We propose Self-Abstraction from Grounded Experience (SAGE), a framework that enables agents to learn from their own task executions and refine their behavior through self-abstraction. After an initial rollout, the agent induces a concise plan abstraction from its grounded experience, distilling key steps, dependencies, and constraints. This learned abstraction is then fed back as contextual guidance, refining the agent's policy and supporting more structured, informed subsequent executions. Empirically, SAGE delivers consistent performance gains across diverse LLM backbones and agent architectures. Notably, it yields a 7.2% relative performance improvement over the strong Mini-SWE-Agent baseline when paired with the GPT-5 (high) backbone. SAGE further achieves strong overall performance on SWE-Bench Verified benchmark, reaching 73.2% and 74% Pass@1 resolve rates with the Mini-SWE-Agent and OpenHands CodeAct agent framework, respectively.",
+    "published": "Nov 08",
+    "pdf_url": "https://arxiv.org/pdf/2511.05931v1",
+    "arxiv_url": "http://arxiv.org/abs/2511.05931v1",
+    "queried_author": "Wenting Zhao",
+    "matching_authors": [
+      "Wenting Zhao"
+    ]
+  },
+  {
     "title": "Long Grounded Thoughts: Synthesizing Visual Problems and Reasoning Chains at Scale",
     "authors": [
       "David Acuna",
@@ -10698,7 +10991,8 @@
     "arxiv_url": "http://arxiv.org/abs/2510.24684v1",
     "queried_author": "Seungone Kim",
     "matching_authors": [
-      "Seungone Kim"
+      "Seungone Kim",
+      "Wenting Zhao"
     ]
   },
   {
@@ -10823,8 +11117,8 @@
     "queried_author": "Maarten Sap",
     "matching_authors": [
       "Maarten Sap",
-      "Yejin Choi",
-      "Margaret Li"
+      "Margaret Li",
+      "Yejin Choi"
     ]
   },
   {
@@ -11956,10 +12250,10 @@
     "published": "Oct 07",
     "pdf_url": "https://arxiv.org/pdf/2510.06377v3",
     "arxiv_url": "http://arxiv.org/abs/2510.06377v3",
-    "queried_author": "Jure Leskovec",
+    "queried_author": "Carlos Guestrin",
     "matching_authors": [
-      "Jure Leskovec",
-      "Carlos Guestrin"
+      "Carlos Guestrin",
+      "Jure Leskovec"
     ]
   },
   {
@@ -12383,314 +12677,6 @@
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "Sycophantic AI Decreases Prosocial Intentions and Promotes Dependence",
-    "authors": [
-      "Myra Cheng",
-      "Cinoo Lee",
-      "Pranav Khadpe",
-      "Sunny Yu",
-      "Dyllan Han",
-      "Dan Jurafsky"
-    ],
-    "summary": "Both the general public and academic communities have raised concerns about sycophancy, the phenomenon of artificial intelligence (AI) excessively agreeing with or flattering users. Yet, beyond isolated media reports of severe consequences, like reinforcing delusions, little is known about the extent of sycophancy or how it affects people who use AI. Here we show the pervasiveness and harmful impacts of sycophancy when people seek advice from AI. First, across 11 state-of-the-art AI models, we find that models are highly sycophantic: they affirm users' actions 50% more than humans do, and they do so even in cases where user queries mention manipulation, deception, or other relational harms. Second, in two preregistered experiments (N = 1604), including a live-interaction study where participants discuss a real interpersonal conflict from their life, we find that interaction with sycophantic AI models significantly reduced participants' willingness to take actions to repair interpersonal conflict, while increasing their conviction of being in the right. However, participants rated sycophantic responses as higher quality, trusted the sycophantic AI model more, and were more willing to use it again. This suggests that people are drawn to AI that unquestioningly validate, even as that validation risks eroding their judgment and reducing their inclination toward prosocial behavior. These preferences create perverse incentives both for people to increasingly rely on sycophantic AI models and for AI model training to favor sycophancy. Our findings highlight the necessity of explic...",
-    "published": "Oct 01",
-    "pdf_url": "https://arxiv.org/pdf/2510.01395v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.01395v1",
-    "queried_author": "Dan Jurafsky",
-    "matching_authors": [
-      "Dan Jurafsky"
-    ]
-  },
-  {
-    "title": "BroRL: Scaling Reinforcement Learning via Broadened Exploration",
-    "authors": [
-      "Jian Hu",
-      "Mingjie Liu",
-      "Ximing Lu",
-      "Fang Wu",
-      "Zaid Harchaoui",
-      "Shizhe Diao",
-      "Yejin Choi",
-      "Pavlo Molchanov",
-      "Jun Yang",
-      "Jan Kautz",
-      "Yi Dong"
-    ],
-    "summary": "Reinforcement Learning with Verifiable Rewards (RLVR) has emerged as a key ingredient for unlocking complex reasoning capabilities in large language models. Recent work ProRL has shown promise in scaling RL by increasing the number of training steps. However, performance plateaus after thousands of steps, with clear diminishing returns from allocating more computation to additional training. In this work, we investigate a complementary paradigm for scaling RL, BroR-Lincreasing the number of rollouts per example to hundreds to exhaustively Broaden exploration, which yields continuous performance gains beyond the saturation point observed in ProRL when scaling the number of training steps. Our approach is motivated by a mass balance equation analysis allowing us to characterize the rate of change in probability mass for correct and incorrect tokens during the reinforcement process. We show that under a one-step RL assumption, sampled rollout tokens always contribute to correct-mass expansion, while unsampled tokens outside rollouts may lead to gains or losses depending on their distribution and the net reward balance. Importantly, as the number of rollouts per example N increases, the effect of unsampled terms diminishes, ensuring overall correct-mass expansion. To validate our theoretical analysis, we conduct simulations under more relaxed conditions and find that a sufficiently large rollout size N-corresponding to ample exploration-guarantees an increase in the probability mass of all correct tokens. Empirically, BroRL revives models saturated after 3K ProRL training steps...",
-    "published": "Oct 01",
-    "pdf_url": "https://arxiv.org/pdf/2510.01180v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.01180v1",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Verbalized Sampling: How to Mitigate Mode Collapse and Unlock LLM Diversity",
-    "authors": [
-      "Jiayi Zhang",
-      "Simon Yu",
-      "Derek Chong",
-      "Anthony Sicilia",
-      "Michael R. Tomz",
-      "Christopher D. Manning",
-      "Weiyan Shi"
-    ],
-    "summary": "Post-training alignment often reduces LLM diversity, leading to a phenomenon known as mode collapse. Unlike prior work that attributes this effect to algorithmic limitations, we identify a fundamental, pervasive data-level driver: typicality bias in preference data, whereby annotators systematically favor familiar text as a result of well-established findings in cognitive psychology. We formalize this bias theoretically, verify it on preference datasets empirically, and show that it plays a central role in mode collapse. Motivated by this analysis, we introduce Verbalized Sampling, a simple, training-free prompting strategy to circumvent mode collapse. VS prompts the model to verbalize a probability distribution over a set of responses (e.g., \"Generate 5 jokes about coffee and their corresponding probabilities\"). Comprehensive experiments show that VS significantly improves performance across creative writing (poems, stories, jokes), dialogue simulation, open-ended QA, and synthetic data generation, without sacrificing factual accuracy and safety. For instance, in creative writing, VS increases diversity by 1.6-2.1x over direct prompting. We further observe an emergent trend that more capable models benefit more from VS. In sum, our work provides a new data-centric perspective on mode collapse and a practical inference-time remedy that helps unlock pre-trained generative diversity.",
-    "published": "Oct 01",
-    "pdf_url": "https://arxiv.org/pdf/2510.01171v3",
-    "arxiv_url": "http://arxiv.org/abs/2510.01171v3",
-    "queried_author": "Christopher D Manning",
-    "matching_authors": [
-      "Christopher D Manning"
-    ]
-  },
-  {
-    "title": "MASH: Modeling Abstention via Selective Help-Seeking",
-    "authors": [
-      "Mustafa Omer Gul",
-      "Claire Cardie",
-      "Tanya Goyal"
-    ],
-    "summary": "LLMs cannot reliably recognize their parametric knowledge boundaries and often hallucinate answers to outside-of-boundary questions. In this paper, we introduce MASH (Modeling Abstention via Selective Help-seeking), a training framework that readily extracts abstentions from LLMs. Our key idea is that any external help-seeking by an LLM, i.e. search tool use, can serve as a proxy for abstention if the external help (search) is appropriately penalized while also rewarding answer accuracy. MASH operationalizes this idea using reinforcement learning with a pay-per-search reward. We run experiments on three knowledge-intensive QA datasets. Our results show that MASH substantially improves upon the selective help-seeking performance of prior efficient search approaches; on multi-hop datasets, it improves answer accuracy by 7.6%. Furthermore, MASH demonstrates strong off-the-shelf abstention performance, showcasing behavior competitive with prior abstention methods that additionally require predetermining model knowledge boundaries to construct training data. Overall, we show MASH training effectively aligns search tool use with parametric knowledge, which can be successfully leveraged for making abstention decisions and efficient search tool use",
-    "published": "Oct 01",
-    "pdf_url": "https://arxiv.org/pdf/2510.01152v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.01152v2",
-    "queried_author": "Tanya Goyal",
-    "matching_authors": [
-      "Tanya Goyal"
-    ]
-  },
-  {
-    "title": "Eliciting Secret Knowledge from Language Models",
-    "authors": [
-      "Bartosz Cywi\u0144ski",
-      "Emil Ryd",
-      "Rowan Wang",
-      "Senthooran Rajamanoharan",
-      "Neel Nanda",
-      "Arthur Conmy",
-      "Samuel Marks"
-    ],
-    "summary": "We study secret elicitation: discovering knowledge that an AI possesses but does not explicitly verbalize. As a testbed, we train three families of large language models (LLMs) to possess specific knowledge that they apply downstream but deny knowing when asked directly. For example, in one setting, we train an LLM to generate replies that are consistent with knowing the user is female, while denying this knowledge when asked directly. We then design various black-box and white-box secret elicitation techniques and evaluate them based on whether they can help an LLM auditor successfully guess the secret knowledge. Many of our techniques improve on simple baselines. Our most effective techniques (performing best in all settings) are based on prefill attacks, a black-box technique where the LLM reveals secret knowledge when generating a completion from a predefined prefix. Our white-box techniques based on logit lens and sparse autoencoders (SAEs) also consistently increase the success rate of the LLM auditor, but are less effective. We release our models and code, establishing a public benchmark for evaluating secret elicitation methods.",
-    "published": "Oct 01",
-    "pdf_url": "https://arxiv.org/pdf/2510.01070v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.01070v2",
-    "queried_author": "Neel Nanda",
-    "matching_authors": [
-      "Neel Nanda"
-    ]
-  },
-  {
-    "title": "GEM: A Gym for Agentic LLMs",
-    "authors": [
-      "Zichen Liu",
-      "Anya Sims",
-      "Keyu Duan",
-      "Changyu Chen",
-      "Simon Yu",
-      "Xiangxin Zhou",
-      "Haotian Xu",
-      "Shaopan Xiong",
-      "Bo Liu",
-      "Chenmien Tan",
-      "Chuen Yang Beh",
-      "Weixun Wang",
-      "Hao Zhu",
-      "Weiyan Shi",
-      "Diyi Yang",
-      "Michael Shieh",
-      "Yee Whye Teh",
-      "Wee Sun Lee",
-      "Min Lin"
-    ],
-    "summary": "The training paradigm for large language models (LLMs) is moving from static datasets to experience-based learning, where agents acquire skills via interacting with complex environments. To facilitate this transition we introduce GEM (General Experience Maker), an open-source environment simulator designed for the age of LLMs. Analogous to OpenAI-Gym for traditional reinforcement learning (RL), GEM provides a standardized framework for the environment-agent interface, including asynchronous vectorized execution for high throughput, and flexible wrappers for easy extensibility. GEM also features a diverse suite of environments, robust integrated tools, and single-file example scripts demonstrating using GEM with five popular RL training frameworks. Along with this, we also provide a set of baselines across 24 environments using REINFORCE with Return Batch Normalization (ReBN), which -- unlike GRPO -- is compatible with the full RL setting of dense per-turn rewards and offers better credit assignment. We further conduct apple-to-apple benchmarking of PPO, GRPO and REINFORCE in both single- and multi-turn settings using GEM to shed light on the algorithmic designs. Lastly, GEM also functions as a convenient evaluation toolkit besides a training environment. We hope this framework can help accelerate future agentic LLM research.",
-    "published": "Oct 01",
-    "pdf_url": "https://arxiv.org/pdf/2510.01051v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.01051v2",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang"
-    ]
-  },
-  {
-    "title": "Thoughtbubbles: an Unsupervised Method for Parallel Thinking in Latent Space",
-    "authors": [
-      "Houjun Liu",
-      "Shikhar Murty",
-      "Christopher D. Manning",
-      "R\u00f3bert Csord\u00e1s"
-    ],
-    "summary": "Current approaches for scaling inference-time compute in transformers train them to emit explicit chain-of-thought tokens before producing an answer. While these methods are powerful, they are limited because they cannot be applied during pretraining and rely solely on serially-generated, natural-language verbalization. In this work, we propose Thoughtbubbles, a transformer variant that natively performs parallel adaptive computation in latent space by learning to fork or delete residual streams. Thus, tokens requiring more computation can form a \"bubble\" of cloned residuals in the middle of the network. Crucially, this behavior is learned during pretraining with only language modeling loss. Using half of the training budget, Thoughtbubbles outperforms the perplexity and zero-shot evals of both standard decoder LMs and those using non-adaptive parallel computation approaches. These results hold across model sizes from 150M to 1.9B. Thoughtbubbles achieves competitive GSM8K results using half of the baseline's token budget. The implicit nature of our method enables models to begin learning adaptive computation at pretraining time, paving the way to unified train-time and test-time scaling behaviors.",
-    "published": "Sep 30",
-    "pdf_url": "https://arxiv.org/pdf/2510.00219v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.00219v2",
-    "queried_author": "Christopher D Manning",
-    "matching_authors": [
-      "Christopher D Manning"
-    ]
-  },
-  {
-    "title": "PrefDisco: Benchmarking Proactive Personalized Reasoning",
-    "authors": [
-      "Shuyue Stella Li",
-      "Avinandan Bose",
-      "Faeze Brahman",
-      "Simon Shaolei Du",
-      "Pang Wei Koh",
-      "Maryam Fazel",
-      "Yulia Tsvetkov"
-    ],
-    "summary": "Current large language model (LLM) development treats task-solving and preference-alignment as separate challenges, optimizing first for objective correctness, then for alignment to aggregated human preferences. This paradigm fails in human-facing applications where solving a problem correctly is insufficient if the response mismatches the user's needs. This challenge intensifies in just-in-time scenarios where no prior user interaction history exists due to cold-start conditions or privacy constraints. LLMs need to proactively identify what they don't know about the user, strategically elicit preference values through questioning, then adapt their reasoning processes and responses accordingly -- a complicated chain of cognitive processes which we term personalized reasoning. We introduce PrefDisco, an evaluation methodology that transforms static benchmarks into interactive personalization tasks using psychologically-grounded personas with sparse, context-dependent preferences, and define PrefAlign as a fine-grained rubric-based metric for measuring preference alignment. PrefDisco builds scenarios where identical questions require different reasoning chains depending on user context, as optimal explanation approaches vary by individual expertise and preferences while maintaining factual accuracy. Evaluation of 21 frontier models across 10 tasks reveals 29.0% of naive personalization attempts produce worse preference alignment than generic responses, yet generic responses also fail to serve individual user needs. These findings suggest personalized reasoning requires dedica...",
-    "published": "Sep 30",
-    "pdf_url": "https://arxiv.org/pdf/2510.00177v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.00177v2",
-    "queried_author": "Pang Wei Koh",
-    "matching_authors": [
-      "Pang Wei Koh"
-    ]
-  },
-  {
-    "title": "Probing the Critical Point (CritPt) of AI Reasoning: a Frontier Physics Research Benchmark",
-    "authors": [
-      "Minhui Zhu",
-      "Minyang Tian",
-      "Xiaocheng Yang",
-      "Tianci Zhou",
-      "Lifan Yuan",
-      "Penghao Zhu",
-      "Eli Chertkov",
-      "Shengyan Liu",
-      "Yufeng Du",
-      "Ziming Ji",
-      "Indranil Das",
-      "Junyi Cao",
-      "Yufeng Du",
-      "Jiabin Yu",
-      "Peixue Wu",
-      "Jinchen He",
-      "Yifan Su",
-      "Yikun Jiang",
-      "Yujie Zhang",
-      "Chang Liu",
-      "Ze-Min Huang",
-      "Weizhen Jia",
-      "Yunkai Wang",
-      "Farshid Jafarpour",
-      "Yong Zhao",
-      "Xinan Chen",
-      "Jessie Shelton",
-      "Aaron W. Young",
-      "John Bartolotta",
-      "Wenchao Xu",
-      "Yue Sun",
-      "Anjun Chu",
-      "Victor Colussi",
-      "Chris Akers",
-      "Nathan Brooks",
-      "Wenbo Fu",
-      "Jinchao Zhao",
-      "Marvin Qi",
-      "Anqi Mu",
-      "Yubo Yang",
-      "Allen Zang",
-      "Yang Lyu",
-      "Peizhi Mai",
-      "Christopher Wilson",
-      "Xuefei Guo",
-      "Juntai Zhou",
-      "Daniel Inafuku",
-      "Chi Xue",
-      "Luyu Gao",
-      "Ze Yang",
-      "Ya\u00efr Hein",
-      "Yonatan Kahn",
-      "Kevin Zhou",
-      "Di Luo",
-      "John Drew Wilson",
-      "Jarrod T. Reilly",
-      "Dmytro Bandak",
-      "Ofir Press",
-      "Liang Yang",
-      "Xueying Wang",
-      "Hao Tong",
-      "Nicolas Chia",
-      "Eliu Huerta",
-      "Hao Peng"
-    ],
-    "summary": "While large language models (LLMs) with reasoning capabilities are progressing rapidly on high-school math competitions and coding, can they reason effectively through complex, open-ended challenges found in frontier physics research? And crucially, what kinds of reasoning tasks do physicists want LLMs to assist with? To address these questions, we present the CritPt (Complex Research using Integrated Thinking - Physics Test, pronounced \"critical point\"), the first benchmark designed to test LLMs on unpublished, research-level reasoning tasks that broadly covers modern physics research areas, including condensed matter, quantum physics, atomic, molecular & optical physics, astrophysics, high energy physics, mathematical physics, statistical physics, nuclear physics, nonlinear dynamics, fluid dynamics and biophysics. CritPt consists of 71 composite research challenges designed to simulate full-scale research projects at the entry level, which are also decomposed to 190 simpler checkpoint tasks for more fine-grained insights. All problems are newly created by 50+ active physics researchers based on their own research. Every problem is hand-curated to admit a guess-resistant and machine-verifiable answer and is evaluated by an automated grading pipeline heavily customized for advanced physics-specific output formats. We find that while current state-of-the-art LLMs show early promise on isolated checkpoints, they remain far from being able to reliably solve full research-scale challenges: the best average accuracy among base models is only 5.7%, achieved by GPT-5 (high), moder...",
-    "published": "Sep 30",
-    "pdf_url": "https://arxiv.org/pdf/2509.26574v3",
-    "arxiv_url": "http://arxiv.org/abs/2509.26574v3",
-    "queried_author": "Ofir Press",
-    "matching_authors": [
-      "Ofir Press"
-    ]
-  },
-  {
-    "title": "Auto-ARGUE: LLM-Based Report Generation Evaluation",
-    "authors": [
-      "William Walden",
-      "Marc Mason",
-      "Orion Weller",
-      "Laura Dietz",
-      "John Conroy",
-      "Neil Molino",
-      "Hannah Recknor",
-      "Bryan Li",
-      "Gabrielle Kaili-May Liu",
-      "Yu Hou",
-      "Dawn Lawrie",
-      "James Mayfield",
-      "Eugene Yang"
-    ],
-    "summary": "Generation of citation-backed reports is a primary use case for retrieval-augmented generation (RAG) systems. While open-source evaluation tools exist for various RAG tasks, tools designed for report generation are lacking. Accordingly, we introduce Auto-ARGUE, a robust LLM-based implementation of the recently proposed ARGUE framework for report generation evaluation. We present analysis of Auto-ARGUE on the report generation pilot task from the TREC 2024 NeuCLIR track and on two tasks from the TREC 2024 RAG track, showing good system-level correlations with human judgments. Additionally, we release ARGUE-Viz, a web app for visualization and fine-grained analysis of Auto-ARGUE judgments and scores.",
-    "published": "Sep 30",
-    "pdf_url": "https://arxiv.org/pdf/2509.26184v5",
-    "arxiv_url": "http://arxiv.org/abs/2509.26184v5",
-    "queried_author": "Orion Weller",
-    "matching_authors": [
-      "Orion Weller"
-    ]
-  },
-  {
-    "title": "RFG: Test-Time Scaling for Diffusion Large Language Model Reasoning with Reward-Free Guidance",
-    "authors": [
-      "Tianlang Chen",
-      "Minkai Xu",
-      "Jure Leskovec",
-      "Stefano Ermon"
-    ],
-    "summary": "Diffusion large language models (dLLMs) have shown great potential in large-scale language modeling, and there is an increasing interest in further improving the capacity to solve complex problems by guiding the reasoning process step by step. Common practice for autoregressive language models typically learns a process reward model with dense annotation for each intermediate step. However, this is challenging for dLLMs where the generation is in an any-order fashion and intermediate states are partially masked sentences. To this end, in this paper, we propose reward-free guidance (RFG), a principled method for guiding the reasoning trajectory of dLLMs without explicit process reward. The key idea of RFG is to parameterize the process reward by log-likelihood ratios of the enhanced and reference dLLMs, where the enhanced model can be easily obtained by any off-the-shelf dLLM that has been post-trained with reinforcement learning (RL) or supervised fine-tuning (SFT). We provide theoretical justification that RFG induces the reward-guided sampling distribution with no additional reward. We conduct comprehensive experiments on four challenging mathematical reasoning and code generation benchmarks using a diverse suite of dLLMs enhanced with various post-training methods. RFG consistently yields significant improvements across all tasks and model types, achieving accuracy gains of up to 9.2%. These findings establish RFG as a general training-free framework that scales test-time reasoning without reliance on external reward models.",
-    "published": "Sep 29",
-    "pdf_url": "https://arxiv.org/pdf/2509.25604v1",
-    "arxiv_url": "http://arxiv.org/abs/2509.25604v1",
-    "queried_author": "Jure Leskovec",
-    "matching_authors": [
-      "Jure Leskovec"
-    ]
-  },
-  {
-    "title": "DeepSearch: Overcome the Bottleneck of Reinforcement Learning with Verifiable Rewards via Monte Carlo Tree Search",
-    "authors": [
-      "Fang Wu",
-      "Weihao Xuan",
-      "Heli Qi",
-      "Ximing Lu",
-      "Aaron Tu",
-      "Li Erran Li",
-      "Yejin Choi"
-    ],
-    "summary": "Although RLVR has become an essential component for developing advanced reasoning skills in language models, contemporary studies have documented training plateaus after thousands of optimization steps, i.e., notable decreases in performance gains despite increased computational investment. This limitation stems from the sparse exploration patterns inherent in current RLVR practices, where models rely on limited rollouts that often miss critical reasoning paths and fail to provide systematic coverage of the solution space. We present DeepSearch, a framework that integrates Monte Carlo Tree Search (MCTS) directly into RLVR training. In contrast to existing methods that rely on tree search only at inference, DeepSearch embeds structured search into the training loop, enabling systematic exploration and fine-grained credit assignment across reasoning steps. Through training-time exploration, DeepSearch addresses the fundamental bottleneck of insufficient exploration, which leads to diminishing performance gains over prolonged training. Our contributions include: (1) a global frontier selection strategy that prioritizes promising nodes across the search tree, (2) selection with entropy-based guidance that identifies confident paths for supervision, and (3) adaptive replay buffer training with solution caching for efficiency. Experiments on mathematical reasoning benchmarks show that DeepSearch achieves an average accuracy of 62.95\\% and establishes a new state-of-the-art reasoning model, while using 5.7x fewer GPU hours than extended training approaches. These results highlight...",
-    "published": "Sep 29",
-    "pdf_url": "https://arxiv.org/pdf/2509.25454v4",
-    "arxiv_url": "http://arxiv.org/abs/2509.25454v4",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
     ]
   }
 ]
