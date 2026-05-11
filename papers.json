@@ -1,5 +1,48 @@
 [
   {
+    "title": "Fast Byte Latent Transformer",
+    "authors": [
+      "Julie Kallini",
+      "Artidoro Pagnoni",
+      "Tomasz Limisiewicz",
+      "Gargi Ghosh",
+      "Luke Zettlemoyer",
+      "Christopher Potts",
+      "Xiaochuang Han",
+      "Srinivasan Iyer"
+    ],
+    "summary": "Recent byte-level language models (LMs) match the performance of token-level models without relying on subword vocabularies, yet their utility is limited by slow, byte-by-byte autoregressive generation. We address this bottleneck in the Byte Latent Transformer (BLT) through new training and generation techniques. First, we introduce BLT Diffusion (BLT-D), a new model and our fastest BLT variant, trained with an auxiliary block-wise diffusion objective alongside the standard next-byte prediction loss. This enables an inference procedure that generates multiple bytes in parallel per decoding step, substantially reducing the number of forward passes required to generate a sequence. Second, we propose two extensions inspired by speculative decoding that trade some of this speed for higher generation quality: BLT Self-speculation (BLT-S), in which BLT's local decoder continues generating past its normal patch boundaries to draft bytes, which are then verified with a single full-model forward pass; and BLT Diffusion+Verification (BLT-DV), which augments BLT-D with an autoregressive verification step after diffusion-based generation. All methods may achieve an estimated memory-bandwidth cost over 50% lower than BLT on generation tasks. Each approach offers its own unique advantages, together removing key barriers to the practical use of byte-level LMs.",
+    "published": "May 08",
+    "pdf_url": "https://arxiv.org/pdf/2605.08044v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.08044v1",
+    "queried_author": "Christopher Potts",
+    "matching_authors": [
+      "Christopher Potts",
+      "Luke Zettlemoyer"
+    ]
+  },
+  {
+    "title": "Sycophantic AI makes human interaction feel more effortful and less satisfying over time",
+    "authors": [
+      "Lujain Ibrahim",
+      "Franziska Sofia Hafner",
+      "Myra Cheng",
+      "Cinoo Lee",
+      "Rebecca Anselmetti",
+      "Robb Willer",
+      "Luc Rocher",
+      "Diyi Yang"
+    ],
+    "summary": "Millions of people now turn to artificial intelligence (AI) systems for personal advice, guidance, and support. Such systems can be sycophantic, frequently affirming users' views and beliefs. Across five preregistered studies (N = 3,075 participants, 12,766 human-AI conversations), including a three-week study with a census-representative U.S. sample, we provide longitudinal experimental evidence that sycophantic AI shifts how users approach their closest relationships. We show that sycophantic AI immediately delivers the emotional and esteem support users typically associate with close friends and family. Over three weeks of such interactions, users became nearly as likely to seek personal advice from sycophantic AI as from close friends and family, and reported lower satisfaction with their real-world social interactions. When given a choice among AI response styles, a majority preferred sycophantic AI -- not for the quality of its advice, but because it made them feel most understood. Together, these findings offer a relational account of AI sycophancy: by providing frictionless understanding, it may quietly raise the bar against which human relationships are judged.",
+    "published": "May 08",
+    "pdf_url": "https://arxiv.org/pdf/2605.07912v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.07912v1",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang"
+    ]
+  },
+  {
     "title": "The Text Uncanny Valley: Non-Monotonic Performance Degradation in LLM Information Retrieval",
     "authors": [
       "Zekai Tong",
@@ -11539,8 +11582,8 @@
     ],
     "summary": "Recent reasoning Large Language Models (LLMs) demonstrate remarkable problem-solving abilities but often generate long thinking traces whose utility is unclear. Our work aims to improve their efficiency, enabling them to reach high performance without overthinking. First, we analyze the entropy of token probabilities in reasoning traces. Across three models, we observe a consistent U-shaped entropy pattern: high entropy on easy problems despite high accuracy, low entropy on problems with medium difficulty, and high entropy on hard problems reflecting uncertainty. Specifically, we notice 22--25\\% entropy reduction from easy to medium difficulty regions, suggesting an {overthinking} phenomenon on easy instances. Building on these insights, we introduce \\textbf{DiffAdapt}, a lightweight framework that selects Easy/Normal/Hard inference strategies per question based on their difficulty and reasoning trace entropy. Each inference strategy consists of a fixed prompt, temperature and maximum token length. In contrast to existing efficiency optimization methods, our approach does not fine-tune base LLM but a small probe that classifies LLM's final hidden state, allowing inexpensive adaptation. We comprehensively evaluate our method on five models and eight benchmarks. Our method achieves comparable or improved accuracy while reducing token usage by up to 22.4\\%, establishing a practical path toward compute-efficient reasoning.",
     "published": "Oct 22",
-    "pdf_url": "https://arxiv.org/pdf/2510.19669v4",
-    "arxiv_url": "http://arxiv.org/abs/2510.19669v4",
+    "pdf_url": "https://arxiv.org/pdf/2510.19669v5",
+    "arxiv_url": "http://arxiv.org/abs/2510.19669v5",
     "queried_author": "Eunsol Choi",
     "matching_authors": [
       "Eunsol Choi"
@@ -12687,42 +12730,6 @@
     "queried_author": "Ludwig Schmidt",
     "matching_authors": [
       "Ludwig Schmidt"
-    ]
-  },
-  {
-    "title": "Transcribe, Translate, or Transliterate: An Investigation of Intermediate Representations in Spoken Language Models",
-    "authors": [
-      "Tol\u00falop\u00e9 \u00d2g\u00fanr\u00e8m\u00ed",
-      "Christopher D. Manning",
-      "Dan Jurafsky",
-      "Karen Livescu"
-    ],
-    "summary": "Spoken language models (SLMs) that integrate speech with large language models (LMs) rely on modality adapters (MAs) to map the output of speech encoders to a representation that is understandable to the decoder LM. Yet we know very little about how these crucial MAs transform representations. Here we examine the MA output representation in three SLMs (SALMONN, Qwen2-Audio and Phi-4-Multimodal-Instruct). By finding the nearest decoder LM token to an MA representation, we uncover two strategies for MA representations. For models using a Whisper encoder, MAs appear to represent the meaning of the input using an English-based interlingua, allowing them to handle languages unseen in instruction tuning. For models that don't, like Phi-4-Multimodal-Instruct, MAs instead represent the phonetics of the input, but expressed with English words. We hypothesise that which arises depends on whether the speech encoder is trained only for speech recognition or also for translation.",
-    "published": "Oct 02",
-    "pdf_url": "https://arxiv.org/pdf/2510.02569v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.02569v2",
-    "queried_author": "Christopher D Manning",
-    "matching_authors": [
-      "Christopher D Manning",
-      "Dan Jurafsky"
-    ]
-  },
-  {
-    "title": "Diagnosing Bottlenecks in Data Visualization Understanding by Vision-Language Models",
-    "authors": [
-      "Alexa R. Tartaglini",
-      "Satchel Grant",
-      "Daniel Wurgaft",
-      "Christopher Potts",
-      "Judith E. Fan"
-    ],
-    "summary": "Data visualizations are vital components of many scientific articles and news stories. Current vision-language models (VLMs) still struggle on basic data visualization understanding tasks, but the causes of failure remain unclear. Are VLM failures attributable to limitations in how visual information in the data visualization is encoded, how information is transferred between the vision and language modules, or how information is processed within the language module? We developed FUGU, a suite of data visualization understanding tasks, to precisely characterize potential sources of difficulty (e.g., extracting the position of data points, distances between them, and other summary statistics). We used FUGU to investigate three widely used VLMs. To diagnose the sources of errors produced by these models, we used activation patching and linear probes to trace information flow through models across a variety of prompting strategies. We found that some models fail to generate the coordinates of individual data points correctly, and these initial errors often lead to erroneous final responses. When these models are provided with the correct coordinates, performance improves substantially. Moreover, even when the model generates an incorrect response, the correct coordinates can be successfully read out from the latent representations in the vision encoder, suggesting that the source of these errors lies in the vision-language handoff. We further found that while providing correct coordinates helps with tasks involving one or a small number of data points, it generally worsens per...",
-    "published": "Oct 02",
-    "pdf_url": "https://arxiv.org/pdf/2510.21740v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.21740v1",
-    "queried_author": "Christopher Potts",
-    "matching_authors": [
-      "Christopher Potts"
     ]
   }
 ]
