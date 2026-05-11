@@ -1,5 +1,94 @@
 [
   {
+    "title": "The Text Uncanny Valley: Non-Monotonic Performance Degradation in LLM Information Retrieval",
+    "authors": [
+      "Zekai Tong",
+      "Ruiyao Xu",
+      "Aryan Shrivastava",
+      "Chenhao Tan",
+      "Ari Holtzman"
+    ],
+    "summary": "Existing Large Language Model (LLM) benchmarks primarily focus on syntactically correct inputs, leaving a significant gap in evaluation on imperfect text. In this work, we study how word-boundary corruption affects how LLMs detect targeted information. By inserting whitespace characters within words to break them into fragments, LLMs' detection accuracy follows a U-shaped curve with the increase in insertion rate. We refer to this curve as the Text Uncanny Valley. To explain such observation, we propose a mode transition hypothesis: LLMs operate in a word-level mode for near-normal text and a character-level mode for heavily fragmented text, with the valley marking the disordered transition where neither mode is effective. Four experiments and one analysis are consistent with this account: in-context learning fails to rescue valley-bottom performance; regularizing the perturbation substantially reduces the U-shape; a math reasoning task replicates the U-shape for Gemini 3.0 Flash but not for stronger models, suggesting the effect is attenuated when tasks rely less on exact lexical alignment; and tokenization entropy peaks before the F1 minimum, consistent with a regime-conflict interpretation. These findings reveal a failure mode invisible to clean-text benchmarks yet directly relevant to any deployment scenario involving noisy or uncurated text inputs.",
+    "published": "May 08",
+    "pdf_url": "https://arxiv.org/pdf/2605.07186v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.07186v1",
+    "queried_author": "Ari Holtzman",
+    "matching_authors": [
+      "Ari Holtzman"
+    ]
+  },
+  {
+    "title": "Reflections and New Directions for Human-Centered Large Language Models",
+    "authors": [
+      "Caleb Ziems",
+      "Dora Zhao",
+      "Rose E. Wang",
+      "Matthew J\u00f6rke",
+      "Ahmad Rushdi",
+      "Advit Deepak",
+      "Sunny Yu",
+      "Anshika Agarwal",
+      "Harshvardhan Agarwal",
+      "Gabriela Aranguiz-Dias",
+      "Aditri Bhagirath",
+      "Justine Breuch",
+      "Huanxing Chen",
+      "Ruishi Chen",
+      "Sarah Chen",
+      "Haocheng Fan",
+      "William Fang",
+      "Cat Gonzales Fergesen",
+      "Daniel Frees",
+      "Tian Gao",
+      "Ziqing Huang",
+      "Vishal Jain",
+      "Yucheng Jiang",
+      "Kirill Kalinin",
+      "Su Doga Karaca",
+      "Arpandeep Khatua",
+      "Teland La",
+      "Isabelle Levent",
+      "Miranda Li",
+      "Xinling Li",
+      "Yongce Li",
+      "Angela Liu",
+      "Minsik Oh",
+      "Nathan J. Paek",
+      "Anthony Qin",
+      "Emily Redmond",
+      "Michael J. Ryan",
+      "Aadesh Salecha",
+      "Xiaoxian Shen",
+      "Pranava Singhal",
+      "Shashanka Subrahmanya",
+      "Mei Tan",
+      "Irawadee Thawornbut",
+      "Michelle Vinocour",
+      "Xiaoyue Wang",
+      "Zheng Wang",
+      "Henry Jin Weng",
+      "Pawan Wirawarn",
+      "Shirley Wu",
+      "Sophie Wu",
+      "Yichen Xie",
+      "Patrick Ye",
+      "Sean Zhang",
+      "Yutong Zhang",
+      "Cathy Zhou",
+      "Yiling Zhao",
+      "James Landay",
+      "Diyi Yang"
+    ],
+    "summary": "Large Language Models (LLMs) are increasingly shaping the private and professional lives of users, with numerous applications in business, education, finance, healthcare, law, and science. With this rise in global influence comes greater urgency to build, evaluate, and deploy these systems in a manner that prioritizes not only technical capabilities but also human priorities. This work presents a framework for developing Human-Centered Large Language Models (HCLLMs), which integrates perspectives from Natural Language Processing (NLP), Human-Computer Interaction (HCI), and responsible AI. Considering the ethics, economics, and technical objectives of language modeling, we argue that model developers need to address human concerns, preferences, values, and goals, not only during a cursory post-training stage, but rather with rigor and care at every stage of the pipeline. This paper offers human-centered insights and recommendations for developers at each stage, from system design to data sourcing, model training, evaluation, and responsible deployment. Then we conclude with a case study, applying these insights to understand the future of work with HCLLMs.",
+    "published": "May 07",
+    "pdf_url": "https://arxiv.org/pdf/2605.06901v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.06901v1",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang"
+    ]
+  },
+  {
     "title": "EMO: Pretraining Mixture of Experts for Emergent Modularity",
     "authors": [
       "Ryan Wang",
@@ -47,6 +136,24 @@
     "queried_author": "Omar Khattab",
     "matching_authors": [
       "Omar Khattab"
+    ]
+  },
+  {
+    "title": "On Training in Imagination",
+    "authors": [
+      "Nadav Timor",
+      "Ravid Shwartz-Ziv",
+      "Micah Goldblum",
+      "Yann LeCun",
+      "David Harel"
+    ],
+    "summary": "State-of-the-art model-based reinforcement learning methods train policies on imagined rollouts. These rollouts are trajectories generated by a learned dynamics model and are scored by a learned reward model, but without querying the true environment during policy updates. We study this training paradigm by quantifying how errors in learned dynamics and reward models affect returns and policy optimization. First, we extend the analysis of Asadi et al. (2018) to MDPs with learned reward models, and derive the optimal sample allocation--the ratio of dynamics samples to reward samples that minimizes a bound on return error under power-law scaling assumptions. We identify lower Lipschitz constants of the learned dynamics, reward, and policy as a representation desideratum that tightens this bound, and we connect this perspective to the temporal-straightening objective of Wang et al. (2026). Second, we examine how policy optimization with REINFORCE tolerates noisy rewards, which are often cheaper to obtain. We show that zero-mean reward noise leaves the gradient estimator unbiased and adds at most a variance term that decreases with the number of rollouts. This introduces a practical tradeoff: given a fixed budget, should one buy more rollouts with cheaper but noisier rewards, or fewer rollouts with more expensive but less noisy rewards? We reduce this choice to a one-dimensional optimization problem and characterize the optimum.",
+    "published": "May 07",
+    "pdf_url": "https://arxiv.org/pdf/2605.06732v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.06732v1",
+    "queried_author": "Micah Goldblum",
+    "matching_authors": [
+      "Micah Goldblum"
     ]
   },
   {
@@ -5717,8 +5824,8 @@
     ],
     "summary": "The principal goal of the RAG TREC Instrument for Multilingual Evaluation (RAGTIME) track at TREC is to study report generation from multilingual source documents. The track has created a document collection containing Arabic, Chinese, English, and Russian news stories. RAGTIME includes three task types: Multilingual Report Generation, English Report Generation, and Multilingual Information Retrieval (MLIR). A total of 125 runs were submitted by 13 participating teams (and as baselines by the track coordinators) for three tasks. This overview describes these three tasks and presents the available results.",
     "published": "Feb 10",
-    "pdf_url": "https://arxiv.org/pdf/2602.10024v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.10024v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.10024v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.10024v2",
     "queried_author": "Luca Soldaini",
     "matching_authors": [
       "Luca Soldaini"
@@ -12616,67 +12723,6 @@
     "queried_author": "Christopher Potts",
     "matching_authors": [
       "Christopher Potts"
-    ]
-  },
-  {
-    "title": "Position: Privacy Is Not Just Memorization!",
-    "authors": [
-      "Niloofar Mireshghallah",
-      "Tianshi Li"
-    ],
-    "summary": "The discourse on privacy risks in Large Language Models (LLMs) has disproportionately focused on verbatim memorization of training data, while a constellation of more immediate and scalable privacy threats remain underexplored. This position paper argues that the privacy landscape of LLM systems extends far beyond training data extraction, encompassing risks from data collection practices, inference-time context leakage, autonomous agent capabilities, and the democratization of surveillance through deep inference attacks. We present a comprehensive taxonomy of privacy risks across the LLM lifecycle -- from data collection through deployment -- and demonstrate through case studies how current privacy frameworks fail to address these multifaceted threats. Through a longitudinal analysis of 1,322 AI/ML privacy papers published at leading conferences over the past decade (2016--2025), we reveal that while memorization receives outsized attention in technical research, the most pressing privacy harms lie elsewhere, where current technical approaches offer little traction and viable paths forward remain unclear. We call for a fundamental shift in how the research community approaches LLM privacy, moving beyond the narrow focus of current technical solutions and embracing interdisciplinary approaches that address the sociotechnical nature of these emerging threats.",
-    "published": "Oct 02",
-    "pdf_url": "https://arxiv.org/pdf/2510.01645v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.01645v1",
-    "queried_author": "Niloofar Mireshghallah",
-    "matching_authors": [
-      "Niloofar Mireshghallah"
-    ]
-  },
-  {
-    "title": "From Supervision to Exploration: What Does Protein Language Model Learn During Reinforcement Learning?",
-    "authors": [
-      "Hanqun Cao",
-      "Hongrui Zhang",
-      "Junde Xu",
-      "Zhou Zhang",
-      "Lingdong Shen",
-      "Minghao Sun",
-      "Ge Liu",
-      "Jinbo Xu",
-      "Wu-Jun Li",
-      "Jinren Ni",
-      "Cesar de la Fuente-Nunez",
-      "Tianfan Fu",
-      "Yejin Choi",
-      "Pheng-Ann Heng",
-      "Fang Wu"
-    ],
-    "summary": "Protein language models (PLMs) have advanced computational protein science through large-scale pretraining and scalable architectures. In parallel, reinforcement learning (RL) has broadened exploration and enabled precise multi-objective optimization in protein design. Yet whether RL can push PLMs beyond their pretraining priors to uncover latent sequence-structure-function rules remains unclear. We address this by pairing RL with PLMs across four domains: antimicrobial peptide design, kinase variant optimization, antibody engineering, and inverse folding. Using diverse RL algorithms and model classes, we ask if RL improves sampling efficiency and, more importantly, if it reveals capabilities not captured by supervised learning. Across benchmarks, RL consistently boosts success rates and sample efficiency. Performance follows a three-factor interaction: task headroom, reward fidelity, and policy capacity jointly determine gains. When rewards are accurate and informative, policies have sufficient capacity, and tasks leave room beyond supervised baselines, improvements scale; when rewards are noisy or capacity is constrained, gains saturate despite exploration. This view yields practical guidance for RL in protein design: prioritize reward modeling and calibration before scaling policy size, match algorithm and regularization strength to task difficulty, and allocate capacity where marginal gains are largest. Implementation is available at https://github.com/chq1155/RL-PLM.",
-    "published": "Oct 02",
-    "pdf_url": "https://arxiv.org/pdf/2510.01571v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.01571v1",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Understanding Adversarial Transfer: Why Representation-Space Attacks Fail Where Data-Space Attacks Succeed",
-    "authors": [
-      "Isha Gupta",
-      "Rylan Schaeffer",
-      "Joshua Kazdan",
-      "Ken Ziyu Liu",
-      "Sanmi Koyejo"
-    ],
-    "summary": "The field of adversarial robustness has long established that adversarial examples can successfully transfer between image classifiers and that text jailbreaks can successfully transfer between language models (LMs). However, a pair of recent studies reported being unable to successfully transfer image jailbreaks between vision-language models (VLMs). To explain this striking difference, we propose a fundamental distinction regarding the transferability of attacks against machine learning models: attacks in the input data-space can transfer, whereas attacks in model representation space do not, at least not without geometric alignment of representations. We then provide theoretical and empirical evidence of this hypothesis in four different settings. First, we mathematically prove this distinction in a simple setting where two networks compute the same input-output map but via different representations. Second, we construct representation-space attacks against image classifiers that are as successful as well-known data-space attacks, but fail to transfer. Third, we construct representation-space attacks against LMs that successfully jailbreak the attacked models but again fail to transfer. Fourth, we construct data-space attacks against VLMs that successfully transfer to new VLMs, and we show that representation space attacks can transfer when VLMs' latent geometries are sufficiently aligned in post-projector space. Our work reveals that adversarial transfer is not an inherent property of all attacks but contingent on their operational domain - the shared data-space versus ...",
-    "published": "Oct 01",
-    "pdf_url": "https://arxiv.org/pdf/2510.01494v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.01494v2",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
     ]
   }
 ]
