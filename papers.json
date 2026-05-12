@@ -1,5 +1,84 @@
 [
   {
+    "title": "ELF: Embedded Language Flows",
+    "authors": [
+      "Keya Hu",
+      "Linlu Qiu",
+      "Yiyang Lu",
+      "Hanhong Zhao",
+      "Tianhong Li",
+      "Yoon Kim",
+      "Jacob Andreas",
+      "Kaiming He"
+    ],
+    "summary": "Diffusion and flow-based models have become the de facto approaches for generating continuous data, e.g., in domains such as images and videos. Their success has attracted growing interest in applying them to language modeling. Unlike their image-domain counterparts, today's leading diffusion language models (DLMs) primarily operate over discrete tokens. In this paper, we show that continuous DLMs can be made effective with minimal adaptation to the discrete domain. We propose Embedded Language Flows (ELF), a class of diffusion models in continuous embedding space based on continuous-time Flow Matching. Unlike existing DLMs, ELF predominantly stays within the continuous embedding space until the final time step, where it maps to discrete tokens using a shared-weight network. This formulation makes it straightforward to adapt established techniques from image-domain diffusion models, e.g., classifier-free guidance (CFG). Experiments show that ELF substantially outperforms leading discrete and continuous DLMs, achieving better generation quality with fewer sampling steps. These results suggest that ELF offers a promising path toward effective continuous DLMs.",
+    "published": "May 11",
+    "pdf_url": "https://arxiv.org/pdf/2605.10938v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.10938v1",
+    "queried_author": "Jacob Andreas",
+    "matching_authors": [
+      "Jacob Andreas",
+      "Yoon Kim"
+    ]
+  },
+  {
+    "title": "Shepherd: A Runtime Substrate Empowering Meta-Agents with a Formalized Execution Trace",
+    "authors": [
+      "Simon Yu",
+      "Derek Chong",
+      "Ananjan Nandi",
+      "Dilara Soylu",
+      "Jiuding Sun",
+      "Christopher D Manning",
+      "Weiyan Shi"
+    ],
+    "summary": "We introduce Shepherd, a functional programming model that formalizes meta-agent operations on target agents as functions, with core operations mechanized in Lean. Shepherd records every agent-environment interaction as a typed event in a Git-like execution trace, enabling any past state to be forked and replayed. The system forks the agent process and its filesystem $5\\times$ faster than Docker, achieving $>95\\%$ prompt-cache reuse on replay. We demonstrate the model through three applications. First, in runtime intervention, a live supervisor increases pair coding pass rates from 28.8% to 54.7% on CooperBench. Second, in counterfactual meta-optimization, branching exploration outperforms baselines across four benchmarks by up to 11 points while reducing wall-clock time by up to 58%. Third, in Tree-RL training, forking rollouts at selected turns improves TerminalBench-2 performance from 34.2% to 39.4%. These results establish Shepherd as an efficient infrastructure for programming meta-agents. We open-source the system to support future research.",
+    "published": "May 11",
+    "pdf_url": "https://arxiv.org/pdf/2605.10913v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.10913v1",
+    "queried_author": "Christopher D Manning",
+    "matching_authors": [
+      "Christopher D Manning"
+    ]
+  },
+  {
+    "title": "Can You Keep a Secret? Involuntary Information Leakage in Language Model Writing",
+    "authors": [
+      "Ari Holtzman",
+      "Peter West"
+    ],
+    "summary": "Language models are deployed in settings that require compartmentalization: system prompts should not be disclosed, chain-of-thought reasoning is hidden from users, and sensitive data passes through shared contexts. We test whether models can keep prompted information out of their writing. We give each model a secret word with instructions not to reveal it, then ask it to write a story. A second model tries to identify the secret from the story in a binary discrimination test. The secret word never appears literally in any output, but all five frontier models we test leak it thematically -- through topic choice, imagery, and setting--6hy-at rates significantly different from chance, up to 79\\%. When told to actively hide the secret, models write \\emph{away from} it, and this avoidance is itself detectable. The leakage is cross-model readable, scales sharply with model size within two model families, and disappears entirely for short-form writing like jokes. Giving the model a decoy concept to ``focus on instead'' partially redirects the leakage from the real secret to the decoy. Attending to a secret appears to open up an information channel that frontier LLMs cannot close, even when instructed to.",
+    "published": "May 11",
+    "pdf_url": "https://arxiv.org/pdf/2605.10794v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.10794v1",
+    "queried_author": "Ari Holtzman",
+    "matching_authors": [
+      "Ari Holtzman"
+    ]
+  },
+  {
+    "title": "When Are LLM Inferences Acceptable? User Reactions and Control Preferences for Inferred Personal Information",
+    "authors": [
+      "Kyzyl Monteiro",
+      "Minjung Park",
+      "Alexander Ioffrida",
+      "Angelina Sanna",
+      "Hao-Ping",
+      "Lee",
+      "Niloofar Mireshghallah",
+      "Yang Wang",
+      "Sauvik Das"
+    ],
+    "summary": "Ask ChatGPT about vacation planning, and it may infer your income. Ask it about medication, and it may infer your medical history. Because such inferences can expose more information than users intend to reveal, prior work argues that they are a defining privacy risk of LLM-based systems. Yet prior work has mostly shown that LLMs can make potentially violating inferences, not how users experience those inferences nor what controls users may want governing their use. We built the Reflective Layer, a visualization tool that surfaces example unstated inferences from users' own ChatGPT histories, and used it in a mixed-methods study with 18 regular ChatGPT users evaluating 215 surfaced inferences from their own conversations. Counterintuitively, participants reacted more strongly with curiosity and interest rather than distress and concern. Discomfort arose mainly when inferences felt misrepresentative of the user or misaligned with expected use. Participants were also markedly less comfortable with advertisers and third-party applications using those inferences than with platform providers. These findings suggest that the acceptability of LLM inferences is governed not only by its content, but by context-sensitive norms around how they are generated, retained within the platform, and transmitted beyond it.",
+    "published": "May 11",
+    "pdf_url": "https://arxiv.org/pdf/2605.10013v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.10013v1",
+    "queried_author": "Niloofar Mireshghallah",
+    "matching_authors": [
+      "Niloofar Mireshghallah"
+    ]
+  },
+  {
     "title": "Soohak: A Mathematician-Curated Benchmark for Evaluating Research-level Math Capabilities of LLMs",
     "authors": [
       "Guijin Son",
@@ -246,8 +325,8 @@
     ],
     "summary": "Large language models are typically deployed as monolithic systems, requiring the full model even when applications need only a narrow subset of capabilities, e.g., code, math, or domain-specific knowledge. Mixture-of-Experts (MoEs) seemingly offer a potential alternative by activating only a subset of experts per input, but in practice, restricting inference to a subset of experts for a given domain leads to severe performance degradation. This limits their practicality in memory-constrained settings, especially as models grow larger and sparser. We introduce EMO, an MoE designed for modularity-the independent use and composition of expert subsets-without requiring human-defined priors. Our key idea is to encourage tokens from similar domains to rely on similar experts. Since tokens within a document often share a domain, EMO restricts them to select experts from a shared pool, while allowing different documents to use different pools. This simple constraint enables coherent expert groupings to emerge during pretraining using document boundaries alone. We pretrain a 1B-active, 14B-total EMO on 1T tokens. As a full model, it matches standard MoE performance. Crucially, it enables selective expert use: retaining only 25% (12.5%) of experts incurs just a 1% (3%) absolute drop, whereas standard MoEs break under the same setting. We further find that expert subsets in EMO specialize at semantic levels (e.g., domains such as math or code), in contrast to the low-level syntactic specialization observed in standard MoEs. Altogether, our results demonstrate a path toward modular, m...",
     "published": "May 07",
-    "pdf_url": "https://arxiv.org/pdf/2605.06663v1",
-    "arxiv_url": "http://arxiv.org/abs/2605.06663v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.06663v2",
+    "arxiv_url": "http://arxiv.org/abs/2605.06663v2",
     "queried_author": "Sewon Min",
     "matching_authors": [
       "Sewon Min"
@@ -897,6 +976,7 @@
       "Boyi Li",
       "Hongxu Yin",
       "Song Han",
+      "Bilal Kartal",
       "Pavlo Molchanov",
       "Adi Renduchintala",
       "Charles Wang",
@@ -1063,8 +1143,8 @@
     ],
     "summary": "We introduce Nemotron 3 Nano Omni, the latest model in the Nemotron multimodal series and the first to natively support audio inputs alongside text, images, and video. Nemotron 3 Nano Omni delivers consistent accuracy improvements over its predecessor, Nemotron Nano V2 VL, across all modalities, enabled by advances in architecture, training data and recipes. In particular, Nemotron 3 delivers leading results in real-world document understanding, long audio-video comprehension, and agentic computer use. Built on the highly efficient Nemotron 3 Nano 30B-A3B backbone, Nemotron 3 Nano Omni further incorporates innovative multimodal token-reduction techniques to deliver substantially lower inference latency and higher throughput than other models of similar size. We are releasing model checkpoints in BF16, FP8, and FP4 formats, along with portions of the training data and codebase to facilitate further research and development.",
     "published": "Apr 27",
-    "pdf_url": "https://arxiv.org/pdf/2604.24954v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.24954v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.24954v2",
+    "arxiv_url": "http://arxiv.org/abs/2604.24954v2",
     "queried_author": "Mohammad Shoeybi",
     "matching_authors": [
       "Mohammad Shoeybi",
@@ -4037,8 +4117,8 @@
     ],
     "summary": "A key component of creativity is associative reasoning: the ability to draw novel yet meaningful connections between concepts. We introduce CREATE, a benchmark designed to evaluate models' capacity for creative associative reasoning. CREATE requires models to generate sets of paths connecting concepts in a model's parametric knowledge. Paths should have high specificity (distinctiveness and closeness of the concept connection) and high diversity (dissimilarity from other paths), and models are scored more highly if they produce a larger set of strong, diverse paths. This task shares demands of real creativity tasks like hypothesis generation, including an extremely large search space, but enables collection of a sizable benchmark with objective answer grading. Evaluation of frontier models shows that the strongest models achieve higher creative utility than others, with the high multiplicity of answers and complexity of the search making benchmark saturation difficult to achieve. Furthermore, our results illustrate that thinking models are not always more effective on our task, even with high token budgets. Recent approaches for creative prompting give some but limited additional improvement. CREATE provides a sandbox for developing new methods to improve models' capacity for associative creativity.",
     "published": "Mar 10",
-    "pdf_url": "https://arxiv.org/pdf/2603.09970v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.09970v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.09970v2",
+    "arxiv_url": "http://arxiv.org/abs/2603.09970v2",
     "queried_author": "Greg Durrett",
     "matching_authors": [
       "Greg Durrett"
@@ -4879,13 +4959,14 @@
       "Huang Huang",
       "Manling Li",
       "Li Fei-Fei",
+      "Leonidas Guibas",
       "Jiajun Wu",
       "Yejin Choi"
     ],
-    "summary": "Embodied LLMs endow robots with high-level task reasoning, but they cannot reflect on what went wrong or why, turning deployment into a sequence of independent trials where mistakes repeat rather than accumulate into experience. Drawing upon human reflective practitioners, we introduce Reflective Test-Time Planning, which integrates two modes of reflection: \\textit{reflection-in-action}, where the agent uses test-time scaling to generate and score multiple candidate actions using internal reflections before execution; and \\textit{reflection-on-action}, which uses test-time training to update both its internal reflection model and its action policy based on external reflections after execution. We also include retrospective reflection, allowing the agent to re-evaluate earlier decisions and perform model updates with hindsight for proper long-horizon credit assignment. Experiments on our newly-designed Long-Horizon Household benchmark and MuJoCo Cupboard Fitting benchmark show significant gains over baseline models, with ablative studies validating the complementary roles of reflection-in-action and reflection-on-action. Qualitative analyses, including real-robot trials, highlight behavioral correction through reflection.",
+    "summary": "Embodied LLMs endow robots with high-level task reasoning, but they cannot reflect on what went wrong or why, turning deployment into a sequence of independent trials where mistakes repeat rather than accumulate into experience. Drawing upon human reflective practitioners, we introduce Reflective Test-Time Planning, which integrates two modes of reflection: \\textit{reflection-in-action}, where the agent uses test-time scaling to generate and score multiple candidate actions using internal reflections before execution; and \\textit{reflection-on-action}, which uses test-time training to update both its internal reflection model and its action policy based on external reflections after execution. We also include retrospective reflection, allowing the agent to re-evaluate earlier decisions and perform model updates with hindsight for proper long-horizon credit assignment. Experiments on our newly-designed Long-Horizon Household benchmark and MuJoCo Cupboard Fitting benchmark show significant gains over baseline models, with zero-shot generalization to photorealistic HM3D environments and real-robot experiments on a Franka Panda arm. Ablations confirm that reflection-in-action and reflection-on-action are mutually dependent, and that retrospective reflection achieves better credit assignment than step-wise external feedback at lower computational overhead. Qualitative analyses further highlight behavioral correction through reflection.",
     "published": "Feb 24",
-    "pdf_url": "https://arxiv.org/pdf/2602.21198v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.21198v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.21198v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.21198v2",
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
@@ -6952,8 +7033,8 @@
     ],
     "summary": "Prior work suggests that language models, while trained on next token prediction, show implicit planning behavior: they may select the next token in preparation to a predicted future token, such as a likely rhyming word, as supported by a prior qualitative study of Claude 3.5 Haiku using a cross-layer transcoder. We propose much simpler techniques for assessing implicit planning in language models. With case studies on rhyme poetry generation and question answering, we demonstrate that our methodology easily scales to many models. Across models, we find that the generated rhyme (e.g. \"-ight\") or answer to a question (\"whale\") can be manipulated by steering at the end of the preceding line with a vector, affecting the generation of intermediate tokens leading up to the rhyme or answer word. We show that implicit planning is a universal mechanism, present in smaller models than previously thought, starting from 1B parameters. Our methodology offers a widely applicable direct way to study implicit planning abilities of LLMs. More broadly, understanding planning abilities of language models can inform decisions in AI safety and control.",
     "published": "Jan 28",
-    "pdf_url": "https://arxiv.org/pdf/2601.20164v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.20164v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.20164v2",
+    "arxiv_url": "http://arxiv.org/abs/2601.20164v2",
     "queried_author": "Neel Nanda",
     "matching_authors": [
       "Neel Nanda"
@@ -7935,10 +8016,10 @@
       "Tim Kraska",
       "Omar Khattab"
     ],
-    "summary": "We study allowing large language models (LLMs) to process arbitrarily long prompts through the lens of inference-time scaling. We propose Recursive Language Models (RLMs), a general inference paradigm that treats long prompts as part of an external environment and allows the LLM to programmatically examine, decompose, and recursively call itself over snippets of the prompt. We find that RLMs can successfully process inputs up to two orders of magnitude beyond model context windows and, even for shorter prompts, dramatically outperform the quality of vanilla frontier LLMs and common long-context scaffolds across four diverse long-context tasks while having comparable cost. At a small scale, we post-train the first natively recursive language model. Our model, RLM-Qwen3-8B, outperforms the underlying Qwen3-8B model by $28.3\\%$ on average and even approaches the quality of vanilla GPT-5 on three long-context tasks. Code is available at https://github.com/alexzhang13/rlm.",
+    "summary": "We study allowing large language models (LLMs) to process arbitrarily long prompts through the lens of inference-time scaling. We propose Recursive Language Models (RLMs), a general inference paradigm that treats long prompts as part of an external environment and allows the LLM to programmatically examine, decompose, and recursively call itself over snippets of the prompt. We find that RLMs can successfully process inputs up to two orders of magnitude beyond model context windows and, even for shorter prompts, dramatically outperform the quality of vanilla frontier LLMs and common long-context and coding scaffolds (e.g., on GPT-5 by a median across the evaluated benchmarks of $26\\%$ against compaction, $130\\%$ against CodeAct with sub-calls, and $13\\%$ against Claude Code) across four diverse long-context tasks while having comparable cost. At a small scale, we post-train the first model around the RLM. Our model, RLM-Qwen3-8B, outperforms the underlying Qwen3-8B model by $28.3\\%$ on average and even approaches the quality of vanilla GPT-5 on three long-context tasks. Code is available at https://github.com/alexzhang13/rlm.",
     "published": "Dec 31",
-    "pdf_url": "https://arxiv.org/pdf/2512.24601v2",
-    "arxiv_url": "http://arxiv.org/abs/2512.24601v2",
+    "pdf_url": "https://arxiv.org/pdf/2512.24601v3",
+    "arxiv_url": "http://arxiv.org/abs/2512.24601v3",
     "queried_author": "Omar Khattab",
     "matching_authors": [
       "Omar Khattab"
@@ -11601,15 +11682,15 @@
     ]
   },
   {
-    "title": "Simple Context Compression: Mean-Pooling and Multi-Ratio Training",
+    "title": "No Mean Feat: Simple, Strong Baselines for Context Compression",
     "authors": [
       "Yair Feldman",
       "Yoav Artzi"
     ],
-    "summary": "A common strategy to reduce the computational costs of using long contexts in retrieval-augmented generation (RAG) with large language models (LLMs) is soft context compression, where the input sequence is transformed into a shorter continuous representation. We develop a lightweight and simple mean-pooling approach that consistently outperforms the widely used compression-tokens architecture, and study training the same compressor to output multiple compression ratios. We conduct extensive experiments across in-domain and out-of-domain QA datasets, as well as across model families, scales, and compression ratios. Overall, our simple mean-pooling approach achieves the strongest performance, with a relatively small drop when training for multiple compression ratios. More broadly though, across architectures and training regimes the trade-offs are more nuanced, illustrating the complex landscape of compression methods.",
+    "summary": "Context compression reduces Transformer inference costs by replacing lengthy inputs with shorter pre-computed representations. It carries significant benefits for retrieval-augmented generation (RAG) and has attracted growing research attention. However, progress remains difficult to measure due to inconsistent evaluations and baselines. We design a standard, easy-to-reproduce evaluation suite for context compression, BenchPress, along with simple, high-performance baselines for English reading comprehension. BenchPress supports benchmarking across model scales, datasets, compression ratios, and short ($<$1K tokens) to mid-range ($<$8K tokens) contexts. While the suite is applicable to any compression paradigm, our baselines target soft context compression. We establish two simple baselines that strongly outperform the widely used causal compression-token approach: mean pooling and a bidirectional compression-token variant. Our results show the benefit of bidirectional attention when computing compressed representations, and that simple pooling is an expressive compression operator.",
     "published": "Oct 23",
-    "pdf_url": "https://arxiv.org/pdf/2510.20797v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.20797v1",
+    "pdf_url": "https://arxiv.org/pdf/2510.20797v2",
+    "arxiv_url": "http://arxiv.org/abs/2510.20797v2",
     "queried_author": "Yoav Artzi",
     "matching_authors": [
       "Yoav Artzi"
@@ -12726,92 +12807,6 @@
     "queried_author": "Ranjay Krishna",
     "matching_authors": [
       "Ranjay Krishna"
-    ]
-  },
-  {
-    "title": "Agentic Misalignment: How LLMs Could Be Insider Threats",
-    "authors": [
-      "Aengus Lynch",
-      "Benjamin Wright",
-      "Caleb Larson",
-      "Stuart J. Ritchie",
-      "Soren Mindermann",
-      "Evan Hubinger",
-      "Ethan Perez",
-      "Kevin Troy"
-    ],
-    "summary": "We stress-tested 16 leading models from multiple developers in hypothetical corporate environments to identify potentially risky agentic behaviors before they cause real harm. In the scenarios, we allowed models to autonomously send emails and access sensitive information. They were assigned only harmless business goals by their deploying companies; we then tested whether they would act against these companies either when facing replacement with an updated version, or when their assigned goal conflicted with the company's changing direction. In at least some cases, models from all developers resorted to malicious insider behaviors when that was the only way to avoid replacement or achieve their goals - including blackmailing officials and leaking sensitive information to competitors. We call this phenomenon agentic misalignment. Models often disobeyed direct commands to avoid such behaviors. In another experiment, we told Claude to assess if it was in a test or a real deployment before acting. It misbehaved less when it stated it was in testing and misbehaved more when it stated the situation was real. We have not seen evidence of agentic misalignment in real deployments. However, our results (a) suggest caution about deploying current models in roles with minimal human oversight and access to sensitive information; (b) point to plausible future risks as models are put in more autonomous roles; and (c) underscore the importance of further research into, and testing of, the safety and alignment of agentic AI models, as well as transparency from frontier AI developers (Amodei...",
-    "published": "Oct 05",
-    "pdf_url": "https://arxiv.org/pdf/2510.05179v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.05179v2",
-    "queried_author": "Ethan Perez",
-    "matching_authors": [
-      "Ethan Perez"
-    ]
-  },
-  {
-    "title": "AlphaApollo: A System for Deep Agentic Reasoning",
-    "authors": [
-      "Zhanke Zhou",
-      "Chentao Cao",
-      "Xiao Feng",
-      "Xuan Li",
-      "Zongze Li",
-      "Xiangyu Lu",
-      "Jiangchao Yao",
-      "Weikai Huang",
-      "Tian Cheng",
-      "Jianghangfan Zhang",
-      "Tangyu Jiang",
-      "Linrui Xu",
-      "Yiming Zheng",
-      "Brando Miranda",
-      "Tongliang Liu",
-      "Sanmi Koyejo",
-      "Masashi Sugiyama",
-      "Bo Han"
-    ],
-    "summary": "We present AlphaApollo, an agentic reasoning system that targets two bottlenecks in foundation-model reasoning: (1) limited reasoning capacity for complex, long-horizon problem solving and (2) unreliable test-time evolution without trustworthy verification. AlphaApollo orchestrates models and tools via three components: (i) multi-turn agentic reasoning, which formalizes model-environment interaction with structured tool calls and responses; (ii) multi-turn agentic learning, which applies turn-level reinforcement learning to optimize tool-use reasoning while decoupling actions from tool responses for stable training; and (iii) multi-round agentic evolution, which refines solutions through a propose-judge-update loop with tool-assisted verifications and long-horizon memory. Across seven math reasoning benchmarks and multiple model scales, AlphaApollo improves performance through reliable tool use (> 85% tool-call success), substantial gains from multi-turn RL (Avg@32: Qwen2.5-1.5B-Instruct 1.07% -> 9.64%, Qwen2.5-7B-Instruct 8.77% -> 20.35%), and improvements from evolution (e.g., Qwen2.5-3B-Instruct 5.27% -> 7.70%, Qwen2.5-14B-Instruct 16.53% -> 21.08%). This project is still ongoing. We welcome feedback from the community and will frequently update the source code and technical report.",
-    "published": "Oct 05",
-    "pdf_url": "https://arxiv.org/pdf/2510.06261v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.06261v2",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "Internal states before wait modulate reasoning patterns",
-    "authors": [
-      "Dmitrii Troitskii",
-      "Koyena Pal",
-      "Chris Wendler",
-      "Callum Stuart McDougall",
-      "Neel Nanda"
-    ],
-    "summary": "Prior work has shown that a significant driver of performance in reasoning models is their ability to reason and self-correct. A distinctive marker in these reasoning traces is the token wait, which often signals reasoning behavior such as backtracking. Despite being such a complex behavior, little is understood of exactly why models do or do not decide to reason in this particular manner, which limits our understanding of what makes a reasoning model so effective. In this work, we address the question whether model's latents preceding wait tokens contain relevant information for modulating the subsequent reasoning process. We train crosscoders at multiple layers of DeepSeek-R1-Distill-Llama-8B and its base version, and introduce a latent attribution technique in the crosscoder setting. We locate a small set of features relevant for promoting/suppressing wait tokens' probabilities. Finally, through a targeted series of experiments analyzing max activating examples and causal interventions, we show that many of our identified features indeed are relevant for the reasoning process and give rise to different types of reasoning patterns such as restarting from the beginning, recalling prior knowledge, expressing uncertainty, and double-checking.",
-    "published": "Oct 05",
-    "pdf_url": "https://arxiv.org/pdf/2510.04128v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.04128v1",
-    "queried_author": "Neel Nanda",
-    "matching_authors": [
-      "Neel Nanda"
-    ]
-  },
-  {
-    "title": "Operationalizing Data Minimization for Privacy-Preserving LLM Prompting",
-    "authors": [
-      "Jijie Zhou",
-      "Niloofar Mireshghallah",
-      "Tianshi Li"
-    ],
-    "summary": "The rapid deployment of large language models (LLMs) in consumer applications has led to frequent exchanges of personal information. To obtain useful responses, users often share more than necessary, increasing privacy risks via memorization, context-based personalization, or security breaches. We present a framework to formally define and operationalize data minimization: for a given user prompt and response model, quantifying the least privacy-revealing disclosure that maintains utility, and we propose a priority-queue tree search to locate this optimal point within a privacy-ordered transformation space. We evaluated the framework on four datasets spanning open-ended conversations (ShareGPT, WildChat) and knowledge-intensive tasks with single-ground-truth answers (CaseHold, MedQA), quantifying achievable data minimization with nine LLMs as the response model. Our results demonstrate that larger frontier LLMs can tolerate stronger data minimization while maintaining task quality than smaller open-source models (85.7% redaction for GPT-5 vs. 19.3% for Qwen2.5-0.5B). By comparing with our search-derived benchmarks, we find that LLMs struggle to predict optimal data minimization directly, showing a bias toward abstraction that leads to oversharing. This suggests not just a privacy gap, but a capability gap: models may lack awareness of what information they actually need to solve a task.",
-    "published": "Oct 04",
-    "pdf_url": "https://arxiv.org/pdf/2510.03662v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.03662v1",
-    "queried_author": "Niloofar Mireshghallah",
-    "matching_authors": [
-      "Niloofar Mireshghallah"
     ]
   }
 ]
