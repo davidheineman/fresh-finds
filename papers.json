@@ -1,5 +1,111 @@
 [
   {
+    "title": "Soohak: A Mathematician-Curated Benchmark for Evaluating Research-level Math Capabilities of LLMs",
+    "authors": [
+      "Guijin Son",
+      "Seungone Kim",
+      "Catherine Arnett",
+      "Hyunwoo Ko",
+      "Hyein Lee",
+      "Hyeonah Kang",
+      "Jiang Longxi",
+      "Jin Yun",
+      "JungYup Lee",
+      "Kyungmin Lee",
+      "Sam Yoosuk Kim",
+      "Sang Park",
+      "Seunghyeok Hong",
+      "SeungJae Lee",
+      "Seungyeop Yi",
+      "Shinae Shin",
+      "SunHye Bok",
+      "Sunyoung Shin",
+      "Yonghoon Ji",
+      "Youngtaek Kim",
+      "Hanearl Jung",
+      "Akari Asai",
+      "Graham Neubig",
+      "Sean Welleck",
+      "Youngjae Yu",
+      "Akshelin R",
+      "Alexander B. Ivanov",
+      "Boboev Muhammadjon",
+      "Chaeyoung Han",
+      "Christian Stump",
+      "Dmitrii Karp",
+      "Dohyun Kwon",
+      "DoYong Kwon",
+      "Duk-Soon Oh",
+      "Giovanni Resta",
+      "Greta Panova",
+      "Huiyun Noh",
+      "Hyungryul Baik",
+      "Hyungsun Bae",
+      "Inomov Mashrafdzhon",
+      "Jeewon Kim",
+      "Ji Eun Lee",
+      "Jiaqi Liu",
+      "Jieui Kang",
+      "Jimin Kim",
+      "Jon-Lark Kim",
+      "Junseo Yoon",
+      "Junwoo Jo",
+      "Kibeom Kim",
+      "Kiwoon Kwon",
+      "Mario Kummer",
+      "Max Mercer",
+      "Minjun Kim",
+      "Nahyun Lee",
+      "Ng Ze-An",
+      "Rafa\u0142 Marcin \u0141ochowski",
+      "Rapha\u00ebl Lachi\u00e8ze-Rey",
+      "Ruichen Zhang",
+      "Sejin Park",
+      "Seonguk Seo",
+      "Shin Jaehoon",
+      "Sunatullo",
+      "Taewoong Eom",
+      "Yeachan Park",
+      "Yongseok Jang",
+      "Youchan Oh",
+      "Zhaoyang Wang",
+      "Zolt\u00e1n Kov\u00e1cs"
+    ],
+    "summary": "Following the recent achievement of gold-medal performance on the IMO by frontier LLMs, the community is searching for the next meaningful and challenging target for measuring LLM reasoning. Whereas olympiad-style problems measure step-by-step reasoning alone, research-level problems use such reasoning to advance the frontier of mathematical knowledge itself, emerging as a compelling alternative. Yet research-level math benchmarks remain scarce because such problems are difficult to source (e.g., Riemann Bench and FrontierMath-Tier 4 contain 25 and 50 problems, respectively). To support reliable evaluation of next-generation frontier models, we introduce Soohak, a 439-problem benchmark newly authored from scratch by 64 mathematicians. Soohak comprises two subsets. On the Challenge subset, frontier models including Gemini-3-Pro, GPT-5, and Claude-Opus-4.5 reach 30.4%, 26.4%, and 10.4% respectively, leaving substantial headroom, while leading open-weight models such as Qwen3-235B, GPT-OSS-120B, and Kimi-2.5 remain below 15%. Notably, beyond standard problem solving, Soohak introduces a refusal subset that probes a capability intrinsic to research mathematics: recognizing ill-posed problems and pausing rather than producing confident but unjustified answers. On this subset, no model exceeds 50%, identifying refusal as a new optimization target that current models do not directly address. To prevent contamination, the dataset will be publicly released in late 2026, with model evaluations available upon request in the interim.",
+    "published": "May 09",
+    "pdf_url": "https://arxiv.org/pdf/2605.09063v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.09063v1",
+    "queried_author": "Akari Asai",
+    "matching_authors": [
+      "Akari Asai",
+      "Graham Neubig",
+      "Sean Welleck",
+      "Seungone Kim"
+    ]
+  },
+  {
+    "title": "SecureForge: Finding and Preventing Vulnerabilities in LLM-Generated Code via Prompt Optimization",
+    "authors": [
+      "Houjun Liu",
+      "Lisa Einstein",
+      "John Yang",
+      "Joachim Baumann",
+      "Duncan Eddy",
+      "Christopher D. Manning",
+      "Mykel Kochenderfer",
+      "Diyi Yang"
+    ],
+    "summary": "LLM coding agents now generate code at an unprecedented scale, yet LLM-generated code introduces cybersecurity vulnerabilities into codebases without human involvement. Even when frontier models are explicitly asked to write secure production code with relevant weaknesses to avoid in context, we find that they still produce verifiable vulnerabilities on average 23% of the time across a corpus of 250 benign coding prompts. We introduce SecureForge, an automated pipeline that both audits security risks of frontier models and produces auditing-informed secure system prompts that reduce output security vulnerabilities while maintaining unit test performance. SecureForge first identifies benign prompts that produce statically detectable vulnerabilities, and then amplifies them into a large synthetic prompt corpus of diverse scenarios using a Markovian sampling technique to jointly maintain error rates and prompt diversity. This corpus is then used to iteratively optimize the system prompts to reduce output security vulnerabilities. On frontier models, SecureForge yields a statistically significant Pareto improvement in both unit test success and output security, with output vulnerabilities reduced by up to 48%. The resulting system prompts transfer zero-shot to in-the-wild coding agent prompts, without any exposure to real user prompt distributions during optimization.",
+    "published": "May 08",
+    "pdf_url": "https://arxiv.org/pdf/2605.08382v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.08382v1",
+    "queried_author": "Christopher D Manning",
+    "matching_authors": [
+      "Christopher D Manning",
+      "Diyi Yang"
+    ]
+  },
+  {
     "title": "Fast Byte Latent Transformer",
     "authors": [
       "Julie Kallini",
@@ -416,6 +522,40 @@
     "arxiv_url": "http://arxiv.org/abs/2605.05242v1",
     "queried_author": "Yejin Choi",
     "matching_authors": [
+      "Yejin Choi"
+    ]
+  },
+  {
+    "title": "NoiseRater: Meta-Learned Noise Valuation for Diffusion Model Training",
+    "authors": [
+      "Fang Wu",
+      "Haokai Zhao",
+      "Da Xing",
+      "Hanqun Cao",
+      "Tinson Xu",
+      "Yanchao Li",
+      "Xiangru Tang",
+      "Zehong Wang",
+      "Aaron Tu",
+      "Kuan Pang",
+      "Hanchen Wang",
+      "Hongbin Lin",
+      "Zeqi Zhou",
+      "Yinxi Li",
+      "Peng Xia",
+      "Li Erran Li",
+      "Molei Tao",
+      "Jure Leskovec",
+      "Aditya Joshi",
+      "Yejin Choi"
+    ],
+    "summary": "Diffusion models have achieved remarkable success across a wide range of generative tasks, yet their training paradigm largely treats injected noise as uniformly informative. In this work, we challenge this assumption and introduce NoiseRater, a meta-learning framework for instance-level noise valuation in diffusion model training. We propose a parametric noise rater that assigns importance scores to individual noise realizations conditioned on data and timestep, enabling adaptive reweighting of the training objective. The rater is trained via bilevel optimization to improve downstream validation performance after inner-loop diffusion updates. To enable efficient deployment, we further design a decoupled two-stage pipeline that transitions from soft weighting during meta-training to hard noise selection during standard training. Extensive experiments on FFHQ and ImageNet demonstrate that not all noise samples contribute equally, and that prioritizing informative noise improves both training efficiency and generation quality. Our results establish noise valuation as a complementary and previously underexplored axis for improving diffusion model training. Our code is available at: https://anonymous.4open.science/r/NoiseRater-DEB116.",
+    "published": "May 02",
+    "pdf_url": "https://arxiv.org/pdf/2605.08144v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.08144v1",
+    "queried_author": "Jure Leskovec",
+    "matching_authors": [
+      "Jure Leskovec",
       "Yejin Choi"
     ]
   },
@@ -2454,8 +2594,8 @@
     ],
     "summary": "Digital mental health (DMH) tools have extensively explored personalization of interventions to users' needs and contexts. However, this personalization often targets what support is provided, not how it is experienced. Even well-matched content can fail when the interaction format misaligns with how someone can engage. We introduce generative experience as a paradigm for DMH support, where the intervention experience is composed at runtime. We instantiate this in GUIDE, a system that generates personalized intervention content and multimodal interaction structure through rubric-guided generation of modular components. In a preregistered study with N = 237 participants, GUIDE significantly reduced stress (p = .02) and improved the user experience (p = .04) compared to an LLM-based cognitive restructuring control. GUIDE also supported diverse forms of reflection and action through varied interaction flows, while revealing tensions around personalization across the interaction sequence. This work lays the foundation for interventions that dynamically shape how support is experienced and enacted in digital settings.",
     "published": "Apr 08",
-    "pdf_url": "https://arxiv.org/pdf/2604.07558v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.07558v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.07558v2",
+    "arxiv_url": "http://arxiv.org/abs/2604.07558v2",
     "queried_author": "Diyi Yang",
     "matching_authors": [
       "Diyi Yang"
@@ -5595,8 +5735,8 @@
     ],
     "summary": "Relational deep learning (RDL) has emerged as a powerful paradigm for learning directly on relational databases by modeling entities and their relationships across multiple interconnected tables. As this paradigm evolves toward larger models and relational foundation models, scalable and realistic benchmarks are essential for enabling systematic evaluation and progress. In this paper, we introduce RelBench v2, a major expansion of the RelBench benchmark for RDL. RelBench v2 adds four large-scale relational datasets spanning scholarly publications, enterprise resource planning, consumer platforms, and clinical records, increasing the benchmark to 11 datasets comprising over 22 million rows across 29 tables. We further introduce autocomplete tasks, a new class of predictive objectives that require models to infer missing attribute values directly within relational tables while respecting temporal constraints, expanding beyond traditional forecasting tasks constructed via SQL queries. In addition, RelBench v2 expands beyond its native datasets by integrating external benchmarks and evaluation frameworks: we translate event streams from the Temporal Graph Benchmark into relational schemas for unified relational-temporal evaluation, interface with ReDeLEx to provide uniform access to 70+ real-world databases suitable for pretraining, and incorporate 4DBInfer datasets and tasks to broaden multi-table prediction coverage. Experimental results demonstrate that RDL models consistently outperform single-table baselines across autocomplete, forecasting, and recommendation tasks, highl...",
     "published": "Feb 13",
-    "pdf_url": "https://arxiv.org/pdf/2602.12606v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.12606v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.12606v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.12606v2",
     "queried_author": "Jure Leskovec",
     "matching_authors": [
       "Jure Leskovec"
@@ -9597,8 +9737,8 @@
     ],
     "summary": "MeanFlow (MF) has recently been established as a framework for one-step generative modeling. However, its ``fastforward'' nature introduces key challenges in both the training objective and the guidance mechanism. First, the original MF's training target depends not only on the underlying ground-truth fields but also on the network itself. To address this issue, we recast the objective as a loss on the instantaneous velocity $v$, re-parameterized by a network that predicts the average velocity $u$. Our reformulation yields a more standard regression problem and improves the training stability. Second, the original MF fixes the classifier-free guidance scale during training, which sacrifices flexibility. We tackle this issue by formulating guidance as explicit conditioning variables, thereby retaining flexibility at test time. The diverse conditions are processed through in-context conditioning, which reduces model size and benefits performance. Overall, our $\\textbf{improved MeanFlow}$ ($\\textbf{iMF}$) method, trained entirely from scratch, achieves $\\textbf{1.72}$ FID with a single function evaluation (1-NFE) on ImageNet 256$\\times$256. iMF substantially outperforms prior methods of this kind and closes the gap with multi-step methods while using no distillation. We hope our work will further advance fastforward generative modeling as a stand-alone paradigm.",
     "published": "Dec 01",
-    "pdf_url": "https://arxiv.org/pdf/2512.02012v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.02012v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.02012v2",
+    "arxiv_url": "http://arxiv.org/abs/2512.02012v2",
     "queried_author": "J Zico Kolter",
     "matching_authors": [
       "J Zico Kolter"
@@ -12672,64 +12812,6 @@
     "queried_author": "Niloofar Mireshghallah",
     "matching_authors": [
       "Niloofar Mireshghallah"
-    ]
-  },
-  {
-    "title": "OneFlow: Concurrent Mixed-Modal and Interleaved Generation with Edit Flows",
-    "authors": [
-      "John Nguyen",
-      "Marton Havasi",
-      "Tariq Berrada",
-      "Luke Zettlemoyer",
-      "Ricky T. Q. Chen"
-    ],
-    "summary": "We present OneFlow, the first non-autoregressive multimodal model that enables variable-length and concurrent mixed-modal generation. Unlike autoregressive models that enforce rigid causal ordering between text and image generation, OneFlow combines an insertion-based Edit Flow for discrete text tokens with Flow Matching for image latents. OneFlow enables concurrent text-image synthesis with hierarchical sampling that prioritizes content over grammar. Through controlled experiments across model sizes from 1B to 8B, we demonstrate that OneFlow outperforms autoregressive baselines on both generation and understanding tasks while using up to 50% fewer training FLOPs. OneFlow surpasses both autoregressive and diffusion-based approaches while unlocking new capabilities for concurrent generation, iterative refinement, and natural reasoning-like generation.",
-    "published": "Oct 03",
-    "pdf_url": "https://arxiv.org/pdf/2510.03506v3",
-    "arxiv_url": "http://arxiv.org/abs/2510.03506v3",
-    "queried_author": "Luke Zettlemoyer",
-    "matching_authors": [
-      "Luke Zettlemoyer"
-    ]
-  },
-  {
-    "title": "Know Thyself? On the Incapability and Implications of AI Self-Recognition",
-    "authors": [
-      "Xiaoyan Bai",
-      "Aryan Shrivastava",
-      "Ari Holtzman",
-      "Chenhao Tan"
-    ],
-    "summary": "Self-recognition is a crucial metacognitive capability for AI systems, relevant not only for psychological analysis but also for safety, particularly in evaluative scenarios. Motivated by contradictory interpretations of whether models possess self-recognition (Panickssery et al., 2024; Davidson et al., 2024), we introduce a systematic evaluation framework that can be easily applied and updated. Specifically, we measure how well 10 contemporary larger language models (LLMs) can identify their own generated text versus text from other models through two tasks: binary self-recognition and exact model prediction. Different from prior claims, our results reveal a consistent failure in self-recognition. Only 4 out of 10 models predict themselves as generators, and the performance is rarely above random chance. Additionally, models exhibit a strong bias toward predicting GPT and Claude families. We also provide the first evaluation of model awareness of their own and others' existence, as well as the reasoning behind their choices in self-recognition. We find that the model demonstrates some knowledge of its own existence and other models, but their reasoning reveals a hierarchical bias. They appear to assume that GPT, Claude, and occasionally Gemini are the top-tier models, often associating high-quality text with them. We conclude by discussing the implications of our findings on AI safety and future directions to develop appropriate AI self-awareness.",
-    "published": "Oct 03",
-    "pdf_url": "https://arxiv.org/pdf/2510.03399v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.03399v1",
-    "queried_author": "Ari Holtzman",
-    "matching_authors": [
-      "Ari Holtzman"
-    ]
-  },
-  {
-    "title": "PRISM-Physics: Causal DAG-Based Process Evaluation for Physics Reasoning",
-    "authors": [
-      "Wanjia Zhao",
-      "Qinwei Ma",
-      "Jingzhe Shi",
-      "Shirley Wu",
-      "Jiaqi Han",
-      "Yijia Xiao",
-      "Si-Yuan Chen",
-      "Xiao Luo",
-      "Ludwig Schmidt",
-      "James Zou"
-    ],
-    "summary": "Benchmarks for competition-style reasoning have advanced evaluation in mathematics and programming, yet physics remains comparatively explored. Most existing physics benchmarks evaluate only final answers, which fail to capture reasoning processes, while recent stepwise methods rely on heuristic LLM-as-judge scoring or restrictive linear assumptions, limiting reliability and diagnostic validity. We introduce PRISM-Physics, a process-level evaluation framework and benchmark for complex physics reasoning problems. Solutions are represented as directed acyclic graphs (DAGs) of formulas, explicitly encoding causal dependencies among intermediate steps to enable fine-grained, interpretable, and theoretically grounded scoring. We prove the optimality of the DAG representation and the corresponding scoring policy. Combining with a fully rule-based method for symbolic formula equivalence matching that we developed, we ensure consistent validation across diverse formulations without heuristic judgments. Results show that our evaluation framework is more aligned with human experts' scoring. Experiments on state-of-the-art LLMs reveal persistent reasoning failures in physics, while step-level scoring offers both diagnostic insight and rich signals for later training. By combining structural rigor, theoretical guarantees, and symbolic validation, PRISM-Physics provides a principled foundation for advancing process-level evaluation and guiding the development of models with deeper scientific reasoning capabilities.",
-    "published": "Oct 03",
-    "pdf_url": "https://arxiv.org/pdf/2510.03185v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.03185v2",
-    "queried_author": "Ludwig Schmidt",
-    "matching_authors": [
-      "Ludwig Schmidt"
     ]
   }
 ]
