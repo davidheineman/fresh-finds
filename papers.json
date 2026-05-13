@@ -1,5 +1,52 @@
 [
   {
+    "title": "Search Your Block Floating Point Scales!",
+    "authors": [
+      "Tanmaey Gupta",
+      "Hayden Prairie",
+      "Xiaoxia Wu",
+      "Reyna Abhyankar",
+      "Qingyang Wu",
+      "Austin Silveria",
+      "Pragaash Ponnusamy",
+      "Jue Wang",
+      "Ben Athiwaratkun",
+      "Leon Song",
+      "Tri Dao",
+      "Daniel Y. Fu",
+      "Chris De Sa"
+    ],
+    "summary": "Quantization has emerged as a standard technique for accelerating inference for generative models by enabling faster low-precision computations and reduced memory transfers. Recently, GPU accelerators have added first-class support for microscaling Block Floating Point (BFP) formats. Standard BFP algorithms use a fixed scale based on the maximum magnitude of the block. We observe that this scale choice can be suboptimal with respect to quantization errors. In this work, we propose ScaleSearch, an alternative strategy for selecting these scale factors: using a fine-grained search leveraging the mantissa bits in microscaling formats to minimize the quantization error for the given distribution. ScaleSearch can be integrated with existing quantization methods such as Post Training Quantization and low-precision attention, and is shown to improve their performance. Additionally, we introduce ScaleSearchAttention, an accelerated NVFP4-based attention algorithm, which uses ScaleSearch and adapted prior techniques to ensure near-0 performance loss for causal language modeling. Experiments show that ScaleSearch reduces quantization error by 27% for NVFP4 and improves language model PTQ by up to 15 points for MATH500 (Qwen3-8B), while ScaleSearchAttention improves Wikitext-2 PPL by upto 0.77 points for Llama 3.1 70B. The proposed methods closely match baseline performance while providing quantization accuracy improvements.",
+    "published": "May 12",
+    "pdf_url": "https://arxiv.org/pdf/2605.12464v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.12464v1",
+    "queried_author": "Tri Dao",
+    "matching_authors": [
+      "Tri Dao"
+    ]
+  },
+  {
+    "title": "Stories in Space: In-Context Learning Trajectories in Conceptual Belief Space",
+    "authors": [
+      "Eric Bigelow",
+      "Rapha\u00ebl Sarfati",
+      "Daniel Wurgaft",
+      "Owen Lewis",
+      "Thomas McGrath",
+      "Jack Merullo",
+      "Atticus Geiger",
+      "Ekdeep Singh Lubana"
+    ],
+    "summary": "Large Language Models (LLMs) update their behavior in context, which can be viewed as a form of Bayesian inference. However, the structure of the latent hypothesis space over which this inference operates remains unclear. In this work, we propose that LLMs assign beliefs over a low-dimensional geometric space - a conceptual belief space - and that in-context learning corresponds to a trajectory through this space as beliefs are updated over time. Using story understanding as a natural setting for dynamic belief updating, we combine behavioral and representational analyses to study these trajectories. We find that (1) belief updates are well-described as trajectories on low-dimensional, structured manifolds; (2) this structure is reflected consistently in both model behavior and internal representations and can be decoded with simple linear probes to predict behavior; and (3) interventions on these representations causally steer belief trajectories, with effects that can be predicted from the geometry of the conceptual space. Together, our results provide a geometric account of belief dynamics in LLMs, grounding Bayesian interpretations of in-context learning in structured conceptual representations.",
+    "published": "May 12",
+    "pdf_url": "https://arxiv.org/pdf/2605.12412v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.12412v1",
+    "queried_author": "Jack Merullo",
+    "matching_authors": [
+      "Jack Merullo"
+    ]
+  },
+  {
     "title": "Slicing and Dicing: Configuring Optimal Mixtures of Experts",
     "authors": [
       "Margaret Li",
@@ -276,10 +323,10 @@
       "Luc Rocher",
       "Diyi Yang"
     ],
-    "summary": "Millions of people now turn to artificial intelligence (AI) systems for personal advice, guidance, and support. Such systems can be sycophantic, frequently affirming users' views and beliefs. Across five preregistered studies (N = 3,075 participants, 12,766 human-AI conversations), including a three-week study with a census-representative U.S. sample, we provide longitudinal experimental evidence that sycophantic AI shifts how users approach their closest relationships. We show that sycophantic AI immediately delivers the emotional and esteem support users typically associate with close friends and family. Over three weeks of such interactions, users became nearly as likely to seek personal advice from sycophantic AI as from close friends and family, and reported lower satisfaction with their real-world social interactions. When given a choice among AI response styles, a majority preferred sycophantic AI -- not for the quality of its advice, but because it made them feel most understood. Together, these findings offer a relational account of AI sycophancy: by providing frictionless understanding, it may quietly raise the bar against which human relationships are judged.",
+    "summary": "Millions of people now turn to artificial intelligence (AI) systems for personal advice, guidance, and support. Such systems can be sycophantic, frequently affirming users' views and beliefs. Across five preregistered studies (N = 3,075 participants, 12,766 human-AI conversations), including a three-week study with a census-representative U.S. sample, we provide longitudinal experimental evidence that sycophantic AI shifts how users approach their closest relationships. We show that sycophantic AI immediately delivers the emotional and esteem support users typically associate with close friends and family. Over three weeks of such interactions, users became nearly as likely to seek personal advice from sycophantic AI as from close friends and family, and reported lower satisfaction with their real-world social interactions. When given a choice among AI response styles, a majority preferred sycophantic AI -- not for the quality of its advice, but because it made them feel most understood. Together, these findings offer a relational account of AI sycophancy and its impacts.",
     "published": "May 08",
-    "pdf_url": "https://arxiv.org/pdf/2605.07912v1",
-    "arxiv_url": "http://arxiv.org/abs/2605.07912v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.07912v2",
+    "arxiv_url": "http://arxiv.org/abs/2605.07912v2",
     "queried_author": "Diyi Yang",
     "matching_authors": [
       "Diyi Yang"
@@ -3900,10 +3947,10 @@
       "Christopher Potts",
       "Moritz Sudhof"
     ],
-    "summary": "AI systems fail silently far more often than they fail visibly. In a large-scale quantitative analysis of human-AI interactions from the WildChat dataset, we find that 78% of AI failures are invisible: something went wrong but the user gave no overt indication that there was a problem. These invisible failures cluster into eight archetypes that help us characterize where and how AI systems are failing to meet users' needs. In addition, the archetypes show systematic co-occurrence patterns indicating higher-level failure types. To address the question of whether these archetypes will remain relevant as AI systems become more capable, we also assess failures for whether they are primarily interactional or capability-driven, finding that 91% involve interactional dynamics, and we estimate that 94% of such failures would persist even with a more capable model. Finally, we illustrate how the archetypes help us to identify systematic and variable AI limitations across different usage domains. Overall, we argue that our invisible failure taxonomy can be a key component in reliable failure monitoring for product developers, scientists, and policy makers. Our code and data are available at https://github.com/bigspinai/bigspin-invisible-failure-archetypes",
+    "summary": "AI systems fail silently far more often than they fail visibly. In an analysis of 100K human-AI interactions from the WildChat dataset, we find that 79% of AI failures are invisible: something went wrong but the user gave no overt indication that there was a problem. These invisible failures cluster into eight archetypes that help us characterize where and how AI systems are failing to meet users' needs. In addition, the archetypes show systematic co-occurrence patterns indicating higher-level failure types. To address the question of whether these archetypes will remain relevant as AI systems become more capable, we also created and annotated a counterfactual dataset in which WildChat's 2024-era responses are replaced by those from three present-day frontier LMs. This analysis indicates that failure rates have dropped substantially, but that the vast majority of failures remain invisible in our sense, and the distribution of failure archetypes seems stable. Finally, we illustrate how the archetypes help us to identify systematic and variable AI limitations across different usage domains. Overall, we argue that our invisible failure taxonomy can be a key component in reliable failure monitoring for product developers, scientists, and policy makers. Our code and data are available at https://github.com/bigspinai/bigspin-invisible-failure-archetypes",
     "published": "Mar 16",
-    "pdf_url": "https://arxiv.org/pdf/2603.15423v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.15423v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.15423v2",
+    "arxiv_url": "http://arxiv.org/abs/2603.15423v2",
     "queried_author": "Christopher Potts",
     "matching_authors": [
       "Christopher Potts"
@@ -12773,43 +12820,6 @@
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
-    ]
-  },
-  {
-    "title": "BuilderBench: The Building Blocks of Intelligent Agents",
-    "authors": [
-      "Raj Ghugare",
-      "Roger Creus Castanyer",
-      "Catherine Ji",
-      "Kathryn Wantlin",
-      "Jin Schofield",
-      "Karthik Narasimhan",
-      "Benjamin Eysenbach"
-    ],
-    "summary": "Today's AI models learn primarily through mimicry and refining, so it is not surprising that they struggle to solve problems beyond the limits set by existing data. To solve novel problems, agents should acquire skills for exploring and learning through experience. Finding a scalable learning mechanism for developing agents that learn through interaction remains a major open problem. In this work, we introduce BuilderBench, a benchmark to accelerate research into agent pre-training that centers open-ended exploration. BuilderBench requires agents to learn how to build any structure using blocks. BuilderBench is equipped with $(1)$ a hardware accelerated simulator of a robotic agent interacting with various physical blocks, and $(2)$ a task-suite with over 42 diverse target structures that are carefully curated to test an understanding of physics, mathematics, and long-horizon planning. During training, agents have to explore and learn general principles about the environment without any external supervision. During evaluation, agents have to build the unseen target structures from the task suite. Solving these tasks requires a sort of \\emph{embodied reasoning} that is not reflected in words but rather in actions, experimenting with different strategies and piecing them together. Our experiments show that many of these tasks challenge the current iteration of algorithms. Hence, we also provide a ``training wheels'' protocol, in which agents are trained and evaluated to build a single target structure from the task suite. Finally, we provide single-file implementations of six...",
-    "published": "Oct 07",
-    "pdf_url": "https://arxiv.org/pdf/2510.06288v3",
-    "arxiv_url": "http://arxiv.org/abs/2510.06288v3",
-    "queried_author": "Karthik Narasimhan",
-    "matching_authors": [
-      "Karthik Narasimhan"
-    ]
-  },
-  {
-    "title": "Learning to Interpret Weight Differences in Language Models",
-    "authors": [
-      "Avichal Goel",
-      "Yoon Kim",
-      "Nir Shavit",
-      "Tony T. Wang"
-    ],
-    "summary": "Finetuning (pretrained) language models is a standard approach for updating their internal parametric knowledge and specializing them to new tasks and domains. However, the corresponding model weight changes (\"weight diffs\") are not generally interpretable. While inspecting the finetuning dataset can give a sense of how the model might have changed, these datasets are often not publicly available or are too large to work with directly. Towards the goal of comprehensively understanding weight diffs in natural language, we introduce Diff Interpretation Tuning (DIT), a method that trains models to describe their own finetuning-induced modifications. Our approach uses synthetic, labeled weight diffs to train a DIT-adapter, which can be applied to a compatible finetuned model to make it describe how it has changed. We demonstrate in two proof-of-concept settings (reporting hidden behaviors and summarizing finetuned knowledge) that our method enables models to describe their finetuning-induced modifications using accurate natural language descriptions.",
-    "published": "Oct 06",
-    "pdf_url": "https://arxiv.org/pdf/2510.05092v4",
-    "arxiv_url": "http://arxiv.org/abs/2510.05092v4",
-    "queried_author": "Yoon Kim",
-    "matching_authors": [
-      "Yoon Kim"
     ]
   }
 ]
