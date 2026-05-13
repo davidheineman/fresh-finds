@@ -1,5 +1,63 @@
 [
   {
+    "title": "Slicing and Dicing: Configuring Optimal Mixtures of Experts",
+    "authors": [
+      "Margaret Li",
+      "Sneha Kudugunta",
+      "Danielle Rothermel",
+      "Luke Zettlemoyer"
+    ],
+    "summary": "Mixture-of-Experts (MoE) architectures have become standard in large language models, yet many of their core design choices - expert count, granularity, shared experts, load balancing, token dropping - have only been studied one or two at a time over narrow configuration ranges. It remains an open question whether these choices can be optimized independently, without considering interactions. We present the first systematic study of over 2,000 pretraining runs spanning models up to 6.6B total parameters, in which we exhaustively vary total experts, expert dimension, heterogeneous expert sizing within a single layer, shared expert size and load-balancing mechanisms. We find that at every active-parameter scale that we study, performance consistently improves with total MoE parameters even at extreme active expert parameter ratios like 128.Further, the optimal expert size is nearly invariant to total parameter count and depends only on active parameter count. Third, we see that other choices like shared experts, heterogeneous experts and load-balancing settings have small effects relative to expert count and granularity, although dropless routing yields a consistent gain. Overall, our results suggest a simpler recipe: focus on expert count and granularity, other choices have minimal effect on final quality.",
+    "published": "May 12",
+    "pdf_url": "https://arxiv.org/pdf/2605.11689v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.11689v1",
+    "queried_author": "Luke Zettlemoyer",
+    "matching_authors": [
+      "Luke Zettlemoyer",
+      "Margaret Li"
+    ]
+  },
+  {
+    "title": "Deep Reasoning in General Purpose Agents via Structured Meta-Cognition",
+    "authors": [
+      "Dean Light",
+      "Michael Theologitis",
+      "Kshitish Ghate",
+      "Shuyue Stella Li",
+      "Benjamin Newman",
+      "Chirag Shah",
+      "Aylin Caliskan",
+      "Pang Wei Koh",
+      "Dan Suciu",
+      "Yulia Tsvetkov"
+    ],
+    "summary": "Humans intuitively solve complex problems by flexibly shifting among reasoning modes: they plan, execute, revise intermediate goals, resolve ambiguity through associative judgment, and apply formal procedures to well-specified subproblems. Current LLM agents lack this flexibility, as their scaffolds hard-code such reasoning decisions in advance. These scaffolds are effective when their prescribed structure matches the task, but brittle when solving the task requires adapting the structure of reasoning itself. We introduce Deep Reasoning -- an inference-time approach for constructing task-specific scaffolds through structured meta-reasoning. Deep Reasoning uses a formal language that represents meta-reasoning as executable decompositions over associative inference, formal computation, and recursive subproblem solving, enabling decomposition principles to be encoded as in-context examples that guide test-time scaffold construction. We instantiate this approach in a general-purpose agent (DOLORES) that distributes complex tasks across more controlled reasoning threads. We evaluate it against state-of-the-art scaffolding methods across four hard benchmarks: multi-hop reasoning, long-chain question answering, long-context aggregation, and deep research-style information seeking. DOLORES outperforms all evaluated scaffolds across three model sizes and two model families, improving over the strongest evaluated scaffold baseline by 24.8% on average. DOLORES distributes cognition across structured, lower-load reasoning threads, thereby reducing premature termination and hallucinatio...",
+    "published": "May 12",
+    "pdf_url": "https://arxiv.org/pdf/2605.11388v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.11388v1",
+    "queried_author": "Pang Wei Koh",
+    "matching_authors": [
+      "Pang Wei Koh"
+    ]
+  },
+  {
+    "title": "Measuring Five-Nines Reliability: Sample-Efficient LLM Evaluation in Saturated Benchmarks",
+    "authors": [
+      "Eungyeup Kim",
+      "Chenchen Gu",
+      "Vashisth Tiwari",
+      "J. Zico Kolter"
+    ],
+    "summary": "While existing benchmarks demonstrate the near-perfect performance of large language models (LLMs) on various tasks, this apparent saturation often obscures the need for rigorous evaluation of their reliability. In real-world deployment, however, achieving extremely high reliability (e.g., \"five-nines\" (99.999%) vs. \"three-nines\" (99.9%)) is fundamentally critical, as this gap results in an order-of-magnitude increase in failures, which is catastrophic in reliability-critical applications. Still, estimating such a rare failure probability with tight confidence bounds requires prohibitively large LLM inference sizes, making standard Monte Carlo evaluation infeasible under limited compute budgets. In this paper, we observe that LLM failures exhibit strong systematic patterns: across broad parameterized input spaces, a small subset of inputs disproportionately accounts for the majority of failures. Leveraging this observation, we propose to learn a sampling distribution concentrated on failure-prone inputs via the cross-entropy method (CEM). We evaluate our framework on three LLMs, Qwen2.5-Math-7B-Instruct, gpt-oss-20b-low, and Gemini 2.5 Flash Lite, across parameterized GSM8K templates and achieve up to 156.22x reduction in required inferences compared to naive uniform sampling. Our estimates reveal that models with indistinguishable accuracy on standard benchmarks can differ substantially in estimated failure rates, underscoring that reliability is a distinct and measurable axis of model quality. Our simple yet practical framework enables the evaluation of extreme reliabilit...",
+    "published": "May 11",
+    "pdf_url": "https://arxiv.org/pdf/2605.11209v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.11209v1",
+    "queried_author": "J Zico Kolter",
+    "matching_authors": [
+      "J Zico Kolter"
+    ]
+  },
+  {
     "title": "ELF: Embedded Language Flows",
     "authors": [
       "Keya Hu",
@@ -377,8 +435,8 @@
     ],
     "summary": "State-of-the-art model-based reinforcement learning methods train policies on imagined rollouts. These rollouts are trajectories generated by a learned dynamics model and are scored by a learned reward model, but without querying the true environment during policy updates. We study this training paradigm by quantifying how errors in learned dynamics and reward models affect returns and policy optimization. First, we extend the analysis of Asadi et al. (2018) to MDPs with learned reward models, and derive the optimal sample allocation--the ratio of dynamics samples to reward samples that minimizes a bound on return error under power-law scaling assumptions. We identify lower Lipschitz constants of the learned dynamics, reward, and policy as a representation desideratum that tightens this bound, and we connect this perspective to the temporal-straightening objective of Wang et al. (2026). Second, we examine how policy optimization with REINFORCE tolerates noisy rewards, which are often cheaper to obtain. We show that zero-mean reward noise leaves the gradient estimator unbiased and adds at most a variance term that decreases with the number of rollouts. This introduces a practical tradeoff: given a fixed budget, should one buy more rollouts with cheaper but noisier rewards, or fewer rollouts with more expensive but less noisy rewards? We reduce this choice to a one-dimensional optimization problem and characterize the optimum.",
     "published": "May 07",
-    "pdf_url": "https://arxiv.org/pdf/2605.06732v1",
-    "arxiv_url": "http://arxiv.org/abs/2605.06732v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.06732v2",
+    "arxiv_url": "http://arxiv.org/abs/2605.06732v2",
     "queried_author": "Micah Goldblum",
     "matching_authors": [
       "Micah Goldblum"
@@ -12752,61 +12810,6 @@
     "queried_author": "Yoon Kim",
     "matching_authors": [
       "Yoon Kim"
-    ]
-  },
-  {
-    "title": "Efficient Prediction of Pass@k Scaling in Large Language Models",
-    "authors": [
-      "Joshua Kazdan",
-      "Rylan Schaeffer",
-      "Youssef Allouah",
-      "Colin Sullivan",
-      "Kyssen Yu",
-      "Noam Levi",
-      "Sanmi Koyejo"
-    ],
-    "summary": "Assessing the capabilities and risks of frontier AI systems is a critical area of research, and recent work has shown that repeated sampling from models can dramatically increase both. For instance, repeated sampling has been shown to increase their capabilities, such as solving difficult math and coding problems, but it has also been shown to increase their potential for harm, such as being jailbroken. Such results raise a crucial question for both capability and safety forecasting: how can one accurately predict a model's behavior when scaled to a massive number of attempts, given a vastly smaller sampling budget? This question is directly relevant to model providers, who serve hundreds of millions of users daily, and to governmental regulators, who seek to prevent harms. To answer this questions, we make three contributions. First, we find that standard methods for fitting these laws suffer from statistical shortcomings that hinder predictive accuracy, especially in data-limited scenarios. Second, we remedy these shortcomings by introducing a robust estimation framework, which uses a beta-binomial distribution to generate more accurate predictions from limited data. Third, we propose a dynamic sampling strategy that allocates a greater budget to harder problems. Combined, these innovations enable more reliable prediction of rare risks and capabilities at a fraction of the computational cost.",
-    "published": "Oct 06",
-    "pdf_url": "https://arxiv.org/pdf/2510.05197v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.05197v1",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "Modeling Student Learning with 3.8 Million Program Traces",
-    "authors": [
-      "Alexis Ross",
-      "Megha Srivastava",
-      "Jeremiah Blanchard",
-      "Jacob Andreas"
-    ],
-    "summary": "As programmers write code, they often edit and retry multiple times, creating rich \"interaction traces\" that reveal how they approach coding tasks and provide clues about their level of skill development. For novice programmers in particular, these traces reflect the diverse reasoning processes they employ to code, such as exploratory behavior to understand how a programming concept works, re-strategizing in response to bugs, and personalizing stylistic choices. In this work, we explore what can be learned from training language models on such reasoning traces: not just about code, but about coders, and particularly students learning to program. We introduce a dataset of over 3.8 million programming reasoning traces from users of Pencil Code, a free online educational platform used by students to learn simple programming concepts. Compared to models trained only on final programs or synthetically-generated traces, we find that models trained on real traces are stronger at modeling diverse student behavior. Through both behavioral and probing analyses, we also find that many properties of code traces, such as goal backtracking or number of comments, can be predicted from learned representations of the students who write them. Building on this result, we show that we can help students recover from mistakes by steering code generation models to identify a sequence of edits that will results in more correct code while remaining close to the original student's style. Together, our results suggest that many properties of code are properties of individual students and that trainin...",
-    "published": "Oct 06",
-    "pdf_url": "https://arxiv.org/pdf/2510.05056v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.05056v2",
-    "queried_author": "Jacob Andreas",
-    "matching_authors": [
-      "Jacob Andreas"
-    ]
-  },
-  {
-    "title": "Visual Representations inside the Language Model",
-    "authors": [
-      "Benlin Liu",
-      "Amita Kamath",
-      "Madeleine Grunde-McLaughlin",
-      "Winson Han",
-      "Ranjay Krishna"
-    ],
-    "summary": "Despite interpretability work analyzing VIT encoders and transformer activations, we don't yet understand why Multimodal Language Models (MLMs) struggle on perception-heavy tasks. We offer an under-studied perspective by examining how popular MLMs (LLaVA-OneVision, Qwen2.5-VL, and Llama-3-LLaVA-NeXT) process their visual key-value tokens. We first study the flow of visual information through the language model, finding that image value tokens encode sufficient information to perform several perception-heavy tasks zero-shot: segmentation, semantic correspondence, temporal correspondence, and referring expression detection. We find that while the language model does augment the visual information received from the projection of input visual encodings-which we reveal correlates with overall MLM perception capability-it contains less visual information on several tasks than the equivalent visual encoder (SigLIP) that has not undergone MLM finetuning. Further, we find that the visual information corresponding to input-agnostic image key tokens in later layers of language models contains artifacts which reduce perception capability of the overall MLM. Next, we discuss controlling visual information in the language model, showing that adding a text prefix to the image input improves perception capabilities of visual representations. Finally, we reveal that if language models were able to better control their visual information, their perception would significantly improve; e.g., in 33.3% of Art Style questions in the BLINK benchmark, perception information present in the language ...",
-    "published": "Oct 06",
-    "pdf_url": "https://arxiv.org/pdf/2510.04819v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.04819v1",
-    "queried_author": "Ranjay Krishna",
-    "matching_authors": [
-      "Ranjay Krishna"
     ]
   }
 ]
