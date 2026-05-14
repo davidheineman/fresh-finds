@@ -1,5 +1,31 @@
 [
   {
+    "title": "The Efficiency Gap in Byte Modeling",
+    "authors": [
+      "Celine Lee",
+      "Jing Nathan Yan",
+      "Chen Liang",
+      "Jiaxin Shi",
+      "Yin Zhang",
+      "Jeremiah Liu",
+      "Pengcheng Yin",
+      "Fernando Pereira",
+      "Ed Chi",
+      "Derek Cheng",
+      "Alexander M. Rush",
+      "Ruoxi Wang"
+    ],
+    "summary": "Modern language models have historically relied on two dominant design choices: subword tokenization and autoregressive (AR) ordering. These design decisions bake in priors that dictate a model's learning. Recently, two alternative paradigms have challenged this: byte-level modeling, which bypasses static statistically-derived token vocabularies, and masked diffusion modeling (MDM), which conducts parallel, non-sequential generation. Their intersection represents a fully end-to-end modality-agnostic generative prototype; however, removing these structural priors incurs a significant computational cost. In this work, we investigate this cost through a compute-matched scaling study. Our results reveal that the performance penalty of byte modeling is not uniform; across scale, the scaling overhead of byte modeling is worse for MDM than for AR. We hypothesize that this disparity stems from context fragility: while AR's stable causal history allows models to naturally rediscover subword patterns, the MDM objective destroys the local contiguity required to efficiently resolve semantics from raw bytes. Our findings from controlled permutation experiments suggest that future modality-agnostic designs must incorporate alternative structural biases to maintain viable scaling trajectories in the byte regime.",
+    "published": "May 13",
+    "pdf_url": "https://arxiv.org/pdf/2605.12928v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.12928v1",
+    "queried_author": "Alexander M Rush",
+    "matching_authors": [
+      "Alexander M Rush",
+      "Alexander M. Rush"
+    ]
+  },
+  {
     "title": "Search Your Block Floating Point Scales!",
     "authors": [
       "Tanmaey Gupta",
@@ -1446,6 +1472,26 @@
     "queried_author": "Peter Henderson",
     "matching_authors": [
       "Peter Henderson"
+    ]
+  },
+  {
+    "title": "In-Situ Behavioral Evaluation for LLM Fairness, Not Standardized-Test Scores",
+    "authors": [
+      "Zeyu Tang",
+      "Sang T. Truong",
+      "Deonna Owens",
+      "Shreyas Sharma",
+      "Yibo Jacky Zhang",
+      "Brando Miranda",
+      "Sanmi Koyejo"
+    ],
+    "summary": "LLM fairness should be evaluated through in-situ conversational behavior rather than standardized-test Q&A benchmarks. We show that the standardized-test paradigm can be structurally unreliable: surface-level prompt construction choices, although entirely orthogonal to the fairness question being tested, account for the majority of score variance, shift fairness conclusions in both the direction and the magnitude, and result in severe discordance in model rankings. We develop MAC-Fairness, a multi-agent conversational framework that embeds controlled variation factors into multi-round dialogue for in-situ behavior evaluation, examining how models' conversational behavior shifts when identity is varied as part of natural multi-agent interaction. Repurposing standardized-test questions as conversation seeds rather than as the evaluation instrument, we evaluate position persistence (how they hold positions, from the self-perspective) and peer receptiveness (how receptive they are to peers, from the other-perspective) across 8 million conversation transcripts spanning multiple models and identity presence configurations. In-situ behavioral evaluation reveals stable, model-specific behavioral signatures that could generalize across benchmarks differing in fairness targets and evaluation methodologies, a form of evidence the standardized-test paradigm does not offer.",
+    "published": "Apr 21",
+    "pdf_url": "https://arxiv.org/pdf/2605.12530v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.12530v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
     ]
   },
   {
@@ -11192,14 +11238,16 @@
       "Kilian Lieret",
       "Joyce Yang",
       "Carlos E. Jimenez",
+      "Muhtasham Oblokulov",
+      "Aryan Siddiqui",
       "Ofir Press",
       "Ludwig Schmidt",
       "Diyi Yang"
     ],
     "summary": "Current benchmarks for coding evaluate language models (LMs) on concrete, well-specified tasks such as fixing specific bugs or writing targeted tests. However, human programmers do not spend all day incessantly addressing isolated tasks. Instead, real-world software development is grounded in the pursuit of high-level goals, like improving user retention or reducing costs. Evaluating whether LMs can also iteratively develop code to better accomplish open-ended objectives without any explicit guidance remains an open challenge. To address this, we introduce CodeClash, a benchmark where LMs compete in multi-round tournaments to build the best codebase for achieving a competitive objective. Each round proceeds in two phases: agents edit their code, then their codebases compete head-to-head in a code arena that determines winners based on objectives like score maximization, resource acquisition, or survival. Whether it's writing notes, scrutinizing documentation, analyzing competition logs, or creating test suites, models must decide for themselves how to improve their codebases both absolutely and against their opponents. We run 1680 tournaments (25,200 rounds total) to evaluate 8 LMs across 6 arenas. Our results reveal that while models exhibit diverse development styles, they share fundamental limitations in strategic reasoning. Models also struggle with long-term codebase maintenance, as repositories become progressively messy and redundant. These limitations are stark: top models lose every round against expert human programmers. We open-source CodeClash to advance the stu...",
     "published": "Nov 02",
-    "pdf_url": "https://arxiv.org/pdf/2511.00839v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.00839v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.00839v2",
+    "arxiv_url": "http://arxiv.org/abs/2511.00839v2",
     "queried_author": "Diyi Yang",
     "matching_authors": [
       "Diyi Yang",
@@ -12776,50 +12824,6 @@
     "matching_authors": [
       "Luke Zettlemoyer",
       "Mike Lewis"
-    ]
-  },
-  {
-    "title": "Spectrum Tuning: Post-Training for Distributional Coverage and In-Context Steerability",
-    "authors": [
-      "Taylor Sorensen",
-      "Benjamin Newman",
-      "Jared Moore",
-      "Chan Park",
-      "Jillian Fisher",
-      "Niloofar Mireshghallah",
-      "Liwei Jiang",
-      "Yejin Choi"
-    ],
-    "summary": "Language model post-training has enhanced instruction-following and performance on many downstream tasks, but also comes with an often-overlooked cost on tasks with many possible valid answers. On many tasks such as creative writing, synthetic data generation, or steering to diverse preferences, models must cover an entire distribution of outputs, rather than a single correct answer. We characterize three desiderata for conditional distributional modeling: in-context steerability, valid output space coverage, and distributional alignment, and document across three model families how current post-training can reduce these properties. In particular, we disambiguate between two kinds of in-context learning: ICL for eliciting existing underlying knowledge or capabilities, and in-context steerability, where a model must use in-context information to override its priors and steer to a novel data generating distribution. To better evaluate and improve these desiderata, we introduce Spectrum Suite, a large-scale resource compiled from >40 data sources and spanning >90 tasks requiring models to steer to and match diverse distributions ranging from varied human preferences to numerical distributions and more. We find that while current post-training techniques elicit underlying capabilities and knowledge, they hurt models' ability to flexibly steer in-context. To mitigate these issues, we propose Spectrum Tuning, a post-training method using Spectrum Suite to improve steerability and distributional coverage. We find that Spectrum Tuning often improves over pretrained and typical inst...",
-    "published": "Oct 07",
-    "pdf_url": "https://arxiv.org/pdf/2510.06084v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.06084v2",
-    "queried_author": "Niloofar Mireshghallah",
-    "matching_authors": [
-      "Niloofar Mireshghallah",
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "In-the-Flow Agentic System Optimization for Effective Planning and Tool Use",
-    "authors": [
-      "Zhuofeng Li",
-      "Haoxiang Zhang",
-      "Seungju Han",
-      "Sheng Liu",
-      "Jianwen Xie",
-      "Yu Zhang",
-      "Yejin Choi",
-      "James Zou",
-      "Pan Lu"
-    ],
-    "summary": "Outcome-driven reinforcement learning has advanced reasoning in large language models (LLMs), but prevailing tool-augmented approaches train a single, monolithic policy that interleaves thoughts and tool calls under full context; this scales poorly with long horizons and diverse tools and generalizes weakly to new scenarios. Agentic systems offer a promising alternative by decomposing work across specialized modules, yet most remain training-free or rely on offline training decoupled from the live dynamics of multi-turn interaction. We introduce AgentFlow, a trainable, in-the-flow agentic framework that coordinates four modules (planner, executor, verifier, generator) through an evolving memory and directly optimizes its planner inside the multi-turn loop. To train on-policy in live environments, we propose Flow-based Group Refined Policy Optimization (Flow-GRPO), which tackles long-horizon, sparse-reward credit assignment by converting multi-turn optimization into a sequence of tractable single-turn policy updates. It broadcasts a single, verifiable trajectory-level outcome to every turn to align local planner decisions with global success and stabilizes learning with group-normalized advantages. Across ten benchmarks, AgentFlow with a 7B-scale backbone outperforms top-performing baselines with average accuracy gains of 14.9% on search, 14.0% on agentic, 14.5% on mathematical, and 4.1% on scientific tasks, even surpassing larger proprietary models like GPT-4o. Further analyses confirm the benefits of in-the-flow optimization, showing improved planning, enhanced tool-callin...",
-    "published": "Oct 07",
-    "pdf_url": "https://arxiv.org/pdf/2510.05592v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.05592v1",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
     ]
   }
 ]
