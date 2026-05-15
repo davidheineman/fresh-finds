@@ -1,5 +1,65 @@
 [
   {
+    "title": "RefDecoder: Enhancing Visual Generation with Conditional Video Decoding",
+    "authors": [
+      "Xiang Fan",
+      "Yuheng Wang",
+      "Bohan Fang",
+      "Zhongzheng Ren",
+      "Ranjay Krishna"
+    ],
+    "summary": "Video generation powers a vast array of downstream applications. However, while the de facto standard, i.e., latent diffusion models, typically employ heavily conditioned denoising networks, their decoders often remain unconditional. We observe that this architectural asymmetry leads to significant loss of detail and inconsistency relative to the input image. To address this, we argue that the decoder requires equal conditioning to preserve structural integrity. We introduce RefDecoder, a reference-conditioned video VAE decoder by injecting high-fidelity reference image signal directly into the decoding process via reference attention. Specifically, a lightweight image encoder maps the reference frame into the detail-rich high-dimensional tokens, which are co-processed with the denoised video latent tokens at each decoder up-sampling stage. We demonstrate consistent improvements across several distinct decoder backbones (e.g., Wan 2.1 and VideoVAE+), achieving up to +2.1dB PSNR over the unconditional baselines on the Inter4K, WebVid, and Large Motion reconstruction benchmarks. Notably, RefDecoder can be directly swapped into existing video generation systems without additional fine-tuning, and we report across-the-board improvements in subject consistency, background consistency, and overall quality scores on the VBench I2V benchmark. Beyond I2V, RefDecoder generalizes well to a wide range of visual generation tasks such as style transfer and video editing refinement.",
+    "published": "May 14",
+    "pdf_url": "https://arxiv.org/pdf/2605.15196v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.15196v1",
+    "queried_author": "Ranjay Krishna",
+    "matching_authors": [
+      "Ranjay Krishna"
+    ]
+  },
+  {
+    "title": "PreFT: Prefill-only finetuning for efficient inference",
+    "authors": [
+      "Andrew Lanpouthakoun",
+      "Aryaman Arora",
+      "Zhengxuan Wu",
+      "Dhruv Pai",
+      "Ben Keigwin",
+      "Dan Jurafsky",
+      "Christopher Potts"
+    ],
+    "summary": "Large language models can now be personalised efficiently at scale using parameter efficient finetuning methods (PEFTs), but serving user-specific PEFTs harms throughput, even with specialised kernels and memory management techniques. This is because, theoretically and empirically, a mismatch exists between prefill (processing a large number of tokens at once) and decode (generating a single token autoregressively): the latter has far lower throughput when serving multiple adapters. Rather than optimising performance relative to parameter count, for efficient multi-adapter serving, we instead ought to optimise performance relative to serving throughput. We therefore propose PreFT (Prefill-only Finetuning), wherein we only apply the adapter to prefill tokens and discard it afterwards. PreFT significantly increases throughput with minimal effect on performance. We develop and release an efficient implementation of two prefill-only PEFTs, LoRA and ReFT, on the vLLM inference engine. We first show that serving multi-user PreFTs is more efficient than traditional PEFTs ($1.9\\times$ the throughput when serving $512$ adapters on Llama 3.1 70B). Then, we compare the performance of prefill-only vs. all-token adapters on a variety of supervised finetuning and reinforcement learning tasks with LMs at varying scales. On SFT, we observe that the evaluation loss of PreFTs is higher than PEFTs, but can be compensated by increasing rank with nearly no reduction in throughput. On RL, we consistently find that PreFTs approach parity with standard PEFTs. Together, this work validates prefill-...",
+    "published": "May 14",
+    "pdf_url": "https://arxiv.org/pdf/2605.14217v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.14217v1",
+    "queried_author": "Christopher Potts",
+    "matching_authors": [
+      "Christopher Potts",
+      "Dan Jurafsky"
+    ]
+  },
+  {
+    "title": "Self-Pruned Key-Value Attention: Learning When to Write by Predicting Future Utility",
+    "authors": [
+      "Gergely Szilvasy",
+      "Manuel Faysse",
+      "Maria Lomeli",
+      "Matthijs Douze",
+      "Pierre-Emmanuel Mazar\u00e9",
+      "Lo\u00efc Cabannes",
+      "Wen-tau Yih",
+      "Herv\u00e9 J\u00e9gou"
+    ],
+    "summary": "Under modern test-time compute and agentic paradigms, language models process ever-longer sequences. Efficient text generation with transformer architectures is increasingly constrained by the Key-Value cache memory footprint and bandwidth. To address this limitation, we introduce Self-Pruned Key-Value Attention (SP-KV), a mechanism designed to predict future KV utility in order to reduce the size of the long-term KV cache. This strategy operates at a fine granularity: a lightweight utility predictor scores each key-value pair, and while recent KVs are always available via a local window, older pairs are written in the cache and used in global attention only if their predicted utility surpasses a given threshold. The LLM and the utility predictor are trained jointly end-to-end exclusively through next-token prediction loss, and are adapted from pretrained LLM checkpoints.\n  Rather than enforcing a fixed compression ratio, SP-KV performs dynamic sparsification: the mechanism adapts to the input and typically reduces the KV cache size by a factor of $3$ to $10\\times$, longer sequences often being more compressible. This leads to vast improvements in memory usage and decoding speed, with little to no degradation of validation loss nor performance on a broad set of downstream tasks. Beyond serving as an effective KV-cache reduction mechanism, our method reveals structured layer- and head-specific sparsity patterns that we can use to guide the design of hybrid local-global attention architectures.",
+    "published": "May 13",
+    "pdf_url": "https://arxiv.org/pdf/2605.14037v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.14037v1",
+    "queried_author": "Wen-tau Yih",
+    "matching_authors": [
+      "Wen-tau Yih"
+    ]
+  },
+  {
     "title": "The Efficiency Gap in Byte Modeling",
     "authors": [
       "Celine Lee",
@@ -207,6 +267,22 @@
     "queried_author": "Niloofar Mireshghallah",
     "matching_authors": [
       "Niloofar Mireshghallah"
+    ]
+  },
+  {
+    "title": "The Truth Lies Somewhere in the Middle (of the Generated Tokens)",
+    "authors": [
+      "Sophie L. Wang",
+      "Phillip Isola",
+      "Brian Cheung"
+    ],
+    "summary": "How should hidden states generated autoregressively be collapsed into a representation that reflects a language model's internal state? Despite tokens being generated under causal masking, we find that mean pooling across their hidden states yields more semantic representations than any individual token alone. We quantify this through kernel alignment to reference spaces in language, vision, and protein domains. The improvement through mean pooling is consistent with information being distributed across generated tokens rather than localized to a single position. Furthermore, representations derived from generated tokens outperform those from prompt tokens, and alignment across generation reveals interpretable dynamics in model behavior.",
+    "published": "May 11",
+    "pdf_url": "https://arxiv.org/pdf/2605.09969v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.09969v1",
+    "queried_author": "Phillip Isola",
+    "matching_authors": [
+      "Phillip Isola"
     ]
   },
   {
@@ -3112,6 +3188,23 @@
     ]
   },
   {
+    "title": "Procedural Knowledge at Scale Improves Reasoning",
+    "authors": [
+      "Di Wu",
+      "Devendra Singh Sachan",
+      "Wen-tau Yih",
+      "Mingda Chen"
+    ],
+    "summary": "Test-time scaling has emerged as an effective way to improve language models on challenging reasoning tasks. However, most existing methods treat each problem in isolation and do not systematically reuse knowledge from prior reasoning trajectories. In particular, they underutilize procedural knowledge: how to reframe a problem, choose an approach, and verify or backtrack when needed. We introduce Reasoning Memory, a retrieval-augmented generation (RAG) framework for reasoning models that explicitly retrieves and reuses procedural knowledge at scale. Starting from existing corpora of step-by-step reasoning trajectories, we decompose each trajectory into self-contained subquestion-subroutine pairs, yielding a datastore of 32 million compact procedural knowledge entries. At inference time, a lightweight in-thought prompt lets the model verbalize the core subquestion, retrieve relevant subroutines within its reasoning trace, and reason under diverse retrieved subroutines as implicit procedural priors. Across six math, science, and coding benchmarks, Reasoning Memory consistently outperforms RAG with document, trajectory, and template knowledge, as well as a compute-matched test-time scaling baseline. With a higher inference budget, it improves over no retrieval by up to 19.2% and over the strongest compute-matched baseline by 7.9% across task types. Ablation studies show that these gains come from two key factors: the broad procedural coverage of the source trajectories and our decomposition and retrieval design, which together enable effective extraction and reuse of procedura...",
+    "published": "Apr 01",
+    "pdf_url": "https://arxiv.org/pdf/2604.01348v2",
+    "arxiv_url": "http://arxiv.org/abs/2604.01348v2",
+    "queried_author": "Wen-tau Yih",
+    "matching_authors": [
+      "Wen-tau Yih"
+    ]
+  },
+  {
     "title": "Model Merging via Data-Free Covariance Estimation",
     "authors": [
       "Marawan Gamal Abdel Hameed",
@@ -3438,6 +3531,27 @@
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
+    ]
+  },
+  {
+    "title": "End-to-End Training for Unified Tokenization and Latent Denoising",
+    "authors": [
+      "Shivam Duggal",
+      "Xingjian Bai",
+      "Zongze Wu",
+      "Richard Zhang",
+      "Eli Shechtman",
+      "Antonio Torralba",
+      "Phillip Isola",
+      "William T. Freeman"
+    ],
+    "summary": "Latent diffusion models (LDMs) enable high-fidelity synthesis by operating in learned latent spaces. However, training state-of-the-art LDMs requires complex staging: a tokenizer must be trained first, before the diffusion model can be trained in the frozen latent space. We propose UNITE - an autoencoder architecture for unified tokenization and latent diffusion. UNITE consists of a Generative Encoder that serves as both image tokenizer and latent generator via weight sharing. Our key insight is that tokenization and generation can be viewed as the same latent inference problem under different conditioning regimes: tokenization infers latents from fully observed images, whereas generation infers them from noise together with text or class conditioning. Motivated by this, we introduce a single-stage training procedure that jointly optimizes both tasks via two forward passes through the same Generative Encoder. The shared parameters enable gradients to jointly shape the latent space, encouraging a \"common latent language\". Across image and molecule modalities, UNITE achieves near state of the art performance without adversarial losses or pretrained encoders (e.g., DINO), reaching FID 2.12 and 1.73 for Base and Large models on ImageNet 256 x 256. We further analyze the Generative Encoder through the lenses of representation alignment and compression. These results show that single stage joint training of tokenization & generation from scratch is feasible.",
+    "published": "Mar 23",
+    "pdf_url": "https://arxiv.org/pdf/2603.22283v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.22283v1",
+    "queried_author": "Phillip Isola",
+    "matching_authors": [
+      "Phillip Isola"
     ]
   },
   {
@@ -3790,8 +3904,8 @@
     ],
     "summary": "To think critically about arguments, human learners are trained to identify, reconstruct, and evaluate arguments. Argument reconstruction is especially important because it makes an argument's underlying inferences explicit. However, it remains unclear whether LLMs can similarly enhance their critical thinking ability by learning to reconstruct arguments. To address this question, we introduce a holistic framework with three contributions. We (1) propose an engine that automatically reconstructs arbitrary arguments (GAAR), (2) synthesize a new high-quality argument reconstruction dataset (Arguinas) using the GAAR engine, and (3) investigate whether learning argument reconstruction benefits downstream critical thinking tasks. Our experimental results show that, across seven critical thinking tasks, models trained to learn argument reconstruction outperform models that do not, with the largest performance gains observed when training on the proposed Arguinas dataset.",
     "published": "Mar 18",
-    "pdf_url": "https://arxiv.org/pdf/2603.17432v2",
-    "arxiv_url": "http://arxiv.org/abs/2603.17432v2",
+    "pdf_url": "https://arxiv.org/pdf/2603.17432v3",
+    "arxiv_url": "http://arxiv.org/abs/2603.17432v3",
     "queried_author": "Sean Welleck",
     "matching_authors": [
       "Sean Welleck"
@@ -4029,10 +4143,10 @@
       "Joseph Gonzalez",
       "Tri Dao"
     ],
-    "summary": "Transformers are highly parallel but are limited to computations in the TC$^0$ complexity class, excluding tasks such as entity tracking and code execution that provably require greater expressive power. Motivated by this limitation, we revisit non-linear Recurrent Neural Networks (RNNs) for language modeling and introduce Matrix-to-Matrix RNN (M$^2$RNN): an architecture with matrix-valued hidden states and expressive non-linear state transitions. We demonstrate that the language modeling performance of non-linear RNNs is limited by their state size. We also demonstrate how the state size expansion mechanism enables efficient use of tensor cores. Empirically, M$^2$RNN achieves perfect state tracking generalization at sequence lengths not seen during training. These benefits also translate to large-scale language modeling. In hybrid settings that interleave recurrent layers with attention, Hybrid M$^2$RNN outperforms equivalent Gated DeltaNet hybrids by $0.4$-$0.5$ perplexity points on a 7B MoE model, while using $3\\times$ smaller state sizes for the recurrent layers. Notably, replacing even a single recurrent layer with M$^2$RNN in an existing hybrid architecture yields accuracy gains comparable to Hybrid M$^2$RNN with minimal impact on training throughput. Further, the Hybrid Gated DeltaNet models with a single M$^2$RNN layer also achieve superior long-context generalization, outperforming state-of-the-art hybrid linear attention architectures by up to $8$ points on LongBench. Together, these results establish non-linear RNN layers as a compelling building block for effici...",
+    "summary": "Transformers are highly parallel but are limited to computations in the TC$^0$ complexity class, excluding tasks such as entity tracking and code execution that provably require greater expressive power. Motivated by this limitation, we revisit non-linear Recurrent Neural Networks (RNNs) for language modeling and introduce Matrix-to-Matrix RNN (M$^2$RNN): an architecture with matrix-valued hidden states and expressive non-linear state transitions. We demonstrate that the language modeling performance of non-linear RNNs is limited by their state size, and show how the state size expansion mechanism enables efficient use of tensor cores. Empirically, M$^2$RNN achieves perfect state tracking generalization at sequence lengths not seen during training. These benefits also translate to large-scale language modeling. In hybrid settings that interleave recurrent layers with attention, Hybrid M$^2$RNN outperforms equivalent Gated DeltaNet hybrids by $0.4$-$0.5$ perplexity points on a 7B MoE model, while using $3\\times$ smaller state sizes for the recurrent layers. Notably, replacing even a single recurrent layer with M$^2$RNN in an existing hybrid architecture yields accuracy gains comparable to Hybrid M$^2$RNN with minimal impact on training throughput. Further, the Hybrid Gated DeltaNet models with a single M$^2$RNN layer also achieve superior long-context generalization, outperforming state-of-the-art hybrid linear attention architectures by up to $8$ points on LongBench. Together, these results establish non-linear RNN layers as a compelling building block for efficient and sca...",
     "published": "Mar 15",
-    "pdf_url": "https://arxiv.org/pdf/2603.14360v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.14360v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.14360v2",
+    "arxiv_url": "http://arxiv.org/abs/2603.14360v2",
     "queried_author": "Tri Dao",
     "matching_authors": [
       "Tri Dao"
@@ -4105,6 +4219,21 @@
     "queried_author": "Karthik Narasimhan",
     "matching_authors": [
       "Karthik Narasimhan"
+    ]
+  },
+  {
+    "title": "Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights",
+    "authors": [
+      "Yulu Gan",
+      "Phillip Isola"
+    ],
+    "summary": "Pretraining produces a learned parameter vector that is typically treated as a starting point for further iterative adaptation. In this work, we instead view the outcome of pretraining as a distribution over parameter vectors, whose support already contains task-specific experts. We show that in small models such expert solutions occupy a negligible fraction of the volume of this distribution, making their discovery reliant on structured optimization methods such as gradient descent. In contrast, in large, well-pretrained models the density of task-experts increases dramatically, so that diverse, task-improving specialists populate a substantial fraction of the neighborhood around the pretrained weights. Motivated by this perspective, we explore a simple, fully parallel post-training method that samples $N$ parameter perturbations at random, selects the top $K$, and ensembles predictions via majority vote. Despite its simplicity, this approach is competitive with standard post-training methods such as PPO, GRPO, and ES for contemporary large-scale models.",
+    "published": "Mar 12",
+    "pdf_url": "https://arxiv.org/pdf/2603.12228v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.12228v1",
+    "queried_author": "Phillip Isola",
+    "matching_authors": [
+      "Phillip Isola"
     ]
   },
   {
@@ -4757,8 +4886,8 @@
     ],
     "summary": "General-purpose robot reward models are typically trained to predict absolute task progress from expert demonstrations, providing only local, frame-level supervision. While effective for expert demonstrations, this paradigm scales poorly to large-scale robotics datasets where failed and suboptimal trajectories are abundant and assigning dense progress labels is ambiguous. We introduce Robometer, a scalable reward modeling framework that combines intra-trajectory progress supervision with inter-trajectory preference supervision. Robometer is trained with a dual objective: a frame-level progress loss that anchors reward magnitude on expert data, and a trajectory-comparison preference loss that imposes global ordering constraints across trajectories of the same task, enabling effective learning from both real and augmented failed trajectories. To support this formulation at scale, we curate RBM-1M, a reward-learning dataset comprising over one million trajectories spanning diverse robot embodiments and tasks, including substantial suboptimal and failure data. Across benchmarks and real-world evaluations, Robometer learns more generalizable reward functions than prior methods and improves robot learning performance across a diverse set of downstream applications. Code, model weights, and videos at https://robometer.github.io/.",
     "published": "Mar 02",
-    "pdf_url": "https://arxiv.org/pdf/2603.02115v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.02115v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.02115v2",
+    "arxiv_url": "http://arxiv.org/abs/2603.02115v2",
     "queried_author": "Luke Zettlemoyer",
     "matching_authors": [
       "Luke Zettlemoyer"
@@ -5487,6 +5616,31 @@
     ]
   },
   {
+    "title": "AI Gamestore: Scalable, Open-Ended Evaluation of Machine General Intelligence with Human Games",
+    "authors": [
+      "Lance Ying",
+      "Ryan Truong",
+      "Prafull Sharma",
+      "Kaiya Ivy Zhao",
+      "Nathan Cloos",
+      "Kelsey R. Allen",
+      "Thomas L. Griffiths",
+      "Katherine M. Collins",
+      "Jos\u00e9 Hern\u00e1ndez-Orallo",
+      "Phillip Isola",
+      "Samuel J. Gershman",
+      "Joshua B. Tenenbaum"
+    ],
+    "summary": "Rigorously evaluating machine intelligence against the broad spectrum of human general intelligence has become increasingly important and challenging in this era of rapid technological advance. Conventional AI benchmarks typically assess only narrow capabilities in a limited range of human activity. Most are also static, quickly saturating as developers explicitly or implicitly optimize for them. We propose that a more promising way to evaluate human-like general intelligence in AI systems is through a particularly strong form of general game playing: studying how and how well they play and learn to play \\textbf{all conceivable human games}, in comparison to human players with the same level of experience, time, or other resources. We define a \"human game\" to be a game designed by humans for humans, and argue for the evaluative suitability of this space of all such games people can imagine and enjoy -- the \"Multiverse of Human Games\". Taking a first step towards this vision, we introduce the AI GameStore, a scalable and open-ended platform that uses LLMs with humans-in-the-loop to synthesize new representative human games, by automatically sourcing and adapting standardized and containerized variants of game environments from popular human digital gaming platforms. As a proof of concept, we generated 100 such games based on the top charts of Apple App Store and Steam, and evaluated seven frontier vision-language models (VLMs) on short episodes of play. The best models achieved less than 10\\% of the human average score on the majority of the games, and especially struggled w...",
+    "published": "Feb 19",
+    "pdf_url": "https://arxiv.org/pdf/2602.17594v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.17594v1",
+    "queried_author": "Phillip Isola",
+    "matching_authors": [
+      "Phillip Isola"
+    ]
+  },
+  {
     "title": "Modeling Distinct Human Interaction in Web Agents",
     "authors": [
       "Faria Huq",
@@ -5506,6 +5660,24 @@
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig"
+    ]
+  },
+  {
+    "title": "Canonicalizing Multimodal Contrastive Representation Learning",
+    "authors": [
+      "Sharut Gupta",
+      "Sanyam Kansal",
+      "Stefanie Jegelka",
+      "Phillip Isola",
+      "Vikas Garg"
+    ],
+    "summary": "As models and data scale, independently trained networks often induce analogous notions of similarity. But, matching similarities is weaker than establishing an explicit correspondence between the representation spaces, especially for multimodal models, where consistency must hold not only within each modality, but also for the learned image-text coupling. We therefore ask: given two independently trained multimodal contrastive models (with encoders $(f, g)$ and $(\\widetilde{f},\\widetilde{g})$) -- trained on different distributions and with different architectures -- does a systematic geometric relationship exist between their embedding spaces? If so, what form does it take, and does it hold uniformly across modalities? In this work, we show that across model families such as CLIP, SigLIP, and FLAVA, this geometric relationship is well approximated by an orthogonal map (up to a global mean shift), i.e., there exists an orthogonal map $Q$ where $Q^\\top Q = I$ such that $\\widetilde{f}(x)\\approx Q f(x)$ for paired images $x$. Strikingly, the same $Q$ simultaneously aligns the text encoders i.e., $\\widetilde{g}(y)\\approx Q g(y)$ for texts $y$. Theoretically, we prove that if the multimodal kernel agrees across models on a small anchor set i.e. $\\langle f(x), g(y)\\rangle \\approx \\langle \\widetilde{f}(x), \\widetilde{g}(y)\\rangle$, then the two models must be related by a single orthogonal map $Q$ and the same $Q$ maps images and text across models. More broadly, this finding enables backward-compatible model upgrades, avoiding costly re-embedding, and has implications for the pri...",
+    "published": "Feb 19",
+    "pdf_url": "https://arxiv.org/pdf/2602.17584v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.17584v1",
+    "queried_author": "Phillip Isola",
+    "matching_authors": [
+      "Phillip Isola"
     ]
   },
   {
@@ -6361,6 +6533,24 @@
     ]
   },
   {
+    "title": "Fairness Aware Reward Optimization",
+    "authors": [
+      "Ching Lam Choi",
+      "Vighnesh Subramaniam",
+      "Phillip Isola",
+      "Antonio Torralba",
+      "Stefanie Jegelka"
+    ],
+    "summary": "Demographic skews in human preference data propagate systematic unfairness through reward models into aligned LLMs. We introduce Fairness Aware Reward Optimization (Faro), an in-processing framework that trains reward models under demographic parity, equalized odds, or counterfactual fairness constraints. We provide the first theoretical analysis of reward-level fairness in LLM alignment, establishing: (i) provable fairness certificates for Faro-trained rewards with controllable slack; a (ii) formal characterization of the accuracy-fairness trade-off induced by KL-regularized fine-tuning, proving fairness transfers from reward to policy; and the (iii) existence of a non-empty Pareto frontier. Unlike pre- and post-processing methods, Faro ensures reward models are simultaneously ordinal (ranking correctly), cardinal (calibrated), and fair. Across multiple LLMs and benchmarks, Faro significantly reduces bias and harmful generations while maintaining or improving model quality.",
+    "published": "Feb 08",
+    "pdf_url": "https://arxiv.org/pdf/2602.07799v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.07799v1",
+    "queried_author": "Phillip Isola",
+    "matching_authors": [
+      "Phillip Isola"
+    ]
+  },
+  {
     "title": "HumanLM: Simulating Users with State Alignment Beats Response Imitation",
     "authors": [
       "Shirley Wu",
@@ -6416,7 +6606,8 @@
     "queried_author": "Luke Zettlemoyer",
     "matching_authors": [
       "Luke Zettlemoyer",
-      "Pang Wei Koh"
+      "Pang Wei Koh",
+      "Wen-tau Yih"
     ]
   },
   {
@@ -6853,6 +7044,26 @@
     "queried_author": "Mike Lewis",
     "matching_authors": [
       "Mike Lewis"
+    ]
+  },
+  {
+    "title": "ReasonCACHE: Teaching LLMs To Reason Without Weight Updates",
+    "authors": [
+      "Sharut Gupta",
+      "Phillip Isola",
+      "Stefanie Jegelka",
+      "David Lopez-Paz",
+      "Kartik Ahuja",
+      "Mark Ibrahim",
+      "Mohammad Pezeshki"
+    ],
+    "summary": "Can Large language models (LLMs) learn to reason without any weight update and only through in-context learning (ICL)? ICL is strikingly sample-efficient, often learning from only a handful of demonstrations, but complex reasoning tasks typically demand many training examples to learn from. However, naively scaling ICL by adding more demonstrations breaks down at this scale: attention costs grow quadratically, performance saturates or degrades with longer contexts, and the approach remains a shallow form of learning. Due to these limitations, practitioners predominantly rely on in-weight learning (IWL) to induce reasoning. In this work, we show that by using Prefix Tuning, LLMs can learn to reason without overloading the context window and without any weight updates. We introduce $\\textbf{ReasonCACHE}$, an instantiation of this mechanism that distills demonstrations into a fixed key-value cache. Empirically, across challenging reasoning benchmarks, including GPQA-Diamond, ReasonCACHE outperforms standard ICL and matches or surpasses IWL approaches. Further, it achieves this all while being more efficient across three key axes: data, inference cost, and trainable parameters. We also theoretically prove that ReasonCACHE can be strictly more expressive than low-rank weight update since the latter ties expressivity to input rank, whereas ReasonCACHE bypasses this constraint by directly injecting key-values into the attention mechanism. Together, our findings identify ReasonCACHE as a middle path between in-context and in-weight learning, providing a scalable algorithm for learn...",
+    "published": "Feb 02",
+    "pdf_url": "https://arxiv.org/pdf/2602.02366v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.02366v1",
+    "queried_author": "Phillip Isola",
+    "matching_authors": [
+      "Phillip Isola"
     ]
   },
   {
@@ -7999,6 +8210,26 @@
     "matching_authors": [
       "Niloofar Mireshghallah",
       "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "Digital Red Queen: Adversarial Program Evolution in Core War with LLMs",
+    "authors": [
+      "Akarsh Kumar",
+      "Ryan Bahlous-Boldi",
+      "Prafull Sharma",
+      "Phillip Isola",
+      "Sebastian Risi",
+      "Yujin Tang",
+      "David Ha"
+    ],
+    "summary": "Large language models (LLMs) are increasingly being used to evolve solutions to problems in many domains, in a process inspired by biological evolution. However, unlike biological evolution, most LLM-evolution frameworks are formulated as static optimization problems, overlooking the open-ended adversarial dynamics that characterize real-world evolutionary processes. Here, we study Digital Red Queen (DRQ), a simple self-play algorithm that embraces these so-called \"Red Queen\" dynamics via continual adaptation to a changing objective. DRQ uses an LLM to evolve assembly-like programs, called warriors, which compete against each other for control of a virtual machine in the game of Core War, a Turing-complete environment studied in artificial life and connected to cybersecurity. In each round of DRQ, the model evolves a new warrior to defeat all previous ones, producing a sequence of adapted warriors. Over many rounds, we observe that warriors become increasingly general (relative to a set of held-out human warriors). Interestingly, warriors also become less behaviorally diverse across independent runs, indicating a convergence pressure toward a general-purpose behavioral strategy, much like convergent evolution in nature. This result highlights a potential value of shifting from static objectives to dynamic Red Queen objectives. Our work positions Core War as a rich, controllable sandbox for studying adversarial adaptation in artificial systems and for evaluating LLM-based evolution methods. More broadly, the simplicity and effectiveness of DRQ suggest that similarly minimal ...",
+    "published": "Jan 06",
+    "pdf_url": "https://arxiv.org/pdf/2601.03335v1",
+    "arxiv_url": "http://arxiv.org/abs/2601.03335v1",
+    "queried_author": "Phillip Isola",
+    "matching_authors": [
+      "Phillip Isola"
     ]
   },
   {
@@ -10164,6 +10395,7 @@
       "Luke Zettlemoyer",
       "Pang Wei Koh",
       "Sewon Min",
+      "Wen-tau Yih",
       "Yoon Kim"
     ]
   },
@@ -12184,7 +12416,8 @@
     "arxiv_url": "http://arxiv.org/abs/2510.15103v1",
     "queried_author": "Luke Zettlemoyer",
     "matching_authors": [
-      "Luke Zettlemoyer"
+      "Luke Zettlemoyer",
+      "Wen-tau Yih"
     ]
   },
   {
@@ -12333,6 +12566,26 @@
     "queried_author": "Dan Jurafsky",
     "matching_authors": [
       "Dan Jurafsky"
+    ]
+  },
+  {
+    "title": "HoneyBee: Data Recipes for Vision-Language Reasoners",
+    "authors": [
+      "Hritik Bansal",
+      "Devendra Singh Sachan",
+      "Kai-Wei Chang",
+      "Aditya Grover",
+      "Gargi Ghosh",
+      "Wen-tau Yih",
+      "Ramakanth Pasunuru"
+    ],
+    "summary": "Recent advances in vision-language models (VLMs) have made them highly effective at reasoning tasks. However, the principles underlying the construction of performant VL reasoning training datasets remain poorly understood. In this work, we introduce several data curation approaches and study their impacts on VL reasoning capabilities by carefully controlling training and evaluation setups. We analyze the effects of context (image and question pair) sources, implement targeted data interventions, and explore scaling up images, questions, and chain-of-thought (CoT) solutions. Our findings reveal that (a) context source strategies significantly affect VLM performance, (b) interventions such as auxiliary signals from image captions and the inclusion of text-only reasoning yield substantial gains, and (c) scaling all data dimensions (e.g., unique questions per image and unique CoTs per image-question pair) consistently improves reasoning capability. Motivated by these insights, we introduce HoneyBee, a large-scale, high-quality CoT reasoning dataset with 2.5M examples consisting 350K image-question pairs. VLMs trained with HoneyBee outperform state-of-the-art models across model sizes. For instance, a HoneyBee-trained VLM with 3B parameters outperforms the SOTA model and the base model by 7.8% and 24.8%, respectively, on MathVerse. Furthermore, we propose a test-time scaling strategy that reduces decoding cost by 73% without sacrificing accuracy. Overall, this work presents improved strategies for VL reasoning dataset curation research. Data is available at https://huggingface....",
+    "published": "Oct 14",
+    "pdf_url": "https://arxiv.org/pdf/2510.12225v2",
+    "arxiv_url": "http://arxiv.org/abs/2510.12225v2",
+    "queried_author": "Wen-tau Yih",
+    "matching_authors": [
+      "Wen-tau Yih"
     ]
   },
   {
@@ -12560,270 +12813,6 @@
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig"
-    ]
-  },
-  {
-    "title": "Attention to Non-Adopters",
-    "authors": [
-      "Kaitlyn Zhou",
-      "Kristina Gligori\u0107",
-      "Myra Cheng",
-      "Michelle S. Lam",
-      "Vyoma Raman",
-      "Boluwatife Aminu",
-      "Caeley Woo",
-      "Michael Brockman",
-      "Hannah Cha",
-      "Dan Jurafsky"
-    ],
-    "summary": "Although language model-based chat systems are increasingly used in daily life, most Americans remain non-adopters of chat-based LLMs -- as of June 2025, 66% had never used ChatGPT. At the same time, LLM development and evaluation rely mainly on data from adopters (e.g., logs, preference data), focusing on the needs and tasks for a limited demographic group of adopters in terms of geographic location, education, and gender. In this position paper, we argue that incorporating non-adopter perspectives is essential for developing broadly useful and capable LLMs. We contend that relying on methods that focus primarily on adopters will risk missing a range of tasks and needs prioritized by non-adopters, entrenching inequalities in who benefits from LLMs, and creating oversights in model development and evaluation. To illustrate this claim, we conduct case studies with non-adopters and show: how non-adopter needs diverge from those of current users, how non-adopter needs point us towards novel reasoning tasks, and how to systematically integrate non-adopter needs via human-centered methods.",
-    "published": "Oct 10",
-    "pdf_url": "https://arxiv.org/pdf/2510.15951v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.15951v1",
-    "queried_author": "Dan Jurafsky",
-    "matching_authors": [
-      "Dan Jurafsky"
-    ]
-  },
-  {
-    "title": "Identifying & Interactively Refining Ambiguous User Goals for Data Visualization Code Generation",
-    "authors": [
-      "Mert \u0130nan",
-      "Anthony Sicilia",
-      "Alex Xie",
-      "Saujas Vaduguru",
-      "Daniel Fried",
-      "Malihe Alikhani"
-    ],
-    "summary": "Establishing shared goals is a fundamental step in human-AI communication. However, ambiguities can lead to outputs that seem correct but fail to reflect the speaker's intent. In this paper, we explore this issue with a focus on the data visualization domain, where ambiguities in natural language impact the generation of code that visualizes data. The availability of multiple views on the contextual (e.g., the intended plot and the code rendering the plot) allows for a unique and comprehensive analysis of diverse ambiguity types. We develop a taxonomy of types of ambiguity that arise in this task and propose metrics to quantify them. Using Matplotlib problems from the DS-1000 dataset, we demonstrate that our ambiguity metrics better correlate with human annotations than uncertainty baselines. Our work also explores how multi-turn dialogue can reduce ambiguity, therefore, improve code accuracy by better matching user goals. We evaluate three pragmatic models to inform our dialogue strategies: Gricean Cooperativity, Discourse Representation Theory, and Questions under Discussion. A simulated user study reveals how pragmatic dialogues reduce ambiguity and enhance code accuracy, highlighting the value of multi-turn exchanges in code generation.",
-    "published": "Oct 10",
-    "pdf_url": "https://arxiv.org/pdf/2510.09390v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.09390v1",
-    "queried_author": "Daniel Fried",
-    "matching_authors": [
-      "Daniel Fried"
-    ]
-  },
-  {
-    "title": "Synthetic Object Compositions for Scalable and Accurate Learning in Detection, Segmentation, and Grounding",
-    "authors": [
-      "Weikai Huang",
-      "Jieyu Zhang",
-      "Taoyang Jia",
-      "Chenhao Zheng",
-      "Ziqi Gao",
-      "Jae Sung Park",
-      "Winson Han",
-      "Ranjay Krishna"
-    ],
-    "summary": "Visual grouping -- operationalized through tasks such as instance segmentation, visual grounding, and object detection -- enables applications ranging from robotic perception to photo editing. These fundamental problems in computer vision are powered by large-scale, painstakingly annotated datasets. Despite their impact, these datasets are costly to build, biased in coverage, and difficult to scale. Synthetic datasets offer a promising alternative but struggle with flexibility, accuracy, and compositional diversity.\n  We introduce Synthetic Object Compositions (SOC), an accurate and scalable data synthesis pipeline via a novel object-centric composition strategy. It composes high-quality synthetic object segments into new images using 3D geometric layout augmentation and camera configuration augmentation with generative harmonization and mask-area-weighted blending, yielding accurate and diverse masks, boxes, and referring expressions.\n  Models trained on just 100K of our synthetic images outperform those trained on larger real datasets (GRIT 20M, V3Det 200K) and synthetic pipelines (Copy-Paste, X-Paste, SynGround, SegGen) by +24-36% -- achieving +10.9 AP on LVIS and +8.4 NAcc on gRefCOCO. Beyond the general open-vocabulary setup, SOC also enables controllable dataset construction for different use cases and boosts performance in both low-data and closed-vocabulary scenarios.\n  Augmenting LVIS and COCO with synthetic object segments delivers strong performance across different real-data scales and yields even greater improvements under extremely limited real-data conditions...",
-    "published": "Oct 10",
-    "pdf_url": "https://arxiv.org/pdf/2510.09110v4",
-    "arxiv_url": "http://arxiv.org/abs/2510.09110v4",
-    "queried_author": "Ranjay Krishna",
-    "matching_authors": [
-      "Ranjay Krishna"
-    ]
-  },
-  {
-    "title": "RefGrader: Automated Grading of Mathematical Competition Proofs using Agentic Workflows",
-    "authors": [
-      "Hamed Mahdavi",
-      "Pouria Mahdavinia",
-      "Samira Malek",
-      "Pegah Mohammadipour",
-      "Alireza Hashemi",
-      "Majid Daliri",
-      "Alireza Farhadi",
-      "Amir Khasahmadi",
-      "Niloofar Mireshghallah",
-      "Vasant Honavar"
-    ],
-    "summary": "State-of-the-art (SOTA) LLMs have progressed from struggling on proof-based Olympiad problems to solving most of the IMO 2025 problems, with leading systems reportedly handling 5 of 6 problems. Given this progress, we assess how well these models can grade proofs: detecting errors, judging their severity, and assigning fair scores beyond binary correctness. We study proof-analysis capabilities using a corpus of 90 Gemini 2.5 Pro-generated solutions that we grade on a 1-4 scale with detailed error annotations, and on MathArena solution sets for IMO/USAMO 2025 scored on a 0-7 scale. Our analysis shows that models can reliably flag incorrect (including subtly incorrect) solutions but exhibit calibration gaps in how partial credit is assigned. To address this, we introduce agentic workflows that extract and analyze reference solutions and automatically derive problem-specific rubrics for a multi-step grading process. We instantiate and compare different design choices for the grading workflows, and evaluate their trade-offs. Across our annotated corpus and MathArena, our proposed workflows achieve higher agreement with human grades and more consistent handling of partial credit across metrics. We release all code, data, and prompts/logs to facilitate future research.",
-    "published": "Oct 10",
-    "pdf_url": "https://arxiv.org/pdf/2510.09021v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.09021v1",
-    "queried_author": "Niloofar Mireshghallah",
-    "matching_authors": [
-      "Niloofar Mireshghallah"
-    ]
-  },
-  {
-    "title": "Neologism Learning for Controllability and Self-Verbalization",
-    "authors": [
-      "John Hewitt",
-      "Oyvind Tafjord",
-      "Robert Geirhos",
-      "Been Kim"
-    ],
-    "summary": "Humans invent new words when there is a rising demand for a new useful concept (e.g., doomscrolling). We explore and validate a similar idea in our communication with LLMs: introducing new words to better understand and control the models, expanding on the recently introduced neologism learning. This method introduces a new word by adding a new word embedding and training with examples that exhibit the concept with no other changes in model parameters. We show that adding a new word allows for control of concepts such as flattery, incorrect answers, text length, as well as more complex concepts in AxBench. We discover that neologisms can also further our understanding of the model via self-verbalization: models can describe what each new word means to them in natural language, like explaining that a word that represents a concept of incorrect answers means ``a lack of complete, coherent, or meaningful answers...'' To validate self-verbalizations, we introduce plug-in evaluation: we insert the verbalization into the context of a model and measure whether it controls the target concept. In some self-verbalizations, we find machine-only synonyms: words that seem unrelated to humans but cause similar behavior in machines. Finally, we show how neologism learning can jointly learn multiple concepts in multiple words.",
-    "published": "Oct 09",
-    "pdf_url": "https://arxiv.org/pdf/2510.08506v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.08506v1",
-    "queried_author": "John Hewitt",
-    "matching_authors": [
-      "John Hewitt"
-    ]
-  },
-  {
-    "title": "TGM: a Modular and Efficient Library for Machine Learning on Temporal Graphs",
-    "authors": [
-      "Jacob Chmura",
-      "Shenyang Huang",
-      "Tran Gia Bao Ngo",
-      "Ali Parviz",
-      "Farimah Poursafaei",
-      "Jure Leskovec",
-      "Michael Bronstein",
-      "Guillaume Rabusseau",
-      "Matthias Fey",
-      "Reihaneh Rabbany"
-    ],
-    "summary": "Well-designed open-source software drives progress in Machine Learning (ML) research. While static graph ML enjoys mature frameworks like PyTorch Geometric and DGL, ML for temporal graphs (TG), networks that evolve over time, lacks comparable infrastructure. Existing TG libraries are often tailored to specific architectures, hindering support for diverse models in this rapidly evolving field. Additionally, the divide between continuous- and discrete-time dynamic graph methods (CTDG and DTDG) limits direct comparisons and idea transfer. To address these gaps, we introduce Temporal Graph Modelling (TGM), a research-oriented library for ML on temporal graphs, the first to unify CTDG and DTDG approaches. TGM offers first-class support for dynamic node features, time-granularity conversions, and native handling of link-, node-, and graph-level tasks. Empirically, TGM achieves an average 7.8x speedup across multiple models, datasets, and tasks compared to the widely used DyGLib, and an average 175x speedup on graph discretization relative to available implementations. Beyond efficiency, we show in our experiments how TGM unlocks entirely new research possibilities by enabling dynamic graph property prediction and time-driven training paradigms, opening the door to questions previously impractical to study. TGM is available at https://github.com/tgm-team/tgm",
-    "published": "Oct 08",
-    "pdf_url": "https://arxiv.org/pdf/2510.07586v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.07586v1",
-    "queried_author": "Jure Leskovec",
-    "matching_authors": [
-      "Jure Leskovec"
-    ]
-  },
-  {
-    "title": "Base Models Know How to Reason, Thinking Models Learn When",
-    "authors": [
-      "Constantin Venhoff",
-      "Iv\u00e1n Arcuschin",
-      "Philip Torr",
-      "Arthur Conmy",
-      "Neel Nanda"
-    ],
-    "summary": "Why do thinking language models like DeepSeek R1 outperform their base counterparts? Despite consistent performance gains, it remains unclear to what extent thinking models learn entirely new reasoning capabilities or repurpose pre-existing base model ones. In this work, we propose a hybrid model where we activate reasoning mechanisms in base models at the right time to elicit thinking-model-level reasoning chains, implying that thinking models exploit already existing capabilities. To ground our analysis, we introduce an unsupervised, bottom-up approach for uncovering human-interpretable reasoning behaviors in thinking models. This approach provides an unbiased method to discover reasoning behaviors without imposing manual or LLM-derived assumptions. Across three base and four thinking models, using GSM8K and MATH500, our hybrid model recovers up to 91% of the performance gap to thinking models without any weight updates while steering only 12% of tokens. Concretely, our empirical setup provides a simple, causal way to test the effectiveness of existing reasoning mechanisms in base models by invoking them directly and measuring the resulting task performance. More broadly, these results reframe our understanding of how thinking models are trained: pre-training is when models acquire most of their reasoning mechanisms, and post-training teaches efficient deployment of these mechanisms at the right time, enabling efficient use of their inference-time compute.",
-    "published": "Oct 08",
-    "pdf_url": "https://arxiv.org/pdf/2510.07364v3",
-    "arxiv_url": "http://arxiv.org/abs/2510.07364v3",
-    "queried_author": "Neel Nanda",
-    "matching_authors": [
-      "Neel Nanda"
-    ]
-  },
-  {
-    "title": "MLE-Smith: Scaling MLE Tasks with Automated Multi-Agent Pipeline",
-    "authors": [
-      "Rushi Qiang",
-      "Yuchen Zhuang",
-      "Anikait Singh",
-      "Percy Liang",
-      "Chao Zhang",
-      "Sherry Yang",
-      "Bo Dai"
-    ],
-    "summary": "While Language Models (LMs) have made significant progress in automating machine learning engineering (MLE), the acquisition of high-quality MLE training data is significantly constrained. Current MLE benchmarks suffer from low scalability and limited applicability because they rely on static, manually curated tasks, demanding extensive time and manual effort to produce. We introduce MLE-Smith, a fully automated multi-agent pipeline, to transform raw datasets into competition-style MLE challenges through an efficient generate-verify-execute paradigm for scaling MLE tasks with verifiable quality, real-world usability, and rich diversity. The proposed multi-agent pipeline in MLE-Smith drives structured task design and standardized refactoring, coupled with a hybrid verification mechanism that enforces strict structural rules and high-level semantic soundness. It further validates empirical solvability and real-world fidelity through interactive execution. We apply MLE-Smith to 224 of real-world datasets and generate 606 tasks spanning multiple categories, objectives, and modalities, demonstrating that MLE-Smith can work effectively across a wide range of real-world datasets. Evaluation on the generated tasks shows that the performance of eight mainstream and cutting-edge LLMs on MLE-Smith tasks is strongly correlated with their performance on carefully human-designed tasks, highlighting the effectiveness of the MLE-Smith to scaling up MLE tasks, while maintaining task quality.",
-    "published": "Oct 08",
-    "pdf_url": "https://arxiv.org/pdf/2510.07307v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.07307v1",
-    "queried_author": "Percy Liang",
-    "matching_authors": [
-      "Percy Liang"
-    ]
-  },
-  {
-    "title": "Opt-ICL at LeWiDi-2025: Maximizing In-Context Signal from Rater Examples via Meta-Learning",
-    "authors": [
-      "Taylor Sorensen",
-      "Yejin Choi"
-    ],
-    "summary": "Many natural language processing (NLP) tasks involve subjectivity, ambiguity, or legitimate disagreement between annotators. In this paper, we outline our system for modeling human variation. Our system leverages language models' (LLMs) in-context learning abilities, along with a two-step meta-learning training procedure for 1) post-training on many datasets requiring in-context learning and 2) specializing the model via in-context meta-learning to the particular data distribution of interest. We also evaluate the performance of our system submission to the Learning With Disagreements (LeWiDi) competition, where it was the overall winner on both tasks. Additionally, we perform an ablation study to measure the importance of each system component. We find that including rater examples in-context is crucial for our system's performance, dataset-specific fine-tuning is helpful on the larger datasets, post-training on other in-context datasets is helpful on one of the competition datasets, and that performance improves with model scale.",
-    "published": "Oct 08",
-    "pdf_url": "https://arxiv.org/pdf/2510.07105v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.07105v1",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Off-Trajectory Reasoning: Can LLMs Collaborate on Reasoning Trajectory?",
-    "authors": [
-      "Aochong Oliver Li",
-      "Tanya Goyal"
-    ],
-    "summary": "Reasoning LLMs are trained to verbalize their reasoning process, yielding strong gains on complex tasks. This transparency also opens a promising direction: multiple reasoners can directly collaborate on each other's thinking within a shared trajectory, yielding better inference efficiency and exploration. A key prerequisite, however, is the ability to assess the usefulness and build on another model's partial thinking -- we call this off-trajectory reasoning. Our paper investigates a critical question: can standard solo-reasoning training pipelines deliver desired off-trajectory behaviors? We propose twin tests that capture the two extremes of the off-trajectory spectrum, namely Recoverability, which tests whether LLMs can backtrack from \"distractions\" induced by misleading reasoning traces, and Guidability, which tests their ability to build upon correct reasoning from stronger collaborators. Our study evaluates 15 open-weight LLMs (1.5B-32B) and reveals a counterintuitive finding -- \"stronger\" LLMs on benchmarks are often more fragile under distraction. Moreover, all models tested fail to effectively leverage guiding steps from collaborators on problems beyond their inherent capabilities with solve rates remaining under 9.2%. Finally, we conduct control studies to isolate the effects of three factors in post-training on these behaviors: the choice of distillation teacher, the use of RL, and data selection strategy. Our results provide actionable insights for training natively strong reasoning collaborators; e.g., we find that suboptimal recoverability behaviors of teache...",
-    "published": "Oct 07",
-    "pdf_url": "https://arxiv.org/pdf/2510.06410v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.06410v2",
-    "queried_author": "Tanya Goyal",
-    "matching_authors": [
-      "Tanya Goyal"
-    ]
-  },
-  {
-    "title": "Relational Transformer: Toward Zero-Shot Foundation Models for Relational Data",
-    "authors": [
-      "Rishabh Ranjan",
-      "Valter Hudovernik",
-      "Mark Znidar",
-      "Charilaos Kanatsoulis",
-      "Roshan Upendra",
-      "Mahmoud Mohammadi",
-      "Joe Meyer",
-      "Tom Palczewski",
-      "Carlos Guestrin",
-      "Jure Leskovec"
-    ],
-    "summary": "Pretrained transformers readily adapt to new sequence modeling tasks via zero-shot prompting, but relational domains still lack architectures that transfer across datasets and tasks. The core challenge is the diversity of relational data, with varying heterogeneous schemas, graph structures and functional dependencies. In this paper, we present the Relational Transformer (RT) architecture, which can be pretrained on diverse relational databases and directly applied to unseen datasets and tasks without task- or dataset-specific fine-tuning, or retrieval of in-context examples. RT (i) incorporates task specification via task table prompting, (ii) tokenizes cells with table/column metadata, (iii) is pretrained via masked token prediction, and (iv) utilizes a novel Relational Attention mechanism over columns, rows, and primary-foreign key links. Pretrained on RelBench datasets spanning tasks such as churn and sales forecasting, RT attains strong zero-shot performance, averaging 93% of fully supervised AUROC on binary classification tasks with a single forward pass of a 22M parameter model, as opposed to 84% for a 27B LLM. Fine-tuning yields state-of-the-art results with high sample efficiency. Our experimental analyses show that RT's zero-shot transfer leverages task context, relational attention patterns and schema semantics. Overall, RT provides a practical path toward foundation models for relational data. Code, models, data: https://github.com/snap-stanford/relational-transformer.",
-    "published": "Oct 07",
-    "pdf_url": "https://arxiv.org/pdf/2510.06377v3",
-    "arxiv_url": "http://arxiv.org/abs/2510.06377v3",
-    "queried_author": "Carlos Guestrin",
-    "matching_authors": [
-      "Carlos Guestrin",
-      "Jure Leskovec"
-    ]
-  },
-  {
-    "title": "EVALUESTEER: Measuring Reward Model Steerability Towards Values and Preferences",
-    "authors": [
-      "Kshitish Ghate",
-      "Andy Liu",
-      "Devansh Jain",
-      "Taylor Sorensen",
-      "Atoosa Kasirzadeh",
-      "Aylin Caliskan",
-      "Mona T. Diab",
-      "Maarten Sap"
-    ],
-    "summary": "As large language models (LLMs) are deployed globally, creating pluralistic systems that can accommodate the diverse preferences and values of users worldwide becomes essential. We introduce EVALUESTEER, a benchmark to measure LLMs' and reward models' (RMs) steerability towards users' value and stylistic preference profiles grounded in psychology and human-LLM interaction literature. To address the gap in existing datasets that do not support controlled evaluations of RM steering, we synthetically generated 165,888 preference pairs -- systematically varying pairs along 4 value dimensions (traditional, secular-rational, survival, and self-expression) and 4 style dimensions (verbosity, readability, confidence, and warmth). We use EVALUESTEER to evaluate whether, given a user profile and a pair of candidate value-laden and style-laden responses, LLMs and RMs are able to select the output that aligns with the user's preferences. We evaluate six open-source and proprietary LLMs and RMs under eleven systematic prompting conditions and six preference comparison scenarios. Notably, our results show that, when given the user's full profile of values and stylistic preferences, the best models achieve <75% accuracy at choosing the correct response, in contrast to >99% accuracy when only relevant style and value preferences are provided. EVALUESTEER thus highlights the limitations of current RMs at identifying and adapting to relevant user profile information, and provides a challenging testbed for developing RMs that can be steered towards diverse human values and preferences.",
-    "published": "Oct 07",
-    "pdf_url": "https://arxiv.org/pdf/2510.06370v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.06370v2",
-    "queried_author": "Maarten Sap",
-    "matching_authors": [
-      "Maarten Sap"
-    ]
-  },
-  {
-    "title": "Latent Speech-Text Transformer",
-    "authors": [
-      "Yen-Ju Lu",
-      "Yashesh Gaur",
-      "Wei Zhou",
-      "Benjamin Muller",
-      "Jesus Villalba",
-      "Najim Dehak",
-      "Luke Zettlemoyer",
-      "Gargi Ghosh",
-      "Mike Lewis",
-      "Srinivasan Iyer",
-      "Duc Le"
-    ],
-    "summary": "Auto-regressive speech-text models pre-trained on interleaved text tokens and discretized speech tokens demonstrate strong speech understanding and generation, yet remain substantially less compute-efficient than text LLMs, partly due to the much longer sequences of speech tokens relative to text. This modality imbalance disproportionately allocates pre-training and inference compute to speech, potentially hindering effective cross-modal alignment and slowing performance scaling by orders of magnitude. We introduce the Latent Speech-Text Transformer (LST), which aggregates speech tokens into latent speech patches that serve as higher-level autoregressive units. This design aligns the sequence-modeling granularity between speech and text while improving computational efficiency. The resulting patches can align with textual units to facilitate cross-modal knowledge transfer and compactly capture recurring acoustic patterns such as silence. Across story-completion benchmarks under both compute-controlled and data-controlled settings, LST consistently improves speech accuracy while also improving text performance, achieving up to +6.5% absolute gain on speech HellaSwag in compute-controlled training (+5.3% in data-controlled training). Under compute-controlled scaling from 420M to 1.8B parameters in a near compute-optimal regime, gains grow with scale, and improvements persist up to 7B parameters under fixed-token budgets. These benefits extend to downstream tasks: LST stabilizes ASR adaptation and reduces the effective autoregressive sequence length during ASR and TTS inferenc...",
-    "published": "Oct 07",
-    "pdf_url": "https://arxiv.org/pdf/2510.06195v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.06195v2",
-    "queried_author": "Luke Zettlemoyer",
-    "matching_authors": [
-      "Luke Zettlemoyer",
-      "Mike Lewis"
     ]
   }
 ]
