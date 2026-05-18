@@ -1,5 +1,58 @@
 [
   {
+    "title": "DeltaPrompts: Escaping the Zero-Delta Trap in Multimodal Distillation",
+    "authors": [
+      "Jaehun Jung",
+      "Hyunwoo Kim",
+      "Brandon Cui",
+      "Ximing Lu",
+      "David Acuna",
+      "Prithviraj Ammanabrolu",
+      "Yejin Choi"
+    ],
+    "summary": "Distillation enables compact Vision-Language Models (VLMs) to obtain strong reasoning capabilities, yet the prompts driving this process are typically chosen via simple heuristics or aggregated from off-the-shelf datasets. We reveal a critical inefficiency in this approach: up to 69% of the prompts in standard chart / document reasoning datasets are effectively zero-delta, meaning the teacher and student already induce the exact same answer distribution. Training on these prompts provides minimal learning signal, causing student improvement to rapidly saturate regardless of data scale. To escape the zero-delta trap, we return to first principles: distillation fundamentally minimizes distributional divergence, and thus a prompt is valuable only if it exposes a functional capability gap between the teacher and student. We quantify this gap through answer divergence ($\u0394$), demonstrating that non-zero divergence is critical for effective scaling. Building on this insight, we propose a staged synthesis pipeline that repurposes existing datasets as seeds, actively targeting student failure modes to produce better prompts. The result is DeltaPrompts, a diverse dataset of 200k synthetic, high-divergence reasoning problems. We evaluate DeltaPrompts across three distinct settings: on-policy distillation with the target teacher-student pair, transfer to a novel model family without regenerating the data, and off-policy fine-tuning of a non-reasoning model. Across all scenarios, DeltaPrompts drives substantial gains, yielding up to 15% relative improvement even on top of a highly-optim...",
+    "published": "May 15",
+    "pdf_url": "https://arxiv.org/pdf/2605.15532v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.15532v1",
+    "queried_author": "Yejin Choi",
+    "matching_authors": [
+      "Yejin Choi"
+    ]
+  },
+  {
+    "title": "Reasoning Models Don't Just Think Longer, They Move Differently",
+    "authors": [
+      "Anders Gj\u00f8lbye",
+      "Lars Kai Hansen",
+      "Sanmi Koyejo"
+    ],
+    "summary": "Reasoning-trained language models often spend more tokens on harder problems, but longer chains of thought do not show whether a model is merely computing for more steps or following a different internal trajectory. We study this distinction through hidden-state trajectories during chain-of-thought generation across competitive programming, mathematics, and Boolean satisfiability. Raw trajectory geometry is strongly shaped by generation length: longer generations mechanically alter path statistics, so difficulty-dependent comparisons are misleading without adjustment. After residualizing trajectory statistics on length, difficulty remains systematically coupled to corrected trajectory geometry across all domains studied. The clearest reasoning-specific separation appears in the code domain, where harder problems show more direct corrected trajectories and less heterogeneous local curvature in reasoning-trained models than in matched instruction-tuned baselines. Corrected difficulty-geometry coupling is weaker, but still present, in mathematics and Boolean satisfiability. Prompt-stage linear probes do not mirror the code-domain separation, and behavioral annotations show that stronger corrected coupling co-occurs with strategy shifts and uncertainty monitoring. Together, these findings establish length correction as a prerequisite for generation-time trajectory analysis and show that reasoning training can be associated with distinct corrected trajectory geometry, with the strength of the effect depending on the domain.",
+    "published": "May 14",
+    "pdf_url": "https://arxiv.org/pdf/2605.15454v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.15454v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "LPDS: Evaluating LLM Robustness Through Logic-Preserving Difficulty Scaling",
+    "authors": [
+      "Philipp Mondorf",
+      "Samuel J. Bell",
+      "Jesse Dodge",
+      "Dieuwke Hupkes"
+    ],
+    "summary": "As large language models (LLMs) are increasingly deployed to perform tasks with minimal human oversight, it is crucial that these models operate robustly. In particular, a model that can solve a given problem should not fail simply because certain entities$\\unicode{x2013}$such as names, numbers, or other contextual details$\\unicode{x2013}$have changed while the underlying problem logic remains the same. Prior work suggests that current LLMs still struggle with this form of robustness: they often succeed on some variations of a problem but fail on others. However, existing evaluations often lack a systematic way to identify which logic-preserving variations are most likely to induce failure. Instead, they typically test a random subset of allowable variations, which can overstate robustness. To address this gap, we introduce logic-preserving difficulty scaling (LPDS), a framework that (i) quantifies the difficulty of a problem variation and (ii) systematically searches the space of allowable variations to find those that maximize difficulty and expose failures. We show that as difficulty increases, performance declines and errors in the models' reasoning chains become more pronounced. We further demonstrate that LPDS efficiently finds difficult problem variations for a model, resulting in performance drops up to 5 times larger compared to random sampling. Finally, we show that fine-tuning on more difficult variations leads to more consistent robustness gains than training on easier ones.",
+    "published": "May 14",
+    "pdf_url": "https://arxiv.org/pdf/2605.15393v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.15393v1",
+    "queried_author": "Jesse Dodge",
+    "matching_authors": [
+      "Jesse Dodge"
+    ]
+  },
+  {
     "title": "RefDecoder: Enhancing Visual Generation with Conditional Video Decoding",
     "authors": [
       "Xiang Fan",
@@ -6623,7 +6676,6 @@
       "Qingyang Wu",
       "Avner May",
       "Sri Yanamandra",
-      "Yineng Zhang",
       "Ce Zhang",
       "Tri Dao",
       "Percy Liang",
@@ -6634,8 +6686,8 @@
     ],
     "summary": "Speculative decoding can significantly accelerate LLM serving, yet most deployments today disentangle speculator training from serving, treating speculator training as a standalone offline modeling problem. We show that this decoupled formulation introduces substantial deployment and adaptation lag: (1) high time-to-serve, since a speculator must be trained offline for a considerable period before deployment; (2) delayed utility feedback, since the true end-to-end decoding speedup is only known after training and cannot be inferred reliably from acceptance rate alone due to model-architecture and system-level overheads; and (3) domain-drift degradation, as the target model is repurposed to new domains and the speculator becomes stale and less effective.\n  To address these issues, we present Aurora, a unified training-serving system that closes the loop by continuously learning a speculator directly from live inference traces. Aurora reframes online speculator learning as an asynchronous reinforcement-learning problem: accepted tokens provide positive feedback, while rejected speculator proposals provide implicit negative feedback that we exploit to improve sample efficiency. Our design integrates an SGLang-based inference server with an asynchronous training server, enabling hot-swapped speculator updates without service interruption. Crucially, Aurora supports day-0 deployment: a speculator can be served immediately and rapidly adapted to live traffic, improving system performance while providing immediate utility feedback. Across experiments, Aurora achieves a 1.5x day-0 ...",
     "published": "Feb 06",
-    "pdf_url": "https://arxiv.org/pdf/2602.06932v3",
-    "arxiv_url": "http://arxiv.org/abs/2602.06932v3",
+    "pdf_url": "https://arxiv.org/pdf/2602.06932v4",
+    "arxiv_url": "http://arxiv.org/abs/2602.06932v4",
     "queried_author": "Percy Liang",
     "matching_authors": [
       "Percy Liang",
@@ -6952,10 +7004,10 @@
       "Fei Fang",
       "J. Zico Kolter"
     ],
-    "summary": "Model distillation enables efficient emulation of frontier large language models (LLMs), creating a need for robust mechanisms to detect when a third-party student model has trained on a teacher model's outputs. However, existing fingerprinting techniques that could be used to detect such distillation rely on heuristic perturbations that impose a steep trade-off between generation quality and fingerprinting strength, often requiring significant degradation of utility to ensure the fingerprint is effectively internalized by the student. We introduce antidistillation fingerprinting (ADFP), a principled approach that aligns the fingerprinting objective with the student's learning dynamics. Building upon the gradient-based framework of antidistillation sampling, ADFP utilizes a proxy model to identify and sample tokens that directly maximize the expected detectability of the fingerprint in the student after fine-tuning, rather than relying on the incidental absorption of the un-targeted biases of a more naive watermark. Experiments on GSM8K and OASST1 benchmarks demonstrate that ADFP achieves a significant Pareto improvement over state-of-the-art baselines, yielding stronger detection confidence with minimal impact on utility, even when the student model's architecture is unknown.",
+    "summary": "Model distillation enables efficient emulation of frontier large language models (LLMs), creating a need for robust mechanisms to detect when a third-party student model has trained on a teacher model's outputs. However, existing fingerprinting techniques that could be used to detect such distillation rely on heuristic perturbations that impose a steep trade-off between generation quality and fingerprinting strength, often requiring significant degradation of utility to ensure the fingerprint is effectively internalized by the student. We introduce antidistillation fingerprinting (ADFP), a principled approach that aligns the fingerprinting objective with the student's learning dynamics. Building upon the gradient-based framework of antidistillation sampling, ADFP utilizes a proxy model to identify and sample tokens that directly maximize the expected detectability of the fingerprint in the student after fine-tuning, rather than relying on the incidental absorption of the un-targeted biases of a more naive watermark. Experiments on GSM8K, OASST1, and MBPP demonstrate that ADFP achieves a significant Pareto improvement over state-of-the-art baselines, yielding stronger detection confidence with minimal impact on utility across mathematical reasoning, dialogue, and code generation, even when the student model's architecture is unknown.",
     "published": "Feb 03",
-    "pdf_url": "https://arxiv.org/pdf/2602.03812v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.03812v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.03812v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.03812v2",
     "queried_author": "J Zico Kolter",
     "matching_authors": [
       "J Zico Kolter"
@@ -10382,10 +10434,10 @@
       "Hannaneh Hajishirzi",
       "Pang Wei Koh"
     ],
-    "summary": "Deep research models perform multi-step research to produce long-form, well-attributed answers. However, most open deep research models are trained on easily verifiable short-form QA tasks via reinforcement learning with verifiable rewards (RLVR), which does not extend to realistic long-form tasks. We address this with Reinforcement Learning with Evolving Rubrics (RLER), in which we construct and maintain rubrics that co-evolve with the policy model during training; this allows the rubrics to incorporate information that the model has newly explored and to provide discriminative, on-policy feedback. Using RLER, we develop Deep Research Tulu (DR Tulu-8B), the first open model that is directly trained for open-ended, long-form deep research. Across four long-form deep research benchmarks in science, healthcare and general domains, DR Tulu substantially outperforms existing open deep research models, and matches or exceeds proprietary deep research systems, while being significantly smaller and cheaper per query. To facilitate future research, we release all data, models, and code, including our new MCP-based agent infrastructure for deep research systems.",
+    "summary": "Deep research agents perform multi-step research to produce long-form, well-attributed answers. However, most open deep research agents are trained on easily verifiable short-form QA tasks via reinforcement learning with verifiable rewards, which does not extend to realistic long-form tasks. We address this with Reinforcement Learning with Evolving Rubrics (RLER), where rubrics are constructed and maintained to co-evolve with the policy model during training. This allows the rubrics to incorporate newly explored information from search and contrasting model responses, enabling better fact checking and more discriminative on-policy feedback. Using RLER, we develop Deep Research Tulu (DR Tulu-8B), the first fully open model that is directly trained for open-ended, long-form deep research. Across four long-form deep research benchmarks in science, healthcare, and general domains, DR Tulu substantially outperforms existing open deep research agents (by 15.6% over Tongyi DR on average) and matches or exceeds proprietary deep research agents (by 0.7% over OpenAI DR on average), while being significantly smaller and cheaper per query (1000x cheaper than OpenAI DR per query).",
     "published": "Nov 24",
-    "pdf_url": "https://arxiv.org/pdf/2511.19399v2",
-    "arxiv_url": "http://arxiv.org/abs/2511.19399v2",
+    "pdf_url": "https://arxiv.org/pdf/2511.19399v3",
+    "arxiv_url": "http://arxiv.org/abs/2511.19399v3",
     "queried_author": "Akari Asai",
     "matching_authors": [
       "Akari Asai",
@@ -12755,64 +12807,6 @@
     "queried_author": "Ashwinee Panda",
     "matching_authors": [
       "Ashwinee Panda"
-    ]
-  },
-  {
-    "title": "Sample-Efficient Online Learning in LM Agents via Hindsight Trajectory Rewriting",
-    "authors": [
-      "Michael Y. Hu",
-      "Benjamin Van Durme",
-      "Jacob Andreas",
-      "Harsh Jhamtani"
-    ],
-    "summary": "Language model (LM) agents deployed in novel environments often exhibit poor sample efficiency when learning from sequential interactions. This significantly hinders the usefulness of such agents in environments where interaction is costly (for example, when they interact with humans or reset physical systems). While a number of existing LM agent architectures incorporate various mechanisms for experience storage and reflection, they make limited use of LMs' abilities to directly generate or reason about full counterfactual trajectories. We introduce ECHO (Experience Consolidation via Hindsight Optimization), a prompting framework that adapts hindsight experience replay from reinforcement learning for language model agents. ECHO generates optimized trajectories for alternative goals that could have been achieved during failed attempts, effectively creating synthetic positive examples from unsuccessful interactions. Our approach consists of two components: a hindsight rule that uses the language model itself to identify relevant subgoals and generate optimized trajectories, and an update rule that maintains compressed trajectory representations in memory. We evaluate ECHO on stateful versions of XMiniGrid, a text-based navigation and planning benchmark, and PeopleJoinQA, a collaborative information-gathering enterprise simulation. Across both domains, ECHO outperforms vanilla language agent baselines by up to 80%; in XMiniGrid, it also outperforms a number of sophisticated agent architectures including Reflexion and AWM, demonstrating faster adaptation to novel environments ...",
-    "published": "Oct 11",
-    "pdf_url": "https://arxiv.org/pdf/2510.10304v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.10304v2",
-    "queried_author": "Jacob Andreas",
-    "matching_authors": [
-      "Jacob Andreas"
-    ]
-  },
-  {
-    "title": "HUME: Measuring the Human-Model Performance Gap in Text Embedding Tasks",
-    "authors": [
-      "Adnan El Assadi",
-      "Isaac Chung",
-      "Roman Solomatin",
-      "Niklas Muennighoff",
-      "Kenneth Enevoldsen"
-    ],
-    "summary": "Comparing human and model performance offers a valuable perspective for understanding the strengths and limitations of embedding models, highlighting where they succeed and where they fail to capture meaning and nuance. However, such comparisons are rarely made, as human performance on embedding tasks is difficult to measure. To fill this gap, we introduce HUME: Human Evaluation Framework for Text Embeddings. While frameworks like MTEB provide broad model evaluation, they lack reliable estimates of human performance, limiting the interpretability of model scores. We measure human performance across 16 MTEB datasets spanning reranking, classification, clustering, and semantic textual similarity across linguistically diverse high- and low-resource languages. Humans achieve an average performance of 77.6% compared to 80.1% for the best embedding model, though with substantial variation: models reach high performance on some datasets while struggling on notably low-resource languages. Our human annotations also reveal multiple dataset issues. We additionally benchmark nine LLMs as annotators on reranking, classification, and STS tasks, finding that they fall short of human performance (76.1% vs. 81.2%) despite offering scalability advantages. We provide human performance baselines, insights into task difficulty patterns, and an extensible evaluation framework that enables a more meaningful interpretation of results and informs the development of both models and benchmarks. Our code, dataset, and leaderboard are publicly available at https://github.com/embeddings-benchmark/mteb.",
-    "published": "Oct 11",
-    "pdf_url": "https://arxiv.org/pdf/2510.10062v3",
-    "arxiv_url": "http://arxiv.org/abs/2510.10062v3",
-    "queried_author": "Niklas Muennighoff",
-    "matching_authors": [
-      "Niklas Muennighoff"
-    ]
-  },
-  {
-    "title": "How can we assess human-agent interactions? Case studies in software agent design",
-    "authors": [
-      "Valerie Chen",
-      "Rohit Malhotra",
-      "Xingyao Wang",
-      "Juan Michelini",
-      "Xuhui Zhou",
-      "Aditya Bharat Soni",
-      "Hoang H. Tran",
-      "Calvin Smith",
-      "Ameet Talwalkar",
-      "Graham Neubig"
-    ],
-    "summary": "LLM-powered agents are both a promising new technology and a source of complexity, where choices about models, tools, and prompting can affect their usefulness. While numerous benchmarks measure agent accuracy across domains, they mostly assume full automation, failing to represent the collaborative nature of real-world use cases. In this paper, we make two major steps towards the rigorous assessment of human-agent interactions. First, we propose PULSE, a framework for more efficient human-centric evaluation of agent designs, which comprises collecting user feedback, training an ML model to predict user satisfaction, and computing results by combining human satisfaction ratings with model-generated pseudo-labels. Second, we deploy the framework on a large-scale web platform built around the open-source software agent OpenHands, collecting in-the-wild usage data across over 15k users. We conduct case studies around how three agent design decisions -- choice of LLM backbone, planning strategy, and memory mechanisms -- impact developer satisfaction rates, yielding practical insights for software agent design. We also show how our framework can lead to more robust conclusions about agent design, reducing confidence intervals by 40% compared to a standard A/B test. Finally, we find substantial discrepancies between in-the-wild results and benchmark performance (e.g., the anti-correlation between results comparing claude-sonnet-4 and gpt-5), underscoring the limitations of benchmark-driven evaluation. Our findings provide guidance for evaluations of LLM agents with humans and ide...",
-    "published": "Oct 10",
-    "pdf_url": "https://arxiv.org/pdf/2510.09801v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.09801v2",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
     ]
   }
 ]
