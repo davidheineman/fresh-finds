@@ -254,8 +254,8 @@
       "Minjung Park",
       "Alexander Ioffrida",
       "Angelina Sanna",
-      "Hao-Ping",
-      "Lee",
+      " Hao-Ping",
+      " Lee",
       "Niloofar Mireshghallah",
       "Yang Wang",
       "Sauvik Das"
@@ -349,7 +349,7 @@
       "Sejin Park",
       "Seonguk Seo",
       "Shin Jaehoon",
-      "Sunatullo",
+      " Sunatullo",
       "Taewoong Eom",
       "Yeachan Park",
       "Yongseok Jang",
@@ -1128,8 +1128,8 @@
   {
     "title": "Nemotron 3 Nano Omni: Efficient and Open Multimodal Intelligence",
     "authors": [
-      "NVIDIA",
-      ":",
+      " NVIDIA",
+      " :",
       "Amala Sanjay Deshmukh",
       "Kateryna Chumachenko",
       "Tuomas Rintamaki",
@@ -1930,8 +1930,8 @@
   {
     "title": "Nemotron 3 Super: Open, Efficient Mixture-of-Experts Hybrid Mamba-Transformer Model for Agentic Reasoning",
     "authors": [
-      "NVIDIA",
-      ":",
+      " NVIDIA",
+      " :",
       "Aakshita Chandiramani",
       "Aaron Blakeman",
       "Abdullahi Olaoye",
@@ -3444,7 +3444,7 @@
     "title": "Composer 2 Technical Report",
     "authors": [
       "Cursor Research",
-      ":",
+      " :",
       "Aaron Chan",
       "Ahmed Shalaby",
       "Alexander Wettig",
@@ -5093,8 +5093,8 @@
       "Roshan Ram",
       "Akshara Prabhakar",
       "Shelby Heinecke",
-      "Caiming",
-      "Xiong",
+      " Caiming",
+      " Xiong",
       "Silvio Savarese",
       "Huan Wang"
     ],
@@ -8508,8 +8508,8 @@
   {
     "title": "NVIDIA Nemotron 3: Efficient and Open Intelligence",
     "authors": [
-      "NVIDIA",
-      ":",
+      " NVIDIA",
+      " :",
       "Aaron Blakeman",
       "Aaron Grattafiori",
       "Aarti Basant",
@@ -8883,8 +8883,8 @@
   {
     "title": "Nemotron 3 Nano: Open, Efficient Mixture-of-Experts Hybrid Mamba-Transformer Model for Agentic Reasoning",
     "authors": [
-      "NVIDIA",
-      ":",
+      " NVIDIA",
+      " :",
       "Aaron Blakeman",
       "Aaron Grattafiori",
       "Aarti Basant",
@@ -9628,7 +9628,7 @@
     "title": "Olmo 3",
     "authors": [
       "Team Olmo",
-      ":",
+      " :",
       "Allyson Ettinger",
       "Amanda Bertsch",
       "Bailey Kuehl",
@@ -11094,8 +11094,8 @@
   {
     "title": "NVIDIA Nemotron Nano V2 VL",
     "authors": [
-      "NVIDIA",
-      ":",
+      " NVIDIA",
+      " :",
       "Amala Sanjay Deshmukh",
       "Kateryna Chumachenko",
       "Tuomas Rintamaki",
