@@ -1,5 +1,64 @@
 [
   {
+    "title": "ESI-Bench: Towards Embodied Spatial Intelligence that Closes the Perception-Action Loop",
+    "authors": [
+      "Yining Hong",
+      "Jiageng Liu",
+      "Han Yin",
+      "Manling Li",
+      "Leonidas Guibas",
+      "Li Fei-Fei",
+      "Jiajun Wu",
+      "Yejin Choi"
+    ],
+    "summary": "Spatial intelligence unfolds through a perception-action loop: agents act to acquire observations, and reason about how observations vary as a function of action. Rather than passively processing what is seen, they actively uncover what is unseen - occluded structure, dynamics, containment, and functionality that cannot be resolved from passive sensing alone. We move beyond prior formulations of spatial intelligence that assume oracle observations by recasting the observer as an actor. We introduce ESI-BENCH, a comprehensive benchmark for embodied spatial intelligence spanning 10 task categories and 29 subcategories built on OmniGibson, grounded in Spelke's core knowledge systems. Agents must decide what abilities to deploy - perception, locomotion, and manipulation - and how to sequence them to actively accumulate task-relevant evidence. We conduct extensive experiments on state-of-the-art MLLMs and find that active exploration substantially outperforms passive counterparts, with agents spontaneously discovering emergent spatial strategies without explicit instructions, while random multi-view often adds noise rather than signal despite consuming far more images. Most failures stem not from weak perception but from action blindness: poor action choices lead to poor observations, which in turn drive cascading errors. While explicit 3D grounding stabilizes reasoning on depth-sensitive tasks, imperfect 3D representation proves more harmful than 2D baselines by distorting spatial relations. Human studies further reveal that unlike humans who seek falsifying viewpoints and revi...",
+    "published": "May 18",
+    "pdf_url": "https://arxiv.org/pdf/2605.18746v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.18746v1",
+    "queried_author": "Yejin Choi",
+    "matching_authors": [
+      "Yejin Choi"
+    ]
+  },
+  {
+    "title": "General Preference Reinforcement Learning",
+    "authors": [
+      "Muhammad Umer",
+      "Muhammad Ahmed Mohsin",
+      "Ahsan Bilal",
+      "Arslan Chaudhry",
+      "Andreas Haupt",
+      "Sanmi Koyejo",
+      "Emily Fox",
+      "John M. Cioffi"
+    ],
+    "summary": "Post-training has split large language model (LLM) alignment into two largely disconnected tracks. Online reinforcement learning (RL) with verifiable rewards drives emergent reasoning on math and code but depends on a programmatic verifier that cannot reach open-ended tasks, while preference optimization handles open-ended generation yet forgoes the continuous exploration that powers online RL. Closing this gap requires a verifier for open-ended quality, but a scalar reward model is the wrong shape for the job. Quality is multi-dimensional, and any scalar score is an incomplete proxy that lets online RL collapse onto whichever axis the score is most sensitive to. We turn instead to the General Preference Model (GPM), which embeds responses into $k$ skew-symmetric subspaces and represents preference as a structured, intransitivity-aware comparison. Building on this, we propose General Preference Reinforcement Learning (GPRL), which carries the $k$-way structure through to the policy update. GPRL computes per-dimension group-relative advantages, normalizes each on its own scale so no axis can dominate, and aggregates them with context-dependent eigenvalues. The same structure powers a closed-loop drift monitor that detects single-axis exploitation and corrects it on the fly by reweighting dimensions and tightening the trust region. Starting from $\\texttt{Llama-3-8B-Instruct}$, GPRL reaches a length-controlled win rate of $56.51\\%$ on AlpacaEval~2.0 while also outperforming SimPO and SPPO on Arena-Hard, MT-Bench, and WildBench by resisting reward hacking across extended traini...",
+    "published": "May 18",
+    "pdf_url": "https://arxiv.org/pdf/2605.18721v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.18721v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "Learning over Positive and Negative Edges with Contrastive Message Passing",
+    "authors": [
+      "Peter Pao-Huang",
+      "Charilaos I. Kanatsoulis",
+      "Michael Bereket",
+      "Jure Leskovec"
+    ],
+    "summary": "Conventional approaches to learning on graphs involve message passing along existing (i.e., positive) edges to update node features. However, these approaches often disregard the potentially valuable information contained in the absence (i.e., negative) of edges. Here, we theoretically analyze the value of negative edges in graph representations and prove that in settings of low label rates, high homophily, and high edge density, access to negative edges provides significant information gain over using only positive edges. Motivated by this insight, we introduce Contrastive Message Passing (CMP), a general message passing architecture that enable graph neural network layers to reason over positive and negative edges. By imposing soft positive semidefinite constraints on the learnable weights, our approach differentially applies similarity-preserving transformations to positively connected nodes and dissimilarity-inducing transformations to negatively connected nodes. Over simulated and real datasets in varying data regimes, CMP consistently outperforms baselines in low-label settings when negative edges are informative.",
+    "published": "May 18",
+    "pdf_url": "https://arxiv.org/pdf/2605.17854v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.17854v1",
+    "queried_author": "Jure Leskovec",
+    "matching_authors": [
+      "Jure Leskovec"
+    ]
+  },
+  {
     "title": "Why Do Safety Guardrails Degrade Across Languages?",
     "authors": [
       "Max Zhang",
@@ -12748,72 +12807,6 @@
     "queried_author": "Wen-tau Yih",
     "matching_authors": [
       "Wen-tau Yih"
-    ]
-  },
-  {
-    "title": "Chimera: State Space Models Beyond Sequences",
-    "authors": [
-      "Aakash Lahoti",
-      "Tanya Marwah",
-      "Ratish Puduppully",
-      "Albert Gu"
-    ],
-    "summary": "Transformer-based deep learning methods have become the standard approach for modeling diverse data such as sequences, images, and graphs. These methods rely on self-attention, which treats data as an unordered set of elements. This ignores the neighborhood structure or graph topology of the data and requires inductive biases--such as position embeddings in sequences and images, or random walks in graphs--to incorporate topology. However, designing such task-specific biases requires significant effort and can introduce side effects that hinder generalization. We introduce Chimera, a unified model that directly incorporates data topology in a principled way, removing the need for domain-specific biases. The key idea is that state space models--which naturally do not require position embeddings--can be generalized to capture any graph topology. Our experiments show that Chimera achieves strong performance across language, vision, and graph domains, outperforming BERT on GLUE by 0.7 points, ViT on ImageNet-1k by 2.6%, and all baselines on the Long Range Graph Benchmark. We further propose algorithmic optimizations to improve Chimera's efficiency: (1) for Directed Acyclic Graphs, Chimera can be implemented as a linear-time recurrence; (2) for general graphs, a simple mathematical relaxation achieves Transformer's quadratic complexity without domain-specific heuristics. These results validate Chimera's core contribution and support the idea that data topology is a powerful inductive bias across modalities.",
-    "published": "Oct 14",
-    "pdf_url": "https://arxiv.org/pdf/2510.12111v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.12111v1",
-    "queried_author": "Albert Gu",
-    "matching_authors": [
-      "Albert Gu"
-    ]
-  },
-  {
-    "title": "Reliable Fine-Grained Evaluation of Natural Language Math Proofs",
-    "authors": [
-      "Wenjie Ma",
-      "Andrei Cojocaru",
-      "Neel Kolhe",
-      "Bradley Louie",
-      "Robin Said Sharif",
-      "Haihan Zhang",
-      "Vincent Zhuang",
-      "Matei Zaharia",
-      "Sewon Min"
-    ],
-    "summary": "Recent advances in large language models (LLMs) for mathematical reasoning have largely focused on tasks with easily verifiable final answers while generating and verifying natural language math proofs remains an open challenge. We identify the absence of a reliable, fine-grained evaluator for LLM-generated math proofs as a critical gap. To address this, we propose a systematic methodology for developing and validating evaluators that assign fine-grained scores on a 0-7 scale to model-generated math proofs. To enable this study, we introduce ProofBench, the first expert-annotated dataset of fine-grained proof ratings, spanning 145 problems from six major math competitions (USAMO, IMO, Putnam, etc) and 435 LLM-generated solutions from Gemini-2.5-Pro, o3, and DeepSeek-R1. Using ProofBench as a testbed, we systematically explore the evaluator design space across key axes: the backbone model, input context, instructions and evaluation workflow. Our analysis delivers ProofGrader, an evaluator that combines a strong reasoning backbone LM, rich context from reference solutions and marking schemes, and a simple ensembling method; it achieves a low Mean Absolute Error (MAE) of 0.926 against expert scores, significantly outperforming naive baselines. Finally, we demonstrate its practical utility in a best-of-$n$ selection task: at $n=16$, ProofGrader achieves an average score of 4.14/7, closing 78\\% of the gap between a naive binary evaluator (2.48) and the human oracle (4.62), highlighting its potential to advance downstream proof generation.",
-    "published": "Oct 14",
-    "pdf_url": "https://arxiv.org/pdf/2510.13888v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.13888v2",
-    "queried_author": "Sewon Min",
-    "matching_authors": [
-      "Sewon Min"
-    ]
-  },
-  {
-    "title": "UALM: Unified Audio Language Model for Understanding, Generation and Reasoning",
-    "authors": [
-      "Jinchuan Tian",
-      "Sang-gil Lee",
-      "Zhifeng Kong",
-      "Sreyan Ghosh",
-      "Arushi Goel",
-      "Chao-Han Huck Yang",
-      "Wenliang Dai",
-      "Zihan Liu",
-      "Hanrong Ye",
-      "Shinji Watanabe",
-      "Mohammad Shoeybi",
-      "Bryan Catanzaro",
-      "Rafael Valle",
-      "Wei Ping"
-    ],
-    "summary": "Recent advances in the audio language modeling (ALM) domain tackle audio understanding and text-to-audio generation as separate tasks. Very few studies attempt to unify these tasks -- an essential step toward advanced multimodal reasoning. This paper introduces U}nified Audio Language Model (UALM), which aims to unify audio understanding, text-to-audio generation, and multimodal reasoning in a single model. To achieve this goal, we first present UALM-Gen, a text-to-audio language model that directly predicts audio tokens and is comparable to state-of-the-art diffusion-based models. We then demonstrate, using proper data blending, training recipes, and inference techniques, that our single UALM model matches the quality of state-of-the-art specialized models in audio understanding, text-to-audio generation, and text reasoning. Furthermore, we present UALM-Reason, a multimodal reasoning model that utilizes both text and audio in the intermediate thinking steps to facilitate complex generation tasks. To our knowledge, this is the first demonstration in audio research of cross-modal generative reasoning, with its effectiveness confirmed by subjective evaluations.",
-    "published": "Oct 13",
-    "pdf_url": "https://arxiv.org/pdf/2510.12000v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.12000v1",
-    "queried_author": "Mohammad Shoeybi",
-    "matching_authors": [
-      "Mohammad Shoeybi"
     ]
   }
 ]
