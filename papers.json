@@ -1,5 +1,115 @@
 [
   {
+    "title": "Why Do Safety Guardrails Degrade Across Languages?",
+    "authors": [
+      "Max Zhang",
+      "Ameen Patel",
+      "Sang T. Truong",
+      "Sanmi Koyejo"
+    ],
+    "summary": "Large language models exhibit safety degradation in non-English languages. Standard evaluation relies on Jailbreak Success Rate (JSR), which confounds several safety-driving factors into one, obscuring the specific cause(s) of safety failure. We introduce a latent variable model, a Multi-Group Item Response Theory (IRT) framework, that decouples safety-driving factors such as language-agnostic safety robustness ($\u03b8$), intrinsic prompt hardness ($\u03b2$), global language processing difficulty ($\u03b3$), and a prompt-specific cross-lingual safety gap ($\u03c4$). Using the MultiJail dataset, we evaluate the safety robustness of 61 model configurations across 5 closed-model families and 10 languages of varying resource, aggregating a dataset of 1.9 million rows. Exploratory Factor Analysis shows safety is primarily unidimensional: models refuse different harm types mainly through a shared mechanism. Contrary to the expected trend that safety degrades largely in low-resource languages, 22 model configurations are more vulnerable in English than in low-resource languages. Low-resource languages produce more uncertain responses (high entropy) than high-resource languages. Also, high-$\u03c4$ prompts cluster in physical harm categories like Theft and Weapons and lower-resource languages, trends validated through cross-dataset generalization. While global translation quality shows low correlation with $\u03c4$, severe mistranslations drive high-bias outliers, as validated by native speakers. Cultural and conceptual grounding mismatches also contribute to $\u03c4$. In predictive validation, the IRT framework ac...",
+    "published": "May 16",
+    "pdf_url": "https://arxiv.org/pdf/2605.17173v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.17173v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "OpenJarvis: Personal AI, On Personal Devices",
+    "authors": [
+      "Jon Saad-Falcon",
+      "Avanika Narayan",
+      "Robby Manihani",
+      "Tanvir Bhathal",
+      "Herumb Shandilya",
+      "Hakki Orhun Akengin",
+      "Gabriel Bo",
+      "Andrew Park",
+      "Matthew Hart",
+      "Caia Costello",
+      "Chuan Li",
+      "Christopher R\u00e9",
+      "Azalia Mirhoseini"
+    ],
+    "summary": "Personal AI stacks, like OpenClaw and Hermes Agent, are becoming central to daily work, yet they route nearly every query (often over sensitive local data) to cloud-hosted frontier models. Replacing frontier models with local models inside existing stacks does not work: swapping Claude Opus 4.6 for Qwen3.5-9B drops accuracy by 25-39 pp across personal AI tasks like PinchBench and GAIA. Existing stacks bundle agentic prompts, tool descriptions, memory configuration, and runtime settings around a specific cloud model. Only the prompts can be tuned, and state-of-the-art prompt optimizers close just 5 pp of the local-cloud gap on their own. This motivates a decomposed personal AI stack: one that exposes individual primitives which can be optimized individually or jointly to close the local-cloud gap. We present OpenJarvis, an architecture that represents a personal AI system as a typed spec over five primitives: Intelligence, Engine, Agents, Tools & Memory, and Learning. Each primitive is an independently editable field, making the stack end-to-end optimizable and measurable against accuracy, cost, and latency. Towards closing the local-cloud gap without surrendering local-model properties, OpenJarvis introduces LLM-guided spec search, a local-cloud collaboration in which frontier cloud models propose edits across the spec at search time, only non-regressing edits are accepted, and the resulting spec runs entirely on-device at inference time. With LLM-guided spec search, on-device specs match or exceed cloud accuracy on 4 of 8 benchmarks and land within 3.2 pp of the best cloud...",
+    "published": "May 16",
+    "pdf_url": "https://arxiv.org/pdf/2605.17172v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.17172v1",
+    "queried_author": "Christopher R\u00e9",
+    "matching_authors": [
+      "Christopher R\u00e9"
+    ]
+  },
+  {
+    "title": "How to Instruct Your Robot: Dense Language Annotations Power Robot Policy Learning",
+    "authors": [
+      "Bosung Kim",
+      "Ruiyi Wang",
+      "David Acuna",
+      "Jaehun Jung",
+      "Alexander Trevithick",
+      "Brandon Cui",
+      "Yejin Choi",
+      "Prithviraj Ammanabrolu"
+    ],
+    "summary": "Scaling robot policy learning is bottlenecked by the cost of collecting demonstrations, while language annotations for existing demonstrations are comparatively cheap. We study language density as a lever for extracting more signal from a fixed robot or egocentric-video corpus. We introduce DeMiAn (Dense Multi-aspect Annotation), a two-stage approach that first re-labels demonstration segments with VLM-generated annotations along four complementary aspects: physical motion, scene composition, arm pose, and reasoning. A learned instructor then maps a task description and initial scene snapshot to a task-appropriate annotation at deployment, running asynchronously so generation latency is hidden behind policy execution. Across over 1M robot manipulation clips and 50K EgoVerse human-egocentric videos, DeMiAn improves both a vision-language-action policy and a video-based world-action model without collecting new demonstrations. On RoboCasa, the instructor raises success by 5 points over a task-only baseline and comes within 3 points of a per-task oracle. No fixed annotation aspect dominates across tasks, showing that selecting the right dense language matters. DeMiAn also improves composite-task and out-of-distribution performance, and shifts the compute-performance frontier in both mid-training and post-training after accounting for annotation-generation FLOPs. These results position dense re-annotation as a practical scaling lever for robot policy learning.",
+    "published": "May 16",
+    "pdf_url": "https://arxiv.org/pdf/2605.17077v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.17077v1",
+    "queried_author": "Yejin Choi",
+    "matching_authors": [
+      "Yejin Choi"
+    ]
+  },
+  {
+    "title": "CHI-Bench: Can AI Agents Automate End-to-End, Long-Horizon, Policy-Rich Healthcare Workflows?",
+    "authors": [
+      "Haolin Chen",
+      "Deon Metelski",
+      "Leon Qi",
+      "Tao Xia",
+      "Joonyul Lee",
+      "Steve Brown",
+      "Kevin Riley",
+      "Frank Wang",
+      "T. Y. Alvin Liu",
+      "Hank Capps MD",
+      "Zeyu Tang",
+      "Xiangchen Song",
+      "Lingjing Kong",
+      "Fan Feng",
+      "Tianyi Zeng",
+      "Zhiwei Liu",
+      "Zixian Ma",
+      "Hang Jiang",
+      "Fangli Geng",
+      "Yuan Yuan",
+      "Chenyu You",
+      "Qingsong Wen",
+      "Hua Wei",
+      "Yanjie Fu",
+      "Yue Zhao",
+      "Carl Yang",
+      "Biwei Huang",
+      "Kun Zhang",
+      "Caiming Xiong",
+      "Sanmi Koyejo",
+      "Eric P. Xing",
+      "Philip S. Yu",
+      "Weiran Yao"
+    ],
+    "summary": "End-to-end automation of realistic healthcare operations stresses three capabilities underrepresented in current benchmarks: policy density, decisions must be grounded in a large library of medical, insurance, and operational rules; Multi-role composition: a single task requires the agent to play multiple roles with handoffs; and multilateral interaction: intermediate workflow steps are multi-turn dialogs, such as peer-to-peer review and patient outreach. We introduce $\u03c7$-Bench, a benchmark of long-horizon healthcare workflows across three domains: provider prior authorization, payer utilization management, and care management. Each task hands the agent a clinical case in a high-fidelity simulator of 20 healthcare apps exposed via 87 MCP tools, which it must drive to a terminal status through tool calls and writing the role's artifacts, guided by a 1,290+ document managed-care operations handbook skill. Across 30 agent harness/models configurations, the best agent resolves only 28.0% of tasks, no agent clears 20% on strict pass^3, and executing all tasks in a single session slumps the performance to 3.8%. These results raise the hypothesis that similar gaps are likely to surface in other policy-dense, role-composed, irreversible enterprise domains.",
+    "published": "May 15",
+    "pdf_url": "https://arxiv.org/pdf/2605.16679v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.16679v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
     "title": "DeltaPrompts: Escaping the Zero-Delta Trap in Multimodal Distillation",
     "authors": [
       "Jaehun Jung",
@@ -412,8 +522,8 @@
     ],
     "summary": "Following the recent achievement of gold-medal performance on the IMO by frontier LLMs, the community is searching for the next meaningful and challenging target for measuring LLM reasoning. Whereas olympiad-style problems measure step-by-step reasoning alone, research-level problems use such reasoning to advance the frontier of mathematical knowledge itself, emerging as a compelling alternative. Yet research-level math benchmarks remain scarce because such problems are difficult to source (e.g., Riemann Bench and FrontierMath-Tier 4 contain 25 and 50 problems, respectively). To support reliable evaluation of next-generation frontier models, we introduce Soohak, a 439-problem benchmark newly authored from scratch by 64 mathematicians. Soohak comprises two subsets. On the Challenge subset, frontier models including Gemini-3-Pro, GPT-5, and Claude-Opus-4.5 reach 30.4%, 26.4%, and 10.4% respectively, leaving substantial headroom, while leading open-weight models such as Qwen3-235B, GPT-OSS-120B, and Kimi-2.5 remain below 15%. Notably, beyond standard problem solving, Soohak introduces a refusal subset that probes a capability intrinsic to research mathematics: recognizing ill-posed problems and pausing rather than producing confident but unjustified answers. On this subset, no model exceeds 50%, identifying refusal as a new optimization target that current models do not directly address. To prevent contamination, the dataset will be publicly released in late 2026, with model evaluations available upon request in the interim.",
     "published": "May 09",
-    "pdf_url": "https://arxiv.org/pdf/2605.09063v1",
-    "arxiv_url": "http://arxiv.org/abs/2605.09063v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.09063v2",
+    "arxiv_url": "http://arxiv.org/abs/2605.09063v2",
     "queried_author": "Akari Asai",
     "matching_authors": [
       "Akari Asai",
@@ -5823,10 +5933,10 @@
       "Nicholas Tomlin",
       "Greg Durrett"
     ],
-    "summary": "LLMs are increasingly being used for complex problems which are not necessarily resolved in a single response, but require interacting with an environment to acquire information. In these scenarios, LLMs must reason about inherent cost-uncertainty tradeoffs in when to stop exploring and commit to an answer. For instance, on a programming task, an LLM should test a generated code snippet if it is uncertain about the correctness of that code; the cost of writing a test is nonzero, but typically lower than the cost of making a mistake. In this work, we show that we can induce LLMs to explicitly reason about balancing these cost-uncertainty tradeoffs, then perform more optimal environment exploration. We formalize multiple tasks, including information retrieval and coding, as sequential decision-making problems under uncertainty. Each problem has latent environment state that can be reasoned about via a prior which is passed to the LLM agent. We introduce a framework called Calibrate-Then-Act (CTA), where we feed the LLM this additional context to enable it to act more optimally. This improvement is preserved even under RL training of both the baseline and CTA. Our results on information-seeking QA and on a simplified coding task show that making cost-benefit tradeoffs explicit with CTA can help agents discover more optimal decision-making strategies.",
+    "summary": "LLM agents are deployed in environments where they must interact to acquire information. In these scenarios, the agent must reason about inherent cost-uncertainty tradeoffs in how to act, such as when to stop exploring and commit to an answer. For instance, on a programming task, an agent might run the code it generates, or it might generate tests for that code snippet; the cost of writing and running a test is nonzero, but typically lower than the cost of running buggy code. In this work, we show that we can induce LLM agents to explicitly reason about balancing these cost-uncertainty tradeoffs, then act more optimally in their environments. We formalize multiple tasks, including retrieval-augmented QA and a file reading coding task, as sequential decision-making problems under uncertainty. Each problem has latent environment state that impacts the agent's performance. We introduce a framework called Calibrate-Then-Act (CTA), where we pass the agent an inferred prior about this environment state to enable it to act more optimally. This information qualitatively changes agent behavior, and adds environment sensitivity to the agent which is not learned via standard RL training. Our results on a synthetic task, QA, and file reading show that making cost-benefit tradeoffs explicit with CTA helps agents discover more optimal decision-making strategies.",
     "published": "Feb 18",
-    "pdf_url": "https://arxiv.org/pdf/2602.16699v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.16699v2",
+    "pdf_url": "https://arxiv.org/pdf/2602.16699v3",
+    "arxiv_url": "http://arxiv.org/abs/2602.16699v3",
     "queried_author": "Greg Durrett",
     "matching_authors": [
       "Greg Durrett"
@@ -5913,8 +6023,8 @@
     ],
     "summary": "LLM-based agents execute real-world workflows via tools and memory. These affordances enable ill-intended adversaries to also use these agents to carry out complex misuse scenarios. Existing agent misuse benchmarks largely test single-prompt instructions, leaving a gap in measuring how agents end up helping with harmful or illegal tasks over multiple turns. We introduce STING (Sequential Testing of Illicit N-step Goal execution), an automated red-teaming framework that constructs a step-by-step illicit plan grounded in a benign persona and iteratively probes a target agent with adaptive follow-ups, using judge agents to track phase completion. We further introduce an analysis framework that models multi-turn red-teaming as a time-to-first-jailbreak random variable, enabling analysis tools like discovery curves, hazard-ratio attribution by attack language, and a new metric: Restricted Mean Jailbreak Discovery. Across AgentHarm scenarios, STING yields substantially higher illicit-task completion than single-turn prompting and chat-oriented multi-turn baselines adapted to tool-using agents. In multilingual evaluations across six non-English settings, we find that attack success and illicit-task completion do not consistently increase in lower-resource languages, diverging from common chatbot findings. Overall, STING provides a practical way to evaluate and stress-test agent misuse in realistic deployment settings, where interactions are inherently multi-turn and often multilingual.",
     "published": "Feb 18",
-    "pdf_url": "https://arxiv.org/pdf/2602.16346v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.16346v2",
+    "pdf_url": "https://arxiv.org/pdf/2602.16346v3",
+    "arxiv_url": "http://arxiv.org/abs/2602.16346v3",
     "queried_author": "Antoine Bosselut",
     "matching_authors": [
       "Antoine Bosselut"
@@ -12261,10 +12371,10 @@
       "Jan Kautz",
       "Yi Dong"
     ],
-    "summary": "Evaluating progress in large language models (LLMs) is often constrained by the challenge of verifying responses, limiting assessments to tasks like mathematics, programming, and short-form question-answering. However, many real-world applications require evaluating LLMs in processing professional documents, synthesizing information, and generating comprehensive reports in response to user queries. We introduce ProfBench: a set of over 7000 response-criterion pairs as evaluated by human-experts with professional knowledge across Physics PhD, Chemistry PhD, Finance MBA and Consulting MBA. We build robust and affordable LLM-Judges to evaluate ProfBench rubrics, by mitigating self-enhancement bias and reducing the cost of evaluation by 2-3 orders of magnitude, to make it fair and accessible to the broader community. Our findings reveal that ProfBench poses significant challenges even for state-of-the-art LLMs, with top-performing models like GPT-5-high achieving only 65.9\\% overall performance. Furthermore, we identify notable performance disparities between proprietary and open-weight models and provide insights into the role that extended thinking plays in addressing complex, professional-domain tasks. Data: https://huggingface.co/datasets/nvidia/ProfBench and Code: https://github.com/NVlabs/ProfBench",
+    "summary": "Evaluating progress in large language models (LLMs) is often constrained by the challenge of verifying responses, limiting assessments to tasks like mathematics, programming, and short-form question-answering. However, many real-world applications require evaluating LLMs in processing professional documents, synthesizing information, and generating comprehensive reports in response to user queries. We introduce ProfBench: a set of over 7000 response-criterion pairs as evaluated by human-experts with professional knowledge across Physics PhD, Chemistry PhD, Finance MBA and Consulting MBA. We build robust and affordable LLM-Judges to evaluate ProfBench rubrics, by mitigating self-enhancement bias and reducing the cost of evaluation by 2-3 orders of magnitude, to make it fair and accessible to the broader community. Our findings reveal that ProfBench poses significant challenges even for state-of-the-art LLMs, with top-performing models like GPT-5-high achieving only 65.9% overall performance. Furthermore, we identify notable performance disparities between proprietary and open-weight models and provide insights into the role that extended thinking plays in addressing complex, professional-domain tasks. Data: https://huggingface.co/datasets/nvidia/ProfBench and Code: https://github.com/NVlabs/ProfBench and Leaderboard: https://huggingface.co/spaces/nvidia/ProfBench",
     "published": "Oct 21",
-    "pdf_url": "https://arxiv.org/pdf/2510.18941v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.18941v1",
+    "pdf_url": "https://arxiv.org/pdf/2510.18941v2",
+    "arxiv_url": "http://arxiv.org/abs/2510.18941v2",
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
@@ -12704,109 +12814,6 @@
     "queried_author": "Mohammad Shoeybi",
     "matching_authors": [
       "Mohammad Shoeybi"
-    ]
-  },
-  {
-    "title": "Holistic Agent Leaderboard: The Missing Infrastructure for AI Agent Evaluation",
-    "authors": [
-      "Sayash Kapoor",
-      "Benedikt Stroebl",
-      "Peter Kirgis",
-      "Nitya Nadgir",
-      "Zachary S Siegel",
-      "Boyi Wei",
-      "Tianci Xue",
-      "Ziru Chen",
-      "Felix Chen",
-      "Saiteja Utpala",
-      "Franck Ndzomga",
-      "Dheeraj Oruganty",
-      "Sophie Luskin",
-      "Kangheng Liu",
-      "Botao Yu",
-      "Amit Arora",
-      "Dongyoon Hahm",
-      "Harsh Trivedi",
-      "Huan Sun",
-      "Juyong Lee",
-      "Tengjun Jin",
-      "Yifan Mai",
-      "Yifei Zhou",
-      "Yuxuan Zhu",
-      "Rishi Bommasani",
-      "Daniel Kang",
-      "Dawn Song",
-      "Peter Henderson",
-      "Yu Su",
-      "Percy Liang",
-      "Arvind Narayanan"
-    ],
-    "summary": "AI agents have been developed for complex real-world tasks from coding to customer service. But AI agent evaluations suffer from many challenges that undermine our understanding of how well agents really work. We introduce the Holistic Agent Leaderboard (HAL) to address these challenges. We make three main contributions. First, we provide a standardized evaluation harness that orchestrates parallel evaluations across hundreds of VMs, reducing evaluation time from weeks to hours while eliminating common implementation bugs. Second, we conduct three-dimensional analysis spanning models, scaffolds, and benchmarks. We validate the harness by conducting 21,730 agent rollouts across 9 models and 9 benchmarks in coding, web navigation, science, and customer service with a total cost of about $40,000. Our analysis reveals surprising insights, such as higher reasoning effort reducing accuracy in the majority of runs. Third, we use LLM-aided log inspection to uncover previously unreported behaviors, such as searching for the benchmark on HuggingFace instead of solving a task, or misusing credit cards in flight booking tasks. We share all agent logs, comprising 2.5B tokens of language model calls, to incentivize further research into agent behavior. By standardizing how the field evaluates agents and addressing common pitfalls in agent evaluation, we hope to shift the focus from agents that ace benchmarks to agents that work reliably in the real world.",
-    "published": "Oct 13",
-    "pdf_url": "https://arxiv.org/pdf/2510.11977v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.11977v1",
-    "queried_author": "Percy Liang",
-    "matching_authors": [
-      "Percy Liang",
-      "Peter Henderson"
-    ]
-  },
-  {
-    "title": "Data or Language Supervision: What Makes CLIP Better than DINO?",
-    "authors": [
-      "Yiming Liu",
-      "Yuhui Zhang",
-      "Dhruba Ghosh",
-      "Ludwig Schmidt",
-      "Serena Yeung-Levy"
-    ],
-    "summary": "CLIP outperforms self-supervised models like DINO as vision encoders for vision-language models (VLMs), but it remains unclear whether this advantage stems from CLIP's language supervision or its much larger training data. To disentangle these factors, we pre-train CLIP and DINO under controlled settings -- using the same architecture, dataset, and training configuration -- achieving similar ImageNet accuracy. Embedding analysis shows that CLIP captures high-level semantics (e.g., object categories, text), while DINO is more responsive to low-level features like colors and styles. When integrated into VLMs and evaluated on 20 VQA benchmarks, CLIP excels at text-intensive tasks, while DINO slightly outperforms on vision-centric ones. Variants of language supervision (e.g., sigmoid loss, pre-trained language encoders) yield limited gains. Our findings provide scientific insights into vision encoder design and its impact on VLM performance.",
-    "published": "Oct 13",
-    "pdf_url": "https://arxiv.org/pdf/2510.11835v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.11835v1",
-    "queried_author": "Ludwig Schmidt",
-    "matching_authors": [
-      "Ludwig Schmidt"
-    ]
-  },
-  {
-    "title": "Learning to Make MISTAKEs: Modeling Incorrect Student Thinking And Key Errors",
-    "authors": [
-      "Alexis Ross",
-      "Jacob Andreas"
-    ],
-    "summary": "Research on reasoning in language models (LMs) predominantly focuses on improving the correctness of their outputs. But some important applications require modeling reasoning patterns that are incorrect. For example, automated systems that can reason about and simulate student errors are useful for providing real-time feedback in the classroom or offline practice for educators-in-training. This paper presents a new method, MISTAKE, that (1) constructs high-quality synthetic examples of reasoning errors by leveraging cycle consistency between incorrect answers and latent misconceptions; and (2) uses the generated data to learn models for student simulation, misconception classification, and answer generation. We evaluate MISTAKE on three educational tasks and find that it results in (1) higher accuracy when simulating incorrect student answers based on specific misconceptions, (2) increased performance inferring latent misconceptions from observed incorrect answers, and (3) higher alignment with expert-written distractor answers when generating incorrect answers (e.g., for multiple-choice tests).",
-    "published": "Oct 13",
-    "pdf_url": "https://arxiv.org/pdf/2510.11502v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.11502v1",
-    "queried_author": "Jacob Andreas",
-    "matching_authors": [
-      "Jacob Andreas"
-    ]
-  },
-  {
-    "title": "Emergent Misalignment via In-Context Learning: Narrow in-context examples can produce broadly misaligned LLMs",
-    "authors": [
-      "Nikita Afonin",
-      "Nikita Andriianov",
-      "Vahagn Hovhannisyan",
-      "Nikhil Bageshpura",
-      "Kyle Liu",
-      "Kevin Zhu",
-      "Sunishchal Dev",
-      "Ashwinee Panda",
-      "Oleg Rogov",
-      "Elena Tutubalina",
-      "Alexander Panchenko",
-      "Mikhail Seleznyov"
-    ],
-    "summary": "Recent work has shown that narrow finetuning can produce broadly misaligned LLMs, a phenomenon termed emergent misalignment (EM). While concerning, these findings were limited to finetuning and activation steering, leaving out in-context learning (ICL). We therefore ask: does EM emerge in ICL? We find that it does: across four model families (Gemini, Kimi-K2, Grok, and Qwen), narrow in-context examples cause models to produce misaligned responses to benign, unrelated queries. With 16 in-context examples, EM rates range from 1% to 24% depending on model and domain, appearing with as few as 2 examples. Neither larger model scale nor explicit reasoning provides reliable protection, and larger models are typically even more susceptible. Next, we formulate and test a hypothesis, which explains in-context EM as conflict between safety objectives and context-following behavior. Consistent with this, instructing models to prioritize safety reduces EM while prioritizing context-following increases it. These findings establish ICL as a previously underappreciated vector for emergent misalignment that resists simple scaling-based solutions.",
-    "published": "Oct 13",
-    "pdf_url": "https://arxiv.org/pdf/2510.11288v4",
-    "arxiv_url": "http://arxiv.org/abs/2510.11288v4",
-    "queried_author": "Ashwinee Panda",
-    "matching_authors": [
-      "Ashwinee Panda"
     ]
   }
 ]
