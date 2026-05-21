@@ -235,8 +235,8 @@
     ],
     "summary": "Transformer training systems are built around dense linear algebra, yet a nontrivial fraction of end-to-end time is spent on surrounding memory-bound operators. Normalization, activations, residual updates, reductions, and related computations repeatedly move large intermediate tensors through global memory while performing little arithmetic, making data movement an increasingly important bottleneck in otherwise highly optimized training stacks. We introduce CODA, a GPU kernel abstraction that expresses these computations as GEMM-plus-epilogue programs. CODA is based on the observation that many Transformer operators exposed as separate framework kernels can be algebraically reparameterized to execute while a GEMM output tile remains on chip, before it is written to memory. The abstraction fixes the GEMM mainloop and exposes a small set of composable epilogue primitives for scaling, reductions, pairwise transformations, and accumulation. This constrained interface preserves the performance structure of expert-written GEMMs while remaining expressive enough to cover nearly all non-attention computation in the forward and backward pass of a standard Transformer block. Across representative Transformer workloads, both human- and LLM-authored CODA kernels achieve high performance, suggesting that GEMM-plus-epilogue programming offers a practical path toward combining framework-level productivity with hardware-level efficiency.",
     "published": "May 19",
-    "pdf_url": "https://arxiv.org/pdf/2605.19269v1",
-    "arxiv_url": "http://arxiv.org/abs/2605.19269v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.19269v2",
+    "arxiv_url": "http://arxiv.org/abs/2605.19269v2",
     "queried_author": "Tri Dao",
     "matching_authors": [
       "Tri Dao",
