@@ -1,5 +1,139 @@
 [
   {
+    "title": "Vector Policy Optimization: Training for Diversity Improves Test-Time Search",
+    "authors": [
+      "Ryan Bahlous-Boldi",
+      "Isha Puri",
+      "Idan Shenfeld",
+      "Akarsh Kumar",
+      "Mehul Damani",
+      "Sebastian Risi",
+      "Omar Khattab",
+      "Zhang-Wei Hong",
+      "Pulkit Agrawal"
+    ],
+    "summary": "Language models must now generalize out of the box to novel environments and work inside inference-scaling search procedures, such as AlphaEvolve, that select rollouts with a variety of task-specific reward functions. Unfortunately, the standard paradigm of LLM post-training optimizes a pre-specified scalar reward, often leading current LLMs to produce low-entropy response distributions and thus to struggle at displaying the diversity that inference-time search will require. We propose Vector Policy Optimization (VPO), an RL algorithm that explicitly trains policies to anticipate diverse downstream reward functions and to produce diverse solutions. VPO exploits that rewards are often vector-valued in practice, like per-test-case correctness in code generation or, say, multiple different user personas or reward models. VPO is essentially a drop-in replacement for the GRPO advantage estimator, but it trains the LLM to output a set of solutions where individual solutions specialize to different trade-offs in the vector reward space. Across four tasks, VPO matches or beats the strongest scalar RL baselines on test-time search (e.g. pass@k and best@k), with the gap widening as the search budget grows. For evolutionary search, VPO models unlock problems that GRPO models cannot solve at all. As test-time search becomes more standardized, optimizing for diversity may need to become the default post-training objective.",
+    "published": "May 21",
+    "pdf_url": "https://arxiv.org/pdf/2605.22817v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.22817v1",
+    "queried_author": "Omar Khattab",
+    "matching_authors": [
+      "Omar Khattab"
+    ]
+  },
+  {
+    "title": "Gated DeltaNet-2: Decoupling Erase and Write in Linear Attention",
+    "authors": [
+      "Ali Hatamizadeh",
+      "Yejin Choi",
+      "Jan Kautz"
+    ],
+    "summary": "Linear attention replaces the unbounded cache of softmax attention with a fixed-size recurrent state, reducing sequence mixing to linear time and decoding to constant memory. The hard part is not just what to forget, but how to edit this compressed memory without scrambling existing associations. Delta-rule models subtract the current read before writing a new value, and Kimi Delta Attention (KDA) sharpens forgetting with channel-wise decay. But the active edit still uses a single scalar gate to control two different things: how much old content to erase on the key side and how much new content to commit on the value side. We introduce Gated DeltaNet-2, which generalizes both Gated DeltaNet and KDA by inheriting adaptive forgetting and channel-wise decay while addressing their shared limitation, the scalar tie between erasing and writing. Gated Delta Rule-2 separates these roles with a channel-wise erase gate b_t and a channel-wise write gate w_t, reducing to KDA when both gates collapse to the same scalar and to Gated DeltaNet when the decay also collapses. We derive a fast-weight update view, a chunkwise WY algorithm with channel-wise decay absorbed into asymmetric erase factors, and a gate-aware backward pass that preserves efficient parallel training. At 1.3B parameters trained on 100B FineWeb-Edu tokens, Gated DeltaNet-2 achieves the strongest overall results among Mamba-2, Gated DeltaNet, KDA, and Mamba-3 variants across language modeling, commonsense reasoning, and retrieval. Its advantage is most pronounced on long-context RULER needle-in-a-haystack benchmarks, wher...",
+    "published": "May 21",
+    "pdf_url": "https://arxiv.org/pdf/2605.22791v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.22791v1",
+    "queried_author": "Yejin Choi",
+    "matching_authors": [
+      "Yejin Choi"
+    ]
+  },
+  {
+    "title": "Evaluating Commercial AI Chatbots as News Intermediaries",
+    "authors": [
+      "Mirac Suzgun",
+      "Emily Shen",
+      "Federico Bianchi",
+      "Alexander Spangher",
+      "Thomas Icard",
+      "Daniel E. Ho",
+      "Dan Jurafsky",
+      "James Zou"
+    ],
+    "summary": "AI chatbots are rapidly shaping how people encounter the news, yet no prior study has systematically measured how accurately these systems, with their proprietary search integrations and retrieval-synthesis pipelines, handle emerging facts across languages and regions. We present a 14-day (February 9-22, 2026) evaluation of six AI chatbots (Gemini 3 Flash and Pro, Grok 4, Claude 4.5 Sonnet, GPT-5 and GPT-4o mini) on 2,100 factual questions derived from same-day BBC News reporting across six regional services (US & Canada, Arabic, Afrique, Hindi, Russian, Turkish). The best systems achieve over 90% multiple-choice accuracy on questions about events reported hours earlier. The same systems, however, lose 11-13% under free-response evaluation, and 16-17% across the cohort. We further characterize three failure patterns. First, every model achieves its lowest accuracy on Hindi (79% vs. 89-91% elsewhere) and citations indicate an Anglophone retrieval bias (e.g., models answering Hindi queries cite English Wikipedia more than any Hindi outlet). Second, retrieval, not reasoning, failures drive over 70% of all errors. When models retrieve a correct source, they often extract the correct answer; the problem is to land on the right source in the first place. Third, models achieving 88-96% accuracy on well-formed questions drop to 19-70% when questions contain subtle false premises, with the most vulnerable model accepting fabricated facts 64% of the time. We also identify a detection-accuracy paradox: the best false-premise detector ranks second in adversarial accuracy (abstention ra...",
+    "published": "May 21",
+    "pdf_url": "https://arxiv.org/pdf/2605.22785v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.22785v1",
+    "queried_author": "Dan Jurafsky",
+    "matching_authors": [
+      "Dan Jurafsky"
+    ]
+  },
+  {
+    "title": "The Distillation Game: Adaptive Attacks & Efficient Defenses",
+    "authors": [
+      "Youssef Allouah",
+      "Mahdi Haghifam",
+      "Sanmi Koyejo",
+      "Reza Shokri"
+    ],
+    "summary": "Distillation attacks create a deployment trade-off for model providers: the same outputs that make a model more useful can also make it easier to imitate. We study this trade-off through a minimax game between a utility-constrained teacher and an adaptive student. Our framework yields tractable one-sided response rules: an adaptive evaluation rule in which the student reweights high-value examples, and a teacher-side defense template that suppresses outputs most useful for distillation. From a cheap proxy for example value, we derive Product-of-Experts (PoE), a simple forward-pass-only defense that combines the teacher with a proxy student during generation. Empirically, adaptive evaluation reveals a large passive--adaptive gap: on state-of-the-art defenses, adaptive students recover substantially more capability than passive evaluation suggests on GSM8K and MATH. Under this stronger evaluation, the apparent robustness gap between expensive defenses and PoE narrows considerably, while PoE remains substantially cheaper and preserves higher-quality reasoning traces. Overall, our results suggest that strong distillation remains difficult to stop, and that progress on antidistillation should be judged against adaptive students rather than passive ones. Our code is available at: https://github.com/ysfalh/distillation-game.",
+    "published": "May 21",
+    "pdf_url": "https://arxiv.org/pdf/2605.22737v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.22737v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "The efficiency-gain illusion: People underestimate the rate of AI use and overestimate its benefits on simple tasks",
+    "authors": [
+      "Sunny Yu",
+      "Myra Cheng",
+      "Ahmad Jabbar",
+      "Ilia Sucholutsky",
+      "Katherine M. Collins",
+      "Dan Jurafsky",
+      "Robert D. Hawkins"
+    ],
+    "summary": "People are increasingly turning to AI assistance for simple tasks, e.g., arithmetic, spell-check, and answering simple questions. But does AI assistance actually save users time and effort? We investigate people's propensity to use AI for cognitively simple tasks and assess whether their reliance is well-calibrated. Across three pre-registered user studies (N = 2691), we find that people frequently choose to use AI even when doing so is inefficient (i.e. provides no meaningful time or effort savings). We identify systematic miscalibration at two levels: (1) a self-estimate miscalibration where people on average believe that they are using AI less than they actually are, and (2) efficiency-gain illusions where people overestimate how much time and effort savings AI use affords. We also identify a session-level carryover effect where a participant's prior AI use leads to further AI adoption and entrenches their miscalibration about time savings. Our results shed light on the mechanisms and biases underlying people's choice of whether to use AI as well as the risk of an overreliance feedback loop.",
+    "published": "May 21",
+    "pdf_url": "https://arxiv.org/pdf/2605.22687v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.22687v1",
+    "queried_author": "Dan Jurafsky",
+    "matching_authors": [
+      "Dan Jurafsky"
+    ]
+  },
+  {
+    "title": "Boundary-targeted Membership Inference Attacks on Safety Classifiers",
+    "authors": [
+      "Anthony Hughes",
+      "Alexander Goldberg",
+      "Prince Jha",
+      "Adam Perer",
+      "Nikolaos Aletras",
+      "Niloofar Mireshghallah"
+    ],
+    "summary": "Safety classifiers are essential safeguards within generative AI systems, filtering harmful content or identifying at-risk users when interacting with large language models. Despite their necessity, these models are trained on sensitive datasets including discussions of self-harm and mental health, raising important, yet poorly understood, privacy concerns. Membership inference attacks (MIAs) allow adversaries to infer membership of examples used to train models. In this work, we hypothesize that identifying the examples on which the classifier is least confident are informative for an adversary to infer membership. This reflects a localized failure of generalization, where the model relies on memorization to resolve ambiguity in the training set. To investigate this, we introduce a new boundary-targeted selection strategy that identifies low confidence examples that amplify the signal of an examples membership within a training set. Our experimental results show that an adversary can recover 19\\% of the conversations a safety classifier flagged as indicating user distress, at a 5\\% false-positive rate, on a classifier fine-tuned for detecting a user who may require emotional support. This is $3.5$ times more than attacking using state-of-the-art MIA methods alone. Finally, we characterize the boundary laying examples and show that content-based filtering is ineffective for protection, and existing noise strategies can effectively mitigate susceptibility of these examples.",
+    "published": "May 21",
+    "pdf_url": "https://arxiv.org/pdf/2605.22373v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.22373v1",
+    "queried_author": "Niloofar Mireshghallah",
+    "matching_authors": [
+      "Niloofar Mireshghallah"
+    ]
+  },
+  {
+    "title": "SMDD-Bench: Can LLMs Solve Real-World Small Molecule Drug Design Tasks?",
+    "authors": [
+      "Kevin Han",
+      "Renfei Zhang",
+      "Kathy Wei",
+      "Hamed Mahdavi",
+      "Niloofar Mireshghallah",
+      "Amir Farimani"
+    ],
+    "summary": "LLM agents have incredible potential for scientific discovery applications. However, the performance of LLM agents on real-world, small molecule drug design (SMDD) tasks across diverse chemistries and targets is unclear. Current evaluation methods are either ad hoc, too simple for real-world discovery, limited in scale, or restricted to single-turn question answering. In effort to standardize the evaluation of LLM agents on small molecule design, we introduce SMDD-Bench, a challenging, multi-turn, long-horizon agentic benchmark consisting of 502 guaranteed-solvable task instances spanning 5 task types: 2D Pharmacophore Identification, Interaction Point Discovery, Scaffold Hopping, Lead Optimization, and Fragment Assembly. SMDD-Bench tasks span a wide region of chemical space and involve 102 unique protein targets. Completely solving the benchmark would require having strong chemical and biological reasoning and 3D intuition, understanding specialized tool use, and displaying planning expertise over a limited number of oracle calls. We benchmark 7 frontier open and closed source LLMs and find even the most performant LLM, GPT5.4, solves only 40.2\\% of tasks. We hope SMDD-Bench provides a standardized testbed to invigorate the field towards training and evaluating LLM agents for fully autonomous computational drug design. We host a public leaderboard at smddbench.com .",
+    "published": "May 20",
+    "pdf_url": "https://arxiv.org/pdf/2605.21740v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.21740v1",
+    "queried_author": "Niloofar Mireshghallah",
+    "matching_authors": [
+      "Niloofar Mireshghallah"
+    ]
+  },
+  {
     "title": "On the limits and opportunities of AI reviewers: Reviewing the reviews of Nature-family papers with 45 expert scientists",
     "authors": [
       "Seungone Kim",
@@ -278,8 +412,8 @@
     ],
     "summary": "Post-training has split large language model (LLM) alignment into two largely disconnected tracks. Online reinforcement learning (RL) with verifiable rewards drives emergent reasoning on math and code but depends on a programmatic verifier that cannot reach open-ended tasks, while preference optimization handles open-ended generation yet forgoes the continuous exploration that powers online RL. Closing this gap requires a verifier for open-ended quality, but a scalar reward model is the wrong shape for the job. Quality is multi-dimensional, and any scalar score is an incomplete proxy that lets online RL collapse onto whichever axis the score is most sensitive to. We turn instead to the General Preference Model (GPM), which embeds responses into $k$ skew-symmetric subspaces and represents preference as a structured, intransitivity-aware comparison. Building on this, we propose General Preference Reinforcement Learning (GPRL), which carries the $k$-way structure through to the policy update. GPRL computes per-dimension group-relative advantages, normalizes each on its own scale so no axis can dominate, and aggregates them with context-dependent eigenvalues. The same structure powers a closed-loop drift monitor that detects single-axis exploitation and corrects it on the fly by reweighting dimensions and tightening the trust region. Starting from $\\texttt{Llama-3-8B-Instruct}$, GPRL reaches a length-controlled win rate of $56.51\\%$ on AlpacaEval~2.0 while also outperforming SimPO and SPPO on Arena-Hard, MT-Bench, and WildBench by resisting reward hacking across extended traini...",
     "published": "May 18",
-    "pdf_url": "https://arxiv.org/pdf/2605.18721v2",
-    "arxiv_url": "http://arxiv.org/abs/2605.18721v2",
+    "pdf_url": "https://arxiv.org/pdf/2605.18721v3",
+    "arxiv_url": "http://arxiv.org/abs/2605.18721v3",
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
@@ -6485,8 +6619,8 @@
     ],
     "summary": "Large language model (LLM) alignment relies on complex reward signals that often obscure the specific behaviors being incentivized, creating critical risks of misalignment and reward hacking. Existing interpretation methods typically rely on pre-defined rubrics, risking the omission of \"unknown unknowns\", or fail to identify objectives that comprehensively cover and are causal to the model behavior. To address these limitations, we introduce Obj-Disco, a framework that automatically decomposes an alignment reward signal into a sparse, weighted combination of human-interpretable natural language objectives. Our approach utilizes an iterative greedy algorithm to analyze behavioral changes across training checkpoints, identifying and validating candidate objectives that best explain the residual reward signal. Extensive evaluations across diverse tasks, model sizes, and alignment algorithms demonstrate the framework's robustness. Experiments with popular open-source reward models show that the framework consistently captures > 90% of reward behavior, a finding further corroborated by human evaluation. Additionally, a case study on alignment with an open-source reward model reveals that Obj-Disco can successfully identify latent misaligned incentives that emerge alongside intended behaviors. Our work provides a crucial tool for uncovering the implicit objectives in LLM alignment, paving the way for more transparent and safer AI development.",
     "published": "Feb 17",
-    "pdf_url": "https://arxiv.org/pdf/2602.15338v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.15338v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.15338v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.15338v2",
     "queried_author": "Carlos Guestrin",
     "matching_authors": [
       "Carlos Guestrin",
@@ -11263,10 +11397,10 @@
       "Azalia Mirhoseini",
       "Christopher R\u00e9"
     ],
-    "summary": "Large language model (LLM) queries are predominantly processed by frontier models in centralized cloud infrastructure. Rapidly growing demand strains this paradigm, and cloud providers struggle to scale infrastructure at pace. Two advances enable us to rethink this paradigm: small LMs (<=20B active parameters) now achieve competitive performance to frontier models on many tasks, and local accelerators (e.g., Apple M4 Max) run these models at interactive latencies. This raises the question: can local inference viably redistribute demand from centralized infrastructure? Answering this requires measuring whether local LMs can accurately answer real-world queries and whether they can do so efficiently enough to be practical on power-constrained devices (i.e., laptops). We propose intelligence per watt (IPW), task accuracy divided by unit of power, as a metric for assessing capability and efficiency of local inference across model-accelerator pairs. We conduct a large-scale empirical study across 20+ state-of-the-art local LMs, 8 accelerators, and a representative subset of LLM traffic: 1M real-world single-turn chat and reasoning queries. For each query, we measure accuracy, energy, latency, and power. Our analysis reveals $3$ findings. First, local LMs can accurately answer 88.7% of single-turn chat and reasoning queries with accuracy varying by domain. Second, from 2023-2025, IPW improved 5.3x and local query coverage rose from 23.2% to 71.3%. Third, local accelerators achieve at least 1.4x lower IPW than cloud accelerators running identical models, revealing significant head...",
+    "summary": "Large language model (LLM) queries are predominantly processed by frontier models in centralized cloud infrastructure. Demand growth strains this paradigm faster than providers can scale. Two advances create an opportunity to rethink it: small, local LMs (<=20B active parameters) now achieve competitive performance to frontier models on many tasks, and local accelerators (e.g., Apple M4 Max) can host these models at interactive latencies. This raises the question: can local inference viably redistribute demand from centralized infrastructure? This requires measuring both whether local LMs can accurately answer real-world queries and whether they can do so efficiently on power-constrained devices (e.g., laptops). We propose intelligence per watt (IPW), task accuracy per unit of power, as a unified metric for the capability and efficiency of local inference across model-accelerator configurations. We evaluate 20+ state-of-the-art local LMs, 8 hardware accelerators (local and cloud), and 1M real-world single-turn chat and reasoning queries. For each query, we measure accuracy (local LM win rate against frontier models), energy, latency, and power. We find three key results. First, local LMs successfully answer 88.7% of these queries, with accuracy varying by domain. Second, longitudinal analysis from 2023-2025 shows IPW improved 5.3x, driven by both algorithmic and accelerator advances, with locally-serviceable query coverage rising from 23.2% to 71.3%. Third, local accelerators achieve at least 1.4x lower IPW than cloud accelerators running identical models, revealing signifi...",
     "published": "Nov 11",
-    "pdf_url": "https://arxiv.org/pdf/2511.07885v3",
-    "arxiv_url": "http://arxiv.org/abs/2511.07885v3",
+    "pdf_url": "https://arxiv.org/pdf/2511.07885v4",
+    "arxiv_url": "http://arxiv.org/abs/2511.07885v4",
     "queried_author": "Christopher R\u00e9",
     "matching_authors": [
       "Christopher R\u00e9"
@@ -12729,169 +12863,6 @@
     "matching_authors": [
       "Danqi Chen",
       "Karthik Narasimhan"
-    ]
-  },
-  {
-    "title": "Lost in the Maze: Overcoming Context Limitations in Long-Horizon Agentic Search",
-    "authors": [
-      "Howard Yen",
-      "Ashwin Paranjape",
-      "Mengzhou Xia",
-      "Thejas Venkatesh",
-      "Jack Hessel",
-      "Danqi Chen",
-      "Yuhao Zhang"
-    ],
-    "summary": "Long-horizon agentic search requires iteratively exploring the web over long trajectories and synthesizing information across many sources, and is the foundation for enabling powerful applications like deep research systems. In this work, we show that popular agentic search frameworks struggle to scale to long trajectories primarily due to context limitations-they accumulate long, noisy content, hit context window and tool budgets, or stop early. Then, we introduce SLIM (Simple Lightweight Information Management), a simple framework that separates retrieval into distinct search and browse tools, and periodically summarizes the trajectory, keeping context concise while enabling longer, more focused searches. On long-horizon tasks, SLIM achieves comparable performance at substantially lower cost and with far fewer tool calls than strong open-source baselines across multiple base models. Specifically, with o3 as the base model, SLIM achieves 56% on BrowseComp and 31% on HLE, outperforming all open-source frameworks by 8 and 4 absolute points, respectively, while incurring 4-6x fewer tool calls. Finally, we release an automated fine-grained trajectory analysis pipeline and error taxonomy for characterizing long-horizon agentic search frameworks; SLIM exhibits fewer hallucinations than prior systems. We hope our analysis framework and simple tool design inform future long-horizon agents.",
-    "published": "Oct 21",
-    "pdf_url": "https://arxiv.org/pdf/2510.18939v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.18939v1",
-    "queried_author": "Danqi Chen",
-    "matching_authors": [
-      "Danqi Chen"
-    ]
-  },
-  {
-    "title": "Extracting Rule-based Descriptions of Attention Features in Transformers",
-    "authors": [
-      "Dan Friedman",
-      "Adithya Bhaskar",
-      "Alexander Wettig",
-      "Danqi Chen"
-    ],
-    "summary": "Mechanistic interpretability strives to explain model behavior in terms of bottom-up primitives. The leading paradigm is to express hidden states as a sparse linear combination of basis vectors, called features. However, this only identifies which text sequences (exemplars) activate which features; the actual interpretation of features requires subjective inspection of these exemplars. This paper advocates for a different solution: rule-based descriptions that match token patterns in the input and correspondingly increase or decrease the likelihood of specific output tokens. Specifically, we extract rule-based descriptions of SAE features trained on the outputs of attention layers. While prior work treats the attention layers as an opaque box, we describe how it may naturally be expressed in terms of interactions between input and output features, of which we study three types: (1) skip-gram rules of the form \"[Canadian city]... speaks --> English\", (2) absence rules of the form \"[Montreal]... speaks -/-> English,\" and (3) counting rules that toggle only when the count of a word exceeds a certain value or the count of another word. Absence and counting rules are not readily discovered by inspection of exemplars, where manual and automatic descriptions often identify misleading or incomplete explanations. We then describe a simple approach to extract these types of rules automatically from a transformer, and apply it to GPT-2 small. We find that a majority of features may be described well with around 100 skip-gram rules, though absence rules are abundant even as early as th...",
-    "published": "Oct 20",
-    "pdf_url": "https://arxiv.org/pdf/2510.18148v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.18148v1",
-    "queried_author": "Alexander Wettig",
-    "matching_authors": [
-      "Alexander Wettig",
-      "Danqi Chen"
-    ]
-  },
-  {
-    "title": "Train for Truth, Keep the Skills: Binary Retrieval-Augmented Reward Mitigates Hallucinations",
-    "authors": [
-      "Tong Chen",
-      "Akari Asai",
-      "Luke Zettlemoyer",
-      "Hannaneh Hajishirzi",
-      "Faeze Brahman"
-    ],
-    "summary": "Language models often generate factually incorrect information unsupported by their training data, a phenomenon known as extrinsic hallucination. Existing mitigation approaches often degrade performance on open-ended generation and downstream tasks, limiting their practical utility. We propose an online reinforcement learning method using a novel binary retrieval-augmented reward (RAR) to address this tradeoff. Unlike continuous reward schemes, our approach assigns a reward of one only when the model's output is entirely factually correct, and zero otherwise. We evaluate our method on Qwen3 reasoning models across diverse tasks. For open-ended generation, binary RAR achieves a 39.3% reduction in hallucination rates, substantially outperforming both supervised training and continuous-reward RL baselines. In short-form question answering, the model learns calibrated abstention, strategically outputting \"I don't know\" when faced with insufficient parametric knowledge. This yields 44.4% and 21.7% fewer incorrect answers on PopQA and GPQA, respectively. Crucially, these factuality gains come without performance degradation on instruction following, math, or code, whereas continuous-reward RL, despite improving factuality, induces quality regressions.",
-    "published": "Oct 20",
-    "pdf_url": "https://arxiv.org/pdf/2510.17733v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.17733v1",
-    "queried_author": "Akari Asai",
-    "matching_authors": [
-      "Akari Asai",
-      "Hannaneh Hajishirzi",
-      "Luke Zettlemoyer"
-    ]
-  },
-  {
-    "title": "Prompt-MII: Meta-Learning Instruction Induction for LLMs",
-    "authors": [
-      "Emily Xiao",
-      "Yixiao Zeng",
-      "Ada Chen",
-      "Chin-Jou Li",
-      "Amanda Bertsch",
-      "Graham Neubig"
-    ],
-    "summary": "A popular method to adapt large language models (LLMs) to new tasks is in-context learning (ICL), which is effective but incurs high inference costs as context length grows. In this paper we propose a method to perform instruction induction, where we take training examples and reduce them to a compact but descriptive prompt that can achieve performance comparable to ICL over the full training set. Specifically, we propose PROMPT-MII, a reinforcement learning (RL) based framework to meta-learn an instruction induction model that can generate compact instructions on the fly for an arbitrary new dataset. We train on over 3,000 diverse classification datasets from the HuggingFace hub, and evaluate on 90 unseen tasks. PROMPT-MII improves downstream model quality by 4-9 F1 points (10-20% relative), matching ICL performance while requiring 3-13x fewer tokens.",
-    "published": "Oct 19",
-    "pdf_url": "https://arxiv.org/pdf/2510.16932v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.16932v2",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
-    ]
-  },
-  {
-    "title": "VAGEN: Reinforcing World Model Reasoning for Multi-Turn VLM Agents",
-    "authors": [
-      "Kangrui Wang",
-      "Pingyue Zhang",
-      "Zihan Wang",
-      "Yaning Gao",
-      "Linjie Li",
-      "Qineng Wang",
-      "Hanyang Chen",
-      "Chi Wan",
-      "Yiping Lu",
-      "Zhengyuan Yang",
-      "Lijuan Wang",
-      "Ranjay Krishna",
-      "Jiajun Wu",
-      "Li Fei-Fei",
-      "Yejin Choi",
-      "Manling Li"
-    ],
-    "summary": "A key challenge in training Vision-Language Model (VLM) agents, compared to Language Model (LLM) agents, lies in the shift from textual states to complex visual observations. This transition introduces partial observability and demands robust world modeling. We ask: Can VLM agents construct internal world models through explicit visual state reasoning? To address this question, we architecturally enforce and reward the agent's reasoning process via reinforcement learning (RL), formulating it as a Partially Observable Markov Decision Process (POMDP). We find that decomposing the agent's reasoning into State Estimation (\"what is the current state?\") and Transition Modeling (\"what comes next?\") is critical for success, as demonstrated through five reasoning strategies. Our investigation into how agents represent internal beliefs reveals that the optimal representation is task-dependent: Natural Language excels at capturing semantic relationships in general tasks, while Structured formats are indispensable for precise manipulation and control. Building on these insights, we design a World Modeling Reward that provides dense, turn-level supervision for accurate state prediction, and introduce Bi-Level General Advantage Estimation (Bi-Level GAE) for turn-aware credit assignment. Through this form of visual state reasoning, a 3B-parameter model achieves a score of 0.82 across five diverse agent benchmarks, representing a 3$\\times$ improvement over its untrained counterpart (0.21) and outperforming proprietary reasoning models such as GPT-5 (0.75), Gemini 2.5 Pro (0.67) and Claude ...",
-    "published": "Oct 19",
-    "pdf_url": "https://arxiv.org/pdf/2510.16907v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.16907v1",
-    "queried_author": "Ranjay Krishna",
-    "matching_authors": [
-      "Ranjay Krishna",
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "MoReBench: Evaluating Procedural and Pluralistic Moral Reasoning in Language Models, More than Outcomes",
-    "authors": [
-      "Yu Ying Chiu",
-      "Michael S. Lee",
-      "Rachel Calcott",
-      "Brandon Handoko",
-      "Paul de Font-Reaulx",
-      "Paula Rodriguez",
-      "Chen Bo Calvin Zhang",
-      "Ziwen Han",
-      "Udari Madhushani Sehwag",
-      "Yash Maurya",
-      "Christina Q Knight",
-      "Harry R. Lloyd",
-      "Florence Bacus",
-      "Mantas Mazeika",
-      "Bing Liu",
-      "Yejin Choi",
-      "Mitchell L Gordon",
-      "Sydney Levine"
-    ],
-    "summary": "As AI systems progress, we rely more on them to make decisions with us and for us. To ensure that such decisions are aligned with human values, it is imperative for us to understand not only what decisions they make but also how they come to those decisions. Reasoning language models, which provide both final responses and (partially transparent) intermediate thinking traces, present a timely opportunity to study AI procedural reasoning. Unlike math and code problems which often have objectively correct answers, moral dilemmas are an excellent testbed for process-focused evaluation because they allow for multiple defensible conclusions. To do so, we present MoReBench: 1,000 moral scenarios, each paired with a set of rubric criteria that experts consider essential to include (or avoid) when reasoning about the scenarios. MoReBench contains over 23 thousand criteria including identifying moral considerations, weighing trade-offs, and giving actionable recommendations to cover cases on AI advising humans moral decisions as well as making moral decisions autonomously. Separately, we curate MoReBench-Theory: 150 examples to test whether AI can reason under five major frameworks in normative ethics. Our results show that scaling laws and existing benchmarks on math, code, and scientific reasoning tasks fail to predict models' abilities to perform moral reasoning. Models also show partiality towards specific moral frameworks (e.g., Benthamite Act Utilitarianism and Kantian Deontology), which might be side effects of popular training paradigms. Together, these benchmarks advance pr...",
-    "published": "Oct 18",
-    "pdf_url": "https://arxiv.org/pdf/2510.16380v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.16380v1",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "DLER: Doing Length pEnalty Right - Incentivizing More Intelligence per Token via Reinforcement Learning",
-    "authors": [
-      "Shih-Yang Liu",
-      "Xin Dong",
-      "Ximing Lu",
-      "Shizhe Diao",
-      "Mingjie Liu",
-      "Min-Hung Chen",
-      "Hongxu Yin",
-      "Yu-Chiang Frank Wang",
-      "Kwang-Ting Cheng",
-      "Yejin Choi",
-      "Jan Kautz",
-      "Pavlo Molchanov"
-    ],
-    "summary": "Reasoning language models such as OpenAI-o1, DeepSeek-R1, and Qwen achieve strong performance via extended chains of thought but often generate unnecessarily long outputs. Maximizing intelligence per token--accuracy relative to response length--remains an open problem. We revisit reinforcement learning (RL) with the simplest length penalty--truncation--and show that accuracy degradation arises not from the lack of sophisticated penalties but from inadequate RL optimization. We identify three key challenges: (i) large bias in advantage estimation, (ii) entropy collapse, and (iii) sparse reward signal. We address them with Doing Length pEnalty Right (DLER), a training recipe combining batch-wise reward normalization, higher clipping, dynamic sampling, and a simple truncation length penalty. DLER achieves state-of-the-art accuracy--efficiency trade-offs, cutting output length by over 70 percent while surpassing all previous baseline accuracy. It also improves test-time scaling: compared to DeepSeek-R1-7B, DLER-7B generates multiple concise responses in parallel with 28 percent higher accuracy and lower latency. We further introduce Difficulty-Aware DLER, which adaptively tightens truncation on easier questions for additional efficiency gains. We also propose an update-selective merging method that preserves baseline accuracy while retaining the concise reasoning ability of the DLER model, which is useful for scenarios where RL training data is scarce.",
-    "published": "Oct 16",
-    "pdf_url": "https://arxiv.org/pdf/2510.15110v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.15110v1",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
     ]
   }
 ]
