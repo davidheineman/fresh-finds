@@ -1,5 +1,25 @@
 [
   {
+    "title": "Cognitive offloading and the speedup illusion in human-AI interaction",
+    "authors": [
+      "Sunny Yu",
+      "Myra Cheng",
+      "Ahmad Jabbar",
+      "Ilia Sucholutsky",
+      "Katherine M. Collins",
+      "Dan Jurafsky",
+      "Robert D. Hawkins"
+    ],
+    "summary": "Large language models (LLMs) have the potential to boost human productivity by speeding up task completion -- provided users know when to offload cognitive work to them. But we do not know if users are well-calibrated in estimating these potential time savings. We conducted a preregistered large-scale behavioral study (N = 1237) to characterize mismatches between expectations and reality, with a focus on simple cognitive tasks. While actual completion times between independent completion and AI-assisted completion did not differ, participants predicted AI to be significantly faster. The same bias was not observed when imagining help from another human participant. We identify a speedup illusion where people have accurate forecasts of independent completion times but significantly underestimate AI-assisted times. Additionally, time and effort dissociate: participants reported lower subjective effort with AI despite equivalent completion times. This suggests that completion time itself is not sufficient to characterize efficiency gains.",
+    "published": "May 22",
+    "pdf_url": "https://arxiv.org/pdf/2605.23177v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.23177v1",
+    "queried_author": "Dan Jurafsky",
+    "matching_authors": [
+      "Dan Jurafsky"
+    ]
+  },
+  {
     "title": "Vector Policy Optimization: Training for Diversity Improves Test-Time Search",
     "authors": [
       "Ryan Bahlous-Boldi",
@@ -105,13 +125,30 @@
       "Nikolaos Aletras",
       "Niloofar Mireshghallah"
     ],
-    "summary": "Safety classifiers are essential safeguards within generative AI systems, filtering harmful content or identifying at-risk users when interacting with large language models. Despite their necessity, these models are trained on sensitive datasets including discussions of self-harm and mental health, raising important, yet poorly understood, privacy concerns. Membership inference attacks (MIAs) allow adversaries to infer membership of examples used to train models. In this work, we hypothesize that identifying the examples on which the classifier is least confident are informative for an adversary to infer membership. This reflects a localized failure of generalization, where the model relies on memorization to resolve ambiguity in the training set. To investigate this, we introduce a new boundary-targeted selection strategy that identifies low confidence examples that amplify the signal of an examples membership within a training set. Our experimental results show that an adversary can recover 19\\% of the conversations a safety classifier flagged as indicating user distress, at a 5\\% false-positive rate, on a classifier fine-tuned for detecting a user who may require emotional support. This is $3.5$ times more than attacking using state-of-the-art MIA methods alone. Finally, we characterize the boundary laying examples and show that content-based filtering is ineffective for protection, and existing noise strategies can effectively mitigate susceptibility of these examples.",
+    "summary": "Safety classifiers are essential safeguards within generative AI systems, filtering harmful content or identifying at-risk users when interacting with large language models. Despite their necessity, these models are trained on sensitive datasets including discussions of self-harm and mental health, raising important, yet poorly understood, privacy concerns. Membership inference attacks (MIAs) allow adversaries to infer membership of examples used to train models. In this work, we hypothesize that identifying the examples on which the classifier is least confident are informative for an adversary to infer membership. This reflects a localized failure of generalization, where the model relies on memorization to resolve ambiguity in the training set. To investigate this, we introduce a new boundary-targeted selection strategy that identifies low confidence examples that amplify the signal of an examples membership within a training set. Our experimental results show that an adversary can recover 19% of the conversations a safety classifier flagged as indicating user distress, at a 5% false-positive rate, on a classifier fine-tuned for detecting a user who may require emotional support. This is $3.5$ times more than attacking using state-of-the-art MIA methods alone. Finally, we characterize the boundary laying examples and show that content-based filtering is ineffective for protection, and existing noise strategies can effectively mitigate susceptibility of these examples.",
     "published": "May 21",
-    "pdf_url": "https://arxiv.org/pdf/2605.22373v1",
-    "arxiv_url": "http://arxiv.org/abs/2605.22373v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.22373v2",
+    "arxiv_url": "http://arxiv.org/abs/2605.22373v2",
     "queried_author": "Niloofar Mireshghallah",
     "matching_authors": [
       "Niloofar Mireshghallah"
+    ]
+  },
+  {
+    "title": "ImProver 2: Iteratively Self-Improving LMs for Neurosymbolic Proof Optimization",
+    "authors": [
+      "Riyaz Ahuja",
+      "Tate Rowney",
+      "Jeremy Avigad",
+      "Sean Welleck"
+    ],
+    "summary": "Formal mathematics libraries are rapidly expanding, creating a growing need to refactor verified proofs for maintainability and to improve training data quality for neural provers. However, scalable proof optimization is hindered by heterogeneous and heuristically specified objectives, scarce data, and high training and inference costs. To overcome these challenges, we introduce ImProver 2, a neurosymbolic framework for automated proof optimization in Lean 4. ImProver 2 combines a data-efficient expert-iteration pipeline with a scaffold that exposes formal structure alongside lightweight informal abstractions. We further introduce a suite of metrics capturing structural proof properties. Using ImProver 2, we train a 7B-parameter model that outperforms orders-of-magnitude larger models within the same model family, and is competitive with mid-tier frontier models across metrics. We additionally demonstrate that our neurosymbolic scaffold significantly improves performance across both small and frontier models. We show that with proper scaffolding and training, small models can effectively restructure research-level proofs over complex and varied metrics, matching substantially larger systems and establishing proof optimization as a scalable, learnable task.",
+    "published": "May 21",
+    "pdf_url": "https://arxiv.org/pdf/2605.22885v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.22885v1",
+    "queried_author": "Sean Welleck",
+    "matching_authors": [
+      "Sean Welleck"
     ]
   },
   {
@@ -5706,6 +5743,28 @@
     "queried_author": "Jacob Eisenstein",
     "matching_authors": [
       "Jacob Eisenstein"
+    ]
+  },
+  {
+    "title": "AI Evaluation Should Require Standardized Item-Level Data Releases",
+    "authors": [
+      "Han Jiang",
+      "Susu Zhang",
+      "Dongyao Zhu",
+      "Yuzhuo Bai",
+      "Sang T. Truong",
+      "Xiaoyuan Yi",
+      "Sanmi Koyejo",
+      "Xing Xie",
+      "Ziang Xiao"
+    ],
+    "summary": "This position paper argues that standardized item-level benchmark data should become the default infrastructure for AI evaluation. Current evaluations suffer from underspecified item selection, construct misalignment, and poor generalization. The root cause of these failures is a misplaced focus on aggregate model scores. Without item-level evidence, validity claims cannot be assessed, resulting in inflated capability claims, misdirected research, and unwarranted trust in deployed systems. Our position is that designing valid evaluations requires empirical evidence from item-level model responses, and the standardized release of such data should be treated as core AI evaluation infrastructure. Such a release, in addition, enables transparency, replicability, and auditability of evaluation results. To show the norm is both feasible and consequential, we construct OpenEval, an item-level archive of 10M responses across 155k items from widely-used benchmarks, under a unified schema that the AI evaluation community can develop upon. We demonstrate how item-level data can identify low-quality items, document construct misalignment, and recover validity evidence about benchmarks' internal structure. We address objections around contamination and author burden, and show each is tractable relative to the cost of decisions made on claims that cannot be trusted.",
+    "published": "Feb 27",
+    "pdf_url": "https://arxiv.org/pdf/2604.03244v2",
+    "arxiv_url": "http://arxiv.org/abs/2604.03244v2",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
     ]
   },
   {
@@ -12805,64 +12864,6 @@
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig"
-    ]
-  },
-  {
-    "title": "DiffAdapt: Difficulty-Adaptive Reasoning for Token-Efficient LLM Inference",
-    "authors": [
-      "Xiang Liu",
-      "Xuming Hu",
-      "Xiaowen Chu",
-      "Eunsol Choi"
-    ],
-    "summary": "Recent reasoning Large Language Models (LLMs) demonstrate remarkable problem-solving abilities but often generate long thinking traces whose utility is unclear. Our work aims to improve their efficiency, enabling them to reach high performance without overthinking. First, we analyze the entropy of token probabilities in reasoning traces. Across three models, we observe a consistent U-shaped entropy pattern: high entropy on easy problems despite high accuracy, low entropy on problems with medium difficulty, and high entropy on hard problems reflecting uncertainty. Specifically, we notice 22--25\\% entropy reduction from easy to medium difficulty regions, suggesting an {overthinking} phenomenon on easy instances. Building on these insights, we introduce \\textbf{DiffAdapt}, a lightweight framework that selects Easy/Normal/Hard inference strategies per question based on their difficulty and reasoning trace entropy. Each inference strategy consists of a fixed prompt, temperature and maximum token length. In contrast to existing efficiency optimization methods, our approach does not fine-tune base LLM but a small probe that classifies LLM's final hidden state, allowing inexpensive adaptation. We comprehensively evaluate our method on five models and eight benchmarks. Our method achieves comparable or improved accuracy while reducing token usage by up to 22.4\\%, establishing a practical path toward compute-efficient reasoning.",
-    "published": "Oct 22",
-    "pdf_url": "https://arxiv.org/pdf/2510.19669v5",
-    "arxiv_url": "http://arxiv.org/abs/2510.19669v5",
-    "queried_author": "Eunsol Choi",
-    "matching_authors": [
-      "Eunsol Choi"
-    ]
-  },
-  {
-    "title": "ProfBench: Multi-Domain Rubrics requiring Professional Knowledge to Answer and Judge",
-    "authors": [
-      "Zhilin Wang",
-      "Jaehun Jung",
-      "Ximing Lu",
-      "Shizhe Diao",
-      "Ellie Evans",
-      "Jiaqi Zeng",
-      "Pavlo Molchanov",
-      "Yejin Choi",
-      "Jan Kautz",
-      "Yi Dong"
-    ],
-    "summary": "Evaluating progress in large language models (LLMs) is often constrained by the challenge of verifying responses, limiting assessments to tasks like mathematics, programming, and short-form question-answering. However, many real-world applications require evaluating LLMs in processing professional documents, synthesizing information, and generating comprehensive reports in response to user queries. We introduce ProfBench: a set of over 7000 response-criterion pairs as evaluated by human-experts with professional knowledge across Physics PhD, Chemistry PhD, Finance MBA and Consulting MBA. We build robust and affordable LLM-Judges to evaluate ProfBench rubrics, by mitigating self-enhancement bias and reducing the cost of evaluation by 2-3 orders of magnitude, to make it fair and accessible to the broader community. Our findings reveal that ProfBench poses significant challenges even for state-of-the-art LLMs, with top-performing models like GPT-5-high achieving only 65.9% overall performance. Furthermore, we identify notable performance disparities between proprietary and open-weight models and provide insights into the role that extended thinking plays in addressing complex, professional-domain tasks. Data: https://huggingface.co/datasets/nvidia/ProfBench and Code: https://github.com/NVlabs/ProfBench and Leaderboard: https://huggingface.co/spaces/nvidia/ProfBench",
-    "published": "Oct 21",
-    "pdf_url": "https://arxiv.org/pdf/2510.18941v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.18941v2",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Retaining by Doing: The Role of On-Policy Data in Mitigating Forgetting",
-    "authors": [
-      "Howard Chen",
-      "Noam Razin",
-      "Karthik Narasimhan",
-      "Danqi Chen"
-    ],
-    "summary": "Adapting language models (LMs) to new tasks via post-training carries the risk of degrading existing capabilities -- a phenomenon classically known as catastrophic forgetting. In this paper, toward identifying guidelines for mitigating this phenomenon, we systematically compare the forgetting patterns of two widely adopted post-training methods: supervised fine-tuning (SFT) and reinforcement learning (RL). Our experiments reveal a consistent trend across LM families (Llama, Qwen) and tasks (instruction following, general knowledge, and arithmetic reasoning): RL leads to less forgetting than SFT while achieving comparable or higher target task performance. To investigate the cause for this difference, we consider a simplified setting in which the LM is modeled as a mixture of two distributions, one corresponding to prior knowledge and the other to the target task. We identify that the mode-seeking nature of RL, which stems from its use of on-policy data, enables keeping prior knowledge intact when learning the target task. We then verify this insight by demonstrating that the use on-policy data underlies the robustness of RL to forgetting in practical settings, as opposed to other algorithmic choices such as the KL regularization or advantage estimation. Lastly, as a practical implication, our results highlight the potential of mitigating forgetting using approximately on-policy data, which can be substantially more efficient to obtain than fully on-policy data.",
-    "published": "Oct 21",
-    "pdf_url": "https://arxiv.org/pdf/2510.18874v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.18874v2",
-    "queried_author": "Danqi Chen",
-    "matching_authors": [
-      "Danqi Chen",
-      "Karthik Narasimhan"
     ]
   }
 ]
