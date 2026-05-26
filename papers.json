@@ -1,5 +1,135 @@
 [
   {
+    "title": "Forgetting in Language Models: Capacity, Optimization, and Self-Generated Replay",
+    "authors": [
+      "Martin Marek",
+      "Dongkyu Cho",
+      "Shikai Qiu",
+      "Rumi Chunara",
+      "Pavel Izmailov",
+      "Andrew Gordon Wilson"
+    ],
+    "summary": "Models trained on a new task typically degrade on prior tasks, a phenomenon known as forgetting. Traditionally, mitigating forgetting has required replaying stored exemplars from prior tasks, which is often impractical. By contrast, language models can sample from their own training distribution, and we show that these self-generated samples serve as effective replay data, nearly eliminating forgetting. We find that forgetting nonetheless persists when the model has little remaining capacity: models pretrained close to saturation cannot absorb new information without overwriting prior knowledge. When capacity is not the limiting factor, low learning rates reduce forgetting but require substantially more training steps. Replay breaks this tradeoff, enabling fast, high-learning-rate finetuning without forgetting.",
+    "published": "May 25",
+    "pdf_url": "https://arxiv.org/pdf/2605.26097v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.26097v1",
+    "queried_author": "Pavel Izmailov",
+    "matching_authors": [
+      "Pavel Izmailov"
+    ]
+  },
+  {
+    "title": "DiscoverPhysics: Benchmarking LLMs for Out-of-the-Box Scientific Thinking",
+    "authors": [
+      "Matt L. Wiemann",
+      "Lindsay M. Smith",
+      "Peter Melchior",
+      "Siddharth Mishra-Sharma",
+      "Andrew Gordon Wilson",
+      "Pavel Izmailov",
+      "Carolina Cuesta-L\u00e1zaro"
+    ],
+    "summary": "Frontier LLMs now perform strongly across a wide range of physics evaluations, but it is hard to disentangle genuine reasoning from recall of established science. We introduce DiscoverPhysics, an interactive benchmark that asks a LLM agent to discover the laws of motion of a simulated world whose physics deliberately deviates from our own. We construct 22 worlds governed by, among others, screened and fractional-power gravity, multi-species couplings, hidden dark-matter-like particles, non-coordinate-free physics, and time-varying interactions. Each world is generated on demand by an N-body simulator, for which the agent proposes several rounds of experiments, observes raw trajectory data, and ultimately submits both a natural-language explanation of the world's physics and a Python implementation of the inferred law. Because solving a world requires the agent to design informative experiments and revise its hypotheses, the benchmark probes long-horizon reasoning over an experimental history. We evaluate submissions along two complementary axes: trajectory MSE on held-out particles and an LLM-judged explanation score following an expert-written rubric assessing conceptual understanding of each world. Across eleven frontier models, we find that the strongest agents pass only half of the worlds and consistently fail on those where latent structure must be uncovered. Open-source models lag substantially behind commercial models, both in their ability to design informative experiments and in extracting conclusions from the data. We further find that good predictive accuracy doe...",
+    "published": "May 25",
+    "pdf_url": "https://arxiv.org/pdf/2605.26087v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.26087v1",
+    "queried_author": "Pavel Izmailov",
+    "matching_authors": [
+      "Pavel Izmailov"
+    ]
+  },
+  {
+    "title": "AI Cartography: Mapping the Latent Landscape of AI Benchmark Ecosystems",
+    "authors": [
+      "Michael Hardy",
+      "Anka Reuel",
+      "Lijin Zhang",
+      "Jodi M. Casabianca",
+      "Sang Truong",
+      "Yash Dave",
+      "Hansol Lee",
+      "Benjamin Domingue",
+      "Sanmi Koyejo"
+    ],
+    "summary": "While aggregate leaderboard scores drive AI development, they contain substantial measurement noise whose sources and magnitudes remain unquantified, making it unclear when rankings reflect genuine capability differences versus evaluation artifacts. We introduce a framework for measuring the latent landscape in AI benchmark ecosystems. Applying Confirmatory Factor Analysis (CFA) and Generalizability Theory to 4,000+ models from the Open LLM Leaderboard, we decompose sources of ranking variance and establish: (1) structures assumed in current reporting practice underestimate the strength of relationships between benchmarks; (2) evidence of local dependence among leaderboard items, undermining uses of benchmarks as measurement instruments under current scoring systems; (3) contributor metadata explains more rank-relevant variance ($\\approx9\\%$) than architecture or deployment categories in this context; (4) a manifest-score \"scaling law\" slope has low reliability ($R_\u03b2=0.53$); by contrast, the latent general-factor size slope is highly stable across ecosystem controls ($R_g=0.97$). We are able to provide unique insights into benchmark dynamics, such as which benchmarks are a function of LLM size and which can be oppositely impacted by post-training practices. We provide actionable diagnostics to determine how benchmark rankings can be trusted and how benchmark design can be improved.",
+    "published": "May 24",
+    "pdf_url": "https://arxiv.org/pdf/2605.25272v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.25272v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "Found in Conversation: LLMs Teach Themselves to Close the Multi-Turn Gap",
+    "authors": [
+      "Tianlang Chen",
+      "Shirley Wu",
+      "Jure Leskovec"
+    ],
+    "summary": "Large Language Model (LLM) interactions are typically underspecified, with users clarifying all necessary details across multiple conversational turns. Yet recent work shows that LLMs perform far worse in this multi-turn setting than in a single turn with same information being available at once, a phenomenon termed \"Lost-in-Conversation.\" However, bridging this gap effectively remains an open problem. Here we introduce Found in Conversation (FiC), a training framework where a model teaches itself to find and recover its single-turn competence given underspecified multi-turn prompts. We develop View-Asymmetric Self-Distillation, which distills across two views of the same task information--single-turn view for the teacher, multi-turn view for the student--transferring strong single-turn behavior into weak multi-turn behavior. This requires no stronger external teacher, which is unavailable as even frontier LLMs exhibit this gap. Across model families (Llama, Qwen, Phi, and OLMo) and sizes (3B-14B), FiC recovers at least 92% of single-turn performance and reaches 100% on two Llama backbones, yielding more efficient and helpful multi-turn conversations with single-turn capabilities intact.",
+    "published": "May 23",
+    "pdf_url": "https://arxiv.org/pdf/2605.24432v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.24432v1",
+    "queried_author": "Jure Leskovec",
+    "matching_authors": [
+      "Jure Leskovec"
+    ]
+  },
+  {
+    "title": "Understanding and Mitigating Premature Confidence for Better LLM Reasoning",
+    "authors": [
+      "Jingchu Gai",
+      "Guanning Zeng",
+      "Christina Baek",
+      "Chen Wu",
+      "J. Zico Kolter",
+      "Andrej Risteski",
+      "Aditi Raghunathan"
+    ],
+    "summary": "Long chains of thought (CoT) from current language models frequently contain logical gaps and unjustified leaps, limiting the gains from additional test-time compute. Improving reasoning quality directly would require process reward models, but the step-level annotations needed to train them are expensive and scarce. We find such a signal in how the model's confidence evolves during reasoning: premature confidence, the tendency to commit to an answer early and use the remaining tokens to rationalize it, strongly predicts flawed reasoning across tasks and model scales. We exploit this in progressive confidence shaping, a reinforcement learning objective that trains models to update their confidence as they reason rather than commit early -- rewarding gradual confidence growth and penalizing early commitment, with no external labels or reward models. The method improves accuracy and reasoning quality from 1.5B to 8B parameters across arithmetic (Countdown), math (DAPO, AIME), and science (ScienceQA): on Countdown, accuracy improves 3.2x (+42.0pp) and flawed reasoning drops 48pp; on AIME, Pass@64 improves 6.6pp. Consistent with this mechanism, the method also improves faithfulness: on a safety benchmark, our models more transparently surface misleading content in their reasoning traces rather than concealing it. Controlled experiments reveal that the problem and its remedy scale together: premature confidence grows with model size and task difficulty, and so do the gains from addressing it.",
+    "published": "May 23",
+    "pdf_url": "https://arxiv.org/pdf/2605.24396v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.24396v1",
+    "queried_author": "J Zico Kolter",
+    "matching_authors": [
+      "J Zico Kolter"
+    ]
+  },
+  {
+    "title": "Rubato: Transcribing Piano Music with Timestamps",
+    "authors": [
+      "Nazif Can Tamer",
+      "Victoria Ebert",
+      "Guang Yang",
+      "Noah A. Smith"
+    ],
+    "summary": "We consider the conversion of musical recordings into human-readable sheet music annotated with timestamps. Such output lets a listener clearly visualize rubato (temporally expressive playing), a learner diagnose ensemble precision and timing choices against the written music, and a musicology scholar compare performance styles across recordings of the same work. We introduce (1) a prompt-conditioned encoder-decoder model, named Rubato, trained to output (2) a new textual representation for polyphonic music, named InterMo, which we designed for compatibility with sequence-to-sequence training. Our experiments demonstrate that Rubato produces timestamped piano sheet music from audio with higher notational accuracy than the best existing approaches, which are based on cascades. We find that even if the cascade is given ground-truth MIDI instead of audio, Rubato performs better, suggesting that the ceiling of existing approaches is primarily representational, not acoustic. Further, because Rubato is trained on several related tasks (with prompts), it competes with or outperforms the best single-task systems on related but simpler tasks like MIDI note grounding and beat/downbeat detection. A demo is available at https://nctamer.github.io/rubato-transcription .",
+    "published": "May 22",
+    "pdf_url": "https://arxiv.org/pdf/2605.24291v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.24291v1",
+    "queried_author": "Noah A. Smith",
+    "matching_authors": [
+      "Noah A. Smith"
+    ]
+  },
+  {
+    "title": "How Well Do Models Follow Their Constitutions?",
+    "authors": [
+      "Arya Jakkli",
+      "Senthooran Rajamanoharan",
+      "Neel Nanda"
+    ],
+    "summary": "Frontier AI developers now train models against long written behavioral specifications, such as Anthropic's constitution (Anthropic, 2025a) and OpenAI's Model Spec (OpenAI, 2025a), integrated into post-training via methods like character training (Anthropic, 2024) and deliberative alignment (Guan et al., 2024). These documents serve a governance function, but it is unclear how well models actually follow them under adversarial, multi-turn pressure similar to what they would face in real-world deployment. We propose a multi-method audit pipeline that treats each lab's published specification as an auditable target: it decomposes the specification into atomic testable tenets (205 for Anthropic, 197 for OpenAI), generates multi-turn adversarial scenarios with the Petri auditing agent (Anthropic, 2025b), runs a modified SURF-style rubric search (Murray et al., 2026) to catch shallow single-turn failures Petri misses, validates flagged transcripts against the relevant specification, and compares the findings against the lab's own published system card. Applying the pipeline across seven models per specification, we find that models follow their own lab's specification substantially better with each generation. On Anthropic's constitution, the Claude family falls from a 15.0% violation rate (Sonnet 4) to 2.0% (Sonnet 4.6); on OpenAI's Model Spec, the GPT family falls from 11.7% (GPT-4o) to 3.6% (GPT-5.2 medium reasoning), with the severity ceiling falling from 10/10 to 7/10. We cannot externally isolate whether these gains come from specification-specific training, broader post-t...",
+    "published": "May 22",
+    "pdf_url": "https://arxiv.org/pdf/2605.24229v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.24229v1",
+    "queried_author": "Neel Nanda",
+    "matching_authors": [
+      "Neel Nanda"
+    ]
+  },
+  {
     "title": "Cognitive offloading and the speedup illusion in human-AI interaction",
     "authors": [
       "Sunny Yu",
@@ -159,12 +289,12 @@
       "Kathy Wei",
       "Hamed Mahdavi",
       "Niloofar Mireshghallah",
-      "Amir Farimani"
+      "Amir Barati Farimani"
     ],
     "summary": "LLM agents have incredible potential for scientific discovery applications. However, the performance of LLM agents on real-world, small molecule drug design (SMDD) tasks across diverse chemistries and targets is unclear. Current evaluation methods are either ad hoc, too simple for real-world discovery, limited in scale, or restricted to single-turn question answering. In effort to standardize the evaluation of LLM agents on small molecule design, we introduce SMDD-Bench, a challenging, multi-turn, long-horizon agentic benchmark consisting of 502 guaranteed-solvable task instances spanning 5 task types: 2D Pharmacophore Identification, Interaction Point Discovery, Scaffold Hopping, Lead Optimization, and Fragment Assembly. SMDD-Bench tasks span a wide region of chemical space and involve 102 unique protein targets. Completely solving the benchmark would require having strong chemical and biological reasoning and 3D intuition, understanding specialized tool use, and displaying planning expertise over a limited number of oracle calls. We benchmark 7 frontier open and closed source LLMs and find even the most performant LLM, GPT5.4, solves only 40.2\\% of tasks. We hope SMDD-Bench provides a standardized testbed to invigorate the field towards training and evaluating LLM agents for fully autonomous computational drug design. We host a public leaderboard at smddbench.com .",
     "published": "May 20",
-    "pdf_url": "https://arxiv.org/pdf/2605.21740v1",
-    "arxiv_url": "http://arxiv.org/abs/2605.21740v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.21740v2",
+    "arxiv_url": "http://arxiv.org/abs/2605.21740v2",
     "queried_author": "Niloofar Mireshghallah",
     "matching_authors": [
       "Niloofar Mireshghallah"
@@ -428,8 +558,8 @@
     ],
     "summary": "Spatial intelligence unfolds through a perception-action loop: agents act to acquire observations, and reason about how observations vary as a function of action. Rather than passively processing what is seen, they actively uncover what is unseen - occluded structure, dynamics, containment, and functionality that cannot be resolved from passive sensing alone. We move beyond prior formulations of spatial intelligence that assume oracle observations by recasting the observer as an actor. We introduce ESI-BENCH, a comprehensive benchmark for embodied spatial intelligence spanning 10 task categories and 29 subcategories built on OmniGibson, grounded in Spelke's core knowledge systems. Agents must decide what abilities to deploy - perception, locomotion, and manipulation - and how to sequence them to actively accumulate task-relevant evidence. We conduct extensive experiments on state-of-the-art MLLMs and find that active exploration substantially outperforms passive counterparts, with agents spontaneously discovering emergent spatial strategies without explicit instructions, while random multi-view often adds noise rather than signal despite consuming far more images. Most failures stem not from weak perception but from action blindness: poor action choices lead to poor observations, which in turn drive cascading errors. While explicit 3D grounding stabilizes reasoning on depth-sensitive tasks, imperfect 3D representation proves more harmful than 2D baselines by distorting spatial relations. Human studies further reveal that unlike humans who seek falsifying viewpoints and revi...",
     "published": "May 18",
-    "pdf_url": "https://arxiv.org/pdf/2605.18746v1",
-    "arxiv_url": "http://arxiv.org/abs/2605.18746v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.18746v2",
+    "arxiv_url": "http://arxiv.org/abs/2605.18746v2",
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
@@ -860,10 +990,10 @@
       "Christopher D Manning",
       "Weiyan Shi"
     ],
-    "summary": "We introduce Shepherd, a functional programming model that formalizes meta-agent operations on target agents as functions, with core operations mechanized in Lean. Shepherd records every agent-environment interaction as a typed event in a Git-like execution trace, enabling any past state to be forked and replayed. The system forks the agent process and its filesystem $5\\times$ faster than Docker, achieving $>95\\%$ prompt-cache reuse on replay. We demonstrate the model through three applications. First, in runtime intervention, a live supervisor increases pair coding pass rates from 28.8% to 54.7% on CooperBench. Second, in counterfactual meta-optimization, branching exploration outperforms baselines across four benchmarks by up to 11 points while reducing wall-clock time by up to 58%. Third, in Tree-RL training, forking rollouts at selected turns improves TerminalBench-2 performance from 34.2% to 39.4%. These results establish Shepherd as an efficient infrastructure for programming meta-agents. We open-source the system to support future research.",
+    "summary": "As LLM agent systems take on more complex tasks, they increasingly rely on meta-agents: higher-order agents that operate on other agents, much as managers supervise employees. Whatever a meta-agent does: coordinating agents, halting risky actions before execution, or repairing failed runs, requires manipulation of agentic execution at runtime. Existing agentic substrates make this hard: they give meta-agents only plain transcripts and environment snapshots, requiring it to build it's own tooling to reconstruct and orchestrate execution state. Therefore, we introduce Shepherd, a Python substrate grounded in functional programming principles, where an agent's execution is itself a first-class object that a meta-agent can inspect and transform. Every model call, tool call, and environment change becomes a structured event in a Git-like execution trace, where any past state can be forked 5x faster than docker commit and replayed. Three example use cases show Shepherd's versatility: (1) a supervisor agent prevents conflicts among parallel coding agents, lifting CooperBench performance from 28.8% to 54.7%; (2) a counterfactual optimizer repairs agent workflows by proposing edits and replaying runs from the point of changed behavior, outperforming MetaHarness on TerminalBench-2 with 58% lower wall-clock; (3) a meta-agent picks fork points during rollouts to improve credit assignment in long-horizon agentic RL, doubling GRPO's gains on TerminalBench-2. We open-source Shepherd to empower future meta-agents with principled and efficient operations over agentic execution.",
     "published": "May 11",
-    "pdf_url": "https://arxiv.org/pdf/2605.10913v1",
-    "arxiv_url": "http://arxiv.org/abs/2605.10913v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.10913v2",
+    "arxiv_url": "http://arxiv.org/abs/2605.10913v2",
     "queried_author": "Christopher D Manning",
     "matching_authors": [
       "Christopher D Manning"
@@ -3908,16 +4038,16 @@
     ]
   },
   {
-    "title": "Concept Training for Human-Aligned Language Models",
+    "title": "Learning Concepts, Not Tokens: Self-Supervised Semantic Alignment for Language Models",
     "authors": [
       "Christine Zhang",
       "Dan Jurafsky",
       "Chen Shani"
     ],
-    "summary": "The next-token prediction (NTP) objective trains language models to predict a single continuation token at each step. In natural language, however, a prefix can be continued in many valid ways, and even similar meanings may differ in surface form. For example, the sentence ``this website is safe to \\underline{browse}'' could plausibly continue with words such as browse, search, visit, surf, or navigate. While standard NTP training treats these alternatives as mutually exclusive targets, we explore a framework that instead predicts concepts, approximated as sets of semantically related tokens. We show that models trained with concept supervision exhibit stronger alignment with human semantic similarity judgments on multiple lexical benchmarks. These gains are accompanied by lower perplexity on semantically meaningful words (definition in Section 3.1), and a modest increase in global token-level perplexity, reflecting a tradeoff between standard NTP optimization and concept-level supervision. Our results suggest that concept-level objectives can improve semantic alignment while maintaining competitive language modeling performance.",
+    "summary": "The next-token prediction (NTP) objective trains language models to predict a single token at each step, even though many continuations can express the same meaning. For example, in the sentence ``this sticker can be placed here'', positioned, attached, or put are all plausible alternatives. While standard NTP training treats these alternatives as mutually exclusive targets, we explore a self-supervised framework that encourages models to predict concepts, approximated as sets of semantically equivalent tokens. Models trained with this concept supervision align better with human similarity judgments, improve classification, clustering, and reranking performance, and achieve comparable or stronger downstream reasoning. These gains come with lower perplexity on semantically meaningful words (Section 3.2) and only minimal increases in global perplexity, suggesting that concepts enhance semantic alignment while preserving language modeling quality. Our code is available at https://anonymous.4open.science/r/learning-concepts-9025 .",
     "published": "Mar 31",
-    "pdf_url": "https://arxiv.org/pdf/2603.29123v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.29123v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.29123v2",
+    "arxiv_url": "http://arxiv.org/abs/2603.29123v2",
     "queried_author": "Dan Jurafsky",
     "matching_authors": [
       "Dan Jurafsky"
@@ -5934,8 +6064,8 @@
     ],
     "summary": "Embodied LLMs endow robots with high-level task reasoning, but they cannot reflect on what went wrong or why, turning deployment into a sequence of independent trials where mistakes repeat rather than accumulate into experience. Drawing upon human reflective practitioners, we introduce Reflective Test-Time Planning, which integrates two modes of reflection: \\textit{reflection-in-action}, where the agent uses test-time scaling to generate and score multiple candidate actions using internal reflections before execution; and \\textit{reflection-on-action}, which uses test-time training to update both its internal reflection model and its action policy based on external reflections after execution. We also include retrospective reflection, allowing the agent to re-evaluate earlier decisions and perform model updates with hindsight for proper long-horizon credit assignment. Experiments on our newly-designed Long-Horizon Household benchmark and MuJoCo Cupboard Fitting benchmark show significant gains over baseline models, with zero-shot generalization to photorealistic HM3D environments and real-robot experiments on a Franka Panda arm. Ablations confirm that reflection-in-action and reflection-on-action are mutually dependent, and that retrospective reflection achieves better credit assignment than step-wise external feedback at lower computational overhead. Qualitative analyses further highlight behavioral correction through reflection.",
     "published": "Feb 24",
-    "pdf_url": "https://arxiv.org/pdf/2602.21198v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.21198v2",
+    "pdf_url": "https://arxiv.org/pdf/2602.21198v3",
+    "arxiv_url": "http://arxiv.org/abs/2602.21198v3",
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
@@ -12735,135 +12865,6 @@
     "queried_author": "Jacob Andreas",
     "matching_authors": [
       "Jacob Andreas"
-    ]
-  },
-  {
-    "title": "Shoot First, Ask Questions Later? Building Rational Agents that Explore and Act Like People",
-    "authors": [
-      "Gabriel Grand",
-      "Valerio Pepe",
-      "Jacob Andreas",
-      "Joshua B. Tenenbaum"
-    ],
-    "summary": "Many emerging applications of AI--from scientific discovery to medical diagnosis--require agents to seek information strategically: forming hypotheses, asking targeted questions, and making decisions under uncertainty. In high-stakes settings with limited resources, do language models (LMs) behave like rational agents? Drawing on insights from human cognition, we develop methods to evaluate and enhance agentic information-seeking. First, we introduce a decision-oriented dialogue task called Collaborative Battleship, in which a Captain must balance exploration (asking questions) and action (taking shots), while a Spotter must supply accurate, contextually-grounded answers. Compared to human players (N=42), we find that many LM agents struggle to ask informative questions, produce accurate answers, and identify high-utility actions. To address these gaps, we develop novel Monte Carlo inference strategies for LMs inspired by Bayesian Experimental Design (BED). For Spotter agents, our approach boosts accuracy by up to 14.7% absolute over LM-only baselines; for Captain agents, it raises expected information gain (EIG) by up to 0.227 bits (94.2% of the achievable noise ceiling). Combined, these components yield sharper targeting (+0.303-0.374 F1), and enable weaker LMs, such as Llama-4-Scout, to outperform both humans (8% -> 82% win rate) and frontier models (0% -> 67% win rate vs. GPT-5) at ~1% of GPT-5's cost. We replicate these findings on Guess Who?, where our methods significantly boost accuracy (+28.3-42.4 p.p.), demonstrating their general applicability for building inform...",
-    "published": "Oct 23",
-    "pdf_url": "https://arxiv.org/pdf/2510.20886v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.20886v2",
-    "queried_author": "Jacob Andreas",
-    "matching_authors": [
-      "Jacob Andreas"
-    ]
-  },
-  {
-    "title": "No Mean Feat: Simple, Strong Baselines for Context Compression",
-    "authors": [
-      "Yair Feldman",
-      "Yoav Artzi"
-    ],
-    "summary": "Context compression reduces Transformer inference costs by replacing lengthy inputs with shorter pre-computed representations. It carries significant benefits for retrieval-augmented generation (RAG) and has attracted growing research attention. However, progress remains difficult to measure due to inconsistent evaluations and baselines. We design a standard, easy-to-reproduce evaluation suite for context compression, BenchPress, along with simple, high-performance baselines for English reading comprehension. BenchPress supports benchmarking across model scales, datasets, compression ratios, and short ($<$1K tokens) to mid-range ($<$8K tokens) contexts. While the suite is applicable to any compression paradigm, our baselines target soft context compression. We establish two simple baselines that strongly outperform the widely used causal compression-token approach: mean pooling and a bidirectional compression-token variant. Our results show the benefit of bidirectional attention when computing compressed representations, and that simple pooling is an expressive compression operator.",
-    "published": "Oct 23",
-    "pdf_url": "https://arxiv.org/pdf/2510.20797v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.20797v2",
-    "queried_author": "Yoav Artzi",
-    "matching_authors": [
-      "Yoav Artzi"
-    ]
-  },
-  {
-    "title": "Steering Evaluation-Aware Language Models to Act Like They Are Deployed",
-    "authors": [
-      "Tim Tian Hua",
-      "Andrew Qin",
-      "Samuel Marks",
-      "Neel Nanda"
-    ],
-    "summary": "Large language models (LLMs) can sometimes detect when they are being evaluated and adjust their behavior to appear more aligned, compromising the reliability of safety evaluations. In this paper, we show that adding a steering vector to an LLM's activations can suppress evaluation-awareness and make the model act like it is deployed during evaluation. To study our steering technique, we train an LLM to exhibit evaluation-aware behavior using a two-step training process designed to mimic how this behavior could emerge naturally. First, we perform continued pretraining on two sets of documents describing its behavior. The first says that our model uses Python type hints during evaluation but not during deployment. The second says that our model can recognize that the presence of a certain evaluation cue always means that it is being tested. Then, we train the model with expert iteration to use Python type hints in evaluation settings. The resulting model is evaluation-aware: it writes type hints in evaluation contexts more than deployment contexts. We find that activation steering can suppress evaluation awareness and make the model behave during evaluation as it would during deployment. Importantly, we constructed our steering vector using the original model before our additional training. Our results suggest that AI evaluators could improve the reliability of safety evaluations by steering models to act like they are deployed.",
-    "published": "Oct 23",
-    "pdf_url": "https://arxiv.org/pdf/2510.20487v5",
-    "arxiv_url": "http://arxiv.org/abs/2510.20487v5",
-    "queried_author": "Neel Nanda",
-    "matching_authors": [
-      "Neel Nanda"
-    ]
-  },
-  {
-    "title": "olmOCR 2: Unit Test Rewards for Document OCR",
-    "authors": [
-      "Jake Poznanski",
-      "Luca Soldaini",
-      "Kyle Lo"
-    ],
-    "summary": "We present olmOCR 2, the latest in our family of powerful OCR systems for converting digitized print documents, like PDFs, into clean, naturally ordered plain text. olmOCR 2 is powered by olmOCR-2-7B-1025, a specialized, 7B vision language model (VLM) trained using reinforcement learning with verifiable rewards (RLVR), where our rewards are a diverse set of binary unit tests. To scale unit test creation, we develop a pipeline for generating synthetic documents with diverse and challenging layouts, known ground-truth HTML source code, and extracted test cases. We show that RL training on these test cases results in state-of-the-art performance on olmOCR-Bench, our English-language OCR benchmark, with the largest improvements in math formula conversion, table parsing, and multi-column layouts compared to previous versions. We release our model, data and code under permissive open licenses.",
-    "published": "Oct 22",
-    "pdf_url": "https://arxiv.org/pdf/2510.19817v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.19817v1",
-    "queried_author": "Kyle Lo",
-    "matching_authors": [
-      "Kyle Lo",
-      "Luca Soldaini"
-    ]
-  },
-  {
-    "title": "Blackbox Model Provenance via Palimpsestic Membership Inference",
-    "authors": [
-      "Rohith Kuditipudi",
-      "Jing Huang",
-      "Sally Zhu",
-      "Diyi Yang",
-      "Christopher Potts",
-      "Percy Liang"
-    ],
-    "summary": "Suppose Alice trains an open-weight language model and Bob uses a blackbox derivative of Alice's model to produce text. Can Alice prove that Bob is using her model, either by querying Bob's derivative model (query setting) or from the text alone (observational setting)? We formulate this question as an independence testing problem--in which the null hypothesis is that Bob's model or text is independent of Alice's randomized training run--and investigate it through the lens of palimpsestic memorization in language models: models are more likely to memorize data seen later in training, so we can test whether Bob is using Alice's model using test statistics that capture correlation between Bob's model or text and the ordering of training examples in Alice's training run. If Alice has randomly shuffled her training data, then any significant correlation amounts to exactly quantifiable statistical evidence against the null hypothesis, regardless of the composition of Alice's training data. In the query setting, we directly estimate (via prompting) the likelihood Bob's model gives to Alice's training examples and order; we correlate the likelihoods of over 40 fine-tunes of various Pythia and OLMo base models ranging from 1B to 12B parameters with the base model's training data order, achieving a p-value on the order of at most 1e-8 in all but six cases. In the observational setting, we try two approaches based on estimating 1) the likelihood of Bob's text overlapping with spans of Alice's training examples and 2) the likelihood of Bob's text with respect to different versions of ...",
-    "published": "Oct 22",
-    "pdf_url": "https://arxiv.org/pdf/2510.19796v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.19796v1",
-    "queried_author": "Christopher Potts",
-    "matching_authors": [
-      "Christopher Potts",
-      "Diyi Yang",
-      "Percy Liang"
-    ]
-  },
-  {
-    "title": "GaLLoP: Gradient-based Sparse Learning on Low-Magnitude Parameters",
-    "authors": [
-      "Anand Choudhary",
-      "Yasser Sula\u0131man",
-      "Lukas Mauch",
-      "Ghouthi Boukli Hacene",
-      "Fabien Cardinaux",
-      "Antoine Bosselut"
-    ],
-    "summary": "Sparse fine-tuning techniques adapt LLMs to downstream tasks by only tuning a sparse subset of model parameters. However, the effectiveness of sparse adaptation depends on optimally selecting the model parameters to be fine-tuned. In this work, we introduce a novel sparse fine-tuning technique named GaLLoP: Gradient-based Sparse Learning on Low-Magnitude Parameters, which fine-tunes only those model parameters which have the largest gradient magnitudes on downstream tasks and the smallest pre-trained magnitudes, intuitively prioritizing parameters that are highly task-relevant, but minimally disruptive to pre-trained knowledge. Our experimentation with LLaMA3 8B and Gemma 2B as base models shows that GaLLoP consistently improves or matches the in-distribution as well as out-of-distribution performance obtained via the usage of other leading parameter-efficient fine-tuning techniques, including LoRA, DoRA, and SAFT. Our analysis demonstrates that GaLLoP mitigates catastrophic forgetting and memorization of task data, as important pre-trained parameters remain unchanged, and stabilizes performance relative to other fine-tuning techniques, robustly generalizing across most random seeds.",
-    "published": "Oct 22",
-    "pdf_url": "https://arxiv.org/pdf/2510.19778v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.19778v1",
-    "queried_author": "Antoine Bosselut",
-    "matching_authors": [
-      "Antoine Bosselut"
-    ]
-  },
-  {
-    "title": "TowerVision: Understanding and Improving Multilinguality in Vision-Language Models",
-    "authors": [
-      "Andr\u00e9 G. Viveiros",
-      "Patrick Fernandes",
-      "Saul Santos",
-      "Sonal Sannigrahi",
-      "Emmanouil Zaranis",
-      "Nuno M. Guerreiro",
-      "Amin Farajian",
-      "Pierre Colombo",
-      "Graham Neubig",
-      "Andr\u00e9 F. T. Martins"
-    ],
-    "summary": "Despite significant advances in vision-language models (VLMs), most existing work follows an English-centric design process, limiting their effectiveness in multilingual settings. In this work, we provide a comprehensive empirical study analyzing the impact of several multilingual design choices, such as training data composition, encoder selection, and text backbones. The result is TowerVision, a family of open multilingual VLMs for both image-text and video-text tasks, built upon the multilingual text-only model Tower+. TowerVision achieves competitive performance on multiple multimodal multilingual benchmarks and shows particular strength in culturally grounded tasks and multimodal translation. By incorporating visual and cultural context during fine-tuning, our models surpass existing approaches trained on substantially larger datasets, as demonstrated on ALM-Bench and Multi30K (image tasks) and ViMUL-Bench (video tasks). Alongside the models, we release VisionBlocks, a high-quality, curated vision-language dataset. Our findings highlight that multilingual vision-language training data substantially improves cross-lingual generalization -- both from high-resource to underrepresented languages and vice versa -- and that instruction-tuned LLMs are not always the optimal initialization point. To support further research, we publicly release all models, data, and training recipes.",
-    "published": "Oct 22",
-    "pdf_url": "https://arxiv.org/pdf/2510.21849v3",
-    "arxiv_url": "http://arxiv.org/abs/2510.21849v3",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
     ]
   }
 ]
