@@ -1,5 +1,86 @@
 [
   {
+    "title": "Algorithmic Monocultures in Hiring",
+    "authors": [
+      "Rishi Bommasani",
+      "Sarah H. Bana",
+      "Kathleen A. Creel",
+      "Dan Jurafsky",
+      "Percy Liang"
+    ],
+    "summary": "Many employers screen job applicants with algorithms built by the same few algorithm vendors. We hypothesize that algorithmic monoculture leads to the same individuals and members of the same racial groups facing rejection. We acquire and analyze a novel dataset of 3 million applicants submitting 4 million applications where all the applications are screened by algorithms built by the same vendor. We find clear racial disparities in applicant outcomes. Of all applications submitted by Asian and Black applicants, 14.74% and 25.87% are submitted to positions that adversely impact Asian and Black applicants, respectively, according to U.S. employment discrimination standards. Individuals also receive homogeneous outcomes: 4% of all applicants who apply to 10 positions are recommended for rejection from all positions, a rate higher than expected by chance. To better understand this homogeneity, we leverage the deterministic replicability of hiring algorithms to generate the outcomes applicants would have received if they applied to all positions. We show that applicants would need to apply widely in order to ensure their applications are considered by a human",
+    "published": "May 26",
+    "pdf_url": "https://arxiv.org/pdf/2605.27371v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.27371v1",
+    "queried_author": "Dan Jurafsky",
+    "matching_authors": [
+      "Dan Jurafsky",
+      "Percy Liang"
+    ]
+  },
+  {
+    "title": "Verus-SpecGym: An Agentic Environment for Evaluating Specification Autoformalization",
+    "authors": [
+      "Anmol Agarwal",
+      "Natalie Neamtu",
+      "Pranjal Aggarwal",
+      "Seungone Kim",
+      "Jannis Limperg",
+      "Cedric Flamant",
+      "Kanna Shimizu",
+      "Bryan Parno",
+      "Sean Welleck"
+    ],
+    "summary": "AI coding agents are increasingly used to write real-world software, but ensuring that their outputs are correct remains a fundamental challenge. Formal verification offers a promising path: an agent generates code together with a machine-checked proof, guaranteeing that the code satisfies a formal specification. However, there is no guarantee that the formal spec itself matches the user's intent. In this work, we study specification autoformalization: whether LLM agents can translate informal programming problems into faithful formal specifications. We introduce Verus-SpecBench, a benchmark of 581 spec-writing tasks derived from Codeforces problems targeting Verus, a verifier for Rust, and Verus-SpecGym, an agentic environment in which models interact with Verus, bash, & the filesystem to develop these specs. The central challenge is evaluation: expert-written reference specs are expensive to write, & LLM judges can miss subtle mistakes. We address this by (a) extending Verus's exec_spec mechanism so that generated specs can be executed as Rust code, & (b) testing them against official Codeforces tests & adversarial cases extracted from Codeforces \"hacks\", which are edge cases written by competitors to break incorrect solutions. On Verus-SpecBench, the strongest model, Gemini 3.1 Pro, solves 77.8% of tasks, other frontier models solve 51.1--57.8% & OSS models reach only 21.5--25.5%. Our analysis of failure modes shows that model-generated specs can omit important input assumptions, accept incorrect outputs, & reject valid ones. We also find that LLM-as-a-judge evaluation m...",
+    "published": "May 26",
+    "pdf_url": "https://arxiv.org/pdf/2605.26457v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.26457v1",
+    "queried_author": "Sean Welleck",
+    "matching_authors": [
+      "Sean Welleck",
+      "Seungone Kim"
+    ]
+  },
+  {
+    "title": "JobBench: Aligning Agent Work With Human Will",
+    "authors": [
+      "Yuetai Li",
+      "Yichen Feng",
+      "Zhangchen Xu",
+      "Zixian Ma",
+      "Kaiyuan Zheng",
+      "Fengqing Jiang",
+      "Xinghua Sun",
+      "Rulin Shao",
+      "Zichen Chen",
+      "Yue Huang",
+      "Xinyang Han",
+      "Brian Lee",
+      "Kayla Xu",
+      "Shenglai Zeng",
+      "Hang Hua",
+      "Xiangliang Zhang",
+      "Basel Alomair",
+      "Ranjay Krishna",
+      "Luke Zettlemoyer",
+      "Pang Wei Koh",
+      "Bhaskar Ramasubramanian",
+      "Luyao Niu",
+      "Xiang Yue",
+      "Radha Poovendran"
+    ],
+    "summary": "Current benchmarks for occupational AI agents are scoped primarily by economic values, telling a replacement story. We introduce JobBench, which evaluates AI agents on the workflows that experts identify as high-priority for delegation, empowering humans based on their needs instead of replacing them with GDP value. JobBench covers 130 agentic tasks across 35 occupations. Each task is packaged as a workspace of heterogeneous reference files, requiring the agent to reason through the cluttered information streams of real professional work. Outputs are graded by a fact-anchored chain of rubrics, averaging 35.6 binary criteria per task. We evaluate 36 models; the strongest, Claude Opus~4.7 under Claude Code, reaches only 45.9 %. We hope JobBench shifts the community's target labour-market effect from replacement to enhancement: building agents that do what humans actually want delegated, not only what is most economically valuable.",
+    "published": "May 25",
+    "pdf_url": "https://arxiv.org/pdf/2605.26329v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.26329v1",
+    "queried_author": "Luke Zettlemoyer",
+    "matching_authors": [
+      "Luke Zettlemoyer",
+      "Pang Wei Koh",
+      "Ranjay Krishna"
+    ]
+  },
+  {
     "title": "Forgetting in Language Models: Capacity, Optimization, and Self-Generated Replay",
     "authors": [
       "Martin Marek",
@@ -298,6 +379,21 @@
     "queried_author": "Niloofar Mireshghallah",
     "matching_authors": [
       "Niloofar Mireshghallah"
+    ]
+  },
+  {
+    "title": "Self-Verified Distillation: Your Language Model Is Secretly Its Own Synthetic Data Pipeline",
+    "authors": [
+      "Tony Lee",
+      "Percy Liang"
+    ],
+    "summary": "Can post-trained large language models (LLMs) further improve themselves using only unlabeled prompts, without external teachers or feedback from tools? We study this setting starting only from unlabeled seed questions with no ground-truth solutions, across three reasoning domains: math, science, and coding. We propose Self-Verified Distillation, a simple post-training refinement algorithm in which the model generates candidate solutions to these seed questions, filters them using prompt-based self-verification, and trains on the resulting self-curated dataset. Inspired by the UQ benchmark's use of multiple validators to screen candidate answers to hard unsolved questions, we adapt this validation-based filtering idea to self-training: the model filters its own generated solutions through a three-stage cascade of cycle-consistency, factuality, and correctness checks, accepting a solution only if it passes all stages with unanimous judge votes. We find that sampling more candidate generations and using a larger verification budget during training data construction produces higher-quality self-curated data and, in turn, better reasoning models. We then train Qwen3 models at multiple scales with Self-Verified Distillation and obtain gains across all three domains. For Qwen3-4B, our method improves aggregate held-out pass@1 by +16.7 points in math (AIME26 and HMMT), +11.1 points in science (GPQA Diamond and HLE), and +8.3 points in coding (LCBv5 and LCBv6), with gains also extending to 0.6B and 8B models. Compared to our test-time-only baseline (UQ-TTC), which improves performa...",
+    "published": "May 20",
+    "pdf_url": "https://arxiv.org/pdf/2605.26132v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.26132v1",
+    "queried_author": "Percy Liang",
+    "matching_authors": [
+      "Percy Liang"
     ]
   },
   {
@@ -1635,8 +1731,8 @@
     ],
     "summary": "Scaling laws enable the optimal selection of data amount and language model size, yet the impact of the data unit, the token, on this relationship remains underexplored. In this work, we systematically investigate how the information granularity of tokens, controlled by the compression rate (i.e., average bytes of text per token), affects scaling trends. We train 988 latent tokenized models (BLT) ranging from 50M to 7B parameters that enable setting the desired compression rate. This flexibility allows us to study the role of compression rate well beyond 4.57 bytes per token obtained with a popular BPE tokenizer. Our experiments reveal that in compute-optimal configurations, model parameter counts scale proportionally to data size measured in bytes, not in tokens as commonly perceived (Kaplan et al., 2020; Hoffmann et al., 2022). Furthermore, we discover that the optimal compression rate differs from the one obtained with BPE and decreases with compute. These findings generalize to both latent and subword tokenization, as well as to languages other than English, guiding language model developers on tokenization scheme selection for maximal compute efficiency.",
     "published": "May 02",
-    "pdf_url": "https://arxiv.org/pdf/2605.01188v1",
-    "arxiv_url": "http://arxiv.org/abs/2605.01188v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.01188v2",
+    "arxiv_url": "http://arxiv.org/abs/2605.01188v2",
     "queried_author": "Alisa Liu",
     "matching_authors": [
       "Alisa Liu",
@@ -7418,10 +7514,10 @@
       "Luke Zettlemoyer",
       "Pang Wei Koh"
     ],
-    "summary": "Modern language models (LMs) tend to memorize portions of their training data and emit verbatim spans. When the underlying sources are sensitive or copyright-protected, such reproduction raises issues of consent and compensation for creators and compliance risks for developers. We propose Anchored Decoding, a plug-and-play inference-time method for suppressing verbatim copying: it enables decoding from any risky LM trained on mixed-license data by keeping generation in bounded proximity to a permissively trained safe LM. Anchored Decoding adaptively allocates a user-chosen information budget over the generation trajectory and enforces per-step constraints that yield a sequence-level guarantee, enabling a tunable risk-utility trade-off. To make Anchored Decoding practically useful, we introduce a new permissively trained safe model (TinyComma 1.8B), as well as Anchored$_{\\mathrm{Byte}}$ Decoding, a byte-level variant of our method that enables cross-vocabulary fusion via the ByteSampler framework (Hayase et al., 2025). We evaluate our methods across six model pairs on long-form evaluations of copyright risk and utility. Anchored and Anchored$_{\\mathrm{Byte}}$ Decoding define a new Pareto frontier, preserving near-original fluency and factuality while eliminating up to 75% of the measurable copying gap (averaged over six copying metrics) between the risky baseline and a safe reference, at a modest inference overhead.",
+    "summary": "Language models (LMs) tend to memorize portions of their training data and emit verbatim spans. When the underlying sources are sensitive or copyright-protected, such reproduction raises issues of consent and compensation for creators and compliance risks for developers. We propose Anchored Decoding, a plug-and-play inference-time method for suppressing verbatim copying: it enables decoding from any risky LM trained on mixed-license data by keeping generation in bounded proximity to a permissively trained safe LM. Anchored Decoding adaptively allocates a user-chosen information budget over the generation trajectory and enforces per-step constraints that yield a sequence-level guarantee, enabling a tunable risk-utility trade-off. To make Anchored Decoding practically useful, we introduce a new permissively trained safe model (TinyComma 1.8B), as well as Anchored$_{\\mathrm{Byte}}$ Decoding, a byte-level variant of our method that enables cross-vocabulary fusion via the ByteSampler framework (Hayase et al., 2025). Across six model pairs on long-form metrics for copying risk and utility, Anchored and Anchored$_{\\mathrm{Byte}}$ Decoding define a new Pareto frontier, preserving near-original fluency and factuality while closing up to 75% of the measurable copying gap between the risky baseline and a safe reference, at a modest inference overhead.",
     "published": "Feb 06",
-    "pdf_url": "https://arxiv.org/pdf/2602.07120v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.07120v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.07120v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.07120v2",
     "queried_author": "Luke Zettlemoyer",
     "matching_authors": [
       "Luke Zettlemoyer",
@@ -12790,81 +12886,6 @@
     "matching_authors": [
       "Christopher D Manning",
       "Peter Henderson"
-    ]
-  },
-  {
-    "title": "TOM-SWE: User Mental Modeling For Software Engineering Agents",
-    "authors": [
-      "Xuhui Zhou",
-      "Valerie Chen",
-      "Zora Zhiruo Wang",
-      "Graham Neubig",
-      "Maarten Sap",
-      "Xingyao Wang"
-    ],
-    "summary": "Recent advances in coding agents have made them capable of planning, editing, running, and testing complex code bases. Despite their growing ability in coding tasks, these systems still struggle to infer and track user intent, especially when instructions are underspecified or context-dependent. To bridge this gap, we introduce ToM-SWE, a dual-agent architecture that pairs a primary software-engineering (SWE) agent with a lightweight theory-of-mind (ToM) partner agent dedicated to modeling the user's mental state. The ToM agent infers user goals, constraints, and preferences from instructions and interaction history, maintains a \\textbf{persistent memory} of the user, and provides user-related suggestions to the SWE agent. In two software engineering benchmarks (ambiguous SWE-bench and stateful SWE-bench), ToM-SWE improves task success rates and user satisfaction. Notably, on the stateful SWE benchmark, a newly introduced evaluation that provides agents with a user simulator along with previous interaction histories, ToM-SWE achieves a substantially higher task success rate of 59.7\\% compared to 18.1\\% for OpenHands, a state-of-the-art SWE agent. Furthermore, in a three-week study with professional developers using ToM-SWE in their daily work, participants found it useful 86\\% of the time, underscoring the value of stateful user modeling for practical coding agents.",
-    "published": "Oct 24",
-    "pdf_url": "https://arxiv.org/pdf/2510.21903v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.21903v2",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig",
-      "Maarten Sap"
-    ]
-  },
-  {
-    "title": "Fisher meets Feynman: score-based variational inference with a product of experts",
-    "authors": [
-      "Diana Cai",
-      "Robert M. Gower",
-      "David M. Blei",
-      "Lawrence K. Saul"
-    ],
-    "summary": "We introduce a highly expressive yet distinctly tractable family for black-box variational inference (BBVI). Each member of this family is a weighted product of experts (PoE), and each weighted expert in the product is proportional to a multivariate $t$-distribution. These products of experts can model distributions with skew, heavy tails, and multiple modes, but to use them for BBVI, we must be able to sample from their densities. We show how to do this by reformulating these products of experts as latent variable models with auxiliary Dirichlet random variables. These Dirichlet variables emerge from a Feynman identity, originally developed for loop integrals in quantum field theory, that expresses the product of multiple fractions (or in our case, $t$-distributions) as an integral over the simplex. We leverage this simplicial latent space to draw weighted samples from these products of experts -- samples which BBVI then uses to find the PoE that best approximates a target density. Given a collection of experts, we derive an iterative procedure to optimize the exponents that determine their geometric weighting in the PoE. At each iteration, this procedure minimizes a regularized Fisher divergence to match the scores of the variational and target densities at a batch of samples drawn from the current approximation. This minimization reduces to a convex quadratic program, and we prove under general conditions that these updates converge exponentially fast to a near-optimal weighting of experts. We conclude by evaluating this approach on a variety of synthetic and real-world ...",
-    "published": "Oct 24",
-    "pdf_url": "https://arxiv.org/pdf/2510.21598v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.21598v1",
-    "queried_author": "David M. Blei",
-    "matching_authors": [
-      "David M. Blei"
-    ]
-  },
-  {
-    "title": "L^2M^3OF: A Large Language Multimodal Model for Metal-Organic Frameworks",
-    "authors": [
-      "Jiyu Cui",
-      "Fang Wu",
-      "Haokai Zhao",
-      "Minggao Feng",
-      "Xenophon Evangelopoulos",
-      "Andrew I. Cooper",
-      "Yejin Choi"
-    ],
-    "summary": "Large language models have demonstrated remarkable reasoning capabilities across diverse natural language tasks. However, comparable breakthroughs in scientific discovery are more limited, because understanding complex physical phenomena demands multifaceted representations far beyond language alone. A compelling example is the design of functional materials such as MOFs-critical for a range of impactful applications like carbon capture and hydrogen storage. Navigating their vast and intricate design space in language-based representations interpretable by LLMs is challenging due to the numerous possible three-dimensional atomic arrangements and strict reticular rules of coordination geometry and topology. Despite promising early results in LLM-assisted discovery for simpler materials systems, MOF design remains heavily reliant on tacit human expertise rarely codified in textual information alone. To overcome this barrier, we introduce L2M3OF, the first multimodal LLM for MOFs. L2M3OF integrates crystal representation learning with language understanding to process structural, textual, and knowledge modalities jointly. L2M3OF employs a pre-trained crystal encoder with a lightweight projection layer to compress structural information into a token space, enabling efficient alignment with language instructions. To facilitate training and evaluation, we curate a structure-property-knowledge database of crystalline materials and benchmark L2M3OF against state-of-the-art closed-source LLMs such as GPT-5, Gemini-2.5-Pro and DeepSeek-R1. Experiments show that L2M3OF outperforms lea...",
-    "published": "Oct 23",
-    "pdf_url": "https://arxiv.org/pdf/2510.20976v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.20976v1",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Code-enabled language models can outperform reasoning models on diverse tasks",
-    "authors": [
-      "Cedegao E. Zhang",
-      "C\u00e9dric Colas",
-      "Gabriel Poesia",
-      "Joshua B. Tenenbaum",
-      "Jacob Andreas"
-    ],
-    "summary": "Reasoning models (RMs), language models (LMs) trained with reinforcement learning to produce long-form natural language reasoning, have been remarkably successful, but they still require large amounts of computation and data to train, and can be slow and expensive to run. In this paper, we show that standard instruct LMs can already be elicited to be strong reasoners at a level comparable to or even surpassing their corresponding RMs (e.g., DeepSeek V3 vs R1) without finetuning, across diverse domains from instruction following and creative generation to mathematical reasoning. This is achieved by CodeAdapt, our simple recipe that combines the CodeAct framework, where LMs interleave natural language reasoning with code execution in a multi-step fashion, with few-shot bootstrap in-context learning from as few as five training problems. Analyzing four matched pairs of LMs and RMs, we find that CodeAdapt enables three LMs to outperform the corresponding RMs on average over eight tasks (up to 22.9%) while being 10-81% more token efficient, and delivers superior performance on six tasks when averaged over the four models (up to 35.7%). Furthermore, the code-augmented reasoning traces display rich and varied problem-solving strategies. Our findings support that (1) CodeAdapt-style learning and reasoning may be robust and domain general and (2) code-enabled LMs are cognitively grounded and powerful systems, potentially providing a strong foundation for in-weight reinforcement learning.",
-    "published": "Oct 23",
-    "pdf_url": "https://arxiv.org/pdf/2510.20909v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.20909v1",
-    "queried_author": "Jacob Andreas",
-    "matching_authors": [
-      "Jacob Andreas"
     ]
   }
 ]
