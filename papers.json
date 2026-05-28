@@ -1,5 +1,21 @@
 [
   {
+    "title": "Is Backpropagation Optimal? When Synthetic Gradients Improve Sample Efficiency",
+    "authors": [
+      "Yibo Jacky Zhang",
+      "Zeyu Tang",
+      "Sanmi Koyejo"
+    ],
+    "summary": "Backpropagation is the default learning rule for artificial neural networks and is often treated as the settled approach whenever differentiability is available. In this work, we revisit this convention through a theoretical lens of sample efficiency. We introduce a unified vectorized feedback framework for loss-based and reward-based learning on computational graphs, in which synthetic gradients emerge as a natural alternative to backpropagation. We characterize the conditions under which synthetic gradients can achieve a lower gradient-estimation mean squared error than backpropagation. We construct examples illustrating that this sample efficiency advantage can be arbitrarily large. Experiments on contextual bandits and reinforcement learning tasks demonstrate the potential of our theoretical findings.",
+    "published": "May 27",
+    "pdf_url": "https://arxiv.org/pdf/2605.27946v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.27946v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
     "title": "Algorithmic Monocultures in Hiring",
     "authors": [
       "Rishi Bommasani",
@@ -6819,8 +6835,8 @@
     ],
     "summary": "Scaling language models to long contexts is often bottlenecked by the size of the key-value (KV) cache. In deployed settings, long contexts are typically managed through compaction in token space via summarization. However, summarization can be highly lossy, substantially harming downstream performance. Recent work on Cartridges has shown that it is possible to train highly compact KV caches in latent space that closely match full-context performance, but at the cost of slow and expensive end-to-end optimization. This work describes an approach for fast context compaction in latent space through Attention Matching, which constructs compact keys and values to reproduce attention outputs and preserve attention mass at a per-KV-head level. We show that this formulation naturally decomposes into simple subproblems, some of which admit efficient closed-form solutions. Within this framework, we develop a family of methods that significantly push the Pareto frontier of compaction time versus quality, achieving up to 50x compaction in seconds on some datasets with little quality loss.",
     "published": "Feb 18",
-    "pdf_url": "https://arxiv.org/pdf/2602.16284v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.16284v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.16284v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.16284v2",
     "queried_author": "Yoon Kim",
     "matching_authors": [
       "Yoon Kim"
@@ -12867,25 +12883,6 @@
     "queried_author": "Niklas Muennighoff",
     "matching_authors": [
       "Niklas Muennighoff"
-    ]
-  },
-  {
-    "title": "A Multimodal Benchmark for Framing of Oil & Gas Advertising and Potential Greenwashing Detection",
-    "authors": [
-      "Gaku Morio",
-      "Harri Rowlands",
-      "Dominik Stammbach",
-      "Christopher D. Manning",
-      "Peter Henderson"
-    ],
-    "summary": "Companies spend large amounts of money on public relations campaigns to project a positive brand image. However, sometimes there is a mismatch between what they say and what they do. Oil & gas companies, for example, are accused of \"greenwashing\" with imagery of climate-friendly initiatives. Understanding the framing, and changes in framing, at scale can help better understand the goals and nature of public relations campaigns. To address this, we introduce a benchmark dataset of expert-annotated video ads obtained from Facebook and YouTube. The dataset provides annotations for 13 framing types for more than 50 companies or advocacy groups across 20 countries. Our dataset is especially designed for the evaluation of vision-language models (VLMs), distinguishing it from past text-only framing datasets. Baseline experiments show some promising results, while leaving room for improvement for future work: GPT-4.1 can detect environmental messages with 79% F1 score, while our best model only achieves 46% F1 score on identifying framing around green innovation. We also identify challenges that VLMs must address, such as implicit framing, handling videos of various lengths, or implicit cultural backgrounds. Our dataset contributes to research in multimodal analysis of strategic communication in the energy sector.",
-    "published": "Oct 24",
-    "pdf_url": "https://arxiv.org/pdf/2510.21679v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.21679v1",
-    "queried_author": "Christopher D Manning",
-    "matching_authors": [
-      "Christopher D Manning",
-      "Peter Henderson"
     ]
   }
 ]
