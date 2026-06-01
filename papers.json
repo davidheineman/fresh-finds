@@ -1,5 +1,41 @@
 [
   {
+    "title": "Welfare, Improvability, and Variance: A Principal-Agent Approach to Optimal Benchmark Item Aggregation",
+    "authors": [
+      "Andreas Haupt",
+      "Justin Hartenstein",
+      "Anka Reuel",
+      "Mykel Kochenderfer",
+      "Sanmi Koyejo"
+    ],
+    "summary": "AI benchmarks have well-documented limitations, with prior work examining contamination, saturation, and construct underspecification. Aggregation has received far less attention: benchmarks are typically summarized by uniformly averaging item-level scores, implicitly treating every test item as equally valuable. We model benchmarking as a multitask principal-agent game and show that the welfare loss from a benchmark is determined jointly by three item-level primitives: alignment with normative welfare priorities, marginal improvability, and performance variance. We translate the theory into an audit framework that ranks items along each of these three axes, and apply it to OLMES items using WORKBank for welfare, the EvoLM 4B suite for improvability, and the PolyPythias 410M panel for variance. The framework surfaces items that are Pareto-inferior within OLMES subject to a pro-worker welfare operationalization. All code is available at https://github.com/stair-lab/principal-agent-benchmarks.",
+    "published": "May 29",
+    "pdf_url": "https://arxiv.org/pdf/2605.30916v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.30916v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "Diversity Matters: Revisiting Test-Time Compute in Vision-Language Models",
+    "authors": [
+      "Yijie Tong",
+      "Yifan Hou",
+      "Shaobo Cui",
+      "Antoine Bosselut",
+      "Mrinmaya Sachan"
+    ],
+    "summary": "Test-time compute (TTC) strategies have emerged as a lightweight approach to boost reasoning in large language models (LLMs). However, their application and benefits for vision-language models (VLMs) remain underexplored. We present a systematic study of TTC across seven VLMs and six benchmarks, specifically analyzing feature-based scoring and majority voting methods. We find that feature heuristics fail and voting yields only modest gains in single-model settings. We theoretically show that this limitation stems from a lack of prediction diversity: when outputs are highly correlated, voting provides little benefit. In contrast, multi-model ensembles offer richer diversity, yet standard majority voting fails to account for varying model capabilities. To address this, we propose Entropy-based TTC (ETTC), which selects the most confident prediction based on predictive entropy. Our method reduces to majority voting in the single-model case, but in model ensembles, it leverages confidence disparities to prioritize stronger models. We prove that ETTC outperforms majority voting under mild assumptions and empirically demonstrate that it consistently surpasses both voting and the best individual model. Crucially, our results show that smaller models can synergistically enhance larger ones, unlocking ensembling gains not achievable with standard strategies.",
+    "published": "May 29",
+    "pdf_url": "https://arxiv.org/pdf/2605.30713v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.30713v1",
+    "queried_author": "Antoine Bosselut",
+    "matching_authors": [
+      "Antoine Bosselut"
+    ]
+  },
+  {
     "title": "RoboWits: Unexpected Challenges for Robotic Creative Problem Solving",
     "authors": [
       "Chunru Lin",
@@ -393,8 +429,8 @@
     ],
     "summary": "Distillation attacks create a deployment trade-off for model providers: the same outputs that make a model more useful can also make it easier to imitate. We study this trade-off through a minimax game between a utility-constrained teacher and an adaptive student. Our framework yields tractable one-sided response rules: an adaptive evaluation rule in which the student reweights high-value examples, and a teacher-side defense template that suppresses outputs most useful for distillation. From a cheap proxy for example value, we derive Product-of-Experts (PoE), a simple forward-pass-only defense that combines the teacher with a proxy student during generation. Empirically, adaptive evaluation reveals a large passive--adaptive gap: on state-of-the-art defenses, adaptive students recover substantially more capability than passive evaluation suggests on GSM8K and MATH. Under this stronger evaluation, the apparent robustness gap between expensive defenses and PoE narrows considerably, while PoE remains substantially cheaper and preserves higher-quality reasoning traces. Overall, our results suggest that strong distillation remains difficult to stop, and that progress on antidistillation should be judged against adaptive students rather than passive ones. Our code is available at: https://github.com/ysfalh/distillation-game.",
     "published": "May 21",
-    "pdf_url": "https://arxiv.org/pdf/2605.22737v2",
-    "arxiv_url": "http://arxiv.org/abs/2605.22737v2",
+    "pdf_url": "https://arxiv.org/pdf/2605.22737v3",
+    "arxiv_url": "http://arxiv.org/abs/2605.22737v3",
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
@@ -1549,8 +1585,8 @@
     ],
     "summary": "Retrieval benchmarks are increasingly saturating, but we argue that efficient search is far from a solved problem. We identify a class of queries we call oblique, which seek documents that instantiate a latent pattern, like finding all tweets that express an implicit stance, chat logs that demonstrate a particular failure mode, or transcripts that match an abstract scenario. We study three mechanisms through which obliqueness may arise and introduce OBLIQ-Bench, a suite of five oblique search problems over real long-tail corpora. OBLIQ-Bench exposes an overlooked asymmetry between retrieval and verification, where reasoning LLMs reliably recognize latent relevance whenever relevant documents are surfaced, but even sophisticated retrieval pipelines fail to surface most relevant documents in the first place. We hope that OBLIQ-Bench will drive research into retrieval architectures that efficiently capture latent patterns and implicit signals in large corpora.",
     "published": "May 07",
-    "pdf_url": "https://arxiv.org/pdf/2605.06235v1",
-    "arxiv_url": "http://arxiv.org/abs/2605.06235v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.06235v2",
+    "arxiv_url": "http://arxiv.org/abs/2605.06235v2",
     "queried_author": "Omar Khattab",
     "matching_authors": [
       "Omar Khattab"
@@ -8305,10 +8341,10 @@
       "Henrik Ohlsson",
       "Graham Neubig"
     ],
-    "summary": "In this paper, we present NEMO, a system that translates Natural-language descriptions of decision problems into formal Executable Mathematical Optimization implementations, operating collaboratively with users or autonomously. Existing approaches typically rely on specialized large language models (LLMs) or bespoke, task-specific agents. Such methods are often brittle, complex and frequently generating syntactically invalid or non-executable code.\n  NEMO instead centers on remote interaction with autonomous coding agents (ACAs), treated as a first-class abstraction analogous to API-based interaction with LLMs. This design enables the construction of higher-level systems around ACAs that structure, consolidate, and iteratively refine task specifications. Because ACAs execute within sandboxed environments, code produced by NEMO is executable by construction, allowing automated validation and repair.\n  Building on this, we introduce novel coordination patterns with and across ACAs, including asymmetric validation loops between independently generated optimizer and simulator implementations (serving as a high-level validation mechanism), external memory for experience reuse, and robustness enhancements via minimum Bayes risk (MBR) decoding and self-consistency. We evaluate NEMO on nine established optimization benchmarks. As depicted in Figure 1, it achieves state-of-the-art performance on the majority of tasks, with substantial margins on several datasets, demonstrating the power of execution-aware agentic architectures for automated optimization modeling.",
+    "summary": "We present NEMO, a system that translates Natural-language descriptions of decision problems into formal Executable Mathematical Optimization implementations using autonomous coding agents (ACAs). Existing approaches rely on specialized large language models (LLMs) or bespoke task-specific agents that are often brittle and frequently generate syntactically invalid or non-executable code. NEMO instead treats ACAs as a first-class abstraction analogous to API-based interaction with LLMs; their sandboxed execution guarantees code is executable by construction and supports automated validation and repair. We introduce novel coordination patterns including asymmetric validation loops between independently generated optimizer and simulator implementations, external memory for experience reuse, and robustness enhancements via minimum Bayes risk (MBR) decoding and self-consistency. Across nine established optimization benchmarks, NEMO achieves state-of-the-art performance on the majority of tasks with substantial margins on several datasets, demonstrating the power of execution-aware agentic architectures for automated optimization modeling.",
     "published": "Jan 29",
-    "pdf_url": "https://arxiv.org/pdf/2601.21372v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.21372v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.21372v2",
+    "arxiv_url": "http://arxiv.org/abs/2601.21372v2",
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig"
@@ -8376,15 +8412,15 @@
     "title": "SERA: Soft-Verified Efficient Repository Agents",
     "authors": [
       "Ethan Shen",
-      "Danny Tormoen",
+      "Daniel Tormoen",
       "Saurabh Shah",
       "Ali Farhadi",
       "Tim Dettmers"
     ],
-    "summary": "Open-weight coding agents should hold a fundamental advantage over closed-source systems: they can be specialized to private codebases, encoding repository-specific information directly in their weights. Yet the cost and complexity of training has kept this advantage theoretical. We show it is now practical. We present Soft-Verified Efficient Repository Agents (SERA), an efficient method for training coding agents that enables the rapid and cheap creation of agents specialized to private codebases. Using only supervised finetuning (SFT), SERA achieves state-of-the-art results among fully open-source (open data, method, code) models while matching the performance of frontier open-weight models like Devstral-Small-2. Creating SERA models is 26x cheaper than reinforcement learning and 57x cheaper than previous synthetic data methods to reach equivalent performance. Our method, Soft Verified Generation (SVG), generates thousands of trajectories from a single code repository. Combined with cost-efficiency, this enables specialization to private codebases. Beyond repository specialization, we apply SVG to a larger corpus of codebases, generating over 200,000 synthetic trajectories. We use this dataset to provide detailed analysis of scaling laws, ablations, and confounding factors for training coding agents. Overall, we believe our work will greatly accelerate research on open coding agents and showcase the advantage of open-source models that can specialize to private codebases. We release SERA as the first model in Ai2's Open Coding Agents series, along with all our code, data,...",
+    "summary": "Open-weight coding agents should hold a fundamental advantage over closed-source systems because they can specialize to private codebases, encoding repository-specific information directly in their weights. Yet the cost and complexity of training has kept this advantage theoretical until now. We present Soft-Verified Efficient Repository Agents (SERA), an efficient method for training coding agents that enables the rapid and cheap creation of agents specialized to private codebases. Using Soft Verified Generation (SVG), we generate thousands of trajectories from any code repository, without requiring unit tests. Beyond repository specialization, we apply SVG to a larger corpus of codebases, generating 200,000+ synthetic trajectories. Using only supervised finetuning (SFT), SERA achieves leading results among fully open-source (open data, method, code) models while matching the performance of open-weight models like Devstral-Small-2. Creating SERA models is 26x cheaper than reinforcement learning and 57x cheaper than previous synthetic data methods to reach equivalent performance. We use our dataset to provide detailed analysis of scaling laws, ablations, and confounding factors for training coding agents. Overall, we believe our work will greatly accelerate research on open coding agents and showcase the advantage of open-source models that can adapt to private codebases. We release SERA as the first model in Ai2's Open Coding Agents series, along with all our code, data, and Claude Code integration to support the research community.",
     "published": "Jan 28",
-    "pdf_url": "https://arxiv.org/pdf/2601.20789v2",
-    "arxiv_url": "http://arxiv.org/abs/2601.20789v2",
+    "pdf_url": "https://arxiv.org/pdf/2601.20789v3",
+    "arxiv_url": "http://arxiv.org/abs/2601.20789v3",
     "queried_author": "Ali Farhadi",
     "matching_authors": [
       "Ali Farhadi"
@@ -12836,41 +12872,6 @@
     "queried_author": "Diyi Yang",
     "matching_authors": [
       "Diyi Yang"
-    ]
-  },
-  {
-    "title": "From Memorization to Reasoning in the Spectrum of Loss Curvature",
-    "authors": [
-      "Jack Merullo",
-      "Srihita Vatsavaya",
-      "Lucius Bushnaq",
-      "Owen Lewis"
-    ],
-    "summary": "We characterize how memorization is represented in transformer models and show that it can be disentangled in the weights of both language models (LMs) and vision transformers (ViTs) using a decomposition based on the loss landscape curvature. This insight is based on prior theoretical and empirical work showing that the curvature for memorized training points is much sharper than non memorized, meaning ordering weight components from high to low curvature can reveal a distinction without explicit labels. This motivates a weight editing procedure that suppresses far more recitation of untargeted memorized data more effectively than a recent unlearning method (BalancedSubnet), while maintaining lower perplexity. Since the basis of curvature has a natural interpretation for shared structure in model weights, we analyze the editing procedure extensively on its effect on downstream tasks in LMs, and find that fact retrieval and arithmetic are specifically and consistently negatively affected, even though open book fact retrieval and general logical reasoning is conserved. We posit these tasks rely heavily on specialized directions in weight space rather than general purpose mechanisms, regardless of whether those individual datapoints are memorized. We support this by showing a correspondence between task data's activation strength with low curvature components that we edit out, and the drop in task performance after the edit. Our work enhances the understanding of memorization in neural networks with practical applications towards removing it, and provides evidence for idiosyn...",
-    "published": "Oct 28",
-    "pdf_url": "https://arxiv.org/pdf/2510.24256v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.24256v2",
-    "queried_author": "Jack Merullo",
-    "matching_authors": [
-      "Jack Merullo"
-    ]
-  },
-  {
-    "title": "Success and Cost Elicit Convention Formation for Efficient Communication",
-    "authors": [
-      "Saujas Vaduguru",
-      "Yilun Hua",
-      "Yoav Artzi",
-      "Daniel Fried"
-    ],
-    "summary": "Humans leverage shared conversational context to become increasingly successful and efficient at communicating over time. One manifestation of this is the formation of ad hoc linguistic conventions, which allow people to coordinate on short, less costly utterances that are understood using shared conversational context. We present a method to train large multimodal models to form conventions, enabling efficient communication. Our approach uses simulated reference games between models, and requires no additional human-produced data. In repeated reference games involving photographs and tangram images, our method enables models to communicate efficiently with people: reducing the message length by up to 41% while increasing success by 15% over the course of the interaction. Human listeners respond faster when interacting with our model that forms conventions. We also show that training based on success or cost alone is insufficient - both are necessary to elicit convention formation.",
-    "published": "Oct 28",
-    "pdf_url": "https://arxiv.org/pdf/2510.24023v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.24023v1",
-    "queried_author": "Daniel Fried",
-    "matching_authors": [
-      "Daniel Fried",
-      "Yoav Artzi"
     ]
   }
 ]
