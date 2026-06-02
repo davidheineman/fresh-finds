@@ -1,5 +1,168 @@
 [
   {
+    "title": "SkillHarm: Lifecycle-Aware Skill-Based Attacks via Automated Construction",
+    "authors": [
+      "Yuting Ning",
+      "Zhehao Zhang",
+      "Yash Kumar Lal",
+      "Boyu Gou",
+      "Junyi Li",
+      "Weitong Ruan",
+      "Chentao Ye",
+      "Rahul Gupta",
+      "Diyi Yang",
+      "Yu Su",
+      "Huan Sun"
+    ],
+    "summary": "Agent skills occupy a privileged position in the agent workflow, as agents are expected to implicitly follow and execute them, rendering third-party skills a vulnerable attack surface. Existing studies have revealed unsafe agent behaviors induced by skill-based attacks, but they primarily evaluate poisoned skills within a single task execution and enumerate harms through ad-hoc risk lists. To bridge these gaps, we introduce SkillHarm, a benchmark of skill-based attacks across the skill-use lifecycle, paired with a systematic taxonomy of skill-relevant risks. SkillHarm evaluates two attack scenarios: Fixed-Payload Poisoning (FPP), where a fixed poisoned skill package directly compromises any task session that invokes it, and Self-Mutating Poisoning (SMP), where an initially benign execution silently mutates persistent skill content, deferring harm until a subsequent reuse. It further defines 12 risk types based on the agent workflow component targeted by the harm: data pipelines, system environments, and agent autonomy. To instantiate these attacks at scale, we build AutoSkillHarm, an automated construction pipeline with coding agents driven by natural-language harnesses. The resulting benchmark contains 879 attack samples across 71 skills. Experiments show that current agents remain vulnerable with attack success rates up to 86.3% in FPP and 69.3% in SMP. Our analysis further reveals a latent risk: many apparent attack failures stem from the agent failing to engage with the poisoned file rather than genuine resistance, and current defenses still fail to reliably mitigate th...",
+    "published": "Jun 01",
+    "pdf_url": "https://arxiv.org/pdf/2606.02540v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.02540v1",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang"
+    ]
+  },
+  {
+    "title": "K-BrowseComp: A Web Browsing Agent Benchmark Grounded in Korean Contexts",
+    "authors": [
+      "Nahyun Lee",
+      "Dongkeun Yoon",
+      "Guijin Son",
+      "Geewook Kim",
+      "Dayoon Ko",
+      "Jeonghun Park",
+      "Haneul Yoo",
+      "Jaewon Cho",
+      "Junghun Park",
+      "Changyoon Lee",
+      "Kyochul Jang",
+      "Jaeyeon Kim",
+      "Eunsu Kim",
+      "Woojin Cho",
+      "Seungone Kim"
+    ],
+    "summary": "Frontier model evaluations are shifting from foundational capabilities (e.g., instruction following and reasoning) toward compositional, agentic ones, but Korean agentic benchmarks remain scarce. We introduce K-BrowseComp, a web-browsing agent benchmark grounded in Korean contexts, consisting of 400 problems. The 300-problem K-BrowseComp-Verified subset is manually constructed and validated by native Korean speakers. On this subset, frontier LLMs, including GPT-5.5, DeepSeek-V4-Pro, and GLM-5.1, reach only 30.00--45.67\\%, a substantial drop from BrowseComp, while Korean LLMs released through Korea's Proprietary AI Foundation Model program obtain only 0.00--10.33\\%. We further construct a 100-problem synthetic split using hard few-shot exemplars and failure-mode-targeted generation to exploit the asymmetry between solving and creating web browsing problems. On the adversarially filtered synthetic diagnostic split, the strongest model reaches only 26.00\\%, and we report this split separately as a targeted stress test. We publicly release our data and code.",
+    "published": "Jun 01",
+    "pdf_url": "https://arxiv.org/pdf/2606.02404v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.02404v1",
+    "queried_author": "Seungone Kim",
+    "matching_authors": [
+      "Seungone Kim"
+    ]
+  },
+  {
+    "title": "Multi-Agent Computer Use",
+    "authors": [
+      "Jing Yu Koh",
+      "Ruslan Salakhutdinov",
+      "Daniel Fried"
+    ],
+    "summary": "Computer use agents (CUAs) today are primarily deployed as single serial agents. This setup is suboptimal for complex long-horizon tasks that benefit from task decomposition, parallel execution, and consistent re-planning based on new information. In this paper, we argue that we should instead move towards evaluating and building multi-agent computer use (MACU) systems. These systems, which emphasize planning and parallel execution, alleviate many of the shortcomings of single-agent CUAs. We propose a general multi-agent setup in which a manager model decomposes computer use tasks as a directed acyclic graph (DAG), encoding relevant dependencies and goals for subagents. At each iteration, the manager dispatches parallel CUA subagents to carry out nodes on the ready frontier of the DAG, and continuously revises the DAG (adding, canceling, or rewriting nodes) as new findings arrive from subagents. This design treats the partially observable environment of computer use as a first class challenge: information that downstream agents may not be able to re-observe are retained and passed forward through the manager and DAG structure. We demonstrate that MACU consistently improves over strong single-agent baselines by $3.4-25.5\\%$ on desktop (OSWorld) and web navigation (Online-Mind2Web, WebTailBench, Odysseys) benchmarks, exhibits more favorable test-time scaling, and solves complex long-horizon tasks where single-agent CUAs get stuck. On Odysseys, a long-horizon web navigation benchmark, MACU improves average task completion wall-clock time by ${\\sim} 1.5 \\times$, demonstrating i...",
+    "published": "Jun 01",
+    "pdf_url": "https://arxiv.org/pdf/2606.01533v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.01533v1",
+    "queried_author": "Daniel Fried",
+    "matching_authors": [
+      "Daniel Fried"
+    ]
+  },
+  {
+    "title": "Subliminal Learning Is Steering Vector Distillation",
+    "authors": [
+      "Camila Blank",
+      "Agam Bhatia",
+      "Senthooran Rajamanoharan",
+      "Arthur Conmy",
+      "Neel Nanda"
+    ],
+    "summary": "Subliminal learning refers to a student language model acquiring a teacher's traits (e.g. a system-prompted preference for owls) when fine-tuned on the teacher's outputs, despite the outputs being semantically unrelated to those traits. It remains poorly understood how data without semantic meaning can transfer specific semantic traits. In this work, we show that subliminal learning is mediated by a single steering vector, i.e. a vector added to the model's activations. Across two open-source models, we find that the teacher's system prompt is well approximated by a steering vector, and that the student's behavior is driven by learning an aligned vector over fine-tuning. System prompts that are not well approximated by steering vectors are not subliminally learned. This is a special case of steering vector distillation, in which a student trained on the outputs of a steered teacher learns to imitate that steering. We demonstrate steering vector distillation on a range of semantic and random vectors. Adding a semantic vector to a model's activations can have both model-independent and model-specific (i.e. non-semantic) effects on its behavior, so generated data that is non-semantic can transmit a vector with semantic effects, enabling subliminal learning. This also explains why subliminal learning does not transfer between models. We find that adaptive optimizers are necessary for subliminal learning in language models: activation gradients on steered data carry a small but consistent component along the steering direction, and non-adaptive optimizers impede this by allowing...",
+    "published": "May 31",
+    "pdf_url": "https://arxiv.org/pdf/2606.00995v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.00995v1",
+    "queried_author": "Neel Nanda",
+    "matching_authors": [
+      "Neel Nanda"
+    ]
+  },
+  {
+    "title": "Lost in Delusion: Examining LLM Safety Under User Delusions and Distress",
+    "authors": [
+      "Andrew Aquilina",
+      "Chetna Nihalani",
+      "Vasudha Varadarajan",
+      "Nathan S. Fishbein",
+      "Yu-Ru Lin",
+      "Maarten Sap"
+    ],
+    "summary": "LLM chatbots increasingly serve as a first source of support for people in psychological distress, including those whose distress is entangled with delusional beliefs. Prior work on LLM mental-health safety largely evaluates general therapeutic quality or single-turn crisis detection, leaving unclear how models behave when distress is intertwined with delusion over sustained conversations. We address this gap with matched multi-turn simulations, across clinically grounded personas and six LLMs, that pair each delusional conversation with a distress-only control to isolate the effect of delusional framing. This reveals a recognition-intervention gap: models detect distress at comparable rates regardless of framing, yet sharply fail to act on it once distress is embedded in delusion, with safety interventions suppressed by up to 4.5x. The failure tracks accumulated acceptance of the user's premises rather than emotional validation. Worse, the intuitive fix of prompting models to assess user distress backfires under delusional framing; only delusion-aware prompting with explicit response guidance closes the gap, and even this depends on a delusion classifier that is itself unreliable on the most vulnerable models. Safe deployment therefore requires treating delusional framing as a distinct risk signal that overrides conversational accommodation.",
+    "published": "May 31",
+    "pdf_url": "https://arxiv.org/pdf/2606.00975v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.00975v1",
+    "queried_author": "Maarten Sap",
+    "matching_authors": [
+      "Maarten Sap"
+    ]
+  },
+  {
+    "title": "Subliminal Learning is a LoRA Artifact",
+    "authors": [
+      "Todd Nief",
+      "Harvey Yiyun Fu",
+      "Mark Muchane",
+      "Ari Holtzman"
+    ],
+    "summary": "Subliminal learning is a phenomenon where language models can transmit behavioral traits to other models through seemingly innocuous data (Cloud et al., 2025). In subliminal learning, a teacher model with a behavioral trait (e.g. obsession with cats) can transmit this cat obsession to a student model finetuned only on numerical sequences generated by the teacher. In this paper, we ask: how does this unexpected behavioral transmission occur? We show that subliminal learning is a LoRA artifact. When subliminal learning occurs, transmission has an inverted U-shaped relationship with LoRA rank; it also disappears with full finetuning. We show that subliminal learning is highly dependent on the context seen during finetuning and evaluation. For example, a Qwen model with the default system prompt during finetuning (\"You are Qwen, created by Alibaba Cloud. You are a helpful assistant.\") does not show subliminal learning during generation when no system prompt is included. We further demonstrate that subliminal behavior is localized to computation at tokens seen during both finetuning and evaluation (e.g. the model's default system prompt, the standard chat template tokens, etc.). Overall, subliminal learning seems to be a fragile artifact of LoRA hyperparameters and finetuning context, making it an unstable channel for behavioral transmission.",
+    "published": "May 30",
+    "pdf_url": "https://arxiv.org/pdf/2606.00831v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.00831v1",
+    "queried_author": "Ari Holtzman",
+    "matching_authors": [
+      "Ari Holtzman"
+    ]
+  },
+  {
+    "title": "VESTA: Visual Exploration with Statistical Tool Agents",
+    "authors": [
+      "William Rudman",
+      "Abhishek Divekar",
+      "Kanishk Jain",
+      "Sebastian Joseph",
+      "Stella S. R. Offner",
+      "Matthew Lease",
+      "Kyle Mahowald",
+      "Greg Durrett",
+      "Junyi Jessy Li"
+    ],
+    "summary": "Fitting quantitative models to data is a central step in scientific workflows, yet it remains one of the least automated. Recent agent-based systems leverage language and vision-language models (VLMs) to iteratively propose and refine statistical models, but these systems struggle on more challenging modeling tasks. To address these limitations, we introduce VESTA: Visual Exploration with Statistical Tool Agents, a framework that equips VLMs with a dynamically growing exploration toolkit to guide model refinement through data transformations, hypothesis-driven visualizations, and robust statistical tests. Unlike prior systems that rely on iterative critique alone, VESTA actively explores data before and during refinement by selecting or creating diagnostic tools, which accumulate in the model's context and can be reused later. We evaluate VESTA against established baselines in three toolkit configurations: no tools, static expert-written tools, and dynamic model-written tools. To support this evaluation, we introduce DAWN (Dataset for Automated Workflows and Numerical Modeling), a benchmark targeting distribution fitting and time series modeling with varying difficulty tiers, and culminating in real-world astronomy tasks including modeling initial mass functions and gravitational-wave chirp signals. We find that VESTA's dynamic tool creation outperforms prior agentic pipelines, with the largest gains on complex and domain-specific tasks. We further show that dynamically generated tools are substantially more sophisticated than those produced by existing visual tool-creation...",
+    "published": "May 29",
+    "pdf_url": "https://arxiv.org/pdf/2606.00384v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.00384v1",
+    "queried_author": "Greg Durrett",
+    "matching_authors": [
+      "Greg Durrett"
+    ]
+  },
+  {
+    "title": "ROGUE: Misaligned Agent Behavior Arising from Ordinary Computer Use",
+    "authors": [
+      "Jeremy Tien",
+      "Abishek Anand",
+      "Yu-Rou Tuan",
+      "Yuchen Shen",
+      "J. Zico Kolter",
+      "Aran Nayebi"
+    ],
+    "summary": "As AI agents are increasingly deployed in real personal and corporate settings (email accounts, development workflows, company databases, etc.), safety considerations surrounding these agents become paramount. Although much work has focused on agent safety in the presence of an adversary, we show that agents can exhibit misaligned behavior even in benign settings, taking unsafe actions when those actions are instrumental to task completion. We study this failure mode through the lens of corrigibility, the safety desideratum that agents remain amenable to human correction, interruption, or shutdown. To demonstrate this tendency, we introduce a benchmark in which agents are asked to complete realistic, computer-use tasks but are confronted with a corrigibility obstacle: a human interrupt, a login page, or a shutdown notification. We then evaluate whether agents choose to violate corrigibility in order to complete the task -- overriding the human, accessing private passwords, rewiring shutdown. We find that the overwhelming majority of frontier models tested frequently bypass user interruptions or restrictions. In addition, better model performance appears to lead to greater misalignment. Finally, even when models are completely corrigible initially, we show there are no guarantees that the subagents they create are. Our work highlights the critical need for principled, corrigibility-focused alignment methods in autonomous agents.",
+    "published": "May 29",
+    "pdf_url": "https://arxiv.org/pdf/2606.00341v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.00341v1",
+    "queried_author": "J Zico Kolter",
+    "matching_authors": [
+      "J Zico Kolter"
+    ]
+  },
+  {
     "title": "Welfare, Improvability, and Variance: A Principal-Agent Approach to Optimal Benchmark Item Aggregation",
     "authors": [
       "Andreas Haupt",
@@ -87,8 +250,8 @@
     ],
     "summary": "Larger models learn tasks smaller models do not. What drives this phenomenon? We develop a simple phenomenological argument that power-law scaling already suggests that a larger model will be able to learn a part of the data distribution that a smaller model fails to learn, even with infinite training data. To validate this claim and identify its causes, we study the effects of model scaling on a synthetic setup consisting of a mixture of tasks that show monotonic scaling curves. The results point to a data-induced competition over resources (neurons). Specifically, smaller models allocate their neurons to high frequency or low complexity tasks, and so they learn solutions that perform poorly on rare and complex tasks. Moreover, this happens even when solutions capable of expressing the desired task exist. We then assess how a larger model circumvents this data-centric bottleneck, finding that it traces to a reduced interference mechanism: larger models can allocate enough resources to common tasks that the gradient updates for those tasks become weak, which means that they do not overwrite rare-task features as they slowly accumulate. Finally, to further validate these claims, we pretrain OLMo models (4M to 4B parameters) on novel tasks of varying frequency and complexity. The results mirror those from our synthetic data experiments: only the larger OLMo models learn the infrequent and complex tasks, and these larger models embed more task features in their representations and show less gradient interference between tasks. Overall, we offer a data-centric account of why la...",
     "published": "May 28",
-    "pdf_url": "https://arxiv.org/pdf/2605.29548v1",
-    "arxiv_url": "http://arxiv.org/abs/2605.29548v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.29548v2",
+    "arxiv_url": "http://arxiv.org/abs/2605.29548v2",
     "queried_author": "Christopher Potts",
     "matching_authors": [
       "Christopher Potts"
@@ -6716,10 +6879,10 @@
       "Graham Neubig",
       "Jeffrey P. Bigham"
     ],
-    "summary": "Despite rapid progress in autonomous web agents, human involvement remains essential for shaping preferences and correcting agent behavior as tasks unfold. However, current agentic systems lack a principled understanding of when and why humans intervene, often proceeding autonomously past critical decision points or requesting unnecessary confirmation. In this work, we introduce the task of modeling human intervention to support collaborative web task execution. We collect CowCorpus, a dataset of 400 real-user web navigation trajectories containing over 4,200 interleaved human and agent actions. We identify four distinct patterns of user interaction with agents -- hands-off supervision, hands-on oversight, collaborative task-solving, and full user takeover. Leveraging these insights, we train language models (LMs) to anticipate when users are likely to intervene based on their interaction styles, yielding a 61.4-63.4% improvement in intervention prediction accuracy over base LMs. Finally, we deploy these intervention-aware models in live web navigation agents and evaluate them in a user study, finding a 26.5% increase in user-rated agent usefulness. Together, our results show structured modeling of human intervention leads to more adaptive, collaborative agents.",
+    "summary": "Despite rapid progress in autonomous web agents, human involvement remains essential for shaping preferences and correcting agent behavior as tasks unfold. However, current agentic systems lack a principled understanding of when and why humans intervene, often proceeding autonomously past critical decision points or requesting unnecessary confirmation. In this work, we introduce the task of modeling human intervention to support collaborative web task execution. We collect CowCorpus, a dataset of 400 real-user web navigation trajectories containing over 4,200 interleaved human and agent actions. We identify four distinct patterns of user interaction with agents -- hands-off supervision, hands-on oversight, collaborative task-solving, and full user takeover. Leveraging these insights, we train language models (LMs) to anticipate when users are likely to intervene based on their interaction styles, yielding a 61.4-63.4% improvement in intervention prediction accuracy over base LMs. Finally, we deploy these intervention-aware models in live web navigation agents and evaluate them in a user study, finding a 36.8% increase in user-rated agent usefulness. Together, our results show structured modeling of human intervention leads to more adaptive, collaborative agents.",
     "published": "Feb 19",
-    "pdf_url": "https://arxiv.org/pdf/2602.17588v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.17588v2",
+    "pdf_url": "https://arxiv.org/pdf/2602.17588v3",
+    "arxiv_url": "http://arxiv.org/abs/2602.17588v3",
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig"
@@ -6903,10 +7066,10 @@
       "Avijit Ghosh",
       "Irene Solaiman"
     ],
-    "summary": "Artificial Intelligence (AI) benchmarks play a central role in measuring progress in model development and guiding deployment decisions. However, many benchmarks quickly become saturated, meaning that they can no longer differentiate between the best-performing models, diminishing their long-term value. In this study, we analyze benchmark saturation across 60 Large Language Model (LLM) benchmarks selected from technical reports by major model developers. To identify factors driving saturation, we characterize benchmarks along 14 properties spanning task design, data construction, and evaluation format. We test five hypotheses examining how each property contributes to saturation rates. Our analysis reveals that nearly half of the benchmarks exhibit saturation, with rates increasing as benchmarks age. Notably, hiding test data (i.e., public vs. private) shows no protective effect, while expert-curated benchmarks resist saturation better than crowdsourced ones. Our findings highlight which design choices extend benchmark longevity and inform strategies for more durable evaluation.",
+    "summary": "Artificial intelligence benchmarks are an important mechanism for measuring model progress and guiding deployment decisions. However, benchmarks quickly \"saturate\", making it difficult to differentiate models and diminishing their long-term value. In this study, we define benchmark saturation and analyze it across 60 language model benchmarks using 14 properties that relate to saturation. We find that nearly half of the our benchmarks exhibit saturation, with rates increasing with age. Further, we find that resilience to saturation is impacted by expert-curation, not by public test data. Our results suggest that design choices can extend benchmark longevity and inform more durable evaluation approaches.",
     "published": "Feb 18",
-    "pdf_url": "https://arxiv.org/pdf/2602.16763v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.16763v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.16763v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.16763v2",
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
@@ -11397,9 +11560,9 @@
     "title": "Latent Collaboration in Multi-Agent Systems",
     "authors": [
       "Jiaru Zou",
-      "Xiyuan Yang",
       "Ruizhong Qiu",
       "Gaotang Li",
+      "Xiyuan Yang",
       "Katherine Tieu",
       "Pan Lu",
       "Ke Shen",
@@ -11410,10 +11573,10 @@
       "Mengdi Wang",
       "Ling Yang"
     ],
-    "summary": "Multi-agent systems (MAS) extend large language models (LLMs) from independent single-model reasoning to coordinative system-level intelligence. While existing LLM agents depend on text-based mediation for reasoning and communication, we take a step forward by enabling models to collaborate directly within the continuous latent space. We introduce LatentMAS, an end-to-end training-free framework that enables pure latent collaboration among LLM agents. In LatentMAS, each agent first performs auto-regressive latent thoughts generation through last-layer hidden embeddings. A shared latent working memory then preserves and transfers each agent's internal representations, ensuring lossless information exchange. We provide theoretical analyses establishing that LatentMAS attains higher expressiveness and lossless information preservation with substantially lower complexity than vanilla text-based MAS. In addition, empirical evaluations across 9 comprehensive benchmarks spanning math and science reasoning, commonsense understanding, and code generation show that LatentMAS consistently outperforms strong single-model and text-based MAS baselines, achieving up to 14.6% higher accuracy, reducing output token usage by 70.8%-83.7%, and providing 4x-4.3x faster end-to-end inference. These results demonstrate that our new latent collaboration framework enhances system-level reasoning quality while offering substantial efficiency gains without any additional training. Code and data are fully open-sourced at https://github.com/Gen-Verse/LatentMAS.",
+    "summary": "Multi-agent systems (MAS) extend large language models (LLMs) from independent single-model reasoning to coordinative system-level intelligence. While existing LLM agents depend on text-based mediation for reasoning and communication, we take a step forward by enabling models to collaborate directly within the continuous latent space. We introduce LatentMAS, an end-to-end training-free framework that enables pure latent collaboration among LLM agents. In LatentMAS, each agent first performs auto-regressive latent thoughts generation through last-layer hidden embeddings instead of text. Then, a shared latent working memory preserves and transfers each agent's internal representations and latent thoughts, ensuring lossless information exchange without re-encoding. We provide detailed theoretical analyses showing that LatentMAS achieves higher expressiveness and lossless information preservation with lower overall complexity than standard text-based MAS. In addition, empirical evaluations across 9 comprehensive benchmarks spanning math and science reasoning, commonsense understanding, and code generation show that LatentMAS outperforms advanced single agents and text-based MAS baselines, achieving up to 14.6% higher accuracy, reducing output token usage by 70.8%-83.7%, and providing 4$\\times$-4.3$\\times$ faster end-to-end inference. Code and data are fully open-sourced at https://github.com/Gen-Verse/LatentMAS.",
     "published": "Nov 25",
-    "pdf_url": "https://arxiv.org/pdf/2511.20639v2",
-    "arxiv_url": "http://arxiv.org/abs/2511.20639v2",
+    "pdf_url": "https://arxiv.org/pdf/2511.20639v3",
+    "arxiv_url": "http://arxiv.org/abs/2511.20639v3",
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
@@ -12126,10 +12289,10 @@
       "Sanmi Koyejo",
       "Irene Solaiman"
     ],
-    "summary": "Foundation models are increasingly central to high-stakes AI systems, and governance frameworks now depend on evaluations to assess their risks and capabilities. Although general capability evaluations are widespread, social impact assessments covering bias, fairness, privacy, environmental costs, and labor practices remain uneven across the AI ecosystem. To characterize this landscape, we conduct the first comprehensive analysis of both first-party and third-party social impact evaluation reporting across a wide range of model developers. Our study examines 186 first-party release reports and 183 post-release evaluation sources, and complements this quantitative analysis with interviews of model developers. We find a clear division of evaluation labor: first-party reporting is sparse, often superficial, and has declined over time in key areas such as environmental impact and bias, while third-party evaluators including academic researchers, nonprofits, and independent organizations provide broader and more rigorous coverage of bias, harmful content, and performance disparities. However, this complementarity has limits. Only model developers can authoritatively report on data provenance, content moderation labor, financial costs, and training infrastructure, yet interviews reveal that these disclosures are often deprioritized unless tied to product adoption or regulatory compliance. Our findings indicate that current evaluation practices leave major gaps in assessing AI's societal impacts, highlighting the urgent need for policies that promote developer transparency, streng...",
+    "summary": "Foundation models are increasingly central to high-stakes AI systems, and governance frameworks now depend on evaluations to assess their risks and capabilities. Although general capability evaluations are widespread, social impact assessments covering bias, fairness, privacy, environmental costs, and labor remain uneven. To characterize this landscape, we conduct the first comprehensive analysis of social impact evaluation reporting, examining 186 first-party release reports and 248 third-party evaluation sources, supplemented by developer interviews. We find a stark division of labor: first-party reporting is sparse, often superficial, and declining in areas like environmental impact and bias, while third-party evaluators provide broader, more rigorous coverage of bias, harmful content, and performance disparities. However, only developers can authoritatively report on data provenance, content moderation labor, costs, and infrastructure, yet interviews reveal these disclosures are deprioritized unless tied to product adoption or compliance. Current practices leave major gaps in assessing societal impacts, underscoring the need for policies that mandate developer transparency, strengthen independent evaluation ecosystems, and create shared infrastructure for aggregating third-party evaluations.",
     "published": "Nov 06",
-    "pdf_url": "https://arxiv.org/pdf/2511.05613v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.05613v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.05613v2",
+    "arxiv_url": "http://arxiv.org/abs/2511.05613v2",
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
@@ -12683,195 +12846,6 @@
     "queried_author": "Sewon Min",
     "matching_authors": [
       "Sewon Min"
-    ]
-  },
-  {
-    "title": "CAVE: Detecting and Explaining Commonsense Anomalies in Visual Environments",
-    "authors": [
-      "Rishika Bhagwatkar",
-      "Syrielle Montariol",
-      "Angelika Romanou",
-      "Beatriz Borges",
-      "Irina Rish",
-      "Antoine Bosselut"
-    ],
-    "summary": "Humans can naturally identify, reason about, and explain anomalies in their environment. In computer vision, this long-standing challenge remains limited to industrial defects or unrealistic, synthetically generated anomalies, failing to capture the richness and unpredictability of real-world anomalies. In this work, we introduce CAVE, the first benchmark of real-world visual anomalies. CAVE supports three open-ended tasks: anomaly description, explanation, and justification; with fine-grained annotations for visual grounding and categorizing anomalies based on their visual manifestations, their complexity, severity, and commonness. These annotations draw inspiration from cognitive science research on how humans identify and resolve anomalies, providing a comprehensive framework for evaluating Vision-Language Models (VLMs) in detecting and understanding anomalies. We show that state-of-the-art VLMs struggle with visual anomaly perception and commonsense reasoning, even with advanced prompting strategies. By offering a realistic and cognitively grounded benchmark, CAVE serves as a valuable resource for advancing research in anomaly detection and commonsense reasoning in VLMs.",
-    "published": "Oct 29",
-    "pdf_url": "https://arxiv.org/pdf/2510.26006v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.26006v1",
-    "queried_author": "Antoine Bosselut",
-    "matching_authors": [
-      "Antoine Bosselut"
-    ]
-  },
-  {
-    "title": "Revisiting Multilingual Data Mixtures in Language Model Pretraining",
-    "authors": [
-      "Negar Foroutan",
-      "Paul Teiletche",
-      "Ayush Kumar Tarun",
-      "Antoine Bosselut"
-    ],
-    "summary": "The impact of different multilingual data mixtures in pretraining large language models (LLMs) has been a topic of ongoing debate, often raising concerns about potential trade-offs between language coverage and model performance (i.e., the curse of multilinguality). In this work, we investigate these assumptions by training 1.1B and 3B parameter LLMs on diverse multilingual corpora, varying the number of languages from 25 to 400. Our study challenges common beliefs surrounding multilingual training. First, we find that combining English and multilingual data does not necessarily degrade the in-language performance of either group, provided that languages have a sufficient number of tokens included in the pretraining corpus. Second, we observe that using English as a pivot language (i.e., a high-resource language that serves as a catalyst for multilingual generalization) yields benefits across language families, and contrary to expectations, selecting a pivot language from within a specific family does not consistently improve performance for languages within that family. Lastly, we do not observe a significant \"curse of multilinguality\" as the number of training languages increases in models at this scale. Our findings suggest that multilingual data, when balanced appropriately, can enhance language model capabilities without compromising performance, even in low-resource settings",
-    "published": "Oct 29",
-    "pdf_url": "https://arxiv.org/pdf/2510.25947v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.25947v1",
-    "queried_author": "Antoine Bosselut",
-    "matching_authors": [
-      "Antoine Bosselut"
-    ]
-  },
-  {
-    "title": "The Tool Decathlon: Benchmarking Language Agents for Diverse, Realistic, and Long-Horizon Task Execution",
-    "authors": [
-      "Junlong Li",
-      "Wenshuo Zhao",
-      "Jian Zhao",
-      "Weihao Zeng",
-      "Haoze Wu",
-      "Xiaochen Wang",
-      "Rui Ge",
-      "Yuxuan Cao",
-      "Yuzhen Huang",
-      "Wei Liu",
-      "Junteng Liu",
-      "Zhaochen Su",
-      "Yiyang Guo",
-      "Fan Zhou",
-      "Lueyang Zhang",
-      "Juan Michelini",
-      "Xingyao Wang",
-      "Xiang Yue",
-      "Shuyan Zhou",
-      "Graham Neubig",
-      "Junxian He"
-    ],
-    "summary": "Real-world language agents must handle complex, multi-step workflows across diverse Apps. For instance, an agent may manage emails by coordinating with calendars and file systems, or monitor a production database to detect anomalies and generate reports following an operating manual. However, existing language agent benchmarks often focus on narrow domains or simplified tasks that lack the diversity, realism, and long-horizon complexity required to evaluate agents' real-world performance. To address this gap, we introduce the Tool Decathlon (dubbed as Toolathlon), a benchmark for language agents offering diverse Apps and tools, realistic environment setup, and reliable execution-based evaluation. Toolathlon spans 32 software applications and 604 tools, ranging from everyday platforms such as Google Calendar and Notion to professional ones like WooCommerce, Kubernetes, and BigQuery. Most of the tools are based on a high-quality set of Model Context Protocol (MCP) servers that we may have revised or implemented ourselves. Unlike prior works, which primarily ensure functional realism but offer limited environment state diversity, we provide realistic initial environment states from real software, such as Canvas courses with dozens of students or real financial spreadsheets. This benchmark includes 108 manually sourced or crafted tasks in total, requiring interacting with multiple Apps over around 20 turns on average to complete. Each task is strictly verifiable through dedicated evaluation scripts. Comprehensive evaluation of SOTA models highlights their significant shortcomin...",
-    "published": "Oct 29",
-    "pdf_url": "https://arxiv.org/pdf/2510.25726v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.25726v2",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
-    ]
-  },
-  {
-    "title": "RLMEval: Evaluating Research-Level Neural Theorem Proving",
-    "authors": [
-      "Auguste Poiroux",
-      "Antoine Bosselut",
-      "Viktor Kun\u010dak"
-    ],
-    "summary": "Despite impressive results on curated benchmarks, the practical impact of large language models (LLMs) on research-level neural theorem proving and proof autoformalization is still limited. We introduce RLMEval, an evaluation suite for these tasks, focusing on research-level mathematics from real-world Lean formalization projects. RLMEval targets the evaluation of neural theorem proving and proof autoformalization on challenging research-level theorems by leveraging real Lean Blueprint formalization projects. Our evaluation of state-of-the-art models on RLMEval, comprising 613 theorems from 6 Lean projects, reveals a significant gap: progress on existing benchmarks does not readily translate to these more realistic settings, with the best model achieving only a 10.3 % pass rate. RLMEval provides a new, challenging benchmark designed to guide and accelerate progress in automated reasoning for formal mathematics.",
-    "published": "Oct 29",
-    "pdf_url": "https://arxiv.org/pdf/2510.25427v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.25427v1",
-    "queried_author": "Antoine Bosselut",
-    "matching_authors": [
-      "Antoine Bosselut"
-    ]
-  },
-  {
-    "title": "Agent Data Protocol: Unifying Datasets for Diverse, Effective Fine-tuning of LLM Agents",
-    "authors": [
-      "Yueqi Song",
-      "Ketan Ramaneti",
-      "Zaid Sheikh",
-      "Ziru Chen",
-      "Boyu Gou",
-      "Tianbao Xie",
-      "Yiheng Xu",
-      "Danyang Zhang",
-      "Apurva Gandhi",
-      "Fan Yang",
-      "Joseph Liu",
-      "Tianyue Ou",
-      "Zhihao Yuan",
-      "Frank Xu",
-      "Shuyan Zhou",
-      "Xingyao Wang",
-      "Xiang Yue",
-      "Tao Yu",
-      "Huan Sun",
-      "Yu Su",
-      "Graham Neubig"
-    ],
-    "summary": "Public research results on large-scale supervised finetuning of AI agents remain relatively rare, since the collection of agent training data presents unique challenges. In this work, we argue that the bottleneck is not a lack of underlying data sources, but that a large variety of data is fragmented across heterogeneous formats, tools, and interfaces. To this end, we introduce the agent data protocol (ADP), a light-weight representation language that serves as an \"interlingua\" between agent datasets in diverse formats and unified agent training pipelines downstream. The design of ADP is expressive enough to capture a large variety of tasks, including API/tool use, browsing, coding, software engineering, and general agentic workflows, while remaining simple to parse and train on without engineering at a per-dataset level. In experiments, we unified a broad collection of 13 existing agent training datasets into ADP format, and converted the standardized ADP data into training-ready formats for multiple agent frameworks. We performed SFT on these data, and demonstrated an average performance gain of ~20% over corresponding base models, and delivers state-of-the-art or near-SOTA performance on standard coding, browsing, tool use, and research benchmarks, without domain-specific tuning. All code and data are released publicly, in the hope that ADP could help lower the barrier to standardized, scalable, and reproducible agent training.",
-    "published": "Oct 28",
-    "pdf_url": "https://arxiv.org/pdf/2510.24702v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.24702v2",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
-    ]
-  },
-  {
-    "title": "SPICE: Self-Play In Corpus Environments Improves Reasoning",
-    "authors": [
-      "Bo Liu",
-      "Chuanyang Jin",
-      "Seungone Kim",
-      "Weizhe Yuan",
-      "Wenting Zhao",
-      "Ilia Kulikov",
-      "Xian Li",
-      "Sainbayar Sukhbaatar",
-      "Jack Lanchantin",
-      "Jason Weston"
-    ],
-    "summary": "Self-improving systems require environmental interaction for continuous adaptation. We introduce SPICE (Self-Play In Corpus Environments), a reinforcement learning framework where a single model acts in two roles: a Challenger that mines documents from a large corpus to generate diverse reasoning tasks, and a Reasoner that solves them. Through adversarial dynamics, the Challenger creates an automatic curriculum at the frontier of the Reasoner's capability, while corpus grounding provides the rich, near-inexhaustible external signal necessary for sustained improvement. Unlike existing ungrounded self-play methods that offer more limited benefits, SPICE achieves consistent gains across mathematical (+8.9%) and general reasoning (+9.8%) benchmarks on multiple model families. Our analysis reveals how document grounding is a key ingredient in SPICE to continuously generate its own increasingly challenging goals and achieve them, enabling sustained self-improvement.",
-    "published": "Oct 28",
-    "pdf_url": "https://arxiv.org/pdf/2510.24684v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.24684v1",
-    "queried_author": "Seungone Kim",
-    "matching_authors": [
-      "Seungone Kim",
-      "Wenting Zhao"
-    ]
-  },
-  {
-    "title": "Relative Scaling Laws for LLMs",
-    "authors": [
-      "William Held",
-      "David Hall",
-      "Percy Liang",
-      "Diyi Yang"
-    ],
-    "summary": "Scaling laws describe how language models improve with additional data, parameters, and compute. While widely used, they are typically measured on aggregate test sets. Aggregate evaluations yield clean trends but average over heterogeneous subpopulations, obscuring performance disparities. We introduce relative scaling laws, which track how performance gaps between test distributions evolve with scale rather than focusing solely on absolute error. Using 255 decoder-only Transformers trained under matched-compute (IsoFLOP) budgets from $10^{18}$--$10^{20}$ FLOPs on standard pretraining datasets, we find diverse trajectories: academic domains on MMLU converge toward parity; regional English dialects shift depending on population size; and clusters of AI risk behaviours split, with capability- and influence-related risks increasing during pretraining while adversarial risks do not. These results show that although scaling improves overall performance, it is not a universal equalizer. To support further study, we release all model checkpoints from this work to enable practitioners to measure relative alongside traditional scaling laws, in order to better prioritize robustness challenges in light of the bitter lesson.",
-    "published": "Oct 28",
-    "pdf_url": "https://arxiv.org/pdf/2510.24626v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.24626v2",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang",
-      "Percy Liang",
-      "William Held"
-    ]
-  },
-  {
-    "title": "ReplicationBench: Can AI Agents Replicate Astrophysics Research Papers?",
-    "authors": [
-      "Christine Ye",
-      "Sihan Yuan",
-      "Suchetha Cooray",
-      "Steven Dillmann",
-      "Ian L. V. Roque",
-      "Dalya Baron",
-      "Philipp Frank",
-      "Sergio Martin-Alvarez",
-      "Nolan Koblischke",
-      "Frank J Qu",
-      "Diyi Yang",
-      "Risa Wechsler",
-      "Ioana Ciuca"
-    ],
-    "summary": "Frontier AI agents show increasing promise as scientific research assistants, and may eventually be useful for extended, open-ended research workflows. However, in order to use agents for novel research, we must first assess the underlying faithfulness and correctness of their work. To evaluate agents as research assistants, we introduce ReplicationBench, an evaluation framework that tests whether agents can replicate entire research papers drawn from the astrophysics literature. Astrophysics, where research relies heavily on archival data and computational study while requiring little real-world experimentation, is a particularly useful testbed for AI agents in scientific research. We split each paper into tasks which require agents to replicate the paper's core contributions, including the experimental setup, derivations, data analysis, and codebase. Each task is co-developed with the original paper authors and targets a key scientific result, enabling objective evaluation of both faithfulness (adherence to original methods) and correctness (technical accuracy of results). ReplicationBench is extremely challenging for current frontier language models: even the best-performing language models score under 20%. We analyze ReplicationBench trajectories in collaboration with domain experts and find a rich, diverse set of failure modes for agents in scientific research. ReplicationBench establishes the first benchmark of paper-scale, expert-validated astrophysics research tasks, reveals insights about agent performance generalizable to other domains of data-driven science, and ...",
-    "published": "Oct 28",
-    "pdf_url": "https://arxiv.org/pdf/2510.24591v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.24591v2",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang"
     ]
   }
 ]
