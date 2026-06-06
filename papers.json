@@ -1,5 +1,493 @@
 [
   {
+    "title": "Pretraining Recurrent Networks without Recurrence",
+    "authors": [
+      "Akarsh Kumar",
+      "Phillip Isola"
+    ],
+    "summary": "Training recurrent neural networks (RNNs) requires assigning credit across long sequences of computations. Standard backpropagation through time (BPTT) addresses this problem poorly: it is sequential in time, limiting parallelism, and suffers from vanishing or exploding gradients, making long-range associations difficult to learn. We propose Supervised Memory Training (SMT), a method for training nonlinear RNNs that sidesteps recurrent credit propagation entirely by reducing RNN training to supervised learning on one-step memory transition labels $(m_t, x_{t+1}) \\rightarrow m_{t+1}$. SMT acquires these memory labels by training a Transformer-based encoder on a predictive state objective--retaining only information from the past necessary to predict the future. By decoupling what to remember from how to update memory, SMT enables time-parallel RNN training with a stable $O(1)$ length gradient path between any two tokens--without ever unrolling the RNN. We find that SMT outperforms BPTT when pretraining various RNN architectures on tasks like language modeling and pixel sequence modeling. SMT enables nonlinear RNNs to better capture long-range dependencies and train in parallel, potentially unlocking the scaling of models that build temporal abstractions of past experience.",
+    "published": "Jun 04",
+    "pdf_url": "https://arxiv.org/pdf/2606.06479v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.06479v1",
+    "queried_author": "Phillip Isola",
+    "matching_authors": [
+      "Phillip Isola"
+    ]
+  },
+  {
+    "title": "Goedel-Architect: Streamlining Formal Theorem Proving with Blueprint Generation and Refinement",
+    "authors": [
+      "Jui-Hui Chung",
+      "Ziyang Cai",
+      "Zihao Li",
+      "Qishuo Yin",
+      "Rohit Agarwal",
+      "Simon Park",
+      "Rodrigo Porto",
+      "Narutatsu Ri",
+      "Ziran Yang",
+      "Shange Tang",
+      "Xingyu Dang",
+      "Hongzhou Lin",
+      "Mengdi Wang",
+      "Danqi Chen",
+      "Chi Jin",
+      "Liam H Fowl",
+      "Sanjeev Arora"
+    ],
+    "summary": "We introduce Goedel-Architect, an agentic framework for formal theorem proving in Lean 4 centered on blueprint generation and refinement. A blueprint is a dependency graph of definitions and lemmas that builds up to the main theorem. First, Goedel-Architect generates a blueprint of formally stated definitions and lemmas, along with declared dependencies. This blueprint is optionally guided by a natural language proof. Then, a tool-equipped Lean prover component closes each open lemma node in parallel using relevant dependencies. Failed lemmas in turn drive refinement of the global blueprint. This strategy contrasts with other mainstream approaches which use recursive lemma decomposition, and can inefficiently loop on dead-end strategies. Using the open-weight DeepSeek-V4-Flash (284B-A13B) as the backbone, Goedel-Architect attains 99.2% pass@1 on MiniF2F-test and 75.6% pass@1 on PutnamBench. With an optional natural-language proof seeding the initial blueprint on the harder problems, we additionally close the remaining two MiniF2F-test problems (reaching 100%), lift PutnamBench to 88.8% (597/672), and solve 4/6 on IMO 2025, 11/12 on Putnam 2025, and 3/6 on USAMO 2026. This represents state-of-the-art performance for an open-source pipeline at a price point up to 500x less than comparable open-source pipelines.",
+    "published": "Jun 04",
+    "pdf_url": "https://arxiv.org/pdf/2606.06468v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.06468v1",
+    "queried_author": "Danqi Chen",
+    "matching_authors": [
+      "Danqi Chen"
+    ]
+  },
+  {
+    "title": "Ouvia: A User-centered Framework for Measuring Usability of Speech Translation in Real-World Communication Scenarios",
+    "authors": [
+      "Giuseppe Attanasio",
+      "Beatrice Savoldi",
+      "Daniel Chechelnitsky",
+      "Matteo Negri",
+      "Marine Carpuat",
+      "Maarten Sap",
+      "Andr\u00e9 F. T. Martins"
+    ],
+    "summary": "Speech translation (ST) is increasingly adopted in user applications, yet its evaluation largely focuses on decontextualized testbeds and holistic quality, rather than end users' communication needs. We introduce Ouvia, an evaluation framework for measuring user-perceived usability of speech translation outputs in real-world settings. Ouvia focuses on one-to-one communication: an English speaker needs to convey a request to a Portuguese speaker, and the message is automatically translated. Through a custom web app and multi-phase study design, we collect more than 1,750 such interactions in healthcare and everyday situations, mediated by four ST systems, involving speakers from three English dialects and two genders. We find that modern ST serves people only to a limited extent -- only around half of interactions are rated as usable -- with significant gaps in reported usability across demographic groups. Moreover, among quality metrics, we find that QA-based evaluation is a substantially stronger predictor of real-world usability than standard approaches. Together, these findings stress the importance of situated, user-centered evaluation frameworks that go beyond holistic quality scores and attend to who the technology serves -- and how well.",
+    "published": "Jun 04",
+    "pdf_url": "https://arxiv.org/pdf/2606.06177v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.06177v1",
+    "queried_author": "Maarten Sap",
+    "matching_authors": [
+      "Maarten Sap"
+    ]
+  },
+  {
+    "title": "Enhancing Software Engineering Through Closed-Loop Memory Optimization",
+    "authors": [
+      "Xuehang Guo",
+      "Zora Zhiruo Wang",
+      "Qingyun Wang",
+      "Graham Neubig",
+      "Xingyao Wang"
+    ],
+    "summary": "Large language models (LLMs) have enabled powerful software engineering (SE) agents capable of navigating complex codebases and resolving real-world issues. However, these agents remain fundamentally episodic: they fail to retain, refine, and reuse experiences across tasks, repeatedly reconstructing context from scratch and reproducing similar mistakes. Even with memory support, they offer no remedy for the absence of a principled, task-agnostic \\textit{memory utility}, making them difficult to evaluate rigorously or generalize across agents and settings. To tackle these limitations, we introduce \\ours, a closed-loop framework for memory augmentation in SE agents. \\ours grounds memory utility in \\textit{validated downstream impact}, establishing utility as both a task-agnostic \\textbf{evaluation benchmark} and an annotation-free \\textbf{optimization signal}. Through complementary evaluation on \\textit{single-episode} and \\textit{cross-episode} memory augmentation, results demonstrate that \\ours consistently improves SE agents across settings, achieving absolute gains of up to $\\uparrow5.25\\%$ in success rate and $\\uparrow4.63\\%$ in resolve efficiency, while substantially reducing computational cost by $\\geq9.79\\%$. Our project page: \\href{https://xhguo7.github.io/MemOp/}{https://xhguo7.github.io/MemOp/}.",
+    "published": "Jun 04",
+    "pdf_url": "https://arxiv.org/pdf/2606.05646v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.05646v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
+    "title": "Environment-Robust Representation Learning with Empirical Bayes",
+    "authors": [
+      "Yuli Slavutsky",
+      "Matthew Shen",
+      "Bohan Wu",
+      "David M. Blei"
+    ],
+    "summary": "We consider multi-environment prediction problems. We assume the environments change the distribution of a latent variable, while the mechanisms generating observed covariates and targets remain stable conditional on that variable. For example, hospitals or clinical cohorts may differ in the prevalence of latent patient states, even though the relationships between those states, physiological measurements, and outcomes remain unchanged. Given a dataset from multiple environments, we formulate a Bayesian model for such problems and derive the corresponding variational objective. We show that this objective decomposes into per-environment terms and an additional cross-environment balancing term induced by the model's structure. We use an empirical Bayes method to set the prior and incorporate it into the objective. Based on this objective, we develop an amortized variational algorithm for posterior approximation, and use the resulting learned latent variables to form predictions in new environments.We study our approach through simulations and real-world studies of astronomical source identification, microbiome-based disease detection, and ICU sepsis prediction. Across these settings, our method outperforms previous approaches for prediction in new environments.",
+    "published": "Jun 03",
+    "pdf_url": "https://arxiv.org/pdf/2606.05365v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.05365v1",
+    "queried_author": "David M. Blei",
+    "matching_authors": [
+      "David M. Blei"
+    ]
+  },
+  {
+    "title": "A Model of Multi-turn Human Persuadability Using Probabilistic Belief Tracing",
+    "authors": [
+      "Jared Moore",
+      "Noah Goodman",
+      "Nick Haber",
+      "Max Kleiman-Weiner"
+    ],
+    "summary": "Large language models can shift human beliefs across high-stakes domains, but most persuasion studies rely on pre/post belief change. These endpoint measures identify whether persuasion occurred, yet miss where and how beliefs moved within a dialogue. We present PERSUASIONTRACE, a framework for studying persuasion in human-LLM interaction. Built on a web-based experimental platform, PERSUASIONTRACE contributes a tool for multi-turn persuasion studies and a process-level evaluation protocol: it records multi-turn belief reports from human or simulated targets of persuasion, annotates persuader turns with rhetorical dimensions (logos/pathos/ethos), and evaluates simulators by fidelity to real human belief dynamics. Using this framework, we find that human targets group into two clusters of multi-turn belief updates and exhibit susceptibility to rhetorical strategies, and that LLMs are persuasive across generic and personalized topics, text and audio modalities, and multi-turn interactions. Prior work has chiefly used vanilla-prompted LLMs to simulate human targets, but we show that these simulators fail to replicate human belief dynamics. We introduce a Bayesian-network simulated target that maintains an explicit latent belief state over time so each persuader message yields cognitively realistic belief updates. In human-likeness evaluation, our Bayesian target scores near a human reference (81 vs 80), while baseline LLM targets score substantially lower (64). PERSUASIONTRACE reframes persuasion evaluation from endpoint movement alone to process fidelity, providing a stronger...",
+    "published": "Jun 03",
+    "pdf_url": "https://arxiv.org/pdf/2606.05330v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.05330v1",
+    "queried_author": "Noah Goodman",
+    "matching_authors": [
+      "Noah Goodman"
+    ]
+  },
+  {
+    "title": "Imaginative Perception Tokens Enhance Spatial Reasoning in Multimodal Language Models",
+    "authors": [
+      "Mahtab Bigverdi",
+      "Linjie Li",
+      "Weikai Huang",
+      "Yiming Liu",
+      "Jaemin Cho",
+      "Jieyu Zhang",
+      "Tuhin Kundu",
+      "Chris Dangjoo Kim",
+      "Zelun Luo",
+      "Linda Shapiro",
+      "Ranjay Krishna"
+    ],
+    "summary": "Vision language models (VLMs) excel at many tasks but still struggle with spatial reasoning when critical information is not directly observable. Many such problems require imaginative perception: inferring what would be seen from an unseen viewpoint, tracing paths through occluded spaces, or integrating partial observations into a coherent spatial representation. We introduce Imaginative Perception Tokens (IPT), intermediate perceptual representations that externalize what a VLM would perceive under alternative spatial configurations while remaining consistent with the observed input.\n  To study this capability, we formulate three tasks, Perspective Taking (PET), Path Tracing (PT), and Multiview Counting (MVC), and construct datasets of approximately 20K examples with ground truth imaginations, answers, and evaluation benchmarks. Using the unified VLM BAGEL as the backbone, IPT supervision consistently improves spatial reasoning and often outperforms textual chain of thought training, even without generating images at inference time. On MVC, IPT improves accuracy by 3.4% and achieves competitive performance with strong closed-source models on PT. We further find that combining IPT and label-only supervision yields additional gains, whereas textual chain of thought can substantially degrade performance, suggesting a modality mismatch when spatial computation is forced through language. Overall, IPT provides a principled supervision signal for reasoning about unobserved spatial structure, improving generalization while producing interpretable intermediate representations.",
+    "published": "Jun 02",
+    "pdf_url": "https://arxiv.org/pdf/2606.03988v2",
+    "arxiv_url": "http://arxiv.org/abs/2606.03988v2",
+    "queried_author": "Ranjay Krishna",
+    "matching_authors": [
+      "Ranjay Krishna"
+    ]
+  },
+  {
+    "title": "Dynamic Short Convolutions Improve Transformers",
+    "authors": [
+      "Oliver Sieberling",
+      "Bharat Runwal",
+      "Rameswar Panda",
+      "Yoon Kim"
+    ],
+    "summary": "Transformers have become the dominant architecture for large language models, largely due to the scalability and flexibility of attention, feed-forward layers, residual connections, and normalization. This paper introduces dynamic short convolutions as an additional neural network primitive for improving Transformers. Unlike static short convolutions, dynamic convolutions use input-dependent filters, which preserves the locality bias of convolution while increasing expressivity. Motivating experiments show that applying dynamic short convolutions to key, query, and value representations improves performance on challenging associative recall tasks compared with static convolutional variants. Across language-modeling experiments ranging from 150M to 2B parameters, dynamic convolutions consistently outperform standard Transformers and Transformers augmented with static short convolutions. Fitting scaling laws indicates a 1.33$\\times$ compute advantage over compute-matched Transformers when dynamic convolutions are applied to the key, query, and value vectors, and a 1.60$\\times$ advantage when adding dynamic convolutions after every linear layer. Dynamic convolutions also offer improvements on linear RNNs (Mamba-2/Gated DeltaNet) and mixture-of-experts architectures. We make these gains practical with custom Triton kernels that enable efficient training with a manageable end-to-end slowdown. These results suggest that dynamic short convolutions are a scalable, hardware-efficient, and expressive primitive for advancing Transformer-based language models.",
+    "published": "Jun 02",
+    "pdf_url": "https://arxiv.org/pdf/2606.03825v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.03825v1",
+    "queried_author": "Yoon Kim",
+    "matching_authors": [
+      "Yoon Kim"
+    ]
+  },
+  {
+    "title": "Cosmos 3: Omnimodal World Models for Physical AI",
+    "authors": [
+      " Aditi",
+      "Niket Agarwal",
+      "Arslan Ali",
+      "Jon Allen",
+      "Martin Antolini",
+      "Adeline Aubame",
+      "Alisson Azzolini",
+      "Junjie Bai",
+      "Maciej Bala",
+      "Yogesh Balaji",
+      "Josh Bapst",
+      "Aarti Basant",
+      "Mukesh Beladiya",
+      "Mohammad Qazim Bhat",
+      "Zaid Pervaiz Bhat",
+      "Dan Blick",
+      "Vanni Brighella",
+      "Han Cai",
+      "Tiffany Cai",
+      "Eric Cameracci",
+      "Jiaxin Cao",
+      "Yulong Cao",
+      "Mark Carlson",
+      "Carlos Casanova",
+      "Ting-Yun Chang",
+      "Yan Chang",
+      "Yu-Wei Chao",
+      "Prithvijit Chattopadhyay",
+      "Roshan Chaudhari",
+      "Chieh-Yun Chen",
+      "Junyu Chen",
+      "Ke Chen",
+      "Qizhi Chen",
+      "Wenkai Chen",
+      "Xiaotong Chen",
+      "Yu Chen",
+      "An-Chieh Cheng",
+      "Click Cheng",
+      "Xiu Chia",
+      "Jeana Choi",
+      "Chaeyeon Chung",
+      "Wenyan Cong",
+      "Yin Cui",
+      "Magdalena Dadela",
+      "Nalin Dadhich",
+      "Wenliang Dai",
+      "Joyjit Daw",
+      "Alperen Degirmenci",
+      "Rodrigo Vieira Del Monte",
+      "Robert Denomme",
+      "Sameer Dharur",
+      "Marco Di Lucca",
+      "Ke Ding",
+      "Wenhao Ding",
+      "Yifan Ding",
+      "Yuzhu Dong",
+      "Nicole Drumheller",
+      "Yilun Du",
+      "Aigul Dzhumamuratova",
+      "Aleksandr Efitorov",
+      "Hamid Eghbalzadeh",
+      "Naomi Eigbe",
+      "Imad El Hanafi",
+      "Hassan Eslami",
+      "Benedikt Falk",
+      "Jiaojiao Fan",
+      "Jim Fan",
+      "Amol Fasale",
+      "Sergiy Fefilatyev",
+      "Liang Feng",
+      "Francesco Ferroni",
+      "Sanja Fidler",
+      "Xiao Fu",
+      "Vikram Fugro",
+      "Prashant Gaikwad",
+      "TJ Galda",
+      "Katelyn Gao",
+      "Yihuai Gao",
+      "Wenhang Ge",
+      "Sreyan Ghosh",
+      "Arushi Goel",
+      "Vivek Goel",
+      "Akash Gokul",
+      "Rama Govindaraju",
+      "Jinwei Gu",
+      "Miguel Guerrero",
+      "Elfie Guo",
+      "Aryaman Gupta",
+      "Siddharth Gururani",
+      "Hugo Hadfield",
+      "Song Han",
+      "Ankur Handa",
+      "Zekun Hao",
+      "Mohammad Harrim",
+      "Ali Hassani",
+      "Nathan Hayes-Roth",
+      "Yufan He",
+      "Chris Helvig",
+      "Cyrus Hogg",
+      "Madison Huang",
+      "Michael Huang",
+      "Sophia Huang",
+      "Yufan Huang",
+      "Jacob Huffman",
+      "DeLesley Hutchins",
+      "Suneel Indupuru",
+      "Boris Ivanovic",
+      "Arihant Jain",
+      "Joel Jang",
+      "Ryan Ji",
+      "Yanan Jian",
+      "Dongfu Jiang",
+      "Jingyi Jin",
+      "Atharva Joshi",
+      "Nikhilesh Joshi",
+      "Pranjali Joshi",
+      "Jaehun Jung",
+      "Weiwei Kang",
+      "Scott Kassekert",
+      "Jan Kautz",
+      "Ashna Khetan",
+      "Julia Kiczka",
+      "Slawek Kierat",
+      "Gwanghyun Kim",
+      "Kuno Kim",
+      "Sunny Kim",
+      "Kezhi Kong",
+      "Xin Kong",
+      "Zhifeng Kong",
+      "Tomasz Kornuta",
+      "Egor Krivov",
+      "Hui Kuang",
+      "Saurav Kumar",
+      "Chia-Wen Kuo",
+      "George Kurian",
+      "Wojciech Kutak",
+      "JF Lafleche",
+      "Himangshu Lahkar",
+      "Omar Laymoun",
+      "Jayjun Lee",
+      "Sanggil Lee",
+      "Gabriele Leone",
+      "Boyi Li",
+      "Freya Li",
+      "Jiajun Li",
+      "Jinfeng Li",
+      "Ling Li",
+      "Pengcheng Li",
+      "Shangru Li",
+      "Tingle Li",
+      "Xiaolong Li",
+      "Xuan Li",
+      "Zhaoshuo Li",
+      "Zhiqi Li",
+      "Hao Liang",
+      "Maosheng Liao",
+      "Chen-Hsuan Lin",
+      "Tsung-Yi Lin",
+      "Ming-Yu Liu",
+      "Sifei Liu",
+      "Zihan Liu",
+      "Hai Loc Lu",
+      "Xiangyu Lu",
+      "Alice Luo",
+      "Ruipu Luo",
+      "Wenjie Luo",
+      "Jiangran Lyu",
+      "Martin Ding Ma",
+      "Nic Ma",
+      "Qianli Ma",
+      "Dawid Majchrowski",
+      "Louis Marcoux",
+      "Miguel Martin",
+      "Qing Miao",
+      "Ashkan Mirzaei",
+      "Shreyas Misra",
+      "Kaichun Mo",
+      "Durra Mohsin",
+      "Hyejin Moon",
+      "Pawel Morkisz",
+      "Saeid Motiian",
+      "Kirill Motkov",
+      "Seungjun Nah",
+      "Yashraj Narang",
+      "Deepak Narayanan",
+      "Thabang Ngazimbi",
+      "Julian Ouyang",
+      "David Page",
+      "Yatian Pang",
+      "Sehwi Park",
+      "Mahesh Patekar",
+      "Mostofa Patwary",
+      "Marco Pavone",
+      "Trung Pham",
+      "Wei Ping",
+      "Soha Pouya",
+      "Shrimai Prabhumoye",
+      "Varun Praveen",
+      "Delin Qu",
+      "Hesam Rabeti",
+      "Morteza Ramezanali",
+      "Marilyn Reeb",
+      "Xuanchi Ren",
+      "Kristen Rumley",
+      "Wojciech Rymer",
+      "Jun Saito",
+      "Yeongho Seol",
+      "John Shao",
+      "Piyush Shekdar",
+      "Tianwei Shen",
+      "Humphrey Shi",
+      "Min Shi",
+      "Stella Shi",
+      "Kevin Shih",
+      "Mohammad Shoeybi",
+      "Mateusz Sieniawski",
+      "Shuran Song",
+      "Alexander Sotelo",
+      "Amir Sotoodeh",
+      "Sunil Srinivasa",
+      "Vignesh Srinivasakumar",
+      "Bartosz Stefaniak",
+      "Rahul Heinrich Steiger",
+      "Shangkun Sun",
+      "Jiaxiang Tang",
+      "Shitao Tang",
+      "Yangyang Tang",
+      "Yue Tang",
+      "Tolou Tavakkoli",
+      "Kayley Ting",
+      "Krzysztof Tomala",
+      "Wei-Cheng Tseng",
+      "Jibin Varghese",
+      "Sergei Vasilev",
+      "Thomas Volk",
+      "Raju Wagwani",
+      "Roger Waleffe",
+      "Andrew Z. Wang",
+      "Boxiang Wang",
+      "Haoxiang Wang",
+      "Qiao Wang",
+      "Shihao Wang",
+      "Shijie Wang",
+      "Ting-Chun Wang",
+      "Yan Wang",
+      "Yu Wang",
+      "David Wehr",
+      "Fangyin Wei",
+      "Xinshuo Weng",
+      "Jay Zhangjie Wu",
+      "Kedi Wu",
+      "Hongchi Xia",
+      "Summer Xiao",
+      "Tianjun Xiao",
+      "Kevin Xie",
+      "Daguang Xu",
+      "Jiashu Xu",
+      "Mengyao Xu",
+      "Ruqing Xu",
+      "Xingqian Xu",
+      "Yao Xu",
+      "Dinghao Yang",
+      "Dong Yang",
+      "Hans Yang",
+      "Xiaodong Yang",
+      "Xuning Yang",
+      "Yichu Yang",
+      "Yurong You",
+      "Zhiding Yu",
+      "Hao Yuan",
+      "Simon Yuen",
+      "Xiaohui Zeng",
+      "Pengcuo Zeren",
+      "Cindy Zha",
+      "Haotian Zhang",
+      "Jenny Zhang",
+      "Jing Zhang",
+      "Liangkai Zhang",
+      "Paris Zhang",
+      "Shun Zhang",
+      "Xuanmeng Zhang",
+      "Zhizheng Zhang",
+      "Ann Zhao",
+      "Yilin Zhao",
+      "Yuliya Zhautouskaya",
+      "Charles Zhou",
+      "Fengzhe Zhou",
+      "Shilin Zhu",
+      "Yuke Zhu",
+      "Dima Zhylko",
+      "Artur Zolkowski"
+    ],
+    "summary": "We introduce Cosmos 3, a family of omnimodal world models designed to jointly process and generate language, image, video, audio, and action sequences within a unified mixture-of-transformers architecture. By supporting highly flexible input-output configurations, Cosmos 3 seamlessly unifies critical modalities for Physical AI -- effectively subsuming vision-language models, video generators, world simulators, and world-action models into a single framework. Our evaluation demonstrates that Cosmos 3 establishes a new state-of-the-art across a diverse suite of understanding and generation tasks, demonstrating omnimodal world models as scalable, general-purpose backbones for embodied agents. Our post-trained Cosmos 3 models were ranked as the best open-source Text-to-Image and Image-to-Video models by Artificial Analysis, and the best policy model by RoboArena at the time the technical report was written. To accelerate open research and deployment in Physical AI, we make our code, model checkpoints, curated synthetic datasets, and evaluation benchmark available under the Linux Foundation's OpenMDW-1.1 https://openmdw.ai/license/1-1/ License at https://github.com/nvidia/cosmos}{github.com/nvidia/cosmos and https://huggingface.co/collections/nvidia/cosmos3 . The project website is available at https://research.nvidia.com/labs/cosmos-lab/cosmos3 .",
+    "published": "Jun 01",
+    "pdf_url": "https://arxiv.org/pdf/2606.02800v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.02800v1",
+    "queried_author": "Mohammad Shoeybi",
+    "matching_authors": [
+      "Mohammad Shoeybi",
+      "Mostofa Patwary"
+    ]
+  },
+  {
+    "title": "BehaviorBench: Modeling Real-World User Decisions from Behavioral Traces",
+    "authors": [
+      "Liangwei Yang",
+      "Jielin Qiu",
+      "Zixiang Chen",
+      "Ming Zhu",
+      "Juntao Tan",
+      "Zhiwei Liu",
+      "Wenting Zhao",
+      "Zhujun Lan",
+      "Akshara Prabhakar",
+      "Silvio Savarese",
+      "Huan Wang",
+      "Shelby Heinecke"
+    ],
+    "summary": "Many decision-support settings require systems that adapt to individual users, but evaluation data for this problem remain limited. Existing benchmarks for user understanding often rely on simulated users or model-generated behavior, even though recent work cautions that model-based simulations can diverge systematically from human behavior. We introduce \\textsc{BehaviorBench}, a benchmark for evaluating personalized decision modeling from real-world behavioral traces. \\textsc{BehaviorBench} reconstructs wallet-level decision histories from observed public prediction-market and on-chain records, and organizes them into two complementary task layers: \\emph{Belief prediction}, which predicts a user's final revealed stance and confidence in a market, and \\emph{Trade prediction}, which predicts the direction and amount of individual transactions. Across 2,000 evaluation wallets, the benchmark contains 141,445 Belief instances and 1,485,972 Trade instances, with disjoint support pools for retrieval-based evaluation. We evaluate frontier and open-weight generative models under four history interfaces: no personalization, direct recent history, generated user profiles, and retrieved support-wallet evidence. Personalization improves Belief prediction more consistently than Trade prediction, model rankings change across task layers and metrics, and different history interfaces expose different failure modes. \\textsc{BehaviorBench} provides an evaluation setting for studying whether personalized methods can use real-world behavioral evidence rather than simulated users alone.",
+    "published": "Jun 01",
+    "pdf_url": "https://arxiv.org/pdf/2606.02798v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.02798v1",
+    "queried_author": "Wenting Zhao",
+    "matching_authors": [
+      "Wenting Zhao"
+    ]
+  },
+  {
     "title": "SkillHarm: Lifecycle-Aware Skill-Based Attacks via Automated Construction",
     "authors": [
       "Yuting Ning",
@@ -68,6 +556,23 @@
     ]
   },
   {
+    "title": "A New Framework for Cybersecurity Refusals in AI Agents",
+    "authors": [
+      "Eliot Krzysztof Jones",
+      "Mateusz Dziemian",
+      "Matt Fredrikson",
+      "J Zico Kolter"
+    ],
+    "summary": "Agentic scaffolds have dramatically improved LLM performance on complex, long-horizon tasks, yielding both broad benefits and amplified risks in domains like cybersecurity. Existing benchmarks for AI agents in cybersecurity focus mainly on measuring proficiency--how effectively agents can complete offensive security tasks--but neglect a critical question: when and how should agents refuse harmful requests? We present the first framework for establishing refusal boundaries in offensive security contexts. Our framework defines (1) principled criteria for when tasks should be refused, (2) categories of tasks that warrant refusal, and (3) evaluation methodology for measuring agent robustness under both benign and adversarial conditions. We apply this framework to assess how current LLM-powered agents adhere to appropriate refusal boundaries across a range of web-based offensive security scenarios, finding that 6 of 8 frontier models tested show near-zero refusal rates, with only 2 models (GPT-5.2 and GPT-5.1 Codex) demonstrating any meaningful refusal behavior.",
+    "published": "May 31",
+    "pdf_url": "https://arxiv.org/pdf/2606.02644v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.02644v1",
+    "queried_author": "J Zico Kolter",
+    "matching_authors": [
+      "J Zico Kolter"
+    ]
+  },
+  {
     "title": "Subliminal Learning Is Steering Vector Distillation",
     "authors": [
       "Camila Blank",
@@ -78,8 +583,8 @@
     ],
     "summary": "Subliminal learning refers to a student language model acquiring a teacher's traits (e.g. a system-prompted preference for owls) when fine-tuned on the teacher's outputs, despite the outputs being semantically unrelated to those traits. It remains poorly understood how data without semantic meaning can transfer specific semantic traits. In this work, we show that subliminal learning is mediated by a single steering vector, i.e. a vector added to the model's activations. Across two open-source models, we find that the teacher's system prompt is well approximated by a steering vector, and that the student's behavior is driven by learning an aligned vector over fine-tuning. System prompts that are not well approximated by steering vectors are not subliminally learned. This is a special case of steering vector distillation, in which a student trained on the outputs of a steered teacher learns to imitate that steering. We demonstrate steering vector distillation on a range of semantic and random vectors. Adding a semantic vector to a model's activations can have both model-independent and model-specific (i.e. non-semantic) effects on its behavior, so generated data that is non-semantic can transmit a vector with semantic effects, enabling subliminal learning. This also explains why subliminal learning does not transfer between models. We find that adaptive optimizers are necessary for subliminal learning in language models: activation gradients on steered data carry a small but consistent component along the steering direction, and non-adaptive optimizers impede this by allowing...",
     "published": "May 31",
-    "pdf_url": "https://arxiv.org/pdf/2606.00995v1",
-    "arxiv_url": "http://arxiv.org/abs/2606.00995v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.00995v2",
+    "arxiv_url": "http://arxiv.org/abs/2606.00995v2",
     "queried_author": "Neel Nanda",
     "matching_authors": [
       "Neel Nanda"
@@ -432,6 +937,24 @@
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "Building Better Activation Oracles",
+    "authors": [
+      "Jan Bauer",
+      "Celeste De Schamphelaere",
+      "Adam Karvonen",
+      "Niclas Luick",
+      "Neel Nanda"
+    ],
+    "summary": "Activation Oracles (AOs) are promising methods for interpreting residual stream activations. However, current AOs face important issues, such as hallucinations and vagueness. Additionally, text-inversion confounds make them hard to evaluate. To this end, we improve the Activation Oracle (AO) training regime in four ways: training on on-policy rollouts, improving the conversational dataset, feeding more layers and an improvement to the injection formula. The capability improvements are marginal, but quality of life improvements are quite substantial. In addition, we open source the first comprehensive evaluation suite for AO quality, which we call AObench. Overall, we hope that our work sets a foundation that helps improve AOs and other models in the paradigm of scalable, end-to-end interpretability.",
+    "published": "May 23",
+    "pdf_url": "https://arxiv.org/pdf/2606.02609v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.02609v1",
+    "queried_author": "Neel Nanda",
+    "matching_authors": [
+      "Neel Nanda"
     ]
   },
   {
@@ -1131,8 +1654,8 @@
     ],
     "summary": "Reasoning-trained language models often spend more tokens on harder problems, but longer chains of thought do not show whether a model is merely computing for more steps or following a different internal trajectory. We study this distinction through hidden-state trajectories during chain-of-thought generation across competitive programming, mathematics, and Boolean satisfiability. Raw trajectory geometry is strongly shaped by generation length: longer generations mechanically alter path statistics, so difficulty-dependent comparisons are misleading without adjustment. After residualizing trajectory statistics on length, difficulty remains systematically coupled to corrected trajectory geometry across all domains studied. The clearest reasoning-specific separation appears in the code domain, where harder problems show more direct corrected trajectories and less heterogeneous local curvature in reasoning-trained models than in matched instruction-tuned baselines. Corrected difficulty-geometry coupling is weaker, but still present, in mathematics and Boolean satisfiability. Prompt-stage linear probes do not mirror the code-domain separation, and behavioral annotations show that stronger corrected coupling co-occurs with strategy shifts and uncertainty monitoring. Together, these findings establish length correction as a prerequisite for generation-time trajectory analysis and show that reasoning training can be associated with distinct corrected trajectory geometry, with the strength of the effect depending on the domain.",
     "published": "May 14",
-    "pdf_url": "https://arxiv.org/pdf/2605.15454v1",
-    "arxiv_url": "http://arxiv.org/abs/2605.15454v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.15454v2",
+    "arxiv_url": "http://arxiv.org/abs/2605.15454v2",
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
@@ -4453,8 +4976,8 @@
     ],
     "summary": "The next-token prediction (NTP) objective trains language models to predict a single token at each step, even though many continuations can express the same meaning. For example, in the sentence ``this sticker can be placed here'', positioned, attached, or put are all plausible alternatives. While standard NTP training treats these alternatives as mutually exclusive targets, we explore a self-supervised framework that encourages models to predict concepts, approximated as sets of semantically equivalent tokens. Models trained with this concept supervision align better with human similarity judgments, improve classification, clustering, and reranking performance, and achieve comparable or stronger downstream reasoning. These gains come with lower perplexity on semantically meaningful words (Section 3.2) and only minimal increases in global perplexity, suggesting that concepts enhance semantic alignment while preserving language modeling quality. Our code is available at https://anonymous.4open.science/r/learning-concepts-9025 .",
     "published": "Mar 31",
-    "pdf_url": "https://arxiv.org/pdf/2603.29123v2",
-    "arxiv_url": "http://arxiv.org/abs/2603.29123v2",
+    "pdf_url": "https://arxiv.org/pdf/2603.29123v3",
+    "arxiv_url": "http://arxiv.org/abs/2603.29123v3",
     "queried_author": "Dan Jurafsky",
     "matching_authors": [
       "Dan Jurafsky"
@@ -8214,10 +8737,10 @@
       "Anthony G. Cohn",
       "Janet B. Pierrehumbert"
     ],
-    "summary": "Large language models (LLMs) are trained and tested extensively on symbolic representations such as code and graphs, yet real-world user tasks are often specified in natural language. To what extent can LLMs generalize across these representations? Here, we approach this question by studying isomorphic tasks involving procedures represented in code, graphs, and natural language (e.g., scheduling steps in planning). We find that training LLMs with popular post-training methods on graphs or code data alone does not reliably generalize to corresponding natural language tasks, while training solely on natural language can lead to inefficient performance gains. To address this gap, we propose a two-stage data curriculum that first trains on symbolic, then natural language data. The curriculum substantially improves model performance across model families and tasks. Remarkably, a 1.5B Qwen model trained by our method can closely match zero-shot GPT-4o in naturalistic planning. Finally, our analysis suggests that successful cross-representation generalization can be interpreted as a form of generative analogy, which our curriculum effectively encourages.",
+    "summary": "Large language models (LLMs) are trained and tested extensively on symbolic representations such as code and graphs, yet real-world user tasks are often specified in natural language. To what extent can LLMs generalize across these representations? Here, we approach this question by studying isomorphic tasks involving procedures represented in code, graphs, and natural language (e.g., scheduling steps in planning). We find that training LLMs with popular post-training methods on graphs or code data alone does not reliably generalize to corresponding natural language tasks, while training solely on natural language can lead to inefficient performance gains. To address this gap, we propose a two-stage reinforcement learning curriculum that first trains on symbolic, then natural language data. The curriculum substantially improves model performance across model families and tasks. Remarkably, a 1.5B Qwen model trained by our method can closely match zero-shot GPT-4o in naturalistic planning. Finally, our analysis suggests that successful cross-representation generalization can be interpreted as a form of generative analogy, which our curriculum effectively encourages. The dataset and code used in this paper can be found \\href{https://github.com/fangru-lin/procedure_generalization_llm}{here}.",
     "published": "Feb 03",
-    "pdf_url": "https://arxiv.org/pdf/2602.03542v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.03542v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.03542v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.03542v2",
     "queried_author": "Valentin Hofmann",
     "matching_authors": [
       "Valentin Hofmann"
@@ -10535,8 +11058,8 @@
     ],
     "summary": "While current software agents powered by large language models (LLMs) and agentic reinforcement learning (RL) can boost programmer productivity, their training data (e.g., GitHub issues and pull requests) and environments (e.g., pass-to-pass and fail-to-pass tests) heavily depend on human knowledge or curation, posing a fundamental barrier to superintelligence. In this paper, we present Self-play SWE-RL (SSR), a first step toward training paradigms for superintelligent software agents. Our approach takes minimal data assumptions, only requiring access to sandboxed repositories with source code and installed dependencies, with no need for human-labeled issues or tests. Grounded in these real-world codebases, a single LLM agent is trained via reinforcement learning in a self-play setting to iteratively inject and repair software bugs of increasing complexity, with each bug formally specified by a test patch rather than a natural language issue description. On the SWE-bench Verified and SWE-Bench Pro benchmarks, SSR achieves notable self-improvement (+10.4 and +7.8 points, respectively) and consistently outperforms the human-data baseline over the entire training trajectory, despite being evaluated on natural language issues absent from self-play. Our results, albeit early, suggest a path where agents autonomously gather extensive learning experiences from real-world software repositories, ultimately enabling superintelligent systems that exceed human capabilities in understanding how systems are constructed, solving novel challenges, and autonomously creating new software fro...",
     "published": "Dec 21",
-    "pdf_url": "https://arxiv.org/pdf/2512.18552v2",
-    "arxiv_url": "http://arxiv.org/abs/2512.18552v2",
+    "pdf_url": "https://arxiv.org/pdf/2512.18552v3",
+    "arxiv_url": "http://arxiv.org/abs/2512.18552v3",
     "queried_author": "Daniel Fried",
     "matching_authors": [
       "Daniel Fried"
@@ -12186,8 +12709,8 @@
     ],
     "summary": "Estimating probability density and its score from samples remains a core problem in generative modeling, Bayesian inference, and kinetic theory. Existing methods are bifurcated: classical kernel density estimators (KDE) generalize across distributions but suffer from the curse of dimensionality, while modern neural score models achieve high precision but require retraining for every target distribution. We introduce DiScoFormer (Density and Score Transformer), a ``train-once, infer-anywhere\" equivariant Transformer that maps i.i.d. samples to both density values and score vectors, generalizing across distributions and sample sizes. Analytically, we prove that self-attention can recover normalized KDE, establishing it as a functional generalization of kernel methods; empirically, individual attention heads learn multi-scale, kernel-like behaviors. The model converges faster and achieves higher precision than KDE for density estimation, and provides a high-fidelity plug-in score oracle for score-debiased KDE, Fisher information computation, and Fokker-Planck-type PDEs.",
     "published": "Nov 08",
-    "pdf_url": "https://arxiv.org/pdf/2511.05924v3",
-    "arxiv_url": "http://arxiv.org/abs/2511.05924v3",
+    "pdf_url": "https://arxiv.org/pdf/2511.05924v4",
+    "arxiv_url": "http://arxiv.org/abs/2511.05924v4",
     "queried_author": "Ranjay Krishna",
     "matching_authors": [
       "Ranjay Krishna"
@@ -12566,286 +13089,6 @@
     "queried_author": "Tri Dao",
     "matching_authors": [
       "Tri Dao"
-    ]
-  },
-  {
-    "title": "Training Proactive and Personalized LLM Agents",
-    "authors": [
-      "Weiwei Sun",
-      "Xuhui Zhou",
-      "Weihua Du",
-      "Xingyao Wang",
-      "Sean Welleck",
-      "Graham Neubig",
-      "Maarten Sap",
-      "Yiming Yang"
-    ],
-    "summary": "While existing work focuses primarily on task success, we argue that effective real-world agents require optimizing three dimensions: productivity (task completion), proactivity (asking essential questions), and personalization (adapting to diverse user preferences). We introduce UserVille, an interactive environment with LLM-based user simulators enabling diverse, configurable user preferences. Leveraging UserVille, we introduce PPP, a multi-objective reinforcement learning approach that jointly optimizes all three dimensions: Productivity, Proactivity, and Personalization. Experiments on software engineering and deep research tasks show that agents trained with PPP achieve substantial improvements over strong baselines such as GPT-5 (+21.6 on average), demonstrating the ability to ask strategic clarifying questions, adapt to unseen user preferences, and improve task success through better interaction. This work demonstrates that explicitly optimizing for user-centered interaction is critical for building practical and effective AI agents.",
-    "published": "Nov 04",
-    "pdf_url": "https://arxiv.org/pdf/2511.02208v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.02208v1",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig",
-      "Maarten Sap",
-      "Sean Welleck"
-    ]
-  },
-  {
-    "title": "Shared Parameter Subspaces and Cross-Task Linearity in Emergently Misaligned Behavior",
-    "authors": [
-      "Daniel Aarao Reis Arturi",
-      "Eric Zhang",
-      "Andrew Ansah",
-      "Kevin Zhu",
-      "Ashwinee Panda",
-      "Aishwarya Balwani"
-    ],
-    "summary": "Recent work has discovered that large language models can develop broadly misaligned behaviors after being fine-tuned on narrowly harmful datasets, a phenomenon known as emergent misalignment (EM). However, the fundamental mechanisms enabling such harmful generalization across disparate domains remain poorly understood. In this work, we adopt a geometric perspective to study EM and demonstrate that it exhibits a fundamental cross-task linear structure in how harmful behavior is encoded across different datasets. Specifically, we find a strong convergence in EM parameters across tasks, with the fine-tuned weight updates showing relatively high cosine similarities, as well as shared lower-dimensional subspaces as measured by their principal angles and projection overlaps. Furthermore, we also show functional equivalence via linear mode connectivity, wherein interpolated models across narrow misalignment tasks maintain coherent, broadly misaligned behavior. Our results indicate that EM arises from different narrow tasks discovering the same set of shared parameter directions, suggesting that harmful behaviors may be organized into specific, predictable regions of the weight landscape. By revealing this fundamental connection between parametric geometry and behavioral outcomes, we hope our work catalyzes further research on parameter space interpretability and weight-based interventions.",
-    "published": "Nov 03",
-    "pdf_url": "https://arxiv.org/pdf/2511.02022v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.02022v1",
-    "queried_author": "Ashwinee Panda",
-    "matching_authors": [
-      "Ashwinee Panda"
-    ]
-  },
-  {
-    "title": "Accumulating Context Changes the Beliefs of Language Models",
-    "authors": [
-      "Jiayi Geng",
-      "Howard Chen",
-      "Ryan Liu",
-      "Manoel Horta Ribeiro",
-      "Robb Willer",
-      "Graham Neubig",
-      "Thomas L. Griffiths"
-    ],
-    "summary": "Language model (LM) assistants are increasingly used in applications such as brainstorming and research. Improvements in memory and context size have allowed these models to become more autonomous, which has also resulted in more text accumulation in their context windows without explicit user intervention. This comes with a latent risk: the belief profiles of models -- their understanding of the world as manifested in their responses or actions -- may silently change as context accumulates. This can lead to subtly inconsistent user experiences, or shifts in behavior that deviate from the original alignment of the models. In this paper, we explore how accumulating context by engaging in interactions and processing text -- talking and reading -- can change the beliefs of language models, as manifested in their responses and behaviors. Our results reveal that models' belief profiles are highly malleable: GPT-5 exhibits a 54.7% shift in its stated beliefs after 10 rounds of discussion about moral dilemmas and queries about safety, while Grok 4 shows a 27.2% shift on political issues after reading texts from the opposing position. We also examine models' behavioral changes by designing tasks that require tool use, where each tool selection corresponds to an implicit belief. We find that these changes align with stated belief shifts, suggesting that belief shifts will be reflected in actual behavior in agentic systems. Our analysis exposes the hidden risk of belief shift as models undergo extended sessions of talking or reading, rendering their opinions and actions unreliable.",
-    "published": "Nov 03",
-    "pdf_url": "https://arxiv.org/pdf/2511.01805v2",
-    "arxiv_url": "http://arxiv.org/abs/2511.01805v2",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
-    ]
-  },
-  {
-    "title": "Measuring what Matters: Construct Validity in Large Language Model Benchmarks",
-    "authors": [
-      "Andrew M. Bean",
-      "Ryan Othniel Kearns",
-      "Angelika Romanou",
-      "Franziska Sofia Hafner",
-      "Harry Mayne",
-      "Jan Batzner",
-      "Negar Foroutan",
-      "Chris Schmitz",
-      "Karolina Korgul",
-      "Hunar Batra",
-      "Oishi Deb",
-      "Emma Beharry",
-      "Cornelius Emde",
-      "Thomas Foster",
-      "Anna Gausen",
-      "Mar\u00eda Grandury",
-      "Simeng Han",
-      "Valentin Hofmann",
-      "Lujain Ibrahim",
-      "Hazel Kim",
-      "Hannah Rose Kirk",
-      "Fangru Lin",
-      "Gabrielle Kaili-May Liu",
-      "Lennart Luettgau",
-      "Jabez Magomere",
-      "Jonathan Rystr\u00f8m",
-      "Anna Sotnikova",
-      "Yushi Yang",
-      "Yilun Zhao",
-      "Adel Bibi",
-      "Antoine Bosselut",
-      "Ronald Clark",
-      "Arman Cohan",
-      "Jakob Foerster",
-      "Yarin Gal",
-      "Scott A. Hale",
-      "Inioluwa Deborah Raji",
-      "Christopher Summerfield",
-      "Philip H. S. Torr",
-      "Cozmin Ududec",
-      "Luc Rocher",
-      "Adam Mahdi"
-    ],
-    "summary": "Evaluating large language models (LLMs) is crucial for both assessing their capabilities and identifying safety or robustness issues prior to deployment. Reliably measuring abstract and complex phenomena such as 'safety' and 'robustness' requires strong construct validity, that is, having measures that represent what matters to the phenomenon. With a team of 29 expert reviewers, we conduct a systematic review of 445 LLM benchmarks from leading conferences in natural language processing and machine learning. Across the reviewed articles, we find patterns related to the measured phenomena, tasks, and scoring metrics which undermine the validity of the resulting claims. To address these shortcomings, we provide eight key recommendations and detailed actionable guidance to researchers and practitioners in developing LLM benchmarks.",
-    "published": "Nov 03",
-    "pdf_url": "https://arxiv.org/pdf/2511.04703v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.04703v1",
-    "queried_author": "Antoine Bosselut",
-    "matching_authors": [
-      "Antoine Bosselut",
-      "Valentin Hofmann"
-    ]
-  },
-  {
-    "title": "RLAC: Reinforcement Learning with Adversarial Critic for Free-Form Generation Tasks",
-    "authors": [
-      "Mian Wu",
-      "Gavin Zhang",
-      "Sewon Min",
-      "Sergey Levine",
-      "Aviral Kumar"
-    ],
-    "summary": "Open-ended generation tasks require outputs to satisfy diverse and often implicit task-specific evaluation rubrics. The sheer number of relevant rubrics leads to prohibitively high verification costs and incomplete assessments of a response, making reinforcement learning (RL) post-training with rubric-based rewards difficult to scale. This problem is exacerbated by the fact that often the best way to combine these rubrics into one single reward is also highly prompt-specific. We propose Reinforcement Learning with Adversarial Critic (RLAC), a post-training approach that addresses these challenges via dynamic rubric verification. Our approach employs a large language model (LLM) as a critic that dynamically identifies only the most likely failure modes (e.g., a factual error or unhandled edge case), which are then verified by an external validator to optimize both generator and critic jointly. By training both the generator and the critic, this game enhances the critic's error detection and the generator's output quality while reducing required verifications. Our experiments demonstrate that RLAC improves factual accuracy in text generation and correctness in code generation, while also outperforming exhaustive verification and reward model methods. We show that dynamic critics are more effective than fixed critics, showcasing the potential of RLAC for scaling RL post-training to free-form generation tasks.",
-    "published": "Nov 03",
-    "pdf_url": "https://arxiv.org/pdf/2511.01758v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.01758v1",
-    "queried_author": "Sewon Min",
-    "matching_authors": [
-      "Sewon Min"
-    ]
-  },
-  {
-    "title": "CodeClash: Benchmarking Goal-Oriented Software Engineering",
-    "authors": [
-      "John Yang",
-      "Kilian Lieret",
-      "Joyce Yang",
-      "Carlos E. Jimenez",
-      "Muhtasham Oblokulov",
-      "Aryan Siddiqui",
-      "Ofir Press",
-      "Ludwig Schmidt",
-      "Diyi Yang"
-    ],
-    "summary": "Current benchmarks for coding evaluate language models (LMs) on concrete, well-specified tasks such as fixing specific bugs or writing targeted tests. However, human programmers do not spend all day incessantly addressing isolated tasks. Instead, real-world software development is grounded in the pursuit of high-level goals, like improving user retention or reducing costs. Evaluating whether LMs can also iteratively develop code to better accomplish open-ended objectives without any explicit guidance remains an open challenge. To address this, we introduce CodeClash, a benchmark where LMs compete in multi-round tournaments to build the best codebase for achieving a competitive objective. Each round proceeds in two phases: agents edit their code, then their codebases compete head-to-head in a code arena that determines winners based on objectives like score maximization, resource acquisition, or survival. Whether it's writing notes, scrutinizing documentation, analyzing competition logs, or creating test suites, models must decide for themselves how to improve their codebases both absolutely and against their opponents. We run 1680 tournaments (25,200 rounds total) to evaluate 8 LMs across 6 arenas. Our results reveal that while models exhibit diverse development styles, they share fundamental limitations in strategic reasoning. Models also struggle with long-term codebase maintenance, as repositories become progressively messy and redundant. These limitations are stark: top models lose every round against expert human programmers. We open-source CodeClash to advance the stu...",
-    "published": "Nov 02",
-    "pdf_url": "https://arxiv.org/pdf/2511.00839v2",
-    "arxiv_url": "http://arxiv.org/abs/2511.00839v2",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang",
-      "Ludwig Schmidt",
-      "Ofir Press"
-    ]
-  },
-  {
-    "title": "Belief Dynamics Reveal the Dual Nature of In-Context Learning and Activation Steering",
-    "authors": [
-      "Eric Bigelow",
-      "Daniel Wurgaft",
-      "YingQiao Wang",
-      "Noah Goodman",
-      "Tomer Ullman",
-      "Hidenori Tanaka",
-      "Ekdeep Singh Lubana"
-    ],
-    "summary": "Large language models (LLMs) can be controlled at inference time through prompts (in-context learning) and internal activations (activation steering). Different accounts have been proposed to explain these methods, yet their common goal of controlling model behavior raises the question of whether these seemingly disparate methodologies can be seen as specific instances of a broader framework. Motivated by this, we develop a unifying, predictive account of LLM control from a Bayesian perspective. Specifically, we posit that both context- and activation-based interventions impact model behavior by altering its belief in latent concepts: steering operates by changing concept priors, while in-context learning leads to an accumulation of evidence. This results in a closed-form Bayesian model that is highly predictive of LLM behavior across context- and activation-based interventions in a set of domains inspired by prior work on many-shot in-context learning. This model helps us explain prior empirical phenomena - e.g., sigmoidal learning curves as in-context evidence accumulates - while predicting novel ones - e.g., additivity of both interventions in log-belief space, which results in distinct phases such that sudden and dramatic behavioral shifts can be induced by slightly changing intervention controls. Taken together, this work offers a unified account of prompt-based and activation-based control of LLM behavior, and a methodology for empirically predicting the effects of these interventions.",
-    "published": "Nov 01",
-    "pdf_url": "https://arxiv.org/pdf/2511.00617v2",
-    "arxiv_url": "http://arxiv.org/abs/2511.00617v2",
-    "queried_author": "Noah Goodman",
-    "matching_authors": [
-      "Noah Goodman"
-    ]
-  },
-  {
-    "title": "LIR: The First Workshop on Late Interaction and Multi Vector Retrieval @ ECIR 2026",
-    "authors": [
-      "Benjamin Clavi\u00e9",
-      "Xianming Li",
-      "Antoine Chaffin",
-      "Omar Khattab",
-      "Tom Aarsen",
-      "Manuel Faysse",
-      "Jing Li"
-    ],
-    "summary": "Late interaction retrieval methods, pioneered by ColBERT, have emerged as a powerful alternative to single-vector neural IR. By leveraging fine-grained, token-level representations, they have been demonstrated to deliver strong generalisation and robustness, particularly in out-of-domain settings. They have recently been shown to be particularly well-suited for novel use cases, such as reasoning-based or cross-modality retrieval. At the same time, these models pose significant challenges of efficiency, usability, and integrations into fully fledged systems; as well as the natural difficulties encountered while researching novel application domains. Recent years have seen rapid advances across many of these areas, but research efforts remain fragmented across communities and frequently exclude practitioners. The purpose of this workshop is to create an environment where all aspects of late interaction can be discussed, with a focus on early research explorations, real-world outcomes, and negative or puzzling results to be freely shared and discussed. The aim of LIR is to provide a highly-interactive environment for researchers from various backgrounds and practitioners to freely discuss their experience, fostering further collaboration.",
-    "published": "Nov 01",
-    "pdf_url": "https://arxiv.org/pdf/2511.00444v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.00444v1",
-    "queried_author": "Omar Khattab",
-    "matching_authors": [
-      "Omar Khattab"
-    ]
-  },
-  {
-    "title": "Culture Cartography: Mapping the Landscape of Cultural Knowledge",
-    "authors": [
-      "Caleb Ziems",
-      "William Held",
-      "Jane Yu",
-      "Amir Goldberg",
-      "David Grusky",
-      "Diyi Yang"
-    ],
-    "summary": "To serve global users safely and productively, LLMs need culture-specific knowledge that might not be learned during pre-training. How do we find such knowledge that is (1) salient to in-group users, but (2) unknown to LLMs? The most common solutions are single-initiative: either researchers define challenging questions that users passively answer (traditional annotation), or users actively produce data that researchers structure as benchmarks (knowledge extraction). The process would benefit from mixed-initiative collaboration, where users guide the process to meaningfully reflect their cultures, and LLMs steer the process towards more challenging questions that meet the researcher's goals. We propose a mixed-initiative methodology called CultureCartography. Here, an LLM initializes annotation with questions for which it has low-confidence answers, making explicit both its prior knowledge and the gaps therein. This allows a human respondent to fill these gaps and steer the model towards salient topics through direct edits. We implement this methodology as a tool called CultureExplorer. Compared to a baseline where humans answer LLM-proposed questions, we find that CultureExplorer more effectively produces knowledge that leading models like DeepSeek R1 and GPT-4o are missing, even with web search. Fine-tuning on this data boosts the accuracy of Llama-3.1-8B by up to 19.2% on related culture benchmarks.",
-    "published": "Oct 31",
-    "pdf_url": "https://arxiv.org/pdf/2510.27672v1",
-    "arxiv_url": "http://arxiv.org/abs/2510.27672v1",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang",
-      "William Held"
-    ]
-  },
-  {
-    "title": "Best Practices for Biorisk Evaluations on Open-Weight Bio-Foundation Models",
-    "authors": [
-      "Boyi Wei",
-      "Zora Che",
-      "Nathaniel Li",
-      "Udari Madhushani Sehwag",
-      "Jasper G\u00f6tting",
-      "Samira Nedungadi",
-      "Julian Michael",
-      "Summer Yue",
-      "Dan Hendrycks",
-      "Peter Henderson",
-      "Zifan Wang",
-      "Seth Donoughe",
-      "Mantas Mazeika"
-    ],
-    "summary": "Open-weight bio-foundation models present a dual-use dilemma. While holding great promise for accelerating scientific research and drug development, they could also enable bad actors to develop more deadly bioweapons. To mitigate the risk posed by these models, current approaches focus on filtering biohazardous data during pre-training. However, the effectiveness of such an approach remains unclear, particularly against determined actors who might fine-tune these models for malicious use. To address this gap, we propose BioRiskEval, a framework to evaluate the robustness of procedures that are intended to reduce the dual-use capabilities of bio-foundation models. BioRiskEval assesses models' virus understanding through three lenses, including sequence modeling, mutational effects prediction, and virulence prediction. Our results show that current filtering practices may not be particularly effective: Excluded knowledge can be rapidly recovered in some cases via fine-tuning, and exhibits broader generalizability in sequence modeling. Furthermore, dual-use signals may already reside in the pretrained representations, and can be elicited via simple linear probing. These findings highlight the challenges of data filtering as a standalone procedure, underscoring the need for further research into robust safety and security strategies for open-weight bio-foundation models.",
-    "published": "Oct 31",
-    "pdf_url": "https://arxiv.org/pdf/2510.27629v4",
-    "arxiv_url": "http://arxiv.org/abs/2510.27629v4",
-    "queried_author": "Peter Henderson",
-    "matching_authors": [
-      "Peter Henderson"
-    ]
-  },
-  {
-    "title": "Thought Branches: Interpreting LLM Reasoning Requires Resampling",
-    "authors": [
-      "Uzay Macar",
-      "Paul C. Bogdan",
-      "Senthooran Rajamanoharan",
-      "Neel Nanda"
-    ],
-    "summary": "Most work interpreting reasoning models studies only a single chain-of-thought (CoT), yet these models define distributions over many possible CoTs. We argue that studying a single sample is inadequate for understanding causal influence and the underlying computation. Though fully specifying this distribution is intractable, we can measure a partial CoT's impact by resampling only the subsequent text. We present case studies using resampling to investigate model decisions. First, when a model states a reason for its action, does that reason actually cause the action? In \"agentic misalignment\" scenarios, we find that self-preservation sentences have small causal impact, suggesting they do not meaningfully drive blackmail. Second, are artificial edits to CoT sufficient for steering reasoning? Resampling and selecting a completion with the desired property is a principled on-policy alternative. We find that off-policy interventions yield small and unstable effects compared to resampling in decision-making tasks. Third, how do we understand the effect of removing a reasoning step when the model may repeat it post-edit? We introduce a resilience metric that repeatedly resamples to prevent similar content from reappearing downstream. Critical planning statements resist removal but have large effects when eliminated. Fourth, since CoT is sometimes \"unfaithful\", can our methods teach us anything in these settings? Adapting causal mediation analysis, we find that hints that causally affect the output without being explicitly mentioned exert a subtle and cumulative influence on the C...",
-    "published": "Oct 31",
-    "pdf_url": "https://arxiv.org/pdf/2510.27484v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.27484v2",
-    "queried_author": "Neel Nanda",
-    "matching_authors": [
-      "Neel Nanda"
-    ]
-  },
-  {
-    "title": "What's In My Human Feedback? Learning Interpretable Descriptions of Preference Data",
-    "authors": [
-      "Rajiv Movva",
-      "Smitha Milli",
-      "Sewon Min",
-      "Emma Pierson"
-    ],
-    "summary": "Human feedback can alter language models in unpredictable and undesirable ways, as practitioners lack a clear understanding of what feedback data encodes. While prior work studies preferences over certain attributes (e.g., length or sycophancy), automatically extracting relevant features without pre-specifying hypotheses remains challenging. We introduce What's In My Human Feedback? (WIMHF), a method to explain feedback data using sparse autoencoders. WIMHF characterizes both (1) the preferences a dataset is capable of measuring and (2) the preferences that the annotators actually express. Across 7 datasets, WIMHF identifies a small number of human-interpretable features that account for the majority of the preference prediction signal achieved by black-box models. These features reveal a wide diversity in what humans prefer, and the role of dataset-level context: for example, users on Reddit prefer informality and jokes, while annotators in HH-RLHF and PRISM disprefer them. WIMHF also surfaces potentially unsafe preferences, such as that LMArena users tend to vote against refusals, often in favor of toxic content. The learned features enable effective data curation: re-labeling the harmful examples in Arena yields large safety gains (+37%) with no cost to general performance. They also allow fine-grained personalization: on the Community Alignment dataset, we learn annotator-specific weights over subjective features that improve preference prediction. WIMHF provides a human-centered analysis method for practitioners to better understand and use preference data.",
-    "published": "Oct 30",
-    "pdf_url": "https://arxiv.org/pdf/2510.26202v2",
-    "arxiv_url": "http://arxiv.org/abs/2510.26202v2",
-    "queried_author": "Sewon Min",
-    "matching_authors": [
-      "Sewon Min"
     ]
   }
 ]
