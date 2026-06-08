@@ -11695,6 +11695,25 @@
     ]
   },
   {
+    "title": "CONCUR: A Framework for Continual Constrained and Unconstrained Routing",
+    "authors": [
+      "Peter Baile Chen",
+      "Weiyue Li",
+      "Dan Roth",
+      "Michael Cafarella",
+      "Samuel Madden",
+      "Jacob Andreas"
+    ],
+    "summary": "AI tasks differ in complexity and are best addressed with different computation strategies (e.g., combinations of models and decoding methods). Hence, an effective routing system that maps tasks to the appropriate strategies is crucial. Most prior methods build the routing framework by training a single model across all strategies, which demands full retraining whenever new strategies appear and leads to high overhead. Attempts at such continual routing, however, often face difficulties with generalization. Prior models also typically use a single input representation, limiting their ability to capture the full complexity of the routing problem and leading to sub-optimal routing decisions. To address these gaps, we propose CONCUR, a continual routing framework that supports both constrained and unconstrained routing (i.e., routing with or without a budget). Our modular design trains a separate predictor model for each strategy, enabling seamless incorporation of new strategies with low additional training cost. Our predictors also leverage multiple representations of both tasks and computation strategies to better capture overall problem complexity. Experiments on both in-distribution and out-of-distribution, knowledge- and reasoning-intensive tasks show that our method outperforms the best single strategy and strong existing routing techniques with higher end-to-end accuracy and lower inference cost in both continual and non-continual settings, while also reducing training cost in the continual setting.",
+    "published": "Dec 10",
+    "pdf_url": "https://arxiv.org/pdf/2512.09386v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.09386v1",
+    "queried_author": "Jacob Andreas",
+    "matching_authors": [
+      "Jacob Andreas"
+    ]
+  },
+  {
     "title": "On the Interplay of Pre-Training, Mid-Training, and RL on Reasoning Language Models",
     "authors": [
       "Charlie Zhang",
@@ -11708,6 +11727,37 @@
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig"
+    ]
+  },
+  {
+    "title": "On the Interplay of Pre-Training, Mid-Training, and RL on Reasoning Language Models",
+    "authors": [
+      "Charlie Zhang",
+      "Graham Neubig",
+      "Xiang Yue"
+    ],
+    "summary": "Recent reinforcement learning (RL) techniques have yielded impressive reasoning improvements in language models, yet it remains unclear whether post-training truly extends a model's reasoning ability beyond what it acquires during pre-training. A central challenge is the lack of control in modern training pipelines: large-scale pre-training corpora are opaque, mid-training is often underexamined, and RL objectives interact with unknown prior knowledge in complex ways. To resolve this ambiguity, we develop a fully controlled experimental framework that isolates the causal contributions of pre-training, mid-training, and RL-based post-training. Our approach employs synthetic reasoning tasks with explicit atomic operations, parseable step-by-step reasoning traces, and systematic manipulation of training distributions. We evaluate models along two axes: extrapolative generalization to more complex compositions and contextual generalization across surface contexts. Using this framework, we reconcile competing views on RL's effectiveness. We show that: 1) RL produces true capability gains (pass@128) only when pre-training leaves sufficient headroom and when RL data target the model's edge of competence, tasks at the boundary that are difficult but not yet out of reach. 2) Contextual generalization requires minimal yet sufficient pre-training exposure, after which RL can reliably transfer. 3) Mid-training significantly enhances performance under fixed compute compared with RL only, demonstrating its central but underexplored role in training pipelines. 4) Process-level rewards red...",
+    "published": "Dec 08",
+    "pdf_url": "https://arxiv.org/pdf/2512.07783v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.07783v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
+    "title": "ARC-AGI Without Pretraining",
+    "authors": [
+      "Isaac Liao",
+      "Albert Gu"
+    ],
+    "summary": "Conventional wisdom in the age of LLMs dictates that solving IQ-test-like visual puzzles from the ARC-AGI-1 benchmark requires capabilities derived from massive pretraining. To counter this, we introduce CompressARC, a 76K parameter model without any pretraining that solves 20% of evaluation puzzles by minimizing the description length (MDL) of the target puzzle purely during inference time. The MDL endows CompressARC with extreme generalization abilities typically unheard of in deep learning. To our knowledge, CompressARC is the only deep learning method for ARC-AGI where training happens only on a single sample: the target inference puzzle itself, with the final solution information removed. Moreover, CompressARC does not train on the pre-provided ARC-AGI \"training set\". Under these extremely data-limited conditions, we do not ordinarily expect any puzzles to be solvable at all. Yet CompressARC still solves a diverse distribution of creative ARC-AGI puzzles, suggesting MDL to be an alternative feasible way to produce intelligence, besides conventional pretraining.",
+    "published": "Dec 05",
+    "pdf_url": "https://arxiv.org/pdf/2512.06104v1",
+    "arxiv_url": "http://arxiv.org/abs/2512.06104v1",
+    "queried_author": "Albert Gu",
+    "matching_authors": [
+      "Albert Gu"
     ]
   },
   {
@@ -13033,62 +13083,6 @@
     "queried_author": "Noah A. Smith",
     "matching_authors": [
       "Noah A. Smith"
-    ]
-  },
-  {
-    "title": "Oolong: Evaluating Long Context Reasoning and Aggregation Capabilities",
-    "authors": [
-      "Amanda Bertsch",
-      "Adithya Pratapa",
-      "Teruko Mitamura",
-      "Graham Neubig",
-      "Matthew R. Gormley"
-    ],
-    "summary": "As model context lengths continue to grow, concerns about whether models effectively use the full context length have persisted. While several carefully designed long-context evaluations have recently been released, these evaluations tend to rely on retrieval from one or more sections of the context, which allows nearly all of the context tokens to be disregarded as noise. This represents only one type of task that might be performed with long context. We introduce Oolong, a benchmark of long-context reasoning tasks that require analyzing individual chunks of text on an atomic level, and then aggregating these analyses to answer distributional questions. Oolong is separated into two task sets: Oolong-synth, a set of naturalistic synthetic tasks, where we can easily ablate components of the reasoning problem; and Oolong-real, a downstream setting which requires reasoning over real-world conversational data. Oolong requires models to reason over large quantities of examples, to perform both classification and counting in-context, and to reason over temporal and user relations. Even frontier models struggle on Oolong, with GPT-5, Claude-Sonnet-4, and Gemini-2.5-Pro all achieving less than 50% accuracy on both splits at 128K. We release the data and evaluation harness for Oolong to enable further development of models that can reason over large quantities of text.",
-    "published": "Nov 04",
-    "pdf_url": "https://arxiv.org/pdf/2511.02817v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.02817v1",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
-    ]
-  },
-  {
-    "title": "Beyond Single Embeddings: Capturing Diverse Targets with Multi-Query Retrieval",
-    "authors": [
-      "Hung-Ting Chen",
-      "Xiang Liu",
-      "Shauli Ravfogel",
-      "Eunsol Choi"
-    ],
-    "summary": "Most text retrievers generate \\emph{one} query vector to retrieve relevant documents. Yet, the conditional distribution of relevant documents for the query may be multimodal, e.g., representing different interpretations of the query. We first quantify the limitations of existing retrievers. All retrievers we evaluate struggle more as the distance between target document embeddings grows. To address this limitation, we develop a new retriever architecture, \\emph{A}utoregressive \\emph{M}ulti-\\emph{E}mbedding \\emph{R}etriever (AMER). Our model autoregressively generates multiple query vectors, and all the predicted query vectors are used to retrieve documents from the corpus. We show that on the synthetic vectorized data, the proposed method could capture multiple target distributions perfectly, showing 4x better performance than single embedding model. We also fine-tune our model on real-world multi-answer retrieval datasets and evaluate in-domain. AMER presents 4 and 21\\% relative gains over single-embedding baselines on two datasets we evaluate on. Furthermore, we consistently observe larger gains on the subset of dataset where the embeddings of the target documents are less similar to each other. We demonstrate the potential of using a multi-query vector retriever and open up a new direction for future work.",
-    "published": "Nov 04",
-    "pdf_url": "https://arxiv.org/pdf/2511.02770v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.02770v1",
-    "queried_author": "Eunsol Choi",
-    "matching_authors": [
-      "Eunsol Choi"
-    ]
-  },
-  {
-    "title": "Opportunistic Expert Activation: Batch-Aware Expert Routing for Faster Decode Without Retraining",
-    "authors": [
-      "Costin-Andrei Oncescu",
-      "Qingyang Wu",
-      "Wai Tong Chung",
-      "Robert Wu",
-      "Bryan Gopal",
-      "Junxiong Wang",
-      "Tri Dao",
-      "Ben Athiwaratkun"
-    ],
-    "summary": "An increasing number of LLMs employ Mixture-of-Experts (MoE) architectures where the feed-forward layer is replaced by a pool of experts and each token only activates a small subset of them. During autoregressive generation, these models often enter a memory-bound regime even for moderate batch sizes because the average expert load grows more slowly than in an equivalent dense feedforward layer. Consequently, MoE latency is governed by the number of activated experts. We introduce a framework for dynamically re-routing token-to-expert mapping to lower this number (and thus, the decode latency) while preserving a comparable quality. Our best results use a batch-aware routing that works by having tokens piggyback experts that have already been loaded into memory due to being crucial to other tokens within the same batch. Empirically, we evaluate our method on the Qwen3-30B and Qwen3-235B models with a batch size of $16$. Without any statistically significant loss in accuracy, our approach achieves latency reductions of $39\\%$ and $15\\%$ in the MoE layer decode latency, respectively.",
-    "published": "Nov 04",
-    "pdf_url": "https://arxiv.org/pdf/2511.02237v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.02237v1",
-    "queried_author": "Tri Dao",
-    "matching_authors": [
-      "Tri Dao"
     ]
   }
 ]
