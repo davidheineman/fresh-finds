@@ -1,5 +1,121 @@
 [
   {
+    "title": "Beyond Homophily: Towards Generalized Graph Reconstruction Attack and Defense",
+    "authors": [
+      "Zhanke Zhou",
+      "Bo Han",
+      "Xuan Li",
+      "Jiangchao Yao",
+      "Sanmi Koyejo",
+      "Michael K. Ng"
+    ],
+    "summary": "Graph neural networks (GNNs) are widely deployed on relational data, yet they can leak sensitive or proprietary information about the training graph adjacency, e.g., social ties, transactions, and interactions. This work studies graph reconstruction attacks (GRA), a form of model inversion that reconstructs the training adjacency from a trained GNN, given different levels of attacker-side information. We first provide a systematic characterization of when and why adjacency becomes recoverable through features, labels, embeddings, and predictions, with leakage modulated by graph homophily, heterophily, and the model's inductive bias. Motivated by these findings, we view GNN inference through a Markov chain approximation lens, treating the layered forward computation as a chain of topology-dependent representations. Building on this view, we develop complementary attack and defense methods. On the attack side, we propose MC-GRA (+), which reconstructs the adjacency by optimizing a surrogate adjacency whose GNN-induced representations align with those of the target model at each layer. On the defense side, we propose MC-GPB (+), which suppresses adjacency-dependent information throughout the representation chain while aiming to preserve classification accuracy under a privacy-utility trade-off. Experiments across homophilic/heterophilic graph benchmarks and GNNs show that our attacks improve reconstruction fidelity over prior methods, while our defenses reduce reconstruction success with only minor accuracy loss.",
+    "published": "Jun 06",
+    "pdf_url": "https://arxiv.org/pdf/2606.08067v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.08067v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "Diffusion Language Model Parallel Decoding via Product-of-Experts Bridge",
+    "authors": [
+      "Juntong Shi",
+      "Brian L. Trippe",
+      "Jure Leskovec",
+      "Stefano Ermon",
+      "Minkai Xu"
+    ],
+    "summary": "Diffusion language models (DLMs) offer substantial speed advantages through parallel decoding, but the lack of token dependencies limits generation quality compared to autoregressive (AR) models. Recent progress attempts to bridge the gap via importance sampling, with DLM being the proposal and AR being the target. However, due to the huge gap between their distributions, the sampling requires a large number of particles and is thus expensive to compute. In this paper, we introduce PoE-Bridge, a novel decoding framework that drastically improves generation speed and accuracy by introducing an intermediate distribution to bridge the gap. The distribution is constructed as a Product-of-Experts (PoE) of the DLM proposal and the AR target. With the intermediate distribution, we first use the DLM to draft multiple continuations in parallel, then apply rejection sampling to verify the drafted tokens and move the resulting candidates toward the PoE. We then use importance sampling to further correct the PoE-aligned candidates toward the AR target. We further propose several improved techniques, including mixed-temperature sampling for enhanced diversity and elastic rejection windows for reducing wasted verification. Empirically, PoE-Bridge achieves significantly improved accuracy with $5\\times$ speedup over the standard DLM decoding approach, and recovers at least 95% of the target AR model's performance, efficiently advancing most of the quality gap on challenging mathematical reasoning and coding tasks. Our code is available at https://github.com/juntongshi48/poe-bridge.",
+    "published": "Jun 06",
+    "pdf_url": "https://arxiv.org/pdf/2606.08048v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.08048v1",
+    "queried_author": "Jure Leskovec",
+    "matching_authors": [
+      "Jure Leskovec"
+    ]
+  },
+  {
+    "title": "When Behavioral Safety Evaluation Fails: A Representation-Level Perspective",
+    "authors": [
+      "Enyi Jiang",
+      "Anders Gj\u00f8lbye",
+      "Yibo Jacky Zhang",
+      "Sanmi Koyejo"
+    ],
+    "summary": "Large Language Model (LLM) safety has often been evaluated at the behavior level, which provides limited evidence of internal robustness, as these evaluations target outputs rather than representation-level vulnerability under intervention. We formalize this discrepancy as the audit gap: the difference between behavioral safety and robustness under intervention. To study this gap, we construct dissociated models that preserve safe outward behavior while remaining vulnerable in the latent space. We introduce an intervention-based evaluation framework to test model robustness through soft interventions in parameter and latent spaces, including harmful fine-tuning and layer-wise latent perturbations. To formalize the evaluation, we propose the Latent Vulnerability Score (LVS) to measure how easily harmful behavior can be elicited by bounded latent perturbations. Using this evaluation framework, we show that behavioral safety metrics are insufficient measures of representation-level robustness across multiple safely and unsafely aligned state-of-the-art models. Notably, dissociated models show substantially elevated LVSs despite comparable refusal behavior under harmful intervention, with intermediate representations being the most sensitive to intervention. Our results suggest that behavioral safety evaluation alone provides an incomplete picture of model robustness, motivating representation-aware audits of latent vulnerability and observable behavior.",
+    "published": "Jun 06",
+    "pdf_url": "https://arxiv.org/pdf/2606.08044v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.08044v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "The Easy, the Hard, and the Learnable: Confidence and Difficulty-Adaptive Policy Optimization for LLM Reasoning",
+    "authors": [
+      "Zhanke Zhou",
+      "Xiangyu Lu",
+      "Chentao Cao",
+      "Brando Miranda",
+      "Tongliang Liu",
+      "Bo Han",
+      "Sanmi Koyejo"
+    ],
+    "summary": "RL with verifiable rewards can substantially improve LLM reasoning, yet standard GRPO-style training often treats easy, hard, and learnable questions alike through uniform sampling and weighting, leading to inefficient compute allocation. We study GRPO by tracking token log-probabilities, group-normalized advantages, and the induced token-level update weights. This reveals three recurring dynamics as training proceeds: (1) confidence inflation, (2) advantage contraction, and (3) hierarchical convergence. These findings suggest that the utility of each update depends strongly on both question difficulty and the model's current competence. Motivated by this, we propose Confidence and Difficulty-adaptive Policy Optimization (CoDaPO), which assigns each question a bounded value from rollout confidence and empirical difficulty. CoDaPO then uses this value to reweight policy updates and resample high-value learnable questions within mini-batches, thereby increasing discovery within the learnable band under a fixed compute budget. Across twelve benchmarks, CoDaPO consistently improves accuracy over existing RL methods. Our code is publicly available at https://github.com/tmlr-group/CoDaPO.",
+    "published": "Jun 06",
+    "pdf_url": "https://arxiv.org/pdf/2606.07950v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.07950v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "Representational Similarity and Model Behavior in Multi-Agent Interaction",
+    "authors": [
+      "Yujin Potter",
+      "Seun Eisape",
+      "Shiyang Lai",
+      "Alexander Huth",
+      "James Evans",
+      "Been Kim",
+      "Jacob Eisenstein",
+      "Dawn Song",
+      "Alane Suhr"
+    ],
+    "summary": "Researchers have shown that neural similarity among humans predicts social closeness and cooperative success, whereas innovation often emerges from interactions among dissimilar individuals. We investigate whether these principles extend to artificial intelligence by examining interactions between large language models. In our experiments, 276 model pairs interact across eight games spanning both cooperation and novelty. We find that pairs with more similar representation spaces achieve significantly higher cooperation but exhibit reduced novelty and creativity. The effects of representational similarity on cooperation and novelty remain robust even after controlling for other factors such as performance disparity and model size. We also find that similarity in the early layers consistently shows the strongest association with cooperation and novelty, compared to the middle and later layers. This suggests that a central factor underlying these patterns could be the extent to which the two models share lexical and semantic grounding. Overall, representational similarity can be an important consideration in multi-agent system design.",
+    "published": "Jun 05",
+    "pdf_url": "https://arxiv.org/pdf/2606.07818v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.07818v1",
+    "queried_author": "Jacob Eisenstein",
+    "matching_authors": [
+      "Jacob Eisenstein"
+    ]
+  },
+  {
+    "title": "Scaling Participation in Modular AI Systems",
+    "authors": [
+      "Shangbin Feng",
+      "Yike Wang",
+      "Weijia Shi",
+      "Luke Zettlemoyer",
+      "Yejin Choi",
+      "Yulia Tsvetkov"
+    ],
+    "summary": "Humanity is a mosaic of multifaceted talents and needs, and any truly intelligent AI must reflect that richness. Yet the LLMs used by all are built by the few -- a centralized market of monolithic AI models structurally ill-suited to capture the diversity of human knowledge, reasoning, and values. Here we introduce scaling participation, a new paradigm in which modular AI systems are built from the bottom up through the contributions of diverse stakeholders. Participants contribute small models trained on their own interests and priorities; these models then collaborate in modular frameworks as compositional AI systems. Participatory AI systems outperform monolithic LLMs by up to 15.4% across 15 tasks, such as reasoning and factuality, surpassing models larger than all contributed components combined. Further experiments show that participatory AI systems benefit from contributor diversity, substantially improve on each contributor's original priorities, and exhibit emergent capabilities that allow them to solve over 15% of problems where all individual models fail. Scaling participation provides a technical foundation for transitioning from the monolithic status quo toward an open, bottom-up, and collaborative AI future.",
+    "published": "Jun 05",
+    "pdf_url": "https://arxiv.org/pdf/2606.07812v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.07812v1",
+    "queried_author": "Luke Zettlemoyer",
+    "matching_authors": [
+      "Luke Zettlemoyer",
+      "Yejin Choi"
+    ]
+  },
+  {
     "title": "Pretraining Recurrent Networks without Recurrence",
     "authors": [
       "Akarsh Kumar",
@@ -179,6 +295,8 @@
   {
     "title": "Cosmos 3: Omnimodal World Models for Physical AI",
     "authors": [
+      " NVIDIA",
+      " :",
       " Aditi",
       "Niket Agarwal",
       "Arslan Ali",
@@ -295,6 +413,7 @@
       "Atharva Joshi",
       "Nikhilesh Joshi",
       "Pranjali Joshi",
+      "Andy Ju",
       "Jaehun Jung",
       "Weiwei Kang",
       "Scott Kassekert",
@@ -366,6 +485,7 @@
       "Deepak Narayanan",
       "Thabang Ngazimbi",
       "Julian Ouyang",
+      "Shubham Pachori",
       "David Page",
       "Yatian Pang",
       "Sehwi Park",
@@ -425,6 +545,7 @@
       "Ting-Chun Wang",
       "Yan Wang",
       "Yu Wang",
+      "Rohit Watve",
       "David Wehr",
       "Fangyin Wei",
       "Xinshuo Weng",
@@ -471,10 +592,10 @@
       "Dima Zhylko",
       "Artur Zolkowski"
     ],
-    "summary": "We introduce Cosmos 3, a family of omnimodal world models designed to jointly process and generate language, image, video, audio, and action sequences within a unified mixture-of-transformers architecture. By supporting highly flexible input-output configurations, Cosmos 3 seamlessly unifies critical modalities for Physical AI -- effectively subsuming vision-language models, video generators, world simulators, and world-action models into a single framework. Our evaluation demonstrates that Cosmos 3 establishes a new state-of-the-art across a diverse suite of understanding and generation tasks, demonstrating omnimodal world models as scalable, general-purpose backbones for embodied agents. Our post-trained Cosmos 3 models were ranked as the best open-source Text-to-Image and Image-to-Video models by Artificial Analysis, and the best policy model by RoboArena at the time the technical report was written. To accelerate open research and deployment in Physical AI, we make our code, model checkpoints, curated synthetic datasets, and evaluation benchmark available under the Linux Foundation's OpenMDW-1.1 https://openmdw.ai/license/1-1/ License at https://github.com/nvidia/cosmos}{github.com/nvidia/cosmos and https://huggingface.co/collections/nvidia/cosmos3 . The project website is available at https://research.nvidia.com/labs/cosmos-lab/cosmos3 .",
+    "summary": "We introduce Cosmos 3, a family of omnimodal world models designed to jointly process and generate language, image, video, audio, and action sequences within a unified mixture-of-transformers architecture. By supporting highly flexible input-output configurations, Cosmos 3 seamlessly unifies critical modalities for Physical AI -- effectively subsuming vision-language models, video generators, world simulators, and world-action models into a single framework. Our evaluation demonstrates that Cosmos 3 establishes a new state-of-the-art across a diverse suite of understanding and generation tasks, demonstrating omnimodal world models as scalable, general-purpose backbones for embodied agents. Our post-trained Cosmos 3 models were ranked as the best open-source Text-to-Image and Image-to-Video models by Artificial Analysis, and the best policy model by RoboArena at the time the technical report was written. To accelerate open research and deployment in Physical AI, we make our code, model checkpoints, curated synthetic datasets, and evaluation benchmark available under the Linux Foundation's OpenMDW-1.1 License at https://github.com/nvidia/cosmos and https://huggingface.co/collections/nvidia/cosmos3. The project website is available at https://research.nvidia.com/labs/cosmos-lab/cosmos3.",
     "published": "Jun 01",
-    "pdf_url": "https://arxiv.org/pdf/2606.02800v1",
-    "arxiv_url": "http://arxiv.org/abs/2606.02800v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.02800v2",
+    "arxiv_url": "http://arxiv.org/abs/2606.02800v2",
     "queried_author": "Mohammad Shoeybi",
     "matching_authors": [
       "Mohammad Shoeybi",
@@ -665,6 +786,23 @@
     "queried_author": "Greg Durrett",
     "matching_authors": [
       "Greg Durrett"
+    ]
+  },
+  {
+    "title": "Item Response Scaling Laws: A Measurement Theory Approach for Efficient and Generalizable Neural Scaling Estimation",
+    "authors": [
+      "Sang Truong",
+      "Yuheng Tu",
+      "Rylan Schaeffer",
+      "Sanmi Koyejo"
+    ],
+    "summary": "Scaling laws provide a fundamental framework for understanding the performance of Language Models (LMs), yet deriving them requires prohibitively expensive evaluations across thousands of checkpoints or millions of inference samples. To address this, we introduce Item Response Scaling Laws (IRSL), a unified framework that integrates Item Response Theory (IRT) within the scaling law framework. Unlike traditional approaches that treat each model-benchmark pair in isolation, IRSL disentangles latent model ability from question characteristics, factorizing the scaling law estimation for $M$ models and $N$ questions to significantly reduce parameter complexity from $O(M \\times N)$ to $O(M + N)$. We instantiate IRSL with Beta-IRT, which leverages the empirical probability responses of LMs -- such as token probabilities in pre-training and pass rates in test-time sampling -- to capture richer signals than binary responses. We validate our approach across two prevalent scaling paradigms: (1) pre-training downstream scaling, using 6,612 LM checkpoints and 37,682 questions from 10 benchmarks; and (2) test-time scaling, using 12 LMs and 120 questions from 4 benchmarks with up to 2,500 samples per question. Given a one-time calibration on existing model responses, IRSL yields more reliable scaling estimates using only 50 questions per benchmark (a 99.9\\% reduction), achieving comparable or superior decision accuracy to traditional approaches. Furthermore, we show that the estimated latent model abilities are generalizable, enabling accurate performance forecasting across benchmarks tha...",
+    "published": "May 29",
+    "pdf_url": "https://arxiv.org/pdf/2606.07616v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.07616v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
     ]
   },
   {
@@ -895,6 +1033,28 @@
       "Luke Zettlemoyer",
       "Pang Wei Koh",
       "Ranjay Krishna"
+    ]
+  },
+  {
+    "title": "SurfDesign: Effective Protein Design on Molecular Surfaces",
+    "authors": [
+      "Fang Wu",
+      "Shuting Jin",
+      "Xiangru Tang",
+      "Mark Gerstein",
+      "Xiangxiang Zeng",
+      "Yejin Choi",
+      "Jure Leskovec",
+      "Jinbo Xu"
+    ],
+    "summary": "Protein function is largely determined by molecular surface geometry and physicochemical complementarity, yet most protein design methods condition only on backbone structure. We introduce SurfDesign, a surface-conditioned protein design framework that models molecular surfaces as continuous geometric manifolds and integrates them with pretrained protein language models. SurfDesign employs surface-based equivariant message passing to capture surface normals, curvature, and directional geometry, together with a parameter-efficient fine-tuning strategy. Focusing on functional protein design, we show that SurfDesign consistently outperforms prior surface-conditioned and backbone-only methods on de novo binder and enzyme design benchmarks. We also report strong performance on inverse-folding benchmarks as a diagnostic of structural compatibility. Our results highlight manifold-aware surface representations as a principled foundation for functional protein and enzyme design. Code is available at https://github.com/smiles724/SurfDesign.",
+    "published": "May 25",
+    "pdf_url": "https://arxiv.org/pdf/2606.07567v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.07567v1",
+    "queried_author": "Jure Leskovec",
+    "matching_authors": [
+      "Jure Leskovec",
+      "Yejin Choi"
     ]
   },
   {
@@ -1994,8 +2154,8 @@
     ],
     "summary": "Personal AI assistants are beginning to act as delegates with access to calendars, inboxes, and user preferences. Calendar scheduling makes the trust problem concrete: an assistant must coordinate with other assistants while deciding what to reveal about the person it represents. We introduce CalBench, a controlled benchmark for multi-agent calendar scheduling under private information. In each task, $N$ agents manage separate private calendars and schedule a stream of $M$ incoming meetings while minimizing disruption costs. Because no agent can inspect another agent's calendar, success requires language-mediated coordination rather than centralized planning. CalBench generates solvable scenarios with CP-SAT oracle solutions and decentralized non-LLM reference protocols, enabling evaluation of task success, excess cost, communication efficiency, burden fairness, and privacy leakage under matched information constraints. Across seven model families, we find that completion alone misses important failures: agents leave avoidable cost on the table, communication volume does not predict lower regret, and privacy-preserving silence can deprive teammates of cost information needed for fair burden allocation. CalBench provides a reproducible testbed for studying whether autonomous assistants can coordinate on behalf of users before deployment at scale.",
     "published": "May 10",
-    "pdf_url": "https://arxiv.org/pdf/2605.09823v2",
-    "arxiv_url": "http://arxiv.org/abs/2605.09823v2",
+    "pdf_url": "https://arxiv.org/pdf/2605.09823v3",
+    "arxiv_url": "http://arxiv.org/abs/2605.09823v3",
     "queried_author": "Noah Goodman",
     "matching_authors": [
       "Noah Goodman"
@@ -9607,8 +9767,8 @@
     ],
     "summary": "Automated interlinear gloss prediction with neural networks is a promising approach to accelerate language documentation efforts. However, while state-of-the-art models like GlossLM achieve high scores on glossing benchmarks, user studies with linguists have found critical barriers to the usefulness of such models in real-world scenarios. In particular, existing models typically generate morpheme-level glosses but assign them to whole words without predicting the actual morpheme boundaries, making the predictions less interpretable and thus untrustworthy to human annotators.\n  We conduct the first study on neural models that jointly predict interlinear glosses and the corresponding morphological segmentation from raw text. We run experiments to determine the optimal way to train models that balance segmentation and glossing accuracy, as well as the alignment between the two tasks. We extend the training corpus of GlossLM and pretrain PolyGloss, a family of seq2seq multilingual models for joint segmentation and glossing that outperforms GlossLM on glossing and beats various open-source LLMs on segmentation, glossing, and alignment. In addition, we demonstrate that PolyGloss can be quickly adapted to a new dataset via low-rank adaptation.",
     "published": "Jan 16",
-    "pdf_url": "https://arxiv.org/pdf/2601.10925v2",
-    "arxiv_url": "http://arxiv.org/abs/2601.10925v2",
+    "pdf_url": "https://arxiv.org/pdf/2601.10925v3",
+    "arxiv_url": "http://arxiv.org/abs/2601.10925v3",
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig"
@@ -12612,8 +12772,8 @@
     ],
     "summary": "We introduce Reinforcement Learning (RL) with Adaptive Verifiable Environments (RLVE), an approach using verifiable environments that procedurally generate problems and provide algorithmically verifiable rewards, to scale up RL for language models (LMs). RLVE enables each verifiable environment to dynamically adapt its problem difficulty distribution to the policy model's capabilities as training progresses. In contrast, static data distributions often lead to vanishing learning signals when problems are either too easy or too hard for the policy. To implement RLVE, we create RLVE-Gym, a large-scale suite of 400 verifiable environments carefully developed through manual environment engineering. Using RLVE-Gym, we show that environment scaling, i.e., expanding the collection of training environments, consistently improves generalizable reasoning capabilities. RLVE with joint training across all 400 environments in RLVE-Gym yields a 3.37% absolute average improvement across six reasoning benchmarks, starting from one of the strongest 1.5B reasoning LMs. By comparison, continuing this LM's original RL training yields only a 0.49% average absolute gain despite using over 3x more compute. We release our code publicly.",
     "published": "Nov 10",
-    "pdf_url": "https://arxiv.org/pdf/2511.07317v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.07317v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.07317v2",
+    "arxiv_url": "http://arxiv.org/abs/2511.07317v2",
     "queried_author": "Hamish Ivison",
     "matching_authors": [
       "Hamish Ivison",
@@ -12790,303 +12950,6 @@
     "queried_author": "Christopher Potts",
     "matching_authors": [
       "Christopher Potts"
-    ]
-  },
-  {
-    "title": "Who Evaluates AI's Social Impacts? Mapping Coverage and Gaps in First and Third Party Evaluations",
-    "authors": [
-      "Anka Reuel",
-      "Avijit Ghosh",
-      "Jenny Chim",
-      "Andrew Tran",
-      "Yanan Long",
-      "Jennifer Mickel",
-      "Usman Gohar",
-      "Srishti Yadav",
-      "Pawan Sasanka Ammanamanchi",
-      "Mowafak Allaham",
-      "Hossein A. Rahmani",
-      "Mubashara Akhtar",
-      "Felix Friedrich",
-      "Robert Scholz",
-      "Michael Alexander Riegler",
-      "Jan Batzner",
-      "Eliya Habba",
-      "Arushi Saxena",
-      "Anastassia Kornilova",
-      "Kevin Wei",
-      "Prajna Soni",
-      "Yohan Mathew",
-      "Kevin Klyman",
-      "Jeba Sania",
-      "Subramanyam Sahoo",
-      "Olivia Beyer Bruvik",
-      "Pouya Sadeghi",
-      "Sujata Goswami",
-      "Angelina Wang",
-      "Yacine Jernite",
-      "Zeerak Talat",
-      "Stella Biderman",
-      "Mykel Kochenderfer",
-      "Sanmi Koyejo",
-      "Irene Solaiman"
-    ],
-    "summary": "Foundation models are increasingly central to high-stakes AI systems, and governance frameworks now depend on evaluations to assess their risks and capabilities. Although general capability evaluations are widespread, social impact assessments covering bias, fairness, privacy, environmental costs, and labor remain uneven. To characterize this landscape, we conduct the first comprehensive analysis of social impact evaluation reporting, examining 186 first-party release reports and 248 third-party evaluation sources, supplemented by developer interviews. We find a stark division of labor: first-party reporting is sparse, often superficial, and declining in areas like environmental impact and bias, while third-party evaluators provide broader, more rigorous coverage of bias, harmful content, and performance disparities. However, only developers can authoritatively report on data provenance, content moderation labor, costs, and infrastructure, yet interviews reveal these disclosures are deprioritized unless tied to product adoption or compliance. Current practices leave major gaps in assessing societal impacts, underscoring the need for policies that mandate developer transparency, strengthen independent evaluation ecosystems, and create shared infrastructure for aggregating third-party evaluations.",
-    "published": "Nov 06",
-    "pdf_url": "https://arxiv.org/pdf/2511.05613v2",
-    "arxiv_url": "http://arxiv.org/abs/2511.05613v2",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "Reusing Pre-Training Data at Test Time is a Compute Multiplier",
-    "authors": [
-      "Alex Fang",
-      "Thomas Voice",
-      "Ruoming Pang",
-      "Ludwig Schmidt",
-      "Tom Gunter"
-    ],
-    "summary": "Large language models learn from their vast pre-training corpora, gaining the ability to solve an ever increasing variety of tasks; yet although researchers work to improve these datasets, there is little effort to understand how efficient the pre-training apparatus is at extracting ideas and knowledge from the data. In this work, we use retrieval augmented generation along with test-time compute as a way to quantify how much dataset value was left behind by the process of pre-training, and how this changes across scale. We demonstrate that pre-training then retrieving from standard and largely open-sourced datasets results in significant accuracy gains in MMLU, Math-500, and SimpleQA, which persist through decontamination. For MMLU we observe that retrieval acts as a ~5x compute multiplier versus pre-training alone. We show that these results can be further improved by leveraging additional compute at test time to parse the retrieved context, demonstrating a 10 percentage point improvement on MMLU for the public LLaMA 3.1 8B model. Overall, our results suggest that today's pre-training methods do not make full use of the information in existing pre-training datasets, leaving significant room for progress.",
-    "published": "Nov 06",
-    "pdf_url": "https://arxiv.org/pdf/2511.04234v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.04234v1",
-    "queried_author": "Ludwig Schmidt",
-    "matching_authors": [
-      "Ludwig Schmidt"
-    ]
-  },
-  {
-    "title": "MIDI-LLM: Adapting Large Language Models for Text-to-MIDI Music Generation",
-    "authors": [
-      "Shih-Lun Wu",
-      "Yoon Kim",
-      "Cheng-Zhi Anna Huang"
-    ],
-    "summary": "We present MIDI-LLM, an LLM for generating multitrack MIDI music from free-form text prompts. Our approach expands a text LLM's vocabulary to include MIDI tokens, and uses a two-stage training recipe to endow text-to-MIDI abilities. By preserving the original LLM's parameter structure, we can directly leverage the vLLM library for accelerated inference. Experiments show that MIDI-LLM achieves higher quality, better text control, and faster inference compared to the recent Text2midi model. Live demo at https://midi-llm-demo.vercel.app.",
-    "published": "Nov 06",
-    "pdf_url": "https://arxiv.org/pdf/2511.03942v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.03942v1",
-    "queried_author": "Yoon Kim",
-    "matching_authors": [
-      "Yoon Kim"
-    ]
-  },
-  {
-    "title": "NVIDIA Nemotron Nano V2 VL",
-    "authors": [
-      " NVIDIA",
-      " :",
-      "Amala Sanjay Deshmukh",
-      "Kateryna Chumachenko",
-      "Tuomas Rintamaki",
-      "Matthieu Le",
-      "Tyler Poon",
-      "Danial Mohseni Taheri",
-      "Ilia Karmanov",
-      "Guilin Liu",
-      "Jarno Seppanen",
-      "Guo Chen",
-      "Karan Sapra",
-      "Zhiding Yu",
-      "Adi Renduchintala",
-      "Charles Wang",
-      "Peter Jin",
-      "Arushi Goel",
-      "Mike Ranzinger",
-      "Lukas Voegtle",
-      "Philipp Fischer",
-      "Timo Roman",
-      "Wei Ping",
-      "Boxin Wang",
-      "Zhuolin Yang",
-      "Nayeon Lee",
-      "Shaokun Zhang",
-      "Fuxiao Liu",
-      "Zhiqi Li",
-      "Di Zhang",
-      "Greg Heinrich",
-      "Hongxu Yin",
-      "Song Han",
-      "Pavlo Molchanov",
-      "Parth Mannan",
-      "Yao Xu",
-      "Jane Polak Scowcroft",
-      "Tom Balough",
-      "Subhashree Radhakrishnan",
-      "Paris Zhang",
-      "Sean Cha",
-      "Ratnesh Kumar",
-      "Zaid Pervaiz Bhat",
-      "Jian Zhang",
-      "Darragh Hanley",
-      "Pritam Biswas",
-      "Jesse Oliver",
-      "Kevin Vasques",
-      "Roger Waleffe",
-      "Duncan Riach",
-      "Oluwatobi Olabiyi",
-      "Ameya Sunil Mahabaleshwarkar",
-      "Bilal Kartal",
-      "Pritam Gundecha",
-      "Khanh Nguyen",
-      "Alexandre Milesi",
-      "Eugene Khvedchenia",
-      "Ran Zilberstein",
-      "Ofri Masad",
-      "Natan Bagrov",
-      "Nave Assaf",
-      "Tomer Asida",
-      "Daniel Afrimi",
-      "Amit Zuker",
-      "Netanel Haber",
-      "Zhiyu Cheng",
-      "Jingyu Xin",
-      "Di Wu",
-      "Nik Spirin",
-      "Maryam Moosaei",
-      "Roman Ageev",
-      "Vanshil Atul Shah",
-      "Yuting Wu",
-      "Daniel Korzekwa",
-      "Unnikrishnan Kizhakkemadam Sreekumar",
-      "Wanli Jiang",
-      "Padmavathy Subramanian",
-      "Alejandra Rico",
-      "Sandip Bhaskar",
-      "Saeid Motiian",
-      "Kedi Wu",
-      "Annie Surla",
-      "Chia-Chih Chen",
-      "Hayden Wolff",
-      "Matthew Feinberg",
-      "Melissa Corpuz",
-      "Marek Wawrzos",
-      "Eileen Long",
-      "Aastha Jhunjhunwala",
-      "Paul Hendricks",
-      "Farzan Memarian",
-      "Benika Hall",
-      "Xin-Yu Wang",
-      "David Mosallanezhad",
-      "Soumye Singhal",
-      "Luis Vega",
-      "Katherine Cheung",
-      "Krzysztof Pawelec",
-      "Michael Evans",
-      "Katherine Luna",
-      "Jie Lou",
-      "Erick Galinkin",
-      "Akshay Hazare",
-      "Kaustubh Purandare",
-      "Ann Guan",
-      "Anna Warno",
-      "Chen Cui",
-      "Yoshi Suhara",
-      "Shibani Likhite",
-      "Seph Mard",
-      "Meredith Price",
-      "Laya Sleiman",
-      "Saori Kaji",
-      "Udi Karpas",
-      "Kari Briski",
-      "Joey Conway",
-      "Michael Lightstone",
-      "Jan Kautz",
-      "Mohammad Shoeybi",
-      "Mostofa Patwary",
-      "Jonathen Cohen",
-      "Oleksii Kuchaiev",
-      "Andrew Tao",
-      "Bryan Catanzaro"
-    ],
-    "summary": "We introduce Nemotron Nano V2 VL, the latest model of the Nemotron vision-language series designed for strong real-world document understanding, long video comprehension, and reasoning tasks. Nemotron Nano V2 VL delivers significant improvements over our previous model, Llama-3.1-Nemotron-Nano-VL-8B, across all vision and text domains through major enhancements in model architecture, datasets, and training recipes. Nemotron Nano V2 VL builds on Nemotron Nano V2, a hybrid Mamba-Transformer LLM, and innovative token reduction techniques to achieve higher inference throughput in long document and video scenarios. We are releasing model checkpoints in BF16, FP8, and FP4 formats and sharing large parts of our datasets, recipes and training code.",
-    "published": "Nov 06",
-    "pdf_url": "https://arxiv.org/pdf/2511.03929v2",
-    "arxiv_url": "http://arxiv.org/abs/2511.03929v2",
-    "queried_author": "Mohammad Shoeybi",
-    "matching_authors": [
-      "Mohammad Shoeybi",
-      "Mostofa Patwary"
-    ]
-  },
-  {
-    "title": "The OpenHands Software Agent SDK: A Composable and Extensible Foundation for Production Agents",
-    "authors": [
-      "Xingyao Wang",
-      "Simon Rosenberg",
-      "Juan Michelini",
-      "Calvin Smith",
-      "Hoang Tran",
-      "Engel Nyst",
-      "Rohit Malhotra",
-      "Xuhui Zhou",
-      "Valerie Chen",
-      "Robert Brennan",
-      "Graham Neubig"
-    ],
-    "summary": "Agents are now used widely in the process of software development, but building production-ready software engineering agents is a complex task. Deploying software agents effectively requires flexibility in implementation and experimentation, reliable and secure execution, and interfaces for users to interact with agents. In this paper, we present the OpenHands Software Agent SDK, a toolkit for implementing software development agents that satisfy these desiderata. This toolkit is a complete architectural redesign of the agent components of the popular OpenHands framework for software development agents.\n  To achieve flexibility, we design a simple interface for implementing agents that requires only a few lines of code in the default case, but is easily extensible to more complex full-featured agents with features such as custom tools, memory management, and more. For security and reliability, it delivers seamless local-to-remote execution portability, integrated REST/WebSocket services. For interaction with human users, it can connect directly to a variety of interfaces, such as visual workspaces (VSCode, VNC, browser), command-line interfaces, and APIs. Compared with existing SDKs from OpenAI, Claude and Google, OpenHands uniquely integrates native sandboxed execution, lifecycle control, model-agnostic multi-LLM routing, and built-in security analysis. We validate the architecture empirically: production deployment data shows that V1 substantially reduces system-attributable failures over V0 with negligible event-sourcing overhead, and evaluations across multiple models a...",
-    "published": "Nov 05",
-    "pdf_url": "https://arxiv.org/pdf/2511.03690v2",
-    "arxiv_url": "http://arxiv.org/abs/2511.03690v2",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
-    ]
-  },
-  {
-    "title": "Reading Between the Lines: The One-Sided Conversation Problem",
-    "authors": [
-      "Victoria Ebert",
-      "Rishabh Singh",
-      "Tuochao Chen",
-      "Noah A. Smith",
-      "Shyamnath Gollakota"
-    ],
-    "summary": "Conversational AI is constrained in many real-world settings where only one side of a dialogue can be recorded, such as telemedicine, call centers, and smart glasses. We formalize this as the one-sided conversation problem (1SC): inferring and learning from one side of a conversation. We study two tasks: (1) reconstructing the missing speaker's turns for real-time use cases, and (2) generating summaries from one-sided transcripts. Evaluating prompting and finetuned models on MultiWOZ, DailyDialog, and Candor with both human A/B testing and LLM-as-a-judge metrics, we find that access to one future turn and information about utterance length improves reconstruction, placeholder prompting helps to mitigate hallucination, and while large models generate promising reconstructions with prompting, smaller models require finetuning. Further, high-quality summaries can be generated without reconstructing missing turns. We present 1SC as a novel challenge and report promising results that mark a step toward privacy-aware conversational AI.",
-    "published": "Nov 04",
-    "pdf_url": "https://arxiv.org/pdf/2511.03056v2",
-    "arxiv_url": "http://arxiv.org/abs/2511.03056v2",
-    "queried_author": "Noah A. Smith",
-    "matching_authors": [
-      "Noah A. Smith"
-    ]
-  },
-  {
-    "title": "Oolong: Evaluating Long Context Reasoning and Aggregation Capabilities",
-    "authors": [
-      "Amanda Bertsch",
-      "Adithya Pratapa",
-      "Teruko Mitamura",
-      "Graham Neubig",
-      "Matthew R. Gormley"
-    ],
-    "summary": "As model context lengths continue to grow, concerns about whether models effectively use the full context length have persisted. While several carefully designed long-context evaluations have recently been released, these evaluations tend to rely on retrieval from one or more sections of the context, which allows nearly all of the context tokens to be disregarded as noise. This represents only one type of task that might be performed with long context. We introduce Oolong, a benchmark of long-context reasoning tasks that require analyzing individual chunks of text on an atomic level, and then aggregating these analyses to answer distributional questions. Oolong is separated into two task sets: Oolong-synth, a set of naturalistic synthetic tasks, where we can easily ablate components of the reasoning problem; and Oolong-real, a downstream setting which requires reasoning over real-world conversational data. Oolong requires models to reason over large quantities of examples, to perform both classification and counting in-context, and to reason over temporal and user relations. Even frontier models struggle on Oolong, with GPT-5, Claude-Sonnet-4, and Gemini-2.5-Pro all achieving less than 50% accuracy on both splits at 128K. We release the data and evaluation harness for Oolong to enable further development of models that can reason over large quantities of text.",
-    "published": "Nov 04",
-    "pdf_url": "https://arxiv.org/pdf/2511.02817v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.02817v1",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
-    ]
-  },
-  {
-    "title": "Beyond Single Embeddings: Capturing Diverse Targets with Multi-Query Retrieval",
-    "authors": [
-      "Hung-Ting Chen",
-      "Xiang Liu",
-      "Shauli Ravfogel",
-      "Eunsol Choi"
-    ],
-    "summary": "Most text retrievers generate \\emph{one} query vector to retrieve relevant documents. Yet, the conditional distribution of relevant documents for the query may be multimodal, e.g., representing different interpretations of the query. We first quantify the limitations of existing retrievers. All retrievers we evaluate struggle more as the distance between target document embeddings grows. To address this limitation, we develop a new retriever architecture, \\emph{A}utoregressive \\emph{M}ulti-\\emph{E}mbedding \\emph{R}etriever (AMER). Our model autoregressively generates multiple query vectors, and all the predicted query vectors are used to retrieve documents from the corpus. We show that on the synthetic vectorized data, the proposed method could capture multiple target distributions perfectly, showing 4x better performance than single embedding model. We also fine-tune our model on real-world multi-answer retrieval datasets and evaluate in-domain. AMER presents 4 and 21\\% relative gains over single-embedding baselines on two datasets we evaluate on. Furthermore, we consistently observe larger gains on the subset of dataset where the embeddings of the target documents are less similar to each other. We demonstrate the potential of using a multi-query vector retriever and open up a new direction for future work.",
-    "published": "Nov 04",
-    "pdf_url": "https://arxiv.org/pdf/2511.02770v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.02770v1",
-    "queried_author": "Eunsol Choi",
-    "matching_authors": [
-      "Eunsol Choi"
     ]
   }
 ]
