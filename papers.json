@@ -1,5 +1,136 @@
 [
   {
+    "title": "Evaluation Cards: An Interpretive Layer for AI Evaluation Reporting",
+    "authors": [
+      "Avijit Ghosh",
+      "Anka Reuel",
+      "Jenny Chim",
+      "Wm. Matthew Kennedy",
+      "Srishti Yadav",
+      "Jennifer Mickel",
+      "Yanan Long",
+      "Andrew Tran",
+      "Anastassia Kornilova",
+      "Damian Stachura",
+      "Kevin Klyman",
+      "Felix Friedrich",
+      "Jeba Sania",
+      "Max Lamparth",
+      "Jan Batzner",
+      "Anoop Mishra",
+      "Eliya Habba",
+      "Yixiong Hao",
+      "Nathan Heath",
+      "Shalaleh Rismani",
+      "Usman Gohar",
+      "Andrea Loehr",
+      "David Manheim",
+      "Ruchira Dhar",
+      "Sree Harsha Nelaturu",
+      "Aarush Sinha",
+      "Leshem Choshen",
+      "Drishti Sharma",
+      "Ishan Khire",
+      "Amit Saha",
+      "Subramanyam Sahoo",
+      "Michael Hardy",
+      "Michael Alexander Riegler",
+      "Kabir Manghnani",
+      "Michelle Lin",
+      "Yanan Jiang",
+      "Yilin Huang",
+      "Asaf Yehudai",
+      "Jessica Ji",
+      "Aris Hofmann",
+      "Mubashara Akhtar",
+      "Nuno Moniz",
+      "Yacine Jernite",
+      "Stella Biderman",
+      "Zeerak Talat",
+      "Sanmi Koyejo",
+      "Mykel Kochenderfer",
+      "Irene Solaiman"
+    ],
+    "summary": "AI evaluation results are produced at scale but reported inconsistently across leaderboards, model cards, benchmark papers, and company blogs. The cost is interpretive: readers cannot reliably compare results across sources, identify what a report omits, or trace an aggregate claim to its underlying evidence. Recent efforts address isolated components but leave three gaps: they cover only narrow slices of the evaluation lifecycle and do not compose into a single interpretable record; they specify static representations that do not differentiate the questions different stakeholders bring to the same evidence; and they remain proposals on paper, lacking the extraction infrastructure required for adoption at scale. We present \\EvalCards{}, an operational reporting layer that composes benchmark metadata, evaluation run data, and model metadata into a unified record. We (1) derive a reporting schema from a structured review of 52 papers and 10 stakeholder interviews, (2) implement four interpretive signals (reproducibility, documentation completeness, provenance and risk, and score comparability), rendered through reader modes calibrated to research and non-research audiences, and (3) deploy a monitoring tool that applies \\EvalCards{} across 5,816 models, 635 benchmarks, and 101,843 results, surfacing systematic gaps in current reporting practice.",
+    "published": "Jun 08",
+    "pdf_url": "https://arxiv.org/pdf/2606.09809v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.09809v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "End-to-End Context Compression at Scale",
+    "authors": [
+      "Ang Li",
+      "Sean McLeish",
+      "Haozhe Chen",
+      "Nimit Kalra",
+      "Zaiqian Chen",
+      "Artem Gazizov",
+      "Venkata Anoop Suhas Kumar Morisetty",
+      "Bhavya Kailkhura",
+      "Harshitha Menon",
+      "Zhuang Liu",
+      "Brian R. Bartoldson",
+      "Tom Goldstein",
+      "Sanae Lotfi",
+      "Micah Goldblum",
+      "Pavel Izmailov"
+    ],
+    "summary": "Long-context language model inference is bottlenecked by memory, as the KV cache grows with context length. Recent techniques to compress the KV cache fall short: they either degrade model quality substantially or require considerable time and compute to compress a single long prompt. Furthermore, many methods require the input to fit within the target model's context window, and are generally incompatible with modern production inference engines. Encoder-decoder compressors, which map a long token sequence to a shorter sequence of latent embeddings consumed by a decoder, are an appealing alternative in principle. However, existing approaches are not competitive with KV cache compression on the accuracy-efficiency frontier. In this work, we revisit encoder-decoder compression and close this gap. We first perform an architecture search, pre-training many variants from scratch to determine how best to design and train encoder-decoder compressors. Guided by our findings, we continually pre-train a family of 0.6B-encoder, 4B-decoder models on over 350B tokens each, at compression ratios of 1:4, 1:8, and 1:16. We introduce Latent Context Language Models (LCLMs), a family of compressors that improve the Pareto frontier across general-task performance, compression speed, and peak memory usage. We demonstrate that LCLMs serve as efficient backbones for long-horizon agents, letting the agent skim through a compressed long context and adaptively expand relevant segments on demand.",
+    "published": "Jun 08",
+    "pdf_url": "https://arxiv.org/pdf/2606.09659v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.09659v1",
+    "queried_author": "Micah Goldblum",
+    "matching_authors": [
+      "Micah Goldblum",
+      "Pavel Izmailov"
+    ]
+  },
+  {
+    "title": "MilliVid: Hierarchical Latents for Long-Range Consistency in Video Generation",
+    "authors": [
+      "Ishaan Preetam Chandratreya",
+      "David Charatan",
+      "Basile Van Hoorick",
+      "Sergey Zakharov",
+      "Vitor Guizilini",
+      "Phillip Isola",
+      "Vincent Sitzmann"
+    ],
+    "summary": "Video generative models have become increasingly powerful, but long-range consistency remains challenging to achieve because even a few dozen frames require impractically long transformer sequence lengths. We show that this issue can be mitigated by generating video using coarse-to-fine rollout within a multi-scale token space. Our approach is simple: first, we pre-train an autoencoder that compresses each frame into a hierarchy of tokens, with levels ranging from the typical latent resolution to only a handful of tokens per frame. The coarsest levels capture the most consequential information, such as scene layout and semantics, while finer levels add high-frequency appearance and texture. Then, we train a video diffusion model to generate these tokens using coarse-to-fine rollout. By carefully controlling the level of detail at which frames are generated and used as context during each rollout step, we are able to preserve long-range consistency in geometry and object permanence while spending less compute on the long-range consistency of less perceptually relevant details. We validate this approach using a custom dataset of long Minecraft videos, where it produces substantially more consistent rollouts compared to existing baselines.",
+    "published": "Jun 08",
+    "pdf_url": "https://arxiv.org/pdf/2606.09056v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.09056v1",
+    "queried_author": "Phillip Isola",
+    "matching_authors": [
+      "Phillip Isola"
+    ]
+  },
+  {
+    "title": "CARE: A Conformal Safety Layer for Medical Summarization",
+    "authors": [
+      "Suhana Bedi",
+      "Bridget Lin",
+      "Anson Y. Zhou",
+      "Chloe O. Stanwyck",
+      "Jenelle A. Jindal",
+      "Sanmi Koyejo",
+      "David Stutz",
+      "Nigam H. Shah"
+    ],
+    "summary": "Large language models (LLMs) are increasingly used for medical summarization, but their outputs can omit medically important information and introduce unsupported claims. Existing error-detection methods produce heuristic or uncalibrated scores, providing no formal control over missed errors and no principled way to trade off safety against clinician review burden. We introduce Conformal Assessment for Risk Evaluation (CARE), a post-hoc, model-agnostic safety layer that uses conformal risk control to overlay calibrated omission and hallucination flags onto summaries from any LLM without retraining. CARE provides finite-sample, distribution-free guarantees through two controllers: a hallucination controller that bounds the probability of a document containing any unflagged hallucinated sentence, and an omission controller that bounds the expected fraction of important omissions not surfaced for review. Unlike hallucination detection, omissions depend jointly on whether a source sentence is important and whether it is covered by the summary. We show that calibrating only one dimension can violate the target risk bound, while marginal decompositions remain valid but overly conservative. By jointly calibrating over the full $(\u03c4,\u03b3)$ threshold space, CARE preserves formal guarantees while surfacing up to 5$\\times$ fewer sentences than alternative calibrated baselines. Across five medical summarization tasks, CARE satisfies the target risk bound at $\u03b1= 0.15$ with 95% confidence across 100 calibration/test resplits, using only ~100 labeled documents per domain. In a preliminary cli...",
+    "published": "Jun 08",
+    "pdf_url": "https://arxiv.org/pdf/2606.08969v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.08969v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
     "title": "Beyond Homophily: Towards Generalized Graph Reconstruction Attack and Defense",
     "authors": [
       "Zhanke Zhou",
@@ -781,8 +912,8 @@
     ],
     "summary": "Fitting quantitative models to data is a central step in scientific workflows, yet it remains one of the least automated. Recent agent-based systems leverage language and vision-language models (VLMs) to iteratively propose and refine statistical models, but these systems struggle on more challenging modeling tasks. To address these limitations, we introduce VESTA: Visual Exploration with Statistical Tool Agents, a framework that equips VLMs with a dynamically growing exploration toolkit to guide model refinement through data transformations, hypothesis-driven visualizations, and robust statistical tests. Unlike prior systems that rely on iterative critique alone, VESTA actively explores data before and during refinement by selecting or creating diagnostic tools, which accumulate in the model's context and can be reused later. We evaluate VESTA against established baselines in three toolkit configurations: no tools, static expert-written tools, and dynamic model-written tools. To support this evaluation, we introduce DAWN (Dataset for Automated Workflows and Numerical Modeling), a benchmark targeting distribution fitting and time series modeling with varying difficulty tiers, and culminating in real-world astronomy tasks including modeling initial mass functions and gravitational-wave chirp signals. We find that VESTA's dynamic tool creation outperforms prior agentic pipelines, with the largest gains on complex and domain-specific tasks. We further show that dynamically generated tools are substantially more sophisticated than those produced by existing visual tool-creation...",
     "published": "May 29",
-    "pdf_url": "https://arxiv.org/pdf/2606.00384v1",
-    "arxiv_url": "http://arxiv.org/abs/2606.00384v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.00384v2",
+    "arxiv_url": "http://arxiv.org/abs/2606.00384v2",
     "queried_author": "Greg Durrett",
     "matching_authors": [
       "Greg Durrett"
@@ -7788,8 +7919,8 @@
     ],
     "summary": "LLM-based agents execute real-world workflows via tools and memory. These affordances enable ill-intended adversaries to also use these agents to carry out complex misuse scenarios. Existing agent misuse benchmarks largely test single-prompt instructions, leaving a gap in measuring how agents end up helping with harmful or illegal tasks over multiple turns. We introduce STING (Sequential Testing of Illicit N-step Goal execution), an automated red-teaming framework that constructs a step-by-step illicit plan grounded in a benign persona and iteratively probes a target agent with adaptive follow-ups, using judge agents to track phase completion. We further introduce an analysis framework that models multi-turn red-teaming as a time-to-first-jailbreak random variable, enabling analysis tools like discovery curves, hazard-ratio attribution by attack language, and a new metric: Restricted Mean Jailbreak Discovery. Across AgentHarm scenarios, STING yields substantially higher illicit-task completion than single-turn prompting and chat-oriented multi-turn baselines adapted to tool-using agents. In multilingual evaluations across six non-English settings, we find that attack success and illicit-task completion do not consistently increase in lower-resource languages, diverging from common chatbot findings. Overall, STING provides a practical way to evaluate and stress-test agent misuse in realistic deployment settings, where interactions are inherently multi-turn and often multilingual.",
     "published": "Feb 18",
-    "pdf_url": "https://arxiv.org/pdf/2602.16346v3",
-    "arxiv_url": "http://arxiv.org/abs/2602.16346v3",
+    "pdf_url": "https://arxiv.org/pdf/2602.16346v4",
+    "arxiv_url": "http://arxiv.org/abs/2602.16346v4",
     "queried_author": "Antoine Bosselut",
     "matching_authors": [
       "Antoine Bosselut"
@@ -12877,79 +13008,6 @@
     "queried_author": "Wenting Zhao",
     "matching_authors": [
       "Wenting Zhao"
-    ]
-  },
-  {
-    "title": "DiScoFormer: Plug-In Density and Score Estimation with Transformers",
-    "authors": [
-      "Vasily Ilin",
-      "Peter Sushko",
-      "Ranjay Krishna"
-    ],
-    "summary": "Estimating probability density and its score from samples remains a core problem in generative modeling, Bayesian inference, and kinetic theory. Existing methods are bifurcated: classical kernel density estimators (KDE) generalize across distributions but suffer from the curse of dimensionality, while modern neural score models achieve high precision but require retraining for every target distribution. We introduce DiScoFormer (Density and Score Transformer), a ``train-once, infer-anywhere\" equivariant Transformer that maps i.i.d. samples to both density values and score vectors, generalizing across distributions and sample sizes. Analytically, we prove that self-attention can recover normalized KDE, establishing it as a functional generalization of kernel methods; empirically, individual attention heads learn multi-scale, kernel-like behaviors. The model converges faster and achieves higher precision than KDE for density estimation, and provides a high-fidelity plug-in score oracle for score-debiased KDE, Fisher information computation, and Fokker-Planck-type PDEs.",
-    "published": "Nov 08",
-    "pdf_url": "https://arxiv.org/pdf/2511.05924v4",
-    "arxiv_url": "http://arxiv.org/abs/2511.05924v4",
-    "queried_author": "Ranjay Krishna",
-    "matching_authors": [
-      "Ranjay Krishna"
-    ]
-  },
-  {
-    "title": "Long Grounded Thoughts: Synthesizing Visual Problems and Reasoning Chains at Scale",
-    "authors": [
-      "David Acuna",
-      "Chao-Han Huck Yang",
-      "Yuntian Deng",
-      "Jaehun Jung",
-      "Ximing Lu",
-      "Prithviraj Ammanabrolu",
-      "Hyunwoo Kim",
-      "Yuan-Hong Liao",
-      "Yejin Choi"
-    ],
-    "summary": "Despite rapid progress, multimodal reasoning still lacks a systematic approach to synthesize large-scale vision-centric datasets beyond visual math. We introduce a framework able to synthesize vision-centric problems spanning diverse levels of complexity, and the resulting dataset with over 1M high-quality problems including: reasoning traces, preference data, and instruction prompts supporting SFT, offline and online RL. Our vision-centric synthesis framework uses a two-stage process focusing on: (1) generating diverse verifiable questions from existing images at scale, and (2) creating complex compositional visual problems by merging simpler questions. Remarkably, finetuning Qwen2.5-VL-7B on our data outperforms existing open-data baselines across evaluated vision-centric benchmarks, and our best configurations match or surpass strong closed-data models such as MiMo-VL-7B-RL on Vstar Bench, CV-Bench and MMStar-V. Notably, despite being entirely vision-centric, our data transfers positively to text-only reasoning (MMLU-Pro, +3.7%) and audio reasoning (MMAU, +1.32%), demonstrating its effectiveness. Similarly, despite containing no embodied visual data, we observe notable gains (NiEH, +8.8%) when evaluating open-ended embodied QA. Lastly, we use our data to comprehensively analyze at scale (1M+) the entire VLM post-training pipeline showing that (i) SFT on high-quality data with cognitive behaviors on reasoning traces is essential to scale online RL, (ii) offline RL could match online RL's performance while disaggregating compute demands, and, (iii) SFT on high quality data...",
-    "published": "Nov 07",
-    "pdf_url": "https://arxiv.org/pdf/2511.05705v2",
-    "arxiv_url": "http://arxiv.org/abs/2511.05705v2",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Real-Time Reasoning Agents in Evolving Environments",
-    "authors": [
-      "Yule Wen",
-      "Yixin Ye",
-      "Yanzhe Zhang",
-      "Diyi Yang",
-      "Hao Zhu"
-    ],
-    "summary": "Agents in the real world must make not only logical but also timely judgments. This requires continuous awareness of the dynamic environment: hazards emerge, opportunities arise, and other agents act, while the agent's reasoning is still unfolding. Despite advances in language model reasoning, existing approaches fail to account for this dynamic nature. We introduce real-time reasoning as a new problem formulation for agents in evolving environments and build Real-Time Reasoning Gym to demonstrate it. We study two paradigms for deploying language models in agents: (1) reactive agents, which employ language models with bounded reasoning computation for rapid responses, and (2) planning agents, which allow extended reasoning computation for complex problems. Our experiments show that even state-of-the-art models struggle with making logical and timely judgments in either paradigm. To address this limitation, we propose AgileThinker, which simultaneously engages both reasoning paradigms. AgileThinker consistently outperforms agents engaging only one reasoning paradigm as the task difficulty and time pressure rise, effectively balancing reasoning depth and response latency. Our work establishes real-time reasoning as a critical testbed for developing practical agents and provides a foundation for research in temporally constrained AI systems, highlighting a path toward real-time capable agents.",
-    "published": "Nov 07",
-    "pdf_url": "https://arxiv.org/pdf/2511.04898v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.04898v1",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang"
-    ]
-  },
-  {
-    "title": "Addressing divergent representations from causal interventions on neural networks",
-    "authors": [
-      "Satchel Grant",
-      "Simon Jerome Han",
-      "Alexa R. Tartaglini",
-      "Christopher Potts"
-    ],
-    "summary": "A common approach to mechanistic interpretability is to causally manipulate model representations via targeted interventions in order to understand what those representations encode. Here we ask whether such interventions create out-of-distribution (divergent) representations, and whether this raises concerns about how faithful their resulting explanations are to the target model in its natural state. First, we demonstrate theoretically and empirically that common causal intervention techniques often do shift internal representations away from the natural distribution of the target model. Then, we provide a theoretical analysis of two cases of such divergences: \"harmless\" divergences that occur in the behavioral null-space of the layer(s) of interest, and \"pernicious\" divergences that activate hidden network pathways and cause dormant behavioral changes. Finally, in an effort to mitigate the pernicious cases, we apply and modify the Counterfactual Latent (CL) loss from Grant (2025) allowing representations from causal interventions to remain closer to the natural distribution, reducing the likelihood of harmful divergences while preserving the interpretive power of the interventions. Together, these results highlight a path towards more reliable interpretability methods.",
-    "published": "Nov 06",
-    "pdf_url": "https://arxiv.org/pdf/2511.04638v5",
-    "arxiv_url": "http://arxiv.org/abs/2511.04638v5",
-    "queried_author": "Christopher Potts",
-    "matching_authors": [
-      "Christopher Potts"
     ]
   }
 ]
