@@ -1,5 +1,38 @@
 [
   {
+    "title": "Hubs or Fringes: Pretraining Data Selection via Web Graph Centrality",
+    "authors": [
+      "Vedant Badoni",
+      "Danqi Chen",
+      "Xinyi Wang"
+    ],
+    "summary": "The performance of modern language models depends critically on pretraining data composition. Yet existing data selection methods rely on auxiliary classifiers for document scoring or mixture optimization, adding computational overhead and dependence on labeled data. We propose WebGraphMix, a lightweight data selection framework that computes structural centrality scores over the Common Crawl host-level web graph and uses them to vary the proportion of central versus peripheral documents in the pretraining mixture. We hypothesize that central hosts expose models to reusable abstractions, while peripheral hosts encode specialized, long-tail knowledge. WebGraphMix computes centrality scores efficiently at web scale, requiring no model training, labeled data, or downstream supervision. We integrate WebGraphMix into the DataComp-LM pipeline and train models at 400M and 1B parameter scales with 8B and 28B tokens respectively, evaluating on 23 tasks ranging from factual knowledge to symbolic reasoning. Our experiments show that central and peripheral web regions encode complementary capabilities. Mixture combining both at a ratio of 1:1 achieves 41.4% on average, compared to 39.8% for uniform sampling. Combining structural scores with document-level quality classifier scores further improves performance to 43.8%. These findings demonstrate that web graph topology is a meaningful axis for pretraining data curation, capturing information that is largely orthogonal to existing content-based approaches.",
+    "published": "Jun 09",
+    "pdf_url": "https://arxiv.org/pdf/2606.11499v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.11499v1",
+    "queried_author": "Danqi Chen",
+    "matching_authors": [
+      "Danqi Chen"
+    ]
+  },
+  {
+    "title": "Risk Under Pressure: Compute-Aware Evaluation of Adversarial Robustness in Language Models",
+    "authors": [
+      "Malikeh Ehghaghi",
+      "Bogl\u00e1rka Ecsedi",
+      "Marsha Chechik",
+      "Colin Raffel"
+    ],
+    "summary": "Adversarial robustness evaluations of large language models (LLMs) typically report attack success rate (ASR) under fixed query budgets, implicitly treating all attacks as equally costly. In practice, the computational expense of different attack strategies can vary by orders of magnitude. Consequently, ASR at a fixed budget can obscure the true effort required to jailbreak a model, thereby making it hard to determine whether an attack's cost justifies its payoff to the attacker. We propose a compute-aware evaluation framework based on computational pressure, measured in cumulative floating-point operations (FLOPs), as a proxy for adversarial effort. We introduce risk-compute curves, which map compute budgets to attack risk, and derive two metrics that summarize the average pressure required for a given attack to succeed. Across ten models spanning three families and four different stages in language model training and alignment, evaluated with three attack strategies (gradient-based, iterative refinement, and template-based) on two jailbreak robustness benchmarks, we find: (1) alignment training has non-monotonic effects on compute-space robustness; (2) scaling model size reduces gradient-based attack effectiveness but has limited impact on cheaper template-based attacks; (3) gradient-based attacks optimized on a surrogate model can transfer to a separate target model, providing a way to reduce attacker costs; (4) compute cost varies by up to ${\\approx}5{\\times}$ across harm categories within a single model; and (5) safety-aligned RL increases aggregate cost while leaving ...",
+    "published": "Jun 09",
+    "pdf_url": "https://arxiv.org/pdf/2606.11409v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.11409v1",
+    "queried_author": "Colin Raffel",
+    "matching_authors": [
+      "Colin Raffel"
+    ]
+  },
+  {
     "title": "$\u03c4$-Rec: A Verifiable Benchmark for Agentic Recommender Systems",
     "authors": [
       "Bharath Sivaram Narasimhan",
@@ -869,8 +902,8 @@
     ],
     "summary": "Subliminal learning refers to a student language model acquiring a teacher's traits (e.g. a system-prompted preference for owls) when fine-tuned on the teacher's outputs, despite the outputs being semantically unrelated to those traits. It remains poorly understood how data without semantic meaning can transfer specific semantic traits. In this work, we show that subliminal learning is mediated by a single steering vector, i.e. a vector added to the model's activations. Across two open-source models, we find that the teacher's system prompt is well approximated by a steering vector, and that the student's behavior is driven by learning an aligned vector over fine-tuning. System prompts that are not well approximated by steering vectors are not subliminally learned. This is a special case of steering vector distillation, in which a student trained on the outputs of a steered teacher learns to imitate that steering. We demonstrate steering vector distillation on a range of semantic and random vectors. Adding a semantic vector to a model's activations can have both model-independent and model-specific (i.e. non-semantic) effects on its behavior, so generated data that is non-semantic can transmit a vector with semantic effects, enabling subliminal learning. This also explains why subliminal learning does not transfer between models. We find that adaptive optimizers are necessary for subliminal learning in language models: activation gradients on steered data carry a small but consistent component along the steering direction, and non-adaptive optimizers impede this by allowing...",
     "published": "May 31",
-    "pdf_url": "https://arxiv.org/pdf/2606.00995v2",
-    "arxiv_url": "http://arxiv.org/abs/2606.00995v2",
+    "pdf_url": "https://arxiv.org/pdf/2606.00995v3",
+    "arxiv_url": "http://arxiv.org/abs/2606.00995v3",
     "queried_author": "Neel Nanda",
     "matching_authors": [
       "Neel Nanda"
@@ -12962,48 +12995,6 @@
     "queried_author": "J Zico Kolter",
     "matching_authors": [
       "J Zico Kolter"
-    ]
-  },
-  {
-    "title": "Alignment-Constrained Dynamic Pruning for LLMs: Identifying and Preserving Alignment-Critical Circuits",
-    "authors": [
-      "Dev Patel",
-      "Gabrielle Gervacio",
-      "Diekola Raimi",
-      "Kevin Zhu",
-      "Ryan Lagasse",
-      "Gabriel Grand",
-      "Ashwinee Panda",
-      "Maheep Chaudhary"
-    ],
-    "summary": "Large Language Models require substantial computational resources for inference, posing deployment challenges. While dynamic pruning offers superior efficiency over static methods through adaptive circuit selection, it exacerbates alignment degradation by retaining only input-dependent safety-critical circuit preservation across diverse inputs. As a result, addressing these heightened alignment vulnerabilities remains critical. We introduce Alignment-Aware Probe Pruning (AAPP), a dynamic structured pruning method that adaptively preserves alignment-relevant circuits during inference, building upon Probe Pruning. Experiments on LLaMA 2-7B, Qwen2.5-14B-Instruct, and Gemma-3-12B-IT show AAPP improves refusal rates by 50\\% at matched compute, enabling efficient yet safety-preserving LLM deployment.",
-    "published": "Nov 09",
-    "pdf_url": "https://arxiv.org/pdf/2511.07482v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.07482v1",
-    "queried_author": "Ashwinee Panda",
-    "matching_authors": [
-      "Ashwinee Panda"
-    ]
-  },
-  {
-    "title": "SWE-fficiency: Can Language Models Optimize Real-World Repositories on Real Workloads?",
-    "authors": [
-      "Jeffrey Jian Ma",
-      "Milad Hashemi",
-      "Amir Yazdanbakhsh",
-      "Kevin Swersky",
-      "Ofir Press",
-      "Enhui Li",
-      "Vijay Janapa Reddi",
-      "Parthasarathy Ranganathan"
-    ],
-    "summary": "Optimizing the performance of large-scale software repositories demands expertise in code reasoning and software engineering (SWE) to reduce runtime while preserving program correctness. However, most benchmarks emphasize what to fix rather than how to fix code. We introduce SWE-fficiency, a benchmark for evaluating repository-level performance optimization on real workloads. Our suite contains 498 tasks across nine widely used data-science, machine-learning, and HPC repositories (e.g., numpy, pandas, scipy): given a complete codebase and a slow workload, an agent must investigate code semantics, localize bottlenecks and relevant tests, and produce a patch that matches or exceeds expert speedup while passing the same unit tests. To enable this how-to-fix evaluation, our automated pipeline scrapes GitHub pull requests for performance-improving edits, combining keyword filtering, static analysis, coverage tooling, and execution validation to both confirm expert speedup baselines and identify relevant repository unit tests. Empirical evaluation of state-of-the-art agents reveals significant underperformance. On average, agents achieve less than 0.15x the expert speedup: agents struggle in localizing optimization opportunities, reasoning about execution across functions, and maintaining correctness in proposed edits. We release the benchmark and accompanying data pipeline to facilitate research on automated performance engineering and long-horizon software reasoning.",
-    "published": "Nov 08",
-    "pdf_url": "https://arxiv.org/pdf/2511.06090v2",
-    "arxiv_url": "http://arxiv.org/abs/2511.06090v2",
-    "queried_author": "Ofir Press",
-    "matching_authors": [
-      "Ofir Press"
     ]
   }
 ]
