@@ -1,5 +1,90 @@
 [
   {
+    "title": "Low-Latency Real-Time Audio Game Commentary System via LLM-Based Parallel Text Generation",
+    "authors": [
+      "Ryota Kawamatsu",
+      "Anum Afzal",
+      "Yuki Saito",
+      "Shinnosuke Takamichi",
+      "Graham Neubig",
+      "Katsuhito Sudoh",
+      "Hiroya Takamura",
+      "Tatsuya Ishigaki"
+    ],
+    "summary": "We present a low-latency real-time audio game commentary system that generates spoken commentary directly from live gameplay video. In this end-to-end setting, a key bottleneck is accumulated waiting time; conventional pipelines capture frames, generate text, and synthesize speech sequentially for each utterance, and do not request the next generation until speech playback has completed. This strict sequentiality causes long and unnatural silence between utterances. To address this latency bottleneck, our system runs text generation in parallel with speech playback and buffers multiple candidate utterances ahead of time, enabling immediate synthesis at playback boundaries. Experiments on fast-paced game videos show that our parallel design reduces the mean inter-utterance silence from 9.6 seconds to 0.3 seconds compared to sequential baselines. It also improves similarity to professional speaking--silence timing patterns by over 40 %, and a user study with 120 experienced game players confirms significantly improved perceived speaking rhythm. Our demo video is available at: https://youtu.be/pmrRUlvav8M.",
+    "published": "Jun 11",
+    "pdf_url": "https://arxiv.org/pdf/2606.13322v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.13322v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
+    "title": "GENIE: A Fine-Grained Measure for Novelty",
+    "authors": [
+      "Ramya Namuduri",
+      "Manya Wadhwa",
+      "Anshun Asher Zheng",
+      "Greg Durrett",
+      "Junyi Jessy Li"
+    ],
+    "summary": "Large Language Models have consistently demonstrated a lack of creativity and diversity across tasks. Prior work has focused on addressing whether models are capable of generating creative outputs. Here, we aim to consider novelty and investigate what makes model-generated content novel or not novel in a task-specific manner. We propose a fine-grained evaluation metric GENIE to measure the novelty of responses along task-specific features with respect to a population of responses. We show that unlike GENIE, holistic metrics struggle to capture the high-dimensionality of novelty and do not provide insight on which properties they target. Finally, we use GENIE to measure the effectiveness of mitigation methods that address creativity to better understand where these methods can improve novelty.",
+    "published": "Jun 11",
+    "pdf_url": "https://arxiv.org/pdf/2606.12790v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.12790v1",
+    "queried_author": "Greg Durrett",
+    "matching_authors": [
+      "Greg Durrett"
+    ]
+  },
+  {
+    "title": "Deployment-Centered Evaluation: Predicting Query-Level Rejection Risk in a Clinical LLM System",
+    "authors": [
+      "Alyssa Unell",
+      "Miguel Fuentes",
+      "Brenna Li",
+      "Bridget Lin",
+      "Meena Jagadeesan",
+      "Sanmi Koyejo",
+      "Nigam Shah"
+    ],
+    "summary": "Large language models (LLMs) are increasingly integrated into clinical systems, making it essential to evaluate the real-world utility of these systems. However, static benchmarks tend to measure correctness rather than user acceptance, aggregate performance across queries, and require densely annotated datasets -- leading to major blind spots for evaluating clinical systems. In this work, we perform a deployment-centered evaluation of an LLM system embedded within electronic health records at an academic medical center, where user feedback is sparse but closely reflects the deployment conditions. Specifically, we train a pre-response classifier that estimates the risk that a future interaction will result in the user rejecting the LLM response, based on query content and deployment-specific context available before generation. We conduct a prospective analysis of our model over 4.5 months of user feedback, finding that our prediction model achieves an AUROC of 0.719. Further, we estimate the benefit of such predictions in two downstream use cases (guardrail triggering and abstention). Our key conceptual insight is that making use of deployment-specific context (i.e., the provider type, department name, language model used for response), as opposed to only query content, improves the ability to predict whether the user will reject the system output. Altogether, our empirical case study demonstrates the feasibility of predicting user rejection using deployment-specific context, opening the door to targeted guardrails.",
+    "published": "Jun 10",
+    "pdf_url": "https://arxiv.org/pdf/2606.12702v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.12702v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "M*: A Modular, Extensible, Serving System for Multimodal Models",
+    "authors": [
+      "Atindra Jha",
+      "Naomi Sagan",
+      "Keisuke Kamahori",
+      "Irmak Sivgin",
+      "Rohan Sanda",
+      "Steven Gao",
+      "Mark Horowitz",
+      "Luke Zettlemoyer",
+      "Olivia Hsu",
+      "Jure Leskovec",
+      "Baris Kasikci",
+      "Stephanie Wang"
+    ],
+    "summary": "We are entering a new era of composite model architectures that integrate diverse components such as vision encoders, language backbones, diffusion and flow heads, audio codecs, action generators, and world-model predictors. Such architectures underpin a broad class of multimodal models, including unified multimodal models, omni models, speech-language models, vision-language-action policies, and world models. However, existing model serving frameworks were built on narrow assumptions about model structure, making them ill-suited to accommodate this new architectural diversity. Here we present M*, a universal serving system for efficient serving of composite AI models. M* represents models as dataflow graphs, processing requests spanning diverse modalities and tasks as traversals over these graphs. The core insight is a modular abstraction that supports arbitrary composition of model components, flexible placement onto a physical cluster, and model-agnostic optimizations within a distributed runtime. We call this abstraction the Walk Graph and show how it can concisely capture composite models from a broad range of families. We instantiate M* on representative models and find that it achieves, on average, 20% lower end-to-end latency than vLLM-Omni for text-to-image workloads on BAGEL, while delivering up to 2.9x lower real-time factor and 2.7x higher throughput for text-to-speech workloads on Qwen3-Omni. M* also outperforms the V-JEPA 2-AC rollout baseline for robotic planning by up to 12.5x. Thus, our work paves the road towards more efficient serving of complex models wi...",
+    "published": "Jun 10",
+    "pdf_url": "https://arxiv.org/pdf/2606.12688v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.12688v1",
+    "queried_author": "Jure Leskovec",
+    "matching_authors": [
+      "Jure Leskovec",
+      "Luke Zettlemoyer"
+    ]
+  },
+  {
     "title": "Which Models Are Our Models Built On? Auditing Invisible Dependencies in Modern LLMs",
     "authors": [
       "Sanjay Adhikesaven",
@@ -2047,6 +2132,139 @@
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
+    ]
+  },
+  {
+    "title": "Muse Spark Safety & Preparedness Report",
+    "authors": [
+      "Cristina Menghini",
+      "Peter Ney",
+      "Hamza Kwisaba",
+      " Zifan",
+      " Wang",
+      "Miles Turpin",
+      "Felix Binder",
+      "Jean-Christophe Testud",
+      "Aidan Boyd",
+      "Nathaniel Li",
+      "Ivan Evtimov",
+      "Klaudia Krawiecka",
+      "Arman Zharmagambetov",
+      "Jeremy Kritz",
+      "Alexander R. Fabbri",
+      "Daniel Song",
+      "Jinpeng Miao",
+      "Joonas Hjelt",
+      "Meghna Ramani",
+      "Leona Lan",
+      "Reza Aghajani",
+      "Joanna Bitton",
+      "Mahesh Pasupuleti",
+      "Devin Norder",
+      "Khalid El-Arini",
+      "Paridhi Singh",
+      "V\u00edtor Albiero",
+      "Sahana CB",
+      "Rashnil Chaturvedi",
+      "Elahe Dabir",
+      "Edoardo Debenedetti",
+      "Jim Gust",
+      "Ziwen Han",
+      "Kat He",
+      "Sean Hendryx",
+      "Lifeng Jin",
+      "Polina Kirichenko",
+      "Sandra Lefdal",
+      "Kenneth Li",
+      "Asad Liaqat",
+      "Inna Lin",
+      "Despoina Magka",
+      "Neal Mangaokar",
+      "Ishita Mediratta",
+      "Zach Miller",
+      "Smitha Milli",
+      "Niloofar Mireshghallah",
+      "Saba Nazir",
+      "Hung Nguyen",
+      "Maximilian Nickel",
+      "Kelvin Niu",
+      "Kerem Oktar",
+      "Bhargavi Paranjape",
+      "Parth Pathak",
+      "Maya Pavlova",
+      "Emmanuel Ramirez",
+      "David Renardy",
+      "Candace Ross",
+      "Yasha Sheynin",
+      "Claudia Shi",
+      "Shivam Singhal",
+      "Evangelia Spiliopoulou",
+      "Rakshith Sharma Srinivasa",
+      "Jamelle Watson-Daniels",
+      "Spencer Whitman",
+      "Adina Williams",
+      "Chen Xing",
+      "Andy Zou",
+      "Tommy Ma",
+      "Siqi Deng",
+      "James Beldock",
+      "Prashant Ratanchandani",
+      "Kate Plawiak",
+      "Taesung Lee",
+      "Ryan Victory",
+      "Lindsay Hundley",
+      "Rachad Alao",
+      "Himaghna Bhattacharjee",
+      "Jianfeng Chi",
+      "Gary Frost",
+      "Pegah Ghahremani",
+      "Niki Howe",
+      "Yuheng Huang",
+      "Saeed Jahed",
+      "Hannah Korevaar",
+      "Trang Le",
+      "Zhe Liu",
+      "Jinghong Luo",
+      "Qin Lyu",
+      "Nina Mehrabi",
+      "Abraham Montilla",
+      "Chirag Nagpal",
+      "Cyrus Nikolaidis",
+      "Rajvardhan Oak",
+      "Manoj Ravi",
+      "Vidya Sarma",
+      "Aman Shankar",
+      "Alana Shine",
+      "Eric Michael Smith",
+      "Mariana Tandon",
+      "Michael Tontchev",
+      "Caoyu Wang",
+      "Zihan Wang",
+      "Corinne Wong",
+      "Zheng Wu",
+      "Hongyuan Zhan",
+      "Justin Zhao",
+      "Zexuan Zhong",
+      "Chengxu Zhuang",
+      "Tristan Goodman",
+      "Ayaz Minhas",
+      "Harrison Rudolph",
+      "Victoria Jeffries",
+      "Ingrid Dickinson",
+      "Alex Vaughan",
+      "Lauren Deason",
+      "Kamalika Chaudhuri",
+      "Julian Michael",
+      "Shengjia Zhao",
+      "Summer Yue"
+    ],
+    "summary": "Muse Spark is the latest large language model developed by Meta. In this report, we first present evaluations for catastrophic risk domains under Meta's Advanced AI Scaling Framework, along with the evidence that informed our launch decision. We then discuss additional considerations, such as Muse Spark's broader content safety and behavioral profile, that are relevant to overall safety but fall outside the catastrophic risk domains governed by the Framework. Our preparedness results covering Chemical and Biological, Cybersecurity, and Loss of Control risks assess Muse Spark's deployment within Meta AI as presenting acceptable levels of residual risks under our Advanced AI Scaling Framework. We conducted a broad set of evaluations targeting dual-use and high-risk capabilities across these catastrophic risk domains. Those evaluations identified elevated risks prior to mitigations, with Chemical and Biological capabilities assessed as likely reaching the \"high risk\" category under the Advanced AI Scaling Framework before safeguards were applied. We have implemented a multi-layered set of mitigations that address the identified risks, and Muse Spark demonstrates state-of-the-art refusal across a range of benchmarks related to hazardous workflows in chemistry and biology. We therefore release Muse Spark as the underlying model of Meta AI.",
+    "published": "May 14",
+    "pdf_url": "https://arxiv.org/pdf/2606.12429v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.12429v1",
+    "queried_author": "Niloofar Mireshghallah",
+    "matching_authors": [
+      "Niloofar Mireshghallah"
     ]
   },
   {
@@ -4634,8 +4852,8 @@
     ],
     "summary": "Current post-training methods in verifiable settings fall into two categories. Reinforcement learning (RLVR) relies on binary rewards, which are broadly applicable and powerful, but provide only sparse supervision during training. Distillation provides dense token-level supervision, typically obtained from an external teacher or using high-quality demonstrations. Collecting such supervision can be costly or unavailable. We propose Self-Distillation Zero (SD-Zero), a method that is substantially more training sample-efficient than RL and does not require an external teacher or high-quality demonstrations. SD-Zero trains a single model to play two roles: a Generator, which produces an initial response, and a Reviser, which conditions on that response and its binary reward to produce an improved response. We then perform on-policy self-distillation to distill the reviser into the generator, using the reviser's token distributions conditioned on the generator's response and its reward as supervision. In effect, SD-Zero trains the model to transform binary rewards into dense token-level self-supervision. On math and code reasoning benchmarks with Qwen3-4B-Instruct and Olmo-3-7B-Instruct, SD-Zero improves performance by at least 10% over the base models and outperforms strong baselines, including Rejection Fine-Tuning (RFT), GRPO, and Self-Distillation Fine-Tuning (SDFT), under the same question set and training sample budget. Extensive ablation studies show two novel characteristics of our proposed algorithm: (a) token-level self-localization, where the reviser can identify the ...",
     "published": "Apr 13",
-    "pdf_url": "https://arxiv.org/pdf/2604.12002v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.12002v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.12002v2",
+    "arxiv_url": "http://arxiv.org/abs/2604.12002v2",
     "queried_author": "Danqi Chen",
     "matching_authors": [
       "Danqi Chen"
@@ -12878,119 +13096,6 @@
     "queried_author": "Ashwinee Panda",
     "matching_authors": [
       "Ashwinee Panda"
-    ]
-  },
-  {
-    "title": "Training Language Models to Explain Their Own Computations",
-    "authors": [
-      "Belinda Z. Li",
-      "Zifan Carl Guo",
-      "Vincent Huang",
-      "Jacob Steinhardt",
-      "Jacob Andreas"
-    ],
-    "summary": "Can language models (LMs) learn to faithfully describe their internal computations? Are they better able to describe themselves than other models? We study the extent to which LMs' privileged access to their own internals can be leveraged to produce new techniques for explaining their behavior. Using existing interpretability techniques as a source of ground truth, we fine-tune LMs to generate natural language descriptions of (1) the information encoded by LM features, (2) the causal structure of LMs' internal activations, and (3) the influence of specific input tokens on LM outputs. When trained with only tens of thousands of example explanations, explainer models exhibit non-trivial generalization to new queries. This generalization appears partly attributable to explainer models' privileged access to their own internals: using a model to explain its own computations generally works better than using a *different* model to explain its computations (even if the explainer model is significantly more capable than the target). Our results suggest not only that LMs can learn to reliably explain their internal computations, but that such explanations offer a scalable complement to existing interpretability methods. Code and data at https://github.com/TransluceAI/introspective-interp",
-    "published": "Nov 11",
-    "pdf_url": "https://arxiv.org/pdf/2511.08579v3",
-    "arxiv_url": "http://arxiv.org/abs/2511.08579v3",
-    "queried_author": "Jacob Andreas",
-    "matching_authors": [
-      "Jacob Andreas"
-    ]
-  },
-  {
-    "title": "HipKittens: Fast and Furious AMD Kernels",
-    "authors": [
-      "William Hu",
-      "Drew Wadsworth",
-      "Sean Siddens",
-      "Stanley Winata",
-      "Daniel Y. Fu",
-      "Ryann Swann",
-      "Muhammad Osama",
-      "Christopher R\u00e9",
-      "Simran Arora"
-    ],
-    "summary": "AMD GPUs offer state-of-the-art compute and memory bandwidth; however, peak performance AMD kernels are written in raw assembly. To address the difficulty of mapping AI algorithms to hardware, recent work proposes C++ embedded and PyTorch-inspired domain-specific languages like ThunderKittens (TK) to simplify high performance AI kernel development on NVIDIA hardware. We explore the extent to which such primitives -- for explicit tile-based programming with optimized memory accesses and fine-grained asynchronous execution across workers -- are NVIDIA-specific or general. We provide the first detailed study of the programming primitives that lead to performant AMD AI kernels, and we encapsulate these insights in the HipKittens (HK) programming framework. We find that tile-based abstractions used in prior DSLs generalize to AMD GPUs, however we need to rethink the algorithms that instantiate these abstractions for AMD. We validate the HK primitives across CDNA3 and CDNA4 AMD platforms. In evaluations, HK kernels compete with AMD's hand-optimized assembly kernels for GEMMs and attention, and consistently outperform compiler baselines. Moreover, assembly is difficult to scale to the breadth of AI workloads; reflecting this, in some settings HK outperforms all available kernel baselines by $1.2-2.4\\times$ (e.g., $d=64$ attention, GQA backwards, memory-bound kernels). These findings help pave the way for a single, tile-based software layer for high-performance AI kernels that translates across GPU vendors. HipKittens is released at: https://github.com/HazyResearch/HipKittens.",
-    "published": "Nov 11",
-    "pdf_url": "https://arxiv.org/pdf/2511.08083v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.08083v1",
-    "queried_author": "Christopher R\u00e9",
-    "matching_authors": [
-      "Christopher R\u00e9"
-    ]
-  },
-  {
-    "title": "Intelligence per Watt: Measuring Intelligence Efficiency of Local AI",
-    "authors": [
-      "Jon Saad-Falcon",
-      "Avanika Narayan",
-      "Hakki Orhun Akengin",
-      "J. Wes Griffin",
-      "Herumb Shandilya",
-      "Adrian Gamarra Lafuente",
-      "Medhya Goel",
-      "Rebecca Joseph",
-      "Shlok Natarajan",
-      "Etash Kumar Guha",
-      "Shang Zhu",
-      "Ben Athiwaratkun",
-      "John Hennessy",
-      "Azalia Mirhoseini",
-      "Christopher R\u00e9"
-    ],
-    "summary": "Large language model (LLM) queries are predominantly processed by frontier models in centralized cloud infrastructure. Demand growth strains this paradigm faster than providers can scale. Two advances create an opportunity to rethink it: small, local LMs (<=20B active parameters) now achieve competitive performance to frontier models on many tasks, and local accelerators (e.g., Apple M4 Max) can host these models at interactive latencies. This raises the question: can local inference viably redistribute demand from centralized infrastructure? This requires measuring both whether local LMs can accurately answer real-world queries and whether they can do so efficiently on power-constrained devices (e.g., laptops). We propose intelligence per watt (IPW), task accuracy per unit of power, as a unified metric for the capability and efficiency of local inference across model-accelerator configurations. We evaluate 20+ state-of-the-art local LMs, 8 hardware accelerators (local and cloud), and 1M real-world single-turn chat and reasoning queries. For each query, we measure accuracy (local LM win rate against frontier models), energy, latency, and power. We find three key results. First, local LMs successfully answer 88.7% of these queries, with accuracy varying by domain. Second, longitudinal analysis from 2023-2025 shows IPW improved 5.3x, driven by both algorithmic and accelerator advances, with locally-serviceable query coverage rising from 23.2% to 71.3%. Third, local accelerators achieve at least 1.4x lower IPW than cloud accelerators running identical models, revealing signifi...",
-    "published": "Nov 11",
-    "pdf_url": "https://arxiv.org/pdf/2511.07885v4",
-    "arxiv_url": "http://arxiv.org/abs/2511.07885v4",
-    "queried_author": "Christopher R\u00e9",
-    "matching_authors": [
-      "Christopher R\u00e9"
-    ]
-  },
-  {
-    "title": "SALT: Steering Activations towards Leakage-free Thinking in Chain of Thought",
-    "authors": [
-      "Shourya Batra",
-      "Pierce Tillman",
-      "Samarth Gaggar",
-      "Shashank Kesineni",
-      "Kevin Zhu",
-      "Sunishchal Dev",
-      "Ashwinee Panda",
-      "Vasu Sharma",
-      "Maheep Chaudhary"
-    ],
-    "summary": "As Large Language Models (LLMs) evolve into personal assistants with access to sensitive user data, they face a critical privacy challenge: while prior work has addressed output-level privacy, recent findings reveal that LLMs often leak private information through their internal reasoning processes, violating contextual privacy expectations. These leaky thoughts occur when models inadvertently expose sensitive details in their reasoning traces, even when final outputs appear safe. The challenge lies in preventing such leakage without compromising the model's reasoning capabilities, requiring a delicate balance between privacy and utility. We introduce Steering Activations towards Leakage-free Thinking (SALT), a lightweight test-time intervention that mitigates privacy leakage in model's Chain of Thought (CoT) by injecting targeted steering vectors into hidden state. We identify the high-leakage layers responsible for this behavior. Through experiments across multiple LLMs, we demonstrate that SALT achieves reductions including $18.2\\%$ reduction in CPL on QwQ-32B, $17.9\\%$ reduction in CPL on Llama-3.1-8B, and $31.2\\%$ reduction in CPL on Deepseek in contextual privacy leakage dataset AirGapAgent-R while maintaining comparable task performance and utility. Our work establishes SALT as a practical approach for test-time privacy protection in reasoning-capable language models, offering a path toward safer deployment of LLM-based personal agents.",
-    "published": "Nov 11",
-    "pdf_url": "https://arxiv.org/pdf/2511.07772v2",
-    "arxiv_url": "http://arxiv.org/abs/2511.07772v2",
-    "queried_author": "Ashwinee Panda",
-    "matching_authors": [
-      "Ashwinee Panda"
-    ]
-  },
-  {
-    "title": "Teaching Pretrained Language Models to Think Deeper with Retrofitted Recurrence",
-    "authors": [
-      "Sean McLeish",
-      "Ang Li",
-      "John Kirchenbauer",
-      "Dayal Singh Kalra",
-      "Brian R. Bartoldson",
-      "Bhavya Kailkhura",
-      "Avi Schwarzschild",
-      "Jonas Geiping",
-      "Tom Goldstein",
-      "Micah Goldblum"
-    ],
-    "summary": "Recent advances in depth-recurrent language models show that recurrence can decouple train-time compute and parameter count from test-time compute. In this work, we study how to convert existing pretrained non-recurrent language models into depth-recurrent models. We find that using a curriculum of recurrences to increase the effective depth of the model over the course of training preserves performance while reducing total computational cost. In our experiments, on mathematics, we observe that converting pretrained models to recurrent ones results in better performance at a given compute budget than simply post-training the original non-recurrent language model.",
-    "published": "Nov 10",
-    "pdf_url": "https://arxiv.org/pdf/2511.07384v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.07384v1",
-    "queried_author": "Micah Goldblum",
-    "matching_authors": [
-      "Micah Goldblum"
     ]
   }
 ]
