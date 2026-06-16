@@ -1,5 +1,43 @@
 [
   {
+    "title": "Context-Aware RL for Agentic and Multimodal LLMs",
+    "authors": [
+      "Peiyang Xu",
+      "Bangzheng Li",
+      "Sijia Liu",
+      "Karthik R. Narasimhan",
+      "Pramod Viswanath",
+      "Prateek Mittal",
+      "Xingyu Fu"
+    ],
+    "summary": "Large language models (LLMs) often fail when answering requires identifying a small but decisive piece of evidence within a long or complex context, such as a single line in a tool trace or a subtle detail in an image. We propose ContextRL, a context-aware reinforcement learning (RL) method that improves long-horizon reasoning and multimodal performance through an \\emph{indirect} auxiliary objective. Instead of supervising only the final answer, ContextRL presents the model with a query, an answer, and two highly similar contexts, and rewards it for selecting the context that supports the query--answer pair, thereby encouraging fine-grained grounding. We construct contrastive context data in two domains: for coding agents, trajectories serve as contexts, yielding 1k pairs built via condition filtering; for multimodal reasoning, images serve as contexts, yielding 7K pairs built via generative editing and similarity search. ContextRL achieves average gains of +2.2% over standard GRPO on 5 long-horizon benchmarks, and +1.8% across 12 diverse visual question answering benchmarks. To disentangle the effect of the proposed objective from that of additional data, we compare against data-augmentation baselines that repurpose the same contrastive contexts as standard query--context--answer examples. These baselines provide little to no improvement, showing that the gains arise from the proposed context-selection objective rather than from the contrastive data alone.",
+    "published": "Jun 15",
+    "pdf_url": "https://arxiv.org/pdf/2606.17053v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.17053v1",
+    "queried_author": "Karthik R Narasimhan",
+    "matching_authors": [
+      "Karthik R Narasimhan"
+    ]
+  },
+  {
+    "title": "Fantastic Pretraining Optimizers and Where to Find Them II: Hyperball Optimization",
+    "authors": [
+      "Kaiyue Wen",
+      "Xingyu Dang",
+      "Kaifeng Lyu",
+      "Tengyu Ma",
+      "Percy Liang"
+    ],
+    "summary": "Matrix based optimizers such as Muon can substantially speed up language model pretraining, but their gains over AdamW are observed to shrink as model size and data scale grow when using standard constant decoupled weight decay. We propose Hyperball, a simple optimizer wrapper that addresses this issue. Given a base optimizer such as Adam or Muon, Hyperball sets the Frobenius norms of weight matrices and their corresponding optimizer updates to fixed constants. On Qwen3 style models up to 1.2B parameters, Muon Hyperball achieves 20--30% token equivalent speedup over weight decay baselines. Hyperball also improves learning rate transfer across widths and depths compared to decoupled weight decay. This method is motivated by prior theory showing that training with weight decay leads to an equilibrium weight norm that only depends on the training hyperparameters. Through this mechanism, the weight decay then decides the angular learning rate, i.e. how fast the direction of the weight matrix changes.",
+    "published": "Jun 15",
+    "pdf_url": "https://arxiv.org/pdf/2606.16899v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.16899v1",
+    "queried_author": "Percy Liang",
+    "matching_authors": [
+      "Percy Liang"
+    ]
+  },
+  {
     "title": "Spokes: Optimizing for Diverse Pretraining Data Selection",
     "authors": [
       "Clarence Lee",
@@ -9165,8 +9203,8 @@
     ],
     "summary": "The ability to learn manipulation skills by watching videos of humans has the potential to unlock a new source of highly scalable data for robot learning. Here, we tackle prehensile manipulation, in which tasks involve grasping an object before performing various post-grasp motions. Human videos offer strong signals for learning the post-grasp motions, but they are less useful for learning the prerequisite grasping behaviors, especially for robots without human-like hands. A promising way forward is to use a modular policy design, leveraging a dedicated grasp generator to produce stable grasps. However, arbitrary stable grasps are often not task-compatible, hindering the robot's ability to perform the desired downstream motion. To address this challenge, we present Perceive-Simulate-Imitate (PSI), a framework for training a modular manipulation policy using human video motion data processed by paired grasp-trajectory filtering in simulation. This simulation step extends the trajectory data with grasp suitability labels, which allows for supervised learning of task-oriented grasping capabilities. We show through real-world experiments that our framework can be used to learn precise manipulation skills efficiently without any robot data, resulting in significantly more robust performance than using a grasp generator naively.",
     "published": "Feb 13",
-    "pdf_url": "https://arxiv.org/pdf/2602.13197v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.13197v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.13197v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.13197v2",
     "queried_author": "Ali Farhadi",
     "matching_authors": [
       "Ali Farhadi"
@@ -13623,64 +13661,6 @@
     "matching_authors": [
       "Percy Liang",
       "Tri Dao"
-    ]
-  },
-  {
-    "title": "OlmoEarth: Stable Latent Image Modeling for Multimodal Earth Observation",
-    "authors": [
-      "Henry Herzog",
-      "Favyen Bastani",
-      "Yawen Zhang",
-      "Gabriel Tseng",
-      "Joseph Redmon",
-      "Hadrien Sablon",
-      "Ryan Park",
-      "Jacob Morrison",
-      "Alexandra Buraczynski",
-      "Karen Farley",
-      "Joshua Hansen",
-      "Andrew Howe",
-      "Patrick Alan Johnson",
-      "Mark Otterlee",
-      "Ted Schmitt",
-      "Hunter Pitelka",
-      "Stephen Daspit",
-      "Rachel Ratner",
-      "Christopher Wilhelm",
-      "Sebastian Wood",
-      "Mike Jacobi",
-      "Hannah Kerner",
-      "Evan Shelhamer",
-      "Ali Farhadi",
-      "Ranjay Krishna",
-      "Patrick Beukema"
-    ],
-    "summary": "Earth observation data presents a unique challenge: it is spatial like images, sequential like video or text, and highly multimodal. We present OlmoEarth: a multimodal, spatio-temporal foundation model that employs a novel self-supervised learning formulation, masking strategy, and loss all designed for the Earth observation domain. OlmoEarth achieves state-of-the-art performance compared to 12 other foundation models across a variety of research benchmarks and real-world tasks from external partners. When evaluating embeddings OlmoEarth achieves the best performance on 15 out of 24 tasks, and with full fine-tuning it is the best on 19 of 29 tasks. We deploy OlmoEarth as the backbone of an end-to-end platform for data collection, labeling, training, and inference of Earth observation models. The OlmoEarth Platform puts frontier foundation models and powerful data management tools into the hands of non-profits and NGOs working to solve the world's biggest problems. OlmoEarth source code, training data, and pre-trained weights are available at $\\href{https://github.com/allenai/olmoearth_pretrain}{\\text{https://github.com/allenai/olmoearth_pretrain}}$.",
-    "published": "Nov 17",
-    "pdf_url": "https://arxiv.org/pdf/2511.13655v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.13655v1",
-    "queried_author": "Ali Farhadi",
-    "matching_authors": [
-      "Ali Farhadi",
-      "Ranjay Krishna"
-    ]
-  },
-  {
-    "title": "Knowing What You Know Is Not Enough: Large Language Model Confidences Don't Align With Their Actions",
-    "authors": [
-      "Arka Pal",
-      "Teo Kitanovski",
-      "Arthur Liang",
-      "Akilesh Potti",
-      "Micah Goldblum"
-    ],
-    "summary": "Large language models (LLMs) are increasingly deployed in agentic and multi-turn workflows where they are tasked to perform actions of significant consequence. In order to deploy them reliably and manage risky outcomes in these settings, it is helpful to access model uncertainty estimates. However, confidence elicitation methods for LLMs are typically not evaluated directly in agentic settings; instead, they are evaluated on static datasets, such as Q&A benchmarks. In this work we investigate the relationship between confidence estimates elicited in static settings and the behavior of LLMs in interactive settings. We uncover a significant action-belief gap -- LLMs frequently take actions that contradict their elicited confidences. In a prediction market setting, we find that models often bet against their own high-confidence predictions; in a tool-use setting, models fail to reliably invoke information-seeking tools when their internal confidence is low; and in a user-challenge setting, models change their answers when they have high confidence in them, whilst sticking to answers they have low confidence in. Crucially, we show that static calibration is an insufficient predictor of consistency in the above dynamic settings, as stronger, better calibrated models are somtimes less consistent than their smaller and weaker open-source counterparts. Our results highlight a critical blind spot in current evaluation methodologies: ensuring that a model knows what it knows does not guarantee that it will act rationally on that knowledge.",
-    "published": "Nov 17",
-    "pdf_url": "https://arxiv.org/pdf/2511.13240v3",
-    "arxiv_url": "http://arxiv.org/abs/2511.13240v3",
-    "queried_author": "Micah Goldblum",
-    "matching_authors": [
-      "Micah Goldblum"
     ]
   }
 ]
