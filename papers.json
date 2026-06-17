@@ -1,5 +1,49 @@
 [
   {
+    "title": "Using Cognitive Models to Improve Language Model Simulation of Human Persuasion Games",
+    "authors": [
+      "Zirui Cheng",
+      "Zeyu Shen",
+      "Thomas L. Griffiths",
+      "Peter Henderson"
+    ],
+    "summary": "People make decisions differently in strategic interactions. Some update beliefs like a Bayesian; others exhibit biases like motivated reasoning. Although creators of large language models use simulated humans for safety evaluations and training, they often fail to cover this breadth of human behavior. We argue that cognitive science and economics provide a convenient tool for doing so, making use of mathematical models of human decision-making. We propose an approach that we call Equation-to-Behavior Prompting for guiding large language models to match cognitive models, and evaluate this approach on persuasion games based on legal decision-making. We find that large models can approximate equation-based specifications -- Bayesian updating, affine distortion, motivated updating, and Grether's $\u03b1$-$\u03b2$ model -- using prompting, but small models fail to do so. However, training small models with reinforcement learning to adhere to mathematical rules, Equation-to-Behavior RL, reduces belief error by 26.5% in out-of-distribution parameterizations. We show that these simulations can help create diverse training environments; training small models to consider different kinds of decision-makers improves average belief change by 2.5%--12% over Bayesian-only training, even when persuading GPT-5-mini. Our work could improve human simulations for training and evaluation in increasingly realistic settings, and could also enable novel research into more complicated mathematical models of human decision-making.",
+    "published": "Jun 16",
+    "pdf_url": "https://arxiv.org/pdf/2606.17657v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.17657v1",
+    "queried_author": "Peter Henderson",
+    "matching_authors": [
+      "Peter Henderson"
+    ]
+  },
+  {
+    "title": "ProCUA-SFT Technical Report",
+    "authors": [
+      "Jaehun Jung",
+      "Ximing Lu",
+      "Brandon Cui",
+      "Muhammad Khalifa",
+      "Shaokun Zhang",
+      "Hao Zhang",
+      "Jin Xu",
+      "Amala Sanjay Deshmukh",
+      "Karan Sapra",
+      "Andrew Tao",
+      "Yejin Choi",
+      "Jan Kautz",
+      "Mingjie Liu",
+      "Yi Dong"
+    ],
+    "summary": "Training computer-use agents (CUAs) -- models that interact with graphical desktops through screenshots and keyboard/mouse actions -- requires large-scale, diverse trajectory data collected in full desktop environments. The largest public resource, AgentNet (22.5K human trajectories), leads to negative transfer when used for supervised fine-tuning (SFT): continuing training UI-TARS 7B on AgentNet causes OSWorld success rate to fall from 26.3% to 8-10%. We present ProCUA-SFT, a dataset of 3.1M step-level SFT samples distilled from 93K synthetic trajectories across 2,484 application combinations. The dataset is produced by a fully automated pipeline that (i) synthesizes grounded tasks on live desktops seeded with real-world content -- 912 spreadsheets from SpreadsheetBench, approximately 10K permissively-licensed presentations from Zenodo10K, and multi-application OSWorld configs -- and (ii) verifies each task's feasibility through binary precondition checking before rollout. A single VLM (Kimi-K2.5) serves as goal generator, precondition judge, and trajectory executor, eliminating planner-actor capability gaps. Each trajectory is expanded into step-prefix samples that exactly reproduce the context layout seen at inference time. Fine-tuning UI-TARS 7B on ProCUA-SFT for one epoch yields 45.0% on OSWorld -- an 18.7 percentage-point improvement over the base model and over 35% above AgentNet-trained counterparts. A subset of ProCUA was incorporated into the training data for the Nemotron 3 Nano Omni model, contributing to its computer-use capabilities.",
+    "published": "Jun 15",
+    "pdf_url": "https://arxiv.org/pdf/2606.17321v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.17321v1",
+    "queried_author": "Yejin Choi",
+    "matching_authors": [
+      "Yejin Choi"
+    ]
+  },
+  {
     "title": "Context-Aware RL for Agentic and Multimodal LLMs",
     "authors": [
       "Peiyang Xu",
@@ -6147,8 +6191,8 @@
     ],
     "summary": "Recent work has demonstrated the potential of non-transformer language models, especially linear recurrent neural networks (RNNs) and hybrid models that mix recurrence and attention. Yet there is no consensus on whether the potential benefits of these new architectures justify the risk and effort of scaling them up. To address this, we provide evidence for the advantages of hybrid models over pure transformers on several fronts. First, theoretically, we show that hybrid models do not merely inherit the expressivity of transformers and linear RNNs, but can express tasks beyond both, such as code execution. Putting this theory to practice, we train Olmo Hybrid, a 7B-parameter model largely comparable to Olmo 3 7B but with the sliding window layers replaced by Gated DeltaNet layers. We show that Olmo Hybrid outperforms Olmo 3 across standard pretraining and mid-training evaluations, demonstrating the benefit of hybrid models in a controlled, large-scale setting. We find that the hybrid model scales significantly more efficiently than the transformer, explaining its higher performance. However, its unclear why greater expressivity on specific formal problems should result in better scaling or superior performance on downstream tasks unrelated to those problems. To explain this apparent gap, we return to theory and argue why increased expressivity should translate to better scaling efficiency, completing the loop. Overall, our results suggest that hybrid models mixing attention and recurrent layers are a powerful extension to the language modeling paradigm: not merely to reduce ...",
     "published": "Apr 03",
-    "pdf_url": "https://arxiv.org/pdf/2604.03444v3",
-    "arxiv_url": "http://arxiv.org/abs/2604.03444v3",
+    "pdf_url": "https://arxiv.org/pdf/2604.03444v4",
+    "arxiv_url": "http://arxiv.org/abs/2604.03444v4",
     "queried_author": "Hannaneh Hajishirzi",
     "matching_authors": [
       "Hannaneh Hajishirzi",
@@ -13615,52 +13659,6 @@
     "queried_author": "Jacob Andreas",
     "matching_authors": [
       "Jacob Andreas"
-    ]
-  },
-  {
-    "title": "ParallelKittens: Systematic and Practical Simplification of Multi-GPU AI Kernels",
-    "authors": [
-      "Stuart H. Sul",
-      "Simran Arora",
-      "Benjamin F. Spector",
-      "Christopher R\u00e9"
-    ],
-    "summary": "Inter-GPU communication has become a major bottleneck for modern AI workloads as models scale and improvements in hardware compute throughput outpace improvements in interconnect bandwidth. Existing systems mitigate this through compute-communication overlap but often fail to meet theoretical peak performance across heterogeneous workloads and new accelerators. Instead of operator-specific techniques, we ask whether a small set of simple, reusable principles can systematically guide the design of optimal multi-GPU kernels. We present ParallelKittens (PK), a minimal CUDA framework that drastically simplifies the development of overlapped multi-GPU kernels. PK extends the ThunderKittens framework and embodies the principles of multi-GPU kernel design through eight core primitives and a unified programming template, derived from a comprehensive analysis of the factors that govern multi-GPU performance$\\unicode{x2014}$data-transfer mechanisms, resource scheduling, and design overheads. We validate PK on both Hopper and Blackwell architectures. With fewer than 50 lines of device code, PK achieves up to $2.33 \\times$ speedup for data- and tensor-parallel workloads, $4.08 \\times$ for sequence-parallel workloads, and $1.22 \\times$ for expert-parallel workloads.",
-    "published": "Nov 17",
-    "pdf_url": "https://arxiv.org/pdf/2511.13940v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.13940v1",
-    "queried_author": "Christopher R\u00e9",
-    "matching_authors": [
-      "Christopher R\u00e9"
-    ]
-  },
-  {
-    "title": "Beat the long tail: Distribution-Aware Speculative Decoding for RL Training",
-    "authors": [
-      "Zelei Shao",
-      "Vikranth Srivatsa",
-      "Sanjana Srivastava",
-      "Qingyang Wu",
-      "Alpay Ariyak",
-      "Xiaoxia Wu",
-      "Ameen Patel",
-      "Jue Wang",
-      "Percy Liang",
-      "Tri Dao",
-      "Ce Zhang",
-      "Yiying Zhang",
-      "Ben Athiwaratkun",
-      "Chenfeng Xu",
-      "Junxiong Wang"
-    ],
-    "summary": "Reinforcement learning(RL) post-training has become essential for aligning large language models (LLMs), yet its efficiency is increasingly constrained by the rollout phase, where long trajectories are generated token by token. We identify a major bottleneck:the long-tail distribution of rollout lengths, where a small fraction of long generations dominates wall clock time and a complementary opportunity; the availability of historical rollouts that reveal stable prompt level patterns across training epochs. Motivated by these observations, we propose DAS, a Distribution Aware Speculative decoding framework that accelerates RL rollouts without altering model outputs. DAS integrates two key ideas: an adaptive, nonparametric drafter built from recent rollouts using an incrementally maintained suffix tree, and a length aware speculation policy that allocates more aggressive draft budgets to long trajectories that dominate makespan. This design exploits rollout history to sustain acceptance while balancing base and token level costs during decoding. Experiments on math and code reasoning tasks show that DAS reduces rollout time up to 50% while preserving identical training curves, demonstrating that distribution-aware speculative decoding can significantly accelerate RL post training without compromising learning quality.",
-    "published": "Nov 17",
-    "pdf_url": "https://arxiv.org/pdf/2511.13841v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.13841v1",
-    "queried_author": "Percy Liang",
-    "matching_authors": [
-      "Percy Liang",
-      "Tri Dao"
     ]
   }
 ]
