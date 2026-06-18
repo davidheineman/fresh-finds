@@ -1,5 +1,42 @@
 [
   {
+    "title": "Learning User Simulators with Turing Rewards",
+    "authors": [
+      "Yingshan Susan Wang",
+      "Cedegao E. Zhang",
+      "Linlu Qiu",
+      "Zexue He",
+      "Pengyuan Li",
+      "Alex Pentland",
+      "Roger P. Levy",
+      "Yoon Kim"
+    ],
+    "summary": "Learning to simulate human users in interactive settings could advance the training of agent assistants, evaluation of personalization systems, research in the social sciences, and more. Existing approaches generally do so by training a large language model (LLM) to match a single ground truth response, either by maximizing the log probability or by using a similarity reward. We instead propose {Turing-RL}: a Turing-Test-based reinforcement learning approach for training user simulator models. {Turing-RL} uses a discriminative Turing reward with an LLM judge to score how indistinguishable a generated response is from the real user's given the user's history, and the user simulator LLM learns to produce responses indistinguishable from what the user could have said with such rewards. Across two different domains--conversational chat and Reddit forum discussion--we find that {Turing-RL} consistently outperforms baseline methods on both LLM and human evaluation metrics. Our study suggests that optimizing for indistinguishability, rather than response matching, is effective for learning user simulators.",
+    "published": "Jun 17",
+    "pdf_url": "https://arxiv.org/pdf/2606.19336v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.19336v1",
+    "queried_author": "Yoon Kim",
+    "matching_authors": [
+      "Yoon Kim"
+    ]
+  },
+  {
+    "title": "Explaining Attention with Program Synthesis",
+    "authors": [
+      "Amiri Hayes",
+      "Belinda Li",
+      "Jacob Andreas"
+    ],
+    "summary": "A longstanding goal of research on interpretable deep learning is to replace opaque neural computations with human-meaningful symbolic descriptions. In this paper, we propose an approach for approximating the behavior of components of deep networks with executable programs. We focus on attention heads in transformer language models. For a given head, we first compute its associated attention matrices on a collection of randomly selected training examples. Next, we prompt a pre-trained language model with a summary of these matrices, and instruct it to generate a set of Python programs that can reproduce the associated attention patterns given only text from the input sentence. Finally, we re-rank programs according to how well our final set of programs predict behavior on held-out inputs. We demonstrate that a set of fewer than 1,000 such generated programs can reproduce the attention patterns of heads in GPT-2, TinyLlama-1.1B, and Llama-3B, achieving an average Intersection-over-Union similarity above 75% on TinyStories. Moreover, the best-fit programs can replace neural attention heads without substantially affecting model behavior: replacing 25% of attention heads with programmatic surrogates across the three models incurs only a 16% average perplexity increase, while maintaining performance on a variety of downstream question answering benchmarks. This work contributes a scalable pipeline for reverse-engineering attention heads in transformer models using human-readable, executable code, advancing a path toward symbolic transparency in neural models.",
+    "published": "Jun 17",
+    "pdf_url": "https://arxiv.org/pdf/2606.19317v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.19317v1",
+    "queried_author": "Jacob Andreas",
+    "matching_authors": [
+      "Jacob Andreas"
+    ]
+  },
+  {
     "title": "CEO-Bench: Can Agents Play the Long Game?",
     "authors": [
       "Haozhe Chen",
@@ -13556,55 +13593,6 @@
     "matching_authors": [
       "Christopher Potts",
       "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "Concept-Aware Batch Sampling Improves Language-Image Pretraining",
-    "authors": [
-      "Adhiraj Ghosh",
-      "Vishaal Udandarao",
-      "Thao Nguyen",
-      "Matteo Farina",
-      "Mehdi Cherti",
-      "Jenia Jitsev",
-      "Sewoong Oh",
-      "Elisa Ricci",
-      "Ludwig Schmidt",
-      "Matthias Bethge"
-    ],
-    "summary": "What data should a vision-language model be trained on? To answer this question, many data curation efforts center on the quality of a dataset. However, most of these existing methods are (i) offline, i.e. they produce a static dataset from a set of predetermined filtering criteria, and (ii) concept-agnostic, i.e. they use model-based filters which induce additional data biases. In this work, we go beyond such offline, concept-agnostic methods and advocate for more flexible, task-adaptive online concept-based curation. Our first contribution is DataConcept, a collection of 128M web-crawled image-text pairs annotated with fine-grained details about their concept composition. Building on DataConcept, we introduce Concept-Aware Batch Sampling (CABS), a simple yet effective batch sampling framework that flexibly constructs batches on-the-fly based on specific target distributions. We propose two variants: (i) Diversity Maximization (CABS-DM) to curate batches with a broad coverage of available concepts, and (ii) Frequency Maximization (CABS-FM) to curate batches with high object multiplicity. Through extensive evaluations across 28 benchmarks, we demonstrate that our CABS method significantly benefits CLIP/SigLIP model classes and yields highly performant models. Overall, CABS represents a strong open-source alternative to proprietary online data curation algorithms, enabling practitioners to define custom concept distributions that optimize for specific downstream tasks.",
-    "published": "Nov 25",
-    "pdf_url": "https://arxiv.org/pdf/2511.20643v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.20643v1",
-    "queried_author": "Ludwig Schmidt",
-    "matching_authors": [
-      "Ludwig Schmidt"
-    ]
-  },
-  {
-    "title": "Latent Collaboration in Multi-Agent Systems",
-    "authors": [
-      "Jiaru Zou",
-      "Ruizhong Qiu",
-      "Gaotang Li",
-      "Xiyuan Yang",
-      "Katherine Tieu",
-      "Pan Lu",
-      "Ke Shen",
-      "Hanghang Tong",
-      "Yejin Choi",
-      "Jingrui He",
-      "James Zou",
-      "Mengdi Wang",
-      "Ling Yang"
-    ],
-    "summary": "Multi-agent systems (MAS) extend large language models (LLMs) from independent single-model reasoning to coordinative system-level intelligence. While existing LLM agents depend on text-based mediation for reasoning and communication, we take a step forward by enabling models to collaborate directly within the continuous latent space. We introduce LatentMAS, an end-to-end training-free framework that enables pure latent collaboration among LLM agents. In LatentMAS, each agent first performs auto-regressive latent thoughts generation through last-layer hidden embeddings instead of text. Then, a shared latent working memory preserves and transfers each agent's internal representations and latent thoughts, ensuring lossless information exchange without re-encoding. We provide detailed theoretical analyses showing that LatentMAS achieves higher expressiveness and lossless information preservation with lower overall complexity than standard text-based MAS. In addition, empirical evaluations across 9 comprehensive benchmarks spanning math and science reasoning, commonsense understanding, and code generation show that LatentMAS outperforms advanced single agents and text-based MAS baselines, achieving up to 14.6% higher accuracy, reducing output token usage by 70.8%-83.7%, and providing 4$\\times$-4.3$\\times$ faster end-to-end inference. Code and data are fully open-sourced at https://github.com/Gen-Verse/LatentMAS.",
-    "published": "Nov 25",
-    "pdf_url": "https://arxiv.org/pdf/2511.20639v3",
-    "arxiv_url": "http://arxiv.org/abs/2511.20639v3",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
     ]
   }
 ]
