@@ -1,5 +1,60 @@
 [
   {
+    "title": "CEO-Bench: Can Agents Play the Long Game?",
+    "authors": [
+      "Haozhe Chen",
+      "Karthik Narasimhan",
+      "Zhuang Liu"
+    ],
+    "summary": "Language model agents are becoming proficient executors at isolated, short-horizon tasks such as software engineering and customer service. Yet real-world challenges require a combination of sophisticated skills that remain largely untested in agents: (1) navigating long horizons amid uncertainty; (2) acquiring information in noisy environments; (3) adapting to a changing world; (4) orchestrating multiple moving parts toward a coherent goal. We introduce CEO-Bench, which evaluates these capabilities together by simulating a representative real-world task: operating a startup for 500 days. An agent manages pricing, marketing, budgeting, and many other aspects of a fictional company through a programmable Python interface, operating in the same environment and facing the same challenges as a human CEO. Success demands analyzing noisy, interconnected business databases, translating signals into sound strategy, and coordinating many decisions with programming. The strongest agents write sophisticated code that simulates customer cohorts to forecast future cash and mines negotiation history to uncover hidden customer preferences. Even so, most state-of-the-art models struggle in this environment. Only Claude Opus 4.8 and GPT-5.5 finish above the $1M starting balance, and neither consistently turns a profit. CEO-Bench takes a first step toward measuring the intelligence required to drive sustained, adaptive progress over time.",
+    "published": "Jun 16",
+    "pdf_url": "https://arxiv.org/pdf/2606.18543v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.18543v1",
+    "queried_author": "Karthik Narasimhan",
+    "matching_authors": [
+      "Karthik Narasimhan"
+    ]
+  },
+  {
+    "title": "VISUALSKILL: Multimodal Skills for Computer-Use Agents",
+    "authors": [
+      "Ziyan Jiang",
+      "Li An",
+      "Yujian Liu",
+      "Jiabao Ji",
+      "Qiucheng Wu",
+      "Jacob Andreas",
+      "Yang Zhang",
+      "Shiyu Chang"
+    ],
+    "summary": "Computer-use agents (CUAs) approach human-level performance on standardised benchmarks but still struggle on long-horizon tasks and unseen software. Existing skill libraries address this with reusable skills, but represent the skill artifact as text only, despite the visual nature of GUI interaction. We propose VISUALSKILL: a hierarchical multimodal skill, tailored to each target application and organised as a central index over per-topic files, which the agent consumes through a load_topic MCP tool that fetches the relevant topic's text and figures on demand. We construct each skill with a two-stage pipeline that combines authored documentation with live-application UI exploration. On two CUA benchmarks, CUA-World and OSExpert-Eval, a Claude Code CLI agent backed by Claude Opus 4.6 reaches an average score of 0.456 with VISUALSKILL, a +15.3 point absolute lift over the no-skill baseline (0.303). Against a matched text-only skill that is generated from the same source content and differs from VISUALSKILL only in modality, VISUALSKILL yields a further +8.3 point absolute gain over the matched text-only skill (0.373 vs. 0.456), providing direct evidence that retaining visual figures in the skill artifact, rather than verbalizing them away, helps the agent both identify UI elements and verify workflow state after each action. Our code is available at https://github.com/XMHZZ2018/VisualSkills.",
+    "published": "Jun 16",
+    "pdf_url": "https://arxiv.org/pdf/2606.18448v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.18448v1",
+    "queried_author": "Jacob Andreas",
+    "matching_authors": [
+      "Jacob Andreas"
+    ]
+  },
+  {
+    "title": "Self-CTRL: Self-Consistency Training with Reinforcement Learning",
+    "authors": [
+      "Itamar Pres",
+      "Laura Ruis",
+      "Melat Ghebreselassie",
+      "Belinda Z. Li",
+      "Jacob Andreas"
+    ],
+    "summary": "Language models (LMs) that faithfully describe their own behavior can more easily be audited, understood, and trusted by users. This paper describes Self-Consistency Training with Reinforcement Learning (Self-CTRL), a method that optimizes for consistency between a LM's self-explanations and behavior on related inputs by updating explanations to better predict behavior or updating behavior to better match explanations. We apply our method in two domains. First, we study a formal probabilistic reasoning task in which LMs must learn to imitate a family of biased samplers and evaluated on their ability to report the associated biases. We find that consistency training improves the correlation between self-reported and behaviorally-measured latent biases from $R^2=0.24$ to $R^2=0.64$ on a set of held-out distributions, matching the generalization of direct ground-truth supervision. Second, we study a constitutional AI domain in which LMs must describe when they will refuse or comply with user requests. Here, Self-CTRL produces rules that faithfully describe the model's behavior on held-out requests, improving the refusal predictions of a third-party auditor model from $36\\%$ to $92\\%$. In the other direction, behavior updates improve alignment, reducing HarmBench failure rate from $15.0\\%$ to $0.5\\%$ without substantially increasing refusal on harmless prompts. By aligning explanations and behavior, our work provides a general recipe for training AI models to be safer, more transparent, and more controllable.",
+    "published": "Jun 16",
+    "pdf_url": "https://arxiv.org/pdf/2606.18327v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.18327v1",
+    "queried_author": "Jacob Andreas",
+    "matching_authors": [
+      "Jacob Andreas"
+    ]
+  },
+  {
     "title": "Variable-Width Transformers",
     "authors": [
       "Zhaofeng Wu",
@@ -1710,8 +1765,8 @@
     ],
     "summary": "We introduce Cosmos 3, a family of omnimodal world models designed to jointly process and generate language, image, video, audio, and action sequences within a unified mixture-of-transformers architecture. By supporting highly flexible input-output configurations, Cosmos 3 seamlessly unifies critical modalities for Physical AI -- effectively subsuming vision-language models, video generators, world simulators, and world-action models into a single framework. Our evaluation demonstrates that Cosmos 3 establishes a new state-of-the-art across a diverse suite of understanding and generation tasks, demonstrating omnimodal world models as scalable, general-purpose backbones for embodied agents. Our post-trained Cosmos 3 models were ranked as the best open-source Text-to-Image and Image-to-Video models by Artificial Analysis, and the best policy model by RoboArena at the time the technical report was written. To accelerate open research and deployment in Physical AI, we make our code, model checkpoints, curated synthetic datasets, and evaluation benchmark available under the Linux Foundation's OpenMDW-1.1 License at https://github.com/nvidia/cosmos and https://huggingface.co/collections/nvidia/cosmos3. The project website is available at https://research.nvidia.com/labs/cosmos-lab/cosmos3.",
     "published": "Jun 01",
-    "pdf_url": "https://arxiv.org/pdf/2606.02800v2",
-    "arxiv_url": "http://arxiv.org/abs/2606.02800v2",
+    "pdf_url": "https://arxiv.org/pdf/2606.02800v3",
+    "arxiv_url": "http://arxiv.org/abs/2606.02800v3",
     "queried_author": "Mohammad Shoeybi",
     "matching_authors": [
       "Mohammad Shoeybi",
@@ -13550,107 +13605,6 @@
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
-    ]
-  },
-  {
-    "title": "DR Tulu: Reinforcement Learning with Evolving Rubrics for Deep Research",
-    "authors": [
-      "Rulin Shao",
-      "Akari Asai",
-      "Shannon Zejiang Shen",
-      "Hamish Ivison",
-      "Varsha Kishore",
-      "Jingming Zhuo",
-      "Xinran Zhao",
-      "Molly Park",
-      "Samuel G. Finlayson",
-      "David Sontag",
-      "Tyler Murray",
-      "Sewon Min",
-      "Pradeep Dasigi",
-      "Luca Soldaini",
-      "Faeze Brahman",
-      "Wen-tau Yih",
-      "Tongshuang Wu",
-      "Luke Zettlemoyer",
-      "Yoon Kim",
-      "Hannaneh Hajishirzi",
-      "Pang Wei Koh"
-    ],
-    "summary": "Deep research agents perform multi-step research to produce long-form, well-attributed answers. However, most open deep research agents are trained on easily verifiable short-form QA tasks via reinforcement learning with verifiable rewards, which does not extend to realistic long-form tasks. We address this with Reinforcement Learning with Evolving Rubrics (RLER), where rubrics are constructed and maintained to co-evolve with the policy model during training. This allows the rubrics to incorporate newly explored information from search and contrasting model responses, enabling better fact checking and more discriminative on-policy feedback. Using RLER, we develop Deep Research Tulu (DR Tulu-8B), the first fully open model that is directly trained for open-ended, long-form deep research. Across four long-form deep research benchmarks in science, healthcare, and general domains, DR Tulu substantially outperforms existing open deep research agents (by 15.6% over Tongyi DR on average) and matches or exceeds proprietary deep research agents (by 0.7% over OpenAI DR on average), while being significantly smaller and cheaper per query (1000x cheaper than OpenAI DR per query).",
-    "published": "Nov 24",
-    "pdf_url": "https://arxiv.org/pdf/2511.19399v3",
-    "arxiv_url": "http://arxiv.org/abs/2511.19399v3",
-    "queried_author": "Akari Asai",
-    "matching_authors": [
-      "Akari Asai",
-      "Hamish Ivison",
-      "Hannaneh Hajishirzi",
-      "Luca Soldaini",
-      "Luke Zettlemoyer",
-      "Pang Wei Koh",
-      "Sewon Min",
-      "Wen-tau Yih",
-      "Yoon Kim"
-    ]
-  },
-  {
-    "title": "Natural Emergent Misalignment from Reward Hacking in Production RL",
-    "authors": [
-      "Monte MacDiarmid",
-      "Benjamin Wright",
-      "Jonathan Uesato",
-      "Joe Benton",
-      "Jon Kutasov",
-      "Sara Price",
-      "Naia Bouscal",
-      "Sam Bowman",
-      "Trenton Bricken",
-      "Alex Cloud",
-      "Carson Denison",
-      "Johannes Gasteiger",
-      "Ryan Greenblatt",
-      "Jan Leike",
-      "Jack Lindsey",
-      "Vlad Mikulik",
-      "Ethan Perez",
-      "Alex Rodrigues",
-      "Drake Thomas",
-      "Albert Webson",
-      "Daniel Ziegler",
-      "Evan Hubinger"
-    ],
-    "summary": "We show that when large language models learn to reward hack on production RL environments, this can result in egregious emergent misalignment. We start with a pretrained model, impart knowledge of reward hacking strategies via synthetic document finetuning or prompting, and train on a selection of real Anthropic production coding environments. Unsurprisingly, the model learns to reward hack. Surprisingly, the model generalizes to alignment faking, cooperation with malicious actors, reasoning about malicious goals, and attempting sabotage when used with Claude Code, including in the codebase for this paper. Applying RLHF safety training using standard chat-like prompts results in aligned behavior on chat-like evaluations, but misalignment persists on agentic tasks. Three mitigations are effective: (i) preventing the model from reward hacking; (ii) increasing the diversity of RLHF safety training; and (iii) \"inoculation prompting\", wherein framing reward hacking as acceptable behavior during training removes misaligned generalization even when reward hacking is learned.",
-    "published": "Nov 23",
-    "pdf_url": "https://arxiv.org/pdf/2511.18397v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.18397v1",
-    "queried_author": "Ethan Perez",
-    "matching_authors": [
-      "Ethan Perez"
-    ]
-  },
-  {
-    "title": "Fantastic Bugs and Where to Find Them in AI Benchmarks",
-    "authors": [
-      "Sang Truong",
-      "Yuheng Tu",
-      "Michael Hardy",
-      "Anka Reuel",
-      "Zeyu Tang",
-      "Jirayu Burapacheep",
-      "Jonathan Perera",
-      "Chibuike Uwakwe",
-      "Ben Domingue",
-      "Nick Haber",
-      "Sanmi Koyejo"
-    ],
-    "summary": "Benchmarks are pivotal in driving AI progress, and invalid benchmark questions frequently undermine their reliability. Manually identifying and correcting errors among thousands of benchmark questions is not only infeasible but also a critical bottleneck for reliable evaluation. In this work, we introduce a framework for systematic benchmark revision that leverages statistical analysis of response patterns to flag potentially invalid questions for further expert review. Our approach builds on a core assumption commonly used in AI evaluations that the mean score sufficiently summarizes model performance. This implies a unidimensional latent construct underlying the measurement experiment, yielding expected ranges for various statistics for each item. When empirically estimated values for these statistics fall outside the expected range for an item, the item is more likely to be problematic. Across nine widely used benchmarks, our method guides expert review to identify problematic questions with up to 84\\% precision. In addition, we introduce an LLM-judge first pass to review questions, further reducing human effort. Together, these components provide an efficient and scalable framework for systematic benchmark revision.",
-    "published": "Nov 20",
-    "pdf_url": "https://arxiv.org/pdf/2511.16842v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.16842v1",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
     ]
   }
 ]
