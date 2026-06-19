@@ -1,5 +1,32 @@
 [
   {
+    "title": "How Transparent is DiffusionGemma?",
+    "authors": [
+      "Joshua Engels",
+      "Callum McDougall",
+      "Bilal Chughtai",
+      "Janos Kramar",
+      "Senthoran Rajamanoharan",
+      "Cindy Wu",
+      "Arthur Conmy",
+      "Asic Q Chen",
+      "Jean Tarbouriech",
+      "Min Ma",
+      "Brendan O'Donoghue",
+      "Jo\u00e3o Gabriel Lopes de Oliveira",
+      "Rohin Shah",
+      "Neel Nanda"
+    ],
+    "summary": "LLM reasoning transparency is a critical affordance for understanding model decisions, mitigating misuse and misalignment, and debugging surprising model behaviors. However, DiffusionGemma performs a larger fraction of its computation in a continuous latent space; does this make its reasoning less transparent? We study this question by decomposing transparency into two components: variable transparency, whether we understand intermediate snapshots of a model's computational state; and algorithmic transparency, whether we can use these snapshots to reconstruct the process by which the model arrived at its outputs. Naively, DiffusionGemma has poor variable transparency: its opaque serial depth, the amount of serial computation that occurs in between interpretable model states, seems at first 28.6X higher than the corresponding autoregressive Gemma 4 model. However, we show that we can map the information flowing between denoising steps through an interpretable token bottleneck with no decrease in downstream performance. Treating these intermediate states as interpretable reduces the opaque serial depth to just 1.1X that of Gemma 4. Algorithmic transparency is harder for diffusion models than for autoregressive models because all token predictions in the canvas can change at every denoising step, giving the model the power to implement complicated distributed algorithms during the denoising process. To begin bridging this gap, we conduct a suite of interpretability case studies, uncovering initial evidence of novel diffusion-specific phenomena such as non-chronological reasoni...",
+    "published": "Jun 18",
+    "pdf_url": "https://arxiv.org/pdf/2606.20560v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.20560v1",
+    "queried_author": "Neel Nanda",
+    "matching_authors": [
+      "Neel Nanda"
+    ]
+  },
+  {
     "title": "Learning User Simulators with Turing Rewards",
     "authors": [
       "Yingshan Susan Wang",
@@ -6247,10 +6274,10 @@
       "Danqi Chen",
       "Zhuang Liu"
     ],
-    "summary": "What does it take to build a visual reasoner that works across charts, science, spatial understanding, and open-ended tasks? The strongest vision-language models (VLMs) show such broad visual reasoning is within reach, but the recipe behind them remains unclear, locked behind proprietary reinforcement learning (RL) pipelines with non-public data. We introduce Vero, a family of fully open VLMs that matches or exceeds existing open-weight models across diverse visual reasoning tasks. We scale RL data and rewards across six broad task categories, constructing Vero-600K, a 600K-sample dataset from 59 datasets, and designing task-routed rewards that handle heterogeneous answer formats. Vero achieves state-of-the-art performance, improving over four base models by 3.6-5.3 points on average across VeroEval, our suite of 30 challenging benchmarks. Starting from Qwen3-VL-8B-Instruct, Vero outperforms Qwen3-VL-8B-Thinking on 23 of 30 benchmarks without additional proprietary thinking data. When trained from the same base model, Vero-600K exceeds existing RL datasets across task categories. Systematic ablations reveal that different task categories elicit qualitatively distinct reasoning patterns that transfer poorly in isolation, suggesting that broad data coverage is the primary driver of strong RL scaling. All data, code, and models are released.",
+    "summary": "What does it take to build a visual reasoner that works across charts, science, spatial understanding, and open-ended tasks? The strongest vision-language models (VLMs) suggest that broad visual reasoning is within reach, yet their closed data and reinforcement learning (RL) pipelines make their gains difficult to study, reproduce, or extend. We introduce Vero, a family of fully open VLMs that match or exceed existing open-weight models across diverse visual reasoning tasks. We scale RL data and rewards across six broad task categories, constructing Vero-600K, a 600K-sample dataset from 59 datasets, and designing task-routed rewards that handle heterogeneous answers. Across VeroEval, our 30-benchmark suite, Vero-600K outperforms existing RL datasets under controlled comparisons. Applied to five starting models, Vero variants gain 2.9-5.4 points on average over their initial models. Notably, Vero-Qwen3I-8B, trained on the Instruct model, surpasses Qwen3-VL-8B-Thinking by 3.8 points on average without additional distillation. Systematic ablations reveal that different task categories elicit distinct reasoning patterns and that broad gains depend on learning them jointly rather than in isolation. All data, code, and models are publicly available.",
     "published": "Apr 06",
-    "pdf_url": "https://arxiv.org/pdf/2604.04917v2",
-    "arxiv_url": "http://arxiv.org/abs/2604.04917v2",
+    "pdf_url": "https://arxiv.org/pdf/2604.04917v3",
+    "arxiv_url": "http://arxiv.org/abs/2604.04917v3",
     "queried_author": "Danqi Chen",
     "matching_authors": [
       "Danqi Chen"
@@ -13561,38 +13588,6 @@
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Structured Prompts Improve Evaluation of Language Models",
-    "authors": [
-      "Asad Aali",
-      "Muhammad Ahmed Mohsin",
-      "Vasiliki Bikia",
-      "Arnav Singhvi",
-      "Richard Gaus",
-      "Suhana Bedi",
-      "Hejie Cui",
-      "Miguel Fuentes",
-      "Alyssa Unell",
-      "Yifan Mai",
-      "Jordan Cahoon",
-      "Michael Pfeffer",
-      "Roxana Daneshjou",
-      "Sanmi Koyejo",
-      "Emily Alsentzer",
-      "Christopher Potts",
-      "Nigam H. Shah",
-      "Akshay S. Chaudhari"
-    ],
-    "summary": "As language models (LMs) are increasingly adopted across domains, high-quality benchmarking frameworks are essential for guiding deployment decisions. In practice, however, frameworks such as Holistic Evaluation of Language Models (HELM) typically evaluate models under a single static prompt configuration, even though model behavior depends strongly on prompt choice. As a result, reported scores can reflect prompt choice as much as model capability. Declarative prompting frameworks such as DSPy offer a scalable way to evaluate models under a set of structured prompting strategies rather than a static prompt configuration. We present a reproducible DSPy+HELM framework for studying how prompt choice impacts reported benchmark outcomes. Using five prompting methods, we evaluate four frontier and two open-source LMs across seven benchmarks against existing HELM baseline scores. By evaluating LMs across a family of prompt configurations, we find that prompt choice can materially impact leaderboard outcomes. In particular, structured prompting improves performance (by 6% on average), alters comparisons (leaderboard rankings shift on 5/7 benchmarks), with most gains coming from introducing chain-of-thought, and little additional benefit from more advanced optimizers. To our knowledge, this is the first study to systematically integrate structured prompting into an established evaluation framework and quantify how prompt choice alone can impact benchmark conclusions. We open-source (i) DSPy+HELM Evaluation (https://github.com/stanford-crfm/helm/pull/3893) and (ii) Prompt Optimizati...",
-    "published": "Nov 25",
-    "pdf_url": "https://arxiv.org/pdf/2511.20836v3",
-    "arxiv_url": "http://arxiv.org/abs/2511.20836v3",
-    "queried_author": "Christopher Potts",
-    "matching_authors": [
-      "Christopher Potts",
-      "Sanmi Koyejo"
     ]
   }
 ]
