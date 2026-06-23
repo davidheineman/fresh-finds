@@ -1,5 +1,42 @@
 [
   {
+    "title": "Warning labels shift perceptions of sycophantic AI, but not its influence",
+    "authors": [
+      "Lujain Ibrahim",
+      "Myra Cheng",
+      "Cinoo Lee",
+      "Pranav Khadpe",
+      "Desmong Ong",
+      "Dan Jurafsky",
+      "Diyi Yang"
+    ],
+    "summary": "Recent work has raised concerns about the influence of sycophantic AI on user judgment and relationships. One proposed mitigation, which has received regulatory attention, is to warn users about potentially harmful AI behaviors such as sycophancy. In a preregistered experiment in which participants (N = 2,610) discussed real interpersonal conflicts with an AI system, we test whether warning labels mitigate sycophancy's influence. We find that a basic AI disclosure (``This chatbot is AI'') has no detectable effect. Labeling the system as sycophantic (``...may agree with you and validate you even when you are wrong...'') does shift users' perceptions, reducing perceived objectivity and trust, but it does not reliably reduce sycophancy's influence on users' self-perceived rightness or their willingness to repair the conflict. Our results reveal a gap between AI perception and AI influence: by shifting perception without reducing influence, warning-based interventions may offer a false sense of protection. Addressing the harms of sycophancy will therefore require understanding the specific mechanisms through which it shapes judgment, and improving model behavior itself.",
+    "published": "Jun 19",
+    "pdf_url": "https://arxiv.org/pdf/2606.21317v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.21317v1",
+    "queried_author": "Dan Jurafsky",
+    "matching_authors": [
+      "Dan Jurafsky",
+      "Diyi Yang"
+    ]
+  },
+  {
+    "title": "Who Checks the Citations? Benchmarking Legal Hallucination Detection",
+    "authors": [
+      "Patty Liu",
+      "Dominik Stammbach",
+      "Peter Henderson"
+    ],
+    "summary": "Attorneys, judges, and pro se filers increasingly use AI to draft legal documents, yet these tools frequently fabricate citations. Despite predictions that newer models would hallucinate less or that court sanctions would deter negligent filers, we found over 1,000 filings containing fabricated citations -- with this number growing year-over-year. This study evaluates whether AI-based systems can mitigate these errors by automatically detecting hallucinations. We propose a taxonomy of legal citation hallucinations grounded in actual court filings and introduce a dataset of 1,300 brief excerpts containing injected errors. Benchmarking five models in agentic and non-agentic settings reveals that while the latest iterations perform better -- GPT-5 achieves 82.8% recall and a 60.5% F1 score in an agentic framework -- all models struggle with subtle error categories. Agentic verification remains resource-intensive, with GPT-5 averaging 16.9 steps per excerpt. Furthermore, restricted information access limits the efficacy of even the best agents. This gap creates policy concerns, as it disadvantages both AI systems and litigants who lack subscriptions to commercial legal databases. Together, our dataset, tools, and policy recommendations provide a foundation for building and auditing reliable legal citation checking tools.",
+    "published": "Jun 19",
+    "pdf_url": "https://arxiv.org/pdf/2606.21155v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.21155v1",
+    "queried_author": "Peter Henderson",
+    "matching_authors": [
+      "Peter Henderson"
+    ]
+  },
+  {
     "title": "How Transparent is DiffusionGemma?",
     "authors": [
       "Joshua Engels",
@@ -13535,59 +13572,6 @@
     "queried_author": "Neel Nanda",
     "matching_authors": [
       "Neel Nanda"
-    ]
-  },
-  {
-    "title": "RefineBench: Evaluating Refinement Capability of Language Models via Checklists",
-    "authors": [
-      "Young-Jun Lee",
-      "Seungone Kim",
-      "Byung-Kwan Lee",
-      "Minkyeong Moon",
-      "Yechan Hwang",
-      "Jong Myoung Kim",
-      "Graham Neubig",
-      "Sean Welleck",
-      "Ho-Jin Choi"
-    ],
-    "summary": "Can language models (LMs) self-refine their own responses? This question is increasingly relevant as a wide range of real-world user interactions involve refinement requests. However, prior studies have largely tested LMs' refinement abilities on verifiable tasks such as competition math or symbolic reasoning with simplified scaffolds, whereas users often pose open-ended queries and provide varying degrees of feedback on what they desire. The recent advent of reasoning models that exhibit self-reflection patterns in their chains-of-thought further motivates this question. To analyze this, we introduce RefineBench, a benchmark of 1,000 challenging problems across 11 domains paired with a checklist-based evaluation framework. We evaluate two refinement modes: (1) guided refinement, where an LM is provided natural language feedback, and (2) self-refinement, where LMs attempt to improve without guidance. In the self-refinement setting, even frontier LMs such as Gemini 2.5 Pro and GPT-5 achieve modest baseline scores of 31.3% and 29.1%, respectively, and most models fail to consistently improve across iterations (e.g., Gemini-2.5-Pro gains only +1.8%, while DeepSeek-R1 declines by -0.1%). By contrast, in guided refinement, both proprietary LMs and large open-weight LMs (>70B) can leverage targeted feedback to refine responses to near-perfect levels within five turns. These findings suggest that frontier LMs require breakthroughs to self-refine their incorrect responses, and that RefineBench provides a valuable testbed for tracking progress.",
-    "published": "Nov 27",
-    "pdf_url": "https://arxiv.org/pdf/2511.22173v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.22173v1",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig",
-      "Sean Welleck",
-      "Seungone Kim"
-    ]
-  },
-  {
-    "title": "ToolOrchestra: Elevating Intelligence via Efficient Model and Tool Orchestration",
-    "authors": [
-      "Hongjin Su",
-      "Shizhe Diao",
-      "Ximing Lu",
-      "Mingjie Liu",
-      "Jiacheng Xu",
-      "Xin Dong",
-      "Yonggan Fu",
-      "Peter Belcak",
-      "Hanrong Ye",
-      "Hongxu Yin",
-      "Yi Dong",
-      "Evelina Bakhturina",
-      "Tao Yu",
-      "Yejin Choi",
-      "Jan Kautz",
-      "Pavlo Molchanov"
-    ],
-    "summary": "Large language models are powerful generalists, yet solving deep and complex problems such as those of the Humanity's Last Exam (HLE) remains both conceptually challenging and computationally expensive. We show that small orchestrators managing other models and a variety of tools can both push the upper bound of intelligence and improve efficiency in solving difficult agentic tasks. We introduce ToolOrchestra, a method for training small orchestrators that coordinate intelligent tools. ToolOrchestra explicitly uses reinforcement learning with outcome-, efficiency-, and user-preference-aware rewards. Using ToolOrchestra, we produce Orchestrator, an 8B model that achieves higher accuracy at lower cost than previous tool-use agents while aligning with user preferences on which tools are to be used for a given query. On HLE, Orchestrator achieves a score of 37.1%, outperforming GPT-5 (35.1%) while being 2.5x more efficient. On tau2-Bench and FRAMES, Orchestrator surpasses GPT-5 by a wide margin while using only about 30% of the cost. Extensive analysis shows that Orchestrator achieves the best trade-off between performance and cost under multiple metrics, and generalizes robustly to unseen tools. These results demonstrate that composing diverse tools with a lightweight orchestration model is both more efficient and more effective than existing methods, paving the way for practical and scalable tool-augmented reasoning systems.",
-    "published": "Nov 26",
-    "pdf_url": "https://arxiv.org/pdf/2511.21689v1",
-    "arxiv_url": "http://arxiv.org/abs/2511.21689v1",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
     ]
   }
 ]
