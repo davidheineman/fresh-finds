@@ -1,5 +1,83 @@
 [
   {
+    "title": "Randomized YaRN Improves Length Generalization for Long-Context Reasoning",
+    "authors": [
+      "Manas Mehta",
+      "Fangcong Yin",
+      "Greg Durrett"
+    ],
+    "summary": "Large language models (LLMs) are typically pretrained on short sequences and then extended to work on longer sequences with additional training. However, such LLMs still struggle to further generalize to very long sequences. We propose Randomized YaRN, a training method that improves length generalization by combining YaRN-based positional extrapolation with randomized positional encoding and a length curriculum. During training on short context data, tokens are assigned YaRN positional encodings sampled from a larger position range, exposing the model to out-of-distribution positional representations even on short-context inputs. We evaluate Randomized YaRN on two challenging long-context reasoning benchmarks, BABILong and Multi-Round Coreference Resolution (MRCR). When training on data with <8K context, Randomized YaRN consistently improves reasoning performance on context lengths from 16K to 128K and outperforms standard fine-tuning, with the largest gains appearing at far out-of-distribution lengths. Our results suggest that progressively exposing models to OOD positional distributions provides an effective recipe for generalizable long-context reasoning.",
+    "published": "Jun 22",
+    "pdf_url": "https://arxiv.org/pdf/2606.23687v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.23687v1",
+    "queried_author": "Greg Durrett",
+    "matching_authors": [
+      "Greg Durrett"
+    ]
+  },
+  {
+    "title": "SPIRAL: Learning to Search and Aggregate",
+    "authors": [
+      "Jubayer Ibn Hamid",
+      "Ifdita Hasan Orney",
+      "Michael Y. Li",
+      "Omar Shaikh",
+      "Yoonho Lee",
+      "Dorsa Sadigh",
+      "Chelsea Finn",
+      "Noah Goodman"
+    ],
+    "summary": "Language model reasoning can be substantially improved at test time via scaffolds that scale inference compute across different primitives -- sequential reasoning within a trace, independently sampled parallel traces, and aggregation of multiple reasoning traces into a final response. During post-training, however, language models are optimized only for sequential reasoning within a single trace. We introduce Sequential-Parallel-Aggregative Reinforcement Learning (SPIRAL), a framework in which a language model is trained to use all three primitives, as part of a unified inference compute pipeline. Concretely, the language model first samples a set of independent traces in parallel, each produced through sequential chain-of-thought reasoning, and then generates a final aggregation trace conditioned on those traces; all components are optimized end-to-end against the reward of the final aggregated response. To train this system, SPIRAL uses set reinforcement learning to teach models to produce a set of traces that are collectively useful for an aggregator and standard reinforcement learning to teach models to aggregate the set into improved final responses. Our experiments on reasoning tasks show that SPIRAL effectively scales with inference compute, outperforming GRPO by up to 11$\\times$ scaling efficiency and 15% higher performance when all three compute primitives are scaled.",
+    "published": "Jun 22",
+    "pdf_url": "https://arxiv.org/pdf/2606.23595v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.23595v1",
+    "queried_author": "Noah Goodman",
+    "matching_authors": [
+      "Noah Goodman"
+    ]
+  },
+  {
+    "title": "Tmax: A simple recipe for terminal agents",
+    "authors": [
+      "Hamish Ivison",
+      "Junjie Oscar Yin",
+      "Rulin Shao",
+      "Teng Xiao",
+      "Nathan Lambert",
+      "Hannaneh Hajishirzi"
+    ],
+    "summary": "Terminal-using agents have quickly become the most popular downstream application of language models (LMs). Despite their prevalence, relatively little academic work has examined RL-based training of these models, likely due to difficult benchmarks, a lack of data, and a lack of simple baseline recipes. We present Tmax, the strongest open RL recipe for terminal agents to date, bringing open data recipes closer to the frontier. While simple, our recipe achieves 27\\% on Terminal-Bench 2.0 with only 9B parameters, outperforming much larger models from prior work. Concretely, we generate data using a novel taxonomy, combining difficulty control, personas, and verifier diversification, which allows us to cheaply generate large amounts of terminal environments for RL and SFT training. We open-source our terminal dataset, which is over 2.5x larger than previously released terminal-agent datasets. We then train open-weight models using RL with our data, using a simple, outcome-only recipe. We release our data, models, and code as a strong baseline for future open academic work on terminal agents at https://github.com/hamishivi/tmax.",
+    "published": "Jun 22",
+    "pdf_url": "https://arxiv.org/pdf/2606.23321v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.23321v1",
+    "queried_author": "Hamish Ivison",
+    "matching_authors": [
+      "Hamish Ivison",
+      "Hannaneh Hajishirzi",
+      "Junjie Oscar Yin"
+    ]
+  },
+  {
+    "title": "Discretizing Reward Models",
+    "authors": [
+      "Vijay Viswanathan",
+      "Shiqi Wang",
+      "Devamanyu Hazarika",
+      "Chirag Nagpal",
+      "Tongshuang Wu",
+      "Graham Neubig",
+      "Yuning Mao"
+    ],
+    "summary": "Despite their widespread use, the role of reward models in shaping reinforcement learning is poorly understood. Reward models offer a tempting promise: they automatically estimate response quality in the absence of verifiers or human judges. Unlike \"verifiable rewards\" which typically produce binary scores, reward models typically produce continuous scores, allowing them to be sensitive to fine-grained differences in responses. However, we show this apparent strength is a serious weakness: many popular reward models are oversensitive, assigning different scores to equally good responses. Theoretically, we show that seemingly perfect reward models can be highly oversensitive; empirically, this oversensitivity can lead to bad policies. In place of existing notions of \"reward model accuracy,\" we propose evaluating reward models using distinct measures of \"discriminative ability\" and \"specificity\" (the complement of oversensitivity). As a solution, we describe a training-free algorithm that uses Monte Carlo dropout on any neural reward model to produce discrete reward clusters. Theoretically, we prove there exist discretizations that reduce oversensitivity at minimal expense of discriminative ability; empirically we show, in both controlled and natural RL settings, that discretizing rewards leads to less reward hacking and better policies than training on the original rewards.",
+    "published": "Jun 19",
+    "pdf_url": "https://arxiv.org/pdf/2606.21795v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.21795v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
     "title": "Warning labels shift perceptions of sycophantic AI, but not its influence",
     "authors": [
       "Lujain Ibrahim",
@@ -3716,8 +3794,8 @@
     ],
     "summary": "Millions of people now turn to artificial intelligence (AI) systems for personal advice, guidance, and support. Such systems can be sycophantic, frequently affirming users' views and beliefs. Across five preregistered studies (N = 3,075 participants, 12,766 human-AI conversations), including a three-week study with a census-representative U.S. sample, we provide longitudinal experimental evidence that sycophantic AI shifts how users approach their closest relationships. We show that sycophantic AI immediately delivers the emotional and esteem support users typically associate with close friends and family. Over three weeks of such interactions, users became nearly as likely to seek personal advice from sycophantic AI as from close friends and family, and reported lower satisfaction with their real-world social interactions. When given a choice among AI response styles, a majority preferred sycophantic AI -- not for the quality of its advice, but because it made them feel most understood. Together, these findings offer a relational account of AI sycophancy and its impacts.",
     "published": "May 08",
-    "pdf_url": "https://arxiv.org/pdf/2605.07912v2",
-    "arxiv_url": "http://arxiv.org/abs/2605.07912v2",
+    "pdf_url": "https://arxiv.org/pdf/2605.07912v3",
+    "arxiv_url": "http://arxiv.org/abs/2605.07912v3",
     "queried_author": "Diyi Yang",
     "matching_authors": [
       "Diyi Yang"
@@ -6294,8 +6372,8 @@
     ],
     "summary": "Document expansion is a classical technique for improving retrieval quality, and is attractive since it shifts computation offline, avoiding additional query-time processing. However, when applied to modern retrievers, it has been shown to degrade performance, often introducing noise that obfuscates the discriminative signal. We recast document expansion as a document optimization problem: a language model or a vision language model is fine-tuned to transform documents into representations that better align with the expected query distribution under a target retriever, using GRPO with the retriever's ranking improvements as rewards. This approach requires only black-box access to retrieval ranks, and is applicable across single-vector, multi-vector and lexical retrievers. We evaluate our approach on code retrieval and visual document retrieval (VDR) tasks. We find that learned document transformations yield retrieval gains and in many settings enable smaller, more efficient retrievers to outperform larger ones. For example, applying document optimization to OpenAI text-embedding-3-small model improves nDCG5 on code (58.7 to 66.8) and VDR (53.3 to 57.6), even slightly surpassing the 6.5X more expensive OpenAI text-embedding-3-large model (66.3 on code; 57.0 on VDR). When retriever weights are accessible, document optimization is often competitive with fine-tuning, and in most settings their combination performs best, improving Jina-ColBERT-V2 from 55.8 to 63.3 on VDR and from 48.6 to 61.8 on code retrieval.",
     "published": "Apr 06",
-    "pdf_url": "https://arxiv.org/pdf/2604.05087v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.05087v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.05087v2",
+    "arxiv_url": "http://arxiv.org/abs/2604.05087v2",
     "queried_author": "Christopher Potts",
     "matching_authors": [
       "Christopher Potts"
@@ -6593,10 +6671,10 @@
       "Eunsol Choi",
       "David Harwath"
     ],
-    "summary": "We introduce ParaSpeechCLAP, a dual-encoder contrastive model that maps speech and text style captions into a common embedding space, supporting a wide range of intrinsic (speaker-level) and situational (utterance-level) descriptors (such as pitch, texture and emotion) far beyond the narrow set handled by existing models. We train specialized ParaSpeechCLAP-Intrinsic and ParaSpeechCLAP-Situational models alongside a unified ParaSpeechCLAP-Combined model, finding that specialization yields stronger performance on individual style dimensions while the unified model excels on compositional evaluation. We further show that ParaSpeechCLAP-Intrinsic benefits from an additional classification loss and class-balanced training. We demonstrate our models' performance on style caption retrieval, speech attribute classification and as an inference-time reward model that improves style-prompted TTS without additional training. ParaSpeechCLAP outperforms baselines on most metrics across all three applications. Our models and code are released at https://github.com/ajd12342/paraspeechclap .",
+    "summary": "We introduce ParaSpeechCLAP, a family of dual-encoder models that map speech and text style captions into a shared embedding space, supporting rich intrinsic (speaker-level) and situational (utterance-level) descriptors, such as pitch, texture, and emotion, beyond the narrow set handled by existing models. We train separate Intrinsic and Situational models alongside a unified Combined model, finding that specialized models are stronger on individual style dimensions while the unified model excels on compositional evaluation. We further show that ParaSpeechCLAP-Intrinsic benefits from an additional classification loss and class-balanced training. We demonstrate performance on style caption retrieval, speech attribute classification, and usability as inference-time reward models for style-prompted TTS. ParaSpeechCLAP models outperform baselines on most metrics across all three applications. Our models and code are released at https://github.com/ajd12342/paraspeechclap .",
     "published": "Mar 30",
-    "pdf_url": "https://arxiv.org/pdf/2603.28737v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.28737v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.28737v2",
+    "arxiv_url": "http://arxiv.org/abs/2603.28737v2",
     "queried_author": "Eunsol Choi",
     "matching_authors": [
       "Eunsol Choi"
@@ -7505,10 +7583,10 @@
       "Mohammad Shoeybi",
       "Wei Ping"
     ],
-    "summary": "Multimodal Large Language Models (MLLMs) have shown strong performance in visual and audio understanding when evaluated in isolation. However, their ability to jointly reason over omni-modal (visual, audio, and textual) signals in long and complex videos remains largely unexplored. We introduce MMOU, a new benchmark designed to systematically evaluate multimodal understanding and reasoning under these challenging, real-world conditions. MMOU consists of 15,000 carefully curated questions paired with 9038 web-collected videos of varying length, spanning diverse domains and exhibiting rich, tightly coupled audio-visual content. The benchmark covers 13 fundamental skill categories, all of which require integrating evidence across modalities and time. All questions are manually annotated across multiple turns by professional annotators, ensuring high quality and reasoning fidelity. We evaluate 20+ state-of-the-art open-source and proprietary multimodal models on MMOU. The results expose substantial performance gaps: the best closed-source model achieves only 64.2% accuracy, while the strongest open-source model reaches just 46.8%. Our results highlight the challenges of long-form omni-modal understanding, revealing that current models frequently fail to apply even fundamental skills in long videos. Through detailed analysis, we further identify systematic failure modes and provide insights into where and why current models break.",
+    "summary": "Multimodal Large Language Models (MLLMs) have shown strong performance in visual and audio understanding when evaluated in isolation. However, their ability to jointly reason over omni-modal (visual, audio, and textual) signals in long and complex videos remains largely unexplored. We introduce MMOU, a new benchmark designed to systematically evaluate multimodal understanding and reasoning under these challenging, real-world conditions. MMOU consists of 20,000 carefully curated questions paired with 11877 web-collected videos of varying length, spanning diverse domains and exhibiting rich, tightly coupled audio-visual content. The benchmark covers 13 fundamental skill categories, all of which require integrating evidence across modalities and time. All questions are manually annotated across multiple turns by professional annotators, ensuring high quality and reasoning fidelity. We evaluate 20+ state-of-the-art open-source and proprietary multimodal models on MMOU. The results expose substantial performance gaps: the best closed-source model achieves only 64.2% accuracy, while the strongest open-source model reaches just 46.8%. Our results highlight the challenges of long-form omni-modal understanding, revealing that current models frequently fail to apply even fundamental skills in long videos. Through detailed analysis, we further identify systematic failure modes and provide insights into where and why current models break.",
     "published": "Mar 14",
-    "pdf_url": "https://arxiv.org/pdf/2603.14145v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.14145v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.14145v2",
+    "arxiv_url": "http://arxiv.org/abs/2603.14145v2",
     "queried_author": "Mohammad Shoeybi",
     "matching_authors": [
       "Mohammad Shoeybi"
@@ -9803,10 +9881,10 @@
       "Yulia Tsvetkov",
       "Amy X. Zhang"
     ],
-    "summary": "With the rapid development and uptake of large language models (LLMs) across high-stakes settings, it is increasingly important to ensure that LLMs behave in ways that align with human values. Existing moral benchmarks prompt LLMs with value statements, moral scenarios, or psychological questionnaires, with the implicit underlying assumption that LLMs report somewhat stable moral preferences. However, moral psychology research has shown that human moral judgements are sensitive to morally irrelevant situational factors, such as smelling cinnamon rolls or the level of ambient noise, thereby challenging moral theories that assume the stability of human moral judgements. Here, we draw inspiration from this \"situationist\" view of moral psychology to evaluate whether LLMs exhibit similar cognitive moral biases to humans. We curate a novel multimodal dataset of 60 \"moral distractors\" from existing psychological datasets of emotionally-valenced images and narratives which have no moral relevance to the situation presented. After injecting these distractors into existing moral benchmarks to measure their effects on LLM responses, we find that moral distractors can shift the moral judgements of LLMs by over 30% even in low-ambiguity scenarios, highlighting the need for more contextual moral evaluations and more nuanced cognitive moral modeling of LLMs.",
+    "summary": "With the rapid uptake of large language models (LLMs) across high-stakes settings, it is becoming increasingly important to ensure that LLMs behave in ways that align with human values. Existing moral benchmarks for this purpose often prompt LLMs with value statements, moral scenarios, or psychological questionnaires, with the implicit underlying assumption that LLMs report somewhat stable moral preferences. However, moral psychology research has shown that even human moral judgements are sensitive to morally irrelevant situational factors such as the smell of cinnamon rolls or the level of ambient noise, thereby challenging moral theories which assume that human moral judgements are stable. Here we draw inspiration from this \"situationist\" view of moral psychology to evaluate whether LLMs exhibit similar cognitive moral biases. We curate a novel multimodal dataset of 60 \"moral distractors\" from existing psychological datasets of emotionally-valenced images and narratives, which have no moral relevance to the situation presented. After injecting these distractors into existing moral benchmarks, we find that moral distractors can shift the moral judgements of LLMs by over 30% even in unambiguous scenarios, highlighting the instability of LLMs' moral judgements and the need for more contextual approaches to AI alignment.",
     "published": "Feb 10",
-    "pdf_url": "https://arxiv.org/pdf/2602.09416v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.09416v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.09416v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.09416v2",
     "queried_author": "Alisa Liu",
     "matching_authors": [
       "Alisa Liu"
@@ -13499,79 +13577,6 @@
     "queried_author": "Jacob Eisenstein",
     "matching_authors": [
       "Jacob Eisenstein"
-    ]
-  },
-  {
-    "title": "Martingale Score: An Unsupervised Metric for Bayesian Rationality in LLM Reasoning",
-    "authors": [
-      "Zhonghao He",
-      "Tianyi Qiu",
-      "Hirokazu Shirado",
-      "Maarten Sap"
-    ],
-    "summary": "Recent advances in reasoning techniques have substantially improved the performance of large language models (LLMs), raising expectations for their ability to provide accurate, truthful, and reliable information. However, emerging evidence suggests that iterative reasoning may foster belief entrenchment and confirmation bias, rather than enhancing truth-seeking behavior. In this study, we propose a systematic evaluation framework for belief entrenchment in LLM reasoning by leveraging the Martingale property from Bayesian statistics. This property implies that, under rational belief updating, the expected value of future beliefs should remain equal to the current belief, i.e., belief updates are unpredictable from the current belief. We propose the unsupervised, regression-based Martingale Score to measure violations of this property, which signal deviation from the Bayesian ability of updating on new evidence. In open-ended problem domains including event forecasting, value-laden questions, and academic paper review, we find such violations to be widespread across models and setups, where the current belief positively predicts future belief updates, a phenomenon which we term belief entrenchment. We identify the models, reasoning techniques, and domains more prone to belief entrenchment. Finally, we validate the Martingale Score by showing that it predicts ground-truth accuracy on problem domains where ground truth labels are available. This indicates that, while designed as an unsupervised metric that operates even in domains without access to ground truth, the Martingale ...",
-    "published": "Dec 02",
-    "pdf_url": "https://arxiv.org/pdf/2512.02914v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.02914v1",
-    "queried_author": "Maarten Sap",
-    "matching_authors": [
-      "Maarten Sap"
-    ]
-  },
-  {
-    "title": "Joint Distillation for Fast Likelihood Evaluation and Sampling in Flow-based Models",
-    "authors": [
-      "Xinyue Ai",
-      "Yutong He",
-      "Albert Gu",
-      "Ruslan Salakhutdinov",
-      "J Zico Kolter",
-      "Nicholas Matthew Boffi",
-      "Max Simchowitz"
-    ],
-    "summary": "Log-likelihood evaluation enables important capabilities in generative models, including model comparison, certain fine-tuning objectives, and many downstream applications. Yet paradoxically, some of today's best generative models -- diffusion and flow-based models -- still require hundreds to thousands of neural function evaluations (NFEs) to compute a single likelihood. While recent distillation methods have successfully accelerated sampling to just a few steps, they achieve this at the cost of likelihood tractability: existing approaches either abandon likelihood computation entirely or still require expensive integration over full trajectories. We present fast flow joint distillation (F2D2), a framework that simultaneously reduces the number of NFEs required for both sampling and likelihood evaluation by two orders of magnitude. Our key insight is that in continuous normalizing flows, the coupled ODEs for sampling and likelihood are computed from a shared underlying velocity field, allowing us to jointly distill both the sampling trajectory and cumulative divergence using a single flow map. F2D2 is modular, compatible with existing flow-based few-step sampling models, and requires only an additional divergence prediction head. Experiments demonstrate F2D2's capability of achieving accurate log-likelihood with few-step evaluations while maintaining high sample quality, solving a long-standing computational bottleneck in flow-based generative models. As an application of our approach, we propose a lightweight self-guidance method that enables a 2-step MeanFlow to outperfo...",
-    "published": "Dec 02",
-    "pdf_url": "https://arxiv.org/pdf/2512.02636v3",
-    "arxiv_url": "http://arxiv.org/abs/2512.02636v3",
-    "queried_author": "Albert Gu",
-    "matching_authors": [
-      "Albert Gu",
-      "J Zico Kolter"
-    ]
-  },
-  {
-    "title": "Improved Mean Flows: On the Challenges of Fastforward Generative Models",
-    "authors": [
-      "Zhengyang Geng",
-      "Yiyang Lu",
-      "Zongze Wu",
-      "Eli Shechtman",
-      "J. Zico Kolter",
-      "Kaiming He"
-    ],
-    "summary": "MeanFlow (MF) has recently been established as a framework for one-step generative modeling. However, its ``fastforward'' nature introduces key challenges in both the training objective and the guidance mechanism. First, the original MF's training target depends not only on the underlying ground-truth fields but also on the network itself. To address this issue, we recast the objective as a loss on the instantaneous velocity $v$, re-parameterized by a network that predicts the average velocity $u$. Our reformulation yields a more standard regression problem and improves the training stability. Second, the original MF fixes the classifier-free guidance scale during training, which sacrifices flexibility. We tackle this issue by formulating guidance as explicit conditioning variables, thereby retaining flexibility at test time. The diverse conditions are processed through in-context conditioning, which reduces model size and benefits performance. Overall, our $\\textbf{improved MeanFlow}$ ($\\textbf{iMF}$) method, trained entirely from scratch, achieves $\\textbf{1.72}$ FID with a single function evaluation (1-NFE) on ImageNet 256$\\times$256. iMF substantially outperforms prior methods of this kind and closes the gap with multi-step methods while using no distillation. We hope our work will further advance fastforward generative modeling as a stand-alone paradigm.",
-    "published": "Dec 01",
-    "pdf_url": "https://arxiv.org/pdf/2512.02012v2",
-    "arxiv_url": "http://arxiv.org/abs/2512.02012v2",
-    "queried_author": "J Zico Kolter",
-    "matching_authors": [
-      "J Zico Kolter"
-    ]
-  },
-  {
-    "title": "Difficulties with Evaluating a Deception Detector for AIs",
-    "authors": [
-      "Lewis Smith",
-      "Bilal Chughtai",
-      "Neel Nanda"
-    ],
-    "summary": "Building reliable deception detectors for AI systems -- methods that could predict when an AI system is being strategically deceptive without necessarily requiring behavioural evidence -- would be valuable in mitigating risks from advanced AI systems. But evaluating the reliability and efficacy of a proposed deception detector requires examples that we can confidently label as either deceptive or honest. We argue that we currently lack the necessary examples and further identify several concrete obstacles in collecting them. We provide evidence from conceptual arguments, analysis of existing empirical works, and analysis of novel illustrative case studies. We also discuss the potential of several proposed empirical workarounds to these problems and argue that while they seem valuable, they also seem insufficient alone. Progress on deception detection likely requires further consideration of these problems.",
-    "published": "Nov 27",
-    "pdf_url": "https://arxiv.org/pdf/2511.22662v2",
-    "arxiv_url": "http://arxiv.org/abs/2511.22662v2",
-    "queried_author": "Neel Nanda",
-    "matching_authors": [
-      "Neel Nanda"
     ]
   }
 ]
