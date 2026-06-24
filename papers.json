@@ -1,5 +1,24 @@
 [
   {
+    "title": "Deciphering Fingerprints of 3D Molecular Surfaces for Accurate Epitope Prediction",
+    "authors": [
+      "Fang Wu",
+      "Weihao Xuan",
+      "Jure Leskovec",
+      "Yejin Choi",
+      "Li Erran Li"
+    ],
+    "summary": "Molecular surfaces encode the geometric and physicochemical patterns that determine antibody-antigen recognition, central to epitope prediction. However, existing methods rely on sequences or backbone structures and struggle to capture discontinuous, surface-driven epitopes. This study presents SurfBind, a surface-centric learning framework for epitope prediction that operates directly on molecular surface representations. SurfBind integrates geometric and physicochemical cues through a Transformer-based architecture with patch-level surface modeling, binder-aware cross-attention, and a hierarchical coarse-to-fine prediction paradigm. Experiments on challenging epitope identification benchmarks, including SAbDab and DB5.5, demonstrate that SurfBind achieves state-of-the-art performance and strong generalization across unseen antibodies and conformational states, highlighting the value of interaction-aware surface modeling for understanding the crucial mechanisms of protein-protein interactions.",
+    "published": "Jun 22",
+    "pdf_url": "https://arxiv.org/pdf/2606.23830v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.23830v1",
+    "queried_author": "Jure Leskovec",
+    "matching_authors": [
+      "Jure Leskovec",
+      "Yejin Choi"
+    ]
+  },
+  {
     "title": "Randomized YaRN Improves Length Generalization for Long-Context Reasoning",
     "authors": [
       "Manas Mehta",
@@ -13558,25 +13577,6 @@
     "queried_author": "Neel Nanda",
     "matching_authors": [
       "Neel Nanda"
-    ]
-  },
-  {
-    "title": "Plantain: Plan-Answer Interleaved Reasoning",
-    "authors": [
-      "Anthony Liang",
-      "Jonathan Berant",
-      "Adam Fisch",
-      "Abhimanyu Goyal",
-      "Kalpesh Krishna",
-      "Jacob Eisenstein"
-    ],
-    "summary": "Reasoning models often spend a significant amount of time thinking before they generate a visible response. In the meantime, they do not give the user any hints as to whether their reasoning is on the right track, and do not give the user any recourse to stop and correct them if their reasoning is flawed. This creates a frustrating, but unfortunately common, experience: the user's time is wasted while the model reasons from a false premise that could have easily been corrected. In contrast, human speakers typically perform lightweight, incremental grounding acts to ensure that participants in the conversation are on the same page; here we ask if language models can learn to leverage a similar type of behavior? With this motivation, we propose interleaved reasoning (IR), in which the model alternates between thinking and surfacing intermediate responses, as an alternative to the standard \"think-then-answer\" approach. By providing useful information to the user earlier, IR reduces perceived latency, the time a user waits for an initial output, without compromising the quality of the final response. We further introduce a specialization of interleaved reasoning, Plantain (Plan-Thought-Answer Interleaving), where the first intermediate response is an explicit, step-by-step plan for executing the task. This plan-first strategy allows for user intervention and early feedback for subsequent reasoning steps. We demonstrate that Plantain yields an ~6% improvement in pass@1 across several challenging math reasoning and coding benchmarks, while reducing time-to-first-response by over ...",
-    "published": "Dec 02",
-    "pdf_url": "https://arxiv.org/pdf/2512.03176v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.03176v1",
-    "queried_author": "Jacob Eisenstein",
-    "matching_authors": [
-      "Jacob Eisenstein"
     ]
   }
 ]
