@@ -1,5 +1,68 @@
 [
   {
+    "title": "OpenThoughts-Agent: Data Recipes for Agentic Models",
+    "authors": [
+      "Negin Raoof",
+      "Richard Zhuang",
+      "Marianna Nezhurina",
+      "Etash Guha",
+      "Atula Tejaswi",
+      "Ryan Marten",
+      "Charlie F. Ruan",
+      "Tyler Griggs",
+      "Alexander Glenn Shaw",
+      "Hritik Bansal",
+      "E. Kelly Buchanan",
+      "Artem Gazizov",
+      "Reinhard Heckel",
+      "Chinmay Hegde",
+      "Sankalp Jajee",
+      "Daanish Khazi",
+      "Emmanouil Koukoumidis",
+      "Xiangyi Li",
+      "Hange Liu",
+      "Shlok Natarajan",
+      "Harsh Raj",
+      "Nicholas Roberts",
+      "Ethan Shen",
+      "Nishad Singhi",
+      "Michael Siu",
+      "Ashima Suvarna",
+      "Hanwen Xing",
+      "Patrick Yubeaton",
+      "Robert Zhang",
+      "Leon Liangyu Chen",
+      "Xiaokun Chen",
+      "Steven Dillmann",
+      "Saadia Gabriel",
+      "Xunyi Jiang",
+      "Anurag Kashyap",
+      "Boxuan Li",
+      "Yein Park",
+      "Minh Pham",
+      "Sujay Sanghavi",
+      "Lin Shi",
+      "Ke Sun",
+      "Yixin Wang",
+      "Zhiwei Xu",
+      "Erica Zhang",
+      "Siyan Zhao",
+      "Wanjia Zhao",
+      "Jenia Jitsev",
+      "Alex Dimakis",
+      "Benjamin Feuer",
+      "Ludwig Schmidt"
+    ],
+    "summary": "Agentic language models dramatically expand the applications of AI yet little is publicly known about how to curate training data for broadly capable agents. Existing open efforts such as SWE-Smith, SERA, and Nemotron-Terminal typically target a single benchmark, leaving open the question of how to train models that generalize across diverse agentic tasks. The OpenThoughts-Agent (OT-Agent) project addresses this gap with a fully open data curation pipeline for training agentic models. We conduct more than 100 controlled ablation experiments to systematically investigate each stage of the pipeline, yielding insights on the importance of task sources and diversity. We then assemble a training set of 100K examples from our pipeline and fine-tune Qwen3-32B on this dataset, which yields an average accuracy of 44.8% across seven agentic benchmarks and a 3.9 percentage point improvement over the strongest existing open data agentic model (Nemotron-Terminal-32B, 40.9%). Moreover, our training data exhibits strong scaling properties, outperforming alternative open datasets at every training set size in compute-controlled comparisons. We publicly release our training sets, data pipeline, experimental data, and models at openthoughts.ai to support future open research on agentic model training.",
+    "published": "Jun 23",
+    "pdf_url": "https://arxiv.org/pdf/2606.24855v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.24855v1",
+    "queried_author": "Ludwig Schmidt",
+    "matching_authors": [
+      "Ludwig Schmidt"
+    ]
+  },
+  {
     "title": "Deciphering Fingerprints of 3D Molecular Surfaces for Accurate Epitope Prediction",
     "authors": [
       "Fang Wu",
@@ -1963,8 +2026,8 @@
     ],
     "summary": "We introduce Cosmos 3, a family of omnimodal world models designed to jointly process and generate language, image, video, audio, and action sequences within a unified mixture-of-transformers architecture. By supporting highly flexible input-output configurations, Cosmos 3 seamlessly unifies critical modalities for Physical AI -- effectively subsuming vision-language models, video generators, world simulators, and world-action models into a single framework. Our evaluation demonstrates that Cosmos 3 establishes a new state-of-the-art across a diverse suite of understanding and generation tasks, demonstrating omnimodal world models as scalable, general-purpose backbones for embodied agents. Our post-trained Cosmos 3 models were ranked as the best open-source Text-to-Image and Image-to-Video models by Artificial Analysis, and the best policy model by RoboArena at the time the technical report was written. To accelerate open research and deployment in Physical AI, we make our code, model checkpoints, curated synthetic datasets, and evaluation benchmark available under the Linux Foundation's OpenMDW-1.1 License at https://github.com/nvidia/cosmos and https://huggingface.co/collections/nvidia/cosmos3. The project website is available at https://research.nvidia.com/labs/cosmos-lab/cosmos3.",
     "published": "Jun 01",
-    "pdf_url": "https://arxiv.org/pdf/2606.02800v3",
-    "arxiv_url": "http://arxiv.org/abs/2606.02800v3",
+    "pdf_url": "https://arxiv.org/pdf/2606.02800v4",
+    "arxiv_url": "http://arxiv.org/abs/2606.02800v4",
     "queried_author": "Mohammad Shoeybi",
     "matching_authors": [
       "Mohammad Shoeybi",
@@ -13559,24 +13622,6 @@
     "queried_author": "Ashwinee Panda",
     "matching_authors": [
       "Ashwinee Panda"
-    ]
-  },
-  {
-    "title": "Too Late to Recall: Explaining the Two-Hop Problem in Multimodal Knowledge Retrieval",
-    "authors": [
-      "Constantin Venhoff",
-      "Ashkan Khakzar",
-      "Sonia Joseph",
-      "Philip Torr",
-      "Neel Nanda"
-    ],
-    "summary": "Training vision language models (VLMs) aims to align visual representations from a vision encoder with the textual representations of a pretrained large language model (LLM). However, many VLMs exhibit reduced factual recall performance compared to their LLM backbones, raising the question of how effective multimodal fine-tuning is at extending existing mechanisms within the LLM to visual inputs. We argue that factual recall based on visual inputs requires VLMs to solve a two-hop problem: (1) forming entity representations from visual inputs, and (2) recalling associated factual knowledge based on these entity representations. By benchmarking 14 VLMs with various architectures (LLaVA, Native, Cross-Attention), sizes (7B-124B parameters), and training setups on factual recall tasks against their original LLM backbone models, we find that 11 of 14 models exhibit factual recall degradation. We select three models with high and two models with low performance degradation, and use attribution patching, activation patching, and probing to show that degraded VLMs struggle to use the existing factual recall circuit of their LLM backbone, because they resolve the first hop too late in the computation. In contrast, high-performing VLMs resolve entity representations early enough to reuse the existing factual recall mechanism. Finally, we demonstrate two methods to recover performance: patching entity representations from the LLM backbone into the VLM, and prompting with chain-of-thought reasoning. Our results highlight that the speed of early entity resolution critically determines h...",
-    "published": "Dec 02",
-    "pdf_url": "https://arxiv.org/pdf/2512.03276v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.03276v1",
-    "queried_author": "Neel Nanda",
-    "matching_authors": [
-      "Neel Nanda"
     ]
   }
 ]
