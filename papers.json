@@ -1,5 +1,23 @@
 [
   {
+    "title": "Emergent Capabilities Arise Randomly from Learning Sparse Attention Patterns",
+    "authors": [
+      "Vatsal Baherwani",
+      "Zixi Chen",
+      "Shikai Qiu",
+      "Andrew Gordon Wilson",
+      "Pavel Izmailov"
+    ],
+    "summary": "Neural scaling laws for transformer language models predict smooth improvements in pretraining loss with increasing parameters, but downstream capabilities such as in-context learning are known to emerge abruptly past a certain model scale. In this paper, we show that emergent capabilities arise stochastically throughout training, with larger models acquiring them earlier on average. We demonstrate that the emergence of capabilities such as pattern completion and indirect object identification corresponds to the abrupt learning of task-relevant attention patterns. To isolate this phenomenon, we train transformer models on synthetic linear map and cellular automata datasets, and we show that the difficulty of learning attention patterns depends on context length and pattern sparsity. Moreover, scaling the number of attention heads improves learning efficiency on our synthetic tasks, while increasing the head dimension yields diminishing returns past a minimum capacity. We additionally investigate architectures with alternative attention mechanisms, showing that MLP-Mixer outperforms a transformer on linear map tasks with complex attention patterns. Our findings provide a mechanistic insight into emergence, showing that downstream capabilities arise abruptly due to the intrinsic difficulty of learning sparse attention patterns in transformer models.",
+    "published": "Jun 23",
+    "pdf_url": "https://arxiv.org/pdf/2606.25010v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.25010v1",
+    "queried_author": "Pavel Izmailov",
+    "matching_authors": [
+      "Pavel Izmailov"
+    ]
+  },
+  {
     "title": "OpenThoughts-Agent: Data Recipes for Agentic Models",
     "authors": [
       "Negin Raoof",
@@ -60,6 +78,28 @@
     "queried_author": "Ludwig Schmidt",
     "matching_authors": [
       "Ludwig Schmidt"
+    ]
+  },
+  {
+    "title": "Internal Data Repetition Destroys Language Models",
+    "authors": [
+      "Jessica Chudnovsky",
+      "Joshua Kazdan",
+      "Noam Levi",
+      "Rylan Schaeffer",
+      "Yegor Denisov-Blanch",
+      "Bo He",
+      "Mehmet Donmez",
+      "Sanmi Koyejo",
+      "David Donoho"
+    ],
+    "summary": "Language models are running out of high-quality training data, and even aggressively deduplicated corpora retain some amount of repetition. Earlier controlled studies predated Chinchilla-style scaling laws and could only measure the cost of repetition indirectly. We revisit repetition in the Chinchilla era, using a fitted no-repetition scaling law to report Compute-Equivalent Gain and Compute-Equivalent Loss. We show that under this modernized paradigm, repetition damage is systematic in three ways. First, holding compute allocated to repeated data constant, eval loss peaks at an intermediate repeat count $\\Rep$; repeating a moderately sized subset a moderate number of times damages performance more than repeating a large subset a few times or a small subset many times. Second, the location of this peak is well-fit by a power law in model size; this scaling law reveals that the most damaging number of repeated data grows more quickly than compute. Finally, when repeated documents consume 10\\% of the FLOPs budget in a controlled exact-document repetition setting, the compute-equivalent loss can be large: on FineWeb-Edu-Dedup, the most damaging repeat count for a Qwen3-style 344M-parameter model at $\\OT=1$ matches the loss of a no-repetition run using 67% of the FLOPs. We demonstrate that these phenomena are not language-model-specific, and can be analytically understood in a simple statistical model: a misspecified linear regression with verbatim duplicates reproduces the same qualitative loss peak, quantifying how such peaks can arise from a statistical tradeoff between mem...",
+    "published": "Jun 23",
+    "pdf_url": "https://arxiv.org/pdf/2606.24998v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.24998v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
     ]
   },
   {
@@ -13581,47 +13621,6 @@
     "queried_author": "Greg Durrett",
     "matching_authors": [
       "Greg Durrett"
-    ]
-  },
-  {
-    "title": "Learning Steerable Clarification Policies with Collaborative Self-play",
-    "authors": [
-      "Jonathan Berant",
-      "Maximillian Chen",
-      "Adam Fisch",
-      "Reza Aghajani",
-      "Fantine Huot",
-      "Mirella Lapata",
-      "Jacob Eisenstein"
-    ],
-    "summary": "To handle underspecified or ambiguous queries, AI assistants need a policy for managing their uncertainty to determine (a) when to guess the user intent and answer directly, (b) when to enumerate and answer multiple possible intents, and (c) when to ask a clarifying question. However, such policies are contextually dependent on factors such as user preferences or modality. For example, enumerating multiple possible user intentions is cumbersome on small screens or in a voice setting. In this work, we propose to train steerable policies for managing this uncertainty using self-play. Given two agents, one simulating a user and the other an AI assistant, we generate conversations where the user issues a potentially ambiguous query, and the assistant needs to determine how to respond. Importantly, the model takes as input the numerical cost of each clarification question, and each generated word, and is asked to take the action that will maximize its final reward, which is the cost-penalized accuracy. We use Reinforced Self-Training (ReST) to train our model to achieve high reward and show this leads to a steerable policy that changes its behavior predictably conditioned on the provided costs, leading to higher reward and accuracy. Moreover, our procedure also generalizes to numerical cost values that were unobserved at training time.",
-    "published": "Dec 03",
-    "pdf_url": "https://arxiv.org/pdf/2512.04068v2",
-    "arxiv_url": "http://arxiv.org/abs/2512.04068v2",
-    "queried_author": "Jacob Eisenstein",
-    "matching_authors": [
-      "Jacob Eisenstein"
-    ]
-  },
-  {
-    "title": "Peek-a-Boo Reasoning: Contrastive Region Masking in MLLMs",
-    "authors": [
-      "Isha Chaturvedi",
-      "Anjana Nair",
-      "Yushen Li",
-      "Adhitya Rajendra Kumar",
-      "Kevin Zhu",
-      "Sunishchal Dev",
-      "Ashwinee Panda",
-      "Vasu Sharma"
-    ],
-    "summary": "We introduce Contrastive Region Masking (CRM), a training free diagnostic that reveals how multimodal large language models (MLLMs) depend on specific visual regions at each step of chain-of-thought (CoT) reasoning. Unlike prior approaches limited to final answers or attention maps, CRM provides causal, step-level attribution by systematically masking annotated regions and contrasting the resulting reasoning traces with unmasked baselines. Applied to datasets such as VisArgs, CRM reveals distinct failure modes: some models preserve reasoning structure, but hallucinate when evidence is missing, while others ground tightly to visual cues yet collapse under perturbations. By shifting the evaluation from correctness of answers to faithfulness of reasoning, CRM reframes visual benchmarks as diagnostic tools, highlighting the need for multimodal evaluation frameworks that measure not just performance, but also robustness and fidelity of reasoning.",
-    "published": "Dec 03",
-    "pdf_url": "https://arxiv.org/pdf/2512.08976v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.08976v1",
-    "queried_author": "Ashwinee Panda",
-    "matching_authors": [
-      "Ashwinee Panda"
     ]
   }
 ]
