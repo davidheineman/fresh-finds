@@ -1,5 +1,38 @@
 [
   {
+    "title": "Same Evidence, Different Answer: Auditing Order Sensitivity in Multimodal Large Language Models",
+    "authors": [
+      "Akshay Paruchuri",
+      "Sanmi Koyejo",
+      "Ehsan Adeli"
+    ],
+    "summary": "Standard benchmarks for multimodal large language models (MLLMs) score each item on one canonical ordering and miss whether order-irrelevant shuffling changes the answer, a baseline reliability property called for by emerging AI evaluation guidelines. We introduce Facet-Probe, a five-facet audit (option, evidence-chunk, document-rank, image-set, and mixed-modality ordering) of 18 frontier and open-weight MLLMs. A Bayesian item-response model separates ordering noise from per-facet bias, and a same-ordering control estimates the decoder-stochastic floor for observed flips. We find that none of the 18 MLLMs we audit are order-invariant: screened per-facet panel-mean flip rates span 24-50%. A Gemini same-ordering control at temperature 0 estimates a substantial ordering excess over a same-input decoder-noise floor in verified cells. Capability predicts but does not eliminate flips; the best model still flips on 13.4% of trials. In our Gemini mitigation tests, training-free prompt changes are modality-conditional and do not transfer from text to visual reasoning. These results suggest that prompt-level mitigation alone is unlikely to provide general order robustness, motivating future work on training-time and architectural approaches. We propose cross-ordering flip rate as a standard reporting axis for MLLMs.",
+    "published": "Jun 24",
+    "pdf_url": "https://arxiv.org/pdf/2606.26079v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.26079v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "Model Forensics: Investigating Whether Concerning Behavior Reflects Misalignment",
+    "authors": [
+      "Aditya Singh",
+      "Gerson Kroiz",
+      "Senthooran Rajamanoharan",
+      "Neel Nanda"
+    ],
+    "summary": "A central goal of safety research is determining whether a model is misaligned. Prior work has largely focused on detecting concerning behavior. But behavior alone does not establish misalignment: a concerning action can arise from benign causes such as confusion. This motivates model forensics: investigating whether the action was driven by malign intent. In this paper, we propose a baseline protocol for model forensics consisting of two steps, iterated as needed. First, we read the chain of thought (CoT) to generate hypotheses about what drives model behavior. Second, we make edits to the prompt or environment to test these hypotheses. While the CoT is not always faithful, it is a rich source of unsupervised insight that can guide the collection of more rigorous evidence. To evaluate our protocol, we create a suite of six agentic environments where models exhibit concerning behavior, and apply it to each. We establish that Kimi K2 Thinking takes shortcuts due to a genuine disposition towards low-effort actions, by showing this hypothesis successfully predicts its behavior. Through counterfactual experiments, we show DeepSeek R1 deceives out of a desire to be consistent with a previous instance of itself. Our methods nonetheless leave significant room for refinement. For example, when we test whether Kimi K2 Thinking believes it is violating user intent, we find no evidence of such a belief, but without positive controls we cannot confirm our tests would detect it. Overall, we find our simple protocol provides a strong baseline that we hope future work will improve upon. M...",
+    "published": "Jun 24",
+    "pdf_url": "https://arxiv.org/pdf/2606.26071v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.26071v1",
+    "queried_author": "Neel Nanda",
+    "matching_authors": [
+      "Neel Nanda"
+    ]
+  },
+  {
     "title": "Emergent Capabilities Arise Randomly from Learning Sparse Attention Patterns",
     "authors": [
       "Vatsal Baherwani",
@@ -3676,7 +3709,7 @@
     ]
   },
   {
-    "title": "Shepherd: A Runtime Substrate Empowering Meta-Agents with a Formalized Execution Trace",
+    "title": "Shepherd: Enabling Programmable Meta-Agents via Reversible Agentic Execution Traces",
     "authors": [
       "Simon Yu",
       "Derek Chong",
@@ -3686,10 +3719,10 @@
       "Christopher D Manning",
       "Weiyan Shi"
     ],
-    "summary": "As LLM agent systems take on more complex tasks, they increasingly rely on meta-agents: higher-order agents that operate on other agents, much as managers supervise employees. Whatever a meta-agent does: coordinating agents, halting risky actions before execution, or repairing failed runs, requires manipulation of agentic execution at runtime. Existing agentic substrates make this hard: they give meta-agents only plain transcripts and environment snapshots, requiring it to build it's own tooling to reconstruct and orchestrate execution state. Therefore, we introduce Shepherd, a Python substrate grounded in functional programming principles, where an agent's execution is itself a first-class object that a meta-agent can inspect and transform. Every model call, tool call, and environment change becomes a structured event in a Git-like execution trace, where any past state can be forked 5x faster than docker commit and replayed. Three example use cases show Shepherd's versatility: (1) a supervisor agent prevents conflicts among parallel coding agents, lifting CooperBench performance from 28.8% to 54.7%; (2) a counterfactual optimizer repairs agent workflows by proposing edits and replaying runs from the point of changed behavior, outperforming MetaHarness on TerminalBench-2 with 58% lower wall-clock; (3) a meta-agent picks fork points during rollouts to improve credit assignment in long-horizon agentic RL, doubling GRPO's gains on TerminalBench-2. We open-source Shepherd to empower future meta-agents with principled and efficient operations over agentic execution.",
+    "summary": "As LLM agent systems take on more complex tasks, they increasingly rely on meta-agents: higher-order agents that create, operate on and manage other agents. Meta-agent operations such as coordinating agents, halting risky actions before execution, or repairing failed runs, require runtime manipulation of agentic execution. Yet existing agentic substrates make this difficult: they expose only transcripts and environment snapshots, forcing meta-agents to build ad hoc tooling to reconstruct and operate over full execution state. Therefore, we introduce Shepherd, a Python substrate grounded in functional programming principles, where an agent's execution is itself a first-class object that a meta-agent can easily inspect and transform. Every model action, tool call, and environment change becomes a structured event in a reversible, Git-like execution trace, where any past state can be reverted 5x faster than docker commit and fork. Three example use cases show Shepherd's versatility: (1) a supervisor meta-agent prevents conflicts among parallel coding agents, lifting pair-coding pass rate from 28.8% to 54.7% on CooperBench; (2) a counterfactual optimization meta-agent repairs agent workflows by proposing edits and replaying runs from the point of changed behavior, outperforming MetaHarness on Terminal-Bench 2.0 by 12.8% with 58% lower wall-clock; (3) a training meta-agent picks fork points during rollouts to improve credit assignment in long-horizon agentic RL, doubling GRPO's uplift on Terminal-Bench 2.0. We open-source Shepherd to enable principled and efficient operations ov...",
     "published": "May 11",
-    "pdf_url": "https://arxiv.org/pdf/2605.10913v2",
-    "arxiv_url": "http://arxiv.org/abs/2605.10913v2",
+    "pdf_url": "https://arxiv.org/pdf/2605.10913v3",
+    "arxiv_url": "http://arxiv.org/abs/2605.10913v3",
     "queried_author": "Christopher D Manning",
     "matching_authors": [
       "Christopher D Manning"
@@ -13585,42 +13618,6 @@
     "queried_author": "Cl\u00e9mentine Fourrier",
     "matching_authors": [
       "Cl\u00e9mentine Fourrier"
-    ]
-  },
-  {
-    "title": "ClusterFusion: Hybrid Clustering with Embedding Guidance and LLM Adaptation",
-    "authors": [
-      "Yiming Xu",
-      "Yuan Yuan",
-      "Vijay Viswanathan",
-      "Graham Neubig"
-    ],
-    "summary": "Text clustering is a fundamental task in natural language processing, yet traditional clustering algorithms with pre-trained embeddings often struggle in domain-specific contexts without costly fine-tuning. Large language models (LLMs) provide strong contextual reasoning, yet prior work mainly uses them as auxiliary modules to refine embeddings or adjust cluster boundaries. We propose ClusterFusion, a hybrid framework that instead treats the LLM as the clustering core, guided by lightweight embedding methods. The framework proceeds in three stages: embedding-guided subset partition, LLM-driven topic summarization, and LLM-based topic assignment. This design enables direct incorporation of domain knowledge and user preferences, fully leveraging the contextual adaptability of LLMs. Experiments on three public benchmarks and two new domain-specific datasets demonstrate that ClusterFusion not only achieves state-of-the-art performance on standard tasks but also delivers substantial gains in specialized domains. To support future work, we release our newly constructed dataset and results on all benchmarks.",
-    "published": "Dec 04",
-    "pdf_url": "https://arxiv.org/pdf/2512.04350v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.04350v1",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
-    ]
-  },
-  {
-    "title": "SkillFactory: Self-Distillation For Learning Cognitive Behaviors",
-    "authors": [
-      "Zayne Sprague",
-      "Jack Lu",
-      "Manya Wadhwa",
-      "Sedrick Keh",
-      "Mengye Ren",
-      "Greg Durrett"
-    ],
-    "summary": "Reasoning models leveraging long chains of thought employ various cognitive skills, such as verification of their answers, backtracking, retrying by an alternate method, and more. Previous work has shown that when a base language model exhibits these skills, training that model further with reinforcement learning (RL) can learn to leverage them. How can we get models to leverage skills that aren't exhibited by base models? Our work, SkillFactory, is a method for fine-tuning models to roughly learn these skills during a supervised fine-tuning (SFT) stage prior to RL. Our approach does not rely on distillation from a stronger model, but instead uses samples from the model itself, rearranged to provide training data in the format of those skills. These \"silver\" SFT traces may be imperfect, but are nevertheless effective for priming a model to acquire skills during RL. Our evaluation shows that (1) starting from SkillFactory SFT initialization helps a model to generalize to harder variants of a task post-RL, despite lower performance pre-RL;(2) cognitive skills are indeed used by the model; (3) RLed SkillFactory models are more robust to regression on out-of-domain tasks than RLed base models. Our work suggests that inductive biases learned prior to RL help models learn robust cognitive skill use.",
-    "published": "Dec 03",
-    "pdf_url": "https://arxiv.org/pdf/2512.04072v2",
-    "arxiv_url": "http://arxiv.org/abs/2512.04072v2",
-    "queried_author": "Greg Durrett",
-    "matching_authors": [
-      "Greg Durrett"
     ]
   }
 ]
