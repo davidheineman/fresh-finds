@@ -1,5 +1,25 @@
 [
   {
+    "title": "Nemotron-TwoTower: Diffusion Language Modeling with Pretrained Autoregressive Context",
+    "authors": [
+      "Fitsum Reda",
+      "John Kamalu",
+      "Roger Waleffe",
+      "Mostofa Patwary",
+      "Mohammad Shoeybi",
+      "Bryan Catanzaro"
+    ],
+    "summary": "Diffusion language models offer a promising alternative to autoregressive models due to their potential for parallel and iterative generation. However, existing approaches use a single network for both context representation and iterative denoising, forcing one model to serve both roles and limiting its capacity for either role. We propose TwoTower, a block-wise autoregressive diffusion model that decouples these roles into two towers: a frozen AR context tower that causally processes clean tokens, and a trainable diffusion denoiser tower with bidirectional block attention that refines noisy blocks via cross-attention to the context. Built on Nemotron-3-Nano-30B-A3B, an open-weight 30B hybrid Mamba-Transformer MoE model, and trained on approximately 2.1T tokens, Nemotron-TwoTower retains 98.7% of the autoregressive baseline's quality while offering 2.42X higher wall-clock generation throughput. We release the code and model weights at https://huggingface.co/collections/nvidia/nemotron-twotower.",
+    "published": "Jun 25",
+    "pdf_url": "https://arxiv.org/pdf/2606.26493v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.26493v1",
+    "queried_author": "Mohammad Shoeybi",
+    "matching_authors": [
+      "Mohammad Shoeybi",
+      "Mostofa Patwary"
+    ]
+  },
+  {
     "title": "Same Evidence, Different Answer: Auditing Order Sensitivity in Multimodal Large Language Models",
     "authors": [
       "Akshay Paruchuri",
@@ -308,10 +328,10 @@
       "Roger P. Levy",
       "Yoon Kim"
     ],
-    "summary": "Learning to simulate human users in interactive settings could advance the training of agent assistants, evaluation of personalization systems, research in the social sciences, and more. Existing approaches generally do so by training a large language model (LLM) to match a single ground truth response, either by maximizing the log probability or by using a similarity reward. We instead propose {Turing-RL}: a Turing-Test-based reinforcement learning approach for training user simulator models. {Turing-RL} uses a discriminative Turing reward with an LLM judge to score how indistinguishable a generated response is from the real user's given the user's history, and the user simulator LLM learns to produce responses indistinguishable from what the user could have said with such rewards. Across two different domains--conversational chat and Reddit forum discussion--we find that {Turing-RL} consistently outperforms baseline methods on both LLM and human evaluation metrics. Our study suggests that optimizing for indistinguishability, rather than response matching, is effective for learning user simulators.",
+    "summary": "Learning to simulate human users in interactive settings could advance the training of agent assistants, evaluation of personalization systems, research in the social sciences, and more. Existing approaches generally do so by training a large language model (LLM) to match a single ground truth response, either by maximizing the log probability or by using a similarity reward. We instead propose Turing-RL: a Turing-Test-based reinforcement learning approach for training user simulator models. Turing-RL uses a discriminative Turing reward with an LLM judge to score how indistinguishable a generated response is from the real user's given the user's history, and the user simulator LLM learns to produce responses indistinguishable from what the user could have said with such rewards. Across two different domains--conversational chat and Reddit forum discussion--we find that Turing-RL consistently outperforms baseline methods on both LLM and human evaluation metrics. Our study suggests that optimizing for indistinguishability, rather than response matching, is effective for learning user simulators.",
     "published": "Jun 17",
-    "pdf_url": "https://arxiv.org/pdf/2606.19336v1",
-    "arxiv_url": "http://arxiv.org/abs/2606.19336v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.19336v2",
+    "arxiv_url": "http://arxiv.org/abs/2606.19336v2",
     "queried_author": "Yoon Kim",
     "matching_authors": [
       "Yoon Kim"
@@ -13590,34 +13610,6 @@
     "queried_author": "Luke Zettlemoyer",
     "matching_authors": [
       "Luke Zettlemoyer"
-    ]
-  },
-  {
-    "title": "LeMat-GenBench: A Unified Evaluation Framework for Crystal Generative Models",
-    "authors": [
-      "Siddharth Betala",
-      "Samuel P. Gleason",
-      "Ali Ramlaoui",
-      "Andy Xu",
-      "Georgia Channing",
-      "Daniel Levy",
-      "Cl\u00e9mentine Fourrier",
-      "Nikita Kazeev",
-      "Chaitanya K. Joshi",
-      "S\u00e9kou-Oumar Kaba",
-      "F\u00e9lix Therrien",
-      "Alex Hernandez-Garcia",
-      "Roc\u00edo Mercado",
-      "N. M. Anoop Krishnan",
-      "Alexandre Duval"
-    ],
-    "summary": "Generative machine learning (ML) models hold great promise for accelerating materials discovery through the inverse design of inorganic crystals, enabling an unprecedented exploration of chemical space. Yet, the lack of standardized evaluation frameworks makes it challenging to evaluate, compare, and further develop these ML models meaningfully. In this work, we introduce LeMat-GenBench, a unified benchmark for generative models of crystalline materials, supported by a set of evaluation metrics designed to better inform model development and downstream applications. We release both an open-source evaluation suite and a public leaderboard on Hugging Face, and benchmark 12 recent generative models. Results reveal that an increase in stability leads to a decrease in novelty and diversity on average, with no model excelling across all dimensions. Altogether, LeMat-GenBench establishes a reproducible and extensible foundation for fair model comparison and aims to guide the development of more reliable, discovery-oriented generative models for crystalline materials.",
-    "published": "Dec 04",
-    "pdf_url": "https://arxiv.org/pdf/2512.04562v2",
-    "arxiv_url": "http://arxiv.org/abs/2512.04562v2",
-    "queried_author": "Cl\u00e9mentine Fourrier",
-    "matching_authors": [
-      "Cl\u00e9mentine Fourrier"
     ]
   }
 ]
