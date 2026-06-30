@@ -1,5 +1,21 @@
 [
   {
+    "title": "Towards Physical Intuitions for Alignment Dynamics: A Case Study With Randomness Crystallization",
+    "authors": [
+      "Kunal Samanta",
+      "Ari Holtzman",
+      "Peter West"
+    ],
+    "summary": "The alignment of language models is typically studied through the lens of capability benchmarks, but the dynamics of how models change during post-training remain poorly understood. We argue that the physical sciences, and thermodynamic phase-transition theory in particular, offer a principled and underexplored vocabulary for reasoning about these dynamics. As a case study, we instantiate this position through the lens of material Crystallization, which is a well-studied thermodynamic phase transition. For tasks like random number generation, this breaks into 3 phases: (1) the high entropy liquid phase in the pretrained model, with many distinct sampling distributions promptable from the model; (2) the nucleation phase caused by supervised finetuning, in which behavior collapses onto a single seed distribution present in the pretrained LLM; and (3) a settling phase in which reinforcement learning techniques redistribute probability of the collapsed distribution, but largely keep it concentrated on the same options as the seed distribution. We propose intuitive metrics to verify the transitions between these phases, and validate the idea across a range of random tasks. Crystallization is one instance of a broader class of physical frameworks we believe alignment research should import to answer questions about where alignment-induced structure comes from, why it converges where it does, and what it fundamentally cannot change.",
+    "published": "Jun 29",
+    "pdf_url": "https://arxiv.org/pdf/2606.29933v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.29933v1",
+    "queried_author": "Ari Holtzman",
+    "matching_authors": [
+      "Ari Holtzman"
+    ]
+  },
+  {
     "title": "Evolution Fine-Tuning: Learning to Discover Across 371 Optimization Tasks",
     "authors": [
       "Young-Jun Lee",
@@ -426,13 +442,13 @@
     "title": "Explaining Attention with Program Synthesis",
     "authors": [
       "Amiri Hayes",
-      "Belinda Li",
+      "Belinda Z Li",
       "Jacob Andreas"
     ],
     "summary": "A longstanding goal of research on interpretable deep learning is to replace opaque neural computations with human-meaningful symbolic descriptions. In this paper, we propose an approach for approximating the behavior of components of deep networks with executable programs. We focus on attention heads in transformer language models. For a given head, we first compute its associated attention matrices on a collection of randomly selected training examples. Next, we prompt a pre-trained language model with a summary of these matrices, and instruct it to generate a set of Python programs that can reproduce the associated attention patterns given only text from the input sentence. Finally, we re-rank programs according to how well our final set of programs predict behavior on held-out inputs. We demonstrate that a set of fewer than 1,000 such generated programs can reproduce the attention patterns of heads in GPT-2, TinyLlama-1.1B, and Llama-3B, achieving an average Intersection-over-Union similarity above 75% on TinyStories. Moreover, the best-fit programs can replace neural attention heads without substantially affecting model behavior: replacing 25% of attention heads with programmatic surrogates across the three models incurs only a 16% average perplexity increase, while maintaining performance on a variety of downstream question answering benchmarks. This work contributes a scalable pipeline for reverse-engineering attention heads in transformer models using human-readable, executable code, advancing a path toward symbolic transparency in neural models.",
     "published": "Jun 17",
-    "pdf_url": "https://arxiv.org/pdf/2606.19317v1",
-    "arxiv_url": "http://arxiv.org/abs/2606.19317v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.19317v2",
+    "arxiv_url": "http://arxiv.org/abs/2606.19317v2",
     "queried_author": "Jacob Andreas",
     "matching_authors": [
       "Jacob Andreas"
@@ -9553,8 +9569,8 @@
     ],
     "summary": "Artificial intelligence benchmarks are an important mechanism for measuring model progress and guiding deployment decisions. However, benchmarks quickly \"saturate\", making it difficult to differentiate models and diminishing their long-term value. In this study, we define benchmark saturation and analyze it across 60 language model benchmarks using 14 properties that relate to saturation. We find that nearly half of the our benchmarks exhibit saturation, with rates increasing with age. Further, we find that resilience to saturation is impacted by expert-curation, not by public test data. Our results suggest that design choices can extend benchmark longevity and inform more durable evaluation approaches.",
     "published": "Feb 18",
-    "pdf_url": "https://arxiv.org/pdf/2602.16763v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.16763v2",
+    "pdf_url": "https://arxiv.org/pdf/2602.16763v3",
+    "arxiv_url": "http://arxiv.org/abs/2602.16763v3",
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
@@ -10001,10 +10017,10 @@
       "Mingjie Sun",
       "J. Zico Kolter"
     ],
-    "summary": "Large language models (LLMs) exhibit a wide range of capabilities, including mathematical reasoning, code generation, and linguistic behaviors. We show that many capabilities are highly localized to small subsets of attention heads within Transformer architectures. Zeroing out as few as five task-specific heads can degrade performance by up to $65\\%$ on standard benchmarks measuring the capability of interest, while largely preserving performance on unrelated tasks. We introduce a compressed sensing based method that exploits the sparsity of these heads to identify them via strategic knockouts and a small number of model evaluations. We validate these findings across Llama and Qwen models ranging from 1B to 8B parameters and a diverse set of capabilities including mathematical abilities and code generation, revealing a modular organization in which specialized capabilities are implemented by sparse, functionally distinct components. Overall, our results suggest that capability localization is a general organizational principle of Transformer language models, with implications for interpretability, model editing, and AI safety. Code is released at https://github.com/locuslab/llm-components.",
+    "summary": "Large language models (LLMs) exhibit a wide range of capabilities, including mathematical reasoning, code generation, and linguistic behaviors. We show that Transformer architectures contain small subsets of attention heads that are necessary for certain capabilities. Zeroing out as few as five task-specific heads can degrade performance by up to $60\\%$ on standard benchmarks measuring the capability of interest, while largely preserving performance on unrelated tasks. We introduce a compressed sensing-based method that exploits the sparsity of these heads to identify them via strategic knockouts and a small number of model evaluations. We validate these findings across Llama and Qwen models ranging from 1B to 14B parameters and a diverse set of capabilities including mathematical abilities and code generation, revealing a modular organization in which specialized capabilities are dependent on sparse, functionally distinct components. Overall, our results suggest that capability localization is a general organizational principle of Transformer language models, with implications for interpretability, model editing, and AI safety. Code is released at https://github.com/locuslab/llm-components.",
     "published": "Feb 11",
-    "pdf_url": "https://arxiv.org/pdf/2603.03335v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.03335v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.03335v2",
+    "arxiv_url": "http://arxiv.org/abs/2603.03335v2",
     "queried_author": "J Zico Kolter",
     "matching_authors": [
       "J Zico Kolter"
@@ -13620,21 +13636,6 @@
     "matching_authors": [
       "J Zico Kolter",
       "Percy Liang"
-    ]
-  },
-  {
-    "title": "Language models as tools for investigating the distinction between possible and impossible natural languages",
-    "authors": [
-      "Julie Kallini",
-      "Christopher Potts"
-    ],
-    "summary": "We argue that language models (LMs) have strong potential as investigative tools for probing the distinction between possible and impossible natural languages and thus uncovering the inductive biases that support human language learning. We outline a phased research program in which LM architectures are iteratively refined to better discriminate between possible and impossible languages, supporting linking hypotheses to human cognition.",
-    "published": "Dec 10",
-    "pdf_url": "https://arxiv.org/pdf/2512.09394v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.09394v1",
-    "queried_author": "Christopher Potts",
-    "matching_authors": [
-      "Christopher Potts"
     ]
   }
 ]
