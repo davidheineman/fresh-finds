@@ -1,5 +1,90 @@
 [
   {
+    "title": "Evolution Fine-Tuning: Learning to Discover Across 371 Optimization Tasks",
+    "authors": [
+      "Young-Jun Lee",
+      "Seungone Kim",
+      "Minki Kang",
+      "Alistair Cheong Liang Chuen",
+      "Zerui Chen",
+      "Seungho Han",
+      "Taehee Jung",
+      "Dongyeop Kang"
+    ],
+    "summary": "Would experience designing faster GPU kernels also help close in on a long-standing open mathematical conjecture? Large Language Models (LLMs) integrated into evolutionary search have recently produced state-of-the-art solutions on optimization tasks, including open mathematical conjectures, GPU kernel design, scientific law discovery, and combinatorial puzzles. To achieve this, prior work applied search scaffolds to one target task at a time, so every new problem is approached from scratch and the experience accumulated during search is discarded once the model finishes its attempt. This leaves the capability of iteratively evolving a solution (e.g., knowing which part to mutate and how, deciding when to backtrack) entirely in the scaffold rather than in the model itself. Whether the model itself could acquire this capability and reuse it across different tasks has been largely unexamined. To address this, we introduce Evolution Fine-Tuning (EFT), a mid-training paradigm that teaches LLMs to evolve solutions across tasks by converting evolutionary search trajectories into supervision. We construct Finch Collection, a 156K-trajectory dataset spanning 10 domains and 371 optimization tasks, and fine-tune open-source LLMs from 2B to 9B parameters. Empirically, EFT confers cross-task generalization: across 22 held-out tasks, our models surpass their base counterparts by 10.22% on average. Furthermore, when paired with test-time RL, our model matches state-of-the-art performance on two circle-packing tasks and outperforms its base-model counterpart on the Erd\u0151s minimum-overlap p...",
+    "published": "Jun 27",
+    "pdf_url": "https://arxiv.org/pdf/2606.29082v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.29082v1",
+    "queried_author": "Seungone Kim",
+    "matching_authors": [
+      "Seungone Kim"
+    ]
+  },
+  {
+    "title": "DataComp-VLM: Improved Open Datasets for Vision-Language Models",
+    "authors": [
+      "Matteo Farina",
+      "Vishaal Udandarao",
+      "Thao Nguyen",
+      "Selim Kuzucu",
+      "Maximilian B\u00f6ther",
+      "Andreas Hochlehnert",
+      "Adhiraj Ghosh",
+      "Marianna Nezhurina",
+      "Karsten Roth",
+      "Joschka Struber",
+      "Yuhui Zhang",
+      "Sebastian Dziadzio",
+      "Elaine Sui",
+      "Soumya Jahagirdar",
+      "Dhruba Ghosh",
+      "Hasan Hammoud",
+      "Thomas De Min",
+      "Simone Caldarella",
+      "Jehanzeb Mirza",
+      "Sedrick Keh",
+      "Mehdi Cherti",
+      "Hilde Kuehne",
+      "Bernt Schiele",
+      "Serena Yeung-Levy",
+      "Muhammad Ferjad Naeem",
+      "Federico Tombari",
+      "Ana Klimovic",
+      "Elisa Ricci",
+      "Matthias Bethge",
+      "Sewoong Oh",
+      "Ameya Prabhu",
+      "Alessio Tonioni",
+      "Jenia Jitsev",
+      "Massimiliano Mancini",
+      "Ludwig Schmidt",
+      "Nikhil Parthasarathy"
+    ],
+    "summary": "Building performant Vision-Language Models (VLMs) requires carefully curating large-scale training datasets, yet the community lacks systematic benchmarks for evaluating such curation strategies. We introduce DataComp for VLMs (DCVLM), a benchmark for controlled data-centric experiments to improve VLM training. As part of DCVLM, we collect 160 datasets spanning four data types -- image-caption pairs, multimodal interleaved documents, text-only, and instruction-tuning data -- into a corpus of 6T multimodal tokens. DCVLM allows participants to test curation strategies (filtering, mixing, formatting, sampling) across 1B-8B models and 6.25B-200B token budgets. Models are then evaluated on a carefully selected suite of up to 52 downstream benchmarks across 9 domains. We conduct extensive experiments on DCVLM and find that data mixing, not filtering, is key to a high-quality training dataset: instruction-heavy mixtures scale better than caption-heavy ones, with gains widening at larger scales. The resulting dataset, DCVLM-Baseline, enables training an 8B VLM to 63.6% accuracy on our 33-task core suite with 200B training tokens. Compared to FineVision, the state-of-the-art open VLM training dataset, this represents an improvement of +5.4pp. DCVLM and all accompanying artifacts will be made publicly available at https://www.datacomp.ai/dcvlm/.",
+    "published": "Jun 26",
+    "pdf_url": "https://arxiv.org/pdf/2606.28551v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.28551v1",
+    "queried_author": "Ludwig Schmidt",
+    "matching_authors": [
+      "Ludwig Schmidt"
+    ]
+  },
+  {
+    "title": "Legal Domain Adaptation of Modern BERT Models",
+    "authors": [
+      "Dominik Stammbach",
+      "Peter Henderson"
+    ],
+    "summary": "We investigate domain adaptation of modern BERT models in the legal domain. We further pre-train ModernBERT on all US court opinions using the masked language modeling objective. Although ModernBERT has been trained on roughly 500x more data than original BERT, we still find that this model benefits from further pre-training and domain adaptation in the legal domain: we report significant improvements compared to vanilla ModernBERT on all datasets connected to US court opinions. We find gains similar to those reported in early work on domain adaptation of BERT-like models. However, from scratch pre-training does not match the performance of further pre-training an existing ModernBERT checkpoint in our experiments. The resulting models are capable of processing sequences up to 8,192 tokens, and can be used to compute meaningful embeddings of legal passages, or could quickly rerank hundreds of legal passages for a given search query. We release all model checkpoints publicly.",
+    "published": "Jun 26",
+    "pdf_url": "https://arxiv.org/pdf/2606.28538v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.28538v1",
+    "queried_author": "Peter Henderson",
+    "matching_authors": [
+      "Peter Henderson"
+    ]
+  },
+  {
     "title": "Nemotron-TwoTower: Diffusion Language Modeling with Pretrained Autoregressive Context",
     "authors": [
       "Fitsum Reda",
@@ -1815,6 +1900,27 @@
     "queried_author": "Yoon Kim",
     "matching_authors": [
       "Yoon Kim"
+    ]
+  },
+  {
+    "title": "PIXELRAG: Web Screenshots Beat Text for Retrieval-Augmented Generation",
+    "authors": [
+      "Yichuan Wang",
+      "Zhifei Li",
+      "Zirui Wang",
+      "Paul Teiletche",
+      "Lesheng Jin",
+      "Matei Zaharia",
+      "Joseph E. Gonzalez",
+      "Sewon Min"
+    ],
+    "summary": "Augmenting large language models (LLMs) with retrieved web text has become a dominant paradigm, yet the web is not natively textual: existing systems depend on complex parsing pipelines that linearize HTML and discard layout, visual structure, and formatting. We introduce PixelRAG, a new retrieval-augmented method that represents websites in their native visual form and performs retrieval and reading entirely in pixel space, enabling an end-to-end architecture that eliminates text abstraction. PixelRAG is, to our knowledge, the first pipeline to operate over a full Wikipedia corpus in this form, scaling to a datastore of 30 million screenshot images with an efficient visual retrieval index. Built on an existing visual embedding model (i.e., Qwen3-VL-Embedding), PixelRAG further fine-tunes this model on screenshot data with carefully curated contrastive training data. Retrieved screenshots are then fed directly as pixel inputs to a VLM, without intermediate text conversion. PixelRAG consistently outperforms both no-retrieval and text-based RAG baselines, most surprisingly on widely studied text-centric tasks such as NQ and SimpleQA. It also achieves strong gains on multimodal open-domain QA (e.g., MMSearch), benchmarks over noisy news corpora (e.g., LiveVQA), and agentic benchmarks (e.g., MoNaCo), improving accuracy by up to 18.1% over text-based baselines. Finally, pixel representations enable a new efficiency lever for RAG through image compression, achieving up to 3x token cost reduction at lower resolutions while maintaining accuracy. Our results challenge the necessity ...",
+    "published": "Jun 01",
+    "pdf_url": "https://arxiv.org/pdf/2606.28344v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.28344v1",
+    "queried_author": "Sewon Min",
+    "matching_authors": [
+      "Sewon Min"
     ]
   },
   {
@@ -11591,8 +11697,8 @@
     ],
     "summary": "In speech language modeling, two architectures dominate the frontier: the Transformer and the Conformer. However, it remains unknown whether their comparable performance stems from convergent processing strategies or distinct architectural inductive biases. We introduce Architectural Fingerprinting, a probing framework that isolates the effect of architecture on representation, and apply it to a controlled suite of 24 pre-trained encoders (39M-3.3B parameters). Our analysis reveals divergent hierarchies: Conformers implement a \"Categorize Early\" strategy, resolving phoneme categories 29% earlier in depth and speaker gender by 16% depth. In contrast, Transformers \"Integrate Late,\" deferring phoneme, accent, and duration encoding to deep layers (49-57%). These fingerprints suggest design heuristics: Conformers' front-loaded categorization may benefit low-latency streaming, while Transformers' deep integration may favor tasks requiring rich context and cross-utterance normalization.",
     "published": "Jan 11",
-    "pdf_url": "https://arxiv.org/pdf/2601.06972v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.06972v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.06972v2",
+    "arxiv_url": "http://arxiv.org/abs/2601.06972v2",
     "queried_author": "Dan Jurafsky",
     "matching_authors": [
       "Dan Jurafsky"
@@ -13529,87 +13635,6 @@
     "queried_author": "Christopher Potts",
     "matching_authors": [
       "Christopher Potts"
-    ]
-  },
-  {
-    "title": "CONCUR: A Framework for Continual Constrained and Unconstrained Routing",
-    "authors": [
-      "Peter Baile Chen",
-      "Weiyue Li",
-      "Dan Roth",
-      "Michael Cafarella",
-      "Samuel Madden",
-      "Jacob Andreas"
-    ],
-    "summary": "AI tasks differ in complexity and are best addressed with different computation strategies (e.g., combinations of models and decoding methods). Hence, an effective routing system that maps tasks to the appropriate strategies is crucial. Most prior methods build the routing framework by training a single model across all strategies, which demands full retraining whenever new strategies appear and leads to high overhead. Attempts at such continual routing, however, often face difficulties with generalization. Prior models also typically use a single input representation, limiting their ability to capture the full complexity of the routing problem and leading to sub-optimal routing decisions. To address these gaps, we propose CONCUR, a continual routing framework that supports both constrained and unconstrained routing (i.e., routing with or without a budget). Our modular design trains a separate predictor model for each strategy, enabling seamless incorporation of new strategies with low additional training cost. Our predictors also leverage multiple representations of both tasks and computation strategies to better capture overall problem complexity. Experiments on both in-distribution and out-of-distribution, knowledge- and reasoning-intensive tasks show that our method outperforms the best single strategy and strong existing routing techniques with higher end-to-end accuracy and lower inference cost in both continual and non-continual settings, while also reducing training cost in the continual setting.",
-    "published": "Dec 10",
-    "pdf_url": "https://arxiv.org/pdf/2512.09386v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.09386v1",
-    "queried_author": "Jacob Andreas",
-    "matching_authors": [
-      "Jacob Andreas"
-    ]
-  },
-  {
-    "title": "On the Interplay of Pre-Training, Mid-Training, and RL on Reasoning Language Models",
-    "authors": [
-      "Charlie Zhang",
-      "Graham Neubig",
-      "Xiang Yue"
-    ],
-    "summary": "Recent reinforcement learning (RL) techniques have yielded impressive reasoning improvements in language models, yet it remains unclear whether post-training truly extends a model's reasoning ability beyond what it acquires during pre-training. A central challenge is the lack of control in modern training pipelines: large-scale pre-training corpora are opaque, mid-training is often underexamined, and RL objectives interact with unknown prior knowledge in complex ways. To resolve this ambiguity, we develop a fully controlled experimental framework that isolates the causal contributions of pre-training, mid-training, and RL-based post-training. Our approach employs synthetic reasoning tasks with explicit atomic operations, parseable step-by-step reasoning traces, and systematic manipulation of training distributions. We evaluate models along two axes: extrapolative generalization to more complex compositions and contextual generalization across surface contexts. Using this framework, we reconcile competing views on RL's effectiveness. We show that: 1) RL produces true capability gains (pass@128) only when pre-training leaves sufficient headroom and when RL data target the model's edge of competence, tasks at the boundary that are difficult but not yet out of reach. 2) Contextual generalization requires minimal yet sufficient pre-training exposure, after which RL can reliably transfer. 3) Mid-training significantly enhances performance under fixed compute compared with RL only, demonstrating its central but underexplored role in training pipelines. 4) Process-level rewards red...",
-    "published": "Dec 08",
-    "pdf_url": "https://arxiv.org/pdf/2512.07783v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.07783v1",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
-    ]
-  },
-  {
-    "title": "ARC-AGI Without Pretraining",
-    "authors": [
-      "Isaac Liao",
-      "Albert Gu"
-    ],
-    "summary": "Conventional wisdom in the age of LLMs dictates that solving IQ-test-like visual puzzles from the ARC-AGI-1 benchmark requires capabilities derived from massive pretraining. To counter this, we introduce CompressARC, a 76K parameter model without any pretraining that solves 20% of evaluation puzzles by minimizing the description length (MDL) of the target puzzle purely during inference time. The MDL endows CompressARC with extreme generalization abilities typically unheard of in deep learning. To our knowledge, CompressARC is the only deep learning method for ARC-AGI where training happens only on a single sample: the target inference puzzle itself, with the final solution information removed. Moreover, CompressARC does not train on the pre-provided ARC-AGI \"training set\". Under these extremely data-limited conditions, we do not ordinarily expect any puzzles to be solvable at all. Yet CompressARC still solves a diverse distribution of creative ARC-AGI puzzles, suggesting MDL to be an alternative feasible way to produce intelligence, besides conventional pretraining.",
-    "published": "Dec 05",
-    "pdf_url": "https://arxiv.org/pdf/2512.06104v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.06104v1",
-    "queried_author": "Albert Gu",
-    "matching_authors": [
-      "Albert Gu"
-    ]
-  },
-  {
-    "title": "TV2TV: A Unified Framework for Interleaved Language and Video Generation",
-    "authors": [
-      "Xiaochuang Han",
-      "Youssef Emad",
-      "Melissa Hall",
-      "John Nguyen",
-      "Karthik Padthe",
-      "Liam Robbins",
-      "Amir Bar",
-      "Delong Chen",
-      "Michal Drozdzal",
-      "Maha Elbayad",
-      "Yushi Hu",
-      "Shang-Wen Li",
-      "Sreya Dutta Roy",
-      "Jakob Verbeek",
-      "XuDong Wang",
-      "Marjan Ghazvininejad",
-      "Luke Zettlemoyer",
-      "Emily Dinan"
-    ],
-    "summary": "Video generation models are rapidly advancing, but can still struggle with complex video outputs that require significant semantic branching or repeated high-level reasoning about what should happen next. In this paper, we introduce a new class of omni video-text models that integrate ideas from recent LM reasoning advances to address this challenge. More specifically, we present TV2TV, a unified generative modeling framework which decomposes video generation into an interleaved text and video generation process. TV2TV jointly learns language modeling (next-token prediction) and video flow matching (next-frame prediction) using a Mixture-of-Transformers (MoT) architecture. At inference time, TV2TV decides when to alternate between generating text and video frames, allowing the model to \"think in words\" about subsequent content before ``acting in pixels'' to produce frames. This design offloads much of the responsibility for deciding what should happen next to the language modeling tower, enabling improved visual quality and prompt alignment of generated videos. It also enables fine-grained controllability, allowing users to modify the video generation trajectory through text interventions at any point in the process. In controlled experiments on video game data, TV2TV demonstrates substantial improvements in both visual quality and controllability. TV2TV also scales to natural videos, as we show by augmenting sports videos with interleaved natural language action descriptions using vision-language models (VLMs). Training TV2TV on this corpus yields strong visual quality and...",
-    "published": "Dec 04",
-    "pdf_url": "https://arxiv.org/pdf/2512.05103v2",
-    "arxiv_url": "http://arxiv.org/abs/2512.05103v2",
-    "queried_author": "Luke Zettlemoyer",
-    "matching_authors": [
-      "Luke Zettlemoyer"
     ]
   }
 ]
