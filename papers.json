@@ -1,5 +1,93 @@
 [
   {
+    "title": "FLARE-AI: Flaw Reporting for AI",
+    "authors": [
+      "Shayne Longpre",
+      "Elaine Zhu",
+      "Carson Ezell",
+      "Avijit Ghosh",
+      "Sean McGregor",
+      "Kevin Paeth",
+      "Kevin Klyman",
+      "Sayash Kapoor",
+      "Rishi Bommasani",
+      "Ruth Appel",
+      "Gregory Strom",
+      "Lauren McIlvenny",
+      "Mark M. Jaycox",
+      "Peter Slattery",
+      "Nathan Butters",
+      "Arvind Narayanan",
+      "Percy Liang",
+      "Alex Pentland"
+    ],
+    "summary": "Flaw reporting for deployed AI systems is fundamental to identifying system failures and improving AI safety. Yet the AI reporting ecosystem is fragmented: researchers who identify flaws often do not know what or where to report, and groups who receive reports rarely share them with other relevant stakeholders. As a result, good-faith reporters duplicate effort by submitting many different forms, and recipients lack standardized, triage-ready information. We audit 12 reporting systems published by AI developers, cybersecurity groups, and AI flaw aggregators, identifying five recurring design challenges spanning discoverability, scope, information collection, coordination, and guidance for strict-liability cases. Building on this analysis and feedback from 49 experts across 32 organizations representing developers, security researchers, and ecosystem coordinators, we introduce FLARE-AI, an open-source AI flaw reporting system designed for interoperability with existing systems. FLARE-AI streamlines flaw report creation by collecting triage-relevant information through conditional logic and early classification, then enables optional dissemination of standardized, machine-readable reports to multiple developers, coordinators, and incident registries from a single submission. By lowering barriers to reporting AI flaws and improving interoperability across stakeholders, FLARE-AI helps break down silos and accelerate remediation across the AI ecosystem.",
+    "published": "Jun 30",
+    "pdf_url": "https://arxiv.org/pdf/2606.31567v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.31567v1",
+    "queried_author": "Percy Liang",
+    "matching_authors": [
+      "Percy Liang"
+    ]
+  },
+  {
+    "title": "Learning from Failure: Inference-Time Self-Improvement for Computer-Use Agents",
+    "authors": [
+      "Xueqiao Sun",
+      "Xiaohan Wang",
+      "Ludwig Schmidt",
+      "Serena Yeung-Levy",
+      "Yuhui Zhang"
+    ],
+    "summary": "Computer-use agents, which leverage multimodal large language models (MLLMs) to operate computers and complete tasks, have attracted significant attention for their utility and versatility. A major challenge in developing these agents is collecting large-scale, high-quality trajectories. The standard approach generates synthetic data through a self-improving loop: an agent is placed in a verifiable environment and iteratively fine-tuned on its successful trajectories. Despite its effectiveness, this paradigm exploits only successful trajectories and discards the failed ones, even though failures carry rich information about a model's weaknesses. In this work, we explore a complementary failure-driven self-improvement loop, a data-centric paradigm that turns failed trajectories into agent improvements. Specifically, we employ an LLM to diagnose failure modes, propose inference-time solutions, and generate code patches -- lightly verified by humans -- that upgrade the agent. We validate this approach with the state-of-the-art OpenCUA-72B model on the OSWorld benchmark, improving the success rate from 42.3% to 48.9%, a gain of 6.6 percentage points, without any additional training cost and with only modest inference overhead. Our results demonstrate that failure-driven self-improvement is a viable complement to success-based pipelines, enabling more efficient agent improvement.",
+    "published": "Jun 30",
+    "pdf_url": "https://arxiv.org/pdf/2606.31270v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.31270v1",
+    "queried_author": "Ludwig Schmidt",
+    "matching_authors": [
+      "Ludwig Schmidt"
+    ]
+  },
+  {
+    "title": "PPT-Eval: A Benchmark for Computer-Use Agents on PowerPoint Tasks",
+    "authors": [
+      "Apurva Gandhi",
+      "Vishwas Suryanarayanan",
+      "Raja Hasnain Anwar",
+      "Firoz Shaik",
+      "Shubhang Desai",
+      "Thong Q. Nguyen",
+      "Muhammad Taqi Raza",
+      "Vishal Chowdhary",
+      "Graham Neubig"
+    ],
+    "summary": "Creating and editing slides is a rich, multimodal activity that is ubiquitous in professional and educational settings, making it an ideal testbed for real-world computer-use agents. Microsoft PowerPoint is among the most widely adopted and feature-rich environments for presentation creation. We introduce PPT-Eval, a benchmark of 120 PowerPoint tasks across 12 files that cover both content creation and presentation editing scenarios, organized by difficulty. A central challenge in this domain is evaluation: tasks are complex, multimodal, and often admit many valid solutions. Moreover, today's agents frequently make only partial progress, which binary success metrics fail to capture. To address this, we design a robust evaluation framework to help create task-specific rubrics for PowerPoint tasks, taking inspiration from and building on past works for rubric-based evaluation. These rubrics award partial credit for intermediate steps, penalize unnecessary changes and poor aesthetics, and provide natural language feedback. This nuanced approach proves highly effective, achieving a Kendall's \u03c4-b correlation of 0.77 with human judgments. We find that existing frontier agents still struggle with solving PowerPoint tasks, with strong models like Claude-4.5-Opus achieving only a 45% success rate and an average partial score of 57%. The benchmark is located at: https://microsoft.github.io/ppteval.",
+    "published": "Jun 30",
+    "pdf_url": "https://arxiv.org/pdf/2606.31154v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.31154v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
+    "title": "Beyond expert users: agents should help users construct preferences, not just elicit them",
+    "authors": [
+      "Irena Saracay",
+      "Ludwig Schmidt",
+      "Carlos Guestrin"
+    ],
+    "summary": "Agents typically assume an expert user -- one with well-formed preferences about what they want -- and default to clarifying questions whenever the task is underspecified. We argue this assumption is unrealistic. Users often lack the domain knowledge to have completely specified preferences; if asked about their preference on some feature, the user may be unable to answer without the agent helping the user to learn some domain knowledge needed to form a preference for that feature, e.g., via examples or explanations. To formalize these principles, we draw on the Search-Experience-Credence framework from Information Economics to introduce CoPref, a model of how users construct preferences based on agent dialog actions. We then study these ideas concretely in agentic recommender systems, proposing CoShop, an interactive benchmark. In CoShop, an agent converses with and makes recommendations for a CoPref user. The agent's performance depends on whether it can help the user gain the knowledge needed to specify the task well. Evaluating five frontier models, we find that no agent exceeds 56% accuracy on CoShop despite five turns of interaction. Failures stem not from agents' ability to find items, but from how little the interaction expands what users know about what they want.",
+    "published": "Jun 29",
+    "pdf_url": "https://arxiv.org/pdf/2606.30863v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.30863v1",
+    "queried_author": "Carlos Guestrin",
+    "matching_authors": [
+      "Carlos Guestrin",
+      "Ludwig Schmidt"
+    ]
+  },
+  {
     "title": "Towards Physical Intuitions for Alignment Dynamics: A Case Study With Randomness Crystallization",
     "authors": [
       "Kunal Samanta",
@@ -101,7 +189,7 @@
     ]
   },
   {
-    "title": "Nemotron-TwoTower: Diffusion Language Modeling with Pretrained Autoregressive Context",
+    "title": "Nemotron-Labs-TwoTower: Diffusion Language Modeling with Pretrained Autoregressive Context",
     "authors": [
       "Fitsum Reda",
       "John Kamalu",
@@ -110,10 +198,10 @@
       "Mohammad Shoeybi",
       "Bryan Catanzaro"
     ],
-    "summary": "Diffusion language models offer a promising alternative to autoregressive models due to their potential for parallel and iterative generation. However, existing approaches use a single network for both context representation and iterative denoising, forcing one model to serve both roles and limiting its capacity for either role. We propose TwoTower, a block-wise autoregressive diffusion model that decouples these roles into two towers: a frozen AR context tower that causally processes clean tokens, and a trainable diffusion denoiser tower with bidirectional block attention that refines noisy blocks via cross-attention to the context. Built on Nemotron-3-Nano-30B-A3B, an open-weight 30B hybrid Mamba-Transformer MoE model, and trained on approximately 2.1T tokens, Nemotron-TwoTower retains 98.7% of the autoregressive baseline's quality while offering 2.42X higher wall-clock generation throughput. We release the code and model weights at https://huggingface.co/collections/nvidia/nemotron-twotower.",
+    "summary": "Diffusion language models offer a promising alternative to autoregressive models due to their potential for parallel and iterative generation. However, existing approaches use a single network for both context representation and iterative denoising, forcing one model to serve both roles and limiting its capacity for either role. We propose TwoTower, a block-wise autoregressive diffusion model that decouples these roles into two towers: a frozen AR context tower that causally processes clean tokens, and a trainable diffusion denoiser tower with bidirectional block attention that refines noisy blocks via cross-attention to the context. Built on Nemotron-3-Nano-30B-A3B, an open-weight 30B hybrid Mamba-Transformer MoE model, and trained on approximately 2.1T tokens, Nemotron-Labs-TwoTower retains 98.7% of the autoregressive baseline's quality while offering 2.42X higher wall-clock generation throughput. We release the code and model weights at https://huggingface.co/collections/nvidia/nemotron-labs-twotower.",
     "published": "Jun 25",
-    "pdf_url": "https://arxiv.org/pdf/2606.26493v1",
-    "arxiv_url": "http://arxiv.org/abs/2606.26493v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.26493v2",
+    "arxiv_url": "http://arxiv.org/abs/2606.26493v2",
     "queried_author": "Mohammad Shoeybi",
     "matching_authors": [
       "Mohammad Shoeybi",
@@ -13549,93 +13637,6 @@
     "queried_author": "Ranjay Krishna",
     "matching_authors": [
       "Ranjay Krishna"
-    ]
-  },
-  {
-    "title": "The 2025 Foundation Model Transparency Index",
-    "authors": [
-      "Alexander Wan",
-      "Kevin Klyman",
-      "Sayash Kapoor",
-      "Nestor Maslej",
-      "Shayne Longpre",
-      "Betty Xiong",
-      "Percy Liang",
-      "Rishi Bommasani"
-    ],
-    "summary": "Foundation model developers are among the world's most important companies. As these companies become increasingly consequential, how do their transparency practices evolve? The 2025 Foundation Model Transparency Index is the third edition of an annual effort to characterize and quantify the transparency of foundation model developers. The 2025 FMTI introduces new indicators related to data acquisition, usage data, and monitoring and evaluates companies like Alibaba, DeepSeek, and xAI for the first time. The 2024 FMTI reported that transparency was improving, but the 2025 FMTI finds this progress has deteriorated: the average score out of 100 fell from 58 in 2024 to 40 in 2025. Companies are most opaque about their training data and training compute as well as the post-deployment usage and impact of their flagship models. In spite of this general trend, IBM stands out as a positive outlier, scoring 95, in contrast to the lowest scorers, xAI and Midjourney, at just 14. The five members of the Frontier Model Forum we score end up in the middle of the Index: we posit that these companies avoid reputational harms from low scores but lack incentives to be transparency leaders. As policymakers around the world increasingly mandate certain types of transparency, this work reveals the current state of transparency for foundation model developers, how it may change given newly enacted policy, and where more aggressive policy interventions are necessary to address critical information deficits.",
-    "published": "Dec 11",
-    "pdf_url": "https://arxiv.org/pdf/2512.10169v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.10169v1",
-    "queried_author": "Percy Liang",
-    "matching_authors": [
-      "Percy Liang"
-    ]
-  },
-  {
-    "title": "Interpretable Embeddings with Sparse Autoencoders: A Data Analysis Toolkit",
-    "authors": [
-      "Nick Jiang",
-      "Xiaoqing Sun",
-      "Lisa Dunlap",
-      "Lewis Smith",
-      "Neel Nanda"
-    ],
-    "summary": "Analyzing large-scale text corpora is a core challenge in machine learning, crucial for tasks like identifying undesirable model behaviors or biases in training data. Current methods often rely on costly LLM-based techniques (e.g. annotating dataset differences) or dense embedding models (e.g. for clustering), which lack control over the properties of interest. We propose using sparse autoencoders (SAEs) to create SAE embeddings: representations whose dimensions map to interpretable concepts. Through four data analysis tasks, we show that SAE embeddings are more cost-effective and reliable than LLMs and more controllable than dense embeddings. Using the large hypothesis space of SAEs, we can uncover insights such as (1) semantic differences between datasets and (2) unexpected concept correlations in documents. For instance, by comparing model responses, we find that Grok-4 clarifies ambiguities more often than nine other frontier models. Relative to LLMs, SAE embeddings uncover bigger differences at 2-8x lower cost and identify biases more reliably. Additionally, SAE embeddings are controllable: by filtering concepts, we can (3) cluster documents along axes of interest and (4) outperform dense embeddings on property-based retrieval. Using SAE embeddings, we study model behavior with two case studies: investigating how OpenAI model behavior has changed over time and finding \"trigger\" phrases learned by Tulu-3 (Lambert et al., 2024) from its training data. These results position SAEs as a versatile tool for unstructured data analysis and highlight the neglected importance of ...",
-    "published": "Dec 10",
-    "pdf_url": "https://arxiv.org/pdf/2512.10092v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.10092v1",
-    "queried_author": "Neel Nanda",
-    "matching_authors": [
-      "Neel Nanda"
-    ]
-  },
-  {
-    "title": "Closing the Train-Test Gap in World Models for Gradient-Based Planning",
-    "authors": [
-      "Arjun Parthasarathy",
-      "Nimit Kalra",
-      "Rohun Agrawal",
-      "Yann LeCun",
-      "Oumayma Bounou",
-      "Pavel Izmailov",
-      "Micah Goldblum"
-    ],
-    "summary": "World models paired with model predictive control (MPC) can be trained offline on large-scale datasets of expert trajectories and enable generalization to a wide range of planning tasks at inference time. Compared to traditional MPC procedures, which rely on slow search algorithms or on iteratively solving optimization problems exactly, gradient-based planning offers a computationally efficient alternative. However, the performance of gradient-based planning has thus far lagged behind that of other approaches. In this paper, we propose improved methods for training world models that enable efficient gradient-based planning. We begin with the observation that although a world model is trained on a next-state prediction objective, it is used at test-time to instead estimate a sequence of actions. The goal of our work is to close this train-test gap. To that end, we propose train-time data synthesis techniques that enable significantly improved gradient-based planning with existing world models. At test time, our approach outperforms or matches the classical gradient-free cross-entropy method (CEM) across a variety of object manipulation and navigation tasks in 10% of the time budget.",
-    "published": "Dec 10",
-    "pdf_url": "https://arxiv.org/pdf/2512.09929v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.09929v1",
-    "queried_author": "Micah Goldblum",
-    "matching_authors": [
-      "Micah Goldblum",
-      "Pavel Izmailov"
-    ]
-  },
-  {
-    "title": "Comparing AI Agents to Cybersecurity Professionals in Real-World Penetration Testing",
-    "authors": [
-      "Justin W. Lin",
-      "Eliot Krzysztof Jones",
-      "Donovan Julian Jasper",
-      "Ethan Jun-shen Ho",
-      "Anna Wu",
-      "Arnold Tianyi Yang",
-      "Neil Perry",
-      "Andy Zou",
-      "Matt Fredrikson",
-      "J. Zico Kolter",
-      "Percy Liang",
-      "Dan Boneh",
-      "Daniel E. Ho"
-    ],
-    "summary": "We present the first comprehensive evaluation of AI agents against human cybersecurity professionals in a live enterprise environment. We evaluate ten cybersecurity professionals alongside six existing AI agents and ARTEMIS, our new agent scaffold, on a large university network consisting of ~8,000 hosts across 12 subnets. ARTEMIS is a multi-agent framework featuring dynamic prompt generation, arbitrary sub-agents, and automatic vulnerability triaging. In our comparative study, ARTEMIS placed second overall, discovering 9 valid vulnerabilities with an 82% valid submission rate and outperforming 9 of 10 human participants. While existing scaffolds such as Codex and CyAgent underperformed relative to most human participants, ARTEMIS demonstrated technical sophistication and submission quality comparable to the strongest participants. We observe that AI agents offer advantages in systematic enumeration, parallel exploitation, and cost -- certain ARTEMIS variants cost $18/hour versus $60/hour for professional penetration testers. We also identify key capability gaps: AI agents exhibit higher false-positive rates and struggle with GUI-based tasks.",
-    "published": "Dec 10",
-    "pdf_url": "https://arxiv.org/pdf/2512.09882v2",
-    "arxiv_url": "http://arxiv.org/abs/2512.09882v2",
-    "queried_author": "J Zico Kolter",
-    "matching_authors": [
-      "J Zico Kolter",
-      "Percy Liang"
     ]
   }
 ]
