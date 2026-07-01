@@ -1,5 +1,22 @@
 [
   {
+    "title": "Introspective Coupling: Self-Explanation Training Tracks Behavioral Change Despite Fixed Supervision",
+    "authors": [
+      "Zifan Carl Guo",
+      "Laura Ruis",
+      "Jacob Andreas",
+      "Belinda Z. Li"
+    ],
+    "summary": "When does training language models (LMs) to generate explanations of their predictions yield faithful introspection, rather than superficial imitation? We study LMs trained to explain which features of their inputs influenced their behavior, using models' counterfactual behavior on modified inputs as supervision. Surprisingly, we find that LMs trained on fixed counterfactual explanations derived from earlier checkpoints of themselves, or even from behaviorally similar models in different families, frequently produce explanations more faithful to their own current behaviors than to those of their training targets. This \"introspective\" coupling between LM explanations and behaviors occurs when training explanations remain sufficiently correlated with current behaviors over the course of training, even as behaviors themselves shift. We also show that introspective coupling tracks behavior shifts: when explanation training is provided concurrently with other post-training objectives, explanations track those shifts without requiring updated supervision. This phenomenon appears in multiple tasks, including sycophancy and refusal, and is robust to label noise. Overall, our results show that even fixed datasets of counterfactual explanations can provide scalable and generalizable post-training signal for introspection.",
+    "published": "Jun 30",
+    "pdf_url": "https://arxiv.org/pdf/2606.32038v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.32038v1",
+    "queried_author": "Jacob Andreas",
+    "matching_authors": [
+      "Jacob Andreas"
+    ]
+  },
+  {
     "title": "FLARE-AI: Flaw Reporting for AI",
     "authors": [
       "Shayne Longpre",
@@ -13611,29 +13628,6 @@
     "published": "Dec 11",
     "pdf_url": "https://arxiv.org/pdf/2512.10940v2",
     "arxiv_url": "http://arxiv.org/abs/2512.10940v2",
-    "queried_author": "Ranjay Krishna",
-    "matching_authors": [
-      "Ranjay Krishna"
-    ]
-  },
-  {
-    "title": "Agile Deliberation: Concept Deliberation for Subjective Visual Classification",
-    "authors": [
-      "Leijie Wang",
-      "Otilia Stretcu",
-      "Wei Qiao",
-      "Thomas Denby",
-      "Krishnamurthy Viswanathan",
-      "Enming Luo",
-      "Chun-Ta Lu",
-      "Tushar Dogra",
-      "Ranjay Krishna",
-      "Ariel Fuxman"
-    ],
-    "summary": "From content moderation to content curation, applications requiring vision classifiers for visual concepts are rapidly expanding. Existing human-in-the-loop approaches typically assume users begin with a clear, stable concept understanding to be able to provide high-quality supervision. In reality, users often start with a vague idea and must iteratively refine it through \"concept deliberation\", a practice we uncovered through structured interviews with content moderation experts. We operationalize the common strategies in deliberation used by real content moderators into a human-in-the-loop framework called \"Agile Deliberation\" that explicitly supports evolving and subjective concepts. The system supports users in defining the concept for themselves by exposing them to borderline cases. The system does this with two deliberation stages: (1) concept scoping, which decomposes the initial concept into a structured hierarchy of sub-concepts, and (2) concept iteration, which surfaces semantically borderline examples for user reflection and feedback to iteratively align an image classifier with the user's evolving intent. Since concept deliberation is inherently subjective and interactive, we painstakingly evaluate the framework through 18 user sessions, each 1.5h long, rather than standard benchmarking datasets. We find that Agile Deliberation achieves 7.5% higher F1 scores than automated decomposition baselines and more than 3% higher than manual deliberation, while participants reported clearer conceptual understanding and lower cognitive effort.",
-    "published": "Dec 11",
-    "pdf_url": "https://arxiv.org/pdf/2512.10821v2",
-    "arxiv_url": "http://arxiv.org/abs/2512.10821v2",
     "queried_author": "Ranjay Krishna",
     "matching_authors": [
       "Ranjay Krishna"
