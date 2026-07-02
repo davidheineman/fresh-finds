@@ -1,5 +1,39 @@
 [
   {
+    "title": "The State-Prediction Separation Hypothesis",
+    "authors": [
+      "Giovanni Monea",
+      "Nathan Godey",
+      "Kiant\u00e9 Brantley",
+      "Yoav Artzi"
+    ],
+    "summary": "Transformers use the same forward computation stream to both predict the next token and store useful state for future token predictions. We formulate the \\emph{state-prediction separation hypothesis}: disentangling the two roles yields better language modeling performance. We design a Transformer variant that uses two computation streams to separate the two functions, and conduct pretraining experiments across various scales. Our experiments show that state-prediction separation consistently offers better data and compute efficiencies, improving validation loss and outperforming standard Transformers by 2--3 percentage points on average on downstream tasks. We also conduct extensive empirical analysis that rules out potential confounders and demonstrates the fundamental difference in the gradients our design entails.",
+    "published": "Jul 01",
+    "pdf_url": "https://arxiv.org/pdf/2607.01218v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.01218v1",
+    "queried_author": "Yoav Artzi",
+    "matching_authors": [
+      "Yoav Artzi"
+    ]
+  },
+  {
+    "title": "Right in the Right Way: LM Training with Verifiable Rewards and Human Demonstrations",
+    "authors": [
+      "Mehul Damani",
+      "Isha Puri",
+      "Idan Shenfeld",
+      "Jacob Andreas"
+    ],
+    "summary": "RL with verifiable rewards (RLVR) has emerged as a powerful paradigm for training LMs on tasks with well-defined success metrics, such as code generation and mathematical reasoning. However, current RLVR methods optimize only what can be objectively scored, often neglecting subjective, non-verifiable aspects of human-like outputs, such as style and structure. This limitation leads to well-documented failure modes such as diversity collapse, unnatural-sounding responses, and reward hacking. We propose an adversarial generator-discriminator framework that augments verifiable rewards with a learned signal from human demonstrations. A generator model is trained using RL to maximize both task accuracy and an adversarial reward derived from a discriminator. The discriminator, trained alongside the generator policy, learns to distinguish human-written outputs from model-generated ones. The discriminator serves as a learned proxy for the human output distribution, providing feedback on aspects of generation that are difficult to formalize as scalar rewards. Across diverse domains, including bug fixing and open-ended generation, our approach consistently improves non-verifiable properties while preserving the accuracy gains of RLVR. In bug fixing, our method produces solutions with significantly lower edit distance compared to RLVR baselines while matching end performance. In story generation, our method significantly improves win rate while producing stories that are diverse and more human-like. And in a simple reward hacking benchmark, our method nearly eliminates model misbehavio...",
+    "published": "Jul 01",
+    "pdf_url": "https://arxiv.org/pdf/2607.01181v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.01181v1",
+    "queried_author": "Jacob Andreas",
+    "matching_authors": [
+      "Jacob Andreas"
+    ]
+  },
+  {
     "title": "Introspective Coupling: Self-Explanation Training Tracks Behavioral Change Despite Fixed Supervision",
     "authors": [
       "Zifan Carl Guo",
@@ -13588,49 +13622,6 @@
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig"
-    ]
-  },
-  {
-    "title": "Mull-Tokens: Modality-Agnostic Latent Thinking",
-    "authors": [
-      "Arijit Ray",
-      "Ahmed Abdelkader",
-      "Chengzhi Mao",
-      "Bryan A. Plummer",
-      "Kate Saenko",
-      "Ranjay Krishna",
-      "Leonidas Guibas",
-      "Wen-Sheng Chu"
-    ],
-    "summary": "Reasoning goes beyond language; the real world requires reasoning about space, time, affordances, and much more that words alone cannot convey. Existing multimodal models exploring the potential of reasoning with images are brittle and do not scale. They rely on calling specialist tools, costly generation of images, or handcrafted reasoning data to switch between text and image thoughts. Instead, we offer a simpler alternative -- Mull-Tokens -- modality-agnostic latent tokens pre-trained to hold intermediate information in either image or text modalities to let the model think free-form towards the correct answer. We investigate best practices to train Mull-Tokens inspired by latent reasoning frameworks. We first train Mull-Tokens using supervision from interleaved text-image traces, and then fine-tune without any supervision by only using the final answers. Across four challenging spatial reasoning benchmarks involving tasks such as solving puzzles and taking different perspectives, we demonstrate that Mull-Tokens improve upon several baselines utilizing text-only reasoning or interleaved image-text reasoning, achieving a +3% average improvement and up to +16% on a puzzle solving reasoning-heavy split compared to our strongest baseline. Adding to conversations around challenges in grounding textual and visual reasoning, Mull-Tokens offers a simple solution to abstractly think in multiple modalities.",
-    "published": "Dec 11",
-    "pdf_url": "https://arxiv.org/pdf/2512.10941v2",
-    "arxiv_url": "http://arxiv.org/abs/2512.10941v2",
-    "queried_author": "Ranjay Krishna",
-    "matching_authors": [
-      "Ranjay Krishna"
-    ]
-  },
-  {
-    "title": "OmniView: An All-Seeing Diffusion Model for 3D and 4D View Synthesis",
-    "authors": [
-      "Xiang Fan",
-      "Sharath Girish",
-      "Vivek Ramanujan",
-      "Chaoyang Wang",
-      "Ashkan Mirzaei",
-      "Petr Sushko",
-      "Aliaksandr Siarohin",
-      "Sergey Tulyakov",
-      "Ranjay Krishna"
-    ],
-    "summary": "Prior approaches injecting camera control into diffusion models have focused on specific subsets of 4D consistency tasks: novel view synthesis, text-to-video with camera control, image-to-video, amongst others. Therefore, these fragmented approaches are trained on disjoint slices of available 3D/4D data. We introduce OmniView, a unified framework that generalizes across a wide range of 4D consistency tasks. Our method separately represents space, time, and view conditions, enabling flexible combinations of these inputs. For example, OmniView can synthesize novel views from static, dynamic, and multiview inputs, extrapolate trajectories forward and backward in time, and create videos from text or image prompts with full camera control. OmniView is competitive with task-specific models across diverse benchmarks and metrics, improving image quality scores among camera-conditioned diffusion models by up to 33\\% in multiview NVS LLFF dataset, 60\\% in dynamic NVS Neural 3D Video benchmark, 20\\% in static camera control on RE-10K, and reducing camera trajectory errors by 4x in text-conditioned video generation. With strong generalizability in one model, OmniView demonstrates the feasibility of a generalist 4D video model. Project page is available at https://snap-research.github.io/OmniView/",
-    "published": "Dec 11",
-    "pdf_url": "https://arxiv.org/pdf/2512.10940v2",
-    "arxiv_url": "http://arxiv.org/abs/2512.10940v2",
-    "queried_author": "Ranjay Krishna",
-    "matching_authors": [
-      "Ranjay Krishna"
     ]
   }
 ]
