@@ -1,5 +1,121 @@
 [
   {
+    "title": "Visually Grounded Self-Reflection for Vision-Language Models via Reinforcement Learning",
+    "authors": [
+      "Liyan Tang",
+      "Fangcong Yin",
+      "Greg Durrett"
+    ],
+    "summary": "Large vision-language models can reason over multimodal inputs by generating textual chains of thought (CoT). A key capability exhibited in CoT reasoning is self-reflection: revisiting earlier decisions and correcting previous errors. However, existing LVLMs often fail to properly attend to visual inputs during reflection, limiting their ability to translate feedback into grounded corrections, especially for out-of-distribution images. To address this issue, we propose a novel reinforcement learning training framework VRRL, with two components explicitly designed to elicit visually grounded self-reflection. First, we randomly mask trajectory prefixes during training to emphasize recovery from incorrect intermediate predictions rather than making early mistakes. Second, we introduce buffered roll-ins from an experience replay buffer to expose the model to diverse failure states that it must learn to correct. We evaluate our approach on visual grounding tasks involving tables and charts, as well as spatial navigation benchmarks. While off-the-shelf and conventionally fine-tuned models degrade substantially under distribution shift, our method substantially improves average out-of-distribution accuracy over standard RL and reflection-oriented fine-tuning baselines by using self-reflection effectively.",
+    "published": "Jul 02",
+    "pdf_url": "https://arxiv.org/pdf/2607.02490v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.02490v1",
+    "queried_author": "Greg Durrett",
+    "matching_authors": [
+      "Greg Durrett"
+    ]
+  },
+  {
+    "title": "Will Scaling Improve Social Simulation with LLMs?",
+    "authors": [
+      "Caleb Ziems",
+      "William Held",
+      "Su Doga Karaca",
+      "David Grusky",
+      "Tatsunori Hashimoto",
+      "Diyi Yang"
+    ],
+    "summary": "Large Language Model (LLM) social simulations are a promising research method, but they are not yet faithful enough to be adopted widely. In this work, we investigate whether the current scaling paradigm in language modeling is likely to close these gaps, or whether simulation fidelity is orthogonal to general capabilities and therefore deserving of more research attention. We use scaling laws to study the relationship between LLMs' compute scale, general capability benchmarks, and the fidelity of social simulation in three representative sub-domains: opinion modeling, behavioral simulation, and longitudinal forecasting. Surprisingly, we discover strong compute scaling in all three settings, using a suite of 85 transformer LLMs with the Qwen3 architecture pre-trained on the DCLM web text corpus under fixed-compute budgets from $10^{18}$ to $10^{20}$ FLOPs. Then we evaluate 35 larger and more capable open-weight models up to 70B parameters, allowing us to predict downstream accuracy from loss. This reveals that the majority of behavioral and opinion simulation tasks will rapidly improve with scale, particularly when they involve populations that are well-represented in English web corpora. Longitudinal forecasting and underrepresented opinions scale more slowly, especially when they are less correlated with general knowledge and reasoning benchmarks like MMLU. In behavior simulation, scaling fails to improve model calibration with human cognitive biases like risk aversion, as well as human heuristics like learning correlated rewards from related tasks. On these tasks, even f...",
+    "published": "Jul 02",
+    "pdf_url": "https://arxiv.org/pdf/2607.02464v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.02464v1",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang",
+      "Tatsunori Hashimoto",
+      "William Held"
+    ]
+  },
+  {
+    "title": "PACE: A Proxy for Agentic Capability Evaluation",
+    "authors": [
+      "Yueqi Song",
+      "Lintang Sutawika",
+      "Jiarui Liu",
+      "Lindia Tjuatja",
+      "Jiayi Geng",
+      "Yunze Xiao",
+      "Daniel Lee",
+      "Aditya Bharat Soni",
+      "Vincent Lo",
+      "Xiang Yue",
+      "Graham Neubig"
+    ],
+    "summary": "Evaluating LLM agents on benchmarks like SWE-Bench and GAIA can be expensive, time-consuming, and requires complex infrastructure. A single evaluation can cost thousands of dollars and take days to complete. In contrast, non-agentic LLM benchmarks that test individual capabilities (e.g., reasoning, code generation) are fast and cheap to run. In this paper, we investigate whether performance on expensive agentic benchmarks can be accurately predicted by the performance on a small, carefully selected subset of atomic evaluation instances. We introduce PACE, a framework that constructs proxy benchmarks by selecting instances from existing non-agentic evaluations whose aggregate scores most reliably predict model performances on agentic benchmarks. Given a pool of candidate instances spanning atomic capabilities, PACE fits a regression that maps a model's scores on a compact subset of source instances to its score on the target agentic benchmark. The subset itself is curated by combining two complementary instance-selection strategies, target-relevance local selection and globally informative global selection. We apply PACE to the 4 target agentic benchmarks in this paper, which yields PACE-Bench, the concrete proxy benchmark that we evaluate in the paper. Experiments across 14 models, 4 agentic benchmarks, and 19 non-agentic benchmarks show that PACE-Bench predicts agentic scores with leave-one-out cross-validation (LOOCV) mean absolute error (MAE) under 4%, Spearman correlation above 0.80, and pairwise model-ranking accuracy around 85%, all at much less than 1% of the full ag...",
+    "published": "Jul 02",
+    "pdf_url": "https://arxiv.org/pdf/2607.02032v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.02032v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
+    "title": "Decomposer: Learning to Decompile Symbolic Music to Programs",
+    "authors": [
+      "Yewon Kim",
+      "Apurva Gandhi",
+      "David Chung",
+      "Graham Neubig",
+      "Chris Donahue"
+    ],
+    "summary": "Musical performance involves executing a set of high-level musical instructions, yet recovering those instructions from the performance is a challenging inverse problem. We present Decomposer, a post-training framework for symbolic music decompilation: the task of recovering executable, editable music programs from symbolic music. We instantiate the task as MIDI-to-Strudel decompilation, where the model takes symbolic MIDI as input and produces a program in Strudel, a music programming language, that reconstructs the input when executed. The task poses two challenges: Strudel is a low-resource language with little naturally paired MIDI-code data, and optimizing faithful reconstruction of MIDI alone can collapse to unreadable note-by-note transliteration. We address these challenges in two stages. First, we construct Strudel-Synth, a synthetic corpus of paired Strudel programs and rendered MIDI, and use it for supervised fine-tuning. Second, we refine the model with reinforcement learning on unpaired MIDI, optimizing rewards for both MIDI reconstruction faithfulness and code readability. Our evaluation across synthetic and real-world MIDI benchmarks shows that Decomposer achieves substantially higher MIDI reconstruction faithfulness than closed-source LLMs while producing more readable and diverse code than the heuristic converter.",
+    "published": "Jul 02",
+    "pdf_url": "https://arxiv.org/pdf/2607.01849v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.01849v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
+    "title": "Gaming Consensus: Coordinated Manipulation in Crowdsourced Fact-Checking",
+    "authors": [
+      "Nikil Roashan Selvam",
+      "Jay Baxter",
+      "Sophie Hilgard",
+      "Brad Miller",
+      "Keith Coleman",
+      "Ellen Vitercik",
+      "Sanmi Koyejo"
+    ],
+    "summary": "Crowdsourced fact-checking systems have been adopted by major social media companies such as X, Meta, TikTok and Google with the aim of combating misleading information at scale without relying on centralized editorial control. These systems have been developed around a common underlying concept: a bridging mechanism that identifies notes flagging misleading information when they receive support from people with different perspectives rather than simple majority support. To our knowledge the only publicly disclosed bridging algorithms deployed for fact-checking are based on matrix factorization, as deployed by both X and Meta, augmented with additional components addressing abuse, targeted manipulation, and contributor brigades. This work examines the core matrix factorization portion of these systems, presenting theoretical and empirical evaluations of the degree to which coordinated users could vote strategically by leveraging the latent representations to fabricate the appearance of synthetic consensus within the bridging mechanism. Using historic production data, we find that up to 10.7% of lower quality notes could be manipulated above consensus thresholds using less than 10 ratings. We complement these findings with a theoretical analysis, revealing counterintuitively that rating a note as \"Not Helpful\" can increase its helpfulness score, as well as a cost model quantifying manipulation effort. We have developed and deployed mitigations within X's Community Notes algorithm to address synthetic consensus.",
+    "published": "Jul 02",
+    "pdf_url": "https://arxiv.org/pdf/2607.01824v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.01824v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "Can Language Models Actually Retrieve In-Context? Drowning in Documents at Million Token Scale",
+    "authors": [
+      "Siddharth Gollapudi",
+      "Nilesh Gupta",
+      "Prasann Singhal",
+      "Sewon Min"
+    ],
+    "summary": "Language models (LMs) raise an intriguing alternative to vector-based retrieval: conditioning on an in-context corpus and directly generating a relevant answer. However, prior work has largely focused on proprietary systems or the smaller-scale reranking task, leaving corpus-scale in-context retrieval largely unexplored. In this work, we present the first systematic study of in-context retrieval on two scales practical retrievers demand: million-token corpora and length-generalization far beyond training-time sizes. We first introduce BlockSearch, a 0.6B LM retriever whose architectural and training modifications improve over prior LM baselines and length-generalize up to 10 times beyond its training regime. Nevertheless, retrieval still collapses under more extreme extrapolation. We trace this failure to an attention dilution effect: as the corpus grows, irrelevant documents dominate the softmax denominator, reducing the normalized mass on the gold document even when its pre-softmax score stays high. Motivated by this analysis, we introduce length-aware adjustments to the attention softmax and document-level sparse attention. With these modifications, at the million-token scale, our model matches dense retrieval on widely studied benchmarks (e.g, MS MARCO and NQ), while outperforming the concurrent model MSA despite being 7 times smaller. Furthermore, it significantly outperforms dense retrieval on tasks requiring entirely different notions of similarity, such as LIMIT, achieving a 3 times higher score. Together, our results position in-context retrieval a promising altern...",
+    "published": "Jul 01",
+    "pdf_url": "https://arxiv.org/pdf/2607.01538v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.01538v1",
+    "queried_author": "Sewon Min",
+    "matching_authors": [
+      "Sewon Min"
+    ]
+  },
+  {
     "title": "The State-Prediction Separation Hypothesis",
     "authors": [
       "Giovanni Monea",
@@ -1878,6 +1994,27 @@
     "matching_authors": [
       "Luke Zettlemoyer",
       "Yejin Choi"
+    ]
+  },
+  {
+    "title": "AI Assistance for Human Review of Default Judgments",
+    "authors": [
+      "Theodora Worledge",
+      "Othman Bensouda Koraichi",
+      "Daniel Bernal",
+      "Aviv Caspi",
+      "Tatsunori Hashimoto",
+      "Carlos Guestrin",
+      "David Freeman Engstrom"
+    ],
+    "summary": "Overwhelmed courts in the United States review millions of default judgments each year. Unfortunately, such manual reviews are time-consuming and prone to error. In an audit of 188 debt collection cases granted default judgment by the Superior Court of Los Angeles, we find that 4% contained major defects that should have entirely prevented default judgment, 10% contained inconsistencies requiring reduced judgments, and 32% contained errors requiring amendment prior to judgment. To support courthouses in default judgment review, we collaborated with courthouse attorneys and judges in designing a Default Assistant. The Default Assistant employs large language models to evaluate a case with respect to predetermined legal requirements and provide cited recommendations for an expert user's review. We equip users to verify these recommendations by grounding the assistant's explanations in cited quotes and tables from the original case filings. We conduct a controlled study with 66 law students that conservatively simulates court review, with more time and resources than court staff. We nevertheless find users aided by the Default Assistant were 6.0% more accurate on the average requirement than unaided reviewers (p < 1.0e-4). Simultaneously, users were 25.9% faster in reviewing the average requirement than unaided reviewers (p < 2.5e-10). Statutory requirements demanding extensive document search realized the largest gains, with error reductions and time savings from AI assistance up to 62% and 34%, respectively, relative to unassisted user performance and with differences statis...",
+    "published": "Jun 04",
+    "pdf_url": "https://arxiv.org/pdf/2607.01256v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.01256v1",
+    "queried_author": "Carlos Guestrin",
+    "matching_authors": [
+      "Carlos Guestrin",
+      "Tatsunori Hashimoto"
     ]
   },
   {
@@ -5270,10 +5407,10 @@
       "Lucas Torroba-Hennigen",
       "Yoon Kim"
     ],
-    "summary": "LLM architecture research generally aims to maximize model quality subject to fixed compute/latency budgets. However, many applications of interest such as edge and on-device deployment are further constrained by the model's memory footprint, thus motivating parameter-efficient architectures for language modeling. This paper describes a simple architecture that improves the parameter-efficiency of LLMs. Our architecture makes use of looped Transformers as a core primitive, which reuse Transformer layers across depth and are thus more parameter-efficient than ordinary (depth-matched) Transformers. We organize the looped Transformer into three blocks--begin, middle, and end blocks--where each block itself consists of multiple Transformer layers, and only the middle block is applied recurrently across depth. We augment the looped middle block with hyper-connections (Xie et al., 2026), which expand the residual stream into matrix-valued residual streams. Hyper-connections are applied only after each loop, and therefore add minimal new parameters and compute cost. Across various model scales, we find that our Hyper-Connected Looped Transformer (Hyperloop Transformer) is able to outperform depth-matched Transformer and mHC Transformer baselines despite using approximately 50% fewer parameters. The outperformance persists through post-training weight quantization, thus positioning Hyperloop Transformers as an attractive architecture for memory-efficient language modeling.",
+    "summary": "LLM architecture research generally aims to maximize model quality subject to fixed compute/latency budgets. However, many applications of interest such as edge and on-device deployment are further constrained by the model's memory footprint, thus motivating parameter-efficient architectures for language modeling. This paper describes a simple architecture that improves the parameter-efficiency of LLMs. Our architecture makes use of looped Transformers as a core primitive, which reuse Transformer layers across depth and are thus more parameter-efficient than ordinary (depth-matched) Transformers. We organize the looped Transformer into three blocks--begin, middle, and end blocks--where each block itself consists of multiple Transformer layers, and only the middle block is applied recurrently across depth. We augment the looped middle block with hyper-connections (Xie et al., 2026), which expand the residual stream into matrix-valued residual streams. Hyper-connections are applied only after each loop, and therefore add minimal new parameters and compute cost. Across various model scales, we find that our Hyper-Connected Looped Transformer (Hyperloop Transformer) is able to perform well compared to depth-matched Transformer and mHC Transformer baselines despite using approximately 50% fewer parameters. This performance persists through post-training weight quantization, thus positioning Hyperloop Transformers as an attractive architecture for memory-efficient language modeling.",
     "published": "Apr 23",
-    "pdf_url": "https://arxiv.org/pdf/2604.21254v2",
-    "arxiv_url": "http://arxiv.org/abs/2604.21254v2",
+    "pdf_url": "https://arxiv.org/pdf/2604.21254v3",
+    "arxiv_url": "http://arxiv.org/abs/2604.21254v3",
     "queried_author": "Yoon Kim",
     "matching_authors": [
       "Yoon Kim"
@@ -13359,269 +13496,6 @@
     "queried_author": "Maarten Sap",
     "matching_authors": [
       "Maarten Sap"
-    ]
-  },
-  {
-    "title": "FrontierCS: Evolving Challenges for Evolving Intelligence",
-    "authors": [
-      "Qiuyang Mang",
-      "Wenhao Chai",
-      "Zhifei Li",
-      "Huanzhi Mao",
-      "Shang Zhou",
-      "Alexander Du",
-      "Hanchen Li",
-      "Shu Liu",
-      "Edwin Chen",
-      "Yichuan Wang",
-      "Xieting Chu",
-      "Zerui Cheng",
-      "Yuan Xu",
-      "Tian Xia",
-      "Zirui Wang",
-      "Tianneng Shi",
-      "Jianzhu Yao",
-      "Yilong Zhao",
-      "Qizheng Zhang",
-      "Charlie Ruan",
-      "Zeyu Shen",
-      "Kaiyuan Liu",
-      "Runyuan He",
-      "Dong Xing",
-      "Zerui Li",
-      "Zirong Zeng",
-      "Yige Jiang",
-      "Lufeng Cheng",
-      "Ziyi Zhao",
-      "Youran Sun",
-      "Wesley Zheng",
-      "Meiyuwang Zhang",
-      "Ruyi Ji",
-      "Xuechang Tu",
-      "Zihan Zheng",
-      "Zexing Chen",
-      "Kangyang Zhou",
-      "Zhaozi Wang",
-      "Jingbang Chen",
-      "Aleksandra Korolova",
-      "Peter Henderson",
-      "Pramod Viswanath",
-      "Vijay Ganesh",
-      "Saining Xie",
-      "Zhuang Liu",
-      "Dawn Song",
-      "Sewon Min",
-      "Ion Stoica",
-      "Joseph E. Gonzalez",
-      "Jingbo Shang",
-      "Alvin Cheung"
-    ],
-    "summary": "We introduce FrontierCS, a benchmark of 156 open-ended problems across diverse areas of computer science, designed and reviewed by experts, including CS PhDs and top-tier competitive programming participants and problem setters. Unlike existing benchmarks that focus on tasks with known optimal solutions, FrontierCS targets problems where the optimal solution is unknown, but the quality of a solution can be objectively evaluated. Models solve these tasks by implementing executable programs rather than outputting a direct answer. FrontierCS includes algorithmic problems, which are often NP-hard variants of competitive programming problems with objective partial scoring, and research problems with the same property. For each problem we provide an expert reference solution and an automatic evaluator. Combining open-ended design, measurable progress, and expert curation, FrontierCS provides a benchmark at the frontier of computer-science difficulty. Empirically, we find that frontier reasoning models still lag far behind human experts on both the algorithmic and research tracks, that increasing reasoning budgets alone does not close this gap, and that models often over-optimize for generating merely workable code instead of discovering high-quality algorithms and system designs.",
-    "published": "Dec 17",
-    "pdf_url": "https://arxiv.org/pdf/2512.15699v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.15699v1",
-    "queried_author": "Peter Henderson",
-    "matching_authors": [
-      "Peter Henderson",
-      "Sewon Min"
-    ]
-  },
-  {
-    "title": "Bolmo: Byteifying the Next Generation of Language Models",
-    "authors": [
-      "Benjamin Minixhofer",
-      "Tyler Murray",
-      "Tomasz Limisiewicz",
-      "Anna Korhonen",
-      "Luke Zettlemoyer",
-      "Noah A. Smith",
-      "Edoardo M. Ponti",
-      "Luca Soldaini",
-      "Valentin Hofmann"
-    ],
-    "summary": "Recent advances in generative AI have been largely driven by large language models (LLMs), deep neural networks that operate over discrete units called tokens. To represent text, the vast majority of LLMs use words or word fragments as the tokens, known as subword tokenization. Subword tokenization obscures fine-grained information, which is problematic, especially for scientific data - such as computer code or biological sequences - where meaning depends on the individual characters. Models that instead operate directly on the byte encoding of text avoid these limitations, but until now they have lagged behind subword-based models in performance. Here we introduce Bolmo, a family of fully open byte-level LLMs that approach the capabilities of subword-based systems. Using a two-stage conversion procedure, we transform existing subword-based models into byte-level models with minimal additional training. The resulting models outperform prior byte-level approaches and excel on character-level reasoning tasks, while remaining competitive across standard benchmarks. By efficiently processing byte-level information, these models achieve practical inference speeds and can be adapted at low cost using the existing ecosystem around the source LLM. Our results remove a long-standing performance barrier to end-to-end byte-level language modeling, demonstrating that models operating on raw text encodings can scale competitively while offering advantages in domains requiring fine-grained textual understanding.",
-    "published": "Dec 17",
-    "pdf_url": "https://arxiv.org/pdf/2512.15586v2",
-    "arxiv_url": "http://arxiv.org/abs/2512.15586v2",
-    "queried_author": "Luca Soldaini",
-    "matching_authors": [
-      "Luca Soldaini",
-      "Luke Zettlemoyer",
-      "Noah A. Smith",
-      "Valentin Hofmann"
-    ]
-  },
-  {
-    "title": "DS SERVE: A Framework for Efficient and Scalable Neural Retrieval",
-    "authors": [
-      "Jinjian Liu",
-      "Yichuan Wang",
-      "Xinxi Lyu",
-      "Rulin Shao",
-      "Joseph E. Gonzalez",
-      "Matei Zaharia",
-      "Sewon Min"
-    ],
-    "summary": "We present DS-Serve, a framework that transforms large-scale text datasets, comprising half a trillion tokens, into a high-performance neural retrieval system. DS-Serve offers both a web interface and API endpoints, achieving low latency with modest memory overhead on a single node. The framework also supports inference-time trade-offs between latency, accuracy, and result diversity. We anticipate that DS-Serve will be broadly useful for a range of applications, including large-scale retrieval-augmented generation (RAG), training data attribution, training search agents, and beyond.",
-    "published": "Dec 17",
-    "pdf_url": "https://arxiv.org/pdf/2602.22224v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.22224v1",
-    "queried_author": "Sewon Min",
-    "matching_authors": [
-      "Sewon Min"
-    ]
-  },
-  {
-    "title": "SonicMoE: Accelerating MoE with IO and Tile-aware Optimizations",
-    "authors": [
-      "Wentao Guo",
-      "Mayank Mishra",
-      "Xinle Cheng",
-      "Ion Stoica",
-      "Tri Dao"
-    ],
-    "summary": "Mixture of Experts (MoE) models have emerged as the de facto architecture for scaling up language models without significantly increasing the computational cost. Recent MoE models demonstrate a clear trend towards high expert granularity (smaller expert intermediate dimension) and higher sparsity (constant number of activated experts with a higher number of total experts), which improve model quality per FLOP. However, fine-grained MoEs suffer from increased activation memory footprint and reduced hardware efficiency due to higher IO costs, while sparser MoEs suffer from wasted computations due to padding in Grouped GEMM kernels. In response, we propose a memory-efficient algorithm to compute the forward and backward passes of MoEs with minimal activation caching for the backward pass. We also design GPU kernels that overlap memory IO with computation, benefiting all MoE architectures. Finally, we propose a novel \"token rounding\" method that minimizes the wasted compute due to padding in Grouped GEMM kernels. As a result, our method SonicMoE reduces activation memory by 45% and achieves a 1.86x compute throughput improvement on Hopper GPUs compared to ScatterMoE's BF16 MoE kernel for a fine-grained 7B MoE. Concretely, SonicMoE on 64 H100s achieves a training throughput of 213 billion tokens per day, comparable to ScatterMoE's 225 billion tokens per day on 96 H100s for a 7B MoE model training with FSDP-2 using the lm-engine codebase. On Blackwell GPUs, SonicMoE also achieves a 25% and 15% relative speedup on the forward and backward pass respectively compared to a highly opt...",
-    "published": "Dec 16",
-    "pdf_url": "https://arxiv.org/pdf/2512.14080v2",
-    "arxiv_url": "http://arxiv.org/abs/2512.14080v2",
-    "queried_author": "Tri Dao",
-    "matching_authors": [
-      "Tri Dao"
-    ]
-  },
-  {
-    "title": "Olmo 3",
-    "authors": [
-      "Team Olmo",
-      " :",
-      "Allyson Ettinger",
-      "Amanda Bertsch",
-      "Bailey Kuehl",
-      "David Graham",
-      "David Heineman",
-      "Dirk Groeneveld",
-      "Faeze Brahman",
-      "Finbarr Timbers",
-      "Hamish Ivison",
-      "Jacob Morrison",
-      "Jake Poznanski",
-      "Kyle Lo",
-      "Luca Soldaini",
-      "Matt Jordan",
-      "Mayee Chen",
-      "Michael Noukhovitch",
-      "Nathan Lambert",
-      "Pete Walsh",
-      "Pradeep Dasigi",
-      "Robert Berry",
-      "Saumya Malik",
-      "Saurabh Shah",
-      "Scott Geng",
-      "Shane Arora",
-      "Shashank Gupta",
-      "Taira Anderson",
-      "Teng Xiao",
-      "Tyler Murray",
-      "Tyler Romero",
-      "Victoria Graf",
-      "Akari Asai",
-      "Akshita Bhagia",
-      "Alexander Wettig",
-      "Alisa Liu",
-      "Aman Rangapur",
-      "Chloe Anastasiades",
-      "Costa Huang",
-      "Dustin Schwenk",
-      "Harsh Trivedi",
-      "Ian Magnusson",
-      "Jaron Lochner",
-      "Jiacheng Liu",
-      "Lester James V. Miranda",
-      "Maarten Sap",
-      "Malia Morgan",
-      "Michael Schmitz",
-      "Michal Guerquin",
-      "Michael Wilson",
-      "Regan Huff",
-      "Ronan Le Bras",
-      "Rui Xin",
-      "Rulin Shao",
-      "Sam Skjonsberg",
-      "Shannon Zejiang Shen",
-      "Shuyue Stella Li",
-      "Tucker Wilde",
-      "Valentina Pyatkin",
-      "Will Merrill",
-      "Yapei Chang",
-      "Yuling Gu",
-      "Zhiyuan Zeng",
-      "Ashish Sabharwal",
-      "Luke Zettlemoyer",
-      "Pang Wei Koh",
-      "Ali Farhadi",
-      "Noah A. Smith",
-      "Hannaneh Hajishirzi"
-    ],
-    "summary": "We introduce Olmo 3, a family of state-of-the-art, fully-open language models at the 7B and 32B parameter scales. Olmo 3 model construction targets long-context reasoning, function calling, coding, instruction following, general chat, and knowledge recall. This release includes the entire model flow, i.e., the full lifecycle of the family of models, including every stage, checkpoint, data point, and dependency used to build it. Our flagship model, Olmo 3 Think 32B, is the strongest fully-open thinking model released to-date.",
-    "published": "Dec 15",
-    "pdf_url": "https://arxiv.org/pdf/2512.13961v2",
-    "arxiv_url": "http://arxiv.org/abs/2512.13961v2",
-    "queried_author": "Akari Asai",
-    "matching_authors": [
-      "Akari Asai",
-      "Alexander Wettig",
-      "Ali Farhadi",
-      "Alisa Liu",
-      "Hamish Ivison",
-      "Hannaneh Hajishirzi",
-      "Ian Magnusson",
-      "Kyle Lo",
-      "Luca Soldaini",
-      "Luke Zettlemoyer",
-      "Maarten Sap",
-      "Noah A. Smith",
-      "Pang Wei Koh"
-    ]
-  },
-  {
-    "title": "Nemotron-Cascade: Scaling Cascaded Reinforcement Learning for General-Purpose Reasoning Models",
-    "authors": [
-      "Boxin Wang",
-      "Chankyu Lee",
-      "Nayeon Lee",
-      "Sheng-Chieh Lin",
-      "Wenliang Dai",
-      "Yang Chen",
-      "Yangyi Chen",
-      "Zhuolin Yang",
-      "Zihan Liu",
-      "Mohammad Shoeybi",
-      "Bryan Catanzaro",
-      "Wei Ping"
-    ],
-    "summary": "Building general-purpose reasoning models with reinforcement learning (RL) entails substantial cross-domain heterogeneity, including large variation in inference-time response lengths and verification latency. Such variability complicates the RL infrastructure, slows training, and makes training curriculum (e.g., response length extension) and hyperparameter selection challenging. In this work, we propose cascaded domain-wise reinforcement learning (Cascade RL) to develop Nemotron-Cascade, capable of operating in both instruct and deep thinking modes, without any performance gap relative to a thinking-only counterpart. Departing from conventional approaches that blend heterogeneous prompts from different domains, Cascade RL orchestrates sequential, domain-wise RL, reducing engineering complexity and delivering state-of-the-art performance across a wide range of benchmarks. Notably, RLHF for alignment, when used as a pre-step, boosts the model's reasoning ability far beyond mere preference optimization, and subsequent domain-wise RLVR stages rarely degrade the benchmark performance attained in earlier domains and may even improve it (see an illustration in Figure 1). Our 14B model, after RL, outperforms its SFT teacher, DeepSeek-R1-0528, on LiveCodeBench v5/v6/Pro and achieves silver-medal performance in the 2025 International Olympiad in Informatics (IOI). We transparently share our training and data recipes.",
-    "published": "Dec 15",
-    "pdf_url": "https://arxiv.org/pdf/2512.13607v2",
-    "arxiv_url": "http://arxiv.org/abs/2512.13607v2",
-    "queried_author": "Mohammad Shoeybi",
-    "matching_authors": [
-      "Mohammad Shoeybi"
-    ]
-  },
-  {
-    "title": "Training Versatile Coding Agents in Synthetic Environments",
-    "authors": [
-      "Yiqi Zhu",
-      "Apurva Gandhi",
-      "Graham Neubig"
-    ],
-    "summary": "Prior works on training software engineering agents have explored utilizing existing resources such as issues on GitHub repositories to construct software engineering tasks and corresponding test suites. These approaches face two key limitations: (1) their reliance on pre-existing GitHub repositories offers limited flexibility, and (2) their primary focus on issue resolution tasks restricts their applicability to the much wider variety of tasks a software engineer must handle. To overcome these challenges, we introduce SWE-Playground, a novel pipeline for generating environments and trajectories which supports the training of versatile coding agents. Unlike prior efforts, SWE-Playground synthetically generates projects and tasks from scratch with strong language models and agents, eliminating reliance on external data sources. This allows us to tackle a much wider variety of coding tasks, such as reproducing issues by generating unit tests and implementing libraries from scratch. We demonstrate the effectiveness of this approach on three distinct benchmarks, and results indicate that SWE-Playground produces trajectories with dense training signal, enabling agents to reach comparable performance with significantly fewer trajectories than previous works.",
-    "published": "Dec 13",
-    "pdf_url": "https://arxiv.org/pdf/2512.12216v2",
-    "arxiv_url": "http://arxiv.org/abs/2512.12216v2",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
     ]
   }
 ]
