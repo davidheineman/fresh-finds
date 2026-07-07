@@ -1,5 +1,222 @@
 [
   {
+    "title": "Unified Audio Intelligence Without Regressing on Text Intelligence",
+    "authors": [
+      "Zhifeng Kong",
+      "Sang-gil Lee",
+      "Jaehyeon Kim",
+      "Boxin Wang",
+      "Zihan Liu",
+      "Sungwon Kim",
+      "Yang Chen",
+      "Arushi Goel",
+      "Rajarshi Roy",
+      "Wenliang Dai",
+      "Zhuolin Yang",
+      "Yangyi Chen",
+      "Dongfu Jiang",
+      "Sreyan Ghosh",
+      "Tuomas Rintamaki",
+      "Andrew Tao",
+      "Jonathan Raiman",
+      "Mohammad Shoeybi",
+      "Bryan Catanzaro",
+      "Wei Ping"
+    ],
+    "summary": "Audio intelligence involves understanding, reasoning about, and generating both audio and speech. In this work, we introduce Nemotron-Labs-Audex-30B-A3B (Audex), a unified audio-text LLM built on Nemotron-Cascade-2-30B-A3B, a strong text-only MoE LLM. Audex adopts a simple unified design with a single Transformer decoder: audio inputs are encoded and projected into the text embedding space, while text tokens and quantized audio output tokens are treated uniformly during generation. This architecture enables strong audio-text fusion, seamless multimodal generation, and compatibility with standard LLM training and inference infrastructure. For training, we meticulously curate audio-text datasets comprising 157.4B audio tokens and 320.5B text tokens. We apply multi-stage supervised training on these datasets, followed by text-only Cascade RL and multi-domain on-policy distillation. Audex delivers state-of-the-art audio understanding, speech recognition and translation, text-to-speech, audio generation, and speech-to-speech generation, while preserving very compelling reasoning, alignment, knowledge, long-context, and agentic capabilities of its text-only LLM backbone with marginal or no regression. We release the model checkpoints to facilitate open research.",
+    "published": "Jul 06",
+    "pdf_url": "https://arxiv.org/pdf/2607.05196v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.05196v1",
+    "queried_author": "Mohammad Shoeybi",
+    "matching_authors": [
+      "Mohammad Shoeybi"
+    ]
+  },
+  {
+    "title": "Geometric Causal Models",
+    "authors": [
+      "Eli N. Weinstein",
+      "David M. Blei"
+    ],
+    "summary": "Scientists often seek to draw causal inferences from structured data that is not independently and identically distributed, such as spatial data, network data, or molecular data. We develop geometric causal models (GCMs), a framework for causal inference from dependent data that exploits underlying symmetries of the data generating process. For example, in spatial data, we consider processes that are symmetric under translations, or in graph data, symmetric under permutations of the nodes. We show how symmetries, formalized with group theory, can enable causal identification and estimation. We deploy ergodic theory for amenable groups to establish identification, and combine geometric deep learning with scalable Bayesian inference for estimation. We recover i.i.d. causal models and do-calculus when the data is a sequence and the symmetry is permutation equivariance, and find novel types of causal models when we use alternate structures and symmetries. As an example, we construct a causal model that satisfies the symmetries of DNA. This GCM enables new estimators for the effects of genetic variation, combining deep functional genomics models to describe outcomes and DNA language models to describe propensities. We illustrate on semisynthetic data.",
+    "published": "Jul 06",
+    "pdf_url": "https://arxiv.org/pdf/2607.05153v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.05153v1",
+    "queried_author": "David M. Blei",
+    "matching_authors": [
+      "David M. Blei"
+    ]
+  },
+  {
+    "title": "CollabEval: Statistically Efficient Collaborative Model Evaluation via Matrix Completion",
+    "authors": [
+      "Adam Fisch",
+      "Daniel Deutsch",
+      "Joshua Maynez",
+      "Alekh Agarwal",
+      "Jonathan Berant",
+      "William Cohen",
+      "Amir Globerson",
+      "Jacob Eisenstein"
+    ],
+    "summary": "Evaluating generative AI models is a routine, but resource-intensive, process that is conducted over and over again during the course of model development. In this work, we propose Collaborative Evaluation (CollabEval), a simple, effective, and principled method for exploiting dependencies between historical runs of different models on the same tasks to improve statistical efficiency. Specifically, our approach treats model evaluation as a matrix completion problem over an $M \\times N$ matrix of evaluation scores, where $M$ is the total number of models and $N$ is the total number of evaluation prompts. We assume that a subset of these $M$ models are targeted for evaluation. For these target models only a small fraction, $p$, of prompts has been annotated with evaluation scores. Leveraging recent results in prediction-powered inference, we build a low-rank approximation of the score matrix, and use the reconstructed values as control variates in a manner that guarantees unbiased estimates of the true evaluation metric mean, in addition to statistically valid confidence intervals. Empirically, across a wide range of datasets, models, and sparsity levels $p$, we find that CollabEval substantially reduces the mean confidence interval size, and the mean squared error of the point estimate, compared to baseline methods at the same annotation budget.",
+    "published": "Jul 06",
+    "pdf_url": "https://arxiv.org/pdf/2607.05046v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.05046v1",
+    "queried_author": "Jacob Eisenstein",
+    "matching_authors": [
+      "Jacob Eisenstein"
+    ]
+  },
+  {
+    "title": "Evaluating Large Language Models for Antisemitic Incident Classification",
+    "authors": [
+      "Karina Halevy",
+      "Julia Mendelsohn",
+      "Chan Young Park",
+      "Yulia Tsvetkov",
+      "Maarten Sap"
+    ],
+    "summary": "Addressing hate and violence in society requires timely detection of hateful events from public reporting, but automated identification of hateful events remains underexplored. We introduce the task of hateful event detection and investigate the ability of AI systems, specifically large language models (LLMs), to discover and classify reports of antisemitic events with fine-grained labels. We evaluate OpenAI's GPT-4o and Meta's Llama-3.2-3B-Instruct on multiple expert-annotated datasets containing antisemitic event descriptions from news articles, civil society reports, and official records. We show that LLMs, particularly GPT-4o, have potential for this task, but substantial improvement is needed. Providing clear term definitions and in-context examples in prompts can improve performance: definitions are most helpful for rhetoric-oriented events (e.g. classical antisemitic tropes), while examples help label action-oriented events (e.g. physical assault). A case study of college newspapers demonstrates that LLMs can help surface relevant real-world events, supporting early monitoring and intervention. Overall, our findings highlight both opportunities and critical gaps in AI's ability to recognize complex harms and underscore the need for collaborative efforts among AI developers, policymakers, and civil society to design models, implement robust evaluation, and develop policy frameworks for defining and combating hate efficiently and effectively.",
+    "published": "Jul 06",
+    "pdf_url": "https://arxiv.org/pdf/2607.04890v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.04890v1",
+    "queried_author": "Maarten Sap",
+    "matching_authors": [
+      "Maarten Sap"
+    ]
+  },
+  {
+    "title": "LLM-as-a-Tutor: Policy-Aware Prompt Adaptation for Non-Verifiable RL",
+    "authors": [
+      "Yujin Kim",
+      "Namgyu Ho",
+      "Sangmin Hwang",
+      "Joonkee Kim",
+      "Yongjin Yang",
+      "Sangmin Bae",
+      "Seungone Kim",
+      "Jaehun Jung",
+      "Se-Young Yun",
+      "Hwanjun Song"
+    ],
+    "summary": "Reinforcement learning (RL) for non-verifiable instruction following increasingly relies on LLM judges with prompt-specific rubrics as reward signals. While recent methods adapt these rubrics to the evolving policy during training, the training prompts themselves remain static, drawn from fixed corpora. This static approach often results in a critical misalignment between prompt difficulty and policy capability, leaving the judge unable to recover a discriminative reward signal when prompts fail to elicit quality variance among rollouts. To address this misalignment, we introduce LLM-as-a-Tutor, a framework that extends the LLM's role from judge to tutor: a single model serves as an examiner that pairwise-compares policy rollouts to detect non-challenging prompts, and as a generator that appends atomic constraints to them. This append-only design monotonically raises difficulty in step with the policy's capability, producing a self-calibrating training signal without external difficulty schedules. On three complex instruction-following benchmarks, our method consistently outperforms both policy-unaware baselines and prior policy-adaptive methods that adapt rubrics or rewrite prompts, suggesting prompt adaptation as a missing axis of policy-awareness in non-verifiable RL.",
+    "published": "Jul 05",
+    "pdf_url": "https://arxiv.org/pdf/2607.04412v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.04412v1",
+    "queried_author": "Seungone Kim",
+    "matching_authors": [
+      "Seungone Kim"
+    ]
+  },
+  {
+    "title": "Nemotron-Labs-3-Puzzle-75B-A9B: Compressing Hybrid MoE LLMs",
+    "authors": [
+      "Akhiad Bercovich",
+      "Talor Abramovich",
+      "Daniel Afrimi",
+      "Shay Aharon",
+      "Nir Ailon",
+      "Vladimir Anisimov",
+      "Omer Ullman Argov",
+      "Maor Ashkenazi",
+      "Tomer Asida",
+      "Nave Assaf",
+      "Tomer Bar Natan",
+      "Alexander Bukharin",
+      "Grzegorz Chlebus",
+      "Marcin Chochowski",
+      "Eric Chung",
+      "Mohammad Dabbah",
+      "Carlo del Mundo",
+      "Ewa Dobrowolska",
+      "Ido Galil",
+      "Yaniv Galron",
+      "Amnon Geifman",
+      "Yonatan Geifman",
+      "Izik Golan",
+      "Alex Gronskiy",
+      "Tomasz Grzegorzek",
+      "Netanel Haber",
+      "Lior Kadoch",
+      "Grzegorz Karch",
+      "Tomer Keren",
+      "Abhinav Khattar",
+      "Amir Klein",
+      "Tugrul Konuk",
+      "Roi Koren",
+      "Daniel Korzekwa",
+      "Shaun Kotek",
+      "Konstantinos Krommydas",
+      "Itay Levy",
+      "Ofri Masad",
+      "Yoav Miron",
+      "Pavlo Molchanov",
+      "Shahar Mor",
+      "Zach Moshe",
+      "Saurav Muralidharan",
+      "Najeeb Nabwani",
+      "Besmira Nushi",
+      "Mostofa Patwary",
+      "Omri Puny",
+      "Johannes Rausch",
+      "Tomer Ronen",
+      "Sepehr Sameni",
+      "Itamar Schen",
+      "Elad Segal",
+      "Daniel Serebrenik",
+      "Ido Shahaf",
+      "Soumye Singhal",
+      "Daniil Sorokin",
+      "Sharath Turuvekere Sreenivas",
+      "Marta Stepniewska-Dziubinska",
+      "Ali Taghibakhshi",
+      "Nima Tajbakhsh",
+      "Oren Tropp",
+      "Dor Tzur",
+      "Anna Warno",
+      "Yi-Fu Wu",
+      "Michal Zawalski",
+      "Jiaqi Zeng",
+      "Yian Zhang",
+      "Ran Zilberstein",
+      "Amit Zuker",
+      "Ran El-Yaniv"
+    ],
+    "summary": "We present Nemotron-Labs-3-Puzzle-75B-A9B, a compressed variant of Nemotron-3-Super optimized for interactive deployment. We designed the model to maximize server throughput under high user throughput constraints. In interactive serving workloads on a single 8xB200 node, Puzzle-75B-A9B achieves approximately 2x higher server throughput than Nemotron-3-Super at matched user throughput constraints. In ultra-long-context deployment on a single H100 GPU, the compressed model increases 1M-token concurrency from 1 request to 8 requests. Puzzle-75B-A9B is constructed using a multi-stage pipeline that combines the Iterative Puzzle compression framework with knowledge distillation, reinforcement learning, quantization, and a Multi-Token Prediction head. The compression process jointly optimizes heterogeneous MoE pruning, active parameter budget, and Mamba pruning to improve inference efficiency while preserving model quality. We evaluate Puzzle-75B-A9B on a broad suite of reasoning, coding, multilingual, long-context, and agentic benchmarks. Despite substantial compression, the model retains strong downstream accuracy relative to the parent model across a wide range of tasks. These results demonstrate that large hybrid MoE models can be substantially optimized for deployment efficiency while maintaining strong downstream capability.",
+    "published": "Jul 05",
+    "pdf_url": "https://arxiv.org/pdf/2607.04371v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.04371v1",
+    "queried_author": "Mostofa Patwary",
+    "matching_authors": [
+      "Mostofa Patwary"
+    ]
+  },
+  {
+    "title": "DynaVieW: Schema-Guided World Modeling for Understanding Hierarchical Visual Dynamics",
+    "authors": [
+      "Silin Gao",
+      "Hao Zhao",
+      "Zeming Chen",
+      "Sepideh Mamooler",
+      "Antara Raaghavi Bhattacharya",
+      "Qiyu Wu",
+      "Hiromi Wakaki",
+      "Yuki Mitsufuji",
+      "Li Mi",
+      "Syrielle Montariol",
+      "Antoine Bosselut"
+    ],
+    "summary": "Multimodal LLMs struggle to systematically model the temporal evolution of visual scenes in videos or multi-image sequences. Such inputs require models to predict or simulate multiple levels of dynamic constituents, such as actions taken in the visual sequence, and the associated changes to the visual environment that result. To address this challenge, we propose a dynamic schema-guided world model, DynaVieW, optimized for visual dynamic prediction and simulation. DynaVieW achieves an in-depth understanding of visual dynamics by learning interleaved state-transition sequences, where states cover broad visual scenes from video keyframes, and transitions capture comprehensive dynamic constituents within a hierarchical schema. DynaVieW jointly models transition prediction and state simulation under a mixture-of-experts architecture, with a cross-expert selective attention and a schema token re-weighted loss, to ensure effective and robust learning. DynaVieW's understanding of visual dynamics boosts its downstream performance in visual narrative creation and world simulation, showing improved consistency, controllability, and instruction-following.",
+    "published": "Jul 05",
+    "pdf_url": "https://arxiv.org/pdf/2607.04112v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.04112v1",
+    "queried_author": "Antoine Bosselut",
+    "matching_authors": [
+      "Antoine Bosselut"
+    ]
+  },
+  {
     "title": "Anchored Self-Play for Code Repair",
     "authors": [
       "Caroline Choi",
@@ -113,8 +330,8 @@
     ],
     "summary": "Evaluating LLM agents on benchmarks like SWE-Bench and GAIA can be expensive, time-consuming, and requires complex infrastructure. A single evaluation can cost thousands of dollars and take days to complete. In contrast, non-agentic LLM benchmarks that test individual capabilities (e.g., reasoning, code generation) are fast and cheap to run. In this paper, we investigate whether performance on expensive agentic benchmarks can be accurately predicted by the performance on a small, carefully selected subset of atomic evaluation instances. We introduce PACE, a framework that constructs proxy benchmarks by selecting instances from existing non-agentic evaluations whose aggregate scores most reliably predict model performances on agentic benchmarks. Given a pool of candidate instances spanning atomic capabilities, PACE fits a regression that maps a model's scores on a compact subset of source instances to its score on the target agentic benchmark. The subset itself is curated by combining two complementary instance-selection strategies, target-relevance local selection and globally informative global selection. We apply PACE to the 4 target agentic benchmarks in this paper, which yields PACE-Bench, the concrete proxy benchmark that we evaluate in the paper. Experiments across 14 models, 4 agentic benchmarks, and 19 non-agentic benchmarks show that PACE-Bench predicts agentic scores with leave-one-out cross-validation (LOOCV) mean absolute error (MAE) under 4%, Spearman correlation above 0.80, and pairwise model-ranking accuracy around 85%, all at much less than 1% of the full ag...",
     "published": "Jul 02",
-    "pdf_url": "https://arxiv.org/pdf/2607.02032v1",
-    "arxiv_url": "http://arxiv.org/abs/2607.02032v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.02032v2",
+    "arxiv_url": "http://arxiv.org/abs/2607.02032v2",
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig"
@@ -4747,8 +4964,8 @@
     ],
     "summary": "Large language models offer a tempting solution to address the peer review crisis. This position paper argues that today's AI systems should not be used to produce paper reviews. We ground this position in an empirical comparison of human- versus AI-generated ICLR 2026 reviews and an evaluation of the effect of automated paper rewriting on different AI reviewers. We identify two critical issues: 1) AI reviewers exhibit a hivemind effect of excessive agreement within and across papers that reduces perspective diversity. 2) AI review scores are trivially gameable through paper laundering: prompting an LLM to rewrite a paper could significantly increase the scores from AI reviewers, demonstrating that LLM reviewers are easy to game through stylistic changes rather than scientific results. However, non-gameability and review diversity are necessary but not sufficient conditions for automation. We argue that addressing the peer review crisis requires a science of peer review automation -- not general-purpose LLMs deployed without rigorous evaluation.",
     "published": "May 04",
-    "pdf_url": "https://arxiv.org/pdf/2605.03202v1",
-    "arxiv_url": "http://arxiv.org/abs/2605.03202v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.03202v2",
+    "arxiv_url": "http://arxiv.org/abs/2605.03202v2",
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
@@ -8624,8 +8841,8 @@
     ],
     "summary": "Reinforcement learning with verifiable rewards (RLVR) and Rubrics as Rewards (RaR) have driven strong gains in domains with clear correctness signals and even in subjective domains by synthesizing evaluation criteria from ideal reference answers. But many real-world tasks admit multiple valid outputs and lack the single ideal answer that rubric generation depends on. We identify this reference-free setting as a gap in current post-training methods and propose Implicit Error Counting (IEC) to fill it. Instead of checking what a response gets right against a rubric, IEC enumerates what it gets wrong, applying severity-weighted scores across task-relevant axes and converting them into calibrated per-aspect rewards. We show that na\u00efve explicit enumeration is too noisy for stable optimization, and that two design choices: implicit score emission and group calibration are necessary to make error counting a reliable reward. As a case study, we validate IEC on virtual try-on (VTO), a domain that is simultaneously too constrained for holistic scoring and too permissive for rubric-based evaluation: subtle garment errors are unacceptable, yet many output variations are correct. We introduce Cascaded Error Counting (CEC) as an evaluation metric, which tracks human preferences well (60% top-1 vs. 30% others), and curate Mismatch-DressCode (MDressBench), a benchmark with maximal attribute mismatch to stress-test reward designs. On MDressBench, IEC outperforms RaR across all metrics (CEC: 5.31 vs. 5.60 on flat references; 5.20 vs. 5.53 on non-flat). On VITON-HD and DressCode, IEC matches ...",
     "published": "Mar 05",
-    "pdf_url": "https://arxiv.org/pdf/2603.05659v2",
-    "arxiv_url": "http://arxiv.org/abs/2603.05659v2",
+    "pdf_url": "https://arxiv.org/pdf/2603.05659v3",
+    "arxiv_url": "http://arxiv.org/abs/2603.05659v3",
     "queried_author": "Ranjay Krishna",
     "matching_authors": [
       "Ranjay Krishna"
@@ -13283,10 +13500,10 @@
       "Marco Ciccone",
       "Colin Raffel"
     ],
-    "summary": "Tokenizers provide the fundamental basis through which text is represented and processed by language models (LMs). Despite the importance of tokenization, its role in LM performance and behavior is poorly understood due to the challenge of measuring the impact of tokenization in isolation. To address this need, we present TokSuite, a collection of models and a benchmark that supports research into tokenization's influence on LMs. Specifically, we train fourteen models that use different tokenizers but are otherwise identical using the same architecture, dataset, training budget, and initialization. Additionally, we curate and release a new benchmark that specifically measures model performance subject to real-world perturbations that are likely to influence tokenization. Together, TokSuite allows robust decoupling of the influence of a model's tokenizer, supporting a series of novel findings that elucidate the respective benefits and shortcomings of a wide range of popular tokenizers.",
+    "summary": "Tokenizers provide the fundamental basis through which text is represented and processed by language models (LMs). Despite the importance of tokenization, its role in LM performance and behavior is poorly understood due to the challenge of measuring the impact of tokenization in isolation. To address this need, we present TokSuite, a collection of models and a benchmark that supports research into tokenization's influence on LMs. Specifically, we release fourteen pre-trained models that use different off-the-shelf tokenizers but are otherwise identical, using the same architecture, dataset, training budget, and initialization. We also release a multilingual robustness benchmark that measures model performance under real-world perturbations in English, Chinese, Farsi, Italian, and Turkish, curated by native annotators. Together, TokSuite allows robust decoupling of the influence of a model's tokenizer, supporting a series of novel findings that elucidate the respective benefits and shortcomings of a wide range of popular tokenizers.",
     "published": "Dec 23",
-    "pdf_url": "https://arxiv.org/pdf/2512.20757v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.20757v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.20757v2",
+    "arxiv_url": "http://arxiv.org/abs/2512.20757v2",
     "queried_author": "Colin Raffel",
     "matching_authors": [
       "Colin Raffel"
@@ -13333,146 +13550,6 @@
     "queried_author": "Wenting Zhao",
     "matching_authors": [
       "Wenting Zhao"
-    ]
-  },
-  {
-    "title": "Why Slop Matters",
-    "authors": [
-      "Cody Kommers",
-      "Eamon Duede",
-      "Julia Gordon",
-      "Ari Holtzman",
-      "Tess McNulty",
-      "Spencer Stewart",
-      "Lindsay Thomas",
-      "Richard Jean So",
-      "Hoyt Long"
-    ],
-    "summary": "AI-generated \"slop\" is often seen as digital pollution. We argue that this dismissal of the topic risks missing important aspects of AI Slop that deserve rigorous study. AI Slop serves a social function: it offers a supply-side solution to a variety of problems in cultural and economic demand - that, collectively, people want more content than humans can supply. We also argue that AI Slop is not mere digital detritus but has its own aesthetic value. Like other \"low\" cultural forms initially dismissed by critics, it nonetheless offers a legitimate means of collective sense-making, with the potential to express meaning and identity. We identify three key features of family resemblance for prototypical AI Slop: superficial competence (its veneer of quality is belied by a deeper lack of substance), asymmetry effort (it takes vastly less effort to generate than would be the case without AI), and mass producibility (it is part of a digital ecosystem of widespread generation and consumption). While AI Slop is heterogeneous and depends crucially on its medium, it tends to vary across three dimensions: instrumental utility, personalization, and surrealism. AI Slop will be an increasingly prolific and impactful part of our creative, information, and cultural economies; we should take it seriously as an object of study in its own right.",
-    "published": "Dec 23",
-    "pdf_url": "https://arxiv.org/pdf/2601.06060v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.06060v1",
-    "queried_author": "Ari Holtzman",
-    "matching_authors": [
-      "Ari Holtzman"
-    ]
-  },
-  {
-    "title": "Toward Training Superintelligent Software Agents through Self-Play SWE-RL",
-    "authors": [
-      "Yuxiang Wei",
-      "Zhiqing Sun",
-      "Emily McMilin",
-      "Jonas Gehring",
-      "David Zhang",
-      "Gabriel Synnaeve",
-      "Daniel Fried",
-      "Lingming Zhang",
-      "Sida Wang"
-    ],
-    "summary": "While current software agents powered by large language models (LLMs) and agentic reinforcement learning (RL) can boost programmer productivity, their training data (e.g., GitHub issues and pull requests) and environments (e.g., pass-to-pass and fail-to-pass tests) heavily depend on human knowledge or curation, posing a fundamental barrier to superintelligence. In this paper, we present Self-play SWE-RL (SSR), a first step toward training paradigms for superintelligent software agents. Our approach takes minimal data assumptions, only requiring access to sandboxed repositories with source code and installed dependencies, with no need for human-labeled issues or tests. Grounded in these real-world codebases, a single LLM agent is trained via reinforcement learning in a self-play setting to iteratively inject and repair software bugs of increasing complexity, with each bug formally specified by a test patch rather than a natural language issue description. On the SWE-bench Verified and SWE-Bench Pro benchmarks, SSR achieves notable self-improvement (+10.4 and +7.8 points, respectively) and consistently outperforms the human-data baseline over the entire training trajectory, despite being evaluated on natural language issues absent from self-play. Our results, albeit early, suggest a path where agents autonomously gather extensive learning experiences from real-world software repositories, ultimately enabling superintelligent systems that exceed human capabilities in understanding how systems are constructed, solving novel challenges, and autonomously creating new software fro...",
-    "published": "Dec 21",
-    "pdf_url": "https://arxiv.org/pdf/2512.18552v3",
-    "arxiv_url": "http://arxiv.org/abs/2512.18552v3",
-    "queried_author": "Daniel Fried",
-    "matching_authors": [
-      "Daniel Fried"
-    ]
-  },
-  {
-    "title": "Measuring Fine-Grained Negotiation Tactics of Humans and LLMs in Diplomacy",
-    "authors": [
-      "Wenkai Li",
-      "Lynnette Hui Xian Ng",
-      "Andy Liu",
-      "Daniel Fried"
-    ],
-    "summary": "The study of negotiation styles dates back to Aristotle's ethos-pathos-logos rhetoric. Prior efforts primarily studied the success of negotiation agents. Here, we shift the focus towards the styles of negotiation strategies. Our focus is the strategic dialogue board game Diplomacy, which affords rich natural language negotiation and measures of game success. We used LLM-as-a-judge to annotate a large human-human set of Diplomacy games for fine-grained negotiation tactics from a sociologically-grounded taxonomy. Using a combination of the It Takes Two and WebDiplomacy datasets, we demonstrate the reliability of our LLM-as-a-Judge framework and show strong correlations between negotiation features and success in the Diplomacy setting. Lastly, we investigate the differences between LLM and human negotiation strategies and show that fine-tuning can steer LLM agents toward more human-like negotiation behaviors.",
-    "published": "Dec 20",
-    "pdf_url": "https://arxiv.org/pdf/2512.18292v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.18292v1",
-    "queried_author": "Daniel Fried",
-    "matching_authors": [
-      "Daniel Fried"
-    ]
-  },
-  {
-    "title": "Propose, Solve, Verify: Self-Play Through Formal Verification",
-    "authors": [
-      "Alex Wilf",
-      "Pranjal Aggarwal",
-      "Bryan Parno",
-      "Daniel Fried",
-      "Louis-Philippe Morency",
-      "Paul Pu Liang",
-      "Sean Welleck"
-    ],
-    "summary": "Training models through self-play alone (without any human data) has been a longstanding goal in AI, but its effectiveness for training large language models remains unclear, particularly in code generation where rewards based on unit tests are brittle and prone to error propagation. We study self-play in the verified code generation setting, where formal verification provides reliable correctness signals. We introduce Propose, Solve, Verify (PSV) a simple self-play framework where formal verification signals are used to create a proposer capable of generating challenging synthetic problems and a solver trained via expert iteration. We use PSV to train PSV-Verus, which across three benchmarks improves pass@1 by up to 9.6x over inference-only and expert-iteration baselines. We show that performance scales with the number of generated questions and training iterations, and through ablations identify formal verification and difficulty-aware proposal as essential ingredients for successful self-play.",
-    "published": "Dec 20",
-    "pdf_url": "https://arxiv.org/pdf/2512.18160v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.18160v1",
-    "queried_author": "Daniel Fried",
-    "matching_authors": [
-      "Daniel Fried",
-      "Sean Welleck"
-    ]
-  },
-  {
-    "title": "AutoMetrics: Approximate Human Judgements with Automatically Generated Evaluators",
-    "authors": [
-      "Michael J. Ryan",
-      "Yanzhe Zhang",
-      "Amol Salunkhe",
-      "Yi Chu",
-      "Di Xu",
-      "Diyi Yang"
-    ],
-    "summary": "Evaluating user-facing AI applications remains a central challenge, especially in open-ended domains such as travel planning, clinical note generation, or dialogue. The gold standard is user feedback (e.g., thumbs up/down) or behavioral signals (e.g., retention), but these are often scarce in prototypes and research projects, or too-slow to use for system optimization. We present AutoMetrics, a framework for synthesizing evaluation metrics under low-data constraints. AutoMetrics combines retrieval from MetricBank, a collection of 48 metrics we curate, with automatically generated LLM-as-a-Judge criteria informed by lightweight human feedback. These metrics are composed via regression to maximize correlation with human signal. AutoMetrics takes you from expensive measures to interpretable automatic metrics. Across 5 diverse tasks, AutoMetrics improves Kendall correlation with human ratings by up to 33.4% over LLM-as-a-Judge while requiring fewer than 100 feedback points. We show that AutoMetrics can be used as a proxy reward to equal effect as a verifiable reward. We release the full AutoMetrics toolkit and MetricBank to accelerate adaptive evaluation of LLM applications.",
-    "published": "Dec 19",
-    "pdf_url": "https://arxiv.org/pdf/2512.17267v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.17267v1",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang"
-    ]
-  },
-  {
-    "title": "Multimodal RewardBench 2: Evaluating Omni Reward Models for Interleaved Text and Image",
-    "authors": [
-      "Yushi Hu",
-      "Reyhane Askari-Hemmat",
-      "Melissa Hall",
-      "Emily Dinan",
-      "Luke Zettlemoyer",
-      "Marjan Ghazvininejad"
-    ],
-    "summary": "Reward models (RMs) are essential for training large language models (LLMs), but remain underexplored for omni models that handle interleaved image and text sequences. We introduce Multimodal RewardBench 2 (MMRB2), the first comprehensive benchmark for reward models on multimodal understanding and (interleaved) generation. MMRB2 spans four tasks: text-to-image, image editing, interleaved generation, and multimodal reasoning (\"thinking-with-images\"), providing 1,000 expert-annotated preference pairs per task from 23 models and agents across 21 source tasks. MMRB2 is designed with: (1) practical but challenging prompts; (2) responses from state-of-the-art models and agents; and (3) preference pairs with strong human-expert consensus, curated via an ensemble filtering strategy. Using MMRB2, we study existing judges for each subtask, including multimodal LLM-as-a-judge and models trained with human preferences. The latest Gemini 3 Pro attains 75-80% accuracy. GPT-5 and Gemini 2.5 Pro reach 66-75% accuracy, compared to >90% for humans, yet surpass the widely used GPT-4o (59%). The best performing open-source model Qwen3-VL-32B achieves similar accuracies as Gemini 2.5 Flash (64%). We also show that MMRB2 performance strongly correlates with downstream task success using Best-of-N sampling and conduct an in-depth analysis that shows key areas to improve the reward models going forward.",
-    "published": "Dec 18",
-    "pdf_url": "https://arxiv.org/pdf/2512.16899v3",
-    "arxiv_url": "http://arxiv.org/abs/2512.16899v3",
-    "queried_author": "Luke Zettlemoyer",
-    "matching_authors": [
-      "Luke Zettlemoyer"
-    ]
-  },
-  {
-    "title": "GenEval 2: Addressing Benchmark Drift in Text-to-Image Evaluation",
-    "authors": [
-      "Amita Kamath",
-      "Kai-Wei Chang",
-      "Ranjay Krishna",
-      "Luke Zettlemoyer",
-      "Yushi Hu",
-      "Marjan Ghazvininejad"
-    ],
-    "summary": "Automating Text-to-Image (T2I) model evaluation is challenging; a judge model must be used to score correctness, and test prompts must be selected to be challenging for current T2I models but not the judge. We argue that satisfying these constraints can lead to benchmark drift over time, where the static benchmark judges fail to keep up with newer model capabilities. We show that benchmark drift is a significant problem for GenEval, one of the most popular T2I benchmarks. Although GenEval was well-aligned with human judgment at the time of its release, it has drifted far from human judgment over time -- resulting in an absolute error of as much as 17.7% for current models. This level of drift strongly suggests that GenEval has been saturated for some time, as we verify via a large-scale human study. To help fill this benchmarking gap, we introduce a new benchmark, GenEval 2, with improved coverage of primitive visual concepts and higher degrees of compositionality, which we show is more challenging for current models. We also introduce Soft-TIFA, an evaluation method for GenEval 2 that combines judgments for visual primitives, which we show is more well-aligned with human judgment and argue is less likely to drift from human-alignment over time (as compared to more holistic judges such as VQAScore). Although we hope GenEval 2 will provide a strong benchmark for many years, avoiding benchmark drift is far from guaranteed and our work, more generally, highlights the importance of continual audits and improvement for T2I and related automated model evaluation benchmarks.",
-    "published": "Dec 18",
-    "pdf_url": "https://arxiv.org/pdf/2512.16853v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.16853v1",
-    "queried_author": "Luke Zettlemoyer",
-    "matching_authors": [
-      "Luke Zettlemoyer",
-      "Ranjay Krishna"
     ]
   }
 ]
