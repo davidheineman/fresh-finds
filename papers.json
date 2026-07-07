@@ -1,5 +1,65 @@
 [
   {
+    "title": "Anchored Self-Play for Code Repair",
+    "authors": [
+      "Caroline Choi",
+      "Zeyneb Kaya",
+      "Shirley Wu",
+      "Tengyu Ma",
+      "Tatsunori Hashimoto",
+      "Ludwig Schmidt"
+    ],
+    "summary": "Code repair is an important capability for language models (LMs): given a buggy program and unit tests, an LM must produce a fixed program that passes the tests. Because code repair data is limited, we aim to scale supervision by using an LM to generate bug--fix tasks. We propose __generator--fixer self-play__, in which a single model is trained with reinforcement learning to generate bugs and fix them. As the fixer improves, the generator adapts to produce more difficult bugs, yielding an automatic curriculum. To test whether this curriculum generalizes, we introduce BugSourceBench, a repair benchmark spanning realistic bug sources: bugs in human-written code, LM-generated code, and human-edited LM-generated code. On BugSourceBench, we find that self-play drifts toward difficult but unrealistic bugs, improving on synthetic bugs but degrading on human-authored ones. We propose Anchored Self-Play (ASP), which anchors self-play with a small reference set by adding a code-embedding similarity reward for generation and mixing reference bugs into fixer training. Across bug sources, ASP achieves the best fix rates, improving average fix rate over standard self-play by $+24\\%$ relative / $+7.0$ pp absolute, with gains on bugs from both LMs and humans.",
+    "published": "Jul 03",
+    "pdf_url": "https://arxiv.org/pdf/2607.03523v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.03523v1",
+    "queried_author": "Ludwig Schmidt",
+    "matching_authors": [
+      "Ludwig Schmidt",
+      "Tatsunori Hashimoto"
+    ]
+  },
+  {
+    "title": "S-EMBER: A Large-Scale Benchmark for Streaming Egocentric Memory Retrieval",
+    "authors": [
+      "Xiaodong Wang",
+      "Xuanyi Zhao",
+      "Pedro Rodriguez",
+      "Devendra Singh Sachan",
+      "Barlas Oguz",
+      "Seungwhan Moon",
+      "Shang-Wen Li",
+      "Gargi Ghosh",
+      "Xin Dong",
+      "Wen-Tau Yih"
+    ],
+    "summary": "As wearable devices enable continuous first-person recording, AI assistants must reason across long time horizons to recall past experiences-a capability known as episodic memory. Current benchmarks often rely on offline evaluation with access to entire video files, failing to simulate the streaming reality of wearable intelligence. We introduce S-EMBER (Streaming Egocentric Memory Benchmark for Episodic Retrieval), a large-scale benchmark comprising 3,141 videos totaling 388 hours of organic activity captured via Ray-Ban Meta smart glasses. S-EMBER formalizes grounded streaming episodic retrieval, a paradigm shift from global offline search to causal, active recall triggered by visual events in a continuous stream. We provide 9,448 QA pairs requiring manual visual proof through precise temporal localization and supporting flexible response lengths to simulate natural human-AI interaction. Our extensive benchmarking of frontier models uncovers a localization paradox: while semantic reasoning improves with parameter scale, temporal grounding precision remains a stagnant architectural bottleneck that does not benefit from brute-force increases in model size, resolution, or frame density. S-EMBER establishes a hardware-authentic foundation for developing grounded, reliable episodic memory in the next generation of wearable AI agents.",
+    "published": "Jul 02",
+    "pdf_url": "https://arxiv.org/pdf/2607.02689v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.02689v1",
+    "queried_author": "Wen-tau Yih",
+    "matching_authors": [
+      "Wen-tau Yih"
+    ]
+  },
+  {
+    "title": "Improving LLMs via Validator-to-Generator Alignment",
+    "authors": [
+      "Juan Diego Rodriguez",
+      "Jocelyn Zhang",
+      "Katrin Erk",
+      "Greg Durrett"
+    ],
+    "summary": "Large language models are inconsistent: varying prompts or including unrelated information can lead to unexpected changes in model outputs. The generator-validator (G-V) gap is one manifestation of this phenomenon, where LLMs generate responses that they then deem as invalid if re-queried to validate them. In this work, we introduce a new formulation of G-V consistency that involves a principled correction for utterance frequency. Specifically, generators often assign low likelihood to valid strings simply because those strings are a priori unlikely, which makes naive notions of G-V consistency unworkable. We show that under a natural model of rational agents answering questions with multiple answers, consistency of the validator with a frequency-corrected generator score emerges naturally. Our method, \\emph{\\FCPAname} (\\FCPA), is a training objective implementing frequency-corrected G-V consistency for real-world LLMs. Our experimental results show that training with \\FCPA{} substantially improves both G-V consistency and generator performance over prior methods, with gains of up to $+27$pp in Pearson correlation on IFEval and HumanEval, while preserving validator quality across all evaluated tasks.",
+    "published": "Jul 02",
+    "pdf_url": "https://arxiv.org/pdf/2607.02668v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.02668v1",
+    "queried_author": "Greg Durrett",
+    "matching_authors": [
+      "Greg Durrett"
+    ]
+  },
+  {
     "title": "Visually Grounded Self-Reflection for Vision-Language Models via Reinforcement Learning",
     "authors": [
       "Liyan Tang",
@@ -6649,7 +6709,7 @@
     ]
   },
   {
-    "title": "Large Language Models Generate Harmful Content Using a Distinct, Unified Mechanism",
+    "title": "Large Language Models Generate Harmful Responses Using a Distinct Mechanism, Shared Across Harm Types",
     "authors": [
       "Hadas Orgad",
       "Boyi Wei",
@@ -6661,8 +6721,8 @@
     ],
     "summary": "Large language models (LLMs) undergo alignment training to avoid harmful behaviors, yet the resulting safeguards remain brittle: jailbreaks routinely bypass them, and fine-tuning on narrow domains can induce ``emergent misalignment'' that generalizes broadly. Whether this brittleness reflects a fundamental lack of coherent internal organization for harmfulness remains unclear. Here we use targeted weight pruning as a causal intervention to probe the internal organization of harmfulness in LLMs. We find that harmful content generation depends on a compact set of weights that are general across harm types and distinct from benign capabilities. Aligned models exhibit a greater compression of harm generation weights than unaligned counterparts, indicating that alignment reshapes harmful representations internally--despite the brittleness of safety guardrails at the surface level. This compression explains emergent misalignment: if weights of harmful capabilities are compressed, fine-tuning that engages these weights in one domain can trigger broad misalignment. Consistent with this, pruning harm generation weights in a narrow domain substantially reduces emergent misalignment. Notably, LLMs harmful generation capability is dissociated from how they recognize and explain such content. Together, these results reveal a coherent internal structure for harmfulness in LLMs that may serve as a foundation for more principled approaches to safety.",
     "published": "Apr 10",
-    "pdf_url": "https://arxiv.org/pdf/2604.09544v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.09544v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.09544v2",
+    "arxiv_url": "http://arxiv.org/abs/2604.09544v2",
     "queried_author": "Peter Henderson",
     "matching_authors": [
       "Peter Henderson"
@@ -13413,89 +13473,6 @@
     "matching_authors": [
       "Luke Zettlemoyer",
       "Ranjay Krishna"
-    ]
-  },
-  {
-    "title": "Adaptation of Agentic AI: A Survey of Post-Training, Memory, and Skills",
-    "authors": [
-      "Pengcheng Jiang",
-      "Jiacheng Lin",
-      "Zhiyi Shi",
-      "Zifeng Wang",
-      "Luxi He",
-      "Yichen Wu",
-      "Ming Zhong",
-      "Peiyang Song",
-      "Qizheng Zhang",
-      "Heng Wang",
-      "Xueqiang Xu",
-      "Hanwen Xu",
-      "Pengrui Han",
-      "Dylan Zhang",
-      "Jiashuo Sun",
-      "Chaoqi Yang",
-      "Kun Qian",
-      "Tian Wang",
-      "Changran Hu",
-      "Manling Li",
-      "Quanzheng Li",
-      "Hao Peng",
-      "Sheng Wang",
-      "Jingbo Shang",
-      "Chao Zhang",
-      "Jiaxuan You",
-      "Liyuan Liu",
-      "Pan Lu",
-      "Yu Zhang",
-      "Heng Ji",
-      "Yejin Choi",
-      "Dawn Song",
-      "Jimeng Sun",
-      "Jiawei Han"
-    ],
-    "summary": "Large language model (LLM) agents are moving beyond prompting alone. ChatGPT marked the rise of general-purpose LLM assistants, DeepSeek showed that on-policy reinforcement learning with verifiable rewards can improve reasoning and tool use, and OpenClaw highlights a newer direction in which agents accumulate persistent memory and reusable skills. Yet the research landscape remains fragmented across post-training, retrieval, memory, and skill systems. This survey studies these developments under a single notion of \\emph{adaptation}: improving an agent, its tools, or their interaction after pretraining. We organize the field with a four-paradigm framework spanning agent adaptation and tool adaptation. On the agent side, A1 (tool-execution-signaled) and A2 (agent-output-signaled) improve the agent itself through supervised fine-tuning, preference optimization, and reinforcement learning with verifiable rewards. On the tool side, T1 (agent-agnostic) provides reusable pre-trained modules any agent can call, while T2 (agent-supervised) uses the agent's outputs to train memory systems, skill libraries, or lightweight subagents. Using this framework, we review post-training methods, adaptive memory architectures, and agent skills; compare their trade-offs in cost, flexibility, and generalization; and summarize evaluation practices across deep research, software development, computer use, and drug discovery. We conclude by outlining open problems in agent-tool co-adaptation, continual learning, safety, and efficient deployment.",
-    "published": "Dec 18",
-    "pdf_url": "https://arxiv.org/pdf/2512.16301v3",
-    "arxiv_url": "http://arxiv.org/abs/2512.16301v3",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Bayesian Empirical Bayes: Simultaneous Inference from Probabilistic Symmetries",
-    "authors": [
-      "Bohan Wu",
-      "Eli N. Weinstein",
-      "David M. Blei"
-    ],
-    "summary": "Empirical Bayes (EB) improves the accuracy of simultaneous inference \"by learning from the experience of others\" (Efron, 2012). Classical EB theory focuses on latent variables that are iid draws from a fitted prior (Efron, 2019). Modern applications, however, feature complex structure, like arrays, spatial processes, or covariates. How can we apply EB ideas to these settings? We propose a generalized approach to empirical Bayes based on the notion of probabilistic symmetry. Our method pairs a simultaneous inference problem-with an unknown prior-to a symmetry assumption on the joint distribution of the latent variables. Each symmetry implies an ergodic decomposition, which we use to derive a corresponding empirical Bayes method. We call this methodBayesian empirical Bayes (BEB). We show how BEB recovers the classical methods of empirical Bayes, which implicitly assume exchangeability. We then use it to extend EB to other probabilistic symmetries: (i) EB matrix recovery for arrays and graphs; (ii) covariate-assisted EB for conditional data; (iii) EB spatial regression under shift invariance. We develop scalable algorithms based on variational inference and neural networks. In simulations, BEB outperforms existing approaches to denoising arrays and spatial data. On real data, we demonstrate BEB by denoising a cancer gene-expression matrix and analyzing spatial air-quality data from New York City.",
-    "published": "Dec 18",
-    "pdf_url": "https://arxiv.org/pdf/2512.16239v2",
-    "arxiv_url": "http://arxiv.org/abs/2512.16239v2",
-    "queried_author": "David M. Blei",
-    "matching_authors": [
-      "David M. Blei"
-    ]
-  },
-  {
-    "title": "Social Story Frames: Contextual Reasoning about Narrative Intent and Reception",
-    "authors": [
-      "Joel Mire",
-      "Maria Antoniak",
-      "Steven R. Wilson",
-      "Zexin Ma",
-      "Achyutarama R. Ganti",
-      "Andrew Piper",
-      "Maarten Sap"
-    ],
-    "summary": "Reading stories evokes rich interpretive, affective, and evaluative responses, such as inferences about narrative intent or judgments about characters. Yet, computational models of reader response are limited, preventing nuanced analyses. To address this gap, we introduce SocialStoryFrames, a formalism for distilling plausible inferences about reader response, such as perceived author intent, explanatory and predictive reasoning, affective responses, and value judgments, using conversational context and a taxonomy grounded in narrative theory, linguistic pragmatics, and psychology. We develop two models, SSF-Generator and SSF-Classifier, validated through human surveys (N=382 participants) and expert annotations, respectively. We conduct pilot analyses to showcase the utility of the formalism for studying storytelling at scale. Specifically, applying our models to SSF-Corpus, a curated dataset of 6,140 social media stories from diverse contexts, we characterize the frequency and interdependence of storytelling intents, and we compare and contrast narrative practices (and their diversity) across communities. By linking fine-grained, context-sensitive modeling with a generic taxonomy of reader responses, SocialStoryFrames enable new research into storytelling in online communities.",
-    "published": "Dec 17",
-    "pdf_url": "https://arxiv.org/pdf/2512.15925v2",
-    "arxiv_url": "http://arxiv.org/abs/2512.15925v2",
-    "queried_author": "Maarten Sap",
-    "matching_authors": [
-      "Maarten Sap"
     ]
   }
 ]
