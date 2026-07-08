@@ -1,5 +1,38 @@
 [
   {
+    "title": "Auditing of Unlearning Algorithms",
+    "authors": [
+      "Sahasrajit Sarmasarkar",
+      "Anastasia Koloskova",
+      "Sanmi Koyejo"
+    ],
+    "summary": "Evaluating whether unlearning algorithms truly remove training data influence remains an open challenge. We propose a practical auditor that computes data-dependent lower bounds on the unlearning parameter $\\varepsilon$ using membership inference attacks. Evaluating multiple unlearning algorithms, we find a sharp separation: algorithms with rigorous guarantees, such as model clipping and rewind-to-delete, achieve very small $\\varepsilon$ bounds that do not falsify their unlearning guarantees, whereas empirical methods such as Hessian-based unlearning, interleaved ascent-descent, ascent on the forget set, and fine-tuning on the retain set exhibit large bounds, indicating poor unlearning. Our auditor provides a practical tool for empirically falsifying unlearning claims through a hypothesis-testing framework, and we validate it on CIFAR-100 and Shakespeare text.",
+    "published": "Jul 07",
+    "pdf_url": "https://arxiv.org/pdf/2607.05898v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.05898v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "LEGATO 2: Toward Multimodal Sheet Music Recognition and Understanding",
+    "authors": [
+      "Guang Yang",
+      "Brian Siyuan Zheng",
+      "Victoria Ebert",
+      "Noah A. Smith"
+    ],
+    "summary": "We propose a novel pipeline, Legato 2, for extracting symbolic notation and semantic knowledge from images of sheet music. Legato 2 features the first large-scale neural model for optical music recognition (OMR) to operate sequentially on a system-by-system basis, following the horizontal lines of notation as they are read on the page, rather than treating the page as an undifferentiated image, enabling better scaling to arbitrarily long inputs. It is also the first OMR model capable of generating symbolic transcriptions that include embedded textual content, such as titles and annotations. The pipeline combines system-level segmentation with an autoregressive vision-LM to capture both local notation details and score structure. Across multiple datasets, Legato 2 consistently outperforms prior state of the art. We also show that symbolic transcriptions complement visual inputs for frontier language models, improving their interpretation of dense musical documents. Legato 2 establishes new state-of-the-art performance in both OMR and downstream sheet music understanding.",
+    "published": "Jul 07",
+    "pdf_url": "https://arxiv.org/pdf/2607.05769v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.05769v1",
+    "queried_author": "Noah A. Smith",
+    "matching_authors": [
+      "Noah A. Smith"
+    ]
+  },
+  {
     "title": "Unified Audio Intelligence Without Regressing on Text Intelligence",
     "authors": [
       "Zhifeng Kong",
@@ -25,8 +58,8 @@
     ],
     "summary": "Audio intelligence involves understanding, reasoning about, and generating both audio and speech. In this work, we introduce Nemotron-Labs-Audex-30B-A3B (Audex), a unified audio-text LLM built on Nemotron-Cascade-2-30B-A3B, a strong text-only MoE LLM. Audex adopts a simple unified design with a single Transformer decoder: audio inputs are encoded and projected into the text embedding space, while text tokens and quantized audio output tokens are treated uniformly during generation. This architecture enables strong audio-text fusion, seamless multimodal generation, and compatibility with standard LLM training and inference infrastructure. For training, we meticulously curate audio-text datasets comprising 157.4B audio tokens and 320.5B text tokens. We apply multi-stage supervised training on these datasets, followed by text-only Cascade RL and multi-domain on-policy distillation. Audex delivers state-of-the-art audio understanding, speech recognition and translation, text-to-speech, audio generation, and speech-to-speech generation, while preserving very compelling reasoning, alignment, knowledge, long-context, and agentic capabilities of its text-only LLM backbone with marginal or no regression. We release the model checkpoints to facilitate open research.",
     "published": "Jul 06",
-    "pdf_url": "https://arxiv.org/pdf/2607.05196v1",
-    "arxiv_url": "http://arxiv.org/abs/2607.05196v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.05196v2",
+    "arxiv_url": "http://arxiv.org/abs/2607.05196v2",
     "queried_author": "Mohammad Shoeybi",
     "matching_authors": [
       "Mohammad Shoeybi"
@@ -183,10 +216,10 @@
       "Amit Zuker",
       "Ran El-Yaniv"
     ],
-    "summary": "We present Nemotron-Labs-3-Puzzle-75B-A9B, a compressed variant of Nemotron-3-Super optimized for interactive deployment. We designed the model to maximize server throughput under high user throughput constraints. In interactive serving workloads on a single 8xB200 node, Puzzle-75B-A9B achieves approximately 2x higher server throughput than Nemotron-3-Super at matched user throughput constraints. In ultra-long-context deployment on a single H100 GPU, the compressed model increases 1M-token concurrency from 1 request to 8 requests. Puzzle-75B-A9B is constructed using a multi-stage pipeline that combines the Iterative Puzzle compression framework with knowledge distillation, reinforcement learning, quantization, and a Multi-Token Prediction head. The compression process jointly optimizes heterogeneous MoE pruning, active parameter budget, and Mamba pruning to improve inference efficiency while preserving model quality. We evaluate Puzzle-75B-A9B on a broad suite of reasoning, coding, multilingual, long-context, and agentic benchmarks. Despite substantial compression, the model retains strong downstream accuracy relative to the parent model across a wide range of tasks. These results demonstrate that large hybrid MoE models can be substantially optimized for deployment efficiency while maintaining strong downstream capability.",
+    "summary": "We present Nemotron-Labs-3-Puzzle-75B-A9B, a compressed variant of Nemotron-3-Super optimized for interactive deployment. We designed the model to maximize server throughput under high user throughput constraints. In interactive serving workloads on a single 8xB200 node, Puzzle-75B-A9B achieves approximately 2x higher server throughput than Nemotron-3-Super at matched user throughput constraints. In ultra-long-context deployment on a single H100 GPU, the compressed model increases 1M-token concurrency from 1 request to 8 requests. Puzzle-75B-A9B is constructed using a multi-stage pipeline that combines the Iterative Puzzle compression framework with knowledge distillation, reinforcement learning, quantization, and a Multi-Token Prediction head. The compression process jointly optimizes heterogeneous MoE pruning, active parameter budget, and Mamba pruning to improve inference efficiency while preserving model quality. We evaluate Puzzle-75B-A9B on a broad suite of reasoning, coding, multilingual, long-context, and agentic benchmarks. Despite substantial compression, the model retains strong downstream accuracy relative to the parent model across a wide range of tasks. These results demonstrate that large hybrid MoE models can be substantially optimized for deployment efficiency while maintaining strong downstream capability. Our model is publicly available on Hugging Face.",
     "published": "Jul 05",
-    "pdf_url": "https://arxiv.org/pdf/2607.04371v1",
-    "arxiv_url": "http://arxiv.org/abs/2607.04371v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.04371v2",
+    "arxiv_url": "http://arxiv.org/abs/2607.04371v2",
     "queried_author": "Mostofa Patwary",
     "matching_authors": [
       "Mostofa Patwary"
@@ -2009,6 +2042,23 @@
     "queried_author": "Colin Raffel",
     "matching_authors": [
       "Colin Raffel"
+    ]
+  },
+  {
+    "title": "CCBENCH: Assessing LLM Cultural Competence via Implicitly Signaled Norms using Health Queries",
+    "authors": [
+      "Vasudha Varadarajan",
+      "Akhila Yerukola",
+      "Mona T. Diab",
+      "Maarten Sap"
+    ],
+    "summary": "To interact with users fairly and without stereotyping, AI models must display cultural competency, i.e., the ability to infer and adapt to a user's implicitly signaled cultural values, rather than relying on static demographic traits. We introduce CCBENCH, a framework for evaluating cultural competency in large language models (LLMs), treating culture as a continuum of norm adherence states rather than as a binary state of cultural belongingness. As a case study on health, we create CCBENCH-Health, which includes 60 theoretically grounded personas exhibiting varied norm-adherence states across six cultures, each engaging in 18 realistic dialogues. Each persona is evaluated on 52 authentic healthcare questions drawn from real user forums, yielding 3,120 unique interactions. Benchmarking five leading models reveals that even the best achieve culturally appropriate responses only 20-30% of the time. When explicitly prompted to focus on culturally relevant cues from the conversational history (CoT), performance improves modestly by 3-5% on average. We find that models perform best when personas avoid cultural norms rather than follow them, revealing a persistent asymmetry, suggesting a preference in the models to align with built-in biases than adapt to cultural cues. This is especially observed in the Afghan context (Avg: 8.8%), where cultural cues rarely yield appropriate health advice. Finally, we find that models sometimes adapt more readily to implicit, cultural conversational styles than to explicitly stated cultural practices, though this varies across cultures.",
+    "published": "Jun 08",
+    "pdf_url": "https://arxiv.org/pdf/2607.05405v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.05405v1",
+    "queried_author": "Maarten Sap",
+    "matching_authors": [
+      "Maarten Sap"
     ]
   },
   {
@@ -13487,69 +13537,6 @@
       "Mohammad Shoeybi",
       "Mostofa Patwary",
       "Yejin Choi"
-    ]
-  },
-  {
-    "title": "TokSuite: Measuring the Impact of Tokenizer Choice on Language Model Behavior",
-    "authors": [
-      "G\u00fcl Sena Alt\u0131nta\u015f",
-      "Malikeh Ehghaghi",
-      "Brian Lester",
-      "Fengyuan Liu",
-      "Wanru Zhao",
-      "Marco Ciccone",
-      "Colin Raffel"
-    ],
-    "summary": "Tokenizers provide the fundamental basis through which text is represented and processed by language models (LMs). Despite the importance of tokenization, its role in LM performance and behavior is poorly understood due to the challenge of measuring the impact of tokenization in isolation. To address this need, we present TokSuite, a collection of models and a benchmark that supports research into tokenization's influence on LMs. Specifically, we release fourteen pre-trained models that use different off-the-shelf tokenizers but are otherwise identical, using the same architecture, dataset, training budget, and initialization. We also release a multilingual robustness benchmark that measures model performance under real-world perturbations in English, Chinese, Farsi, Italian, and Turkish, curated by native annotators. Together, TokSuite allows robust decoupling of the influence of a model's tokenizer, supporting a series of novel findings that elucidate the respective benefits and shortcomings of a wide range of popular tokenizers.",
-    "published": "Dec 23",
-    "pdf_url": "https://arxiv.org/pdf/2512.20757v2",
-    "arxiv_url": "http://arxiv.org/abs/2512.20757v2",
-    "queried_author": "Colin Raffel",
-    "matching_authors": [
-      "Colin Raffel"
-    ]
-  },
-  {
-    "title": "Distilling to Hybrid Attention Models via KL-Guided Layer Selection",
-    "authors": [
-      "Yanhong Li",
-      "Songlin Yang",
-      "Shawn Tan",
-      "Mayank Mishra",
-      "Rameswar Panda",
-      "Jiawei Zhou",
-      "Yoon Kim"
-    ],
-    "summary": "Distilling pretrained softmax attention Transformers into more efficient hybrid architectures that interleave softmax and linear attention layers is a promising approach for improving the inference efficiency of LLMs without requiring expensive pretraining from scratch. A critical factor in the conversion process is layer selection, i.e., deciding on which layers to convert to linear attention variants. This paper describes a simple and efficient recipe for layer selection that uses layer importance scores derived from a small amount of training on generic text data. Once the layers have been selected we use a recent pipeline for the distillation process itself \\citep[RADLADS;][]{goldstein2025radlads}, which consists of attention weight transfer, hidden state alignment, KL-based distribution matching, followed by a small amount of finetuning. We find that this approach is more effective than existing approaches for layer selection, including heuristics that uniformly interleave linear attentions based on a fixed ratio, as well as more involved approaches that rely on specialized diagnostic datasets.",
-    "published": "Dec 23",
-    "pdf_url": "https://arxiv.org/pdf/2512.20569v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.20569v1",
-    "queried_author": "Yoon Kim",
-    "matching_authors": [
-      "Yoon Kim"
-    ]
-  },
-  {
-    "title": "SweRank+: Multilingual, Multi-Turn Code Ranking for Software Issue Localization",
-    "authors": [
-      "Revanth Gangi Reddy",
-      "Ye Liu",
-      "Wenting Zhao",
-      "JaeHyeok Doo",
-      "Tarun Suresh",
-      "Daniel Lee",
-      "Caiming Xiong",
-      "Yingbo Zhou",
-      "Semih Yavuz",
-      "Shafiq Joty"
-    ],
-    "summary": "Maintaining large-scale, multilingual codebases hinges on accurately localizing issues, which requires mapping natural-language error descriptions to the relevant functions that need to be modified. However, existing ranking approaches are often Python-centric and perform a single-pass search over the codebase. This work introduces SweRank+, a framework that couples SweRankMulti, a cross-lingual code ranking tool, with SweRankAgent, an agentic search setup, for iterative, multi-turn reasoning over the code repository. SweRankMulti comprises a code embedding retriever and a listwise LLM reranker, and is trained using a carefully curated large-scale issue localization dataset spanning multiple popular programming languages. SweRankAgent adopts an agentic search loop that moves beyond single-shot localization with a memory buffer to reason and accumulate relevant localization candidates over multiple turns. Our experiments on issue localization benchmarks spanning various languages demonstrate new state-of-the-art performance with SweRankMulti, while SweRankAgent further improves localization over single-pass ranking.",
-    "published": "Dec 23",
-    "pdf_url": "https://arxiv.org/pdf/2512.20482v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.20482v1",
-    "queried_author": "Wenting Zhao",
-    "matching_authors": [
-      "Wenting Zhao"
     ]
   }
 ]
