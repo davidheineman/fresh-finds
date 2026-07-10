@@ -1,5 +1,22 @@
 [
   {
+    "title": "PLURAL: A Global Dataset for Value Alignment",
+    "authors": [
+      "Dhruv Agarwal",
+      "Anya Shukla",
+      "Tanya Goyal",
+      "Aditya Vashistha"
+    ],
+    "summary": "Large language models (LLMs) are used worldwide, yet disproportionately reflect Western values, limiting their ability to represent diverse value systems. We introduce PLURAL, a large-scale, value-focused preference dataset grounded in the Integrated Values Survey (IVS), a nationally representative survey spanning 92 countries. Using a two-stage generation pipeline, we transform survey responses into synthetic preference triplets that preserve normative value signals while producing realistic scenarios. We release an initial version of PLURAL containing ~500,000 preference triplets representing people in 20 diverse countries. We evaluate PLURAL in three ways: (i) dataset-level validation showing that it preserves both cross-country value differences and within-country diversity from the original survey; (ii) automated evaluation showing that training on PLURAL improves alignment with target countries' cultural profiles, reducing mean absolute error by up to 27.7% relative to strong baselines; and (iii) blind human evaluation with 176 evaluators in India, Brazil, and Japan, who judge PLURAL-aligned responses as more representative of their national values. Together, these results show that PLURAL contains learnable signal for value steering, offering a scalable resource for pluralistic alignment. Dataset: https://huggingface.co/datasets/agdhruv/plural-alignment",
+    "published": "Jul 09",
+    "pdf_url": "https://arxiv.org/pdf/2607.08034v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.08034v1",
+    "queried_author": "Tanya Goyal",
+    "matching_authors": [
+      "Tanya Goyal"
+    ]
+  },
+  {
     "title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
     "authors": [
       "Yair Feldman",
@@ -12850,25 +12867,6 @@
     "queried_author": "Diyi Yang",
     "matching_authors": [
       "Diyi Yang"
-    ]
-  },
-  {
-    "title": "An Information Theoretic Perspective on Agentic System Design",
-    "authors": [
-      "Shizhe He",
-      "Avanika Narayan",
-      "Ishan S. Khare",
-      "Scott W. Linderman",
-      "Christopher R\u00e9",
-      "Dan Biderman"
-    ],
-    "summary": "Agentic language model (LM) systems power modern applications like \"Deep Research\" and \"Claude Code,\" and leverage multi-LM architectures to overcome context limitations. Beneath their apparent diversity lies a recurring pattern: smaller \"compressor\" LMs (that can even run locally) distill raw context into compact text that is then consumed by larger \"predictor\" LMs. Despite their popularity, the design of compressor-predictor systems remains largely ad hoc, with little guidance on how compressor and predictor choices shape downstream performance. In practice, attributing gains to compression versus prediction requires costly, task-specific pairwise sweeps. We argue that these agentic system design questions are, at root, information-theoretic. Viewing the compressor LM as a noisy channel, we introduce a simple estimator of mutual information between the context and its compression to quantify compression quality in a task-independent way. We show that mutual information strongly predicts downstream performance, independent of any specific task. Through an information-theoretic framework, we perform a comprehensive empirical analysis across five datasets and three model families. Results reveal that larger compressors not only are more accurate, but also more token-efficient, conveying more bits of information per token. A 7B Qwen-2.5 compressor, for instance, is $1.6\\times$ more accurate, $4.6\\times$ more concise, and conveys $5.5\\times$ more bits of mutual information per token than its 1.5B sibling. Across datasets, scaling compressors is substantially more effective tha...",
-    "published": "Dec 25",
-    "pdf_url": "https://arxiv.org/pdf/2512.21720v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.21720v1",
-    "queried_author": "Christopher R\u00e9",
-    "matching_authors": [
-      "Christopher R\u00e9"
     ]
   }
 ]
