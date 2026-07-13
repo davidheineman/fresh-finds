@@ -8741,8 +8741,8 @@
     ],
     "summary": "The last layer of neural language models (LMs) projects output features of dimension $D$ to logits in dimension $V$, the size of the vocabulary, where usually $D \\ll V$. This mismatch is known to raise risks of limited expressivity in neural LMs, creating a so-called softmax bottleneck. We show the softmax bottleneck is not only an expressivity bottleneck but also an optimization bottleneck. Backpropagating $V$-dimensional gradients through a rank-$D$ linear layer induces unavoidable compression, which alters the training feedback provided to the vast majority of the parameters. We present a theoretical analysis of this phenomenon and measure empirically that 95-99% of the gradient norm is suppressed by the output layer, resulting in vastly suboptimal update directions. We conduct controlled pretraining experiments showing that the gradient bottleneck makes trivial patterns unlearnable, and drastically affects the training dynamics of LLMs. We argue that this inherent flaw contributes to training inefficiencies at scale independently of the model architecture, and raises the need for new LM head designs.",
     "published": "Mar 10",
-    "pdf_url": "https://arxiv.org/pdf/2603.10145v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.10145v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.10145v2",
+    "arxiv_url": "http://arxiv.org/abs/2603.10145v2",
     "queried_author": "Yoav Artzi",
     "matching_authors": [
       "Yoav Artzi"
