@@ -1,5 +1,44 @@
 [
   {
+    "title": "FaciliTrain: Practicing Facilitation Skills through AI-Simulated Group Dialogue",
+    "authors": [
+      "Hang Jiang",
+      "Yuanxin Zhu",
+      "Diyi Yang",
+      "Yoon Kim",
+      "Deb Roy",
+      "Jad Kabbara"
+    ],
+    "summary": "Skilled facilitation supports inclusive small-group dialogue, but deliberate practice is hard to scale: it depends on expert coaches, live practice partners, and iterative feedback. We present FaciliTrain, a voice-based training system in which learners step into the facilitator role of an AI-simulated multi-participant conversation, apply five evidence-based techniques, and receive structured AI feedback to support reflection. We report findings from a mixed-methods study with 24 participants, conducted as a formative study (N = 12) and a controlled pilot (N = 12; 6 treatment, 6 control). Both conditions achieved comparable accuracy on a live evaluation task, though treatment participants' self-rated comfort declined significantly while control participants' comfort improved (p = .018). Reflexive thematic analysis identifies four themes: the taxonomy externalizes implicit facilitation intuitions; Making Connections is the most cognitively demanding technique; voice acts as a deliberate-response forcing function; and participants overwhelmingly preferred AI feedback over self-practice. We discuss design implications for voice-based, AI-supported interpersonal skill training at scale.",
+    "published": "Jul 12",
+    "pdf_url": "https://arxiv.org/pdf/2607.10850v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.10850v1",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang",
+      "Yoon Kim"
+    ]
+  },
+  {
+    "title": "MLPs are Hebbians: Constructing Efficient Fact-Storing MLPs for Transformers",
+    "authors": [
+      "Roberto Garcia",
+      "Jerry Liu",
+      "Ronny Junkins",
+      "Sabri Eyuboglu",
+      "Atri Rudra",
+      "Christopher R\u00e9"
+    ],
+    "summary": "Large language models (LLMs) store factual knowledge in their parameters. While recent work has shown that this knowledge resides in MLP layers, existing constructive and mechanistic interpretability models of fact-storage in LLMs fail to explain the surprising empirical phenomenon that they store facts at an information-theoretically optimal rate. In this work, we develop a theoretical account of this phenomenon. We develop the first Transformer-compatible fact-storing MLP closed-form construction that satisfies the following three properties empirically observed in LLMs: it (i) attains optimal fact storage scaling, (ii) handles arbitrary input/output geometries, and (iii) works inside Transformers. Key to our work is to analyze the decoding margin of MLPs, whereas prior work only studies MLP fact storage. Under isotropic embeddings, our construction achieves information-theoretically optimal storage capacity scaling and requires $10$-$104\\times$ fewer parameters at matched fact count than prior constructions. For arbitrary key and value embeddings, we show that our construction attains the same storage capacity scaling, up to penalization factors depending on the embedding geometries. Moreover, we demonstrate that our constructed MLPs can be used within Transformer blocks for factual recall tasks at optimal capacity scaling, requiring $15$-$63\\times$ fewer parameters at matched fact count than prior constructions. Finally, as a proof-of-concept, we show that fact-storing MLPs enable modular fact editing by swapping a Transformer's MLP with a new one.",
+    "published": "Jul 10",
+    "pdf_url": "https://arxiv.org/pdf/2607.10034v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.10034v1",
+    "queried_author": "Christopher R\u00e9",
+    "matching_authors": [
+      "Christopher R\u00e9"
+    ]
+  },
+  {
     "title": "PLURAL: A Global Dataset for Value Alignment",
     "authors": [
       "Dhruv Agarwal",
@@ -127,8 +166,8 @@
     ],
     "summary": "Scientists often seek to draw causal inferences from structured data that is not independently and identically distributed, such as spatial data, network data, or molecular data. We develop geometric causal models (GCMs), a framework for causal inference from dependent data that exploits underlying symmetries of the data generating process. For example, in spatial data, we consider processes that are symmetric under translations, or in graph data, symmetric under permutations of the nodes. We show how symmetries, formalized with group theory, can enable causal identification and estimation. We deploy ergodic theory for amenable groups to establish identification, and combine geometric deep learning with scalable Bayesian inference for estimation. We recover i.i.d. causal models and do-calculus when the data is a sequence and the symmetry is permutation equivariance, and find novel types of causal models when we use alternate structures and symmetries. As an example, we construct a causal model that satisfies the symmetries of DNA. This GCM enables new estimators for the effects of genetic variation, combining deep functional genomics models to describe outcomes and DNA language models to describe propensities. We illustrate on semisynthetic data.",
     "published": "Jul 06",
-    "pdf_url": "https://arxiv.org/pdf/2607.05153v1",
-    "arxiv_url": "http://arxiv.org/abs/2607.05153v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.05153v2",
+    "arxiv_url": "http://arxiv.org/abs/2607.05153v2",
     "queried_author": "David M. Blei",
     "matching_authors": [
       "David M. Blei"
@@ -991,6 +1030,25 @@
     "matching_authors": [
       "Dan Jurafsky",
       "Diyi Yang"
+    ]
+  },
+  {
+    "title": "Reference-Based Distillation Detection in LLMs",
+    "authors": [
+      "Rajat Rawat",
+      "Sizhe Chen",
+      "Akshay Anand",
+      "Michael Duan",
+      "Bob Rotsted",
+      "Sewon Min"
+    ],
+    "summary": "Model distillation -- training on outputs from stronger third-party models -- is widely used to boost performance, but raises concerns about unfair advantages and policy violations. This motivates a fundamental question: can we detect whether a model was distilled from another? We show that, while identifying a teacher model from a student in isolation is highly challenging, it becomes tractable in a reference-based setting: given a model and an earlier-generation checkpoint from the same lineage, we can identify the teacher model used to train the later checkpoint. We introduce a distillation detection method based on reference-based membership inference. By comparing how strongly a student model preferentially aligns with outputs from different candidate teachers relative to a reference checkpoint, our method identifies the most likely teacher and detects evidence of distillation. To handle unknown distillation pipelines such as hidden prompts, we infer proxy prompt templates directly from model outputs. We additionally identify a distinctive glyph-level signal specific to o1/o3 models. Evaluating distillation detection is challenging because modern model lineages are already heavily entangled. To address this, we develop a hybrid evaluation spanning both controlled distillation experiments and real-world models. Across both settings, our approach recovers the true teacher with near-perfect accuracy in single-teacher distillation scenarios, even when the underlying distillation pipeline is largely unknown. We further introduce statistical tests for both teacher attributio...",
+    "published": "Jun 19",
+    "pdf_url": "https://arxiv.org/pdf/2607.09692v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.09692v1",
+    "queried_author": "Sewon Min",
+    "matching_authors": [
+      "Sewon Min"
     ]
   },
   {
@@ -11626,8 +11684,8 @@
     ],
     "summary": "Due to limited supervised training data, large language models (LLMs) are typically pre-trained via a self-supervised \"predict the next word\" objective on a vast amount of unstructured text data. To make the resulting model useful to users, it is further trained on a far smaller amount of \"instruction-tuning\" data comprised of supervised training examples of instructions and responses. To overcome the limited amount of supervised data, we propose a procedure that can transform the knowledge in internet-scale pre-training documents into billions of synthetic instruction and answer training pairs. The resulting dataset, called FineInstructions, uses ~18M instruction templates created from real user-written queries and prompts. These instruction templates are matched to and instantiated with human-written source documents from unstructured pre-training corpora. With \"supervised\" synthetic training data generated at this scale, an LLM can be pre-trained from scratch solely with the instruction-tuning objective, which is far more in-distribution with the expected downstream usage of LLMs (responding to user prompts). We conduct controlled token-for-token training experiments and find pre-training on FineInstructions outperforms standard pre-training and other proposed synthetic pre-training techniques on standard benchmarks measuring free-form response quality. Our resources can be found at https://huggingface.co/fineinstructions .",
     "published": "Jan 29",
-    "pdf_url": "https://arxiv.org/pdf/2601.22146v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.22146v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.22146v2",
+    "arxiv_url": "http://arxiv.org/abs/2601.22146v2",
     "queried_author": "Colin Raffel",
     "matching_authors": [
       "Colin Raffel"
@@ -12805,68 +12863,6 @@
     "queried_author": "Jason Eisner",
     "matching_authors": [
       "Jason Eisner"
-    ]
-  },
-  {
-    "title": "End-to-End Test-Time Training for Long Context",
-    "authors": [
-      "Arnuv Tandon",
-      "Karan Dalal",
-      "Xinhao Li",
-      "Daniel Koceja",
-      "Marcel R\u00f8d",
-      "Sam Buchanan",
-      "Xiaolong Wang",
-      "Jure Leskovec",
-      "Sanmi Koyejo",
-      "Tatsunori Hashimoto",
-      "Carlos Guestrin",
-      "Jed McCaleb",
-      "Yejin Choi",
-      "Yu Sun"
-    ],
-    "summary": "We formulate long-context language modeling as a problem in continual learning rather than architecture design. Under this formulation, we only use a standard architecture -- a Transformer with sliding-window attention. However, our model continues learning at test time via next-token prediction on the given context, compressing the context it reads into its weights. In addition, we improve the model's initialization for learning at test time via meta-learning at training time. Overall, our method, a form of Test-Time Training (TTT), is End-to-End (E2E) both at test time (via next-token prediction) and training time (via meta-learning), in contrast to previous forms. We conduct extensive experiments with a focus on scaling properties. In particular, for 3B models trained with 164B tokens, our method (TTT-E2E) scales with context length in the same way as Transformer with full attention, while others, such as Mamba 2 and Gated DeltaNet, do not. However, similar to RNNs, TTT-E2E has constant inference latency regardless of context length, making it 2.7 times faster than full attention for 128K context. Our code is publicly available.",
-    "published": "Dec 29",
-    "pdf_url": "https://arxiv.org/pdf/2512.23675v2",
-    "arxiv_url": "http://arxiv.org/abs/2512.23675v2",
-    "queried_author": "Carlos Guestrin",
-    "matching_authors": [
-      "Carlos Guestrin",
-      "Jure Leskovec",
-      "Sanmi Koyejo",
-      "Tatsunori Hashimoto",
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Accelerating Language Model Workflows with Prompt Choreography",
-    "authors": [
-      "TJ Bai",
-      "Jason Eisner"
-    ],
-    "summary": "Large language models are increasingly deployed in multi-agent workflows. We introduce Prompt Choreography, a framework that efficiently executes LLM workflows by maintaining a dynamic, global KV cache. Each LLM call can attend to an arbitrary, reordered subset of previously encoded messages. Parallel calls are supported. Though caching messages' encodings sometimes gives different results from re-encoding them in a new context, we show in diverse settings that fine-tuning the LLM to work with the cache can help it mimic the original results. Prompt Choreography significantly reduces per-message latency (2.0--6.2$\\times$ faster time-to-first-token) and achieves substantial end-to-end speedups ($>$2.2$\\times$) in some workflows dominated by redundant computation.",
-    "published": "Dec 28",
-    "pdf_url": "https://arxiv.org/pdf/2512.23049v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.23049v1",
-    "queried_author": "Jason Eisner",
-    "matching_authors": [
-      "Jason Eisner"
-    ]
-  },
-  {
-    "title": "DECEPTICON: How Dark Patterns Manipulate Web Agents",
-    "authors": [
-      "Phil Cuvin",
-      "Hao Zhu",
-      "Diyi Yang"
-    ],
-    "summary": "Deceptive UI designs, widely instantiated across the web and commonly known as dark patterns, manipulate users into performing actions misaligned with their goals. In this paper, we show that dark patterns are highly effective in steering agent trajectories, posing a significant risk to agent robustness. To quantify this risk, we introduce DECEPTICON, an environment for testing individual dark patterns in isolation. DECEPTICON includes 700 web navigation tasks with dark patterns -- 600 generated tasks and 100 real-world tasks, designed to measure instruction-following success and dark pattern effectiveness. Across state-of-the-art agents, we find dark patterns successfully steer agent trajectories towards malicious outcomes in over 70% of tested generated and real-world tasks -- compared to a human average of 31%. Moreover, we find that dark pattern effectiveness correlates positively with model size and test-time reasoning, making larger, more capable models more susceptible. Leading countermeasures against adversarial attacks, including in-context prompting and guardrail models, fail to consistently reduce the success rate of dark pattern interventions. Our findings reveal dark patterns as a latent and unmitigated risk to web agents, highlighting the urgent need for robust defenses against manipulative designs.",
-    "published": "Dec 28",
-    "pdf_url": "https://arxiv.org/pdf/2512.22894v2",
-    "arxiv_url": "http://arxiv.org/abs/2512.22894v2",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang"
     ]
   }
 ]
