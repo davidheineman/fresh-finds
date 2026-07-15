@@ -1,5 +1,49 @@
 [
   {
+    "title": "Extractable Memorization From First Principles",
+    "authors": [
+      "A. Feder Cooper",
+      "Marika Swanberg",
+      "Jamie Hayes",
+      "Lea Duesterwald",
+      "Christopher De Sa",
+      "Daniel E. Ho",
+      "Mark A. Lemley",
+      "Percy Liang"
+    ],
+    "summary": "Recent work on extractable memorization in LLMs suffers from two contrasting validity problems. Some studies overstate extraction, e.g., relying on sequences too short to distinguish memorization from predictability. Others imply that extraction is unreliable evidence of memorization, since models can also reproduce real-world text they weren't explicitly trained on. In different ways, both overlook what makes a valid extraction claim: the model must generate a training sequence with high enough probability to indicate memorization. To determine what's high enough, one has to perform a matched comparison: measuring the generation probabilities of both the training sequences of interest and comparable non-training sequences. Because non-training sequences cannot have been memorized, their probabilities provide a baseline for predictability; a training sequence exceeding this baseline provides evidence of memorization. We formalize matched comparisons in two ways: (1) a conformal test that calibrates a threshold to a chosen FPR when training and non-training sequences are sampled from populations, and (2) a census that calibrates against a matched non-training document when the object is a single document (e.g., a book). We show that matched comparisons enable rigorous, calibrated memorization claims, and reveal where prior setups have validity issues. For instance, on Wikipedia OLMo 2 32B reproduces non-training 10-token suffixes roughly 24% as often as training ones: that share of the training generation rate reflects false positives, not memorization. For Llama 3.1 70B on ...",
+    "published": "Jul 14",
+    "pdf_url": "https://arxiv.org/pdf/2607.12649v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.12649v1",
+    "queried_author": "Percy Liang",
+    "matching_authors": [
+      "Percy Liang"
+    ]
+  },
+  {
+    "title": "Rethinking the Evaluation of Harness Evolution for Agents",
+    "authors": [
+      "Yike Wang",
+      "Huaisheng Zhu",
+      "Zhengyu Hu",
+      "Yige Yuan",
+      "Zhengyu Chen",
+      "Shakti Senthil",
+      "Hannaneh Hajishirzi",
+      "Yulia Tsvetkov",
+      "Pradeep Dasigi",
+      "Teng Xiao"
+    ],
+    "summary": "We revisit the evaluation of automatic harness evolution for LLM agents. Existing harness evolution methods use unit test cases to search for harness configurations and then report final performance on the same public benchmark. This protocol raises two fundamental concerns. First, harness evolution is itself an iterative search procedure that repeatedly evaluates and revises candidate harnesses using task feedback. As in agentic test-time scaling, it should therefore be compared with simple task-level search baselines under matched feedback and inference budgets to determine whether its gains arise from improved harness design or from additional search alone. Second, because the search and the final evaluation share the same benchmark, the reported gains risk overfitting to that specific task set. To address these concerns, we conduct an extensive evaluation comparing harness evolution with simple test-time scaling and discovery baselines under comparable feedback and inference budgets, and also evaluate evolved harnesses on held-out tasks to assess whether the discovered improvements generalize. Experiments on Terminal-Bench 2.1 with GPT-5.4 and Claude Opus 4.6 show that automatic harness evolution does not consistently outperform simple test-time scaling methods and exhibits limited generalization. Our results raise important questions about the effectiveness of automatic harness evolution and highlight the need for fairer evaluation protocols and benchmarks for automatic harness design. Our code is available at https://github.com/rethinking-harness-evolution.",
+    "published": "Jul 14",
+    "pdf_url": "https://arxiv.org/pdf/2607.12227v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.12227v1",
+    "queried_author": "Hannaneh Hajishirzi",
+    "matching_authors": [
+      "Hannaneh Hajishirzi"
+    ]
+  },
+  {
     "title": "FaciliTrain: Practicing Facilitation Skills through AI-Simulated Group Dialogue",
     "authors": [
       "Hang Jiang",
@@ -11371,10 +11415,10 @@
       "Carlos Guestrin",
       "Jure Leskovec"
     ],
-    "summary": "Relational Foundation Models (RFMs) facilitate data-driven decision-making by learning from complex multi-table databases. However, the diverse relational databases needed to train such models are rarely public due to privacy constraints. While there are methods to generate synthetic tabular data of arbitrary size, incorporating schema structure and primary--foreign key connectivity for multi-table generation remains challenging. Here we introduce PluRel, a framework to synthesize multi-tabular relational databases from scratch. In a step-by-step fashion, PluRel models (1) schemas with directed graphs, (2) inter-table primary-foreign key connectivity with bipartite graphs, and, (3) feature distributions in tables via conditional causal mechanisms. The design space across these stages supports the synthesis of a wide range of diverse databases, while being computationally lightweight. Using PluRel, we observe for the first time that (1) RFM pretraining loss exhibits power-law scaling with the number of synthetic databases and total pretraining tokens, (2) scaling the number of synthetic databases improves generalization to real databases, and (3) synthetic pretraining yields strong base models for continued pretraining on real databases. Overall, our framework and results position synthetic data scaling as a promising paradigm for RFMs.",
+    "summary": "Relational Foundation Models (RFMs) facilitate data-driven decision-making by learning from complex multi-table databases. However, the diverse relational databases needed to train such models are rarely public due to privacy constraints. While there are methods to generate synthetic tabular data of arbitrary size, incorporating schema structure and primary-foreign key connectivity for multi-table generation remains challenging. Here we introduce PLUREL, a framework to synthesize multi-tabular relational databases from scratch. In a step-by-step fashion, PLUREL models (1) schemas with directed graphs, (2) inter-table primary-foreign key connectivity with bipartite graphs, and, (3) feature distributions in tables via conditional causal mechanisms. The design space across these stages supports the synthesis of a wide range of diverse databases, while being computationally lightweight. Using PLUREL, we observe for the first time that (1) RFM pretraining loss exhibits power-law scaling with the number of synthetic databases and total pretraining tokens, (2) scaling the number of synthetic databases improves generalization to real databases, and (3) synthetic pretraining yields strong base models for continued pretraining on real databases. Overall, our framework and results position synthetic data scaling as a promising paradigm for RFMs.",
     "published": "Feb 03",
-    "pdf_url": "https://arxiv.org/pdf/2602.04029v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.04029v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.04029v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.04029v2",
     "queried_author": "Carlos Guestrin",
     "matching_authors": [
       "Carlos Guestrin",
@@ -12830,39 +12874,6 @@
     "queried_author": "Colin Raffel",
     "matching_authors": [
       "Colin Raffel"
-    ]
-  },
-  {
-    "title": "Recursive Language Models",
-    "authors": [
-      "Alex L. Zhang",
-      "Tim Kraska",
-      "Omar Khattab"
-    ],
-    "summary": "We study allowing large language models (LLMs) to process arbitrarily long prompts through the lens of inference-time scaling. We propose Recursive Language Models (RLMs), a general inference paradigm that treats long prompts as part of an external environment and allows the LLM to programmatically examine, decompose, and recursively call itself over snippets of the prompt. We find that RLMs can successfully process inputs up to two orders of magnitude beyond model context windows and, even for shorter prompts, dramatically outperform the quality of vanilla frontier LLMs and common long-context and coding scaffolds (e.g., on GPT-5 by a median across the evaluated benchmarks of $26\\%$ against compaction, $130\\%$ against CodeAct with sub-calls, and $13\\%$ against Claude Code) across four diverse long-context tasks while having comparable cost. At a small scale, we post-train the first model around the RLM. Our model, RLM-Qwen3-8B, outperforms the underlying Qwen3-8B model by $28.3\\%$ on average and even approaches the quality of vanilla GPT-5 on three long-context tasks. Code is available at https://github.com/alexzhang13/rlm.",
-    "published": "Dec 31",
-    "pdf_url": "https://arxiv.org/pdf/2512.24601v3",
-    "arxiv_url": "http://arxiv.org/abs/2512.24601v3",
-    "queried_author": "Omar Khattab",
-    "matching_authors": [
-      "Omar Khattab"
-    ]
-  },
-  {
-    "title": "Fine-Tuning LLMs with Fine-Grained Human Feedback on Text Spans",
-    "authors": [
-      "Sky CH-Wang",
-      "Justin Svegliato",
-      "Helen Appel",
-      "Jason Eisner"
-    ],
-    "summary": "We present a method and dataset for fine-tuning language models with preference supervision using feedback-driven improvement chains. Given a model response, an annotator provides fine-grained feedback by marking ``liked'' and ``disliked'' spans and specifying what they liked or disliked about them. The base model then rewrites the disliked spans accordingly, proceeding from left to right, forming a sequence of incremental improvements. We construct preference pairs for direct alignment from each adjacent step in the chain, enabling the model to learn from localized, targeted edits. We find that our approach outperforms direct alignment methods based on standard A/B preference ranking or full contrastive rewrites, demonstrating that structured, revision-based supervision leads to more efficient and effective preference tuning.",
-    "published": "Dec 29",
-    "pdf_url": "https://arxiv.org/pdf/2512.23693v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.23693v1",
-    "queried_author": "Jason Eisner",
-    "matching_authors": [
-      "Jason Eisner"
     ]
   }
 ]
