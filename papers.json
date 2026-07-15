@@ -1,5 +1,22 @@
 [
   {
+    "title": "The Illusion of Robustness: Aggregate Accuracy Hides Prediction Flips under Task-Irrelevant Context",
+    "authors": [
+      "Yanzhe Zhang",
+      "Sanmi Koyejo",
+      "Diyi Yang"
+    ],
+    "summary": "As large language models (LLMs) grow more capable, they are increasingly deployed in context-rich settings where task inputs are often accompanied by long, partially irrelevant context. In a controlled setting, we find that state-of-the-art models often appear robust to task-irrelevant context at the aggregate level: prepending it to benchmark questions causes little change in overall accuracy. This aggregate stability, however, masks significant per-example instability. Even semantically meaningless pseudo-words, formed by randomly combining characters, can markedly shift model predictions on a small fraction of examples, degrading performance on some while improving it on others. This two-sided effect holds consistently across a wide range of models and datasets, yet the affected examples are largely model-specific. We further show that this instability is modulated by context type, context length, test-time compute, and model development stage. Together, our findings reveal context-induced tail risks concealed by aggregate accuracy, motivating per-example reliability evaluation of language models.",
+    "published": "Jul 14",
+    "pdf_url": "https://arxiv.org/pdf/2607.12963v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.12963v1",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang",
+      "Sanmi Koyejo"
+    ]
+  },
+  {
     "title": "Extractable Memorization From First Principles",
     "authors": [
       "A. Feder Cooper",
@@ -12859,21 +12876,6 @@
     "matching_authors": [
       "Ludwig Schmidt",
       "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Efficiently Estimating Data Efficiency for Language Model Fine-tuning",
-    "authors": [
-      "Gyung Hyun Je",
-      "Colin Raffel"
-    ],
-    "summary": "While large language models (LLMs) demonstrate reasonable zero-shot capability across many downstream tasks, fine-tuning is a common practice to improve their performance. However, a task's data efficiency--i.e., the number of fine-tuning examples needed to achieve a desired level of performance--is often unknown, resulting in costly cycles of incremental annotation and retraining. Indeed, we demonstrate across a curated set of 30 specialized tasks that performant LLMs may struggle zero-shot but can attain stronger performance after fine-tuning. This motivates the need for methods to predict a task's data efficiency without requiring incremental annotation. After introducing a concrete metric that quantifies a task's data efficiency, we propose using the gradient cosine similarity of low-confidence examples to predict data efficiency based on a small number of labeled samples. We validate our approach on a diverse set of tasks with varying data efficiencies, attaining 8.6% error in overall data efficiency prediction and typically eliminating hundreds of unnecessary annotations on each task. Our experiment results and implementation code are available on GitHub.",
-    "published": "Dec 31",
-    "pdf_url": "https://arxiv.org/pdf/2512.24991v1",
-    "arxiv_url": "http://arxiv.org/abs/2512.24991v1",
-    "queried_author": "Colin Raffel",
-    "matching_authors": [
-      "Colin Raffel"
     ]
   }
 ]
