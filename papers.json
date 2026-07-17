@@ -1,5 +1,25 @@
 [
   {
+    "title": "Pretraining Data Can Be Poisoned through Computational Propaganda",
+    "authors": [
+      "Victoria Graf",
+      "Hannaneh Hajishirzi",
+      "Noah A. Smith",
+      "David Kohlbrenner",
+      "Kyle Lo"
+    ],
+    "summary": "Poisoning pretraining data can introduce harmful behaviors to LMs that are difficult to detect and mitigate. Prior work on poisoning pretraining data has largely exploited established data sources such as Wikipedia, which do not represent the large scale and heterogeneity typical of pretraining corpora, and has ignored the interaction between poisoned data and data curation pipelines. We demonstrate that poisoning attacks on pretraining data are feasible beyond this limited setting through an existing web-scale content injection mechanism: public discussion interfaces. Additionally, to measure whether malicious content is included after web crawling and data curation, we introduce HalfLife, a novel analysis for estimating adversarial content inclusion in web-crawl based LM training data. We use HalfLife to explore the feasibility of poisoning pretraining corpora at web scale through open discussion interfaces. Our analysis demonstrates the importance of estimating whether poison injections are included in pretraining data, and establishes third-party webpage content as a possible vector for attacking language model pretraining.",
+    "published": "Jul 16",
+    "pdf_url": "https://arxiv.org/pdf/2607.15267v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.15267v1",
+    "queried_author": "Hannaneh Hajishirzi",
+    "matching_authors": [
+      "Hannaneh Hajishirzi",
+      "Kyle Lo",
+      "Noah A. Smith"
+    ]
+  },
+  {
     "title": "The Illusion of Robustness: Aggregate Accuracy Hides Prediction Flips under Task-Irrelevant Context",
     "authors": [
       "Yanzhe Zhang",
@@ -1079,14 +1099,14 @@
       "Myra Cheng",
       "Cinoo Lee",
       "Pranav Khadpe",
-      "Desmong Ong",
+      "Desmond Ong",
       "Dan Jurafsky",
       "Diyi Yang"
     ],
     "summary": "Recent work has raised concerns about the influence of sycophantic AI on user judgment and relationships. One proposed mitigation, which has received regulatory attention, is to warn users about potentially harmful AI behaviors such as sycophancy. In a preregistered experiment in which participants (N = 2,610) discussed real interpersonal conflicts with an AI system, we test whether warning labels mitigate sycophancy's influence. We find that a basic AI disclosure (``This chatbot is AI'') has no detectable effect. Labeling the system as sycophantic (``...may agree with you and validate you even when you are wrong...'') does shift users' perceptions, reducing perceived objectivity and trust, but it does not reliably reduce sycophancy's influence on users' self-perceived rightness or their willingness to repair the conflict. Our results reveal a gap between AI perception and AI influence: by shifting perception without reducing influence, warning-based interventions may offer a false sense of protection. Addressing the harms of sycophancy will therefore require understanding the specific mechanisms through which it shapes judgment, and improving model behavior itself.",
     "published": "Jun 19",
-    "pdf_url": "https://arxiv.org/pdf/2606.21317v1",
-    "arxiv_url": "http://arxiv.org/abs/2606.21317v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.21317v2",
+    "arxiv_url": "http://arxiv.org/abs/2606.21317v2",
     "queried_author": "Dan Jurafsky",
     "matching_authors": [
       "Dan Jurafsky",
@@ -5478,8 +5498,8 @@
     ],
     "summary": "LLM workflows, which coordinate structured calls to individual LLMs/agents to achieve a particular goal, offer a promising path towards building powerful AI systems that can tackle diverse tasks. However, existing approaches for building such workflows generally rely on human-crafted pipelines and prompts, which presents a substantial bottleneck in real world deployment. How can we automatically induce LLM-based agents and workflows in a data-driven way? This paper describes a simple data-driven approach for automatically inducing agents and LLM workflows. We formulate workflow induction as a bilevel optimization problem: an outer loop which optimizes a high-level sketch of the workflow (in particular how the LLM calls should be structured), and an inner loop which optimizes each individual LLM call one-by one. Both loops are optimized with ``textual gradients'' where for the inner loop we optimize each component in a modular way through ``backpropagating'' textual gradients layer-by-layer. We find that LLM workflows discovered through our \\textsc{FlowBot} (work\\textbf{flow} induction through \\textbf{b}ilevel \\textbf{o}ptimization and \\textbf{t}extual gradients) approach performs competitively against strong baselines that make use of human-crafted or generated workflows.",
     "published": "Apr 29",
-    "pdf_url": "https://arxiv.org/pdf/2604.26258v2",
-    "arxiv_url": "http://arxiv.org/abs/2604.26258v2",
+    "pdf_url": "https://arxiv.org/pdf/2604.26258v3",
+    "arxiv_url": "http://arxiv.org/abs/2604.26258v3",
     "queried_author": "Yoon Kim",
     "matching_authors": [
       "Yoon Kim"
@@ -8099,10 +8119,10 @@
       "Maarten Sap",
       "Cynthia Breazeal"
     ],
-    "summary": "As users increasingly turn to LLMs for practical and personal advice, they become vulnerable to subtle steering toward hidden incentives misaligned with their own interests. While existing NLP research has benchmarked manipulation detection, these efforts often rely on simulated debates and remain fundamentally decoupled from actual human belief shifts in real-world scenarios. We introduce PUPPET, a theoretical taxonomy and resource that bridges this gap by focusing on the moral direction of hidden incentives in everyday, advice-giving contexts. We provide an evaluation dataset of N=1,035 human-LLM interactions, where we measure users' belief shifts. Our analysis reveals a critical disconnect in current safety paradigms: while models can be trained to detect manipulative strategies, they do not correlate with the magnitude of resulting belief change. As such, we define the task of belief shift prediction and show that while state-of-the-art LLMs achieve moderate correlation (r=0.3-0.5), they systematically underestimate the intensity of human belief susceptibility. This work establishes a theoretically grounded and behaviorally validated foundation for AI social safety efforts by studying incentive-driven manipulation in LLMs during everyday, practical user queries.",
+    "summary": "As users increasingly turn to LLMs for practical and personal advice, they become vulnerable to subtle steering toward hidden incentives misaligned with their own interests. While existing NLP research has benchmarked manipulation detection, these efforts often rely on simulated debates and remain fundamentally decoupled from actual human belief shifts in real-world scenarios. We introduce PUPPET, a theoretical taxonomy and resource that bridges this gap by focusing on the moral direction of hidden incentives in everyday, advice-giving contexts. We provide an evaluation dataset of N=1,035 human-LLM interactions, where we measure users' belief shifts. Our analysis reveals a critical disconnect in current safety paradigms: while models can be trained to detect manipulative strategies, they do not correlate with the magnitude of resulting belief change. As such, we define the task of belief shift prediction and show that while state-of-the-art LLMs achieve moderate correlation (r=0.3-0.5), they exhibit systematic directional biases, with some models over-predicting and others under-predicting the magnitude of human belief change. This work establishes a theoretically grounded and behaviorally validated foundation for AI social safety efforts by studying incentive-driven manipulation in LLMs during everyday, practical user queries.",
     "published": "Mar 21",
-    "pdf_url": "https://arxiv.org/pdf/2603.20907v2",
-    "arxiv_url": "http://arxiv.org/abs/2603.20907v2",
+    "pdf_url": "https://arxiv.org/pdf/2603.20907v3",
+    "arxiv_url": "http://arxiv.org/abs/2603.20907v3",
     "queried_author": "Maarten Sap",
     "matching_authors": [
       "Maarten Sap"
@@ -12847,34 +12867,6 @@
     "arxiv_url": "http://arxiv.org/abs/2601.01739v2",
     "queried_author": "Yejin Choi",
     "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "NitroGen: An Open Foundation Model for Generalist Gaming Agents",
-    "authors": [
-      "Lo\u00efc Magne",
-      "Anas Awadalla",
-      "Guanzhi Wang",
-      "Yinzhen Xu",
-      "Joshua Belofsky",
-      "Fengyuan Hu",
-      "Joohwan Kim",
-      "Ludwig Schmidt",
-      "Georgia Gkioxari",
-      "Jan Kautz",
-      "Yisong Yue",
-      "Yejin Choi",
-      "Yuke Zhu",
-      "Linxi \"Jim\" Fan"
-    ],
-    "summary": "We introduce NitroGen, a vision-action foundation model for generalist gaming agents that is trained on 40,000 hours of gameplay videos across more than 1,000 games. We incorporate three key ingredients: 1) an internet-scale video-action dataset constructed by automatically extracting player actions from publicly available gameplay videos, 2) a multi-game benchmark environment that can measure cross-game generalization, and 3) a unified vision-action model trained with large-scale behavior cloning. NitroGen exhibits strong competence across diverse domains, including combat encounters in 3D action games, high-precision control in 2D platformers, and exploration in procedurally generated worlds. It transfers effectively to unseen games, achieving up to 52% relative improvement in task success rates over models trained from scratch. We release the dataset, evaluation suite, and model weights to advance research on generalist embodied agents.",
-    "published": "Jan 04",
-    "pdf_url": "https://arxiv.org/pdf/2601.02427v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.02427v1",
-    "queried_author": "Ludwig Schmidt",
-    "matching_authors": [
-      "Ludwig Schmidt",
       "Yejin Choi"
     ]
   }
