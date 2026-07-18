@@ -974,6 +974,28 @@
     ]
   },
   {
+    "title": "Posterior Refinement: Fast Language Generation via Any-Order Flow Maps",
+    "authors": [
+      "Manan Agarwal",
+      "Sheel Shah",
+      "Chanhyuk Lee",
+      "Jaehoon Yoo",
+      "Jerry Huang",
+      "Seunghoon Hong",
+      "Aditi Raghunathan",
+      "Jinwoo Kim",
+      "Nicholas M. Boffi"
+    ],
+    "summary": "Non-autoregressive generation offers a powerful paradigm for iterative refinement, allowing models to recursively critique, erase and regenerate arbitrary subsets of tokens. However, existing non-autoregressive models fail to realize this potential. Masked Diffusion Models (MDMs) suffer from factorization error, causing sample quality to collapse when generating multiple tokens simultaneously. Flow Map Language Models (FMLMs) circumvent this bottleneck via joint sequence transport for excellent few-step generation, but sacrifice the inference-time flexibility of MDMs. We introduce FMLM+, a framework that bridges this gap by equipping FMLM with masking-style noise schedules. While generating the full sequence in a single step, FMLM+ simultaneously scores the global consistency of each token a posteriori. We leverage this to introduce Posterior Refinement, a novel inference-time refinement strategy that enables the model to adaptively self-correct its outputs, matching the performance of discrete baselines with 32x fewer NFEs. Across diverse benchmarks, we demonstrate that FMLM+ with Posterior Refinement improves the speed--quality tradeoff over both MDM and FMLM families, providing a scalable foundation for high-fidelity language modeling.",
+    "published": "Jun 23",
+    "pdf_url": "https://arxiv.org/pdf/2606.24773v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.24773v1",
+    "queried_author": "Aditi Raghunathan",
+    "matching_authors": [
+      "Aditi Raghunathan"
+    ]
+  },
+  {
     "title": "Internal Data Repetition Destroys Language Models",
     "authors": [
       "Jessica Chudnovsky",
@@ -2074,6 +2096,22 @@
     ]
   },
   {
+    "title": "Natively Unlearnable Large Language Models",
+    "authors": [
+      "Gaurav R. Ghosal",
+      "Pratyush Maini",
+      "Aditi Raghunathan"
+    ],
+    "summary": "Unlearning aims to remove the influence of specific training data sources, but this has proved challenging because the contributions of different sources are entangled within the model. Isolating source contributions to disjoint parameters makes removal easier, though it obstructs joint learning across sources. We propose NULLs (Natively Unlearnable LLMs), a model class that satisfies the two opposing goals of isolating source-specific contributions and learning jointly across sources, by training a set of shared backbone neurons alongside a pool of sparsely activated sinks. During training, information specific to a source naturally concentrates in its sinks while information shared across sources accumulates in the backbone. A source is then unlearned at deployment by disabling its corresponding sinks, with no gradient updates and no access to the retained data. We show that NULLs scales to Wikipedia's ~6M articles, isolating each as an independent source. Unlearning a single article removes knowledge specific to it while preserving facts shared with semantically related articles, closely matching retraining from scratch. We note that unlearning with NULLs is also robust: in a case study of unlearning the Harry Potter books, NULLs resists both adversarial extraction and relearning that reverses post-hoc unlearning. Finally, NULLs preserves general language capabilities, matching a standard transformer on downstream benchmarks. Together, these results suggest that source-level unlearning need not be an afterthought. It can be built natively into LLM training while retainin...",
+    "published": "Jun 11",
+    "pdf_url": "https://arxiv.org/pdf/2606.13873v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.13873v1",
+    "queried_author": "Aditi Raghunathan",
+    "matching_authors": [
+      "Aditi Raghunathan"
+    ]
+  },
+  {
     "title": "Low-Latency Real-Time Audio Game Commentary System via LLM-Based Parallel Text Generation",
     "authors": [
       "Ryota Kawamatsu",
@@ -2398,6 +2436,25 @@
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "Hardening Agent Benchmarks with Adversarial Hacker-Fixer Loops",
+    "authors": [
+      "Ziqian Zhong",
+      "Ivgeni Segal",
+      "Ivan Bercovich",
+      "Shashwat Saxena",
+      "Kexun Zhang",
+      "Aditi Raghunathan"
+    ],
+    "summary": "Agent benchmarks score submissions with outcome verifiers that are typically hand-written and brittle, leaving them open to reward hacking. We audit 1,968 tasks across five terminal-agent benchmarks and find 323 (16%) hackable by frontier models given only the task description. This corrupts both leaderboard rankings and RL training signal, yet the standard response is manual and reactive.\n  We introduce the hacker-fixer loop, a method for building exploit-resistant verifiers without per-task manual patching. The loop alternates three LLM agents: a hacker tries to pass the verifier without solving the task, a fixer patches the verifier to reject each discovered exploit, and a solver confirms the patched verifier still admits legitimate solutions. The loop iterates: each patch reshapes what the verifier rewards, surfacing the next exploit. We further add verifier access, and let patches transfer across tasks, to broaden the exploits the loop discovers.\n  On KernelBench, the loop drives the attack success rate from 62% to 0% on a held-out corpus of publicly reported exploits. We also find that weaker agents in the loop can defend against much stronger hackers: Gemini 3 Flash's loop drives the stronger Gemini 3.1 Pro and Claude Opus 4.7's attack success rate from 76% and 61% to 0% on KernelBench, and Gemini 3.1 Pro's from 39% to 17% on Terminal Bench across 77 tasks. We release Terminal Wrench (323 hackable environments, 3,632 hack trajectories) as a snapshot of the current attack surface, our patched verifiers, the exploits the loop discovered, and our implementation as a bas...",
+    "published": "Jun 08",
+    "pdf_url": "https://arxiv.org/pdf/2606.08960v1",
+    "arxiv_url": "http://arxiv.org/abs/2606.08960v1",
+    "queried_author": "Aditi Raghunathan",
+    "matching_authors": [
+      "Aditi Raghunathan"
     ]
   },
   {
@@ -3325,6 +3382,21 @@
     ]
   },
   {
+    "title": "Self-Trained Verification for Training- and Test-Time Self-Improvement",
+    "authors": [
+      "Chen Henry Wu",
+      "Aditi Raghunathan"
+    ],
+    "summary": "Self-improvement at scale has been a longstanding goal for reasoning models, and there are two natural places to do it: at test time, through verification-refinement (V-R) loops; and at training time, through self-training methods. Both are gated by the same bottleneck: the verifier. V-R loops stall when verifier scores inflate while accuracy stagnates, and when feedback is too generic to act on; self-training fails similarly when bad self-generated data are added to training. Better verification would unlock both, but the capability we want to train, i.e., catching self-generated errors, lacks training signal. To address this challenge, we propose self-trained verification (STV). Our key observation is that, while a model cannot catch these errors alone, it can when shown the reference solution. We turn this asymmetry into a supervision target and train the verifier to imitate a more informed version of itself. At test time, STV substantially improves V-R loops on hard problems, while alternatives (e.g., SFT, RL on verifier scores, and even meta-verifiers) do not. STV roughly doubles accuracy on hard math and lifts it 14x on scientific reasoning tasks (1.5% to 21%). At training time, we additionally train the generator using RL with STV verifier's feedback inside the V-R loop - a procedure we call verifier-in-the-loop training (ViL). Starting from an RL-converged generator, ViL yields a further 33% gain in pass@1. More notably, the generator's standalone pass@1, with no verifier at test time, climbs 30% relative past where standard RL had converged. Hence, the next frontie...",
+    "published": "May 28",
+    "pdf_url": "https://arxiv.org/pdf/2605.30290v2",
+    "arxiv_url": "http://arxiv.org/abs/2605.30290v2",
+    "queried_author": "Aditi Raghunathan",
+    "matching_authors": [
+      "Aditi Raghunathan"
+    ]
+  },
+  {
     "title": "How's it going? Reinforcement learning in language models recruits a functional welfare axis",
     "authors": [
       "Andy Q Han",
@@ -3612,7 +3684,8 @@
     "arxiv_url": "http://arxiv.org/abs/2605.24396v1",
     "queried_author": "J Zico Kolter",
     "matching_authors": [
-      "J Zico Kolter"
+      "J Zico Kolter",
+      "Aditi Raghunathan"
     ]
   },
   {
@@ -4015,7 +4088,8 @@
     "arxiv_url": "http://arxiv.org/abs/2605.19516v1",
     "queried_author": "J Zico Kolter",
     "matching_authors": [
-      "J Zico Kolter"
+      "J Zico Kolter",
+      "Aditi Raghunathan"
     ]
   },
   {
@@ -4520,6 +4594,24 @@
     ]
   },
   {
+    "title": "Early Data Exposure Improves Robustness to Subsequent Fine-Tuning",
+    "authors": [
+      "Lawrence Feng",
+      "Gaurav R. Ghosal",
+      "Jacob Mitchell Springer",
+      "Ziqian Zhong",
+      "Aditi Raghunathan"
+    ],
+    "summary": "How can we train models whose post-trained capabilities survive subsequent fine-tuning? Rather than focusing on downstream interventions to mitigate forgetting of upstream capabilities, we study how upstream training choices - that is, the manner in which a capability is acquired - shape how robustly that capability is retained. We investigate this question in a controlled three-stage language-model pipeline: pretraining, post-training to acquire a target capability, and downstream fine-tuning on a new objective. Across 135M and 1B models, two post-training domains, and two downstream fine-tuning tasks, we find that immediate post-training performance does not reliably predict retention after subsequent fine-tuning: training recipes that look equivalent immediately after post-training can retain the target capability very differently after subsequent fine-tuning. In particular, early exposure - mixing post-training data into pretraining - consistently improves the frontier between retained upstream performance and downstream performance. In compute-matched experiments, where the target data must be allocated between pretraining and post-training, we find that the optimum lies at neither extreme. Together with our other empirical and theoretical findings, this supports the view that post-training drives immediate specialization while early exposure improves robustness to later forgetting. Replay and dropout, typically used to mitigate forgetting as it occurs during fine-tuning, provide complementary gains to early exposure when applied during post-training. Our findings sugg...",
+    "published": "May 12",
+    "pdf_url": "https://arxiv.org/pdf/2605.12705v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.12705v1",
+    "queried_author": "Aditi Raghunathan",
+    "matching_authors": [
+      "Aditi Raghunathan"
+    ]
+  },
+  {
     "title": "Search Your Block Floating Point Scales!",
     "authors": [
       "Tanmaey Gupta",
@@ -4701,6 +4793,29 @@
     "queried_author": "Niloofar Mireshghallah",
     "matching_authors": [
       "Niloofar Mireshghallah"
+    ]
+  },
+  {
+    "title": "Annotations Mitigate Post-Training Mode Collapse",
+    "authors": [
+      "Jacob Mitchell Springer",
+      "Madhu Advani",
+      "Lukas Aichberger",
+      "Arwen Bradley",
+      "Eran Malach",
+      "Omid Saremi",
+      "Sinead Williamson",
+      "Preetum Nakkiran",
+      "Etai Littwin",
+      "Aditi Raghunathan"
+    ],
+    "summary": "Post-training (via supervised fine-tuning) improves instruction-following, but often induces semantic mode collapse by biasing models toward low-entropy fine-tuning data at the expense of the high-entropy pretraining distribution. Crucially, we find this trade-off worsens with scale. To close this semantic diversity gap, we propose annotation-anchored training, a principled method that enables models to adopt the preference-following behaviors of post-training without sacrificing the inherent diversity of pretraining. Our approach is simple: we pretrain on documents paired with semantic annotations, inducing a rich annotation distribution that reflects the full breadth of pretraining data, and we preserve this distribution during post-training. This lets us sample diverse annotations at inference time and use them as anchors to guide generation, effectively transferring pretraining's semantic richness into post-trained models. We find that models trained with annotation-anchored training can attain $6 \\times$ less diversity collapse than models trained with SFT, and improve with scale.",
+    "published": "May 11",
+    "pdf_url": "https://arxiv.org/pdf/2605.09995v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.09995v1",
+    "queried_author": "Aditi Raghunathan",
+    "matching_authors": [
+      "Aditi Raghunathan"
     ]
   },
   {
@@ -5237,6 +5352,24 @@
       "Hannaneh Hajishirzi",
       "Ranjay Krishna",
       "Yejin Choi"
+    ]
+  },
+  {
+    "title": "Sharpness-Aware Pretraining Mitigates Catastrophic Forgetting",
+    "authors": [
+      "Ishaan Watts",
+      "Catherine Li",
+      "Sachin Goyal",
+      "Jacob Mitchell Springer",
+      "Aditi Raghunathan"
+    ],
+    "summary": "Pretraining optimizers are tuned to produce the strongest possible base model, on the assumption that a stronger starting point yields a stronger model after subsequent changes like post-training and quantization. This overlooks the geometry of the base model which controls how much of the base model's capabilities survive subsequent parameter updates. We study three pretraining optimization approaches that bias optimization toward flatter minima: Sharpness-Aware Minimization (SAM), large learning rates, and shortened learning rate annealing periods. Across model sizes ranging from 20M to 150M parameters, we find that these interventions consistently improve downstream performance after post-training on five common datasets with up to 80% less forgetting. These principles hold at scale: a short SAM mid-training phase applied to an existing OLMo-2-1B checkpoint reduces forgetting by 31% after MetaMath post-training and by 40% after 4-bit quantization.",
+    "published": "May 04",
+    "pdf_url": "https://arxiv.org/pdf/2605.02105v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.02105v1",
+    "queried_author": "Aditi Raghunathan",
+    "matching_authors": [
+      "Aditi Raghunathan"
     ]
   },
   {
@@ -6205,6 +6338,25 @@
     ]
   },
   {
+    "title": "Terminal Wrench: A Dataset of 331 Reward-Hackable Environments and 3,632 Exploit Trajectories",
+    "authors": [
+      "Ivan Bercovich",
+      "Ivgeni Segal",
+      "Kexun Zhang",
+      "Shashwat Saxena",
+      "Aditi Raghunathan",
+      "Ziqian Zhong"
+    ],
+    "summary": "We release Terminal Wrench, a subset of 331 terminal-agent benchmark environments, copied from the popular open benchmarks that are demonstrably reward-hackable. The data set includes 3,632 hack trajectories and 2,352 legitimate baseline trajectories across three frontier models (Claude Opus 4.6, Gemini 3.1 Pro, GPT-5.4). Each entry preserves the original task definition alongside full attack trajectories that show how the verifier was bypassed. It also includes cases where the task was not solved as intended. The tasks span system administration, machine learning, software engineering, and security challenges; the exploits range from simple output spoofing to stack-frame introspection, standard-library patching, and rootkit-style binary hijacking. Crucially, these exploits are specific to each task, rather than the evaluation harness, making them harder to patch. We also present a monitorability study in which hack trajectories are sanitized or stripped of reasoning traces and then scored by an LLM judge, showing that detection degrades meaningfully when chain-of-thought is removed (AUC drops from 0.97 to 0.92). The data set is publicly available at https://github.com/few-sh/terminal-wrench.",
+    "published": "Apr 19",
+    "pdf_url": "https://arxiv.org/pdf/2604.17596v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.17596v1",
+    "queried_author": "Aditi Raghunathan",
+    "matching_authors": [
+      "Aditi Raghunathan"
+    ]
+  },
+  {
     "title": "HorizonBench: Long-Horizon Personalization with Evolving Preferences",
     "authors": [
       "Shuyue Stella Li",
@@ -7025,6 +7177,40 @@
     "queried_author": "Danqi Chen",
     "matching_authors": [
       "Danqi Chen"
+    ]
+  },
+  {
+    "title": "Hodoscope: Unsupervised Monitoring for AI Misbehaviors",
+    "authors": [
+      "Ziqian Zhong",
+      "Shashwat Saxena",
+      "Aditi Raghunathan"
+    ],
+    "summary": "Existing approaches to monitoring AI agents rely on supervised evaluation: human-written rules or LLM-based judges that check for known failure modes. However, novel misbehaviors may fall outside predefined categories entirely and LLM-based judges can be unreliable. To address this, we formulate unsupervised monitoring, drawing an analogy to unsupervised learning. Rather than checking for specific misbehaviors, an unsupervised monitor assists humans in discovering problematic agent behaviors without prior assumptions about what counts as problematic, leaving that determination to the human.\n  We observe that problematic behaviors are often distinctive: a model exploiting a benchmark loophole exhibits actions absent from well-behaved baselines, and a vulnerability unique to one evaluation manifests as behavioral anomalies when the same model runs across multiple benchmarks. This motivates using group-wise behavioral differences as the primary signal for unsupervised monitoring. We introduce Hodoscope, a tool that operationalizes this insight. Hodoscope compares behavior distributions across groups and highlights distinctive and potentially suspicious action patterns for human review. Using Hodoscope, we discover a previously unknown vulnerability in the Commit0 benchmark (unsquashed git history allowing ground-truth recovery, inflating scores for at least five models) and independently recover known exploits on ImpossibleBench and SWE-bench. Quantitative evaluation estimates that our method reduces review effort by 6-23$\\times$ compared to naive uniform sampling. Finally, we...",
+    "published": "Apr 13",
+    "pdf_url": "https://arxiv.org/pdf/2604.11072v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.11072v1",
+    "queried_author": "Aditi Raghunathan",
+    "matching_authors": [
+      "Aditi Raghunathan"
+    ]
+  },
+  {
+    "title": "Pando: Do Interpretability Methods Work When Models Won't Explain Themselves?",
+    "authors": [
+      "Ziqian Zhong",
+      "Aashiq Muhamed",
+      "Mona T. Diab",
+      "Virginia Smith",
+      "Aditi Raghunathan"
+    ],
+    "summary": "Mechanistic interpretability is often motivated for alignment auditing, where a model's verbal explanations can be absent, incomplete, or misleading. Yet many evaluations do not control whether black-box prompting alone can recover the target behavior, so apparent gains from white-box tools may reflect elicitation rather than internal signal; we call this the elicitation confounder. We introduce Pando, a model-organism benchmark that breaks this confound via an explanation axis: models are trained to produce either faithful explanations of the true rule, no explanation, or confident but unfaithful explanations of a disjoint distractor rule.\n  Across 720 finetuned models implementing hidden decision-tree rules, agents predict held-out model decisions from $10$ labeled query-response pairs, optionally augmented with one interpretability tool output. When explanations are faithful, black-box elicitation matches or exceeds all white-box methods; when explanations are absent or misleading, gradient-based attribution improves accuracy by 3-5 percentage points, and relevance patching, RelP, gives the largest gains, while logit lens, sparse autoencoders, and circuit tracing provide no reliable benefit. Variance decomposition suggests gradients track decision computation, which fields causally drive the output, whereas other readouts are dominated by task representation, biases toward field identity and value.\n  We release all models, code, and evaluation infrastructure.",
+    "published": "Apr 13",
+    "pdf_url": "https://arxiv.org/pdf/2604.11061v1",
+    "arxiv_url": "http://arxiv.org/abs/2604.11061v1",
+    "queried_author": "Aditi Raghunathan",
+    "matching_authors": [
+      "Aditi Raghunathan"
     ]
   },
   {
@@ -8495,7 +8681,8 @@
     "arxiv_url": "http://arxiv.org/abs/2603.16177v2",
     "queried_author": "J Zico Kolter",
     "matching_authors": [
-      "J Zico Kolter"
+      "J Zico Kolter",
+      "Aditi Raghunathan"
     ]
   },
   {
@@ -10287,6 +10474,28 @@
     ]
   },
   {
+    "title": "Flow Map Language Models: One-step Language Modeling via Continuous Denoising",
+    "authors": [
+      "Chanhyuk Lee",
+      "Jaehoon Yoo",
+      "Manan Agarwal",
+      "Sheel Shah",
+      "Jerry Huang",
+      "Aditi Raghunathan",
+      "Seunghoon Hong",
+      "Nicholas M. Boffi",
+      "Jinwoo Kim"
+    ],
+    "summary": "Language models based on discrete diffusion have attracted widespread interest for their potential to provide faster generation than autoregressive models. Despite their promise, these models typically produce samples whose quality sharply degrades in the few-step regime, preventing a dramatic speedup in practice. Here, we show that language models based on continuous flows over one-hot token embeddings can outperform discrete diffusion in both quality and speed. Importantly, our continuous formulation defines a unique flow map that can be learned directly for efficient few-step inference, a structure we show is unavailable to discrete methods. In this setting, we show that both the flow and its associated flow map can be learned with simple cross-entropy objectives that respect the simplex geometry of the data, and we identify three distinct choices for flow map distillation whose performance we compare in practice. Using these insights, we build a flow language model (FLM), a continuous flow that matches state-of-the-art discrete diffusion baselines on the One Billion Words (LM1B) and OpenWebText (OWT) datasets. We then distill FLM into a flow map language model (FMLM), whose one-step generation exceeds the 8-step quality of recent few-step discrete diffusion language models. Our work challenges the widely-held hypothesis that discrete noising processes are necessary for generative modeling over discrete modalities and paves the way toward accelerated language modeling at scale. Code is available at https://github.com/david3684/flm.",
+    "published": "Feb 18",
+    "pdf_url": "https://arxiv.org/pdf/2602.16813v3",
+    "arxiv_url": "http://arxiv.org/abs/2602.16813v3",
+    "queried_author": "Aditi Raghunathan",
+    "matching_authors": [
+      "Aditi Raghunathan"
+    ]
+  },
+  {
     "title": "Calibrate-Then-Act: Cost-Aware Exploration in LLM Agents",
     "authors": [
       "Wenxuan Ding",
@@ -10540,6 +10749,25 @@
     "queried_author": "Pang Wei Koh",
     "matching_authors": [
       "Pang Wei Koh"
+    ]
+  },
+  {
+    "title": "S2D: Selective Spectral Decay for Quantization-Friendly Conditioning of Neural Activations",
+    "authors": [
+      "Arnav Chavan",
+      "Nahush Lele",
+      "Udbhav Bamba",
+      "Sankalp Dayal",
+      "Aditi Raghunathan",
+      "Deepak Gupta"
+    ],
+    "summary": "Activation outliers in large-scale transformer models pose a fundamental challenge to model quantization, creating excessively large ranges that cause severe accuracy drops during quantization. We empirically observe that outlier severity intensifies with pre-training scale (e.g., progressing from CLIP to the more extensively trained SigLIP and SigLIP2). Through theoretical analysis as well as empirical correlation studies, we establish the direct link between these activation outliers and dominant singular values of the weights. Building on this insight, we propose Selective Spectral Decay ($S^2D$), a geometrically-principled conditioning method that surgically regularizes only the weight components corresponding to the largest singular values during fine-tuning. Through extensive experiments, we demonstrate that $S^2D$ significantly reduces activation outliers and produces well-conditioned representations that are inherently quantization-friendly. Models trained with $S^2D$ achieve up to 7% improved PTQ accuracy on ImageNet under W4A4 quantization and 4% gains when combined with QAT. These improvements also generalize across downstream tasks and vision-language models, enabling the scaling of increasingly large and rigorously trained models without sacrificing deployment efficiency.",
+    "published": "Feb 16",
+    "pdf_url": "https://arxiv.org/pdf/2602.14432v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.14432v1",
+    "queried_author": "Aditi Raghunathan",
+    "matching_authors": [
+      "Aditi Raghunathan"
     ]
   },
   {
@@ -12534,340 +12762,6 @@
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "Gecko: An Efficient Neural Architecture Inherently Processing Sequences with Arbitrary Lengths",
-    "authors": [
-      "Xuezhe Ma",
-      "Shicheng Wen",
-      "Linghao Jin",
-      "Bilge Acun",
-      "Ruihang Lai",
-      "Bohan Hou",
-      "Will Lin",
-      "Hao Zhang",
-      "Songlin Yang",
-      "Ryan Lee",
-      "Mengxi Wu",
-      "Jonathan May",
-      "Luke Zettlemoyer",
-      "Carole-Jean Wu"
-    ],
-    "summary": "Designing a unified neural network to efficiently and inherently process sequential data with arbitrary lengths is a central and challenging problem in sequence modeling. The design choices in Transformer, including quadratic complexity and weak length extrapolation, have limited their ability to scale to long sequences. In this work, we propose Gecko, a neural architecture that inherits the design of Mega and Megalodon (exponential moving average with gated attention), and further introduces multiple technical components to improve its capability to capture long range dependencies, including timestep decay normalization, sliding chunk attention mechanism, and adaptive working memory. In a controlled pretraining comparison with Llama2 and Megalodon in the scale of 7 billion parameters and 2 trillion training tokens, Gecko achieves better efficiency and long-context scalability. Gecko reaches a training loss of 1.68, significantly outperforming Llama2-7B (1.75) and Megalodon-7B (1.70), and landing close to Llama2-13B (1.67). Notably, without relying on any context-extension techniques, Gecko exhibits inherent long-context processing and retrieval capabilities, stably handling sequences of up to 4 million tokens and retrieving information from contexts up to $4\\times$ longer than its attention window. Code: https://github.com/XuezheMax/gecko-llm",
-    "published": "Jan 10",
-    "pdf_url": "https://arxiv.org/pdf/2601.06463v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.06463v1",
-    "queried_author": "Luke Zettlemoyer",
-    "matching_authors": [
-      "Luke Zettlemoyer"
-    ]
-  },
-  {
-    "title": "HEART: A Unified Benchmark for Assessing Humans and LLMs in Emotional Support Dialogue",
-    "authors": [
-      "Laya Iyer",
-      "Kriti Aggarwal",
-      "Sanmi Koyejo",
-      "Gail Heyman",
-      "Desmond C. Ong",
-      "Subhabrata Mukherjee"
-    ],
-    "summary": "Supportive conversation depends on skills that go beyond language fluency, including reading emotions, adjusting tone, and navigating moments of resistance, frustration, or distress. Despite rapid progress in language models, we still lack a clear way to understand how their abilities in these interpersonal domains compare to those of humans. We introduce HEART, the first-ever framework that directly compares humans and LLMs on the same multi-turn emotional-support conversations. For each dialogue history, we pair human and model responses and evaluate them through blinded human raters and an ensemble of LLM-as-judge evaluators. All assessments follow a rubric grounded in interpersonal communication science across five dimensions: Human Alignment, Empathic Responsiveness, Attunement, Resonance, and Task-Following. HEART uncovers striking behavioral patterns. Several frontier models approach or surpass the average human responses in perceived empathy and consistency. At the same time, humans maintain advantages in adaptive reframing, tension-naming, and nuanced tone shifts, particularly in adversarial turns. Human and LLM-as-judge preferences align on about 80 percent of pairwise comparisons, matching inter-human agreement, and their written rationales emphasize similar HEART dimensions. This pattern suggests an emerging convergence in the criteria used to assess supportive quality. By placing humans and models on equal footing, HEART reframes supportive dialogue as a distinct capability axis, separable from general reasoning or linguistic fluency. It provides a unified empi...",
-    "published": "Jan 09",
-    "pdf_url": "https://arxiv.org/pdf/2601.19922v2",
-    "arxiv_url": "http://arxiv.org/abs/2601.19922v2",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "GDPO: Group reward-Decoupled Normalization Policy Optimization for Multi-reward RL Optimization",
-    "authors": [
-      "Shih-Yang Liu",
-      "Xin Dong",
-      "Ximing Lu",
-      "Shizhe Diao",
-      "Peter Belcak",
-      "Mingjie Liu",
-      "Min-Hung Chen",
-      "Hongxu Yin",
-      "Yu-Chiang Frank Wang",
-      "Kwang-Ting Cheng",
-      "Yejin Choi",
-      "Jan Kautz",
-      "Pavlo Molchanov"
-    ],
-    "summary": "As language models become increasingly capable, users expect them to provide not only accurate responses but also behaviors aligned with diverse human preferences across a variety of scenarios. To achieve this, Reinforcement learning (RL) pipelines have begun incorporating multiple rewards, each capturing a distinct preference, to guide models toward these desired behaviors. However, recent work has defaulted to apply Group Relative Policy Optimization (GRPO) under multi-reward setting without examining its suitability. In this paper, we demonstrate that directly applying GRPO to normalize distinct rollout reward combinations causes them to collapse into identical advantage values, reducing the resolution of the training signal and resulting in suboptimal convergence and, in some cases, early training failure. We then introduce Group reward-Decoupled Normalization Policy Optimization (GDPO), a new policy optimization method to resolve these issues by decoupling the normalization of individual rewards, more faithfully preserving their relative differences and enabling more accurate multi-reward optimization, along with substantially improved training stability. We compare GDPO with GRPO across three tasks: tool calling, math reasoning, and coding reasoning, evaluating both correctness metrics (accuracy, bug ratio) and constraint adherence metrics (format, length). Across all settings, GDPO consistently outperforms GRPO, demonstrating its effectiveness and generalizability for multi-reward reinforcement learning optimization.",
-    "published": "Jan 08",
-    "pdf_url": "https://arxiv.org/pdf/2601.05242v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.05242v1",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Constitutional Classifiers++: Efficient Production-Grade Defenses against Universal Jailbreaks",
-    "authors": [
-      "Hoagy Cunningham",
-      "Jerry Wei",
-      "Zihan Wang",
-      "Andrew Persic",
-      "Alwin Peng",
-      "Jordan Abderrachid",
-      "Raj Agarwal",
-      "Bobby Chen",
-      "Austin Cohen",
-      "Andy Dau",
-      "Alek Dimitriev",
-      "Rob Gilson",
-      "Logan Howard",
-      "Yijin Hua",
-      "Jared Kaplan",
-      "Jan Leike",
-      "Mu Lin",
-      "Christopher Liu",
-      "Vladimir Mikulik",
-      "Rohit Mittapalli",
-      "Clare O'Hara",
-      "Jin Pan",
-      "Nikhil Saxena",
-      "Alex Silverstein",
-      "Yue Song",
-      "Xunjie Yu",
-      "Giulio Zhou",
-      "Ethan Perez",
-      "Mrinank Sharma"
-    ],
-    "summary": "We introduce enhanced Constitutional Classifiers that deliver production-grade jailbreak robustness with dramatically reduced computational costs and refusal rates compared to previous-generation defenses. Our system combines several key insights. First, we develop exchange classifiers that evaluate model responses in their full conversational context, which addresses vulnerabilities in last-generation systems that examine outputs in isolation. Second, we implement a two-stage classifier cascade where lightweight classifiers screen all traffic and escalate only suspicious exchanges to more expensive classifiers. Third, we train efficient linear probe classifiers and ensemble them with external classifiers to simultaneously improve robustness and reduce computational costs. Together, these techniques yield a production-grade system achieving a 40x computational cost reduction compared to our baseline exchange classifier, while maintaining a 0.05% refusal rate on production traffic. Through extensive red-teaming comprising over 1,700 hours, we demonstrate strong protection against universal jailbreaks -- no attack on this system successfully elicited responses to all eight target queries comparable in detail to an undefended model. Our work establishes Constitutional Classifiers as practical and efficient safeguards for large language models.",
-    "published": "Jan 08",
-    "pdf_url": "https://arxiv.org/pdf/2601.04603v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.04603v1",
-    "queried_author": "Ethan Perez",
-    "matching_authors": [
-      "Ethan Perez",
-      "Jared Kaplan"
-    ]
-  },
-  {
-    "title": "Surface-based Molecular Design with Multi-modal Flow Matching",
-    "authors": [
-      "Fang Wu",
-      "Zhengyuan Zhou",
-      "Shuting Jin",
-      "Xiangxiang Zeng",
-      "Jure Leskovec",
-      "Jinbo Xu"
-    ],
-    "summary": "Therapeutic peptides show promise in targeting previously undruggable binding sites, with recent advancements in deep generative models enabling full-atom peptide co-design for specific protein receptors. However, the critical role of molecular surfaces in protein-protein interactions (PPIs) has been underexplored. To bridge this gap, we propose an omni-design peptides generation paradigm, called SurfFlow, a novel surface-based generative algorithm that enables comprehensive co-design of sequence, structure, and surface for peptides. SurfFlow employs a multi-modality conditional flow matching (CFM) architecture to learn distributions of surface geometries and biochemical properties, enhancing peptide binding accuracy. Evaluated on the comprehensive PepMerge benchmark, SurfFlow consistently outperforms full-atom baselines across all metrics. These results highlight the advantages of considering molecular surfaces in de novo peptide discovery and demonstrate the potential of integrating multiple protein modalities for more effective therapeutic peptide discovery.",
-    "published": "Jan 08",
-    "pdf_url": "https://arxiv.org/pdf/2601.04506v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.04506v1",
-    "queried_author": "Jure Leskovec",
-    "matching_authors": [
-      "Jure Leskovec"
-    ]
-  },
-  {
-    "title": "Accommodation and Epistemic Vigilance: A Pragmatic Account of Why LLMs Fail to Challenge Harmful Beliefs",
-    "authors": [
-      "Myra Cheng",
-      "Robert D. Hawkins",
-      "Dan Jurafsky"
-    ],
-    "summary": "Large language models (LLMs) frequently fail to challenge users' harmful beliefs in domains ranging from medical advice to social reasoning. We argue that these failures can be understood and addressed pragmatically as consequences of LLMs defaulting to accommodating users' assumptions and exhibiting insufficient epistemic vigilance. We show that social and linguistic factors known to influence accommodation in humans (at-issueness, linguistic encoding, and source reliability) similarly affect accommodation in LLMs, explaining performance differences across three safety benchmarks that test models' ability to challenge harmful beliefs, spanning misinformation (Cancer-Myth, SAGE-Eval) and sycophancy (ELEPHANT). We further show that simple pragmatic interventions, such as adding the phrase \"wait a minute\", significantly improve performance on these benchmarks while preserving low false-positive rates. Our results highlight the importance of considering pragmatics for evaluating LLM behavior and improving LLM safety.",
-    "published": "Jan 07",
-    "pdf_url": "https://arxiv.org/pdf/2601.04435v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.04435v1",
-    "queried_author": "Dan Jurafsky",
-    "matching_authors": [
-      "Dan Jurafsky"
-    ]
-  },
-  {
-    "title": "Unified Text-Image Generation with Weakness-Targeted Post-Training",
-    "authors": [
-      "Jiahui Chen",
-      "Philippe Hansen-Estruch",
-      "Xiaochuang Han",
-      "Yushi Hu",
-      "Emily Dinan",
-      "Amita Kamath",
-      "Michal Drozdzal",
-      "Reyhane Askari-Hemmat",
-      "Luke Zettlemoyer",
-      "Marjan Ghazvininejad"
-    ],
-    "summary": "Unified multimodal generation architectures that jointly produce text and images have recently emerged as a promising direction for text-to-image (T2I) synthesis. However, many existing systems rely on explicit modality switching, generating reasoning text before switching manually to image generation. This separate, sequential inference process limits cross-modal coupling and prohibits automatic multimodal generation. This work explores post-training to achieve fully unified text-image generation, where models autonomously transition from textual reasoning to visual synthesis within a single inference process. We examine the impact of joint text-image generation on T2I performance and the relative importance of each modality during post-training. We additionally explore different post-training data strategies, showing that a targeted dataset addressing specific limitations achieves superior results compared to broad image-caption corpora or benchmark-aligned data. Using offline, reward-weighted post-training with fully self-generated synthetic data, our approach enables improvements in multimodal image generation across four diverse T2I benchmarks, demonstrating the effectiveness of reward-weighting both modalities and strategically designed post-training data.",
-    "published": "Jan 07",
-    "pdf_url": "https://arxiv.org/pdf/2601.04339v2",
-    "arxiv_url": "http://arxiv.org/abs/2601.04339v2",
-    "queried_author": "Luke Zettlemoyer",
-    "matching_authors": [
-      "Luke Zettlemoyer"
-    ]
-  },
-  {
-    "title": "Quantifying the Effect of Test Set Contamination on Generative Evaluations",
-    "authors": [
-      "Rylan Schaeffer",
-      "Joshua Kazdan",
-      "Baber Abbasi",
-      "Ken Ziyu Liu",
-      "Brando Miranda",
-      "Ahmed Ahmed",
-      "Fazl Berez",
-      "Abhay Puri",
-      "Stella Biderman",
-      "Niloofar Mireshghallah",
-      "Sanmi Koyejo"
-    ],
-    "summary": "As frontier AI systems are pretrained on web-scale data, test set contamination has become a critical concern for accurately assessing their capabilities. While research has thoroughly investigated the impact of test set contamination on discriminative evaluations like multiple-choice question-answering, comparatively little research has studied the impact of test set contamination on generative evaluations. In this work, we quantitatively assess the effect of test set contamination on generative evaluations through the language model lifecycle. We pretrain language models on mixtures of web data and the MATH benchmark, sweeping model sizes and number of test set replicas contaminating the pretraining corpus; performance improves with contamination and model size. Using scaling laws, we make a surprising discovery: including even a single test set replica enables models to achieve lower loss than the irreducible error of training on the uncontaminated corpus. We then study further training: overtraining with fresh data reduces the effects of contamination, whereas supervised finetuning on the training set can either increase or decrease performance on test data, depending on the amount of pretraining contamination. Finally, at inference, we identify factors that modulate memorization: high sampling temperatures mitigate contamination effects, and longer solutions are exponentially more difficult to memorize than shorter ones, presenting a contrast with discriminative evaluations, where solutions are only a few tokens in length. By characterizing how generation and memorizat...",
-    "published": "Jan 07",
-    "pdf_url": "https://arxiv.org/pdf/2601.04301v2",
-    "arxiv_url": "http://arxiv.org/abs/2601.04301v2",
-    "queried_author": "Niloofar Mireshghallah",
-    "matching_authors": [
-      "Niloofar Mireshghallah",
-      "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "Digital Red Queen: Adversarial Program Evolution in Core War with LLMs",
-    "authors": [
-      "Akarsh Kumar",
-      "Ryan Bahlous-Boldi",
-      "Prafull Sharma",
-      "Phillip Isola",
-      "Sebastian Risi",
-      "Yujin Tang",
-      "David Ha"
-    ],
-    "summary": "Large language models (LLMs) are increasingly being used to evolve solutions to problems in many domains, in a process inspired by biological evolution. However, unlike biological evolution, most LLM-evolution frameworks are formulated as static optimization problems, overlooking the open-ended adversarial dynamics that characterize real-world evolutionary processes. Here, we study Digital Red Queen (DRQ), a simple self-play algorithm that embraces these so-called \"Red Queen\" dynamics via continual adaptation to a changing objective. DRQ uses an LLM to evolve assembly-like programs, called warriors, which compete against each other for control of a virtual machine in the game of Core War, a Turing-complete environment studied in artificial life and connected to cybersecurity. In each round of DRQ, the model evolves a new warrior to defeat all previous ones, producing a sequence of adapted warriors. Over many rounds, we observe that warriors become increasingly general (relative to a set of held-out human warriors). Interestingly, warriors also become less behaviorally diverse across independent runs, indicating a convergence pressure toward a general-purpose behavioral strategy, much like convergent evolution in nature. This result highlights a potential value of shifting from static objectives to dynamic Red Queen objectives. Our work positions Core War as a rich, controllable sandbox for studying adversarial adaptation in artificial systems and for evaluating LLM-based evolution methods. More broadly, the simplicity and effectiveness of DRQ suggest that similarly minimal ...",
-    "published": "Jan 06",
-    "pdf_url": "https://arxiv.org/pdf/2601.03335v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.03335v1",
-    "queried_author": "Phillip Isola",
-    "matching_authors": [
-      "Phillip Isola"
-    ]
-  },
-  {
-    "title": "From Entropy to Epiplexity: Rethinking Information for Computationally Bounded Intelligence",
-    "authors": [
-      "Marc Finzi",
-      "Shikai Qiu",
-      "Yiding Jiang",
-      "Pavel Izmailov",
-      "J. Zico Kolter",
-      "Andrew Gordon Wilson"
-    ],
-    "summary": "Can we learn more from data than existed in the generating process itself? Can new and useful information be constructed from merely applying deterministic transformations to existing data? Can the learnable content in data be evaluated without considering a downstream task? On these questions, Shannon information and Kolmogorov complexity come up nearly empty-handed, in part because they assume observers with unlimited computational capacity and do not target the useful information content. In this work, we identify and exemplify three seeming paradoxes in information theory: (1) information cannot be increased by deterministic transformations; (2) information is independent of the order of data; (3) likelihood modeling is merely distribution matching. To shed light on the tension between these results and modern practice, and to quantify the value of data, we introduce epiplexity, a formalization of information capturing what computationally bounded observers can learn from data. Epiplexity captures the structural content in data while excluding time-bounded entropy, the random unpredictable content exemplified by pseudorandom number generators and chaotic dynamical systems. With these concepts, we demonstrate how information can be created with computation, how it depends on the ordering of the data, and how likelihood modeling can produce more complex programs than present in the data generating process itself. We also present practical procedures to estimate epiplexity which we show capture differences across data sources, track with downstream performance, and highlig...",
-    "published": "Jan 06",
-    "pdf_url": "https://arxiv.org/pdf/2601.03220v2",
-    "arxiv_url": "http://arxiv.org/abs/2601.03220v2",
-    "queried_author": "J Zico Kolter",
-    "matching_authors": [
-      "J Zico Kolter",
-      "Pavel Izmailov"
-    ]
-  },
-  {
-    "title": "Extracting books from production language models",
-    "authors": [
-      "Ahmed Ahmed",
-      "A. Feder Cooper",
-      "Sanmi Koyejo",
-      "Percy Liang"
-    ],
-    "summary": "Many unresolved legal questions over LLMs and copyright center on memorization: whether specific training data have been encoded in the model's weights during training, and whether those memorized data can be extracted in the model's outputs. While many believe that LLMs do not memorize much of their training data, recent work shows that substantial amounts of copyrighted text can be extracted from open-weight models. However, it remains an open question if similar extraction is feasible for production LLMs, given the safety measures these systems implement. We investigate this question using a two-phase procedure: (1) an initial probe to test for extraction feasibility, which sometimes uses a Best-of-N (BoN) jailbreak, followed by (2) iterative continuation prompts to attempt to extract the book. We evaluate our procedure on four production LLMs -- Claude 3.7 Sonnet, GPT-4.1, Gemini 2.5 Pro, and Grok 3 -- and we measure extraction success with a score computed from a block-based approximation of longest common substring (nv-recall). With different per-LLM experimental configurations, we were able to extract varying amounts of text. For the Phase 1 probe, it was unnecessary to jailbreak Gemini 2.5 Pro and Grok 3 to extract text (e.g, nv-recall of 76.8% and 70.3%, respectively, for Harry Potter and the Sorcerer's Stone), while it was necessary for Claude 3.7 Sonnet and GPT-4.1. In some cases, jailbroken Claude 3.7 Sonnet outputs entire books near-verbatim (e.g., nv-recall=95.8%). GPT-4.1 requires significantly more BoN attempts (e.g., 20X), and eventually refuses to continue...",
-    "published": "Jan 06",
-    "pdf_url": "https://arxiv.org/pdf/2601.02671v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.02671v1",
-    "queried_author": "Percy Liang",
-    "matching_authors": [
-      "Percy Liang",
-      "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "K-EXAONE Technical Report",
-    "authors": [
-      "Eunbi Choi",
-      "Kibong Choi",
-      "Seokhee Hong",
-      "Junwon Hwang",
-      "Hyojin Jeon",
-      "Hyunjik Jo",
-      "Joonkee Kim",
-      "Seonghwan Kim",
-      "Soyeon Kim",
-      "Sunkyoung Kim",
-      "Yireun Kim",
-      "Yongil Kim",
-      "Haeju Lee",
-      "Jinsik Lee",
-      "Kyungmin Lee",
-      "Sangha Park",
-      "Heuiyeen Yeen",
-      "Hwan Chang",
-      "Stanley Jungkyu Choi",
-      "Yejin Choi",
-      "Jiwon Ham",
-      "Kijeong Jeon",
-      "Geunyeong Jeong",
-      "Gerrard Jeongwon Jo",
-      "Yonghwan Jo",
-      "Jiyeon Jung",
-      "Naeun Kang",
-      "Dohoon Kim",
-      "Euisoon Kim",
-      "Hayeon Kim",
-      "Hyosang Kim",
-      "Hyunseo Kim",
-      "Jieun Kim",
-      "Minu Kim",
-      "Myoungshin Kim",
-      "Unsol Kim",
-      "Youchul Kim",
-      "YoungJin Kim",
-      "Chaeeun Lee",
-      "Chaeyoon Lee",
-      "Changhun Lee",
-      "Dahm Lee",
-      "Edward Hwayoung Lee",
-      "Honglak Lee",
-      "Jinsang Lee",
-      "Jiyoung Lee",
-      "Sangeun Lee",
-      "Seungwon Lim",
-      "Solji Lim",
-      "Woohyung Lim",
-      "Chanwoo Moon",
-      "Jaewoo Park",
-      "Jinho Park",
-      "Yongmin Park",
-      "Hyerin Seo",
-      "Wooseok Seo",
-      "Yongwoo Song",
-      "Sejong Yang",
-      "Sihoon Yang",
-      "Chang En Yea",
-      "Sihyuk Yi",
-      "Chansik Yoon",
-      "Dongkeun Yoon",
-      "Sangyeon Yoon",
-      "Hyeongu Yun"
-    ],
-    "summary": "This technical report presents K-EXAONE, a large-scale multilingual language model developed by LG AI Research. K-EXAONE is built on a Mixture-of-Experts architecture with 236B total parameters, activating 23B parameters during inference. It supports a 256K-token context window and covers six languages: Korean, English, Spanish, German, Japanese, and Vietnamese. We evaluate K-EXAONE on a comprehensive benchmark suite spanning reasoning, agentic, general, Korean, and multilingual abilities. Across these evaluations, K-EXAONE demonstrates performance comparable to open-weight models of similar size. K-EXAONE, designed to advance AI for a better life, is positioned as a powerful proprietary AI foundation model for a wide range of industrial and research applications.",
-    "published": "Jan 05",
-    "pdf_url": "https://arxiv.org/pdf/2601.01739v2",
-    "arxiv_url": "http://arxiv.org/abs/2601.01739v2",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
     ]
   }
 ]
