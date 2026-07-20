@@ -1,5 +1,26 @@
 [
   {
+    "title": "Understanding Reasoning from Pretraining to Post-Training",
+    "authors": [
+      "Jingyan Shen",
+      "Ang Li",
+      "Salman Rahman",
+      "Yifan Sun",
+      "Micah Goldblum",
+      "Matus Telgarsky",
+      "Pavel Izmailov"
+    ],
+    "summary": "Reinforcement learning (RL) has become central to improving large language models (LLMs) on complex reasoning tasks, yet RL post-training is largely studied in isolation from the pretraining that precedes it. As a result, two basic questions remain open: (1) how do pretraining choices (model size, data) shape the returns to RL compute, and (2) what does RL actually do to the model? These questions are difficult to study in the standard LLM setting: pretraining corpora are vast and uncontrolled, making it hard to attribute behaviors to pretraining versus RL, and systematic compute sweeps across both stages are prohibitively expensive. To address these challenges, we use chess as a controlled testbed for studying reasoning across the full pretraining-to-post-training pipeline. We follow the standard LLM training pipeline by pretraining language models from 5M to 1B parameters on human chess games, supervised fine-tuning on synthetic reasoning traces, and running RL on chess puzzles with verifiable rewards. Using this framework, we find that the post-RL performance at given RL compute level is well-predicted from the pretraining loss, and slope of the RL reward curves improves approximately linearly with the pretraining tokens. Beyond scaling, we find that RL does not simply sharpen the SFT policy: on easy puzzles it amplifies correct moves the SFT policy already preferred, while on hard puzzles it surfaces correct moves that were nearly absent under SFT. We further test whether our findings transfer beyond chess by training a 1B language model on math-domain text, where the s...",
+    "published": "Jul 17",
+    "pdf_url": "https://arxiv.org/pdf/2607.16097v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.16097v1",
+    "queried_author": "Micah Goldblum",
+    "matching_authors": [
+      "Micah Goldblum",
+      "Pavel Izmailov"
+    ]
+  },
+  {
     "title": "Pretraining Data Can Be Poisoned through Computational Propaganda",
     "authors": [
       "Victoria Graf",
@@ -12742,26 +12763,6 @@
     "queried_author": "Dan Jurafsky",
     "matching_authors": [
       "Dan Jurafsky"
-    ]
-  },
-  {
-    "title": "Neural Nonmyopic Bayesian Optimization in Dynamic Cost Settings",
-    "authors": [
-      "Sang T. Truong",
-      "Duc Q. Nguyen",
-      "Willie Neiswanger",
-      "Ryan-Rhys Griffiths",
-      "Stefano Ermon",
-      "Nick Haber",
-      "Sanmi Koyejo"
-    ],
-    "summary": "Bayesian optimization (BO) is a common framework for optimizing black-box functions, yet most existing methods assume static query costs and rely on myopic acquisition strategies. We introduce LookaHES, a nonmyopic BO framework designed for dynamic, history-dependent cost environments, where evaluation costs vary with prior actions, such as travel distance in spatial tasks or edit distance in sequence design. LookaHES combines a multi-step variant of $H$-Entropy Search with pathwise sampling and neural policy optimization, enabling long-horizon planning beyond twenty steps without the exponential complexity of existing nonmyopic methods. The key innovation is the integration of neural policies, including large language models, to effectively navigate structured, combinatorial action spaces such as protein sequences. These policies amortize lookahead planning and can be integrated with domain-specific constraints during rollout. Empirically, LookaHES outperforms strong myopic and nonmyopic baselines across nine synthetic benchmarks from two to eight dimensions and two real-world tasks: geospatial optimization using NASA night-light imagery and protein sequence design with constrained token-level edits. In short, LookaHES provides a general, scalable, and cost-aware solution for robust long-horizon optimization in complex decision spaces, which makes it a useful tool for researchers in machine learning, statistics, and applied domains. Our implementation is available at https://github.com/sangttruong/nonmyopia.",
-    "published": "Jan 10",
-    "pdf_url": "https://arxiv.org/pdf/2601.06505v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.06505v1",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
     ]
   }
 ]
