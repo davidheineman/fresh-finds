@@ -1,5 +1,71 @@
 [
   {
+    "title": "Solar Open 2 Technical Report",
+    "authors": [
+      "Sungrae Park",
+      "Sanghoon Kim",
+      "Gyoungjin Gim",
+      "Jungho Cho",
+      "Hyunwoong Ko",
+      "Minbyul Jeong",
+      "Minjeong Kim",
+      "Keunwoo Choi",
+      "Chaehun Shin",
+      "Chanwoong Yoon",
+      "Dongjun Kim",
+      "Eunwon Kim",
+      "Gyungin Shin",
+      "Hyeonju Lee",
+      "Hyungkyu Kang",
+      "Inseo Song",
+      "Jisu Bae",
+      "Jiyoon Han",
+      "Jiyun Lee",
+      "Joonkee Kim",
+      "Junyeop Lee",
+      "Mikyoung Cha",
+      "Sangwon Yu",
+      "Sehwan Joo",
+      "Seokyoon Kang",
+      "Seonghoon Yang",
+      "Seung Shin",
+      "Seunghyun Lee",
+      "Seungseop Lim",
+      "Seungyoun Shin",
+      "Sukyung Lee",
+      "Taegyeong Eo",
+      "Taehwan Oh",
+      "Taewhoo Lee",
+      "Wonho Song",
+      "Wonjun Oh",
+      "Wonseok Hwang",
+      "Yunsu Kim",
+      "Yura Shim",
+      "Hwalsuk Lee",
+      "Sunghun Kim",
+      "Du-Seong Chang",
+      "Kyunghyun Cho",
+      "Seungju Han",
+      "Yejin Choi",
+      "Junsuk Choe",
+      "Hwaran Lee",
+      "Minjeong Ban",
+      "Yun Taewon",
+      "Hwanjun Song",
+      "Jae-Gil Lee",
+      "KyungTae Lim",
+      "Alice Oh"
+    ],
+    "summary": "We present Solar Open 2, a 250B-A15B Mixture-of-Experts language model built for long-horizon agentic tasks, scaled up from Solar Open 1 (Solar Open 100B). To hold entire agent trajectories in a single context, Solar Open 2 reaches a 1M-token window through a hybrid attention stack that interleaves one softmax layer among every three linear-attention layers, using no positional encoding and a gated delta rule extended to negative eigenvalues. To train at this scale under a fixed compute budget, we make training efficient in two ways: a stronger starting point, and higher-value data. For the starting point, we initialize Solar Open 2 from Solar Open 1, transferring the 5.69B-parameter shared skeleton that survives the architectural change and learning everything else through full pre-training. For the data, we curate for value per token: quality- and rarity-aware data curation and mixture-ratio optimization refine a 20T pool into a 10T mixture that, at equal token budget, outperforms the Solar Open 1 recipe. To build its agent skills, we train twelve domain specialists across purpose-built scenarios, then consolidate them into a single model by Multi-teacher On-Policy Distillation (MOPD). Against comparably sized open-weight models on English benchmarks, Solar Open 2 leads on MMLU-Pro, LiveCodeBench, and the APEX-Agents agentic suite, and stays competitive with the strongest (DeepSeek-V4-Flash and MiMo-V2.5) elsewhere. On Korean benchmarks, Solar Open 2 records the highest average of any model compared, including fast-tier closed APIs, and on Ko-GDPval, an in-house Korean of...",
+    "published": "Jul 22",
+    "pdf_url": "https://arxiv.org/pdf/2607.20062v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.20062v1",
+    "queried_author": "Yejin Choi",
+    "matching_authors": [
+      "Yejin Choi"
+    ]
+  },
+  {
     "title": "Two-Level Meta-Rubrics for Evaluating Open-Ended Generation: GAMUT, a Benchmark for Factual Completeness",
     "authors": [
       "Xilun Chen",
@@ -850,6 +916,24 @@
     ]
   },
   {
+    "title": "Economic Evaluations of Language Models",
+    "authors": [
+      "Alexander Wan",
+      "Stephane Hatgis-Kessell",
+      "Tom\u00e1s Aguirre",
+      "Percy Liang",
+      "Rishi Bommasani"
+    ],
+    "summary": "Language models perform economically valuable work, yet they are not currently assessed for how well they perform every economically valuable task. We introduce EconEvals as an open-source evaluation suite to measure capabilities relevant to tasks, work activities, and occupations in the US labor economy. We ground the evaluation suite in real user queries to language models where possible, and supplement these with synthetic data. Our evaluations improve coverage over OpenAI's GDPval benchmark, which is the existing state-of-the-art that covers 5% of US occupations, at 500x lower cost. Alongside benchmarks, we also introduce a simulation-based exposure measure to estimate how much time current language model capabilities could save across all tasks belonging to all US occupations, with detailed accounting for each estimate. Our estimates indicate that current models could save workers substantial time on at least half of their tasks in 47% of occupations. However, for 79% of tasks where we predict substantial time savings, observed Claude usage is low, suggesting that existing usage lags potential. Beyond inherent constraints of language model chatbots, our data identifies privacy and proprietary systems as the principal bottlenecks limiting further time savings from AI. Overall, we introduce adaptable infrastructure that grounds inferences about language models' labor-market impact in their current capabilities, which can be continually updated as capabilities improve.",
+    "published": "Jun 26",
+    "pdf_url": "https://arxiv.org/pdf/2607.19375v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.19375v1",
+    "queried_author": "Percy Liang",
+    "matching_authors": [
+      "Percy Liang"
+    ]
+  },
+  {
     "title": "DataComp-VLM: Improved Open Datasets for Vision-Language Models",
     "authors": [
       "Matteo Farina",
@@ -1331,10 +1415,10 @@
       "Karthik Narasimhan",
       "Zhuang Liu"
     ],
-    "summary": "Language model agents are becoming proficient executors at isolated, short-horizon tasks such as software engineering and customer service. Yet real-world challenges require a combination of sophisticated skills that remain largely untested in agents: (1) navigating long horizons amid uncertainty; (2) acquiring information in noisy environments; (3) adapting to a changing world; (4) orchestrating multiple moving parts toward a coherent goal. We introduce CEO-Bench, which evaluates these capabilities together by simulating a representative real-world task: operating a startup for 500 days. An agent manages pricing, marketing, budgeting, and many other aspects of a fictional company through a programmable Python interface, operating in the same environment and facing the same challenges as a human CEO. Success demands analyzing noisy, interconnected business databases, translating signals into sound strategy, and coordinating many decisions with programming. The strongest agents write sophisticated code that simulates customer cohorts to forecast future cash and mines negotiation history to uncover hidden customer preferences. Even so, most state-of-the-art models struggle in this environment. Only Claude Opus 4.8 and GPT-5.5 finish above the $1M starting balance, and neither consistently turns a profit. CEO-Bench takes a first step toward measuring the intelligence required to drive sustained, adaptive progress over time.",
+    "summary": "Language model agents are becoming proficient executors at isolated, short-horizon tasks such as software engineering and customer service. Yet real-world challenges require a combination of sophisticated skills that remain largely untested in agents: (1) navigating long horizons amid uncertainty; (2) acquiring information in noisy environments; (3) adapting to a changing world; (4) orchestrating multiple moving parts toward a coherent goal. We introduce CEO-Bench, which evaluates these capabilities together by simulating a representative real-world task: operating a startup for 500 days. An agent manages pricing, marketing, budgeting, and many other aspects of a fictional company through a programmable Python interface, operating in the same environment and facing the same challenges as a human CEO. Success demands analyzing noisy, interconnected business databases, translating signals into sound strategy, and coordinating many decisions with programming. The strongest agents write sophisticated code that forecasts churn regimes, billing timing, customer losses, and future cash under different scenarios. Even so, most state-of-the-art models struggle in this environment. Only Claude Fable 5, GPT-5.6 Sol, and Claude Opus 4.8 finish above the $1M starting balance, and all evaluated models remain below the rule-based baseline. CEO-Bench takes a first step toward measuring the intelligence required to drive sustained, adaptive progress over time.",
     "published": "Jun 16",
-    "pdf_url": "https://arxiv.org/pdf/2606.18543v1",
-    "arxiv_url": "http://arxiv.org/abs/2606.18543v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.18543v2",
+    "arxiv_url": "http://arxiv.org/abs/2606.18543v2",
     "queried_author": "Karthik Narasimhan",
     "matching_authors": [
       "Karthik Narasimhan"
@@ -12720,44 +12804,6 @@
     "matching_authors": [
       "Ali Farhadi",
       "Ranjay Krishna"
-    ]
-  },
-  {
-    "title": "The Algorithmic Gaze of Image Quality Assessment: An Audit and Trace Ethnography of the LAION-Aesthetics Predictor",
-    "authors": [
-      "Jordan Taylor",
-      "William Agnew",
-      "Maarten Sap",
-      "Sarah E. Fox",
-      "Haiyi Zhu"
-    ],
-    "summary": "Visual generative AI models are trained using a one-size-fits-all measure of aesthetic appeal. However, what is deemed \"aesthetic\" is inextricably linked to personal taste and cultural values, raising the question of whose taste is represented in visual generative AI models. In this work, we study an aesthetic evaluation model--LAION-Aesthetics Predictor (LAP)--that is widely used to curate datasets to train visual generative image models, like Stable Diffusion, and evaluate the quality of AI-generated images. To understand what LAP measures, we audited the model across three datasets. First, we examined the impact of aesthetic filtering on the LAION-Aesthetics Dataset (approximately 1.2B images), which was curated from LAION-5B using LAP. We find that the LAP disproportionally filters in images with captions mentioning women, while filtering out images with captions mentioning men or LGBTQ+ people. Then, we used LAP to score approximately 330k images across two art datasets, finding the model rates realistic images of landscapes, cityscapes, and portraits from western and Japanese artists most highly. In doing so, the algorithmic gaze of this aesthetic evaluation model reinforces the imperial and male gazes found within western art history. In order to understand where these biases may have originated, we performed a digital ethnography of public materials related to the creation of LAP. We find that the development of LAP reflects the biases we found in our audits, such as the aesthetic scores used to train LAP primarily coming from English-speaking photographers and west...",
-    "published": "Jan 14",
-    "pdf_url": "https://arxiv.org/pdf/2601.09896v4",
-    "arxiv_url": "http://arxiv.org/abs/2601.09896v4",
-    "queried_author": "Maarten Sap",
-    "matching_authors": [
-      "Maarten Sap"
-    ]
-  },
-  {
-    "title": "PluriHarms: Benchmarking the Full Spectrum of Human Judgments on AI Harm",
-    "authors": [
-      "Jing-Jing Li",
-      "Joel Mire",
-      "Eve Fleisig",
-      "Valentina Pyatkin",
-      "Anne Collins",
-      "Maarten Sap",
-      "Sydney Levine"
-    ],
-    "summary": "Current AI safety frameworks, which often treat harmfulness as binary, lack the flexibility to handle borderline cases where humans meaningfully disagree. To build more pluralistic systems, it is essential to move beyond consensus and instead understand where and why disagreements arise. We introduce PluriHarms, a benchmark designed to systematically study human harm judgments across two key dimensions -- the harm axis (benign to harmful) and the agreement axis (agreement to disagreement). Our scalable framework generates prompts that capture diverse AI harms and human values while targeting cases with high disagreement rates, validated by human data. The benchmark includes 150 prompts with 15,000 ratings from 100 human annotators, enriched with demographic and psychological traits and prompt-level features of harmful actions, effects, and values. Our analyses show that prompts that relate to imminent risks and tangible harms amplify perceived harmfulness, while annotator traits (e.g., toxicity experience, education) and their interactions with prompt content explain systematic disagreement. We benchmark AI safety models and alignment methods on PluriHarms, finding that while personalization significantly improves prediction of human harm judgments, considerable room remains for future progress. By explicitly targeting value diversity and disagreement, our work provides a principled benchmark for moving beyond \"one-size-fits-all\" safety toward pluralistically safe AI.",
-    "published": "Jan 13",
-    "pdf_url": "https://arxiv.org/pdf/2601.08951v2",
-    "arxiv_url": "http://arxiv.org/abs/2601.08951v2",
-    "queried_author": "Maarten Sap",
-    "matching_authors": [
-      "Maarten Sap"
     ]
   }
 ]
