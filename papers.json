@@ -1,5 +1,21 @@
 [
   {
+    "title": "Leaky Language Models: Stealing Architecture and Inference Optimizations via Per-Token Timing",
+    "authors": [
+      "Sadegh Majidi",
+      "Niloofar Mireshghallah",
+      "Kazem Taram"
+    ],
+    "summary": "This work presents LeakyLMs, a set of attacks that leak proprietary model, architecture, and deployment information from production language models. LeakyLMs is the first to demonstrate that key model and deployment details can be inferred using only token generation timing, even when interacting through remote APIs. LeakyLMs introduces two core attacks. The first attack targets inference optimizations and deployment strategies. For example, our attack detects whether a provider uses speculative decoding, a widely deployed inference-time optimization, and further identifies the context length of the draft model used in the pipeline. Our measurements show that Google Gemini Flash 2.5 uses speculative decoding with a draft context window of approximately 128K tokens. The second attack recovers key architectural properties, including the number of transformer layers, hidden dimension size, and number of attention heads. To achieve this, LeakyLMs builds a detailed and accurate model of token-generation timing on modern NVIDIA GPUs, characterizing how latency scales with model configuration and hardware parameters. The attack then performs a search over the architecture space using this timing model. In experiments with Llama models, the near-correct architectural configuration appears in the top-10 guesses more than 90% of the time.",
+    "published": "Jul 22",
+    "pdf_url": "https://arxiv.org/pdf/2607.20723v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.20723v1",
+    "queried_author": "Niloofar Mireshghallah",
+    "matching_authors": [
+      "Niloofar Mireshghallah"
+    ]
+  },
+  {
     "title": "Solar Open 2 Technical Report",
     "authors": [
       "Sungrae Park",
@@ -218,6 +234,34 @@
     "queried_author": "Hannaneh Hajishirzi",
     "matching_authors": [
       "Hannaneh Hajishirzi"
+    ]
+  },
+  {
+    "title": "SOAP, Muon, and Beyond: Pushing LLM Pretraining Scales",
+    "authors": [
+      "Mikail Khona",
+      "Aditya Vavre",
+      "Boxiang Wang",
+      "Deyu Fu",
+      "Hao Wu",
+      "Mike Chrzanowski",
+      "Bryan Catanzaro",
+      "Dheevatsa Mudigere",
+      "Jeff Pool",
+      "Michael Lightstone",
+      "Mohammad Shoeybi",
+      "Mostofa Patwary",
+      "Nima Tajbakhsh",
+      "Tijmen Blankevoort"
+    ],
+    "summary": "Higher-order optimizers such as Muon and SOAP offer faster convergence than AdamW, but their computational cost and numerical stability challenges have limited adoption at scale. In this work, we adapt and enhance preconditioned gradient methods to overcome the practical challenges of large-scale LLM pretraining. We first identify instabilities in SOAP at large batch sizes and propose algorithmic modifications including per-step QR orthogonalization and improved preconditioning strategies that eliminate loss spikes and enable stable training in these regimes. We then present a unified empirical study of SOAP, Muon, and AdamW using update-RMS matching to ensure fair learning rate transfer across optimizers. As part of this analysis, we empirically evaluate the orthogonalization quality of Muon. Our experiments on multi-billion-parameter models trained on trillions of tokens reveal that SOAP and Muon consistently outperform AdamW at the scales we tested. Notably, at batch sizes of up to 100M tokens for next-token prediction, these optimizers maintain training stability and quality while AdamW degrades. To enable efficient training at large scale, we introduce a layer-wise distributed optimizer compatible with Megatron-LM. Our implementation balances memory and hides communication while avoiding approximations to the optimizer computations, thus retaining their convergence benefits. Additionally, we identify and build specific system-level improvements to further accelerate our layer-wise implementation. To support the research community, we release a codebase that contains em...",
+    "published": "Jul 13",
+    "pdf_url": "https://arxiv.org/pdf/2607.20548v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.20548v1",
+    "queried_author": "Mohammad Shoeybi",
+    "matching_authors": [
+      "Mohammad Shoeybi",
+      "Mostofa Patwary"
     ]
   },
   {
@@ -3783,6 +3827,23 @@
     "queried_author": "Pavel Izmailov",
     "matching_authors": [
       "Pavel Izmailov"
+    ]
+  },
+  {
+    "title": "SonicSampler: Unified Tile-Aware Kernels for LLM Sampling and Speculative Verification",
+    "authors": [
+      "Pragaash Ponnusamy",
+      "Shivam Sahni",
+      "Jue Wang",
+      "Tri Dao"
+    ],
+    "summary": "Sampling in LLM inference comprises a combinatorial set of logit processing, token selection, and verification operations for speculative decoding. However, existing implementations either accelerate only subsets of this pipeline, rely on multiple kernel launches, or assume homogeneous sampling behavior across a batch, limiting support for dynamic serving workloads and preventing efficient CUDA Graph execution. We present $\\textbf{SonicSampler}$, a unified suite of tile-aware Triton kernels that vertically fuses the complete sampling pipeline into a fixed, workload-aware execution model. Our kernels support dynamic per-request sampling behaviors, including grammar-constrained decoding, repetition, frequency and presence penalties, logit bias, temperature scaling, top-$k$ / top-$p$ / min-$p$ filtering, and speculative verification - within a single batched kernel while remaining fully CUDA Graph-compatible. Central to our approach is a novel hierarchical two-stage top-$k$ algorithm that achieves up to $\\textbf{10x speedup}$ over competitive baselines and exploits the low-entropy structure of LLM outputs to enable efficient selection over large vocabularies. Across heterogeneous speculative decoding workloads, SonicSampler achieves up to $\\textbf{16x speedup}$ over state-of-the-art baselines while preserving flexible batched execution.",
+    "published": "May 24",
+    "pdf_url": "https://arxiv.org/pdf/2607.20475v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.20475v1",
+    "queried_author": "Tri Dao",
+    "matching_authors": [
+      "Tri Dao"
     ]
   },
   {
@@ -10336,10 +10397,10 @@
       "Dieter Fox",
       "Ranjay Krishna"
     ],
-    "summary": "While Vision-Language-Action (VLA) models have seen rapid progress in pretraining, their advancement in Reinforcement Learning (RL) remains hampered by low sample efficiency and sparse rewards in real-world settings. Developing generalizable process reward models is essential for providing the fine-grained feedback necessary to bridge this gap, yet existing temporal value functions often fail to generalize beyond their training domains. We introduce TOPReward, a novel, probabilistically grounded temporal value function that leverages the latent world knowledge of pretrained video Vision-Language Models (VLMs) to estimate robotic task progress. Unlike prior methods that prompt VLMs to directly output progress values, which are prone to numerical misrepresentation, TOPReward extracts task progress directly from the VLM's internal token logits. In zero-shot evaluations across 130+ distinct real-world tasks and multiple robot platforms (e.g., Franka, YAM, SO-100/101), TOPReward achieves 0.947 mean Value-Order Correlation (VOC) on Qwen3-VL, dramatically outperforming the state-of-the-art GVL baseline which achieves near-zero correlation on the same open-source model. We further demonstrate that TOPReward serves as a versatile tool for downstream applications, including success detection and reward-aligned behavior cloning.",
+    "summary": "General-purpose robot learning requires dense, instruction-conditioned feedback that can distinguish meaningful task progress from stalled, failed, or partially completed behavior. Yet obtaining such feedback at scale remains difficult, since existing approaches often rely on manual progress annotations, task-specific demonstrations, or reward models trained on curated robot datasets. We introduce TOPReward, a training-free progress reward method that probes pretrained Video-Language Models (VLMs) through their internal token probabilities rather than asking them to generate numerical progress values. Given a video prefix and a language instruction, TOPReward measures the model's likelihood that the instructed task has been completed, converting latent video-language understanding into a dense reward signal without task-specific reward-model training or manually annotated progress labels. We evaluate TOPReward on ManiRewardBench, our real-world manipulation benchmark spanning 130 unique tasks and four robot platforms, as well as on Open X-Embodiment datasets. Across these settings, TOPReward substantially outperforms prior training-free VLM reward methods on open-source models and is competitive with a trained reward-model baseline on progress-estimation metrics, while requiring no reward-model training. Additional analyses show that the reward is sensitive to the specified instruction and is not explained by time index alone. Finally, TOPReward supports downstream applications including success detection and offline reward-weighted behavior cloning.",
     "published": "Feb 22",
-    "pdf_url": "https://arxiv.org/pdf/2602.19313v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.19313v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.19313v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.19313v2",
     "queried_author": "Ranjay Krishna",
     "matching_authors": [
       "Ranjay Krishna"
@@ -11287,18 +11348,18 @@
     ]
   },
   {
-    "title": "Frame-Level Internal Tool Use for Temporal Grounding in Audio LMs",
+    "title": "Encode Once, Decode Never: Reusing Audio LM Internals for Efficient Temporal Localization",
     "authors": [
-      "Joesph An",
+      "Joseph An",
       "Phillip Keung",
       "Jiaqi Wang",
       "Orevaoghene Ahia",
       "Noah A. Smith"
     ],
-    "summary": "Large audio language models are increasingly used for complex audio understanding tasks, but they struggle with temporal tasks that require precise temporal grounding, such as word alignment and speaker diarization. The standard approach, where we generate timestamps as sequences of text tokens, is computationally expensive and prone to hallucination, especially when processing audio lengths outside the model's training distribution. In this work, we propose frame-level internal tool use, a method that trains audio LMs to use their own internal audio representations to perform temporal grounding directly. We introduce a lightweight prediction mechanism trained via two objectives: a binary frame classifier and a novel inhomogeneous Poisson process (IHP) loss that models temporal event intensity. Across word localization, speaker diarization, and event localization tasks, our approach outperforms token-based baselines. Most notably, it achieves a >50x inference speedup and demonstrates robust length generalization, maintaining high accuracy on out-of-distribution audio durations where standard token-based models collapse completely.",
+    "summary": "Audio language models process input audio into rich frame-level representations, but the standard approach to temporal localization generates timestamps as sequences of text tokens, which discards the frame-level representations in favor of autoregressive decoding. However, generating timestamps as tokens is slow and not parallelizable, and tends to hallucinate when producing timestamps outside the training distribution. We propose internal frame-level reuse, a method that trains audio LMs to reuse their own internal audio representations for temporal localization directly, bypassing token generation altogether. We introduce a lightweight prediction head trained via different frame-level objectives: a binary frame classifier and a novel inhomogeneous Poisson process (IHP) loss that models temporal event intensity. Across word localization, speaker diarization, and event localization tasks, our approach can achieve a >50x inference speedup over token-based generation and demonstrates robust length generalization, maintaining high accuracy on out-of-distribution audio durations where token-based models collapse completely. We find that reusing audio frame-level representations yields localization accuracies comparable to (and often better than) finetuned token-based baselines.",
     "published": "Feb 10",
-    "pdf_url": "https://arxiv.org/pdf/2602.10230v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.10230v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.10230v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.10230v2",
     "queried_author": "Noah A. Smith",
     "matching_authors": [
       "Noah A. Smith"
@@ -12728,82 +12789,6 @@
     "queried_author": "Dan Jurafsky",
     "matching_authors": [
       "Dan Jurafsky"
-    ]
-  },
-  {
-    "title": "Building Production-Ready Probes For Gemini",
-    "authors": [
-      "J\u00e1nos Kram\u00e1r",
-      "Joshua Engels",
-      "Zheng Wang",
-      "Bilal Chughtai",
-      "Rohin Shah",
-      "Neel Nanda",
-      "Arthur Conmy"
-    ],
-    "summary": "Frontier language model capabilities are improving rapidly. We thus need stronger mitigations against bad actors misusing increasingly powerful systems. Prior work has shown that activation probes may be a promising misuse mitigation technique, but we identify a key remaining challenge: probes fail to generalize under important production distribution shifts. In particular, we find that the shift from short-context to long-context inputs is difficult for existing probe architectures. We propose several new probe architectures that handle this long-context distribution shift.\n  We evaluate these probes in the cyber-offensive domain, testing their robustness against various production-relevant distribution shifts, including multi-turn conversations, long context prompts, and adaptive red teaming. Our results demonstrate that while our novel architectures address context length, a combination of architecture choice and training on diverse distributions is required for broad generalization. Additionally, we show that pairing probes with prompted classifiers achieves optimal accuracy at a low cost due to the computational efficiency of probes.\n  These findings have informed the successful deployment of misuse mitigation probes in user-facing instances of Gemini, Google's frontier language model. Finally, we find early positive results using AlphaEvolve to automate improvements in both probe architecture search and adaptive red teaming, showing that automating some AI safety research is already possible.",
-    "published": "Jan 16",
-    "pdf_url": "https://arxiv.org/pdf/2601.11516v4",
-    "arxiv_url": "http://arxiv.org/abs/2601.11516v4",
-    "queried_author": "Neel Nanda",
-    "matching_authors": [
-      "Neel Nanda"
-    ]
-  },
-  {
-    "title": "Massively Multilingual Joint Segmentation and Glossing",
-    "authors": [
-      "Michael Ginn",
-      "Lindia Tjuatja",
-      "Enora Rice",
-      "Ali Marashian",
-      "Maria Valentini",
-      "Jasmine Xu",
-      "Graham Neubig",
-      "Alexis Palmer"
-    ],
-    "summary": "Automated interlinear gloss prediction with neural networks is a promising approach to accelerate language documentation efforts. However, while state-of-the-art models like GlossLM achieve high scores on glossing benchmarks, user studies with linguists have found critical barriers to the usefulness of such models in real-world scenarios. In particular, existing models typically generate morpheme-level glosses but assign them to whole words without predicting the actual morpheme boundaries, making the predictions less interpretable and thus untrustworthy to human annotators.\n  We conduct the first study on neural models that jointly predict interlinear glosses and the corresponding morphological segmentation from raw text. We run experiments to determine the optimal way to train models that balance segmentation and glossing accuracy, as well as the alignment between the two tasks. We extend the training corpus of GlossLM and pretrain PolyGloss, a family of seq2seq multilingual models for joint segmentation and glossing that outperforms GlossLM on glossing and beats various open-source LLMs on segmentation, glossing, and alignment. In addition, we demonstrate that PolyGloss can be quickly adapted to a new dataset via low-rank adaptation.",
-    "published": "Jan 16",
-    "pdf_url": "https://arxiv.org/pdf/2601.10925v3",
-    "arxiv_url": "http://arxiv.org/abs/2601.10925v3",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
-    ]
-  },
-  {
-    "title": "Molmo2: Open Weights and Data for Vision-Language Models with Video Understanding and Grounding",
-    "authors": [
-      "Christopher Clark",
-      "Jieyu Zhang",
-      "Zixian Ma",
-      "Jae Sung Park",
-      "Mohammadreza Salehi",
-      "Rohun Tripathi",
-      "Sangho Lee",
-      "Zhongzheng Ren",
-      "Chris Dongjoo Kim",
-      "Yinuo Yang",
-      "Vincent Shao",
-      "Yue Yang",
-      "Weikai Huang",
-      "Ziqi Gao",
-      "Taira Anderson",
-      "Jianrui Zhang",
-      "Jitesh Jain",
-      "George Stoica",
-      "Winson Han",
-      "Ali Farhadi",
-      "Ranjay Krishna"
-    ],
-    "summary": "Today's strongest video-language models (VLMs) remain proprietary. The strongest open-weight models either rely on synthetic data from proprietary VLMs, effectively distilling from them, or do not disclose their training data or recipe. As a result, the open-source community lacks the foundations needed to improve on the state-of-the-art video (and image) language models. Crucially, many downstream applications require more than just high-level video understanding; they require grounding -- either by pointing or by tracking in pixels. Even proprietary models lack this capability. We present Molmo2, a new family of VLMs that are state-of-the-art among open-source models and demonstrate exceptional new capabilities in point-driven grounding in single image, multi-image, and video tasks. Our key contribution is a collection of 7 new video datasets and 2 multi-image datasets, including a dataset of highly detailed video captions for pre-training, a free-form video Q&A dataset for fine-tuning, a new object tracking dataset with complex queries, and an innovative new video pointing dataset, all collected without the use of closed VLMs. We also present a training recipe for this data utilizing an efficient packing and message-tree encoding scheme, and show bi-directional attention on vision tokens and a novel token-weight strategy improves performance. Our best-in-class 8B model outperforms others in the class of open weight and data models on short videos, counting, and captioning, and is competitive on long-videos. On video-grounding Molmo2 significantly outperforms existing ope...",
-    "published": "Jan 15",
-    "pdf_url": "https://arxiv.org/pdf/2601.10611v4",
-    "arxiv_url": "http://arxiv.org/abs/2601.10611v4",
-    "queried_author": "Ali Farhadi",
-    "matching_authors": [
-      "Ali Farhadi",
-      "Ranjay Krishna"
     ]
   }
 ]
