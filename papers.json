@@ -1,5 +1,61 @@
 [
   {
+    "title": "A Roadmap to Impactful Pluralistic Alignment Research",
+    "authors": [
+      "Elinor Poole-Dayan",
+      "Jillian Fisher",
+      "Atoosa Kasirzadeh",
+      "Jacob Andreas",
+      "Mitchell Gordon",
+      "Michiel A. Bakker"
+    ],
+    "summary": "Pluralistic value alignment---the goal of building AI systems that represent and serve diverse human values and perspectives---has emerged as an active research agenda. Yet, there's no public evidence that it has shaped the training or evaluation of the AI systems people actually use. We audit the public behavior documents and evaluations of frontier labs, finding none name pluralism as a goal, and as of this writing, no clear indication that production models are explicitly trained or tested for it. This goes against the primary motivations and goals of pluralistic alignment, which revolve around making a positive difference in the models serving billions of users worldwide. We argue that the pluralistic alignment research community should focus on supporting impact and adoption in deployed, widely-used AI systems. We provide evidence for the adoption problem, present three main reasons behind it, and discuss three corresponding areas for future research to address it: 1. The primary justifications for pluralistic alignment so far have been normative or speculative. We need studies showing empirically how pluralistic AI benefits users or society. 2. The pluralistic alignment research community has not settled when pluralistic behavior is warranted or what pluralism ideally looks like in practice. We need to establish a concrete goal for developers to operationalize. 3. Current methods trade off against other desiderata of LLMs in ways that are largely unmeasured, and existing metrics are not \"hill-climbable.\" We need trade-off-aware evaluations and methods that meet the re...",
+    "published": "Jul 24",
+    "pdf_url": "https://arxiv.org/pdf/2607.22305v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.22305v1",
+    "queried_author": "Jacob Andreas",
+    "matching_authors": [
+      "Jacob Andreas",
+      "Mitchell Gordon"
+    ]
+  },
+  {
+    "title": "LeAct: Learning to Reason from Expert Actions",
+    "authors": [
+      "Ziran Yang",
+      "Chengshuai Shi",
+      "Raj Ghugare",
+      "Benjamin Eysenbach",
+      "Karthik Narasimhan",
+      "Chi Jin"
+    ],
+    "summary": "Modern reasoning models depend on reasoning data, today sourced from human annotations or distilled from stronger LLMs. However, a rich and largely untapped source of supervision lies in expert systems (e.g., game engines, classical planners, theorem provers), which routinely produce near-optimal actions across diverse domains. But these experts are silent: they commit to an action without writing down the chain of thought (CoT) behind it. Recovering that CoT as natural-language reasoning would distill expert knowledge into a student that generalizes beyond the demonstrated actions. We treat it as a latent variable and study how to recover it from the action alone. Our approach, LeAct (Learning to reason from Actions), optimizes this latent variable: the student samples candidate CoTs for each expert action, and we retain those that measurably improve its own probability of recovering the action. Across imperfect-information games at multiple scales and a simulated robotics benchmark, LeAct reaches the solver's numerical floor on small enumerable games. At larger scale, it is $5\\times$ closer to the solver than the strongest expert-iteration baseline. At Flop Hold'em ($\\sim 10^9$ infosets), LeAct wins head-to-head by $+60$ mbb/g, and on the robotics probe it is the only training recipe that improves on direct imitation. We present a principled framework and the result: expert systems become a categorically new source of reasoning teachers for foundation models.",
+    "published": "Jul 23",
+    "pdf_url": "https://arxiv.org/pdf/2607.21856v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.21856v1",
+    "queried_author": "Karthik Narasimhan",
+    "matching_authors": [
+      "Karthik Narasimhan"
+    ]
+  },
+  {
+    "title": "Simulation-Based Empirical Bayes",
+    "authors": [
+      "Xinwei Shen",
+      "Diana Cai",
+      "Cheng Zhang",
+      "David M. Blei"
+    ],
+    "summary": "Empirical Bayes (EB) performs simultaneous inference across many related latent variables. Classical EB assumes that the likelihood p(x | z) is tractable. In many scientific applications, however, the likelihood is available only through a simulator. This paper develops EB for such implicit likelihoods. We introduce simulation-based empirical Bayes (SBEB), which connects nonparametric EB to simulation-based inference (SBI). SBEB computes EB estimates without an explicit density by using the observed data, simulator samples, and an amortized inference network. SBEB iteratively refines the fitted EB prior toward the population prior. With several scientific simulators and real-world data, we demonstrate that SBEB improves accuracy over SBI with a fixed prior.",
+    "published": "Jul 23",
+    "pdf_url": "https://arxiv.org/pdf/2607.21843v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.21843v1",
+    "queried_author": "David M. Blei",
+    "matching_authors": [
+      "David M. Blei"
+    ]
+  },
+  {
     "title": "Leaky Language Models: Stealing Architecture and Inference Optimizations via Per-Token Timing",
     "authors": [
       "Sadegh Majidi",
@@ -74,8 +130,8 @@
     ],
     "summary": "We present Solar Open 2, a 250B-A15B Mixture-of-Experts language model built for long-horizon agentic tasks, scaled up from Solar Open 1 (Solar Open 100B). To hold entire agent trajectories in a single context, Solar Open 2 reaches a 1M-token window through a hybrid attention stack that interleaves one softmax layer among every three linear-attention layers, using no positional encoding and a gated delta rule extended to negative eigenvalues. To train at this scale under a fixed compute budget, we make training efficient in two ways: a stronger starting point, and higher-value data. For the starting point, we initialize Solar Open 2 from Solar Open 1, transferring the 5.69B-parameter shared skeleton that survives the architectural change and learning everything else through full pre-training. For the data, we curate for value per token: quality- and rarity-aware data curation and mixture-ratio optimization refine a 20T pool into a 10T mixture that, at equal token budget, outperforms the Solar Open 1 recipe. To build its agent skills, we train twelve domain specialists across purpose-built scenarios, then consolidate them into a single model by Multi-teacher On-Policy Distillation (MOPD). Against comparably sized open-weight models on English benchmarks, Solar Open 2 leads on MMLU-Pro, LiveCodeBench, and the APEX-Agents agentic suite, and stays competitive with the strongest (DeepSeek-V4-Flash and MiMo-V2.5) elsewhere. On Korean benchmarks, Solar Open 2 records the highest average of any model compared, including fast-tier closed APIs, and on Ko-GDPval, an in-house Korean of...",
     "published": "Jul 22",
-    "pdf_url": "https://arxiv.org/pdf/2607.20062v1",
-    "arxiv_url": "http://arxiv.org/abs/2607.20062v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.20062v2",
+    "arxiv_url": "http://arxiv.org/abs/2607.20062v2",
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
@@ -2820,8 +2876,8 @@
     ],
     "summary": "Training recurrent neural networks (RNNs) requires assigning credit across long sequences of computations. Standard backpropagation through time (BPTT) addresses this problem poorly: it is sequential in time, limiting parallelism, and suffers from vanishing or exploding gradients, making long-range associations difficult to learn. We propose Supervised Memory Training (SMT), a method for training nonlinear RNNs that sidesteps recurrent credit propagation entirely by reducing RNN training to supervised learning on one-step memory transition labels $(m_t, x_{t+1}) \\rightarrow m_{t+1}$. SMT acquires these memory labels by training a Transformer-based encoder on a predictive state objective--retaining only information from the past necessary to predict the future. By decoupling what to remember from how to update memory, SMT enables time-parallel RNN training with a stable $O(1)$ length gradient path between any two tokens--without ever unrolling the RNN. We find that SMT outperforms BPTT when pretraining various RNN architectures on tasks like language modeling and pixel sequence modeling. SMT enables nonlinear RNNs to better capture long-range dependencies and train in parallel, potentially unlocking the scaling of models that build temporal abstractions of past experience.",
     "published": "Jun 04",
-    "pdf_url": "https://arxiv.org/pdf/2606.06479v1",
-    "arxiv_url": "http://arxiv.org/abs/2606.06479v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.06479v2",
+    "arxiv_url": "http://arxiv.org/abs/2606.06479v2",
     "queried_author": "Phillip Isola",
     "matching_authors": [
       "Phillip Isola"
@@ -11418,8 +11474,8 @@
     ],
     "summary": "The purpose of predictive modeling on relational data is to predict future or missing values in a relational database, for example, future purchases of a user, risk of readmission of the patient, or the likelihood that a financial transaction is fraudulent. Typically powered by machine learning methods, predictive models are used in recommendations, financial fraud detection, supply chain optimization, and other systems, providing billions of predictions every day. However, training a machine learning model requires manual work to extract the required training examples - prediction entities and target labels - from the database, which is slow, laborious, and prone to mistakes. Here, we present the Predictive Query Language (PQL), an SQL-inspired declarative language for defining predictive tasks on relational databases. PQL allows specifying a predictive task in a single declarative query, enabling the automatic computation of training labels for a large variety of machine learning tasks, such as regression, classification, time-series forecasting, and recommender systems. PQL is already successfully integrated and used in a collection of use cases as part of a predictive AI platform. The versatility of the language can be demonstrated through its many ongoing use cases, including financial fraud, item recommendations, and workload prediction. We demonstrate its versatile design through two implementations; one for small-scale, low-latency use and one that can handle large-scale databases.",
     "published": "Feb 10",
-    "pdf_url": "https://arxiv.org/pdf/2602.09572v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.09572v2",
+    "pdf_url": "https://arxiv.org/pdf/2602.09572v3",
+    "arxiv_url": "http://arxiv.org/abs/2602.09572v3",
     "queried_author": "Jure Leskovec",
     "matching_authors": [
       "Jure Leskovec"
@@ -12648,147 +12704,6 @@
       "Diyi Yang",
       "Tatsunori Hashimoto",
       "Yejin Choi"
-    ]
-  },
-  {
-    "title": "CooperBench: Why Coding Agents Cannot be Your Teammates Yet",
-    "authors": [
-      "Arpandeep Khatua",
-      "Hao Zhu",
-      "Peter Tran",
-      "Arya Prabhudesai",
-      "Frederic Sadrieh",
-      "Johann K. Lieberwirth",
-      "Xinkai Yu",
-      "Yicheng Fu",
-      "Michael J. Ryan",
-      "Jiaxin Pei",
-      "Diyi Yang"
-    ],
-    "summary": "Resolving team conflicts requires not only task-specific competence, but also social intelligence to find common ground and build consensus. As AI agents increasingly collaborate on complex work, they must develop coordination capabilities to function as effective teammates. Yet we hypothesize that current agents lack these capabilities. To test this, we introduce CooperBench, a benchmark of over 600 collaborative coding tasks across 12 libraries in 4 programming languages. Each task assigns two agents different features that can be implemented independently but may conflict without proper coordination. Tasks are grounded in real open-source repositories with expert-written tests. Evaluating state-of-the-art coding agents, we observe the curse of coordination: agents achieve on average 30% lower success rates when working together compared to performing both tasks individually. This contrasts sharply with human teams, where adding teammates typically improves productivity. Our analysis reveals three key issues: (1) communication channels become jammed with vague, ill-timed, and inaccurate messages; (2) even with effective communication, agents deviate from their commitments; and (3) agents often hold incorrect expectations about others' plans and communication. Through large-scale simulation, we also observe rare but interesting emergent coordination behavior including role division, resource division, and negotiation. Our research presents a novel benchmark for collaborative coding and calls for a shift from pursuing individual agent capability to developing social intelli...",
-    "published": "Jan 19",
-    "pdf_url": "https://arxiv.org/pdf/2601.13295v2",
-    "arxiv_url": "http://arxiv.org/abs/2601.13295v2",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang"
-    ]
-  },
-  {
-    "title": "Terminal-Bench: Benchmarking Agents on Hard, Realistic Tasks in Command Line Interfaces",
-    "authors": [
-      "Mike A. Merrill",
-      "Alexander G. Shaw",
-      "Nicholas Carlini",
-      "Boxuan Li",
-      "Harsh Raj",
-      "Ivan Bercovich",
-      "Lin Shi",
-      "Jeong Yeon Shin",
-      "Thomas Walshe",
-      "E. Kelly Buchanan",
-      "Junhong Shen",
-      "Guanghao Ye",
-      "Haowei Lin",
-      "Jason Poulos",
-      "Maoyu Wang",
-      "Marianna Nezhurina",
-      "Jenia Jitsev",
-      "Di Lu",
-      "Orfeas Menis Mastromichalakis",
-      "Zhiwei Xu",
-      "Zizhao Chen",
-      "Yue Liu",
-      "Robert Zhang",
-      "Leon Liangyu Chen",
-      "Anurag Kashyap",
-      "Jan-Lucas Uslu",
-      "Jeffrey Li",
-      "Jianbo Wu",
-      "Minghao Yan",
-      "Song Bian",
-      "Vedang Sharma",
-      "Ke Sun",
-      "Steven Dillmann",
-      "Akshay Anand",
-      "Andrew Lanpouthakoun",
-      "Bardia Koopah",
-      "Changran Hu",
-      "Etash Guha",
-      "Gabriel H. S. Dreiman",
-      "Jiacheng Zhu",
-      "Karl Krauth",
-      "Li Zhong",
-      "Niklas Muennighoff",
-      "Robert Amanfu",
-      "Shangyin Tan",
-      "Shreyas Pimpalgaonkar",
-      "Tushar Aggarwal",
-      "Xiangning Lin",
-      "Xin Lan",
-      "Xuandong Zhao",
-      "Yiqing Liang",
-      "Yuanli Wang",
-      "Zilong Wang",
-      "Changzhi Zhou",
-      "David Heineman",
-      "Hange Liu",
-      "Harsh Trivedi",
-      "John Yang",
-      "Junhong Lin",
-      "Manish Shetty",
-      "Michael Yang",
-      "Nabil Omi",
-      "Negin Raoof",
-      "Shanda Li",
-      "Terry Yue Zhuo",
-      "Wuwei Lin",
-      "Yiwei Dai",
-      "Yuxin Wang",
-      "Wenhao Chai",
-      "Shang Zhou",
-      "Dariush Wahdany",
-      "Ziyu She",
-      "Jiaming Hu",
-      "Zhikang Dong",
-      "Yuxuan Zhu",
-      "Sasha Cui",
-      "Ahson Saiyed",
-      "Arinbj\u00f6rn Kolbeinsson",
-      "Jesse Hu",
-      "Christopher Michael Rytting",
-      "Ryan Marten",
-      "Yixin Wang",
-      "Alex Dimakis",
-      "Andy Konwinski",
-      "Ludwig Schmidt"
-    ],
-    "summary": "AI agents may soon become capable of autonomously completing valuable, long-horizon tasks in diverse domains. Current benchmarks either do not measure real-world tasks, or are not sufficiently difficult to meaningfully measure frontier models. To this end, we present Terminal-Bench 2.0: a carefully curated hard benchmark composed of 89 tasks in computer terminal environments inspired by problems from real workflows. Each task features a unique environment, human-written solution, and comprehensive tests for verification. We show that frontier models and agents score less than 65\\% on the benchmark and conduct an error analysis to identify areas for model and agent improvement. We publish the dataset and evaluation harness to assist developers and researchers in future work at https://www.tbench.ai/ .",
-    "published": "Jan 17",
-    "pdf_url": "https://arxiv.org/pdf/2601.11868v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.11868v1",
-    "queried_author": "Ludwig Schmidt",
-    "matching_authors": [
-      "Ludwig Schmidt",
-      "Niklas Muennighoff"
-    ]
-  },
-  {
-    "title": "Beyond Tokens: Concept-Level Training Objectives for LLMs",
-    "authors": [
-      "Laya Iyer",
-      "Pranav Somani",
-      "Alice Guo",
-      "Dan Jurafsky",
-      "Chen Shani"
-    ],
-    "summary": "The next-token prediction (NTP) objective has been foundational in the development of modern large language models (LLMs), driving advances in fluency and generalization. However, NTP operates at the \\textit{token} level, treating deviations from a single reference continuation as errors even when alternative continuations are equally plausible or semantically equivalent (e.g., ``mom'' vs. ``mother''). As a result, token-level loss can penalize valid abstractions, paraphrases, or conceptually correct reasoning paths, biasing models toward surface form rather than underlying meaning. This mismatch between the training signal and semantic correctness motivates learning objectives that operate over higher-level representations. We propose a shift from token-level to concept-level prediction, where concepts group multiple surface forms of the same idea (e.g., ``mom,'' ``mommy,'' ``mother'' $\\rightarrow$ \\textit{MOTHER}). We introduce various methods for integrating conceptual supervision into LLM training and show that concept-aware models achieve lower perplexity, improved robustness under domain shift, and stronger performance than NTP-based models on diverse NLP benchmarks. This suggests \\textit{concept-level supervision} as an improved training signal that better aligns LLMs with human semantic abstractions.",
-    "published": "Jan 16",
-    "pdf_url": "https://arxiv.org/pdf/2601.11791v2",
-    "arxiv_url": "http://arxiv.org/abs/2601.11791v2",
-    "queried_author": "Dan Jurafsky",
-    "matching_authors": [
-      "Dan Jurafsky"
     ]
   }
 ]
