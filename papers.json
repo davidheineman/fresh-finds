@@ -1,5 +1,21 @@
 [
   {
+    "title": "Not All LLM Reasoning is Visible in the Chain-of-Thought",
+    "authors": [
+      "Vatsal Baherwani",
+      "Tom Goldstein",
+      "Ashwinee Panda"
+    ],
+    "summary": "A key question for AI safety is whether a language model expresses all of its reasoning in its output tokens. We demonstrate a concrete failure mode where frontier models exhibit invisible reasoning by leveraging semantically irrelevant filler tokens to improve performance on synthetic reasoning tasks. We evaluate 13 frontier language models across three tasks and find that many models benefit significantly from filler tokens, with accuracy improvements of up to 13 percentage points. The benefit depends on which tokens are used and differs across models. We further show that filler tokens enable Claude Opus 4.5 to satisfy a hidden modular arithmetic constraint without sacrificing accuracy on its primary task, demonstrating that invisible reasoning can serve objectives entirely invisible to CoT monitoring. Reinforcement learning gives Qwen3-235B strong preferences over filler token content, but neither RL nor supervised fine-tuning produces a filler token benefit that persists at test time. Our results indicate that frontier models already perform consequential computation with no interpretable trace in their output tokens.",
+    "published": "Jul 24",
+    "pdf_url": "https://arxiv.org/pdf/2607.22925v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.22925v1",
+    "queried_author": "Ashwinee Panda",
+    "matching_authors": [
+      "Ashwinee Panda"
+    ]
+  },
+  {
     "title": "A Roadmap to Impactful Pluralistic Alignment Research",
     "authors": [
       "Elinor Poole-Dayan",
@@ -1095,6 +1111,24 @@
     "queried_author": "Peter Henderson",
     "matching_authors": [
       "Peter Henderson"
+    ]
+  },
+  {
+    "title": "You Talkin to Me?: A Network Analysis of Gendered Speaker-Addressee Patterns in Film Screenplays",
+    "authors": [
+      "Samin Khan",
+      "Camilla Griffiths",
+      "Shrikanth Narayanan",
+      "Dan Jurafsky",
+      "Sabyasachee Baruah"
+    ],
+    "summary": "Objective: This paper investigates the gendered structure of speaker addressee relationships in film dialogue, asking not merely who speaks, but who is spoken to and how conversational dynamics unfold across gender lines. Methods: Using a manually annotated dataset of 4,600 directed dialogue events from 38 film screenplays, we apply network analysis, chi squared tests, paired statistical comparisons, and participation shift analysis across three studies. Key Findings: Male characters dominate as both speakers and addressees corpus wide, even in scenes with more women; cross gender dialogue is directionally symmetric on average but clustered at the film level; and same gender turns diffuse conversational attention while cross gender turns produce tighter dyadic reciprocation. Conclusion: Gender bias in film dialogue operates through the architecture of conversation itself, through exclusion from interaction and structural positioning as addressees, rather than through speaking time or within conversation directional imbalance alone.",
+    "published": "Jun 26",
+    "pdf_url": "https://arxiv.org/pdf/2607.22656v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.22656v1",
+    "queried_author": "Dan Jurafsky",
+    "matching_authors": [
+      "Dan Jurafsky"
     ]
   },
   {
@@ -2574,8 +2608,8 @@
     ],
     "summary": "As recommender systems transition toward agentic, multi-turn conversational interfaces, evaluation paradigms have struggled to keep pace. Current benchmarks often rely on \"LLM-as-a-judge\" evaluations, which introduce subjectivity, high costs and inconsistency. We present $\u03c4$-Rec, a benchmark for agentic recommender systems that replaces subjective evaluation with verifiable rewards and a reveal-tagged elicitation (RTE) mechanism that controls how task constraints surface during dialogue. By testing agents against structured catalog predicates and employing a pass^k reliability metric, $\u03c4$-Rec provides a systematic test for consistent reasoning. Our evaluation of nine configurations across five model families -- GPT-5.4, Claude Sonnet 4.6, Gemini 2.5 Flash, DeepSeek V4 Flash, Qwen3-32B and GPT-5 mini -- reveals a steep reliability cliff, where even the best model achieves only ~57% at pass^1 and ~35% at pass^4, highlighting a critical gap in current conversational agent deployment. All code and data are publicly available at https://github.com/nbharaths/tau-rec.",
     "published": "Jun 08",
-    "pdf_url": "https://arxiv.org/pdf/2606.10156v2",
-    "arxiv_url": "http://arxiv.org/abs/2606.10156v2",
+    "pdf_url": "https://arxiv.org/pdf/2606.10156v3",
+    "arxiv_url": "http://arxiv.org/abs/2606.10156v3",
     "queried_author": "Karthik R Narasimhan",
     "matching_authors": [
       "Karthik R Narasimhan"
@@ -6583,8 +6617,8 @@
     ],
     "summary": "AI agents are reshaping the workspace, leading to drastic change of how humans work. Despite the considerable potential of human-agent collaboration both in preserving human agency and generating economic value, this paradigm remains largely absent from occupational task evaluation, hindered by the difficulty of gathering real human data and accounting for inter-human variability. We introduce CollabSkill, a framework for evaluating human-agent collaboration on real-world occupational tasks. CollabSkill pairs real human workers with AI agents on tasks matched to their occupational background, collecting data that capture the complexity of economically valuable tasks and the usage patterns of real workers. To account for inter-human variability, CollabSkill employs a Bayesian skill rating system to disentangle and quantify the skill contributions of both humans and AI agents. Drawing on over 1,500 prompts from 386 working sessions contributed by 93 human workers, our analysis yields insights on two fronts: on the agent side, rankings on CollabSkill diverge meaningfully from those of existing fully autonomous benchmarks where Codex leads, with Claude Code ranking first; on the human side, CollabSkill reveals that practical experience emerges as the primary driver of collaboration skill, with hands-on collaboration meaningfully shifting workers' AI literacy. Together, we hope CollabSkill enables the community to invest in systematic evaluation of human-agent collaboration and spurs development efforts aimed at building AI agents that genuinely augment human workers.",
     "published": "Apr 20",
-    "pdf_url": "https://arxiv.org/pdf/2606.09833v1",
-    "arxiv_url": "http://arxiv.org/abs/2606.09833v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.09833v2",
+    "arxiv_url": "http://arxiv.org/abs/2606.09833v2",
     "queried_author": "Diyi Yang",
     "matching_authors": [
       "Diyi Yang"
@@ -12665,45 +12699,6 @@
     "queried_author": "Niloofar Mireshghallah",
     "matching_authors": [
       "Niloofar Mireshghallah"
-    ]
-  },
-  {
-    "title": "Improving MoE Compute Efficiency by Composing Weight and Data Sparsity",
-    "authors": [
-      "Maciej Kilian",
-      "Oleg Mkrtchyan",
-      "Luke Zettlemoyer",
-      "Akshat Shrivastava",
-      "Armen Aghajanyan"
-    ],
-    "summary": "Mixture-of-Experts layers achieve compute efficiency through weight sparsity: each token activates only a subset of experts. Data sparsity, where each expert processes only a subset of tokens, offers a complementary axis. Expert-choice routing implements data sparsity directly but violates causality in autoregressive models, creating train-inference mismatch. We recover data sparsity within causal token-choice MoE by leveraging zero-compute (null) experts within the routing pool. When a token routes to null experts, those slots consume no compute. The standard load balancing objective trains the model to uniformly use all experts (real and null) therefore creating data sparsity in expectation without the causality violations. We evaluate on vision-language model training, where data heterogeneity is pronounced: vision encoders produce many low-information tokens while text tokens are denser. At matched expected FLOPs, composing weight and data sparsity yields a more compute-efficient frontier than weight sparsity alone, with gains in training loss and downstream performance. The model learns implicit modality-aware allocation, routing vision tokens to null experts more aggressively than text, without explicit modality routing.",
-    "published": "Jan 21",
-    "pdf_url": "https://arxiv.org/pdf/2601.15370v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.15370v1",
-    "queried_author": "Luke Zettlemoyer",
-    "matching_authors": [
-      "Luke Zettlemoyer"
-    ]
-  },
-  {
-    "title": "Towards Execution-Grounded Automated AI Research",
-    "authors": [
-      "Chenglei Si",
-      "Zitong Yang",
-      "Yejin Choi",
-      "Emmanuel Cand\u00e8s",
-      "Diyi Yang",
-      "Tatsunori Hashimoto"
-    ],
-    "summary": "Automated AI research holds great potential to accelerate scientific discovery. However, current LLMs often generate plausible-looking but ineffective ideas. Execution grounding may help, but it is unclear whether automated execution is feasible and whether LLMs can learn from the execution feedback. To investigate these, we first build an automated executor to implement ideas and launch large-scale parallel GPU experiments to verify their effectiveness. We then convert two realistic research problems - LLM pre-training and post-training - into execution environments and demonstrate that our automated executor can implement a large fraction of the ideas sampled from frontier LLMs. We analyze two methods to learn from the execution feedback: evolutionary search and reinforcement learning. Execution-guided evolutionary search is sample-efficient: it finds a method that significantly outperforms the GRPO baseline (69.4% vs 48.0%) on post-training, and finds a pre-training recipe that outperforms the nanoGPT baseline (19.7 minutes vs 35.9 minutes) on pre-training, all within just ten search epochs. Frontier LLMs often generate meaningful algorithmic ideas during search, but they tend to saturate early and only occasionally exhibit scaling trends. Reinforcement learning from execution reward, on the other hand, suffers from mode collapse. It successfully improves the average reward of the ideator model but not the upper-bound, due to models converging on simple ideas. We thoroughly analyze the executed ideas and training dynamics to facilitate future efforts towards execution-gr...",
-    "published": "Jan 20",
-    "pdf_url": "https://arxiv.org/pdf/2601.14525v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.14525v1",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang",
-      "Tatsunori Hashimoto",
-      "Yejin Choi"
     ]
   }
 ]
