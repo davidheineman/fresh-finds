@@ -1,5 +1,23 @@
 [
   {
+    "title": "Raven: High-Recall Sequence Modeling with Sparse Memory Routing",
+    "authors": [
+      "Arshia Afzal",
+      "Aviv Bick",
+      "Eric P. Xing",
+      "Volkan Cevher",
+      "Albert Gu"
+    ],
+    "summary": "Long-context recall in linear-time sequence models highlights a tradeoff in how they write to memory. State-based linear models, such as state-space models (SSMs) and linear Transformers, write densely, updating the entire state for each newly arrived token, which leads to interference and makes specific past tokens hard to recover. Sliding-window attention (SWA) exhibits the opposite behavior: it writes sparsely by storing explicit token representations, but only within a fixed window, so recall drops once the relevant token is evicted. Interpolating between these models, we introduce Raven, a linear-time sequence model that maintains a fixed set of memory slots and, at each step, decays and updates only a selected subset via learned, input-dependent routing. This lets Raven mitigate SWA's position-based overwriting and hard eviction while reducing interference from dense state updates in SSMs, thereby preserving long-range content much more effectively. Across recall-intensive benchmarks, Raven is competitive with or outperforms prior linear-time baselines, achieving strong long-context recall where both SWA and SSMs sharply degrade. It remains effective when extrapolating to context lengths as large as 16x its training length, with similar gains in hybrid architectures.",
+    "published": "Jul 28",
+    "pdf_url": "https://arxiv.org/pdf/2607.25357v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.25357v1",
+    "queried_author": "Albert Gu",
+    "matching_authors": [
+      "Albert Gu"
+    ]
+  },
+  {
     "title": "Not All LLM Reasoning is Visible in the Chain-of-Thought",
     "authors": [
       "Vatsal Baherwani",
@@ -6524,6 +6542,52 @@
     ]
   },
   {
+    "title": "Structured Scaling of AI Discovery Across Diverse Scientific Domains",
+    "authors": [
+      "Haotian Ye",
+      "Haowei Lin",
+      "Jingyi Tang",
+      "Yizhen Luo",
+      "Rahul Thapa",
+      "Caiyin Yang",
+      "Chang Su",
+      "Rui Yang",
+      "Ruihua Liu",
+      "Rundao Li",
+      "Zeyu Li",
+      "Pengwei Sun",
+      "Chong Gao",
+      "Dachao Ding",
+      "Guangrong He",
+      "Miaolei Zhang",
+      "Lina Sun",
+      "Wenyang Wang",
+      "Yuchen Zhong",
+      "Zhuohao Shen",
+      "Puheng Li",
+      "Pan Lu",
+      "Bianxiao Cui",
+      "Di He",
+      "Jianzhu Ma",
+      "Junfeng Li",
+      "Hexi Baoyin",
+      "Yejin Choi",
+      "Stefano Ermon",
+      "Xiaowen Chu",
+      "Tongyang Li",
+      "Yuzhi Xu",
+      "James Zou"
+    ],
+    "summary": "Scientific discovery often requires many cycles of proposing, testing, and refining candidate solutions. Language models can increasingly participate in these loops, but simply generating more attempts does not ensure progress: parallel searches may duplicate one another and iterative refinement may become trapped in poor directions. The central challenge is therefore not only to scale AI-driven discovery, but to structure that scaling so that evaluation signals compound over time. Here we introduce SimpleTES (Simple Test-time Evaluation-driven Scaling), a framework that focuses on the structured scaling of AI discovery loops, organizing evaluator queries across independent trajectories, iterative refinement, local candidate selection, and the selective reuse of evaluated histories. Drawing on structural features of scientific communities, SimpleTES uses a single open-source GPT-OSS model to establish new state-of-the-art solutions across 28 open-ended problems in diverse scientific domains ranging from quantum physics and astronomy to biology, AI, and mathematics. These include a 24.5% reduction in quantum circuit compilation overhead, up to 23% lower propulsive cost for deep-space trajectories, a 2.17x faster lasso-path solver, an 8.5% lower-error whole-brain neural-activity predictor, the fastest reported TriMul kernel, and new mathematical constructions beyond prior human or AI records. We further post-train the model for long-horizon discovery by assigning each attempt the final outcome of the trajectory it helped produce. This improves performance on both training and...",
+    "published": "Apr 21",
+    "pdf_url": "https://arxiv.org/pdf/2604.19341v2",
+    "arxiv_url": "http://arxiv.org/abs/2604.19341v2",
+    "queried_author": "Yejin Choi",
+    "matching_authors": [
+      "Yejin Choi"
+    ]
+  },
+  {
     "title": "SAW-INT4: System-Aware 4-Bit KV-Cache Quantization for Real-World LLM Serving",
     "authors": [
       "Jinda Jia",
@@ -12659,46 +12723,6 @@
     "queried_author": "Percy Liang",
     "matching_authors": [
       "Percy Liang"
-    ]
-  },
-  {
-    "title": "Tracking the Limits of Knowledge Propagation: How LLMs Fail at Multi-Step Reasoning with Conflicting Knowledge",
-    "authors": [
-      "Yiyang Feng",
-      "Zeming Chen",
-      "Haotian Wu",
-      "Jiawei Zhou",
-      "Antoine Bosselut"
-    ],
-    "summary": "A common solution for mitigating outdated or incorrect information in Large Language Models (LLMs) is to provide updated facts in-context or through knowledge editing. However, these methods introduce knowledge conflicts when the knowledge update fails to overwrite the model's parametric knowledge, which propagate to faulty reasoning. Current benchmarks for this problem, however, largely focus only on single knowledge updates and fact recall without evaluating how these updates affect downstream reasoning. In this work, we introduce TRACK (Testing Reasoning Amid Conflicting Knowledge), a new benchmark for studying how LLMs propagate new knowledge through multi-step reasoning when it conflicts with the model's initial parametric knowledge. Spanning three reasoning-intensive scenarios (WIKI, CODE, and MATH), TRACK introduces multiple, realistic conflicts to mirror real-world complexity. Our results on TRACK reveal that providing updated facts to models for reasoning can worsen performance compared to providing no updated facts to a model, and that this performance degradation exacerbates as more updated facts are provided. We show this failure stems from both inability to faithfully integrate updated facts, but also flawed reasoning even when knowledge is integrated. TRACK provides a rigorous new benchmark to measure and guide future progress on propagating conflicting knowledge in multi-step reasoning.",
-    "published": "Jan 21",
-    "pdf_url": "https://arxiv.org/pdf/2601.15495v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.15495v1",
-    "queried_author": "Antoine Bosselut",
-    "matching_authors": [
-      "Antoine Bosselut"
-    ]
-  },
-  {
-    "title": "Memorization Dynamics in Knowledge Distillation for Language Models",
-    "authors": [
-      "Jaydeep Borkar",
-      "Karan Chadha",
-      "Niloofar Mireshghallah",
-      "Yuchen Zhang",
-      "Irina-Elena Veliche",
-      "Archi Mitra",
-      "David A. Smith",
-      "Zheng Xu",
-      "Diego Garcia-Olano"
-    ],
-    "summary": "Knowledge Distillation (KD) is increasingly adopted to transfer capabilities from large language models to smaller ones, offering significant improvements in efficiency and utility while often surpassing standard fine-tuning. Beyond performance, KD is also explored as a privacy-preserving mechanism to mitigate the risk of training data leakage. While training data memorization has been extensively studied in standard pre-training and fine-tuning settings, its dynamics in a knowledge distillation setup remain poorly understood. In this work, we study memorization across the KD pipeline using three large language model (LLM) families (Pythia, OLMo-2, Qwen-3) and three datasets (FineWeb, Wikitext, Nemotron-CC-v2). We find: (1) distilled models memorize significantly less training data than standard fine-tuning (reducing memorization by more than 50%); (2) some examples are inherently easier to memorize and account for a large fraction of memorization during distillation (over ~95%); (3) student memorization is predictable prior to distillation using features based on zlib entropy, KL divergence, and perplexity; and (4) while soft and hard distillation have similar overall memorization rates, hard distillation poses a greater risk: it inherits $2.7\\times$ more teacher-specific examples than soft distillation. Overall, we demonstrate that distillation can provide both improved generalization and reduced memorization risks compared to standard fine-tuning.",
-    "published": "Jan 21",
-    "pdf_url": "https://arxiv.org/pdf/2601.15394v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.15394v1",
-    "queried_author": "Niloofar Mireshghallah",
-    "matching_authors": [
-      "Niloofar Mireshghallah"
     ]
   }
 ]
