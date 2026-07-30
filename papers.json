@@ -1,5 +1,24 @@
 [
   {
+    "title": "(Im)Paired Programming: Coding Agents Improve Productivity but Harm Understanding",
+    "authors": [
+      "Nishant Balepur",
+      "Connor Baumler",
+      "Valerie Chen",
+      "Eunsol Choi",
+      "Rachel Rudinger",
+      "Jordan Lee Boyd-Graber"
+    ],
+    "summary": "Coding agents (e.g., Cursor) improve developer productivity by optimizing task completion, but shifting users from writing code to prompting and reviewing may harm their understanding, impeding oversight, learning, and communication. To probe this, we have 54 students create a website with one of two AI systems: an agent that edits user code; or a chatbot where users write code alone or adapt generic code snippets. We test understanding via comprehension questions and a task where users extend their code without agents, showing: (1) While agents aid initial task completion, they harm users' code comprehension and thus do not prepare users to extend their code; (2) Low-effort agent interaction types, like copy+paste prompts and auto-accepted edits, are linked with lower comprehension; and (3) Despite self-reported weaker understanding, users still prefer coding agents because they are quick and easy to use. While users stay in the loop for coding workflows, understanding should not be forgotten. Towards this goal, we distill our analyses into future research directions for coding agent developers: dissuading low-effort prompting, creating readable code, and promoting active engagement.",
+    "published": "Jul 29",
+    "pdf_url": "https://arxiv.org/pdf/2607.26375v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.26375v1",
+    "queried_author": "Eunsol Choi",
+    "matching_authors": [
+      "Eunsol Choi"
+    ]
+  },
+  {
     "title": "Raven: High-Recall Sequence Modeling with Sparse Memory Routing",
     "authors": [
       "Arshia Afzal",
@@ -12699,30 +12718,6 @@
     "matching_authors": [
       "Carlos Guestrin",
       "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Cosmos Policy: Fine-Tuning Video Models for Visuomotor Control and Planning",
-    "authors": [
-      "Moo Jin Kim",
-      "Yihuai Gao",
-      "Tsung-Yi Lin",
-      "Yen-Chen Lin",
-      "Yunhao Ge",
-      "Grace Lam",
-      "Percy Liang",
-      "Shuran Song",
-      "Ming-Yu Liu",
-      "Chelsea Finn",
-      "Jinwei Gu"
-    ],
-    "summary": "Recent video generation models demonstrate remarkable ability to capture complex physical interactions and scene evolution over time. To leverage their spatiotemporal priors, robotics works have adapted video models for policy learning but introduce complexity by requiring multiple stages of post-training and new architectural components for action generation. In this work, we introduce Cosmos Policy, a simple approach for adapting a large pretrained video model (Cosmos-Predict2) into an effective robot policy through a single stage of post-training on the robot demonstration data collected on the target platform, with no architectural modifications. Cosmos Policy learns to directly generate robot actions encoded as latent frames within the video model's latent diffusion process, harnessing the model's pretrained priors and core learning algorithm to capture complex action distributions. Additionally, Cosmos Policy generates future state images and values (expected cumulative rewards), which are similarly encoded as latent frames, enabling test-time planning of action trajectories with higher likelihood of success. In our evaluations, Cosmos Policy achieves state-of-the-art performance on the LIBERO and RoboCasa simulation benchmarks (98.5% and 67.1% average success rates, respectively) and the highest average score in challenging real-world bimanual manipulation tasks, outperforming strong diffusion policies trained from scratch, video model-based policies, and state-of-the-art vision-language-action models fine-tuned on the same robot demonstrations. Furthermore, given po...",
-    "published": "Jan 22",
-    "pdf_url": "https://arxiv.org/pdf/2601.16163v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.16163v1",
-    "queried_author": "Percy Liang",
-    "matching_authors": [
-      "Percy Liang"
     ]
   }
 ]
