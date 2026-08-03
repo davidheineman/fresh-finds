@@ -1,5 +1,25 @@
 [
   {
+    "title": "WaiT for the Signal: Simple Frequency-Aware Flow-Matching",
+    "authors": [
+      "Krunoslav Lehman Pavasovic",
+      "Th\u00e9ophane Vallaeys",
+      "St\u00e9phane Mallat",
+      "Giulio Biroli",
+      "Luke Zettlemoyer",
+      "Brian Karrer",
+      "Jakob Verbeek"
+    ],
+    "summary": "As image generation models scale to ever higher resolutions, global coherence, local detail, and texture fidelity become critical axes for generation quality. However, standard flow matching treats all spatial frequencies uniformly, ignoring the natural frequency hierarchy where high-frequency bands become indistinguishable from pure noise far earlier than coarse structures. We introduce WaiT, a Wavelet-aware image Transformer that decomposes generation into coarse and fine bands via lossless wavelets. True to its name, the high-frequency bands wait for the signal: staying pure noise until coarse structure has emerged, then joining the flow for joint refinement. Since standard FID discards fine-grained detail through aggressive downsampling, we introduce a more stringent three-axis evaluation protocol to assess quality at native resolution. On ImageNet 512x512, WaiT achieves a pixel-space FID of 1.43 and is Pareto-optimal across all three axes, reducing sampling compute by up to 50%. With our largest 2B model, we set a new state-of-the-art FID of 1.3 for pixel-space models on ImageNet 512 resolution. Our formulation outperforms even the strongest latent-space models on texture fidelity, and scales seamlessly to high-resolution OpenImages and to video generation, achieving a state-of-the-art FVD of 0.84 on Kinetics-600 with no algorithmic modifications.",
+    "published": "Jul 30",
+    "pdf_url": "https://arxiv.org/pdf/2607.28760v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.28760v1",
+    "queried_author": "Luke Zettlemoyer",
+    "matching_authors": [
+      "Luke Zettlemoyer"
+    ]
+  },
+  {
     "title": "A dataset of rated conceptual arguments",
     "authors": [
       "Emery Cooper",
@@ -8488,8 +8508,8 @@
     ],
     "summary": "Recent work shows that standard greedy-decoding extraction methods for quantifying memorization in LLMs miss how extraction risk varies across sequences. Probabilistic extraction -- computing the probability of generating a target suffix given a prefix under a decoding scheme -- addresses this, but is tractable only for verbatim memorization, missing near-verbatim instances that pose similar privacy and copyright risks. Quantifying near-verbatim extraction risk is expensive: the set of near-verbatim suffixes is combinatorially large, and reliable Monte Carlo (MC) estimation can require ~100,000 samples per sequence. To mitigate this cost, we introduce decoding-constrained beam search, which yields deterministic lower bounds on near-verbatim extraction risk at a cost comparable to ~20 MC samples per sequence. Across experiments, our approach surfaces information invisible to verbatim methods: many more extractable sequences, substantially larger per-sequence extraction mass, and patterns in how near-verbatim extraction risk manifests across model sizes and types of text.",
     "published": "Mar 26",
-    "pdf_url": "https://arxiv.org/pdf/2603.24917v2",
-    "arxiv_url": "http://arxiv.org/abs/2603.24917v2",
+    "pdf_url": "https://arxiv.org/pdf/2603.24917v3",
+    "arxiv_url": "http://arxiv.org/abs/2603.24917v3",
     "queried_author": "Percy Liang",
     "matching_authors": [
       "Percy Liang"
@@ -12419,8 +12439,8 @@
     ],
     "summary": "Due to limited supervised training data, large language models (LLMs) are typically pre-trained via a self-supervised \"predict the next word\" objective on a vast amount of unstructured text data. To make the resulting model useful to users, it is further trained on a far smaller amount of \"instruction-tuning\" data comprised of supervised training examples of instructions and responses. To overcome the limited amount of supervised data, we propose a procedure that can transform the knowledge in internet-scale pre-training documents into billions of synthetic instruction and answer training pairs. The resulting dataset, called FineInstructions, uses ~18M instruction templates created from real user-written queries and prompts. These instruction templates are matched to and instantiated with human-written source documents from unstructured pre-training corpora. With \"supervised\" synthetic training data generated at this scale, an LLM can be pre-trained from scratch solely with the instruction-tuning objective, which is far more in-distribution with the expected downstream usage of LLMs (responding to user prompts). We conduct controlled token-for-token training experiments and find pre-training on FineInstructions outperforms standard pre-training and other proposed synthetic pre-training techniques on standard benchmarks measuring free-form response quality. Our resources can be found at https://huggingface.co/fineinstructions .",
     "published": "Jan 29",
-    "pdf_url": "https://arxiv.org/pdf/2601.22146v2",
-    "arxiv_url": "http://arxiv.org/abs/2601.22146v2",
+    "pdf_url": "https://arxiv.org/pdf/2601.22146v3",
+    "arxiv_url": "http://arxiv.org/abs/2601.22146v3",
     "queried_author": "Colin Raffel",
     "matching_authors": [
       "Colin Raffel"
@@ -12681,36 +12701,6 @@
     "queried_author": "Eunsol Choi",
     "matching_authors": [
       "Eunsol Choi"
-    ]
-  },
-  {
-    "title": "LatentMoE: Toward Optimal Accuracy per FLOP and Parameter in Mixture of Experts",
-    "authors": [
-      "Venmugil Elango",
-      "Nidhi Bhatia",
-      "Roger Waleffe",
-      "Rasoul Shafipour",
-      "Tomer Asida",
-      "Abhinav Khattar",
-      "Nave Assaf",
-      "Maximilian Golub",
-      "Joey Guman",
-      "Tiyasa Mitra",
-      "Ritchie Zhao",
-      "Ritika Borkar",
-      "Ran Zilberstein",
-      "Mostofa Patwary",
-      "Mohammad Shoeybi",
-      "Bita Rouhani"
-    ],
-    "summary": "Mixture of Experts (MoEs) have become a central component of many state-of-the-art open-source and proprietary large language models. Despite their widespread adoption, it remains unclear how close existing MoE architectures are to optimal with respect to inference cost, as measured by accuracy per floating-point operation and per parameter. In this work, we revisit MoE design from a hardware-software co-design perspective, grounded in empirical and theoretical considerations. We characterize key performance bottlenecks across diverse deployment regimes, spanning offline high-throughput execution and online, latency-critical inference. Guided by these insights, we introduce LatentMoE, a new model architecture resulting from systematic design exploration and optimized for maximal accuracy per unit of compute. Empirical design space exploration at scales of up to 95B parameters and over a 1T-token training horizon, together with supporting theoretical analysis, shows that LatentMoE consistently outperforms standard MoE architectures in terms of accuracy per FLOP and per parameter. Given its strong performance, the LatentMoE architecture has been adopted by the flagship Nemotron-3 Super and Ultra models and scaled to substantially larger regimes, including longer token horizons and larger model sizes, as reported in Nvidia et al. (arXiv:2512.20856).",
-    "published": "Jan 26",
-    "pdf_url": "https://arxiv.org/pdf/2601.18089v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.18089v1",
-    "queried_author": "Mohammad Shoeybi",
-    "matching_authors": [
-      "Mohammad Shoeybi",
-      "Mostofa Patwary"
     ]
   }
 ]
