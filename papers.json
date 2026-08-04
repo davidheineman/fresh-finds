@@ -147,6 +147,25 @@
     ]
   },
   {
+    "title": "A Defense of the Quadratic Model",
+    "authors": [
+      "Alexandru Meterez",
+      "Pranav Ajit Nair",
+      "Depen Morwani",
+      "Cengiz Pehlevan",
+      "Sham Kakade",
+      "Alex Damian"
+    ],
+    "summary": "Due to the complexity of neural network loss landscapes, optimization theory is forced to rely on idealized models, and there is generally a tradeoff between how theoretically tractable the model is, and how accurately it describes the true optimization dynamics. In this work, we stress test the simplest possible model of optimization -- the quadratic model -- and show that it can be surprisingly predictive in an LLM setting with 150M parameters and 3B training tokens. Specifically, we show that Taylor expanding the model and the loss function at intermediate checkpoints through training can accurately predict the optimization dynamics over windows that can last up to 10\\% of training. Having established this agreement, we then turn to analyzing the structure of these local quadratic optimization problems through two lenses: the Hessian spectrum and local stability. Using Lanczos quadrature with extremely deep probes, we are able to estimate the Hessian spectrum deep into the tail, and we find a surprising amount of structure in both the eigenvalues and eigenvectors, which depends on the batch size, preconditioner, and training time. We also empirically test local linear stability at intermediate checkpoints and compare it to theoretical predictions to demonstrate that optimization in LLMs typically occurs at a stochastic edge of stability, whose nature is also determined by batch size. Our results indicate the quadratic model may be a theoretically tractable proxy for pretraining optimization dynamics.",
+    "published": "Jul 23",
+    "pdf_url": "https://arxiv.org/pdf/2607.21716v1",
+    "arxiv_url": "http://arxiv.org/abs/2607.21716v1",
+    "queried_author": "Alex Damian",
+    "matching_authors": [
+      "Alex Damian"
+    ]
+  },
+  {
     "title": "Leaky Language Models: Stealing Architecture and Inference Optimizations via Per-Token Timing",
     "authors": [
       "Sadegh Majidi",
@@ -9684,6 +9703,22 @@
     ]
   },
   {
+    "title": "Improved high-dimensional estimation with Langevin dynamics and stochastic weight averaging",
+    "authors": [
+      "Stanley Wei",
+      "Alex Damian",
+      "Jason D. Lee"
+    ],
+    "summary": "Significant recent work has studied the ability of gradient descent to recover a hidden planted direction $\u03b8^\\star \\in S^{d-1}$ in different high-dimensional settings, including tensor PCA and single-index models. The key quantity that governs the ability of gradient descent to traverse these landscapes is the information exponent $k^\\star$ (Ben Arous et al., (2021)), which corresponds to the order of the saddle at initialization in the population landscape. Ben Arous et al., (2021) showed that $n \\gtrsim d^{\\max(1, k^\\star-1)}$ samples were necessary and sufficient for online SGD to recover $\u03b8^\\star$, and Ben Arous et al., (2020) proved a similar lower bound for Langevin dynamics. More recently, Damian et al., (2023) showed it was possible to circumvent these lower bounds by running gradient descent on a smoothed landscape, and that this algorithm succeeds with $n \\gtrsim d^{\\max(1, k^\\star/2)}$ samples, which is optimal in the worst case. This raises the question of whether it is possible to achieve the same rate without explicit smoothing. In this paper, we show that Langevin dynamics can succeed with $n \\gtrsim d^{ k^\\star/2 }$ samples if one considers the average iterate, rather than the last iterate. The key idea is that the combination of noise-injection and iterate averaging is able to emulate the effect of landscape smoothing. We apply this result to both the tensor PCA and single-index model settings. Finally, we conjecture that minibatch SGD can also achieve the same rate without adding any additional noise.",
+    "published": "Mar 06",
+    "pdf_url": "https://arxiv.org/pdf/2603.06028v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.06028v1",
+    "queried_author": "Alex Damian",
+    "matching_authors": [
+      "Alex Damian"
+    ]
+  },
+  {
     "title": "Learning Next Action Predictors from Human-Computer Interaction",
     "authors": [
       "Omar Shaikh",
@@ -12655,52 +12690,6 @@
     "queried_author": "Ranjay Krishna",
     "matching_authors": [
       "Ranjay Krishna"
-    ]
-  },
-  {
-    "title": "Different Demographic Cues Yield Inconsistent Conclusions About LLM Personalization and Bias",
-    "authors": [
-      "Manuel Tonneau",
-      "Neil K. R. Seghal",
-      "Niyati Malhotra",
-      "Sharif Kazemi",
-      "Victor Orozco-Olvera",
-      "Ana Mar\u00eda Mu\u00f1oz Boudet",
-      "Lakshmi Subramanian",
-      "Samuel P. Fraiberger",
-      "Sharath Chandra Guntuku",
-      "Valentin Hofmann"
-    ],
-    "summary": "Demographic cue-based evaluation is widely used to study how large language models (LLMs) adapt their responses to signaled demographic attributes within and across groups. This approach typically relies on a single cue (e.g., names) as a proxy for group membership, implicitly treating different cues as interchangeable operationalizations of the same identity-conditioned behavior. We test this assumption in realistic advice-seeking interactions spanning 14.8 million prompts, focusing on race and gender in a U.S. context. We find that cues for the same group induce only partially overlapping changes in model responses, yielding inconsistent conclusions about personalization, while bias conclusions are unstable, with both magnitude and direction of group differences varying across cues. We further show that these inconsistencies reflect differences in cue-group association strength and linguistic features bundled within cues that shape model responses. Together, our findings suggest that demographic conditioning in LLMs is not a cue-invariant category-level parameter but depends fundamentally on how identity is cued, reflecting responses to linguistic signals rather than stable demographic categories. We therefore advocate multi-cue, mechanism-aware evaluations for robust and interpretable claims about demographic variation in LLM responses.",
-    "published": "Jan 26",
-    "pdf_url": "https://arxiv.org/pdf/2601.18486v2",
-    "arxiv_url": "http://arxiv.org/abs/2601.18486v2",
-    "queried_author": "Valentin Hofmann",
-    "matching_authors": [
-      "Valentin Hofmann"
-    ]
-  },
-  {
-    "title": "SAGE: Steerable Agentic Data Generation for Deep Search with Execution Feedback",
-    "authors": [
-      "Fangyuan Xu",
-      "Rujun Han",
-      "Yanfei Chen",
-      "Zifeng Wang",
-      "I-Hung Hsu",
-      "Jun Yan",
-      "Vishy Tirumalashetty",
-      "Eunsol Choi",
-      "Tomas Pfister",
-      "Chen-Yu Lee"
-    ],
-    "summary": "Deep search agents, which aim to answer complex questions requiring reasoning across multiple documents, can significantly speed up the information-seeking process. Collecting human annotations for this application is prohibitively expensive due to long and complex exploration trajectories. We propose an agentic pipeline that automatically generates high quality, difficulty-controlled deep search question-answer pairs for a given corpus and a target difficulty level. Our pipeline, SAGE, consists of a data generator which proposes QA pairs and a search agent which attempts to solve the generated question and provide execution feedback for the data generator. The two components interact over multiple rounds to iteratively refine the question-answer pairs until they satisfy the target difficulty level. Our intrinsic evaluation shows SAGE generates questions that require diverse reasoning strategies, while significantly increases the correctness and difficulty of the generated data. Our extrinsic evaluation demonstrates up to 23% relative performance gain on popular deep search benchmarks by training deep search agents with our synthetic data. Additional experiments show that agents trained on our data can adapt from fixed-corpus retrieval to Google Search at inference time, without further training.",
-    "published": "Jan 26",
-    "pdf_url": "https://arxiv.org/pdf/2601.18202v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.18202v1",
-    "queried_author": "Eunsol Choi",
-    "matching_authors": [
-      "Eunsol Choi"
     ]
   }
 ]
