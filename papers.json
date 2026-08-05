@@ -1,5 +1,22 @@
 [
   {
+    "title": "string2string Studio: An Interactive, In-Browser Platform for String-to-String Algorithms",
+    "authors": [
+      "Mirac Suzgun",
+      "James Zou",
+      "Stuart M. Shieber",
+      "Dan Jurafsky"
+    ],
+    "summary": "We present string2string Studio, an interactive in-browser platform for string-to-string analysis across natural language processing, computational biology, and the digital humanities. The system integrates six main modules (alignment, distance, similarity, search, generation metrics, and BLAST homology search), operating at character, word, token, line, and residue levels. Its C++-based algorithms compile to WebAssembly, so core operations run locally by default without any installation or data upload. The interface reports scores with their \"evidence\" (alignments, edit paths, metric matches, search hits, and homology traces), making methods inspectable, debuggable, and comparable on shared inputs. Internal benchmarks show speedups of up to 2,500x over the Python predecessor, faster global/local alignment than a general-purpose native C aligner, and exact agreement with independent references under declared settings. For homology search, the scoped client-side blastn path closely matches NCBI BLAST+ rankings and statistics under matched parameters. A curated showcase and Learn mode present canonical algorithms and metrics as reusable demonstrations. string2string Studio is open-source and freely available at string2string.org.",
+    "published": "Aug 04",
+    "pdf_url": "https://arxiv.org/pdf/2608.03984v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.03984v1",
+    "queried_author": "Dan Jurafsky",
+    "matching_authors": [
+      "Dan Jurafsky"
+    ]
+  },
+  {
     "title": "WaiT for the Signal: Simple Frequency-Aware Flow-Matching",
     "authors": [
       "Krunoslav Lehman Pavasovic",
@@ -12670,26 +12687,6 @@
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig"
-    ]
-  },
-  {
-    "title": "AdaReasoner: Dynamic Tool Orchestration for Iterative Visual Reasoning",
-    "authors": [
-      "Mingyang Song",
-      "Haoyu Sun",
-      "Jiawei Gu",
-      "Linjie Li",
-      "Luxin Xu",
-      "Ranjay Krishna",
-      "Yu Cheng"
-    ],
-    "summary": "When humans face problems beyond their immediate capabilities, they rely on tools, providing a promising paradigm for improving visual reasoning in multimodal large language models (MLLMs). Effective reasoning, therefore, hinges on knowing which tools to use, when to invoke them, and how to compose them over multiple steps, even when faced with new tools or new tasks. We introduce \\textbf{AdaReasoner}, a family of multimodal models that learn tool use as a general reasoning skill rather than as tool-specific or explicitly supervised behavior. AdaReasoner is enabled by (i) a scalable data curation pipeline exposing models to long-horizon, multi-step tool interactions; (ii) Tool-GRPO, a reinforcement learning algorithm that optimizes tool selection and sequencing based on end-task success; and (iii) an adaptive learning mechanism that dynamically regulates tool usage. Together, these components allow models to infer tool utility from task context and intermediate outcomes, enabling coordination of multiple tools and generalization to unseen tools. Empirically, AdaReasoner exhibits strong tool-adaptive and generalization behaviors: it autonomously adopts beneficial tools, suppresses irrelevant ones, and adjusts tool usage frequency based on task demands, despite never being explicitly trained to do so. These capabilities translate into state-of-the-art performance across challenging benchmarks, improving the 7B base model by +24.9\\% on average and surpassing strong proprietary systems such as GPT-5 on multiple tasks, including VSP and Jigsaw.",
-    "published": "Jan 26",
-    "pdf_url": "https://arxiv.org/pdf/2601.18631v2",
-    "arxiv_url": "http://arxiv.org/abs/2601.18631v2",
-    "queried_author": "Ranjay Krishna",
-    "matching_authors": [
-      "Ranjay Krishna"
     ]
   }
 ]
