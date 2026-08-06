@@ -1,5 +1,156 @@
 [
   {
+    "title": "DelusionEval: Measuring Delusion-Linked Behaviors in AI Chatbots",
+    "authors": [
+      "Jared Moore",
+      "Andrea Mock",
+      "Yifan Mai",
+      "Jacy Reese Anthis",
+      "Ryan Louie",
+      "William Agnew",
+      "Ashish Mehta",
+      "Kevin Klyman",
+      "Percy Liang",
+      "Nick Haber",
+      "Eric Lin",
+      "Desmond C. Ong"
+    ],
+    "summary": "Mental health professionals have raised concerns about risks of psychological harm from interaction with large language models (LLMs), including \"delusional spirals\" in which concerning human and LLM behaviors reinforce each other over time. With growing public use of LLM-powered chatbots, there is an urgent need to build evaluations grounded in real-world episodes of psychological harm experienced by users. We developed DelusionEval, an evaluation protocol that tests a model's tendencies to exhibit behaviors linked to promoting user delusions. We prompt each model with 589 unique conversation histories from 18 participants, comprising 12,591 messages from users who experienced delusions and psychological harm. We find that the tendency of an evaluated LLM to exhibit delusion-linked behavior does not reliably correlate with model size, release date, or the presence of test-time reasoning. However, extending the context of prior messages substantially increases rates of delusion-linked behaviors, providing evidence for the importance of context in LLM safety evaluation. For example, the rate of failing to discourage self-harm when the user expresses suicidal ideation increases from 30.0% to 41.1% when an additional 350 messages are prepended to the conversation history. All model families (e.g., GPT, Claude) exhibit substantial rates of delusion-linked behaviors. Within families, later, larger, or higher-reasoning models are not uniformly better across all behavior categories. Our results raise concerns regarding the potential psychological impact of LLMs and the need for mo...",
+    "published": "Aug 05",
+    "pdf_url": "https://arxiv.org/pdf/2608.05004v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.05004v1",
+    "queried_author": "Percy Liang",
+    "matching_authors": [
+      "Percy Liang"
+    ]
+  },
+  {
+    "title": "Towards Physics of Multimodal Pretraining: Knowledge Flow, Modality Synergy, Early Unification, and Recipes",
+    "authors": [
+      "Junlin Han",
+      "Shengbang Tong",
+      "David Fan",
+      "Minghao Chen",
+      "Philip Torr",
+      "Filippos Kokkinos",
+      "Mike Lewis"
+    ],
+    "summary": "Vision offers a critical axis for advancing foundation models, driving a shift towards natively unified multimodal pretraining. Despite this momentum, the design space and the fundamental mechanisms of how modalities interact during unified training remain underexplored. We provide empirical clarity through a systematic exploration of multimodal pretraining. Our controlled experiments on both synthetic and large-scale real-world datasets yield four key insights into the physics of multimodal pretraining: (i) Knowledge Flow: We disentangle how language, visual understanding, and visual generation transfer knowledge across modalities, revealing distinct patterns of influence and asymmetry; (ii) Synergy vs. Competition: We show that data \"complexity\" largely determines whether modalities are synergistic, identify architectural choices that promote synergy: such as shared attention and normalization with modality-specific feed-forward layers, and find that these behaviors generalize across different visual tokenizer designs; (iii) Early Unification: Unifying modalities from the very early stages and training them jointly is shown to be more effective than late alignment or sequential training. This process uncovers a vision laziness phenomenon, where delayed integration leads models to rely on language priors; (iv) Recipes: We derive efficient pretraining recipes that achieve strong generative performance using only 5% of the compute budget. These core findings are subsequently validated at scale by training multiple 13.5B MoE models on 2T tokens. We hope this study provides a ...",
+    "published": "Aug 05",
+    "pdf_url": "https://arxiv.org/pdf/2608.05000v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.05000v1",
+    "queried_author": "Mike Lewis",
+    "matching_authors": [
+      "Mike Lewis"
+    ]
+  },
+  {
+    "title": "MatrAIx: Simulating the World with 8.3 Billion Persona Agents",
+    "authors": [
+      "Xiaomin Li",
+      "Yuexing Hao",
+      "Jianheng Hou",
+      "Jintao Huang",
+      "Qianfeng Wen",
+      "Shirley Huang",
+      "Yifan Liu",
+      "Xiaoyi Liu",
+      "Yilan Fan",
+      "Yijun Wang",
+      "Koutian Wu",
+      "Ruoqi Gao",
+      "Muhammad Ahmed Mohsin",
+      "Jing Tang",
+      "Brihi Joshi",
+      "Heming Liu",
+      "Zheyuan Deng",
+      "Zonglin Di",
+      "Sankalp Jajee",
+      "Jiuyao Lu",
+      "Zhiwei Zhang",
+      "Saksham Kapoor",
+      "Ishan Gupta",
+      "Yunhan Zhao",
+      "Chanwoo Park",
+      "Yucheng Lu",
+      "Bing Hu",
+      "Weihang Xiao",
+      "Aravind Mohan",
+      "Hanwen Xing",
+      "Runyu Zhang",
+      "Mihir Kulshreshtha",
+      "Yuanda Xu",
+      "Qianyu Zhu",
+      "Dianzhuo Wang",
+      "Yuxin Xiao",
+      "Bowen Jiang",
+      "Yongye Su",
+      "Wenhao Chai",
+      "Zuxin Liu",
+      "Lawrence Yunliang Chen",
+      "Xuandong Zhao",
+      "Ethan Ye",
+      "Shivam Patel",
+      "Jason Xie",
+      "Alex Martin Richmond",
+      "Weixiang Ding",
+      "Emre Okcular",
+      "Diya Mathew",
+      "Ziheng Wang",
+      "Rana M. Shahroz Khan",
+      "Zhejian Peng",
+      "Fang Wu",
+      "Fan Nie",
+      "Xinyang Han",
+      "Yubin Kim",
+      "Jiawei Zhang",
+      "Zhenting Qi",
+      "Huangyuan Su",
+      "Xu Pan",
+      "Abinitha Gourabathina",
+      "Hyewon Jeong",
+      "Hemanth Neelgund Ramesh",
+      "Kumail Alhamoud",
+      "Kimia Hamidieh",
+      "Zidi Xiong",
+      "Samuel Schmidgall",
+      "Pengrui Han",
+      "Yepeng Huang",
+      "Yongheng Wang",
+      "Bowen Yang",
+      "Alex Gu",
+      "Yuchu Wang",
+      "Akshay Paruchuri",
+      "Brenna Li",
+      "Hejie Cui",
+      "Jiayuan Ding",
+      "Chaosheng Dong",
+      "Jiahao Wang",
+      "Yixuan He",
+      "Chi Wang",
+      "Pamela Bhattacharya",
+      "Tianyi Peng",
+      "Paul Pu Liang",
+      "Mitchell Gordon",
+      "Yilun Du",
+      "Marinka Zitnik",
+      "James Zou",
+      "Prasanna Tambe",
+      "Philip Torr",
+      "Emily Fox",
+      "Asu Ozdaglar",
+      "Dawn Song"
+    ],
+    "summary": "Human evaluation of AI systems and digital products is costly, slow, and difficult to scale. Offline evaluations are more scalable but often abstract away human diversity and interactive behavior. We therefore introduce MatrAIx, a population-scale simulated-user evaluation infrastructure for testing AI systems and digital products with heterogeneous users. MatrAIx has three core components: First, Persona 8B contains 8.3 billion persona records represented by 1,290 categorical dimensions. Records are either sampled from a dependency graph that preserves correlated attributes or derived from human-authored profiles. We release a quality-filtered coreset of approximately 1 million personas, comprising 599,847 human-grounded and 400,000 synthetic records. Second, the MatrAIx Playground provides four environments in which diverse users evaluate and interact with digital products: Survey, AI Chatbot, Web, and App. Third, MatrAIx provides 1,010 application tasks spanning more than 25 domains, including Commerce, Software, Finance, and Healthcare. We conducted 18,189 evaluation trials across eight representative tasks. Persona agents were powered by three LLMs: Claude Opus 4.8, GPT 5.5, and Claude Haiku 4.5. The resulting feedback captures how decisions and preferences vary across persona backgrounds, including hesitation after a price increase, willingness to continue after an AI assistant fails, and latency tolerance. We conducted two main validation studies: First, a 400-trial controlled study evaluated persona adherence across ten behavioral attributes and all four environment...",
+    "published": "Aug 04",
+    "pdf_url": "https://arxiv.org/pdf/2608.04205v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.04205v1",
+    "queried_author": "Mitchell Gordon",
+    "matching_authors": [
+      "Mitchell Gordon"
+    ]
+  },
+  {
     "title": "string2string Studio: An Interactive, In-Browser Platform for String-to-String Algorithms",
     "authors": [
       "Mirac Suzgun",
@@ -276,10 +427,10 @@
       "Babak Damavandi",
       "Luna Dong"
     ],
-    "summary": "Evaluating the factuality of long-form generations has focused predominantly on precision, measuring whether the claims a model makes are correct. The dominant decompose-search-verify pipeline catches incorrect claims well but says little about whether a response contains all the information it should. Measuring factual completeness, the missing half of factuality, is harder: it requires enumerating the full set of facts a complete answer should contain, and these facts rarely form a flat list. They often involve open-ended sets where coverage is what matters, ordered processes, and relationships among facts that a list of independent boolean checks fails to capture. We introduce a two-level meta-rubric framework for evaluating open-ended generation, and instantiate it as Gamut (Grounded Assessment of Multimodal Factuality), a benchmark for factual completeness in long-form generation. The framework rests on a two-level rubric representation: a structured meta-rubric captures the organization and importance of the required content, which is then mechanically compiled into a flat checklist of binary, machine-gradable rubrics that an LLM judge scores reliably. We construct 1,813 questions grounded in real wearable imagery across 10 diverse domains, each paired with an evidence-backed rubric verified by expert human annotators. Because the framework is modality-agnostic, we also release a text-only variant. Evaluating 14 frontier and open-weight models, we find the benchmark genuinely challenging (best score 58.7% from Gemini 3.1 Pro), highly discriminative, and robust to the ...",
+    "summary": "Rubric-based evaluation of open-ended generation faces a fundamental tension between expressiveness and reliability. Authoring a faithful rubric requires expressing the structure of the space of good answers: open-ended sets of acceptable options, ordered processes, and the relative importance of facts. Grading with the rubric requires a judge to score consistently, and judges are far more reliable on flat, binary checks than on rich structure. We resolve this tension with a two-level meta-rubric framework. A structured meta-rubric captures the grading criteria at authoring time, and fixed mechanical rules compile it into a flat checklist of binary, machine-gradable checks that an LLM judge scores reliably at evaluation time. We instantiate the framework as Gamut (Grounded Assessment of Multimodal Factuality), a benchmark for factual completeness in long-form generation. Gamut comprises 1,813 questions grounded in real wearable imagery across 10 diverse domains, each paired with an evidence-backed rubric verified by expert human annotators. Evaluating 14 frontier and open-weight models, we find Gamut genuinely challenging (best score 58.7% from Gemini 3.1 Pro), highly discriminative, and robust to the choice of judge.",
     "published": "Jul 21",
-    "pdf_url": "https://arxiv.org/pdf/2607.19322v1",
-    "arxiv_url": "http://arxiv.org/abs/2607.19322v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.19322v2",
+    "arxiv_url": "http://arxiv.org/abs/2607.19322v2",
     "queried_author": "Scott Yih",
     "matching_authors": [
       "Scott Yih"
@@ -8046,10 +8197,10 @@
       "Diyi Yang",
       "Emma Brunskill"
     ],
-    "summary": "Digital mental health (DMH) tools have extensively explored personalization of interventions to users' needs and contexts. However, this personalization often targets what support is provided, not how it is experienced. Even well-matched content can fail when the interaction format misaligns with how someone can engage. We introduce generative experience as a paradigm for DMH support, where the intervention experience is composed at runtime. We instantiate this in GUIDE, a system that generates personalized intervention content and multimodal interaction structure through rubric-guided generation of modular components. In a preregistered study with N = 237 participants, GUIDE significantly reduced stress (p = .02) and improved the user experience (p = .04) compared to an LLM-based cognitive restructuring control. GUIDE also supported diverse forms of reflection and action through varied interaction flows, while revealing tensions around personalization across the interaction sequence. This work lays the foundation for interventions that dynamically shape how support is experienced and enacted in digital settings.",
+    "summary": "Digital mental health (DMH) tools have extensively explored personalization of interventions to users' needs and contexts. However, this personalization often targets what support is provided, not how it is experienced. Even well-matched content can fail when the interaction format misaligns with how someone can engage. We introduce generative experience as an approach to DMH support, where the intervention experience is composed at runtime. We instantiate this in GUIDE, a system that generates personalized intervention content and multimodal interaction structure through rubric-guided generation of modular components. In a preregistered study with N=237 participants, GUIDE significantly reduced stress (p=.02) and improved user experience (p=.04) compared to an LLM-based cognitive restructuring control. GUIDE also supported diverse forms of reflection and action through varied interaction flows, while revealing tensions around personalization across the interaction sequence. This work lays the foundation for interventions that dynamically shape how support is experienced and enacted in digital settings.",
     "published": "Apr 08",
-    "pdf_url": "https://arxiv.org/pdf/2604.07558v2",
-    "arxiv_url": "http://arxiv.org/abs/2604.07558v2",
+    "pdf_url": "https://arxiv.org/pdf/2604.07558v3",
+    "arxiv_url": "http://arxiv.org/abs/2604.07558v3",
     "queried_author": "Diyi Yang",
     "matching_authors": [
       "Diyi Yang"
@@ -8131,10 +8282,10 @@
       "Douwe Kiela",
       "Christopher Potts"
     ],
-    "summary": "Document expansion is a classical technique for improving retrieval quality, and is attractive since it shifts computation offline, avoiding additional query-time processing. However, when applied to modern retrievers, it has been shown to degrade performance, often introducing noise that obfuscates the discriminative signal. We recast document expansion as a document optimization problem: a language model or a vision language model is fine-tuned to transform documents into representations that better align with the expected query distribution under a target retriever, using GRPO with the retriever's ranking improvements as rewards. This approach requires only black-box access to retrieval ranks, and is applicable across single-vector, multi-vector and lexical retrievers. We evaluate our approach on code retrieval and visual document retrieval (VDR) tasks. We find that learned document transformations yield retrieval gains and in many settings enable smaller, more efficient retrievers to outperform larger ones. For example, applying document optimization to OpenAI text-embedding-3-small model improves nDCG5 on code (58.7 to 66.8) and VDR (53.3 to 57.6), even slightly surpassing the 6.5X more expensive OpenAI text-embedding-3-large model (66.3 on code; 57.0 on VDR). When retriever weights are accessible, document optimization is often competitive with fine-tuning, and in most settings their combination performs best, improving Jina-ColBERT-V2 from 55.8 to 63.3 on VDR and from 48.6 to 61.8 on code retrieval.",
+    "summary": "Document expansion is a classical technique for improving retrieval quality, and is attractive since it shifts computation offline, avoiding additional query-time processing. However, when applied to modern retrievers, it has been shown to degrade performance, often introducing noise that obfuscates the discriminative signal. We recast document expansion as a document optimization problem: a language model or a vision language model is fine-tuned to transform documents into representations that better align with the expected query distribution under a target retriever, using GRPO with the retriever's ranking improvements as rewards. This approach requires only black-box access to retrieval ranks, and is applicable across single-vector, multi-vector and lexical retrievers. We evaluate our approach on code retrieval and visual document retrieval (VDR) tasks. We find that learned document transformations yield retrieval gains and in many settings enable smaller, more efficient retrievers to outperform larger ones. For example, applying document optimization to OpenAI text-embedding-3-small model improves nDCG5 on code (58.7 to 66.8) and VDR (53.3 to 57.6), even slightly surpassing the 6.5X more expensive OpenAI text-embedding-3-large model (66.3 on code; 57.0 on VDR). When retriever weights are accessible, document optimization is often competitive with fine-tuning, and in some settings their combination performs best, improving Jina-ColBERT-V2 from 55.8 to 63.3 on VDR and from 48.6 to 61.8 on code retrieval.",
     "published": "Apr 06",
-    "pdf_url": "https://arxiv.org/pdf/2604.05087v2",
-    "arxiv_url": "http://arxiv.org/abs/2604.05087v2",
+    "pdf_url": "https://arxiv.org/pdf/2604.05087v3",
+    "arxiv_url": "http://arxiv.org/abs/2604.05087v3",
     "queried_author": "Christopher Potts",
     "matching_authors": [
       "Christopher Potts"
@@ -12631,62 +12782,6 @@
     "queried_author": "Jure Leskovec",
     "matching_authors": [
       "Jure Leskovec"
-    ]
-  },
-  {
-    "title": "What's the plan? Metrics for implicit planning in LLMs and their application to rhyme generation and question answering",
-    "authors": [
-      "Jim Maar",
-      "Denis Paperno",
-      "Callum Stuart McDougall",
-      "Neel Nanda"
-    ],
-    "summary": "Prior work suggests that language models, while trained on next token prediction, show implicit planning behavior: they may select the next token in preparation to a predicted future token, such as a likely rhyming word, as supported by a prior qualitative study of Claude 3.5 Haiku using a cross-layer transcoder. We propose much simpler techniques for assessing implicit planning in language models. With case studies on rhyme poetry generation and question answering, we demonstrate that our methodology easily scales to many models. Across models, we find that the generated rhyme (e.g. \"-ight\") or answer to a question (\"whale\") can be manipulated by steering at the end of the preceding line with a vector, affecting the generation of intermediate tokens leading up to the rhyme or answer word. We show that implicit planning is a universal mechanism, present in smaller models than previously thought, starting from 1B parameters. Our methodology offers a widely applicable direct way to study implicit planning abilities of LLMs. More broadly, understanding planning abilities of language models can inform decisions in AI safety and control.",
-    "published": "Jan 28",
-    "pdf_url": "https://arxiv.org/pdf/2601.20164v2",
-    "arxiv_url": "http://arxiv.org/abs/2601.20164v2",
-    "queried_author": "Neel Nanda",
-    "matching_authors": [
-      "Neel Nanda"
-    ]
-  },
-  {
-    "title": "A Few Bad Neurons: Isolating and Surgically Correcting Sycophancy",
-    "authors": [
-      "Claire O'Brien",
-      "Jessica Seto",
-      "Dristi Roy",
-      "Aditya Dwivedi",
-      "Sunishchal Dev",
-      "Kevin Zhu",
-      "Sean O'Brien",
-      "Ashwinee Panda",
-      "Ryan Lagasse"
-    ],
-    "summary": "Behavioral alignment in large language models (LLMs) is often achieved through broad fine-tuning, which can result in undesired side effects like distributional shift and low interpretability. We propose a method for alignment that identifies and updates only the neurons most responsible for a given behavior, a targeted approach that allows for fine-tuning with significantly less data. Using sparse autoencoders (SAEs) and linear probes, we isolate the 3% of MLP neurons most predictive of a target behavior, decode them into residual space, and fine-tune only those neurons using gradient masking. We demonstrate this approach on the task of reducing sycophantic behavior, where our method matches or exceeds state-of-the-art performance on four benchmarks (Syco-Bench, NLP, POLI, PHIL) using Gemma-2-2B and 9B models. Our results show that sparse, neuron-level updates offer a scalable and precise alternative to full-model fine-tuning, remaining effective even in situations when little data is available",
-    "published": "Jan 26",
-    "pdf_url": "https://arxiv.org/pdf/2601.18939v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.18939v1",
-    "queried_author": "Ashwinee Panda",
-    "matching_authors": [
-      "Ashwinee Panda"
-    ]
-  },
-  {
-    "title": "Gained in Translation: Privileged Pairwise Judges Enhance Multilingual Reasoning",
-    "authors": [
-      "Lintang Sutawika",
-      "Gokul Swamy",
-      "Zhiwei Steven Wu",
-      "Graham Neubig"
-    ],
-    "summary": "When asked a question in a language less seen in its training data, current reasoning large language models (RLMs) often exhibit dramatically lower performance than when asked the same question in English. In response, we introduce \\texttt{SP3F} (Self-Play with Privileged Pairwise Feedback), a two-stage framework for enhancing multilingual reasoning without \\textit{any} data in the target language(s). First, we supervise fine-tune (SFT) on translated versions of English question-answer pairs to raise base model correctness. Second, we perform RL with feedback from a pairwise judge in a self-play fashion, with the judge receiving the English reference response as \\textit{privileged information}. Thus, even when none of the model's responses are completely correct, the privileged pairwise judge can still tell which response is better. End-to-end, \\texttt{SP3F} greatly improves base model performance, even outperforming fully post-trained models on multiple math and non-math tasks with less than\n  of the training data across the single-language, multilingual, and generalization to unseen language settings.",
-    "published": "Jan 26",
-    "pdf_url": "https://arxiv.org/pdf/2601.18722v1",
-    "arxiv_url": "http://arxiv.org/abs/2601.18722v1",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
     ]
   }
 ]
