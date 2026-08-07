@@ -1,5 +1,44 @@
 [
   {
+    "title": "MameLoshnLM: Yiddish Language Model and Evaluation Benchmark",
+    "authors": [
+      "Uri Katz",
+      "Omer Goldman",
+      "Tomasz Limisiewicz",
+      "Reut Tsarfaty",
+      "Noah A. Smith"
+    ],
+    "summary": "We present MameLoshnLM, the first open-source 8B-parameter language model built specifically for Yiddish. Despite Yiddish's rich textual tradition, its limited digital presence and the scarcity of reliable evaluation resources have constrained progress in Yiddish language modeling. Existing multilingual corpora and benchmarks are often poor proxies for the language, containing substantial amounts of noisy, machine-translated, and misclassified text. We address these gaps by introducing Oytser, a high-quality Yiddish pretraining corpus that combines contemporary web-native sources with literary materials, and Kashes, a multi-task benchmark spanning translation, linguistic analysis, information extraction, and language understanding. Using these resources, we continue pretraining Llama 3.1 8B to obtain MameLoshnLM. Across the tasks in the benchmark, MameLoshnLM outperforms open baselines of similar scale. Our analyses show that these gains are not only quantitative: relative to general-purpose multilingual models, MameLoshnLM better captures language-defining lexical and morphological patterns, pointing to a broader failure mode of noisy web-scale multilingual data for low-resource languages. Our results provide both a foundation for Yiddish NLP and a practical template for language model development in historically rich but digitally underrepresented languages.",
+    "published": "Aug 06",
+    "pdf_url": "https://arxiv.org/pdf/2608.05850v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.05850v1",
+    "queried_author": "Noah A. Smith",
+    "matching_authors": [
+      "Noah A. Smith"
+    ]
+  },
+  {
+    "title": "Positive-Unlabeled Preference Optimization For Chest X-ray Report Generation",
+    "authors": [
+      "Yuta Kobayashi",
+      "Pradyun Ramesh",
+      "Muhammad Ahmed Chaudhry",
+      "Vincent Jeanselme",
+      "Judy Wawira Gichoya",
+      "Sanmi Koyejo",
+      "Kathleen Capaccione",
+      "Shalmali Joshi"
+    ],
+    "summary": "Vision-Language Models (VLMs) for radiology report generation are typically trained on retrospective clinical reports, which suffer from omission noise: clinically present findings are left unreported due to the omission of subtle findings. For example, prior studies show that cardiomegaly may be omitted from ICU chest X-ray reports when the imaging request is focused on monitoring support device placement. As a result, models trained with standard approaches inherit these omissions, learning to under-report findings themselves. We propose PU-DPO, a preference optimization framework to prevent omission noise from corrupting the preference signal. We reformulate the objective under a positive-unlabeled (PU) learning framework, treating absent mentions as unlabeled rather than truly negative. Our framework provides preference supervision using constructed contrastive pairs, generated using edits to model responses, producing variants that explicitly mention or omit a specific finding. Generated responses that mention the finding are naturally preferred in the context of visual evidence. Across semi-synthetic experiments and analyses on real-world chest radiograph benchmarks where adjudicated labels are available, PU-DPO yields consistent gains in detection rates and recovery of hidden positives across multiple pathologies, and is more robust to omission noise than prior approaches.",
+    "published": "Aug 05",
+    "pdf_url": "https://arxiv.org/pdf/2608.05341v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.05341v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
     "title": "DelusionEval: Measuring Delusion-Linked Behaviors in AI Chatbots",
     "authors": [
       "Jared Moore",
@@ -37,8 +76,8 @@
     ],
     "summary": "Vision offers a critical axis for advancing foundation models, driving a shift towards natively unified multimodal pretraining. Despite this momentum, the design space and the fundamental mechanisms of how modalities interact during unified training remain underexplored. We provide empirical clarity through a systematic exploration of multimodal pretraining. Our controlled experiments on both synthetic and large-scale real-world datasets yield four key insights into the physics of multimodal pretraining: (i) Knowledge Flow: We disentangle how language, visual understanding, and visual generation transfer knowledge across modalities, revealing distinct patterns of influence and asymmetry; (ii) Synergy vs. Competition: We show that data \"complexity\" largely determines whether modalities are synergistic, identify architectural choices that promote synergy: such as shared attention and normalization with modality-specific feed-forward layers, and find that these behaviors generalize across different visual tokenizer designs; (iii) Early Unification: Unifying modalities from the very early stages and training them jointly is shown to be more effective than late alignment or sequential training. This process uncovers a vision laziness phenomenon, where delayed integration leads models to rely on language priors; (iv) Recipes: We derive efficient pretraining recipes that achieve strong generative performance using only 5% of the compute budget. These core findings are subsequently validated at scale by training multiple 13.5B MoE models on 2T tokens. We hope this study provides a ...",
     "published": "Aug 05",
-    "pdf_url": "https://arxiv.org/pdf/2608.05000v1",
-    "arxiv_url": "http://arxiv.org/abs/2608.05000v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.05000v2",
+    "arxiv_url": "http://arxiv.org/abs/2608.05000v2",
     "queried_author": "Mike Lewis",
     "matching_authors": [
       "Mike Lewis"
@@ -165,6 +204,28 @@
     "queried_author": "Dan Jurafsky",
     "matching_authors": [
       "Dan Jurafsky"
+    ]
+  },
+  {
+    "title": "Position: It's Time to Optimize LLMs for Self-Consistency",
+    "authors": [
+      "Itamar Pres",
+      "Belinda Z. Li",
+      "Laura Ruis",
+      "Zifan Carl Guo",
+      "Keya Hu",
+      "Mehul Damani",
+      "Isha Puri",
+      "Ekdeep Singh Lubana",
+      "Jacob Andreas"
+    ],
+    "summary": "Despite ever-increasing sophistication in language model (LM) pre- and post-training pipelines, many important failures persist: models overcondition on user framing (\"sycophancy\"), exhibit incomplete logical generalization, and produce confident but incorrect responses. We argue that these failures arise from a modeling assumption permeating all aspects of the pipeline: that behavior can be specified and evaluated independently on single-output pairs. Many model failures are difficult, if not impossible, to detect without reasoning about relationships between a model's responses across inputs. In this position paper, we propose self-consistency as a framework for understanding these failures. We first observe that a wide variety of techniques designed to improve specific aspects of LM behavior-targeting properties as diverse as adversarial robustness and factual coherence-can be understood as special cases of a common \"consistency optimization\" procedure and addressed with a standard set of optimization tools. We next outline a set of new model properties that could be achieved by optimizing for consistency, and conclude with a discussion of what it would mean to develop generally consistent LMs, including the capabilities they would enable and the objections they raise.",
+    "published": "Jul 31",
+    "pdf_url": "https://arxiv.org/pdf/2608.05188v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.05188v1",
+    "queried_author": "Jacob Andreas",
+    "matching_authors": [
+      "Jacob Andreas"
     ]
   },
   {
@@ -1731,10 +1792,10 @@
       "Dominik Stammbach",
       "Peter Henderson"
     ],
-    "summary": "Attorneys, judges, and pro se filers increasingly use AI to draft legal documents, yet these tools frequently fabricate citations. Despite predictions that newer models would hallucinate less or that court sanctions would deter negligent filers, we found over 1,000 filings containing fabricated citations -- with this number growing year-over-year. This study evaluates whether AI-based systems can mitigate these errors by automatically detecting hallucinations. We propose a taxonomy of legal citation hallucinations grounded in actual court filings and introduce a dataset of 1,300 brief excerpts containing injected errors. Benchmarking five models in agentic and non-agentic settings reveals that while the latest iterations perform better -- GPT-5 achieves 82.8% recall and a 60.5% F1 score in an agentic framework -- all models struggle with subtle error categories. Agentic verification remains resource-intensive, with GPT-5 averaging 16.9 steps per excerpt. Furthermore, restricted information access limits the efficacy of even the best agents. This gap creates policy concerns, as it disadvantages both AI systems and litigants who lack subscriptions to commercial legal databases. Together, our dataset, tools, and policy recommendations provide a foundation for building and auditing reliable legal citation checking tools.",
+    "summary": "Attorneys, judges, and pro se filers increasingly use AI to draft legal documents, yet these tools frequently fabricate citations. Despite predictions that newer models would hallucinate less or that court sanctions would deter negligent filers, we found over 1,000 filings containing fabricated citations---with this number growing year-over-year. This study evaluates whether AI-based systems can mitigate these errors by automatically detecting hallucinations. We propose a taxonomy of legal citation hallucinations grounded in actual court filings and introduce a dataset of 1,300 brief excerpts containing injected errors. Benchmarking five models in agentic and non-agentic settings as well as Claude Code reveals that while the latest iterations perform better---GPT-5 achieves 84.4% recall and a 55.0% F1 score in an agentic framework---all models struggle with subtle error categories. Agentic verification remains resource-intensive, with GPT-5 averaging 15.3 steps per excerpt. Furthermore, restricted information access limits the efficacy of even the best agents. This gap creates policy concerns, as it disadvantages both AI systems and litigants who lack subscriptions to commercial legal databases. Together, our dataset, tools, and policy recommendations provide a foundation for building and auditing reliable legal citation checking tools.",
     "published": "Jun 19",
-    "pdf_url": "https://arxiv.org/pdf/2606.21155v1",
-    "arxiv_url": "http://arxiv.org/abs/2606.21155v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.21155v2",
+    "arxiv_url": "http://arxiv.org/abs/2606.21155v2",
     "queried_author": "Peter Henderson",
     "matching_authors": [
       "Peter Henderson"
@@ -11221,10 +11282,10 @@
       "Avijit Ghosh",
       "Irene Solaiman"
     ],
-    "summary": "Artificial intelligence benchmarks are an important mechanism for measuring model progress and guiding deployment decisions. However, benchmarks quickly \"saturate\", making it difficult to differentiate models and diminishing their long-term value. In this study, we define benchmark saturation and analyze it across 60 language model benchmarks using 14 properties that relate to saturation. We find that nearly half of the our benchmarks exhibit saturation, with rates increasing with age. Further, we find that resilience to saturation is impacted by expert-curation, not by public test data. Our results suggest that design choices can extend benchmark longevity and inform more durable evaluation approaches.",
+    "summary": "Artificial intelligence benchmarks are an important mechanism to measure model progress and guide deployment decisions. However, benchmarks quickly \"saturate\", making it difficult to differentiate models and diminishing their long-term value. In this study, we define benchmark saturation and analyze it across 60 language model benchmarks using 14 properties that relate to saturation. We find that nearly half of our benchmarks exhibit saturation, with rates increasing with age. Further, we find that resilience to saturation is impacted by expert-curation, not by public test data. Our results suggest that design choices can extend benchmark longevity and inform more durable evaluation approaches.",
     "published": "Feb 18",
-    "pdf_url": "https://arxiv.org/pdf/2602.16763v3",
-    "arxiv_url": "http://arxiv.org/abs/2602.16763v3",
+    "pdf_url": "https://arxiv.org/pdf/2602.16763v4",
+    "arxiv_url": "http://arxiv.org/abs/2602.16763v4",
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
@@ -12719,69 +12780,6 @@
     "matching_authors": [
       "Luke Zettlemoyer",
       "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Reinforcement Learning via Self-Distillation",
-    "authors": [
-      "Jonas H\u00fcbotter",
-      "Frederike L\u00fcbeck",
-      "Lejs Behric",
-      "Anton Baumann",
-      "Marco Bagatella",
-      "Daniel Marta",
-      "Ido Hakimi",
-      "Idan Shenfeld",
-      "Thomas Kleine Buening",
-      "Carlos Guestrin",
-      "Andreas Krause"
-    ],
-    "summary": "Large language models are increasingly post-trained with reinforcement learning in verifiable domains such as code and math. Yet, current methods for reinforcement learning with verifiable rewards (RLVR) learn only from a scalar outcome reward per attempt, creating a severe credit-assignment bottleneck. Many verifiable environments actually provide rich textual feedback, such as runtime errors or judge evaluations, that explain why an attempt failed. We formalize this setting as reinforcement learning with rich feedback and introduce Self-Distillation Policy Optimization (SDPO), which converts tokenized feedback into a dense learning signal without any external teacher or explicit reward model. SDPO treats the current model conditioned on feedback as a self-teacher and distills its feedback-informed next-token predictions back into the policy. In this way, SDPO leverages the model's ability to retrospectively identify its own mistakes in-context. Across scientific reasoning, tool use, and competitive programming on LiveCodeBench v6, SDPO improves sample efficiency and final accuracy over strong RLVR baselines. Notably, SDPO also outperforms baselines in standard RLVR environments that only return scalar feedback by using successful rollouts as implicit feedback for failed attempts. Finally, applying SDPO to individual questions at test time accelerates discovery on difficult binary-reward tasks, achieving the same discovery probability as best-of-k sampling or multi-turn conversations with 3x fewer attempts.",
-    "published": "Jan 28",
-    "pdf_url": "https://arxiv.org/pdf/2601.20802v2",
-    "arxiv_url": "http://arxiv.org/abs/2601.20802v2",
-    "queried_author": "Carlos Guestrin",
-    "matching_authors": [
-      "Carlos Guestrin"
-    ]
-  },
-  {
-    "title": "SERA: Soft-Verified Efficient Repository Agents",
-    "authors": [
-      "Ethan Shen",
-      "Daniel Tormoen",
-      "Saurabh Shah",
-      "Ali Farhadi",
-      "Tim Dettmers"
-    ],
-    "summary": "Open-weight coding agents should hold a fundamental advantage over closed-source systems because they can specialize to private codebases, encoding repository-specific information directly in their weights. Yet the cost and complexity of training has kept this advantage theoretical until now. We present Soft-Verified Efficient Repository Agents (SERA), an efficient method for training coding agents that enables the rapid and cheap creation of agents specialized to private codebases. Using Soft Verified Generation (SVG), we generate thousands of trajectories from any code repository, without requiring unit tests. Beyond repository specialization, we apply SVG to a larger corpus of codebases, generating 200,000+ synthetic trajectories. Using only supervised finetuning (SFT), SERA achieves leading results among fully open-source (open data, method, code) models while matching the performance of open-weight models like Devstral-Small-2. Creating SERA models is 26x cheaper than reinforcement learning and 57x cheaper than previous synthetic data methods to reach equivalent performance. We use our dataset to provide detailed analysis of scaling laws, ablations, and confounding factors for training coding agents. Overall, we believe our work will greatly accelerate research on open coding agents and showcase the advantage of open-source models that can adapt to private codebases. We release SERA as the first model in Ai2's Open Coding Agents series, along with all our code, data, and Claude Code integration to support the research community.",
-    "published": "Jan 28",
-    "pdf_url": "https://arxiv.org/pdf/2601.20789v3",
-    "arxiv_url": "http://arxiv.org/abs/2601.20789v3",
-    "queried_author": "Ali Farhadi",
-    "matching_authors": [
-      "Ali Farhadi"
-    ]
-  },
-  {
-    "title": "Improving Diffusion Language Model Decoding through Joint Search in Generation Order and Token Space",
-    "authors": [
-      "Yangyi Shen",
-      "Tianjian Feng",
-      "Jiaqi Han",
-      "Wen Wang",
-      "Tianlang Chen",
-      "Chunhua Shen",
-      "Jure Leskovec",
-      "Stefano Ermon"
-    ],
-    "summary": "Diffusion Language Models (DLMs) offer order-agnostic generation that can explore many possible decoding trajectories. However, current decoding methods commit to a single trajectory, limiting exploration in trajectory space. We introduce Order-Token Search to explore this space through jointly searching over generation order and token values. Its core is a likelihood estimator that scores denoising actions, enabling stable pruning and efficient exploration of diverse trajectories. Across mathematical reasoning and coding benchmarks, Order-Token Search consistently outperforms baselines on GSM8K, MATH500, Countdown, and HumanEval (3.1%, 3.8%, 7.9%, and 6.8% absolute over backbone), matching or surpassing diffu-GRPO post-trained d1-LLaDA. Our work establishes joint search as a key component for advancing decoding in DLMs.",
-    "published": "Jan 28",
-    "pdf_url": "https://arxiv.org/pdf/2601.20339v2",
-    "arxiv_url": "http://arxiv.org/abs/2601.20339v2",
-    "queried_author": "Jure Leskovec",
-    "matching_authors": [
-      "Jure Leskovec"
     ]
   }
 ]
