@@ -5365,6 +5365,35 @@
     ]
   },
   {
+    "title": "ExploitGym: Can AI Agents Turn Security Vulnerabilities into Real Attacks?",
+    "authors": [
+      "Zhun Wang",
+      "Nico Schiller",
+      "Hongwei Li",
+      "Srijiith Sesha Narayana",
+      "Milad Nasr",
+      "Nicholas Carlini",
+      "Xiangyu Qi",
+      "Eric Wallace",
+      "Elie Bursztein",
+      "Luca Invernizzi",
+      "Kurt Thomas",
+      "Yan Shoshitaishvili",
+      "Wenbo Guo",
+      "Jingxuan He",
+      "Thorsten Holz",
+      "Dawn Song"
+    ],
+    "summary": "AI agents are rapidly gaining capabilities that could significantly reshape cybersecurity, making rigorous evaluation urgent. A critical capability is exploitation: turning a vulnerability, which is not yet an attack, into a concrete security impact, such as unauthorized file access or code execution. Exploitation is a particularly challenging task because it requires low-level program reasoning (e.g., about memory layout), runtime adaptation, and sustained progress over long horizons. Meanwhile, it is inherently dual-use, supporting defensive workflows while lowering the barrier for offense. Despite its importance and diagnostic value, exploitation remains under-evaluated. To address this gap, we introduce ExploitGym, a large-scale, diverse, realistic benchmark on the exploitation capabilities of AI agents. Given a program input that triggers a vulnerability, ExploitGym tasks agents with progressively extending it into a working exploit. The benchmark comprises 898 instances sourced from real-world vulnerabilities across three domains, including userspace programs, Google's V8 JavaScript engine, and the Linux kernel. We vary the security protections applied to each instance, isolating their impact on agent performance. All configurations are packaged in reproducible containerized environments. Our evaluation shows that while exploitation remains challenging, frontier models can successfully exploit a non-trivial fraction of vulnerabilities. For example, the strongest configurations are Anthropic's latest model Claude Mythos Preview and OpenAI's GPT-5.5, which produce worki...",
+    "published": "May 11",
+    "pdf_url": "https://arxiv.org/pdf/2605.11086v1",
+    "arxiv_url": "http://arxiv.org/abs/2605.11086v1",
+    "queried_author": "Nicholas Carlini",
+    "matching_authors": [
+      "Nicholas Carlini"
+    ]
+  },
+  {
     "title": "ELF: Embedded Language Flows",
     "authors": [
       "Keya Hu",
@@ -11206,6 +11235,25 @@
     ]
   },
   {
+    "title": "Large-scale online deanonymization with LLMs",
+    "authors": [
+      "Simon Lermen",
+      "Daniel Paleka",
+      "Joshua Swanson",
+      "Michael Aerni",
+      "Nicholas Carlini",
+      "Florian Tram\u00e8r"
+    ],
+    "summary": "We show that large language models can be used to perform at-scale deanonymization. With full Internet access, our agent can re-identify Hacker News users and Anthropic Interviewer participants at high precision, given pseudonymous online profiles and conversations alone, matching what would take hours for a dedicated human investigator. We then design attacks for the closed-world setting. Given two databases of pseudonymous individuals, each containing unstructured text written by or about that individual, we implement a scalable attack pipeline that uses LLMs to: (1) extract identity-relevant features, (2) search for candidate matches via semantic embeddings, and (3) reason over top candidates to verify matches and reduce false positives. Compared to classical deanonymization work (e.g., on the Netflix prize) that required structured data, our approach works directly on raw user content across arbitrary platforms. We construct three datasets with known ground-truth data to evaluate our attacks. The first links Hacker News to LinkedIn profiles, using cross-platform references that appear in the profiles. Our second dataset matches users across Reddit movie discussion communities; and the third splits a single user's Reddit history in time to create two pseudonymous profiles to be matched. In each setting, LLM-based methods substantially outperform classical baselines, achieving up to 68% recall at 90% precision compared to near 0% for the best non-LLM method. Our results show that the practical obscurity protecting pseudonymous users online no longer holds and that threat ...",
+    "published": "Feb 18",
+    "pdf_url": "https://arxiv.org/pdf/2602.16800v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.16800v2",
+    "queried_author": "Nicholas Carlini",
+    "matching_authors": [
+      "Nicholas Carlini"
+    ]
+  },
+  {
     "title": "Calibrate-Then-Act: Cost-Aware Exploration in LLM Agents",
     "authors": [
       "Wenxuan Ding",
@@ -11919,6 +11967,24 @@
     "queried_author": "Alisa Liu",
     "matching_authors": [
       "Alisa Liu"
+    ]
+  },
+  {
+    "title": "Haiku to Opus in Just 10 bits: LLMs Unlock Large Compression Gains",
+    "authors": [
+      "Roy Rinberg",
+      "Annabelle Michael Carrell",
+      "Simon Henniger",
+      "Nicholas Carlini",
+      "Keri Warr"
+    ],
+    "summary": "We study the compression of LLM-generated text across lossless and lossy regimes, characterizing a compression-compute frontier where more compression is possible at the cost of more compute. For lossless compression, domain-adapted LoRA adapters can improve LLM-based arithmetic coding by 2x over compression with the base LLM alone. For lossy compression, prompting a model for a succinct rewrite then applying arithmetic coding can achieve compression ratios of approximately 0.03, a 2x improvement over compressing the original response.\n  We further introduce Question-Asking compression (QA), an interactive lossy protocol inspired by the game 'Twenty Questions'. A small model iteratively refines its response by asking yes/no questions to a stronger model, transferring exactly one bit per answer. On 8 benchmarks spanning math, science, and code, 10 binary questions recover 23% to 72% of the capability gap between a small and large model on standard benchmarks and 7% to 38% on harder benchmarks, achieving compression ratios of 0.0006 to 0.004. This is over 100x smaller than prior LLM-based compression (Deletang et al., 2024), suggesting that interactive protocols can transfer knowledge far more efficiently than transmitting full responses.",
+    "published": "Feb 09",
+    "pdf_url": "https://arxiv.org/pdf/2604.02343v2",
+    "arxiv_url": "http://arxiv.org/abs/2604.02343v2",
+    "queried_author": "Nicholas Carlini",
+    "matching_authors": [
+      "Nicholas Carlini"
     ]
   },
   {
@@ -12708,78 +12774,6 @@
     "queried_author": "Colin Raffel",
     "matching_authors": [
       "Colin Raffel"
-    ]
-  },
-  {
-    "title": "Latent Adversarial Regularization for Offline Preference Optimization",
-    "authors": [
-      "Enyi Jiang",
-      "Yibo Jacky Zhang",
-      "Yinglun Xu",
-      "Andreas Haupt",
-      "Nancy Amato",
-      "Sanmi Koyejo"
-    ],
-    "summary": "Learning from human feedback typically relies on preference optimization that constrains policy updates through token-level regularization. However, preference optimization for language models is particularly challenging because token-space similarity does not imply semantic or behavioral similarity. To address this challenge, we leverage latent-space regularization for language model preference optimization. We introduce GANPO, which achieves latent-space regularization by penalizing divergence between the internal representations of a policy model and a reference model. Given that latent representations are not associated with explicit probability densities, we adopt an adversarial approach inspired by GANs to minimize latent-space divergence. We integrate GANPO as a regularizer into existing offline preference optimization objectives. Experiments across multiple model architectures and tasks show consistent improvements from latent-space regularization. Further, by comparing GANPO-induced inferential biases with those from token-level regularization, we find that GANPO provides more robust structural feedback under distributional shift and noise while maintaining comparable downstream performance with minor computational overhead.",
-    "published": "Jan 29",
-    "pdf_url": "https://arxiv.org/pdf/2601.22083v2",
-    "arxiv_url": "http://arxiv.org/abs/2601.22083v2",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "NEMO: Execution-Aware Optimization Modeling via Autonomous Coding Agents",
-    "authors": [
-      "Yang Song",
-      "Anoushka Vyas",
-      "Zirui Wei",
-      "Sina Khoshfetrat Pakazad",
-      "Henrik Ohlsson",
-      "Graham Neubig"
-    ],
-    "summary": "We present NEMO, a system that translates Natural-language descriptions of decision problems into formal Executable Mathematical Optimization implementations using autonomous coding agents (ACAs). Existing approaches rely on specialized large language models (LLMs) or bespoke task-specific agents that are often brittle and frequently generate syntactically invalid or non-executable code. NEMO instead treats ACAs as a first-class abstraction analogous to API-based interaction with LLMs; their sandboxed execution guarantees code is executable by construction and supports automated validation and repair. We introduce novel coordination patterns including asymmetric validation loops between independently generated optimizer and simulator implementations, external memory for experience reuse, and robustness enhancements via minimum Bayes risk (MBR) decoding and self-consistency. Across nine established optimization benchmarks, NEMO achieves state-of-the-art performance on the majority of tasks with substantial margins on several datasets, demonstrating the power of execution-aware agentic architectures for automated optimization modeling.",
-    "published": "Jan 29",
-    "pdf_url": "https://arxiv.org/pdf/2601.21372v3",
-    "arxiv_url": "http://arxiv.org/abs/2601.21372v3",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
-    ]
-  },
-  {
-    "title": "MoCo: A One-Stop Shop for Model Collaboration Research",
-    "authors": [
-      "Shangbin Feng",
-      "Yuyang Bai",
-      "Ziyuan Yang",
-      "Yike Wang",
-      "Zhaoxuan Tan",
-      "Jiajie Yan",
-      "Zhenyu Lei",
-      "Wenxuan Ding",
-      "Weijia Shi",
-      "Haojin Wang",
-      "Zhenting Qi",
-      "Yuru Jiang",
-      "Heng Wang",
-      "Chengsong Huang",
-      "Yu Fei",
-      "Jihan Yao",
-      "Yilun Du",
-      "Luke Zettlemoyer",
-      "Yejin Choi",
-      "Yulia Tsvetkov"
-    ],
-    "summary": "Advancing beyond single monolithic language models (LMs), recent research increasingly recognizes the importance of model collaboration, where multiple LMs collaborate, compose, and complement each other. Existing research on this topic has mostly been disparate and disconnected, from different research communities, and lacks rigorous comparison. To consolidate existing research and establish model collaboration as a school of thought, we present MoCo: a one-stop Python library of executing, benchmarking, and comparing model collaboration algorithms at scale. MoCo features 26 model collaboration methods, spanning diverse levels of cross-model information exchange such as routing, text, logit, and model parameters. MoCo integrates 25 evaluation datasets spanning reasoning, QA, code, safety, and more, while users could flexibly bring their own data. Extensive experiments with MoCo demonstrate that most collaboration strategies outperform models without collaboration in 61.0% of (model, data) settings on average, with the most effective methods outperforming by up to 25.8%. We further analyze the scaling of model collaboration strategies, the training/inference efficiency of diverse methods, highlight that the collaborative system solves problems where single LMs struggle, and discuss future work in model collaboration, all made possible by MoCo. We envision MoCo as a valuable toolkit to facilitate and turbocharge the quest for an open, modular, decentralized, and collaborative AI future.",
-    "published": "Jan 29",
-    "pdf_url": "https://arxiv.org/pdf/2601.21257v2",
-    "arxiv_url": "http://arxiv.org/abs/2601.21257v2",
-    "queried_author": "Luke Zettlemoyer",
-    "matching_authors": [
-      "Luke Zettlemoyer",
-      "Yejin Choi"
     ]
   }
 ]
