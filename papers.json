@@ -10572,7 +10572,8 @@
     "arxiv_url": "http://arxiv.org/abs/2602.23351v1",
     "queried_author": "Ranjay Krishna",
     "matching_authors": [
-      "Ranjay Krishna"
+      "Ranjay Krishna",
+      "Jack Hessel"
     ]
   },
   {
@@ -11485,6 +11486,26 @@
     "matching_authors": [
       "Carlos Guestrin",
       "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "OpaqueToolsBench: Learning Nuances of Tool Behavior Through Interaction",
+    "authors": [
+      "Skyler Hallinan",
+      "Thejas Venkatesh",
+      "Xiang Ren",
+      "Sai Praneeth Karimireddy",
+      "Ashwin Paranjape",
+      "Yuhao Zhang",
+      "Jack Hessel"
+    ],
+    "summary": "Tool-calling is essential for Large Language Model (LLM) agents to complete real-world tasks. While most existing benchmarks assume simple, perfectly documented tools, real-world tools (e.g., general \"search\" APIs) are often opaque, lacking clear best practices or failure modes. Can LLM agents improve their performance in environments with opaque tools by interacting and subsequently improving documentation? To study this, we create OpaqueToolsBench, a benchmark consisting of three distinct task-oriented environments: general function calling, interactive chess playing, and long-trajectory agentic search. Each environment provides underspecified tools that models must learn to use effectively to complete the task. Results on OpaqueToolsBench suggest existing methods for automatically documenting tools are expensive and unreliable when tools are opaque. To address this, we propose a simple framework, ToolObserver, that iteratively refines tool documentation by observing execution feedback from tool-calling trajectories. Our approach outperforms existing methods on OpaqueToolsBench across datasets, even in relatively hard settings. Furthermore, for test-time tool exploration settings, our method is also efficient, consuming 3.5-7.5x fewer total tokens than the best baseline.",
+    "published": "Feb 16",
+    "pdf_url": "https://arxiv.org/pdf/2602.15197v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.15197v1",
+    "queried_author": "Jack Hessel",
+    "matching_authors": [
+      "Jack Hessel"
     ]
   },
   {
@@ -12758,22 +12779,6 @@
     "queried_author": "Sewon Min",
     "matching_authors": [
       "Sewon Min"
-    ]
-  },
-  {
-    "title": "FineInstructions: Scaling Synthetic Instructions to Pre-Training Scale",
-    "authors": [
-      "Ajay Patel",
-      "Colin Raffel",
-      "Chris Callison-Burch"
-    ],
-    "summary": "Due to limited supervised training data, large language models (LLMs) are typically pre-trained via a self-supervised \"predict the next word\" objective on a vast amount of unstructured text data. To make the resulting model useful to users, it is further trained on a far smaller amount of \"instruction-tuning\" data comprised of supervised training examples of instructions and responses. To overcome the limited amount of supervised data, we propose a procedure that can transform the knowledge in internet-scale pre-training documents into billions of synthetic instruction and answer training pairs. The resulting dataset, called FineInstructions, uses ~18M instruction templates created from real user-written queries and prompts. These instruction templates are matched to and instantiated with human-written source documents from unstructured pre-training corpora. With \"supervised\" synthetic training data generated at this scale, an LLM can be pre-trained from scratch solely with the instruction-tuning objective, which is far more in-distribution with the expected downstream usage of LLMs (responding to user prompts). We conduct controlled token-for-token training experiments and find pre-training on FineInstructions outperforms standard pre-training and other proposed synthetic pre-training techniques on standard benchmarks measuring free-form response quality. Our resources can be found at https://huggingface.co/fineinstructions .",
-    "published": "Jan 29",
-    "pdf_url": "https://arxiv.org/pdf/2601.22146v3",
-    "arxiv_url": "http://arxiv.org/abs/2601.22146v3",
-    "queried_author": "Colin Raffel",
-    "matching_authors": [
-      "Colin Raffel"
     ]
   }
 ]
