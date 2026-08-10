@@ -1,5 +1,22 @@
 [
   {
+    "title": "Ask-E: An Environment for Calibrated Question Generation",
+    "authors": [
+      "Sarah Pratt",
+      "Jae Sung Park",
+      "Scott Geng",
+      "Ali Farhadi"
+    ],
+    "summary": "Today, we improve models by training and evaluating them on problems at the frontier of their abilities. Creating such problems is itself a demanding task, requiring the ability to probe model limits and generalize beyond existing question distributions. It also means placing problems at a precise difficulty level, which requires understanding what it takes to solve them. In short, generating problems calibrated to a model's current frontier demands capability beyond it, an increasingly burdensome constraint as models improve. Our key insight is that we can leverage this constraint to our advantage: a model that can generate problems consistently calibrated to a given frontier must possess capability beyond it. Accordingly, we present Ask-E, an environment that benchmarks and trains models on their ability to write questions at a given skill level, rather than answer them. Concretely, we define target skill levels as ranges bounded by the capabilities of two existing language models. A generated question is successfully calibrated if exactly one of the two models can solve it, placing it precisely within the target range and differentiating the capabilities of these models. Ask-E serves both as a benchmark and a training environment, where models generate problems calibrated to a variety of skill levels. We find that even frontier models achieve below 50% calibration on the benchmark, leaving significant headroom to measure future progress. We also show that training on this environment leads to improvements across a number of downstream math benchmarks even with no new mat...",
+    "published": "Aug 07",
+    "pdf_url": "https://arxiv.org/pdf/2608.06933v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.06933v1",
+    "queried_author": "Ali Farhadi",
+    "matching_authors": [
+      "Ali Farhadi"
+    ]
+  },
+  {
     "title": "MameLoshnLM: Yiddish Language Model and Evaluation Benchmark",
     "authors": [
       "Uri Katz",
@@ -36,6 +53,22 @@
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "Sharding Prevents LLM Oversight Failures and Adversarial Exploitation",
+    "authors": [
+      "Victor Akinwande",
+      "J. Zico Kolter",
+      "Aran Nayebi"
+    ],
+    "summary": "Giving an LLM judge more compute does not necessarily make it check more requirements. When one call must return many verdicts, some decisions become weakly grounded in the evidence, even when that call receives the same token or tool budget as a panel of separate calls. Across expert-graded research replications, legal work, and clinical-trial assessments, agreement with experts falls as the number of verdicts per call grows. We identify sharding as the intervention that mitigates this failure in model-based oversight. Sharding partitions the requirements into smaller groups, assigns each group to a separate call, and aggregates the verdicts. Against a single call with the panel's full budget, sharding improves agreement while holding the model, evidence, total budget, and per-decision budget fixed. Overall, we find that a sharded weaker judge can outperform a more capable holistic judge and match that judge even when the latter receives the panel's full budget. Additionally, we find that sharding exhibits robustness against adversaries. A best-of-N adversary can hold the underlying work fixed, vary only its presentation, and increase an overloaded judge's acceptance of genuinely unmet criteria severalfold. Wherever sharding reduces baseline error, it removes this adversarial advantage, keeping over-acceptance low even as the adversary's search widens. Sharding does not address attacks that persuade the judge separately on each criterion rather than exploiting overload. In that setting, we find that debate-style opposition on top of sharding withstands such adaptive re-opt...",
+    "published": "Aug 05",
+    "pdf_url": "https://arxiv.org/pdf/2608.06422v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.06422v1",
+    "queried_author": "J Zico Kolter",
+    "matching_authors": [
+      "J Zico Kolter"
     ]
   },
   {
@@ -6721,10 +6754,10 @@
       "Mitchell Gordon",
       "Ashia Wilson"
     ],
-    "summary": "Modern AI assistants are trained to follow instructions, implicitly assuming that users can clearly articulate their goals and the kind of assistance they need. Decades of behavioral research, however, show that people often engage with AI systems before their goals are fully formed. When AI systems treat prompts as complete expressions of intent, they can appear to be useful or convenient, but not necessarily aligned with the users' needs. We call these failures Fantasia interactions. We argue that Fantasia interactions demand a rethinking of alignment research: rather than treating users as rational oracles, AI should provide cognitive support by actively helping users form and refine their intent through time. This requires an interdisciplinary approach that bridges machine learning, interface design, and behavioral science. We synthesize insights from these fields to characterize the mechanisms and failures of Fantasia interactions. We then show why existing interventions are insufficient, and propose a research agenda for designing and evaluating AI systems that better help humans navigate uncertainty in their tasks.",
+    "summary": "In accomplishing complex tasks, human cognition typically progresses from abstract to concrete (e.g., from brainstorming ideas to writing an essay). With the advent of highly capable AI assistants, people now offload various parts of their task to the system. However, instruction-tuned AI systems, even when designed to infer implicit intent, lack an understanding of humans' cognitive processes. When a user approaches AI while their goals and intentions are abstract, AI systems often short circuit their cognitive process through which those goals would be refined by jumping toward a final output (e.g., writing the essay entirely). Doing so takes away the user's agency in achieving the task: they may need to spend more time revising or, worse, settle on a suboptimal outcome. We call these failures Fantasia interactions after the famous Disney scene.\n  We argue that Fantasia interactions demand a rethinking of alignment research, where AI systems optimize how cognitive responsibility is allocated within an interaction. We highlight gaps in state-of-the-art alignment methods, and outline a research agenda for training and evaluating models to achieve this vision.",
     "published": "Apr 23",
-    "pdf_url": "https://arxiv.org/pdf/2604.21827v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.21827v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.21827v2",
+    "arxiv_url": "http://arxiv.org/abs/2604.21827v2",
     "queried_author": "Mitchell Gordon",
     "matching_authors": [
       "Mitchell Gordon"
@@ -8821,8 +8854,8 @@
     ],
     "summary": "AI-mediated communication is increasingly being utilized to help facilitate interactions; however, in privacy sensitive domains, an AI mediator has the additional challenge of considering how to preserve privacy. In these contexts, a mediator may redact or withhold information, raising questions about how users perceive these interventions and whether explanations of system behavior can improve trust. In this work, we investigate how explanations of redaction operations can affect user trust in AI-mediated communication. We devise a scenario where a validated system removes sensitive content from messages and generates explanations of varying detail to communicate its decisions to recipients. We then conduct a user study with $180$ participants that studies how user trust and preferences vary for cases with different amounts of redacted content and different levels of explanation detail. Our results show that participants believed our system was more effective at preserving privacy when explanations were provided ($p<0.05$, Cohen's $d \\approx 0.3$). We also found that contextual factors had an impact; participants relied more on explanations and found them more helpful when the system performed extensive redactions ($p<0.05$, Cohen's $f \\approx 0.2$). We also found that explanation preferences depended on individual differences as well, and factors such as age and baseline familiarity with AI affected user trust in our system. These findings highlight the importance and challenge of balancing transparency and privacy in AI-mediated communications and suggest that adaptive, ...",
     "published": "Mar 25",
-    "pdf_url": "https://arxiv.org/pdf/2603.24735v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.24735v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.24735v2",
+    "arxiv_url": "http://arxiv.org/abs/2603.24735v2",
     "queried_author": "Maarten Sap",
     "matching_authors": [
       "Maarten Sap"
@@ -10762,8 +10795,8 @@
     ],
     "summary": "Inspecting Chain-of-Thought reasoning is among the most common means of understanding why an LLM produced its output. But well-known problems with CoT faithfulness severely limit what insights can be gained from this practice. In this paper, we introduce a training method called Counterfactual Simulation Training (CST), which aims to improve CoT faithfulness by rewarding CoTs that enable a simulator to accurately predict a model's outputs over counterfactual inputs. We apply CST in two settings: (1) CoT monitoring with cue-based counterfactuals, to detect when models rely on spurious features, reward hack, or are sycophantic, and (2) counterfactual simulation over generic model-based counterfactuals, to encourage models to produce more faithful, generalizable reasoning in the CoT. Experiments with models up to 235B parameters show that CST can substantially improve monitor accuracy on cue-based counterfactuals (by 35 accuracy points) as well as simulatability over generic counterfactuals (by 2 points). We further show that: (1) CST outperforms prompting baselines, (2) rewriting unfaithful CoTs with an LLM is 5x more efficient than RL alone, (3) faithfulness improvements do not generalize to dissuading cues (as opposed to persuading cues), and (4) larger models do not show more faithful CoT out of the box, but they do benefit more from CST. These results suggest that CST can improve CoT faithfulness in general, with promising applications for CoT monitoring. Code for experiments in this paper is available at https://github.com/peterbhase/counterfactual-simulation-training",
     "published": "Feb 24",
-    "pdf_url": "https://arxiv.org/pdf/2602.20710v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.20710v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.20710v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.20710v2",
     "queried_author": "Christopher Potts",
     "matching_authors": [
       "Christopher Potts"
@@ -12725,60 +12758,6 @@
     "queried_author": "Ethan Perez",
     "matching_authors": [
       "Ethan Perez"
-    ]
-  },
-  {
-    "title": "Golden Goose: A Simple Trick to Synthesize Unlimited RLVR Tasks from Unverifiable Internet Text",
-    "authors": [
-      "Ximing Lu",
-      "David Acuna",
-      "Jaehun Jung",
-      "Jian Hu",
-      "Di Zhang",
-      "Shizhe Diao",
-      "Yunheng Zou",
-      "Shaokun Zhang",
-      "Brandon Cui",
-      "Mingjie Liu",
-      "Hyunwoo Kim",
-      "Prithviraj Ammanabrolu",
-      "Jan Kautz",
-      "Yi Dong",
-      "Yejin Choi"
-    ],
-    "summary": "Reinforcement Learning with Verifiable Rewards (RLVR) has become a cornerstone for unlocking complex reasoning in Large Language Models (LLMs). Yet, scaling up RL is bottlenecked by limited existing verifiable data, where improvements increasingly saturate over prolonged training. To overcome this, we propose Golden Goose, a simple trick to synthesize unlimited RLVR tasks from unverifiable internet text by constructing a multiple-choice question-answering version of the fill-in-the-middle task. Given a source text, we prompt an LLM to identify and mask key reasoning steps, then generate a set of diverse, plausible distractors. This enables us to leverage reasoning-rich unverifiable corpora typically excluded from prior RLVR data construction (e.g., science textbooks) to synthesize GooseReason-0.7M, a large-scale RLVR dataset with over 0.7 million tasks spanning mathematics, programming, and general scientific domains. Empirically, GooseReason effectively revives models saturated on existing RLVR data, yielding robust, sustained gains under continuous RL and achieving new state-of-the-art results for 1.5B and 4B-Instruct models across 15 diverse benchmarks. Finally, we deploy Golden Goose in a real-world setting, synthesizing RLVR tasks from raw FineWeb scrapes for the cybersecurity domain, where no prior RLVR data exists. Training Qwen3-4B-Instruct on the resulting data GooseReason-Cyber sets a new state-of-the-art in cybersecurity, surpassing a 7B domain-specialized model with extensive domain-specific pre-training and post-training. This highlights the potential of automa...",
-    "published": "Jan 30",
-    "pdf_url": "https://arxiv.org/pdf/2601.22975v2",
-    "arxiv_url": "http://arxiv.org/abs/2601.22975v2",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Residual Context Diffusion Language Models",
-    "authors": [
-      "Yuezhou Hu",
-      "Harman Singh",
-      "Monishwaran Maheswaran",
-      "Haocheng Xi",
-      "Coleman Hooper",
-      "Jintao Zhang",
-      "Aditya Tomar",
-      "Michael W. Mahoney",
-      "Sewon Min",
-      "Mehrdad Farajtabar",
-      "Kurt Keutzer",
-      "Amir Gholami",
-      "Chenfeng Xu"
-    ],
-    "summary": "Diffusion Large Language Models (dLLMs) have emerged as a promising alternative to purely autoregressive language models because they can decode multiple tokens in parallel. However, state-of-the-art block-wise dLLMs rely on a \"remasking\" mechanism that decodes only the most confident tokens and discards the rest, effectively wasting computation. We demonstrate that recycling computation from the discarded tokens is beneficial, as these tokens retain contextual information useful for subsequent decoding iterations. In light of this, we propose Residual Context Diffusion (RCD), a module that converts these discarded token representations into contextual residuals and injects them back for the next denoising step. RCD uses a decoupled two-stage training pipeline to bypass the memory bottlenecks associated with backpropagation. We validate our method on both long CoT reasoning (SDAR) and short CoT instruction following (LLaDA) models. We demonstrate that a standard dLLM can be efficiently converted to the RCD paradigm with merely ~300 million tokens. RCD consistently improves frontier dLLMs by 4-11 percentage points in accuracy with minimal extra computation overhead across a wide range of benchmarks. Notably, on the most challenging AIME tasks, RCD nearly doubles baseline accuracy and attains up to 4-5x fewer denoising steps at baseline's peak accuracy.",
-    "published": "Jan 30",
-    "pdf_url": "https://arxiv.org/pdf/2601.22954v2",
-    "arxiv_url": "http://arxiv.org/abs/2601.22954v2",
-    "queried_author": "Sewon Min",
-    "matching_authors": [
-      "Sewon Min"
     ]
   }
 ]
