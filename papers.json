@@ -1,5 +1,92 @@
 [
   {
+    "title": "Matryoshka Language Model Suites",
+    "authors": [
+      "Nathan Godey",
+      "Yoav Artzi"
+    ],
+    "summary": "Training a language model suite classically requires training each model separately and serving them independently. We improve both training and inference efficiency by stacking sub-models of increasing size into a single nested architecture trained end-to-end. This Matryoshka training framework reduces the total parameter count of the suite, enables low-cost distillation from the largest to all smaller sub-models at every training step, and is well-suited for speculative decoding as the draft model is contained within the verifier. We validate our approach by training a Matryoshka suite comprising 500M, 1.5B, and 3B sub-models. Our suite is on par with independently trained baselines on benchmark performance and validation and out-of-domain perplexities, while using 36% less training compute and improving the throughput of speculative decoding by 14-26%. We also ablate key architectural choices, offering guidance for building strong Matryoshka LM suites.",
+    "published": "Aug 10",
+    "pdf_url": "https://arxiv.org/pdf/2608.09703v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.09703v1",
+    "queried_author": "Yoav Artzi",
+    "matching_authors": [
+      "Yoav Artzi"
+    ]
+  },
+  {
+    "title": "Carnot: Interpretable, Interactive, and Optimized Execution of Deep Research Queries",
+    "authors": [
+      "Matthew Russo",
+      "Yash Agarwal",
+      "Tianyu Li",
+      "Zhuohan Gu",
+      "Michael Cafarella",
+      "Omar Khattab",
+      "Tim Kraska",
+      "Samuel Madden"
+    ],
+    "summary": "Enterprises increasingly seek to query data lakes using natural language via AI-driven tools like semantic operators or deep research agents. However, the latter operates as an opaque black box, hiding its intermediate reasoning and data retrieval steps, and failing to expose controls for managing API costs and execution latency. Meanwhile, the former can be prohibitively expensive for enterprise-scale data lakes. Consequently, analysts using these systems lack the agency to intercept hallucinated premises, verify intermediate results, or correct the system's trajectory. We present Carnot, an interactive execution engine for AI-driven analytics. Carnot compiles natural language requests into physical execution graphs and surfaces them through an interactive notebook interface. Rather than waiting blindly for a final output, users can critique the plan, incrementally execute operators, inspect intermediate data, or directly edit the underlying code or semantic operator instructions. Carnot's query optimizer will optimize the query with respect to cost or latency constraints provided by the user. Our demo will showcase how Carnot helps users achieve efficient and verifiable insights on workloads motivated by real enterprise use cases.",
+    "published": "Aug 10",
+    "pdf_url": "https://arxiv.org/pdf/2608.09532v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.09532v1",
+    "queried_author": "Omar Khattab",
+    "matching_authors": [
+      "Omar Khattab"
+    ]
+  },
+  {
+    "title": "Social Gym and SPaRTan: Benchmarking and Improving LLM Social Reasoning via Multi-Agent Game Tournaments",
+    "authors": [
+      "Keyu He",
+      "Xuhui Zhou",
+      "Maarten Sap"
+    ],
+    "summary": "LLM agents are increasingly deployed in multi-agent social settings where they must cooperate, negotiate, and adapt to other agents. Measuring and improving these social skills is hard because, unlike math or logic, social interaction offers no objective ground truth: evaluations fall back on LLM judges, which are costly, subjective, and noisy, and models get no reliable signal to learn from. To address both, we first introduce Social Gym, an environment of 21 multi-agent social games (e.g., Werewolves, Resistance, Spyfall) whose rule-decided outcomes make agent performance verifiable and objective, with an Elo tournament that produces a cross-game leaderboard. Benchmarking experiments show that while GPT-5-mini tops the leaderboard, no model excels at all games uniformly or in all game roles, pointing to limitations of social reasoning. Motivated by this, we additionally propose SPaRTan (Self-Play and Reflect-Transfer), a training-free self-improvement loop: a model plays a game, reflects on its trajectories and their outcomes to produce a transferable playbook, and applies that playbook in subsequent games. Our results show that SPaRTan playbooks help GPT-5-mini agents level their performance on weaker roles, but largely do not improve Qwen3-32B's performance. Together, Social Gym and SPaRTan offer a reproducible, verifiable foundation for measuring and improving LLM social reasoning without weight updates.",
+    "published": "Aug 10",
+    "pdf_url": "https://arxiv.org/pdf/2608.09128v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.09128v1",
+    "queried_author": "Maarten Sap",
+    "matching_authors": [
+      "Maarten Sap"
+    ]
+  },
+  {
+    "title": "Thought-Level Beam Search for Reasoning",
+    "authors": [
+      "Lijie Yang",
+      "Hongyin Luo",
+      "Tri Dao",
+      "Ravi Netravali"
+    ],
+    "summary": "Test-time compute scaling is a primary driver of performance in large reasoning models (LRMs), but extreme inefficiency bounds current approaches, shifting the critical question from \\emph{how much} compute to spend, to \\emph{where} to allocate it. We formalize test-time reasoning as a constrained compute allocation problem over partial trajectories. Under a fixed hardware budget, existing paradigms fail to actively allocate the compute to the most promising partial progress: traditional parallel sampling treats traces independently and induces severe memory bottlenecks, while subtractive pruning starves hardware and fails to actively and sufficiently shift the output distribution. To overcome this dichotomy, we introduce Gambit, an inference algorithm that executes \\emph{thought-level beam search}. By periodically pruning unpromising trajectories and immediately branching from high-quality prefixes, Gambit dynamically concentrates compute onto the most promising reasoning traces via a light-weight scorer probing hidden states while maintaining continuous high hardware utilization. Extensive evaluations across multiple models and benchmarks demonstrate that Gambit strictly dominates existing baselines. Under identical hardware constraints, our method yields up to a +6.7\\% absolute accuracy gain on HMMT-24 and +3.3\\% on AIME-25 over pruning baselines, delivers $>2\\times$ higher throughput on trace completion, and reduces total token consumption by up to 68.5\\% relative to standard parallel sampling.",
+    "published": "Aug 08",
+    "pdf_url": "https://arxiv.org/pdf/2608.08020v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.08020v1",
+    "queried_author": "Tri Dao",
+    "matching_authors": [
+      "Tri Dao"
+    ]
+  },
+  {
+    "title": "Vision-Language Grounding as Bidirectional Concept Correspondence",
+    "authors": [
+      "Jieyu Zhang",
+      "Ziqi Gao",
+      "Luke Zettlemoyer",
+      "Ranjay Krishna"
+    ],
+    "summary": "Vision-language grounding connects language to visual content, yet most existing formulations reduce grounding to a unidirectional localization problem: given a prespecified text phrase or category name, identify the corresponding image region. This setup assumes that the relevant linguistic unit is already known, overlooking a more basic challenge in grounded communication: determining which parts of the text are visually referential and how they correspond to entities in the image. We formulate grounding as $\\textit{bidirectional concept correspondence}$ over an image-text pair. Given an image and its paired text, the goal is to recover all correspondences between visually referential text spans and instance-level image segments, without assuming that the relevant text spans are provided. This formulation unifies common grounding tasks, including phrase grounding, referring expression grounding, and open-vocabulary detection, by treating text segmentation, image segmentation, and cross-modal alignment as a single correspondence prediction problem. To address this task, we introduce $\\textbf{ConCor-1}$, a grounding model built on top of a pretrained vision-language model. It uses learnable $\\textit{bridge tokens}$ to represent candidate image-text correspondences and predicts, for each token, a text mask, an image mask, and a correspondence presence score. To train and evaluate this task, we convert diverse grounding and segmentation datasets into a unified correspondence format. Experiments show that $\\textbf{ConCor-1}$ consistently outperforms baselines, improving corres...",
+    "published": "Aug 08",
+    "pdf_url": "https://arxiv.org/pdf/2608.07886v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.07886v1",
+    "queried_author": "Luke Zettlemoyer",
+    "matching_authors": [
+      "Luke Zettlemoyer",
+      "Ranjay Krishna"
+    ]
+  },
+  {
     "title": "Ask-E: An Environment for Calibrated Question Generation",
     "authors": [
       "Sarah Pratt",
@@ -575,8 +662,8 @@
     ],
     "summary": "Reinforcement learning (RL) has become central to improving large language models (LLMs) on complex reasoning tasks, yet RL post-training is largely studied in isolation from the pretraining that precedes it. As a result, two basic questions remain open: (1) how do pretraining choices (model size, data) shape the returns to RL compute, and (2) what does RL actually do to the model? These questions are difficult to study in the standard LLM setting: pretraining corpora are vast and uncontrolled, making it hard to attribute behaviors to pretraining versus RL, and systematic compute sweeps across both stages are prohibitively expensive. To address these challenges, we use chess as a controlled testbed for studying reasoning across the full pretraining-to-post-training pipeline. We follow the standard LLM training pipeline by pretraining language models from 5M to 1B parameters on human chess games, supervised fine-tuning on synthetic reasoning traces, and running RL on chess puzzles with verifiable rewards. Using this framework, we find that the post-RL performance at given RL compute level is well-predicted from the pretraining loss, and slope of the RL reward curves improves approximately linearly with the pretraining tokens. Beyond scaling, we find that RL does not simply sharpen the SFT policy: on easy puzzles it amplifies correct moves the SFT policy already preferred, while on hard puzzles it surfaces correct moves that were nearly absent under SFT. We further test whether our findings transfer beyond chess by training a 1B language model on math-domain text, where the s...",
     "published": "Jul 17",
-    "pdf_url": "https://arxiv.org/pdf/2607.16097v1",
-    "arxiv_url": "http://arxiv.org/abs/2607.16097v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.16097v2",
+    "arxiv_url": "http://arxiv.org/abs/2607.16097v2",
     "queried_author": "Micah Goldblum",
     "matching_authors": [
       "Micah Goldblum",
@@ -921,8 +1008,8 @@
     ],
     "summary": "Reinforcement learning (RL) for non-verifiable instruction following increasingly relies on LLM judges with prompt-specific rubrics as reward signals. While recent methods adapt these rubrics to the evolving policy during training, the training prompts themselves remain static, drawn from fixed corpora. This static approach often results in a critical misalignment between prompt difficulty and policy capability, leaving the judge unable to recover a discriminative reward signal when prompts fail to elicit quality variance among rollouts. To address this misalignment, we introduce LLM-as-a-Tutor, a framework that extends the LLM's role from judge to tutor: a single model serves as an examiner that pairwise-compares policy rollouts to detect non-challenging prompts, and as a generator that appends atomic constraints to them. This append-only design monotonically raises difficulty in step with the policy's capability, producing a self-calibrating training signal without external difficulty schedules. On three complex instruction-following benchmarks, our method consistently outperforms both policy-unaware baselines and prior policy-adaptive methods that adapt rubrics or rewrite prompts, suggesting prompt adaptation as a missing axis of policy-awareness in non-verifiable RL.",
     "published": "Jul 05",
-    "pdf_url": "https://arxiv.org/pdf/2607.04412v1",
-    "arxiv_url": "http://arxiv.org/abs/2607.04412v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.04412v2",
+    "arxiv_url": "http://arxiv.org/abs/2607.04412v2",
     "queried_author": "Seungone Kim",
     "matching_authors": [
       "Seungone Kim"
@@ -1447,8 +1534,8 @@
     ],
     "summary": "Building performant Vision-Language Models (VLMs) requires carefully curating large-scale training datasets, yet the community lacks systematic benchmarks for evaluating such curation strategies. We introduce DataComp for VLMs (DCVLM), a benchmark for controlled data-centric experiments to improve VLM training. As part of DCVLM, we collect 160 datasets spanning four data types -- image-caption pairs, multimodal interleaved documents, text-only, and instruction-tuning data -- into a corpus of 6T multimodal tokens. DCVLM allows participants to test curation strategies (filtering, mixing, formatting, sampling) across 1B-8B models and 6.25B-200B token budgets. Models are then evaluated on a carefully selected suite of up to 52 downstream benchmarks across 9 domains. We conduct extensive experiments on DCVLM and find that data mixing, not filtering, is key to a high-quality training dataset: instruction-heavy mixtures scale better than caption-heavy ones, with gains widening at larger scales. The resulting dataset, DCVLM-Baseline, enables training an 8B VLM to 63.6% accuracy on our 33-task core suite with 200B training tokens. Compared to FineVision, the state-of-the-art open VLM training dataset, this represents an improvement of +5.4pp. DCVLM and all accompanying artifacts will be made publicly available at https://www.datacomp.ai/dcvlm/.",
     "published": "Jun 26",
-    "pdf_url": "https://arxiv.org/pdf/2606.28551v2",
-    "arxiv_url": "http://arxiv.org/abs/2606.28551v2",
+    "pdf_url": "https://arxiv.org/pdf/2606.28551v3",
+    "arxiv_url": "http://arxiv.org/abs/2606.28551v3",
     "queried_author": "Ludwig Schmidt",
     "matching_authors": [
       "Ludwig Schmidt"
@@ -4361,8 +4448,8 @@
     ],
     "summary": "Long chains of thought (CoT) from current language models frequently contain logical gaps and unjustified leaps, limiting the gains from additional test-time compute. Improving reasoning quality directly would require process reward models, but the step-level annotations needed to train them are expensive and scarce. We find such a signal in how the model's confidence evolves during reasoning: premature confidence, the tendency to commit to an answer early and use the remaining tokens to rationalize it, strongly predicts flawed reasoning across tasks and model scales. We exploit this in progressive confidence shaping, a reinforcement learning objective that trains models to update their confidence as they reason rather than commit early -- rewarding gradual confidence growth and penalizing early commitment, with no external labels or reward models. The method improves accuracy and reasoning quality from 1.5B to 8B parameters across arithmetic (Countdown), math (DAPO, AIME), and science (ScienceQA): on Countdown, accuracy improves 3.2x (+42.0pp) and flawed reasoning drops 48pp; on AIME, Pass@64 improves 6.6pp. Consistent with this mechanism, the method also improves faithfulness: on a safety benchmark, our models more transparently surface misleading content in their reasoning traces rather than concealing it. Controlled experiments reveal that the problem and its remedy scale together: premature confidence grows with model size and task difficulty, and so do the gains from addressing it.",
     "published": "May 23",
-    "pdf_url": "https://arxiv.org/pdf/2605.24396v1",
-    "arxiv_url": "http://arxiv.org/abs/2605.24396v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.24396v2",
+    "arxiv_url": "http://arxiv.org/abs/2605.24396v2",
     "queried_author": "J Zico Kolter",
     "matching_authors": [
       "J Zico Kolter",
@@ -5015,8 +5102,8 @@
     ],
     "summary": "Distillation enables compact Vision-Language Models (VLMs) to obtain strong reasoning capabilities, yet the prompts driving this process are typically chosen via simple heuristics or aggregated from off-the-shelf datasets. We reveal a critical inefficiency in this approach: up to 69% of the prompts in standard chart / document reasoning datasets are effectively zero-delta, meaning the teacher and student already induce the exact same answer distribution. Training on these prompts provides minimal learning signal, causing student improvement to rapidly saturate regardless of data scale. To escape the zero-delta trap, we return to first principles: distillation fundamentally minimizes distributional divergence, and thus a prompt is valuable only if it exposes a functional capability gap between the teacher and student. We quantify this gap through answer divergence ($\u0394$), demonstrating that non-zero divergence is critical for effective scaling. Building on this insight, we propose a staged synthesis pipeline that repurposes existing datasets as seeds, actively targeting student failure modes to produce better prompts. The result is DeltaPrompts, a diverse dataset of 200k synthetic, high-divergence reasoning problems. We evaluate DeltaPrompts across three distinct settings: on-policy distillation with the target teacher-student pair, transfer to a novel model family without regenerating the data, and off-policy fine-tuning of a non-reasoning model. Across all scenarios, DeltaPrompts drives substantial gains, yielding up to 15% relative improvement even on top of a highly-optim...",
     "published": "May 15",
-    "pdf_url": "https://arxiv.org/pdf/2605.15532v2",
-    "arxiv_url": "http://arxiv.org/abs/2605.15532v2",
+    "pdf_url": "https://arxiv.org/pdf/2605.15532v3",
+    "arxiv_url": "http://arxiv.org/abs/2605.15532v3",
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
@@ -5285,8 +5372,8 @@
     ],
     "summary": "How can we train models whose post-trained capabilities survive subsequent fine-tuning? Rather than focusing on downstream interventions to mitigate forgetting of upstream capabilities, we study how upstream training choices - that is, the manner in which a capability is acquired - shape how robustly that capability is retained. We investigate this question in a controlled three-stage language-model pipeline: pretraining, post-training to acquire a target capability, and downstream fine-tuning on a new objective. Across 135M and 1B models, two post-training domains, and two downstream fine-tuning tasks, we find that immediate post-training performance does not reliably predict retention after subsequent fine-tuning: training recipes that look equivalent immediately after post-training can retain the target capability very differently after subsequent fine-tuning. In particular, early exposure - mixing post-training data into pretraining - consistently improves the frontier between retained upstream performance and downstream performance. In compute-matched experiments, where the target data must be allocated between pretraining and post-training, we find that the optimum lies at neither extreme. Together with our other empirical and theoretical findings, this supports the view that post-training drives immediate specialization while early exposure improves robustness to later forgetting. Replay and dropout, typically used to mitigate forgetting as it occurs during fine-tuning, provide complementary gains to early exposure when applied during post-training. Our findings sugg...",
     "published": "May 12",
-    "pdf_url": "https://arxiv.org/pdf/2605.12705v1",
-    "arxiv_url": "http://arxiv.org/abs/2605.12705v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.12705v2",
+    "arxiv_url": "http://arxiv.org/abs/2605.12705v2",
     "queried_author": "Aditi Raghunathan",
     "matching_authors": [
       "Aditi Raghunathan"
@@ -6864,10 +6951,10 @@
       "Brando Miranda",
       "Sanmi Koyejo"
     ],
-    "summary": "LLM fairness should be evaluated through in-situ conversational behavior rather than standardized-test Q&A benchmarks. We show that the standardized-test paradigm can be structurally unreliable: surface-level prompt construction choices, although entirely orthogonal to the fairness question being tested, account for the majority of score variance, shift fairness conclusions in both the direction and the magnitude, and result in severe discordance in model rankings. We develop MAC-Fairness, a multi-agent conversational framework that embeds controlled variation factors into multi-round dialogue for in-situ behavior evaluation, examining how models' conversational behavior shifts when identity is varied as part of natural multi-agent interaction. Repurposing standardized-test questions as conversation seeds rather than as the evaluation instrument, we evaluate position persistence (how they hold positions, from the self-perspective) and peer receptiveness (how receptive they are to peers, from the other-perspective) across 8 million conversation transcripts spanning multiple models and identity presence configurations. In-situ behavioral evaluation reveals stable, model-specific behavioral signatures that could generalize across benchmarks differing in fairness targets and evaluation methodologies, a form of evidence the standardized-test paradigm does not offer.",
+    "summary": "LLM fairness should be evaluated through in-situ behavioral pattern rather than standardized-test Q&A benchmarks. We show that the standardized-test paradigm can be structurally unreliable: surface-level prompt construction choices, although entirely orthogonal to the fairness question being tested, account for the majority of score variance, shift fairness conclusions in both the direction and the magnitude, and result in severe discordance in model rankings. We develop MAC-Fairness, a framework that embeds controlled variation factors into in-situ behavioral evaluation, examining how models' disparate-treatment behaviors shift when identity is varied as part of natural multi-agent conversation. Repurposing standardized-test questions as conversation seeds rather than as the evaluation instrument, we evaluate within-model differences in position persistence (how they hold positions, from the self-perspective) and peer receptiveness (how receptive they are to peers, from the other-perspective) across 8 million conversation transcripts spanning multiple models and identity presence configurations. In-situ behavioral evaluation reveals stable, model-specific, disparate-treatment behavioral signatures that could generalize across different fairness benchmarks, a form of evidence the standardized-test paradigm does not offer.",
     "published": "Apr 21",
-    "pdf_url": "https://arxiv.org/pdf/2605.12530v1",
-    "arxiv_url": "http://arxiv.org/abs/2605.12530v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.12530v2",
+    "arxiv_url": "http://arxiv.org/abs/2605.12530v2",
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
@@ -8466,10 +8553,10 @@
       "Lonneke van der Plas",
       "Roger E. Beaty"
     ],
-    "summary": "Creative thinking is a fundamental aspect of human cognition, and divergent thinking-the capacity to generate novel and varied ideas-is widely regarded as its core generative engine. Large language models (LLMs) have recently demonstrated impressive performance on divergent thinking tests and prior work has shown that models with higher task performance tend to be more aligned to human brain activity. However, existing brain-LLM alignment studies have focused on passive, non-creative tasks. Here, we explore brain alignment during creative thinking using fMRI data from 170 participants performing the Alternate Uses Task (AUT). We extract representations from LLMs varying in size (270M-72B) and measure alignment to brain responses via Representational Similarity Analysis (RSA), targeting the creativity-related default mode and frontoparietal networks. We find that brain-LLM alignment scales with model size (default mode network only) and idea originality (both networks), with effects strongest early in the creative process. We further show that post-training objectives shape alignment in functionally selective ways: a creativity-optimized \\texttt{Llama-3.1-8B-Instruct} preserves alignment with high-creativity neural responses while reducing alignment with low-creativity ones; a human behavior fine-tuned model elevates alignment with both; and a reasoning-trained variant shows the opposite pattern, suggesting chain-of-thought training steers representations away from creative neural geometry toward analytical processing. These results demonstrate that post-training objectives ...",
+    "summary": "Creative thinking is a fundamental aspect of human cognition, and divergent thinking-the capacity to generate novel and varied ideas-is widely regarded as its core generative engine. Large language models (LLMs) have recently demonstrated impressive performance on divergent thinking tests and prior work has shown that models with higher task performance tend to be more aligned to human brain activity. However, existing brain-LLM alignment studies have focused on passive, non-creative tasks. Here, we explore brain alignment during creative thinking using fMRI data from 170 participants performing the Alternate Uses Task (AUT). We extract representations from LLMs varying in size (270M-72B) and measure alignment to brain responses via Representational Similarity Analysis (RSA), targeting the creativity-related default mode and frontoparietal networks. We find that brain-LLM alignment is positively associated with model size (default mode network only) and with idea originality (both networks), with these relationships clearest early in the creative process. We further find that post-training objectives are associated with functionally selective differences in alignment: a creativity-optimized Llama-3.1-8B-Instruct retains alignment with high-creativity neural responses while lacking the positive low-creativity alignment present in other variants, but a reasoning-trained variant shows the opposite asymmetry, with negative alignment to high-creativity responses. Together, these results suggest that brain alignment offers an informative lens on how post-training relates to the n...",
     "published": "Apr 03",
-    "pdf_url": "https://arxiv.org/pdf/2604.03480v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.03480v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.03480v2",
+    "arxiv_url": "http://arxiv.org/abs/2604.03480v2",
     "queried_author": "Antoine Bosselut",
     "matching_authors": [
       "Antoine Bosselut"
@@ -8523,10 +8610,10 @@
       "Lonneke van der Plas",
       "Antoine Bosselut"
     ],
-    "summary": "Creative problem-solving requires combining multiple cognitive abilities, including logical reasoning, lateral thinking, analogy-making, and commonsense knowledge, to discover insights that connect seemingly unrelated pieces of information. However, most existing benchmarks for large language models (LLMs) evaluate only specific components of this process. Moreover, many creativity-oriented benchmarks rely on artificially constructed brainteasers or contrived scenarios that do not reflect how creative problem-solving occurs in real-world settings. To address this gap, we introduce CresOWLve, a benchmark for evaluating creative problem-solving using puzzles grounded in real-world knowledge. Problems in CresOWLve require employing multiple creative thinking strategies, retrieving facts from diverse domains, and creatively combining them to arrive at a solution. Evaluating several frontier non-thinking and thinking LLMs, we show that CresOWLve remains highly challenging. Our analysis reveals a consistent performance gap: models perform substantially better on factual questions than on creative ones (up to a -17% drop). While models can often retrieve the relevant knowledge, they struggle to form the non-obvious creative connections required to integrate this information and arrive at the correct answer.",
+    "summary": "Creative problem-solving requires combining multiple cognitive abilities, including logical reasoning, lateral thinking, analogy-making, and commonsense knowledge, to discover insights that connect seemingly unrelated pieces of information. However, most existing benchmarks for large language models (LLMs) evaluate only specific components of this process. Moreover, many creativity-oriented benchmarks rely on artificially constructed brainteasers or contrived scenarios that do not reflect how creative problem-solving occurs in real-world settings. To address this gap, we introduce CresOWLve (containing 2,061 examples across five difficulty levels), a benchmark for evaluating creative problem-solving using puzzles grounded in real-world knowledge. Problems in CresOWLve require employing multiple creative thinking strategies, retrieving facts from diverse domains, and creatively combining them to arrive at a solution. Evaluating several frontier non-thinking and thinking LLMs, we show that CresOWLve remains highly challenging. Our analysis reveals a consistent performance gap: models perform substantially better on factual questions than on creative ones (up to -17% drop). While models can often retrieve the relevant knowledge, they struggle to form the non-obvious creative connections required to integrate the knowledge and arrive at the correct answer.",
     "published": "Apr 03",
-    "pdf_url": "https://arxiv.org/pdf/2604.03374v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.03374v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.03374v2",
+    "arxiv_url": "http://arxiv.org/abs/2604.03374v2",
     "queried_author": "Antoine Bosselut",
     "matching_authors": [
       "Antoine Bosselut"
@@ -12644,120 +12731,6 @@
     "queried_author": "Phillip Isola",
     "matching_authors": [
       "Phillip Isola"
-    ]
-  },
-  {
-    "title": "SWE-Universe: Scale Real-World Verifiable Environments to Millions",
-    "authors": [
-      "Mouxiang Chen",
-      "Lei Zhang",
-      "Yunlong Feng",
-      "Xuwu Wang",
-      "Wenting Zhao",
-      "Ruisheng Cao",
-      "Jiaxi Yang",
-      "Jiawei Chen",
-      "Mingze Li",
-      "Zeyao Ma",
-      "Hao Ge",
-      "Zongmeng Zhang",
-      "Zeyu Cui",
-      "Dayiheng Liu",
-      "Jingren Zhou",
-      "Jianling Sun",
-      "Junyang Lin",
-      "Binyuan Hui"
-    ],
-    "summary": "We propose SWE-Universe, a scalable and efficient framework for automatically constructing real-world software engineering (SWE) verifiable environments from GitHub pull requests (PRs). To overcome the prevalent challenges of automatic building, such as low production yield, weak verifiers, and prohibitive cost, our framework utilizes a building agent powered by an efficient custom-trained model. This agent employs iterative self-verification and in-loop hacking detection to ensure the reliable generation of high-fidelity, verifiable tasks. Using this method, we scale the number of real-world multilingual SWE environments to a million scale (807,693). We demonstrate the profound value of our environments through large-scale agentic mid-training and reinforcement learning. Finally, we applied this technique to Qwen3-Max-Thinking and achieved a score of 75.3% on SWE-Bench Verified. Our work provides both a critical resource and a robust methodology to advance the next generation of coding agents.",
-    "published": "Feb 02",
-    "pdf_url": "https://arxiv.org/pdf/2602.02361v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.02361v1",
-    "queried_author": "Wenting Zhao",
-    "matching_authors": [
-      "Wenting Zhao"
-    ]
-  },
-  {
-    "title": "The Shape of Beliefs: Geometry, Dynamics, and Interventions along Representation Manifolds of Language Models' Posteriors",
-    "authors": [
-      "Rapha\u00ebl Sarfati",
-      "Eric Bigelow",
-      "Daniel Wurgaft",
-      "Siddharth Boppana",
-      "Jack Merullo",
-      "Atticus Geiger",
-      "Owen Lewis",
-      "Tom McGrath",
-      "Ekdeep Singh Lubana"
-    ],
-    "summary": "Large language models (LLMs) form implicit beliefs (posteriors over latent variables) from prompts, but we lack a mechanistic account of how these beliefs are encoded in representation space, how they update with new evidence, and how interventions reshape them. We study a controlled setting in which Llama-3.2 infers the parameters of a normal distribution from in-context samples. We show that parameter posteriors are encoded as curved manifolds in representation space, and trace how they evolve along the prompt. Standard linear steering moves representations off-manifold, inducing unintended, coupled changes, whereas geometry-aware methods preserve the target belief family. Our work demonstrates an example of linear field probing (LFP) as a principled approach to tile the data manifold and make interventions that respect the underlying geometry. Our results suggest that LLM beliefs are inherently geometric objects, and that globally linear representations are often inadequate abstractions.",
-    "published": "Feb 02",
-    "pdf_url": "https://arxiv.org/pdf/2602.02315v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.02315v2",
-    "queried_author": "Jack Merullo",
-    "matching_authors": [
-      "Jack Merullo"
-    ]
-  },
-  {
-    "title": "Physiology as Language: Translating Respiration to Sleep EEG",
-    "authors": [
-      "Kaiwen Zha",
-      "Chao Li",
-      "Hao He",
-      "Peng Cao",
-      "Tianhong Li",
-      "Ali Mirzazadeh",
-      "Ellen Zhang",
-      "Jong Woo Lee",
-      "Yoon Kim",
-      "Dina Katabi"
-    ],
-    "summary": "This paper introduces a novel cross-physiology translation task: synthesizing sleep electroencephalography (EEG) from respiration signals. To address the significant complexity gap between the two modalities, we propose a waveform-conditional generative framework that preserves fine-grained respiratory dynamics while constraining the EEG target space through discrete tokenization. Trained on over 28,000 individuals, our model achieves a 7% Mean Absolute Error in EEG spectrogram reconstruction. Beyond reconstruction, the synthesized EEG supports downstream tasks with performance comparable to ground truth EEG on age estimation (MAE 5.0 vs. 5.1 years), sex detection (AUROC 0.81 vs. 0.82), and sleep staging (Accuracy 0.84 vs. 0.88), significantly outperforming baselines trained directly on breathing. Finally, we demonstrate that the framework generalizes to contactless sensing by synthesizing EEG from wireless radio-frequency reflections, highlighting the feasibility of remote, non-contact neurological assessment during sleep.",
-    "published": "Jan 31",
-    "pdf_url": "https://arxiv.org/pdf/2602.00526v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.00526v1",
-    "queried_author": "Yoon Kim",
-    "matching_authors": [
-      "Yoon Kim"
-    ]
-  },
-  {
-    "title": "Are you going to finish that? A Practical Study of the Partial Token Problem",
-    "authors": [
-      "Hao Xu",
-      "Alisa Liu",
-      "Jonathan Hayase",
-      "Yejin Choi",
-      "Noah A. Smith"
-    ],
-    "summary": "Language models (LMs) are trained over sequences of tokens, whereas users interact with LMs via text. This mismatch gives rise to the partial token problem, which occurs when a user ends their prompt in the middle of the expected next-token, leading to distorted next-token predictions. Although this issue has been studied using arbitrary character prefixes, its prevalence and severity in realistic prompts respecting word boundaries remains underexplored. In this work, we identify three domains where token and \"word\" boundaries often do not line up: languages that do not use whitespace, highly compounding languages, and code. In Chinese, for example, up to 25% of word boundaries do not line up with token boundaries, making even natural, word-complete prompts susceptible to this problem. We systematically construct semantically natural prompts ending with a partial tokens; in experiments, we find that they comprise a serious failure mode: frontier LMs consistently place three orders of magnitude less probability on the correct continuation compared to when the prompt is \"backed-off\" to be token-aligned. This degradation does not diminish with scale and often worsens for larger models. Finally, we evaluate inference-time mitigations to the partial token problem and validate the effectiveness of recent exact solutions. Overall, we demonstrate the scale and severity of probability distortion caused by tokenization in realistic use cases, and provide practical recommentions for model inference providers.",
-    "published": "Jan 30",
-    "pdf_url": "https://arxiv.org/pdf/2601.23223v2",
-    "arxiv_url": "http://arxiv.org/abs/2601.23223v2",
-    "queried_author": "Alisa Liu",
-    "matching_authors": [
-      "Alisa Liu",
-      "Noah A. Smith",
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "The Hot Mess of AI: How Does Misalignment Scale With Model Intelligence and Task Complexity?",
-    "authors": [
-      "Alexander H\u00e4gele",
-      "Aryo Pradipta Gema",
-      "Henry Sleight",
-      "Ethan Perez",
-      "Jascha Sohl-Dickstein"
-    ],
-    "summary": "As AI becomes more capable, we entrust it with more general and consequential tasks. The risks from failure grow more severe with increasing task scope. It is therefore important to understand how extremely capable AI models will fail: Will they fail by systematically pursuing goals we do not intend? Or will they fail by being a hot mess, and taking nonsensical actions that do not further any goal? We operationalize this question using a bias-variance decomposition of the errors made by AI models: An AI's \\emph{error-incoherence} on a task is measured over test-time randomness as the fraction of its error that stems from variance rather than bias in task outcome. Across all tasks and frontier models we measure, the longer models spend reasoning and taking actions, \\emph{the more incoherent} their failures become. Error-incoherence changes with model scale in a way that is experiment dependent. However, in several settings, larger, more capable models are more incoherent than smaller models. Consequently, scale alone seems unlikely to eliminate error-incoherence. Instead, as more capable AIs pursue harder tasks, requiring more sequential action and thought, our results predict failures to be accompanied by more incoherent behavior. This suggests a future where AIs sometimes cause industrial accidents (due to unpredictable misbehavior), but are less likely to exhibit consistent pursuit of a misaligned goal. This increases the relative importance of alignment research targeting reward hacking or goal misspecification.",
-    "published": "Jan 30",
-    "pdf_url": "https://arxiv.org/pdf/2601.23045v2",
-    "arxiv_url": "http://arxiv.org/abs/2601.23045v2",
-    "queried_author": "Ethan Perez",
-    "matching_authors": [
-      "Ethan Perez"
     ]
   }
 ]
