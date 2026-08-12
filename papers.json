@@ -1,5 +1,48 @@
 [
   {
+    "title": "Recovering Wasted Compute in Autoresearch Agents",
+    "authors": [
+      "Au Kwok Chun",
+      "Abhigyan Acherjee",
+      "Amrutha Rao",
+      "Zaiqian Chen",
+      "Kazem Meidani",
+      "C. Bayan Bruss",
+      "Micah Goldblum"
+    ],
+    "summary": "A slew of recent works develop agents for solving research problems end-to-end, a paradigm increasingly referred to as autoresearch. Such agents have inspired large industry investment, motivated by their potential to automate time-consuming human labor and customize machine learning solutions for specialized applications. In this paper, we study the modeling pipeline at the core of these autoresearch systems and identify common failure modes when they are applied to tabular datasets: (1) they waste compute resolving the same bugs over and over again; (2) they often fail to tune hyperparameters even when they have a large remaining compute budget; (3) the tree-search algorithms that power them do not explore; and (4) they perform data analysis, mimicking the humans whose data they are trained on, but do not use that analysis to make downstream decisions. We explore targeted interventions and find that a global debug consultant that shares discovered runtime constraints across all branches of the search tree, prompt- and control-level enhancements, and refined tree-search algorithms successfully recover wasted compute. Our results show that large gains in autoresearch agent performance are achievable through agentic design alone, holding the underlying language model fixed.",
+    "published": "Aug 11",
+    "pdf_url": "https://arxiv.org/pdf/2608.10424v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.10424v1",
+    "queried_author": "Micah Goldblum",
+    "matching_authors": [
+      "Micah Goldblum"
+    ]
+  },
+  {
+    "title": "Cracks in the Foundation: Seemingly Minor Architectural Choices Impact Long Context Extension",
+    "authors": [
+      "Amanda Bertsch",
+      "Luca Soldaini",
+      "Matthew R. Gormley",
+      "Graham Neubig",
+      "Hannaneh Hajishirzi",
+      "Kyle Lo",
+      "Dirk Groeneveld"
+    ],
+    "summary": "One might imagine that architectural variations within the dense transformer paradigm have a limited effect on accuracy. However, we demonstrate that this is not the case in the long context setting. Specifically, we show that a set of four minor architectural decisions --- all made by at least one of the Olmo, Llama, and Qwen dense model families --- have a compoundingly negative effect on long context extensibility. Any one of these choices alone has a minor impact on long context performance, but combining three or more can drop the performance downstream by up to 47%. Furthermore, these differences are not detectable from short-context loss or validation datasets. We show that much of the variation in long context ability across model families is driven by these architectural features and detectable from applying context extension early in pretraining. We demonstrate this with controlled ablations that hold data, tokenizer, and extension recipe fixed while varying normalization, GQA, pretraining context length, and sliding window attention. After over 170,000 GPU hours of training, we release the resulting set of models as OlmPool, a set of 26 comparable 7B models with checkpoints before and after long-context extension. This pool includes several architectures that outperform the Llama 3 architecture on long context extensibility. In an analysis of our ablation models, we identify patterns in attention sink behavior and attention distributions across context that are attributable to specific architectural differences.",
+    "published": "Aug 10",
+    "pdf_url": "https://arxiv.org/pdf/2608.10296v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.10296v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig",
+      "Hannaneh Hajishirzi",
+      "Kyle Lo",
+      "Luca Soldaini"
+    ]
+  },
+  {
     "title": "Matryoshka Language Model Suites",
     "authors": [
       "Nathan Godey",
@@ -56,13 +99,14 @@
     "authors": [
       "Lijie Yang",
       "Hongyin Luo",
+      "Jiawei Zhao",
       "Tri Dao",
       "Ravi Netravali"
     ],
     "summary": "Test-time compute scaling is a primary driver of performance in large reasoning models (LRMs), but extreme inefficiency bounds current approaches, shifting the critical question from \\emph{how much} compute to spend, to \\emph{where} to allocate it. We formalize test-time reasoning as a constrained compute allocation problem over partial trajectories. Under a fixed hardware budget, existing paradigms fail to actively allocate the compute to the most promising partial progress: traditional parallel sampling treats traces independently and induces severe memory bottlenecks, while subtractive pruning starves hardware and fails to actively and sufficiently shift the output distribution. To overcome this dichotomy, we introduce Gambit, an inference algorithm that executes \\emph{thought-level beam search}. By periodically pruning unpromising trajectories and immediately branching from high-quality prefixes, Gambit dynamically concentrates compute onto the most promising reasoning traces via a light-weight scorer probing hidden states while maintaining continuous high hardware utilization. Extensive evaluations across multiple models and benchmarks demonstrate that Gambit strictly dominates existing baselines. Under identical hardware constraints, our method yields up to a +6.7\\% absolute accuracy gain on HMMT-24 and +3.3\\% on AIME-25 over pruning baselines, delivers $>2\\times$ higher throughput on trace completion, and reduces total token consumption by up to 68.5\\% relative to standard parallel sampling.",
     "published": "Aug 08",
-    "pdf_url": "https://arxiv.org/pdf/2608.08020v1",
-    "arxiv_url": "http://arxiv.org/abs/2608.08020v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.08020v2",
+    "arxiv_url": "http://arxiv.org/abs/2608.08020v2",
     "queried_author": "Tri Dao",
     "matching_authors": [
       "Tri Dao"
@@ -4987,10 +5031,10 @@
       "Sang T. Truong",
       "Sanmi Koyejo"
     ],
-    "summary": "Large language models exhibit safety degradation in non-English languages. Standard evaluation relies on Jailbreak Success Rate (JSR), which confounds several safety-driving factors into one, obscuring the specific cause(s) of safety failure. We introduce a latent variable model, a Multi-Group Item Response Theory (IRT) framework, that decouples safety-driving factors such as language-agnostic safety robustness ($\u03b8$), intrinsic prompt hardness ($\u03b2$), global language processing difficulty ($\u03b3$), and a prompt-specific cross-lingual safety gap ($\u03c4$). Using the MultiJail dataset, we evaluate the safety robustness of 61 model configurations across 5 closed-model families and 10 languages of varying resource, aggregating a dataset of 1.9 million rows. Exploratory Factor Analysis shows safety is primarily unidimensional: models refuse different harm types mainly through a shared mechanism. Contrary to the expected trend that safety degrades largely in low-resource languages, 22 model configurations are more vulnerable in English than in low-resource languages. Low-resource languages produce more uncertain responses (high entropy) than high-resource languages. Also, high-$\u03c4$ prompts cluster in physical harm categories like Theft and Weapons and lower-resource languages, trends validated through cross-dataset generalization. While global translation quality shows low correlation with $\u03c4$, severe mistranslations drive high-bias outliers, as validated by native speakers. Cultural and conceptual grounding mismatches also contribute to $\u03c4$. In predictive validation, the IRT framework ac...",
+    "summary": "Large language models exhibit safety degradation in non-English languages. Standard evaluation relies on Jailbreak Success Rate (JSR), which confounds several safety-driving factors into one, obscuring the specific cause(s) of safety failure. We introduce a latent variable model, a Multi-Group Item Response Theory (IRT) framework, that decouples language-agnostic safety robustness ($\u03b8$), intrinsic prompt hardness ($\u03b2$), global language processing difficulty ($\u03b3$), and a prompt-specific cross-lingual safety gap ($\u03c4$). Using the MultiJail dataset, we evaluate the safety robustness of 61 model configurations across 5 closed-model families and 10 languages of varying resource, aggregating a dataset of 1.9 million responses. Exploratory Factor Analysis shows safety is primarily unidimensional: models refuse different harm types mainly through a shared mechanism. Contrary to the expected trend that safety degrades largely in low-resource languages, 22 model configurations are more vulnerable in English than in low-resource languages. Low-resource languages produce more uncertain responses (high entropy) than high-resource languages. Also, high-$\u03c4$ prompts cluster in physical harm categories like Theft and Weapons and lower-resource languages, trends validated through cross-dataset generalization. While global translation quality shows low correlation with $\u03c4$, severe mistranslations drive high-bias outliers, as validated by native speakers. Cultural and conceptual grounding mismatches may also contribute to $\u03c4$. In predictive validation, the IRT framework achieves $\\mathrm{AUC} =...",
     "published": "May 16",
-    "pdf_url": "https://arxiv.org/pdf/2605.17173v1",
-    "arxiv_url": "http://arxiv.org/abs/2605.17173v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.17173v2",
+    "arxiv_url": "http://arxiv.org/abs/2605.17173v2",
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
@@ -6339,10 +6383,10 @@
       "Jure Leskovec",
       "Yejin Choi"
     ],
-    "summary": "Deep learning in \\emph{de novo} protein design has achieved atomic-level fidelity. However, existing models remain largely non-deliberative: they directly synthesize molecular geometries without explicitly reasoning about which residues or interactions are functionally essential. As a result, design decisions are entangled with continuous sampling dynamics, limiting interpretability, controllability, and systematic reuse of biochemical knowledge. We introduce \\textbf{Proteo-R1}, a reasoning-guided protein design framework that explicitly decouples \\emph{molecular understanding} from \\emph{geometric generation}. Proteo-R1 adopts a dual-expert architecture in which a multimodal large language model (MLLM) serves as an \\emph{understanding expert}, analyzing protein sequences, structures, and textual context to identify key functional residues that govern binding and specificity. These residue-level decisions are then passed as hard constraints to a separate diffusion-based \\emph{generation expert}, which performs conditional co-design while respecting the fixed interaction anchors. This factorization mirrors how human experts approach molecular engineering: first, reasoning about critical interactions, then optimizing geometry subject to those constraints. By operationalizing reasoning as explicit residue-level commitments rather than latent textual guidance, Proteo-R1 achieves stable, interpretable, and modular integration of LLM reasoning with state-of-the-art geometric generative models. Code, data, and demos are available at https://smiles724.github.io/r1/.",
+    "summary": "Deep learning in de novo protein design has achieved atomic-level fidelity. However, existing models remain largely non-deliberative: they directly synthesize molecular geometries without explicitly reasoning about which residues or interactions are functionally essential. As a result, design decisions are entangled with continuous sampling dynamics, limiting interpretability, controllability, and systematic reuse of biochemical knowledge. We introduce Proteo-R1, a reasoning-guided protein design framework that explicitly decouples molecular understanding from geometric generation. Proteo-R1 adopts a dual-expert architecture in which a multimodal large language model (MLLM) serves as an understanding expert, analyzing protein sequences, structures, and textual context to identify key functional residues that govern binding and specificity. These residue-level decisions are then passed as hard constraints to a separate diffusion-based generation expert, which performs conditional co-design while respecting the fixed interaction anchors. This factorization mirrors how human experts approach molecular engineering: first, reasoning about critical interactions, then optimizing geometry subject to those constraints. By operationalizing reasoning as explicit residue-level commitments rather than latent textual guidance, Proteo-R1 achieves stable, interpretable, and modular integration of LLM reasoning with state-of-the-art geometric generative models. Code, data, and demos are available at https://smiles724.github.io/r1/.",
     "published": "May 01",
-    "pdf_url": "https://arxiv.org/pdf/2605.02937v1",
-    "arxiv_url": "http://arxiv.org/abs/2605.02937v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.02937v2",
+    "arxiv_url": "http://arxiv.org/abs/2605.02937v2",
     "queried_author": "Jure Leskovec",
     "matching_authors": [
       "Jure Leskovec",
@@ -6918,8 +6962,8 @@
     ],
     "summary": "LLM self-play algorithms are notable in that, in principle, nothing bounds their learning: a Conjecturer model creates problems for a Solver, and both improve together. However, in practice, existing LLM self-play methods do not scale well with large amounts of compute, instead hitting learning plateaus. We argue this is because over long training runs, the Conjecturer learns to hack its reward, collapsing to artificially complex problems that do not help the Solver improve. To overcome this, we introduce Self-Guided Self-Play (SGS), a self-play algorithm in which the language model itself guides the Conjecturer away from degeneracy. In SGS, the model takes on three roles: Solver, Conjecturer, and a Guide that scores synthetic problems by their relevance to unsolved target problems and how clean and natural they are, providing supervision against Conjecturer collapse. Our core hypothesis is that language models can assess whether a subproblem is useful for achieving a goal. We evaluate the scaling properties of SGS by running training for significantly longer than prior works and by fitting scaling laws to cumulative solve rate curves. Applying SGS to formal theorem proving in Lean4, we find that it surpasses the asymptotic solve rate of our strongest RL baseline in fewer than 80 rounds of self-play and enables a 7B parameter model, after 200 rounds of self-play, to solve more problems than a 671B parameter model pass@4.",
     "published": "Apr 22",
-    "pdf_url": "https://arxiv.org/pdf/2604.20209v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.20209v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.20209v2",
+    "arxiv_url": "http://arxiv.org/abs/2604.20209v2",
     "queried_author": "Tatsunori Hashimoto",
     "matching_authors": [
       "Tatsunori Hashimoto"
@@ -8687,10 +8731,10 @@
       "Daphne Ippolito",
       "Eunsol Choi"
     ],
-    "summary": "When posed with prompts that permit a large number of valid answers, comprehensively generating them is the first step towards satisfying a wide range of users. In this paper, we study methods to elicit a comprehensive set of valid responses. To evaluate this, we introduce \\textbf{diversity coverage}, a metric that measures the total quality scores assigned to each \\textbf{unique} answer in the predicted answer set relative to the best possible answer set with the same number of answers. Using this metric, we evaluate 18 LLMs, finding no single model dominates at generating diverse responses to a wide range of open-ended prompts. Yet, per each prompt, there exists a model that outperforms all other models significantly at generating a diverse answer set. Motivated by this finding, we introduce a router that predicts the best model for each query. On NB-Wildchat, our trained router outperforms the single best model baseline (26.3% vs $23.8%). We further show generalization to an out-of-domain dataset (NB-Curated) as well as different answer-generation prompting strategies. Our work lays foundation for studying generating comprehensive answers when we have access to a suite of models.",
+    "summary": "When posed with prompts that permit a large number of valid answers, comprehensively generating them is the first step towards satisfying a wide range of users. In this paper, we study methods to elicit a comprehensive set of valid responses. To evaluate this, we introduce diversity coverage, a metric that measures the total quality scores assigned to each unique answer in the predicted answer set relative to the best possible answer set with the same number of answers. Using this metric, we evaluate 18 LLMs, finding no single model dominates at generating diverse responses to a wide range of open-ended prompts. Yet, per each prompt, there exists a model that outperforms all other models significantly at generating a diverse answer set. Motivated by this finding, we introduce a router that predicts the best model for each query. On NB-WildChat, our trained router outperforms the single best model baseline (26.3% vs 23.8%). We further show generalization to an out-of-domain dataset (NB-Curated) as well as different answer-generation prompting strategies. Our work lays foundation for studying generating comprehensive answers when we have access to a suite of models.",
     "published": "Apr 02",
-    "pdf_url": "https://arxiv.org/pdf/2604.02319v2",
-    "arxiv_url": "http://arxiv.org/abs/2604.02319v2",
+    "pdf_url": "https://arxiv.org/pdf/2604.02319v3",
+    "arxiv_url": "http://arxiv.org/abs/2604.02319v3",
     "queried_author": "Eunsol Choi",
     "matching_authors": [
       "Eunsol Choi"
@@ -9150,8 +9194,8 @@
     ],
     "summary": "As users increasingly turn to LLMs for practical and personal advice, they become vulnerable to subtle steering toward hidden incentives misaligned with their own interests. While existing NLP research has benchmarked manipulation detection, these efforts often rely on simulated debates and remain fundamentally decoupled from actual human belief shifts in real-world scenarios. We introduce PUPPET, a theoretical taxonomy and resource that bridges this gap by focusing on the moral direction of hidden incentives in everyday, advice-giving contexts. We provide an evaluation dataset of N=1,035 human-LLM interactions, where we measure users' belief shifts. Our analysis reveals a critical disconnect in current safety paradigms: while models can be trained to detect manipulative strategies, they do not correlate with the magnitude of resulting belief change. As such, we define the task of human belief shift prediction and show that while state-of-the-art LLMs achieve moderate correlation (r=0.3-0.5), they exhibit systematic directional biases, with certain models over or under-predicting the magnitude of human belief change. This work establishes a theoretically grounded and behaviorally validated foundation for AI social safety efforts by studying incentive-driven manipulation in LLMs during everyday, practical user queries.",
     "published": "Mar 21",
-    "pdf_url": "https://arxiv.org/pdf/2603.20907v4",
-    "arxiv_url": "http://arxiv.org/abs/2603.20907v4",
+    "pdf_url": "https://arxiv.org/pdf/2603.20907v5",
+    "arxiv_url": "http://arxiv.org/abs/2603.20907v5",
     "queried_author": "Maarten Sap",
     "matching_authors": [
       "Maarten Sap"
@@ -10594,17 +10638,21 @@
     "authors": [
       "Jenny Y. Huang",
       "Leshem Choshen",
-      "Ramon Astudillo",
+      "Wei Sun",
+      "Omar Khattab",
+      "Ram\u00f3n Fernandez Astudillo",
+      "Mehul Damani",
       "Tamara Broderick",
       "Jacob Andreas"
     ],
-    "summary": "Multi-turn interactions with large language models typically retain the assistant's own past responses in the conversation history. In this work, we revisit this design choice by asking whether large language models benefit from conditioning on their own prior responses. Using in-the-wild, multi-turn conversations, we compare standard (full-context) prompting with a user-turn-only prompting approach that omits all previous assistant responses, across three open reasoning models and one state-of-the-art model. To our surprise, we find that removing prior assistant responses does not affect response quality on a large fraction of turns. Omitting assistant-side history can reduce cumulative context lengths by up to 10x. To explain this result, we find that multi-turn conversations consist of a substantial proportion (36.4%) of self-contained prompts, and that many follow-up prompts provide sufficient instruction to be answered using only the current user turn and prior user turns. When analyzing cases where user-turn-only prompting substantially outperforms full context, we identify instances of context pollution, in which models over-condition on their previous responses, introducing errors, hallucinations, or stylistic artifacts that propagate across turns. Motivated by these findings, we design a context-filtering approach that selectively omits assistant-side context. Our findings suggest that selectively omitting assistant history can improve response quality while reducing memory consumption.",
+    "summary": "In multi-turn conversations, large language models typically condition on the full conversation history: both past user prompts and assistant responses. We revisit this design choice by comparing full-context prompting to four alternative, substantially-reduced context configurations. Analyzing in-the-wild multi-turn conversations across three open reasoning and one state-of-the-art model, we find that response quality is largely preserved under aggressive context filtering: replacing all prior assistant turns with one-sentence summaries or keeping only the most recent user--assistant exchange often matches storing full context in performance while using roughly 8x less context. To understand this result, we observe that a substantial fraction of user turns (36.4%) in multi-turn conversations are self-contained and that many follow-up turns can be addressed by seeing only the immediately preceding user--assistant exchange. Furthermore, we find that when models condition on their own past responses, this can lead to context pollution, a phenomenon in which reasoning errors, hallucinations, or stylistic artifacts propagate across turns. Motivated by these findings, we design a context-filtering approach that selectively omits the assistant-side history. Taken together, these findings suggest moving away from storing full dialogue transcripts and instead retaining only what is relevant.",
     "published": "Feb 27",
-    "pdf_url": "https://arxiv.org/pdf/2602.24287v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.24287v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.24287v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.24287v2",
     "queried_author": "Jacob Andreas",
     "matching_authors": [
-      "Jacob Andreas"
+      "Jacob Andreas",
+      "Omar Khattab"
     ]
   },
   {
@@ -10616,10 +10664,10 @@
       "Jonathan Berant",
       "Mirella Lapata"
     ],
-    "summary": "We present a scalable methodology for evaluating language models in multi-turn interactions, using a suite of collaborative games that require effective communication about private information. This enables an interactive scaling analysis, in which a fixed token budget is divided over a variable number of turns. We find that in many cases, language models are unable to use interactive collaboration to improve over the non-interactive baseline scenario in which one agent attempts to summarize its information and the other agent immediately acts -- despite substantial headroom. This suggests that state-of-the-art models still suffer from significant weaknesses in planning and executing multi-turn collaborative conversations. We analyze the linguistic features of these dialogues, assessing the roles of sycophancy, information density, and discourse coherence. While there is no single linguistic explanation for the collaborative weaknesses of contemporary language models, we note that humans achieve comparable task success at superior token efficiency by producing dialogues that are more coherent than those produced by most language models. The proactive management of private information is a defining feature of real-world communication, and we hope that MT-PingEval will drive further work towards improving this capability.",
+    "summary": "We present a scalable and verifiable methodology for evaluating language models in multi-turn interactions, using a suite of collaborative games that require effective communication about private information. This enables an interactive scaling analysis, in which a fixed token budget is divided over a variable number of turns. We find that language models often fail to use interactive collaboration to improve over the non-interactive baseline in which one agent summarizes its information and the other agent immediately acts, despite substantial headroom. This suggests that state-of-the-art models still suffer from significant weaknesses in planning and executing multi-turn collaborative conversations. We analyze the linguistic features of these dialogues, assessing the roles of sycophancy, information density, and discourse coherence. While there is no single linguistic explanation for the collaborative weaknesses of contemporary language models, we note that humans achieve comparable task success at superior token efficiency by producing more coherent dialogues. The proactive management of private information is a defining feature of real-world communication, and this work is designed to drive further progress on this capability.",
     "published": "Feb 27",
-    "pdf_url": "https://arxiv.org/pdf/2602.24188v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.24188v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.24188v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.24188v2",
     "queried_author": "Jacob Eisenstein",
     "matching_authors": [
       "Jacob Eisenstein"
@@ -12387,7 +12435,7 @@
     ]
   },
   {
-    "title": "MentorCollab: Selective Large-to-Small Inference-Time Guidance for Efficient Reasoning",
+    "title": "MentorCollab: Large-to-Small Inference-Time Mentorship for Concise Reasoning in Language Models",
     "authors": [
       "Haojin Wang",
       "Yike Wang",
@@ -12395,10 +12443,10 @@
       "Hannaneh Hajishirzi",
       "Yulia Tsvetkov"
     ],
-    "summary": "Large reasoning models (LRMs) achieve strong performance by producing long chains of thought, but their inference costs are high and often generate redundant reasoning. Small language models (SLMs) are far more efficient, yet struggle on multi-step reasoning tasks. A natural idea is to let a large model guide a small one at inference time as a mentor, yet existing collaboration methods often promote imitation, resulting in verbose reasoning without consistent error correction. We propose MentorCollab, an inference-time collaboration method in which an LRM selectively and sparsely guides an SLM, rather than taking over generation. At randomly sampled token positions, we probe for divergences between the two models and use a lightweight verifier to decide whether the SLM should follow a short lookahead segment from its mentor or continue on its own. Across 15 SLM--LRM pairs and 3 domains (math reasoning, general knowledge, and commonsense reasoning), our method improves performance in 12 settings, with average gains of 3.0% and up to 8.0%, while adopting only having 18.4% tokens generated by the expensive mentor model on average. We find that short segments and selective probing are sufficient for effective collaboration. Our results show that selective inference-time guidance restores large-model reasoning ability without substantial inference overhead.",
+    "summary": "Large reasoning models (LRMs) have demonstrated impressive reasoning capabilities, but their solutions are often verbose and computationally expensive, and taxing for users to read. In contrast, small language models (SLMs) produce concise outputs with lower inference costs, yet they frequently struggle on challenging multi-step reasoning tasks. Existing inference-time collaboration methods attempt to bridge this gap through imitation, encouraging SLMs to follow the reasoning process of LRMs. However, the student often inherits the mentor's overthinking, producing long and reflective reasoning chains while still falling short in accuracy. We propose MentorCollab, a collaboration method based on mentorship: the SLM remains the primary generator and consults the LRM only when additional reasoning support is needed. At sparsely sampled token positions, we probe for divergence between the two models and use a lightweight verifier to decide whether the SLM should follow a short lookahead segment from its mentor or continue on its own. Across 15 SLM-LRM pairs and 3 domains, our method achieves an average gain of 3.0%, with improvements of up to 8.0% in 12 settings. The resulting traces remain shorter than the mentor's, using only a small fraction of its tokens. These results demonstrate that selective, verified mentorship can boost reasoning accuracy while preserving concise generation.",
     "published": "Feb 05",
-    "pdf_url": "https://arxiv.org/pdf/2602.05307v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.05307v2",
+    "pdf_url": "https://arxiv.org/pdf/2602.05307v3",
+    "arxiv_url": "http://arxiv.org/abs/2602.05307v3",
     "queried_author": "Hannaneh Hajishirzi",
     "matching_authors": [
       "Hannaneh Hajishirzi"
@@ -12692,45 +12740,6 @@
       "Niloofar Mireshghallah",
       "Pang Wei Koh",
       "Yejin Choi"
-    ]
-  },
-  {
-    "title": "An Empirical Study on Noisy Data and LLM Pretraining Loss Divergence",
-    "authors": [
-      "Qizhen Zhang",
-      "Ankush Garg",
-      "Jakob Foerster",
-      "Niladri Chatterji",
-      "Kshitiz Malik",
-      "Mike Lewis"
-    ],
-    "summary": "Large-scale pretraining datasets drive the success of large language models (LLMs). However, these web-scale corpora inevitably contain large amounts of noisy data due to unregulated web content or randomness inherent in data. Although LLM pretrainers often speculate that such noise contributes to instabilities in large-scale LLM pretraining and, in the worst cases, loss divergence, this phenomenon remains poorly understood.In this work, we present a systematic empirical study of whether noisy data causes LLM pretraining divergences and how it does so. By injecting controlled synthetic uniformly random noise into otherwise clean datasets, we analyze training dynamics across model sizes ranging from 480M to 5.2B parameters. We show that noisy data indeed induces training loss divergence, and that the probability of divergence depends strongly on the noise type, amount of noise, and model scale. We further find that noise-induced divergences exhibit activation patterns distinct from those caused by high learning rates, and we provide diagnostics that differentiate these two failure modes. Together, these results provide a large-scale, controlled characterization of how noisy data affects loss divergence in LLM pretraining.",
-    "published": "Feb 02",
-    "pdf_url": "https://arxiv.org/pdf/2602.02400v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.02400v1",
-    "queried_author": "Mike Lewis",
-    "matching_authors": [
-      "Mike Lewis"
-    ]
-  },
-  {
-    "title": "ReasonCACHE: Teaching LLMs To Reason Without Weight Updates",
-    "authors": [
-      "Sharut Gupta",
-      "Phillip Isola",
-      "Stefanie Jegelka",
-      "David Lopez-Paz",
-      "Kartik Ahuja",
-      "Mark Ibrahim",
-      "Mohammad Pezeshki"
-    ],
-    "summary": "Can Large language models (LLMs) learn to reason without any weight update and only through in-context learning (ICL)? ICL is strikingly sample-efficient, often learning from only a handful of demonstrations, but complex reasoning tasks typically demand many training examples to learn from. However, naively scaling ICL by adding more demonstrations breaks down at this scale: attention costs grow quadratically, performance saturates or degrades with longer contexts, and the approach remains a shallow form of learning. Due to these limitations, practitioners predominantly rely on in-weight learning (IWL) to induce reasoning. In this work, we show that by using Prefix Tuning, LLMs can learn to reason without overloading the context window and without any weight updates. We introduce $\\textbf{ReasonCACHE}$, an instantiation of this mechanism that distills demonstrations into a fixed key-value cache. Empirically, across challenging reasoning benchmarks, including GPQA-Diamond, ReasonCACHE outperforms standard ICL and matches or surpasses IWL approaches. Further, it achieves this all while being more efficient across three key axes: data, inference cost, and trainable parameters. We also theoretically prove that ReasonCACHE can be strictly more expressive than low-rank weight update since the latter ties expressivity to input rank, whereas ReasonCACHE bypasses this constraint by directly injecting key-values into the attention mechanism. Together, our findings identify ReasonCACHE as a middle path between in-context and in-weight learning, providing a scalable algorithm for learn...",
-    "published": "Feb 02",
-    "pdf_url": "https://arxiv.org/pdf/2602.02366v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.02366v1",
-    "queried_author": "Phillip Isola",
-    "matching_authors": [
-      "Phillip Isola"
     ]
   }
 ]
