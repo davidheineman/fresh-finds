@@ -1,5 +1,23 @@
 [
   {
+    "title": "Amplified Does Not Mean Predictive: Reasoning Behaviors in Thinking Models",
+    "authors": [
+      "Jean de Dieu Nyandwi",
+      "Leena Mathur",
+      "Yonatan Bisk",
+      "Robert Hawkins",
+      "Graham Neubig"
+    ],
+    "summary": "Which reasoning behaviors are associated with correct answers in reasoning models, and does reasoning-oriented training amplify those behaviors? This distinction is important because reasoning-oriented training can make traces look more deliberative without amplifying the behaviors most tied to model correctness. We quantify this mismatch with Behavioral Lift, a metric that measures how much correctness changes when a behavior is present versus absent in a model's reasoning trace. Across 15 models and 6 benchmarks spanning text-only and vision-language reasoning, we annotate 15,282 traces with a taxonomy whose core behaviors are defined for both LLM and VLM traces. We find evidence for an Amplification-Lift Gap, in which thinking models strongly amplify self-correction, hypothesis testing, and uncertainty acknowledgment, while the highest-lift behaviors are confidence calibration, knowledge alignment, and self-awareness. Confidence calibration is among the strongest positive signals of correctness in both modalities, yet is barely amplified; uncertainty acknowledgment is amplified by 3--7$\\times$, yet is weakly or negatively associated with correctness. We find that reasoning-oriented training does not preferentially amplify the highest-Lift behaviors, motivating process-level objectives that reward calibrated and grounded reasoning rather than surface form alone.",
+    "published": "Aug 13",
+    "pdf_url": "https://arxiv.org/pdf/2608.13760v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.13760v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
     "title": "The Embedder's Dilemma: LLMs Are Better, but at What Cost?",
     "authors": [
       "Adnan El Assadi",
@@ -1657,6 +1675,23 @@
     "queried_author": "Seungone Kim",
     "matching_authors": [
       "Seungone Kim"
+    ]
+  },
+  {
+    "title": "Modular Cognitive Architecture Emerges in Large Language Models",
+    "authors": [
+      "Pengrui Han",
+      "Jacob Andreas",
+      "Evelina Fedorenko",
+      "Andrea Gregor de Varda"
+    ],
+    "summary": "The human brain exhibits a striking degree of functional specialization, with distinct networks supporting language, formal reasoning, reasoning about other minds, and reasoning about the physical world. Is this modular organization a fundamental principle of how intelligent systems must be built, or an evolutionary accident specific to biological brains? Here, we test whether a similar organization emerges in Large Language Models--another class of intelligent systems created through a very different optimization process. Using circuit analyses across N=46 tasks spanning four cognitive domains (language, formal reasoning, social reasoning, physical reasoning), we find that LLMs develop a modular architecture that mirrors the human brain: tasks drawing on the same network in humans recruit overlapping neurons in LLMs, whereas tasks drawing on different networks recruit distinct neurons. The convergent emergence of modularity in brains and neural networks suggests that it may be a fundamental property of intelligent systems.",
+    "published": "Jun 27",
+    "pdf_url": "https://arxiv.org/pdf/2608.13567v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.13567v1",
+    "queried_author": "Jacob Andreas",
+    "matching_authors": [
+      "Jacob Andreas"
     ]
   },
   {
@@ -8200,8 +8235,8 @@
     ],
     "summary": "We study parallel test-time scaling for long-horizon agentic tasks such as agentic search and deep research, where multiple rollouts are generated in parallel and aggregated into a final response. While such scaling has proven effective for chain-of-thought reasoning, agentic tasks pose unique challenges: trajectories are long, multi-turn, and tool-augmented, and outputs are often open-ended. Aggregating only final answers discards rich information from trajectories, while concatenating all trajectories exceeds the model's context window. To address this, we propose AggAgent, an aggregation agent that treats parallel trajectories as an environment. We equip it with lightweight tools to inspect candidate solutions and search across trajectories, enabling it to navigate and synthesize information on demand. Across six benchmarks and three model families (GLM-4.7, Qwen3.5, MiniMax-M2.5), AggAgent outperforms all existing aggregation methods-by up to 5.3% absolute on average and 10.3% on two deep research tasks-while adding minimal overhead, as the aggregation cost remains bounded by a single agentic rollout. Our findings establish agentic aggregation as an effective and cost-efficient approach to parallel test-time scaling.",
     "published": "Apr 13",
-    "pdf_url": "https://arxiv.org/pdf/2604.11753v2",
-    "arxiv_url": "http://arxiv.org/abs/2604.11753v2",
+    "pdf_url": "https://arxiv.org/pdf/2604.11753v3",
+    "arxiv_url": "http://arxiv.org/abs/2604.11753v3",
     "queried_author": "Danqi Chen",
     "matching_authors": [
       "Danqi Chen"
@@ -12711,49 +12746,6 @@
     "queried_author": "Yoon Kim",
     "matching_authors": [
       "Yoon Kim"
-    ]
-  },
-  {
-    "title": "Scaling Agentic Verifier for Competitive Coding",
-    "authors": [
-      "Zeyao Ma",
-      "Jing Zhang",
-      "Xiaokang Zhang",
-      "Jiaxi Yang",
-      "Zongmeng Zhang",
-      "Jiajun Zhang",
-      "Yuheng Jing",
-      "Lei Zhang",
-      "Hao Zheng",
-      "Wenting Zhao",
-      "Junyang Lin",
-      "Binyuan Hui"
-    ],
-    "summary": "Large language models (LLMs) have demonstrated strong coding capabilities but still struggle to solve competitive programming problems correctly in a single attempt. Execution-based re-ranking offers a promising test-time scaling strategy, yet existing methods are constrained by either difficult test case generation or inefficient random input sampling. To address this limitation, we propose Agentic Verifier, an execution-based agent that actively reasons about program behaviors and searches for highly discriminative test inputs that expose behavioral discrepancies among candidate solutions. Through multi-turn interaction with code execution environments, the verifier iteratively refines the candidate input generator and produces targeted counterexamples rather than blindly sampling inputs. We train the verifier to acquire this discriminative input generation capability via a scalable pipeline combining large-scale data synthesis, rejection fine-tuning, and agentic reinforcement learning. Extensive experiments across five competitive programming benchmarks demonstrate consistent improvements over strong execution-based baselines, achieving up to +10-15% absolute gains in Best@K accuracy. Further analysis reveals clear test-time scaling behavior and highlights the verifier's broader potential beyond reranking.",
-    "published": "Feb 04",
-    "pdf_url": "https://arxiv.org/pdf/2602.04254v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.04254v1",
-    "queried_author": "Wenting Zhao",
-    "matching_authors": [
-      "Wenting Zhao"
-    ]
-  },
-  {
-    "title": "Learning to Reason in 13 Parameters",
-    "authors": [
-      "John X. Morris",
-      "Niloofar Mireshghallah",
-      "Mark Ibrahim",
-      "Saeed Mahloujifar"
-    ],
-    "summary": "Recent research has shown that language models can learn to \\textit{reason}, often via reinforcement learning. Some work even trains low-rank parameterizations for reasoning, but conventional LoRA cannot scale below the model dimension. We question whether even rank=1 LoRA is necessary for learning to reason and propose TinyLoRA, a method for scaling low-rank adapters to sizes as small as one parameter. Within our new parameterization, we are able to train the 8B parameter size of Qwen2.5 to 91\\% accuracy on GSM8K with only 13 trained parameters in bf16 (26 total bytes). We find this trend holds in general: we are able to recover 90\\% of performance improvements while training $1000x$ fewer parameters across a suite of more difficult learning-to-reason benchmarks such as AIME, AMC, and MATH500. Notably, we are only able to achieve such strong performance with RL: models trained using SFT require $100-1000x$ larger updates to reach the same performance.",
-    "published": "Feb 04",
-    "pdf_url": "https://arxiv.org/pdf/2602.04118v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.04118v1",
-    "queried_author": "John X. Morris",
-    "matching_authors": [
-      "John X. Morris",
-      "Niloofar Mireshghallah"
     ]
   }
 ]
