@@ -1,5 +1,121 @@
 [
   {
+    "title": "Advancing Open and Reproducible Relational Learning: RelArena-$\u03b1$, TabPFN-Rel and RPI",
+    "authors": [
+      "Adrian Hayler",
+      "Klemens Fl\u00f6ge",
+      "Alan Arazi",
+      "Rishabh Ranjan",
+      "Jure Leskovec",
+      "Felix Birkel",
+      "Brendan Roof",
+      "Anurag Garg",
+      "Kristina Collins",
+      "Lydia Sidhoum",
+      "Jonas K\u00fcbler",
+      "Siyuan Guo",
+      "Oscar Key",
+      "Jan Hendrik Metzen",
+      "Rylee Grace",
+      "David Salinas",
+      "Arthur Cahu",
+      "Simon Bing",
+      "Benjamin J\u00e4ger",
+      "Tuana \u00c7elik",
+      "Mihir Manium",
+      "Vitor Monteiro",
+      "Jake Robertson",
+      "Jerry Chen",
+      "Eliott Kalfon",
+      "Tom\u00e1s Pereda",
+      "Lilly Wehrhahn",
+      "Dominik Safaric",
+      "Tobias Schroeder",
+      "Georg Grab",
+      "Diana Kriuchkova",
+      "Clara Cornu",
+      "Philipp Singer",
+      "Nick Erickson",
+      "Vahid Balazadeh",
+      "Marie Salmon",
+      "Simone Alessi",
+      "K\u00fcr\u015fat Kaya",
+      "Philipp Jund",
+      "L\u00e9o Grinsztajn",
+      "Yann LeCun",
+      "Bernhard Sch\u00f6lkopf",
+      "Madelon Hulsebos",
+      "Lennart Purucker",
+      "Sauraj Gambhir",
+      "Frank Hutter",
+      "Noah Hollmann"
+    ],
+    "summary": "This first release of Prior Labs in relational learning shows our continued commitment to open science. We open-source three pieces of software that we expect to accelerate research in the field towards meaningful real-world impact. We aim to steer further development based on feedback from, and in collaboration with, the community. Given the early stage of development, our $\u03b1$-release targets researchers and early-adopting practitioners. Over the past years, a variety of datasets and tasks for relational learning have emerged, but the community has not converged on a reliable, reproducible way to compare different methods on these tasks. Our $\u03b1$-release, RelArena-$\u03b1$, provides a unified framework for running and comparing baselines on RelBench v1 by standardizing data loading, evaluation protocols, tuning regimes, and support for systems with custom tuning, inspired by established tabular benchmarks such as TabArena. We plan to work with the research community to further develop RelArena-$\u03b1$ into a catalyst for progress in the relational learning community. We release the initial version of TabPFN-Rel, a purpose-built relational harness for TabPFN-3. Currently ranked first among models on RelArena-$\u03b1$, TabPFN-Rel makes key improvements upon RDBLearn. Beyond its ranking, TabPFN-Rel serves as a strong baseline, adding to the growing evidence that flattening a relational database into a single table remains competitive with specialized relational architectures on real-world tasks.\n  To facilitate adoption of relational learning methods in research and industry, we release an ...",
+    "published": "Aug 17",
+    "pdf_url": "https://arxiv.org/pdf/2608.16319v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.16319v1",
+    "queried_author": "Jure Leskovec",
+    "matching_authors": [
+      "Jure Leskovec"
+    ]
+  },
+  {
+    "title": "Pre-training Visual Dexterity in Simulation",
+    "authors": [
+      "Sarthak Kamat",
+      "Adam Rashid",
+      "Satvik Sharma",
+      "Aseem Doriwala",
+      "Chelsea Finn",
+      "Phillip Isola",
+      "C. Karen Liu"
+    ],
+    "summary": "Large-scale pre-training has made robot policy fine-tuning increasingly data-efficient, but this progress has largely been driven by datasets and embodiments built around simple parallel-jaw grippers. Dexterous, multi-fingered hands remain comparatively data-starved because real teleoperation is costly to scale, while human hand video is off-embodiment and requires lossy pose estimation and retargeting. We introduce Simulation Pre-training for Dexterity (SPD), a pre-training framework for dexterous manipulation that uses data entirely collected in simulation. In SPD, humans manipulate virtual objects inside a VR headset, enabling on-embodiment trajectories and robot-free collection. With the help of five operators, we collect 75 hours of multi-task dexterous manipulation over one week, and use it to pre-train a causal transformer on a sequence modeling objective. We study the benefits of simulation pre-training on real-world tasks by fine-tuning on 1-2 hours of physical demonstrations on a 56-DoF bimanual dexterous setup. We find that our approach outperforms training behavior cloning policies from scratch, showing that simulation teleoperation is a viable pre-training source for real-world dexterous manipulation. We perform ablation studies, measuring the benefits of history conditioning and short action chunks for reactive control.",
+    "published": "Aug 16",
+    "pdf_url": "https://arxiv.org/pdf/2608.15917v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.15917v1",
+    "queried_author": "Phillip Isola",
+    "matching_authors": [
+      "Phillip Isola"
+    ]
+  },
+  {
+    "title": "Do Language Models Consistently Encode the Current Year?",
+    "authors": [
+      "Suze van Adrichem",
+      "Aditi Bhaskar",
+      "Diyi Yang",
+      "Christopher Potts",
+      "Jing Huang"
+    ],
+    "summary": "A consistent concept of the current time is important for temporal reasoning, yet how language models represent the current time is not well understood. We contribute two tasks that probe the current year in conceptually distinct ways: an associative task, which infers the current year from verb tense, and a declarative task, which directly queries for the current year. Both tasks estimate current years within one year of the post-training data cutoff of instruction-tuned language models. For base models, predictions on the associative task serve as a strong proxy for the pre-training data cutoff, with an average error of only 10 months across 13 models. However, their internal mechanisms diverge: the associative task uses mechanisms similar to factual recall, while the declarative task lacks consistent causal pathways. This divergence poses a challenge for updating the current year in language models. None of prompting, SFT, or weight editing succeed in shifting the associative and declarative years simultaneously. Prompting updates the declarative year (94.6% success across 351 target years) but leaves the associative year nearly unchanged (1.7% success). Year-shifted SFT also fails to shift the associative year, matching the target year in only one of eight models. Weight editing, while effective for both tasks individually, does not generalize across both. Overall, our results show that the current year is not consistently encoded in language models: The associative notion, deeply ingrained in linguistic structures learned in pre-training, uses different causal mechanis...",
+    "published": "Aug 16",
+    "pdf_url": "https://arxiv.org/pdf/2608.15507v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.15507v1",
+    "queried_author": "Christopher Potts",
+    "matching_authors": [
+      "Christopher Potts",
+      "Diyi Yang"
+    ]
+  },
+  {
+    "title": "What to Forget in Unlearning? Forget Set Curation for Language Models",
+    "authors": [
+      "Animesh Jha",
+      "Arpandeep Khatua",
+      "Youssef Allouah",
+      "Sanmi Koyejo"
+    ],
+    "summary": "Machine unlearning aims to remove targeted data or behaviors from a trained model without retraining from scratch. Yet most evaluations assume that the examples to forget are already known. In realistic language-model deployments, a requester may ask a model to stop reproducing a song or book without knowing which spans, documents, quotations, or near-duplicates in a trillion-token corpus support that behavior. We study this missing upstream problem, forget set curation: mapping a suppression request to the data passed to an unlearning algorithm. We introduce CleanSlate, a benchmark for verbatim output suppression over songs and books, with model-specific extraction profiles, content-grounded QA, and capability-retention evaluations. CleanSlate exposes two failure modes. Natural lexical and exact-substring curators often yield forget sets that lead to weak suppression. An evaluation-aware curator suppresses requested continuations almost completely, but causes collateral regression on non-requested content and model-dependent capability loss. These results show that practical unlearning is not only an optimization problem once a forget set is given: the data chosen for forgetting determines both what can be unlearnt and what else is damaged.",
+    "published": "Aug 14",
+    "pdf_url": "https://arxiv.org/pdf/2608.14855v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.14855v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
     "title": "Amplified Does Not Mean Predictive: Reasoning Behaviors in Thinking Models",
     "authors": [
       "Jean de Dieu Nyandwi",
@@ -100,8 +216,8 @@
     ],
     "summary": "Multi-agent reinforcement learning for human-AI interaction typically relies on a single large language model to simulate user behavior. We show that this approach systematically fails to generalize, and trace the failure to simulator collapse: because the simulator LLM is mode-collapsed, an LLM policy trained against it overfits to narrow strategies that exploit the simulator's dominant mode, and such a policy transfers poorly to unseen simulators and real users. We formalize this collapse theoretically and propose two complementary solutions, one at inference time and one at training time. The inference-time solution, Verbalized Sampling, broadens the simulator's behavior by sampling from a verbalized response distribution, reducing mode collapse. The training-time solution, Co-Training, jointly optimizes the policy against a population of trainable simulators, preventing it from overfitting to any single simulator's mode. We validate both solutions on three multi-turn benchmarks: Persuasion for Good, $\u03c4^2$-bench, and CooperBench. Verbalized Sampling improves held-out success by up to 9% over single-simulator RL, and Co-Training pushes gains further to 14%; the human study shows similar gain on real users. Both solutions preserve the policy diversity that collapses under single-simulator RL. To support further work in this direction, we release SCOPE, an open-source framework for Population Co-Training multi-agent RL. More broadly, our results suggest that the diversity of the training environment, not only the policy, is critical to the generalization of multi-turn RL to...",
     "published": "Aug 12",
-    "pdf_url": "https://arxiv.org/pdf/2608.12253v1",
-    "arxiv_url": "http://arxiv.org/abs/2608.12253v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.12253v2",
+    "arxiv_url": "http://arxiv.org/abs/2608.12253v2",
     "queried_author": "Christopher D Manning",
     "matching_authors": [
       "Christopher D Manning"
@@ -497,6 +613,33 @@
     "queried_author": "Dan Jurafsky",
     "matching_authors": [
       "Dan Jurafsky"
+    ]
+  },
+  {
+    "title": "Position: AI Agents in Scientific Teams Should Be Studied as Human-Agent Systems",
+    "authors": [
+      "Patrick Emami",
+      "Sameera Horawalavithana",
+      "Truc Nguyen",
+      "Gihan Panapitiya",
+      "Bruno Jacob",
+      "Siddhisanket Raskar",
+      "Saumya Sinha",
+      "Jared D. Willard",
+      "Andrew Glaws",
+      "Nithin Somasekharan",
+      "Ling Yue",
+      "Brian Lu",
+      "Shaowu Pan",
+      "Jason Eisner"
+    ],
+    "summary": "Large language model-based agents are increasingly deployed as collaborators in scientific discovery yet most current work focuses on the autonomous capabilities of \"AI Scientists\". We argue that this overlooks the social aspects of scientific teamwork, and that studying AI Scientists as human-agent systems (HAS)--where the unit of analysis is the human-agent pair--is both underexplored and undervalued. We establish these points through literature and empirical analysis, and highlight recent incidences and studies which show that deploying agents in science without accounting for human-agent dynamics introduces near-term risks, including reduced diversity of scientific inquiry. Through analysis of real-world case studies, we show that scientists and agents can augment each other's capabilities. We call for new research that adopts the HAS lens to develop mathematical frameworks for understanding and fostering human-AI synergy in scientific discovery.",
+    "published": "Aug 02",
+    "pdf_url": "https://arxiv.org/pdf/2608.14667v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.14667v1",
+    "queried_author": "Jason Eisner",
+    "matching_authors": [
+      "Jason Eisner"
     ]
   },
   {
@@ -3709,17 +3852,17 @@
       "Weikai Huang",
       "Yiming Liu",
       "Jaemin Cho",
-      "Jieyu Zhang",
       "Tuhin Kundu",
-      "Chris Dangjoo Kim",
+      "Chris Dongjoo Kim",
       "Zelun Luo",
+      "Jieyu Zhang",
       "Linda Shapiro",
       "Ranjay Krishna"
     ],
     "summary": "Vision language models (VLMs) excel at many tasks but still struggle with spatial reasoning when critical information is not directly observable. Many such problems require imaginative perception: inferring what would be seen from an unseen viewpoint, tracing paths through occluded spaces, or integrating partial observations into a coherent spatial representation. We introduce Imaginative Perception Tokens (IPT), intermediate perceptual representations that externalize what a VLM would perceive under alternative spatial configurations while remaining consistent with the observed input.\n  To study this capability, we formulate three tasks, Perspective Taking (PET), Path Tracing (PT), and Multiview Counting (MVC), and construct datasets of approximately 20K examples with ground truth imaginations, answers, and evaluation benchmarks. Using the unified VLM BAGEL as the backbone, IPT supervision consistently improves spatial reasoning and often outperforms textual chain of thought training, even without generating images at inference time. On MVC, IPT improves accuracy by 3.4% and achieves competitive performance with strong closed-source models on PT. We further find that combining IPT and label-only supervision yields additional gains, whereas textual chain of thought can substantially degrade performance, suggesting a modality mismatch when spatial computation is forced through language. Overall, IPT provides a principled supervision signal for reasoning about unobserved spatial structure, improving generalization while producing interpretable intermediate representations.",
     "published": "Jun 02",
-    "pdf_url": "https://arxiv.org/pdf/2606.03988v2",
-    "arxiv_url": "http://arxiv.org/abs/2606.03988v2",
+    "pdf_url": "https://arxiv.org/pdf/2606.03988v3",
+    "arxiv_url": "http://arxiv.org/abs/2606.03988v3",
     "queried_author": "Ranjay Krishna",
     "matching_authors": [
       "Ranjay Krishna"
@@ -6709,10 +6852,10 @@
       "George Morgulis",
       "John Hewitt"
     ],
-    "summary": "Subliminal learning describes a student language model inheriting a behavioral bias by fine-tuning on seemingly innocuous data generated by a biased teacher model. Prior work has begun to characterize this phenomenon but leaves open questions about the scope of signals it can transfer, the mechanisms that explain it, and the precision with which a bias can be encoded by seemingly unrelated data. We tackle all three problems by introducing subliminal steering, a variant of subliminal learning in which the teacher's bias is implemented not via a system prompt, as in prior work, but through a steering vector trained to maximize the likelihood of a set of target samples. First, we show that subliminal steering transfers complex multi-word biases, whereas prior work focused on single-word preferences, demonstrating a large scope of subliminally transferrable signals. Second, we provide mechanistic evidence that subliminal learning transfers not only the target behavioral bias, but also the steering vector itself, localized to the layers at which the teacher was steered. Finally, we show that the bias is encoded with surprising precision. We train a new steering vector directly on the subliminally-laden dataset and find that it attains high cosine similarity with the original vector.",
+    "summary": "Subliminal learning describes a student language model inheriting a behavioral bias by fine-tuning on seemingly innocuous data generated by a biased teacher model. Prior work has begun to characterize this phenomenon but leaves open questions about the scope of signals it can transfer, the mechanisms that explain it, and the precision with which a bias can be encoded. We tackle these problems by introducing subliminal steering, a variant of subliminal learning in which the teacher's bias is implemented not via a system prompt, as in prior work, but through a steering vector trained to maximize the likelihood of a set of target samples. First, we show that subliminal steering transfers complex multi-word biases, whereas prior work focused on single-word preferences, demonstrating a large scope of subliminally transferable signals. Moreover, the transfer is reliable enough to appear in settings previously thought not to exhibit subliminal learning, including plain SGD (not just Adam), full fine-tuning (not just LoRA), and models such as Llama and Phi. Second, we provide mechanistic evidence that subliminal learning transfers not only the target behavioral bias, but also the steering vector itself, localized to the layers at which the teacher was steered. Finally, we show that the bias is encoded with such precision that a new steering vector trained on the subliminally-laden dataset attains high cosine similarity with the original vector.",
     "published": "Apr 28",
-    "pdf_url": "https://arxiv.org/pdf/2604.25783v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.25783v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.25783v2",
+    "arxiv_url": "http://arxiv.org/abs/2604.25783v2",
     "queried_author": "John Hewitt",
     "matching_authors": [
       "John Hewitt"
@@ -9177,14 +9320,14 @@
       "Ziang Li",
       "Zixian Ma",
       "Jaemin Cho",
-      "Jason Ren",
+      "Zhongzheng Ren",
       "Daniel S Weld",
       "Ranjay Krishna"
     ],
-    "summary": "Scalable Vector Graphics (SVG) are an essential format for technical illustration and digital design, offering precise resolution independence and flexible semantic editability. In practice, however, original vector source files are frequently lost or inaccessible, leaving only \"flat\" rasterized versions (e.g., PNG or JPEG) that are difficult to modify or scale. Manually reconstructing these figures is a prohibitively labor-intensive process, requiring specialized expertise to recover the original geometric intent. To bridge this gap, we propose VFIG, a family of Vision-Language Models trained for complex and high-fidelity figure-to-SVG conversion. While this task is inherently data-driven, existing datasets are typically small-scale and lack the complexity of professional diagrams. We address this by introducing VFIG-DATA, a large-scale dataset of 66K high-quality figure-SVG pairs, curated from a diverse mix of real-world paper figures and procedurally generated diagrams. Recognizing that SVGs are composed of recurring primitives and hierarchical local structures, we introduce a coarse-to-fine training curriculum that begins with supervised fine-tuning (SFT) to learn atomic primitives and transitions to reinforcement learning (RL) refinement to optimize global diagram fidelity, layout consistency, and topological edge cases. Finally, we introduce VFIG-BENCH, a comprehensive evaluation suite with novel metrics designed to measure the structural integrity of complex figures. VFIG achieves state-of-the-art performance among open-source models and performs on par with GPT-5.2,...",
+    "summary": "Scalable Vector Graphics (SVG) are essential for technical illustration and digital design, offering resolution independence and semantic editability. In practice, original vector files are frequently lost, leaving only rasterized versions (e.g., PNG, JPEG) that resist modification, while manual reconstruction is prohibitively expensive. Progress on automating raster-to-SVG conversion has been bottlenecked by two gaps: existing SVG datasets are dominated by icons and decorative graphics that lack the complexity of professional diagrams, and existing benchmarks rely on pixel- or embedding-level similarity that fails to capture structural correctness (e.g., broken connectivity, misplaced arrows). We close both gaps with paired contributions targeting diagram-centric figures (e.g., model architectures, flowcharts, schematics). For training, we introduce VFIG-Data, the largest figure-to-SVG dataset of its kind at 66K pairs, combining real paper figures converted via a describe-and-generate pipeline with programmatic diagrams that supply noise-free supervision over arrow styles, fonts, and geometry. For evaluation, we introduce VFIG-Bench, a structure-aware evaluation suite, paired with VFIG-Bench-OOD, an out-of-distribution set of figures manually curated from highly cited arXiv papers. Beyond pixel and embedding similarity, our protocol reports rubric-based VLM-Judge scores and Elo ratings from pairwise human preference evaluation. Built on these contributions, VFIG is a VLM family trained with a simple-to-complex SFT curriculum followed by RL with rendering-aware rewards. VFI...",
     "published": "Mar 25",
-    "pdf_url": "https://arxiv.org/pdf/2603.24575v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.24575v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.24575v2",
+    "arxiv_url": "http://arxiv.org/abs/2603.24575v2",
     "queried_author": "Ranjay Krishna",
     "matching_authors": [
       "Ranjay Krishna"
@@ -12588,164 +12731,6 @@
     "queried_author": "Ari Holtzman",
     "matching_authors": [
       "Ari Holtzman"
-    ]
-  },
-  {
-    "title": "Multi-Token Prediction via Self-Distillation",
-    "authors": [
-      "John Kirchenbauer",
-      "Abhimanyu Hans",
-      "Brian Bartoldson",
-      "Micah Goldblum",
-      "Ashwinee Panda",
-      "Tom Goldstein"
-    ],
-    "summary": "Existing techniques for accelerating language model inference, such as speculative decoding, require training auxiliary speculator models and building and deploying complex inference pipelines. We consider a new approach for converting a pretrained autoregressive language model from a slow single next token prediction model into a fast standalone multi-token prediction model using a simple online distillation objective. The final model retains the exact same implementation as the pretrained initial checkpoint and is deployable without the addition of any auxiliary verifier or other specialized inference code. Our method produces models that decode more than $3\\times$ faster at $<5\\%$ drop in accuracy on GSM8K relative to the single token decoding performance of the same checkpoint.",
-    "published": "Feb 05",
-    "pdf_url": "https://arxiv.org/pdf/2602.06019v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.06019v2",
-    "queried_author": "Ashwinee Panda",
-    "matching_authors": [
-      "Ashwinee Panda",
-      "Micah Goldblum"
-    ]
-  },
-  {
-    "title": "MentorCollab: Large-to-Small Inference-Time Mentorship for Concise Reasoning in Language Models",
-    "authors": [
-      "Haojin Wang",
-      "Yike Wang",
-      "Shangbin Feng",
-      "Hannaneh Hajishirzi",
-      "Yulia Tsvetkov"
-    ],
-    "summary": "Large reasoning models (LRMs) have demonstrated impressive reasoning capabilities, but their solutions are often verbose and computationally expensive, and taxing for users to read. In contrast, small language models (SLMs) produce concise outputs with lower inference costs, yet they frequently struggle on challenging multi-step reasoning tasks. Existing inference-time collaboration methods attempt to bridge this gap through imitation, encouraging SLMs to follow the reasoning process of LRMs. However, the student often inherits the mentor's overthinking, producing long and reflective reasoning chains while still falling short in accuracy. We propose MentorCollab, a collaboration method based on mentorship: the SLM remains the primary generator and consults the LRM only when additional reasoning support is needed. At sparsely sampled token positions, we probe for divergence between the two models and use a lightweight verifier to decide whether the SLM should follow a short lookahead segment from its mentor or continue on its own. Across 15 SLM-LRM pairs and 3 domains, our method achieves an average gain of 3.0%, with improvements of up to 8.0% in 12 settings. The resulting traces remain shorter than the mentor's, using only a small fraction of its tokens. These results demonstrate that selective, verified mentorship can boost reasoning accuracy while preserving concise generation.",
-    "published": "Feb 05",
-    "pdf_url": "https://arxiv.org/pdf/2602.05307v3",
-    "arxiv_url": "http://arxiv.org/abs/2602.05307v3",
-    "queried_author": "Hannaneh Hajishirzi",
-    "matching_authors": [
-      "Hannaneh Hajishirzi"
-    ]
-  },
-  {
-    "title": "Theory of Space: Can Foundation Models Construct Spatial Beliefs through Active Exploration?",
-    "authors": [
-      "Pingyue Zhang",
-      "Zihan Huang",
-      "Yue Wang",
-      "Jieyu Zhang",
-      "Letian Xue",
-      "Zihan Wang",
-      "Qineng Wang",
-      "Keshigeyan Chandrasegaran",
-      "Ruohan Zhang",
-      "Yejin Choi",
-      "Ranjay Krishna",
-      "Jiajun Wu",
-      "Li Fei-Fei",
-      "Manling Li"
-    ],
-    "summary": "Spatial embodied intelligence requires agents to act to acquire information under partial observability. While multimodal foundation models excel at passive perception, their capacity for active, self-directed exploration remains understudied. We propose Theory of Space, defined as an agent's ability to actively acquire information through self-directed, active exploration and to construct, revise, and exploit a spatial belief from sequential, partial observations. We evaluate this through a benchmark where the goal is curiosity-driven exploration to build an accurate cognitive map. A key innovation is spatial belief probing, which prompts models to reveal their internal spatial representations at each step. Our evaluation of state-of-the-art models reveals several critical bottlenecks. First, we identify an Active-Passive Gap, where performance drops significantly when agents must autonomously gather information. Second, we find high inefficiency, as models explore unsystematically compared to program-based proxies. Through belief probing, we diagnose that while perception is an initial bottleneck, global beliefs suffer from instability that causes spatial knowledge to degrade over time. Finally, using a false belief paradigm, we uncover Belief Inertia, where agents fail to update obsolete priors with new evidence. This issue is present in text-based agents but is particularly severe in vision-based models. Our findings suggest that current foundation models struggle to maintain coherent, revisable spatial beliefs during active exploration.",
-    "published": "Feb 04",
-    "pdf_url": "https://arxiv.org/pdf/2602.07055v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.07055v1",
-    "queried_author": "Ranjay Krishna",
-    "matching_authors": [
-      "Ranjay Krishna",
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Reliable and Responsible Foundation Models: A Comprehensive Survey",
-    "authors": [
-      "Xinyu Yang",
-      "Junlin Han",
-      "Rishi Bommasani",
-      "Jinqi Luo",
-      "Wenjie Qu",
-      "Wangchunshu Zhou",
-      "Adel Bibi",
-      "Xiyao Wang",
-      "Jaehong Yoon",
-      "Elias Stengel-Eskin",
-      "Shengbang Tong",
-      "Lingfeng Shen",
-      "Rafael Rafailov",
-      "Runjia Li",
-      "Zhaoyang Wang",
-      "Yiyang Zhou",
-      "Chenhang Cui",
-      "Yu Wang",
-      "Wenhao Zheng",
-      "Huichi Zhou",
-      "Jindong Gu",
-      "Zhaorun Chen",
-      "Peng Xia",
-      "Tony Lee",
-      "Thomas Zollo",
-      "Vikash Sehwag",
-      "Jixuan Leng",
-      "Jiuhai Chen",
-      "Yuxin Wen",
-      "Huan Zhang",
-      "Zhun Deng",
-      "Linjun Zhang",
-      "Pavel Izmailov",
-      "Pang Wei Koh",
-      "Yulia Tsvetkov",
-      "Andrew Wilson",
-      "Jiaheng Zhang",
-      "James Zou",
-      "Cihang Xie",
-      "Hao Wang",
-      "Philip Torr",
-      "Julian McAuley",
-      "David Alvarez-Melis",
-      "Florian Tram\u00e8r",
-      "Kaidi Xu",
-      "Suman Jana",
-      "Chris Callison-Burch",
-      "Rene Vidal",
-      "Filippos Kokkinos",
-      "Mohit Bansal",
-      "Beidi Chen",
-      "Huaxiu Yao"
-    ],
-    "summary": "Foundation models, including Large Language Models (LLMs), Multimodal Large Language Models (MLLMs), Image Generative Models (i.e, Text-to-Image Models and Image-Editing Models), and Video Generative Models, have become essential tools with broad applications across various domains such as law, medicine, education, finance, science, and beyond. As these models see increasing real-world deployment, ensuring their reliability and responsibility has become critical for academia, industry, and government. This survey addresses the reliable and responsible development of foundation models. We explore critical issues, including bias and fairness, security and privacy, uncertainty, explainability, and distribution shift. Our research also covers model limitations, such as hallucinations, as well as methods like alignment and Artificial Intelligence-Generated Content (AIGC) detection. For each area, we review the current state of the field and outline concrete future research directions. Additionally, we discuss the intersections between these areas, highlighting their connections and shared challenges. We hope our survey fosters the development of foundation models that are not only powerful but also ethical, trustworthy, reliable, and socially responsible.",
-    "published": "Feb 04",
-    "pdf_url": "https://arxiv.org/pdf/2602.08145v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.08145v1",
-    "queried_author": "Pang Wei Koh",
-    "matching_authors": [
-      "Pang Wei Koh",
-      "Pavel Izmailov",
-      "Rafael Rafailov"
-    ]
-  },
-  {
-    "title": "Forecasting Future Language: Context Design for Mention Markets",
-    "authors": [
-      "Sumin Kim",
-      "Jihoon Kwon",
-      "Yoon Kim",
-      "Nicole Kagan",
-      "Raffi Khatchadourian",
-      "Wonbin Ahn",
-      "Alejandro Lopez-Lira",
-      "Jaewon Lee",
-      "Yoontae Hwang",
-      "Oscar Levy",
-      "Yongjae Lee",
-      "Chanyeol Choi"
-    ],
-    "summary": "Mention markets, a type of prediction market in which contracts resolve based on whether a specified keyword is mentioned during a future public event, require accurate probabilistic forecasts of keyword-mention outcomes. While recent work shows that large language models (LLMs) can generate forecasts competitive with human forecasters, it remains unclear how input context should be designed to support accurate prediction. In this paper, we study this question through experiments on earnings-call mention markets, which require forecasting whether a company will mention a specified keyword during its upcoming call. We run controlled comparisons varying (i) which contextual information is provided (news and/or prior earnings-call transcripts) and (ii) how \\textit{market probability}, (i.e., prediction market contract price) is used. We introduce Market-Conditioned Prompting (MCP), which explicitly treats the market-implied probability as a prior and instructs the LLM to update this prior using textual evidence, rather than re-predicting the base rate from scratch. In our experiments, we find three insights: (1) richer context consistently improves forecasting performance; (2) market-conditioned prompting (MCP), which treats the market probability as a prior and updates it using textual evidence, yields better-calibrated forecasts; and (3) a mixture of the market probability and MCP (MixMCP) outperforms the market baseline. By dampening the LLM's posterior update with the market prior, MixMCP yields more robust predictions than either the market or the LLM alone.",
-    "published": "Feb 04",
-    "pdf_url": "https://arxiv.org/pdf/2602.21229v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.21229v2",
-    "queried_author": "Yoon Kim",
-    "matching_authors": [
-      "Yoon Kim"
     ]
   }
 ]
