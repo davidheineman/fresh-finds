@@ -1,5 +1,23 @@
 [
   {
+    "title": "The Problem Is the Problem: Towards Scalable Mathematical Discovery",
+    "authors": [
+      "Zeyu Zheng",
+      "Shengtong Zhang",
+      "Jeremy Avigad",
+      "Prasad Tetali",
+      "Sean Welleck"
+    ],
+    "summary": "AI systems are increasingly capable of contributing to mathematical research. In research practice, frontier-model reasoning is a limited resource, and expert mathematical review is even more sharply constrained. Allocating these scarce resources well is therefore central to making AI-assisted mathematical discovery efficient. In most current AI-for-math workflows, human effort is concentrated at the beginning and end, in selecting suitable research problems and later reviewing the resulting artifacts. These two stages are becoming bottlenecks for research-level mathematics. We address them by proposing a new human-AI discovery paradigm. The human input is no longer a single problem selected in advance, but a research direction in which the experts have interest and expertise. The system then searches a broad literature corpus for candidate problems in that direction. Inspired by search and recommender systems, we build Find, Attempt, and Recommend (FAR), a literature-to-review cascade that automates the search for suitable problems and focuses human attention on artifacts that have passed several stages of filtering. In a combinatorics pilot, the pipeline starts from 5,245 combinatorics papers, recovers 6,453 candidate conjectures or open problems, and filters them to 4,717 apparently well-posed and still-open conjectures. Subsequent reasoning and automated triage stages surface 598 potential resolutions and select 77 items for author-team review. Among them, we identify many interesting discoveries, including results on conjectures and questions of Davies--Jenssen--Perkin...",
+    "published": "Aug 17",
+    "pdf_url": "https://arxiv.org/pdf/2608.16977v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.16977v1",
+    "queried_author": "Sean Welleck",
+    "matching_authors": [
+      "Sean Welleck"
+    ]
+  },
+  {
     "title": "Advancing Open and Reproducible Relational Learning: RelArena-$\u03b1$, TabPFN-Rel and RPI",
     "authors": [
       "Adrian Hayler",
@@ -2291,7 +2309,7 @@
       "Callum McDougall",
       "Bilal Chughtai",
       "Janos Kramar",
-      "Senthoran Rajamanoharan",
+      "Senthooran Rajamanoharan",
       "Cindy Wu",
       "Arthur Conmy",
       "Asic Q Chen",
@@ -2304,8 +2322,8 @@
     ],
     "summary": "LLM reasoning transparency is a critical affordance for understanding model decisions, mitigating misuse and misalignment, and debugging surprising model behaviors. However, DiffusionGemma performs a larger fraction of its computation in a continuous latent space; does this make its reasoning less transparent? We study this question by decomposing transparency into two components: variable transparency, whether we understand intermediate snapshots of a model's computational state; and algorithmic transparency, whether we can use these snapshots to reconstruct the process by which the model arrived at its outputs. Naively, DiffusionGemma has poor variable transparency: its opaque serial depth, the amount of serial computation that occurs in between interpretable model states, seems at first 28.6X higher than the corresponding autoregressive Gemma 4 model. However, we show that we can map the information flowing between denoising steps through an interpretable token bottleneck with no decrease in downstream performance. Treating these intermediate states as interpretable reduces the opaque serial depth to just 1.1X that of Gemma 4. Algorithmic transparency is harder for diffusion models than for autoregressive models because all token predictions in the canvas can change at every denoising step, giving the model the power to implement complicated distributed algorithms during the denoising process. To begin bridging this gap, we conduct a suite of interpretability case studies, uncovering initial evidence of novel diffusion-specific phenomena such as non-chronological reasoni...",
     "published": "Jun 18",
-    "pdf_url": "https://arxiv.org/pdf/2606.20560v1",
-    "arxiv_url": "http://arxiv.org/abs/2606.20560v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.20560v2",
+    "arxiv_url": "http://arxiv.org/abs/2606.20560v2",
     "queried_author": "Neel Nanda",
     "matching_authors": [
       "Neel Nanda"
@@ -12713,24 +12731,6 @@
     "queried_author": "Noah Goodman",
     "matching_authors": [
       "Noah Goodman"
-    ]
-  },
-  {
-    "title": "The Story is Not the Science: Execution-Grounded Evaluation of Mechanistic Interpretability Research",
-    "authors": [
-      "Xiaoyan Bai",
-      "Alexander Baumgartner",
-      "Haojia Sun",
-      "Ari Holtzman",
-      "Chenhao Tan"
-    ],
-    "summary": "Reproducibility crises across sciences highlight the limitations of the paper-centric review system in assessing the rigor and reproducibility of research. AI agents that autonomously design and generate large volumes of research outputs exacerbate these challenges. In this work, we address the growing challenges of scalability and rigor by flipping the dynamic and developing AI agents as research evaluators. We propose the first execution-grounded evaluation framework that verifies research beyond narrative review by examining code and data alongside the paper. We use mechanistic interpretability research as a testbed, build standardized research output, and develop MechEvalAgent, an automated evaluation framework that assesses the coherence of the experimental process, the reproducibility of results, and the generalizability of findings. We show that our framework achieves above 80% agreement with human judges, identifies substantial methodological problems, and surfaces 51 additional issues that human reviewers miss. Our work demonstrates the potential of AI agents to transform research evaluation and pave the way for rigorous scientific practices.",
-    "published": "Feb 05",
-    "pdf_url": "https://arxiv.org/pdf/2602.18458v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.18458v1",
-    "queried_author": "Ari Holtzman",
-    "matching_authors": [
-      "Ari Holtzman"
     ]
   }
 ]
