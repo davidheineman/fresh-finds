@@ -1,5 +1,38 @@
 [
   {
+    "title": "SPADE: Self-Play in Adaptive Synthetic Executable Environments",
+    "authors": [
+      "Bo Liu",
+      "Simon Yu",
+      "Yiding Jiang",
+      "Ao Qu",
+      "Andrew Zhao",
+      "Zichen Liu",
+      "Junsu Kim",
+      "Zijian Zhou",
+      "Seungone Kim",
+      "Tongzheng Ren",
+      "Mickel Liu",
+      "Hanfei Yu",
+      "Zhaorun Chen",
+      "Weiyan Shi",
+      "Paul Pu Liang",
+      "Luke Zettlemoyer",
+      "Yejin Choi",
+      "Natasha Jaques"
+    ],
+    "summary": "Continuous self-improvement requires an ever-expanding pool of self-generated, diverse, adaptive goals. For language agents, existing training environment pools (hand-curated, statically synthesized, or frozen-verifier) keep the goal distribution fixed as the learner scales. We introduce SPADE (Self-Play in Adaptive Synthetic Executable Environments), a self-play RL framework in which a single LLM plays two roles: an Environment Designer that writes complete, long-horizon training environments as executable code with an OpenAI Gym-style reset()/step() interface, and a Reasoning Agent that learns to act in them. Each is a stateful, multi-turn environment (state transitions, reward functions, and verification code), so one interface spans reasoning problems and multi-step agentic tool use. The Reasoning Agent's regret is estimated using the gap between its reward with and without privileged hints; in optimizing this regret signal the Environment Designer learns to target environments at the edge of the agent's capabilities while keeping them feasible. Through extensive experimentation, we find several components critical to success: grounding the Environment Designer on documents sampled from a large pretraining corpus, and giving it an accumulated environment memory. Scaling to 30B-parameter models, SPADE improves over the strongest fixed-environment baseline by +5.3 on average across eight held-out math, science, code, and reasoning benchmarks, and lifts the tool-use setting by +5.7 on BFCL-v4 multi-turn and +13.9 on ACEBench-Agent; on the games setting, the margin over the...",
+    "published": "Aug 19",
+    "pdf_url": "https://arxiv.org/pdf/2608.19197v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.19197v1",
+    "queried_author": "Luke Zettlemoyer",
+    "matching_authors": [
+      "Luke Zettlemoyer",
+      "Seungone Kim",
+      "Yejin Choi"
+    ]
+  },
+  {
     "title": "The Problem Is the Problem: Towards Scalable Mathematical Discovery",
     "authors": [
       "Zeyu Zheng",
@@ -12715,22 +12748,6 @@
     "queried_author": "Eunsol Choi",
     "matching_authors": [
       "Eunsol Choi"
-    ]
-  },
-  {
-    "title": "Large Language Model Reasoning Failures",
-    "authors": [
-      "Peiyang Song",
-      "Pengrui Han",
-      "Noah Goodman"
-    ],
-    "summary": "Large Language Models (LLMs) have exhibited remarkable reasoning capabilities, achieving impressive results across a wide range of tasks. Despite these advances, significant reasoning failures persist, occurring even in seemingly simple scenarios. To systematically understand and address these shortcomings, we present the first comprehensive survey dedicated to reasoning failures in LLMs. We introduce a novel categorization framework that distinguishes reasoning into embodied and non-embodied types, with the latter further subdivided into informal (intuitive) and formal (logical) reasoning. In parallel, we classify reasoning failures along a complementary axis into three types: fundamental failures intrinsic to LLM architectures that broadly affect downstream tasks; application-specific limitations that manifest in particular domains; and robustness issues characterized by inconsistent performance across minor variations. For each reasoning failure, we provide a clear definition, analyze existing studies, explore root causes, and present mitigation strategies. By unifying fragmented research efforts, our survey provides a structured perspective on systemic weaknesses in LLM reasoning, offering valuable insights and guiding future research towards building stronger, more reliable, and robust reasoning capabilities. We additionally release a comprehensive collection of research works on LLM reasoning failures, as a GitHub repository at https://github.com/Peiyang-Song/Awesome-LLM-Reasoning-Failures, to provide an easy entry point to this area.",
-    "published": "Feb 05",
-    "pdf_url": "https://arxiv.org/pdf/2602.06176v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.06176v1",
-    "queried_author": "Noah Goodman",
-    "matching_authors": [
-      "Noah Goodman"
     ]
   }
 ]
