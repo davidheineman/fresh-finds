@@ -1,5 +1,44 @@
 [
   {
+    "title": "Your AI, On a Dial: Controlling Investment Bias in LLMs with a Single Neuron",
+    "authors": [
+      "Sahong Park",
+      "Suhwan Park",
+      "Hoyoung Lee",
+      "Gakyung Kwon",
+      "Wonbin Ahn",
+      "Jaewon Choi",
+      "Alejandro Lopez-Lira",
+      "Yoon Kim",
+      "Chanyeol Choi",
+      "Hyeongwoo Kong",
+      "Yongjae Lee"
+    ],
+    "summary": "Large language models (LLMs) are increasingly used in investment decision-making, yet prior work shows that they exhibit systematic, model-specific investment preferences. We study whether a model's overall investment stance can be calibrated to a specified direction and strength. We introduce an investment-bias dial, an inference-time intervention on a single neuron that continuously adjusts a model-level decision prior---its overall tendency toward buying or selling---without targeting specific firms or investment attributes. Using matched positive and negative evidence, we evaluate five open-weight LLMs and find that the dial produces monotonic changes in investment stance without modifying prompts or model parameters. At the response level, the dial shifts both investment decisions and the evidential emphasis of generated rationales under identical inputs. In an agentic retrieval setting, the dial also changes what information the model searches for, which evidence it selects, and which evidence is reflected in its final analysis. In a long-context evaluation, the dial maintains stable stance control as context length increases, whereas a matched system-prompt instruction progressively attenuates. We further show that changes in the dial propagate to security rankings and downstream portfolio composition in an exploratory backtest. Overall, our results show that an LLM's aggregate investment stance can be calibrated toward a specified target at inference time.",
+    "published": "Aug 24",
+    "pdf_url": "https://arxiv.org/pdf/2608.22852v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.22852v1",
+    "queried_author": "Yoon Kim",
+    "matching_authors": [
+      "Yoon Kim"
+    ]
+  },
+  {
+    "title": "Reinforcement Learning on Benign Facts Amplifies Leakage of Memorized Private Data",
+    "authors": [
+      "Renfei Zhang",
+      "Niloofar Mireshghallah"
+    ],
+    "summary": "Reinforcement learning with verifiable rewards (RLVR) is deployed to make models better at reasoning tasks, but its side effect on what models will divulge is under studied. Here we show that RLVR on facts increases extraction of personally identifiable information (PII) the instruct model had already memorized. We first confirm that instruct models have already memorized PII but leave them latent, rarely surfacing one when asked. We then apply RL on benign factual data that contains no PII of any kind, and re-probe: a targeted probe over name->email pairs, and an untargeted free-recall prompt that simply asks the model to list the addresses it knows. PII extraction rises sharply under both: on DeepSeek-V3.1, verbatim recall@k increases from 0.155 to 0.370, a 2.4x gain. The effect scales with model size: across three models spanning 8B to 671B parameters, absolute leakage is largest in the biggest model. Meanwhile model's reasoning abilities and refusal rates are retained, indicating that RL selectively changes which memorized information is accessible rather than broadly altering the model. In summary, memorized private data can be made markedly more extractable by training that never touches it. This gives an adversary a route to memorized data that requires no privacy-relevant training signal and no access to the data itself -- only the ability to fine-tune on something innocuous.",
+    "published": "Aug 22",
+    "pdf_url": "https://arxiv.org/pdf/2608.21727v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.21727v1",
+    "queried_author": "Niloofar Mireshghallah",
+    "matching_authors": [
+      "Niloofar Mireshghallah"
+    ]
+  },
+  {
     "title": "CLEAR: Continuous Latent Adapter Routing for Utility-Preserving LLM Safety Alignment",
     "authors": [
       "Chengxiao Wang",
@@ -47,8 +86,8 @@
     ],
     "summary": "Heterogeneous AI systems composed of multiple models, architectures, harnesses, or inference-time settings can improve quality and efficiency by routing queries to the specialist who can answer most effectively at the lowest cost. Routing requires estimating each specialist's expected return, but this value estimation has a cost. Cheap estimators (e.g., embedding-based predictors) are fast but noisy, while accurate estimators (e.g., fine-tuned models with access to retrieval results or partial reasoning traces) are expensive. We formalize this tradeoff as an instance of Pandora's Box, the classical problem of optimal search with costly inspection. Under a Gaussian signal model, the resulting policies have closed-form value-of-information expressions that determine, for each specialist and input, whether refining the value estimate is worth its cost. We call the centralized policy Pandora's Router. We extend this to a decentralized setting, Pandora's Bidder, where specialists independently decide whether to invest in self-assessment before accepting an offered price to claim a query. Experiments across three domains---a standard multi-LLM benchmark, retrieval-augmented specialists, and LLMs with variable inference-time reasoning---show that Pandora's Router matches the routing quality of exhaustive estimation, while querying the expensive estimator far less often. In the decentralized setting, value-of-information reasoning improves allocative efficiency when competing estimates are accurate; when competing estimates are noisy, however, it can increase the strategic speciali...",
     "published": "Aug 20",
-    "pdf_url": "https://arxiv.org/pdf/2608.20316v1",
-    "arxiv_url": "http://arxiv.org/abs/2608.20316v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.20316v2",
+    "arxiv_url": "http://arxiv.org/abs/2608.20316v2",
     "queried_author": "Jacob Eisenstein",
     "matching_authors": [
       "Jacob Eisenstein"
@@ -131,8 +170,8 @@
     ],
     "summary": "Continuous self-improvement requires an ever-expanding pool of self-generated, diverse, adaptive goals. For language agents, existing training environment pools (hand-curated, statically synthesized, or frozen-verifier) keep the goal distribution fixed as the learner scales. We introduce SPADE (Self-Play in Adaptive Synthetic Executable Environments), a self-play RL framework in which a single LLM plays two roles: an Environment Designer that writes complete, long-horizon training environments as executable code with an OpenAI Gym-style reset()/step() interface, and a Reasoning Agent that learns to act in them. Each is a stateful, multi-turn environment (state transitions, reward functions, and verification code), so one interface spans reasoning problems and multi-step agentic tool use. The Reasoning Agent's regret is estimated using the gap between its reward with and without privileged hints; in optimizing this regret signal the Environment Designer learns to target environments at the edge of the agent's capabilities while keeping them feasible. Through extensive experimentation, we find several components critical to success: grounding the Environment Designer on documents sampled from a large pretraining corpus, and giving it an accumulated environment memory. Scaling to 30B-parameter models, SPADE improves over the strongest fixed-environment baseline by +5.3 on average across eight held-out math, science, code, and reasoning benchmarks, and lifts the tool-use setting by +5.7 on BFCL-v4 multi-turn and +13.9 on ACEBench-Agent; on the games setting, the margin over the...",
     "published": "Aug 19",
-    "pdf_url": "https://arxiv.org/pdf/2608.19197v1",
-    "arxiv_url": "http://arxiv.org/abs/2608.19197v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.19197v2",
+    "arxiv_url": "http://arxiv.org/abs/2608.19197v2",
     "queried_author": "Luke Zettlemoyer",
     "matching_authors": [
       "Luke Zettlemoyer",
@@ -216,6 +255,29 @@
     "queried_author": "Jure Leskovec",
     "matching_authors": [
       "Jure Leskovec"
+    ]
+  },
+  {
+    "title": "Evaluating Multimodal Narrative Understanding of Popular Hollywood Films",
+    "authors": [
+      "David Bamman",
+      "Kent K. Chang",
+      "Allison Cooper",
+      "Juishan Hsu",
+      "Reina Kushihashi",
+      "Madison Mar",
+      "Arnav Podichetty",
+      "Rachael Samberg",
+      "Ipek Nil Sancak",
+      "Yuhan Shao"
+    ],
+    "summary": "Multimodal language models increasingly show promise for enabling the large-scale computational analysis of film, opening up new avenues for learning about film history and the evolution of narrative techniques. But the creation of stable benchmarks built around Hollywood films is complicated by copyright protections. In this work, we address these concerns directly, by building a new collection of Hollywood films defined by two criteria: box office popularity (where we publish the first large-scale, open collection of weekly box office earnings reported by Variety magazine from 1922-1979); and likely public domain status (by researching copyright registrations and renewals in the US Catalog of Copyright Entries). We build a new multimodal MCQ benchmark on top of this collection that focuses on narrative elements that directly evaluate the abilities of models to inform meaningful research on film narrative; we find that many vision-language models struggle on this task (with many performing at near-chance levels of accuracy), while audio-visual models (including those that use audio in captioning scenes) reach a maximum accuracy of 61.1%, well below human-level performance.",
+    "published": "Aug 17",
+    "pdf_url": "https://arxiv.org/pdf/2608.21430v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.21430v1",
+    "queried_author": "David Bamman",
+    "matching_authors": [
+      "David Bamman"
     ]
   },
   {
@@ -7784,8 +7846,8 @@
     ],
     "summary": "Reinforcement learning with verifiable rewards (RLVR) typically optimizes for outcome rewards without imposing constraints on intermediate reasoning. This leaves training susceptible to reward hacking, where models exploit loopholes (e.g., spurious patterns in training data) in the reward function to achieve high scores without solving the intended task. These reward-hacking behaviors are often implicit, as the intermediate chain-of-thought (CoT) may appear plausible on the surface, limiting the effectiveness of purely text-based monitoring. We propose Gradient Fingerprint (GRIFT), a method for detecting reward hacking using models' internal computations. Given a prompt and a model-generated CoT, GRIFT computes gradients of the CoT conditioned on the prompt and compresses them into a compact representation, which is then used to assess whether the CoT reflects reward hacking behavior. Across verifiable reasoning benchmarks spanning math, code, and logical reasoning, GRIFT substantially outperforms strong baselines, including CoT Monitor and TRACE, achieving over 25% relative improvement in detecting reward hacking behavior. Moreover, integrating GRIFT into the rejection fine-tuning pipeline for reasoning tasks reduces reward hacking and improves performance on the true task objective. Our results highlight a promising direction of leveraging gradient level representations for assessing the quality of CoT reasoning traces. Our code is available at: https://github.com/songtao-x/reward_hack.",
     "published": "Apr 17",
-    "pdf_url": "https://arxiv.org/pdf/2604.16242v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.16242v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.16242v2",
+    "arxiv_url": "http://arxiv.org/abs/2604.16242v2",
     "queried_author": "Greg Durrett",
     "matching_authors": [
       "Greg Durrett"
@@ -8730,10 +8792,10 @@
       "Seraphina Goldfarb-Tarrant",
       "Yonatan Belinkov"
     ],
-    "summary": "Large language models (LLMs) undergo alignment training to avoid harmful behaviors, yet the resulting safeguards remain brittle: jailbreaks routinely bypass them, and fine-tuning on narrow domains can induce ``emergent misalignment'' that generalizes broadly. Whether this brittleness reflects a fundamental lack of coherent internal organization for harmfulness remains unclear. Here we use targeted weight pruning as a causal intervention to probe the internal organization of harmfulness in LLMs. We find that harmful content generation depends on a compact set of weights that are general across harm types and distinct from benign capabilities. Aligned models exhibit a greater compression of harm generation weights than unaligned counterparts, indicating that alignment reshapes harmful representations internally--despite the brittleness of safety guardrails at the surface level. This compression explains emergent misalignment: if weights of harmful capabilities are compressed, fine-tuning that engages these weights in one domain can trigger broad misalignment. Consistent with this, pruning harm generation weights in a narrow domain substantially reduces emergent misalignment. Notably, LLMs harmful generation capability is dissociated from how they recognize and explain such content. Together, these results reveal a coherent internal structure for harmfulness in LLMs that may serve as a foundation for more principled approaches to safety.",
+    "summary": "Large language models remain vulnerable to jailbreaks that elicit harmful responses, yet the mechanism behind harmful response generation is poorly understood. Here, we investigate how this capability is organized within model parameters. We identify and prune parameters that specifically support harmful compliance, providing a direct mechanistic analysis at the parameter level. We find that this capability depends on a sparse set of critical parameters: pruning these parameters substantially reduces harmful compliance while causing only limited degradation in benign capabilities, suggesting that key components of harmful generation are separable from those of general utility. Parameters identified from one harm category also reduce harmful responses in others, indicating components shared across harm types. This separability appears primarily in aligned models, suggesting that alignment training internally reshapes the harmful response mechanism even when behavioral safeguards remain brittle. We further show that harmful response generation is dissociable from the ability to recognize and reason about harmfulness. Finally, we extend our analysis to emergent misalignment and identify a sparse set of parameters contributing to it, with substantial sharing across fine-tuning domains. Together, these results reveal a consistent parameter-level organization underlying unsafe behaviors and point toward more principled interventions for improving model safety.",
     "published": "Apr 10",
-    "pdf_url": "https://arxiv.org/pdf/2604.09544v2",
-    "arxiv_url": "http://arxiv.org/abs/2604.09544v2",
+    "pdf_url": "https://arxiv.org/pdf/2604.09544v3",
+    "arxiv_url": "http://arxiv.org/abs/2604.09544v3",
     "queried_author": "Peter Henderson",
     "matching_authors": [
       "Peter Henderson"
@@ -9155,10 +9217,10 @@
       "Dan Jurafsky",
       "Diyi Yang"
     ],
-    "summary": "LLMs can be socially sycophantic, affirming users when they ask questions like \"am I in the wrong?\" rather than providing genuine assessment. We hypothesize that this behavior arises from incorrect assumptions about the user, like underestimating how often users are seeking information over reassurance. We present Verbalized Assumptions, a framework for eliciting these assumptions from LLMs. Verbalized Assumptions provide insight into LLM sycophancy, delusion, and other safety issues, e.g., the top bigram in LLMs' assumptions on social sycophancy datasets is ``seeking validation.'' We provide evidence for a causal link between Verbalized Assumptions and sycophantic model behavior: our assumption probes (linear probes trained on internal representations of these assumptions) enable interpretable fine-grained steering of social sycophancy. We explore why LLMs default to sycophantic assumptions: on identical queries, people expect more objective and informative responses from AI than from other humans, but LLMs trained on human-human conversation do not account for this difference in expectations. Our work contributes a new understanding of assumptions as a mechanism for sycophancy.",
+    "summary": "LLMs can be socially sycophantic, affirming users when they ask questions like \"am I in the wrong?\" rather than providing genuine assessment. We hypothesize that this behavior arises from LLMs' incorrect assumptions about the user, like underestimating how often users are seeking information over reassurance. We present Verbalized Assumptions, a framework for eliciting these assumptions from LLMs. Verbalized Assumptions provide insight into LLM sycophancy, delusion, and other safety issues: in social sycophancy datasets, \"seeking validation\" is the most frequent bigram in LLMs' assumptions. We provide evidence for a causal link between assumptions and sycophantic model behavior: we train linear probes on internal representations associated with Verbalized Assumptions and then use these probes for interpretable, fine-grained steering of social sycophancy. Finally, we identify a human-AI expectation gap that explains why LLMs default to sycophantic assumptions. On identical queries, people expect more objective and informative responses from AI than from other humans, but LLMs trained on human-human conversation do not account for this difference in expectations. Our work contributes a new understanding of assumptions as a mechanism for analyzing and controlling sycophancy.",
     "published": "Apr 03",
-    "pdf_url": "https://arxiv.org/pdf/2604.03058v2",
-    "arxiv_url": "http://arxiv.org/abs/2604.03058v2",
+    "pdf_url": "https://arxiv.org/pdf/2604.03058v3",
+    "arxiv_url": "http://arxiv.org/abs/2604.03058v3",
     "queried_author": "Dan Jurafsky",
     "matching_authors": [
       "Dan Jurafsky",
@@ -12691,57 +12753,6 @@
     "matching_authors": [
       "Kyle Lo",
       "Luca Soldaini"
-    ]
-  },
-  {
-    "title": "Emergent Misalignment is Easy, Narrow Misalignment is Hard",
-    "authors": [
-      "Anna Soligo",
-      "Edward Turner",
-      "Senthooran Rajamanoharan",
-      "Neel Nanda"
-    ],
-    "summary": "Finetuning large language models on narrowly harmful datasets can cause them to become emergently misaligned, giving stereotypically `evil' responses across diverse unrelated settings. Concerningly, a pre-registered survey of experts failed to predict this result, highlighting our poor understanding of the inductive biases governing learning and generalisation in LLMs. We use emergent misalignment (EM) as a case study to investigate these inductive biases and find that models can just learn the narrow dataset task, but that the general solution appears to be more stable and more efficient. To establish this, we build on the result that different EM finetunes converge to the same linear representation of general misalignment, which can be used to mediate misaligned behaviour. We find a linear representation of the narrow solution also exists, and can be learned by introducing a KL divergence loss. Comparing these representations reveals that general misalignment achieves lower loss, is more robust to perturbations, and is more influential in the pre-training distribution. This work isolates a concrete representation of general misalignment for monitoring and mitigation. More broadly, it offers a detailed case study and preliminary metrics for investigating how inductive biases shape generalisation in LLMs. We open-source all code, datasets and model finetunes.",
-    "published": "Feb 08",
-    "pdf_url": "https://arxiv.org/pdf/2602.07852v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.07852v1",
-    "queried_author": "Neel Nanda",
-    "matching_authors": [
-      "Neel Nanda"
-    ]
-  },
-  {
-    "title": "LLMs Know More About Numbers than They Can Say",
-    "authors": [
-      "Fengting Yuchi",
-      "Li Du",
-      "Jason Eisner"
-    ],
-    "summary": "Although state-of-the-art LLMs can solve math problems, we find that they make errors on numerical comparisons with mixed notation: \"Which is larger, $5.7 \\times 10^2$ or $580$?\" This raises a fundamental question: Do LLMs even know how big these numbers are? We probe the hidden states of several smaller open-source LLMs. A single linear projection of an appropriate hidden layer encodes the log-magnitudes of both kinds of numerals, allowing us to recover the numbers with relative error of about 2.3% (on restricted synthetic text) or 19.06% (on scientific papers). Furthermore, the hidden state after reading a pair of numerals encodes their ranking, with a linear classifier achieving over 90% accuracy. Yet surprisingly, when explicitly asked to rank the same pairs of numerals, these LLMs achieve only 50-70% accuracy, with worse performance for models whose probes are less effective. Finally, we show that incorporating the classifier probe's log-loss as an auxiliary objective during finetuning brings an additional 3.22% improvement in verbalized accuracy over base models, demonstrating that improving models' internal magnitude representations can enhance their numerical reasoning capabilities. Our code is available at https://github.com/VCY019/Numeracy-Probing.",
-    "published": "Feb 08",
-    "pdf_url": "https://arxiv.org/pdf/2602.07812v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.07812v2",
-    "queried_author": "Jason Eisner",
-    "matching_authors": [
-      "Jason Eisner"
-    ]
-  },
-  {
-    "title": "Fairness Aware Reward Optimization",
-    "authors": [
-      "Ching Lam Choi",
-      "Vighnesh Subramaniam",
-      "Phillip Isola",
-      "Antonio Torralba",
-      "Stefanie Jegelka"
-    ],
-    "summary": "Demographic skews in human preference data propagate systematic unfairness through reward models into aligned LLMs. We introduce Fairness Aware Reward Optimization (Faro), an in-processing framework that trains reward models under demographic parity, equalized odds, or counterfactual fairness constraints. We provide the first theoretical analysis of reward-level fairness in LLM alignment, establishing: (i) provable fairness certificates for Faro-trained rewards with controllable slack; a (ii) formal characterization of the accuracy-fairness trade-off induced by KL-regularized fine-tuning, proving fairness transfers from reward to policy; and the (iii) existence of a non-empty Pareto frontier. Unlike pre- and post-processing methods, Faro ensures reward models are simultaneously ordinal (ranking correctly), cardinal (calibrated), and fair. Across multiple LLMs and benchmarks, Faro significantly reduces bias and harmful generations while maintaining or improving model quality.",
-    "published": "Feb 08",
-    "pdf_url": "https://arxiv.org/pdf/2602.07799v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.07799v1",
-    "queried_author": "Phillip Isola",
-    "matching_authors": [
-      "Phillip Isola"
     ]
   }
 ]
