@@ -1,5 +1,62 @@
 [
   {
+    "title": "Prefix Sliding for efficient test-time scaling",
+    "authors": [
+      "Niklas Muennighoff",
+      "Zhengyang Wang",
+      "Zeyi Chen",
+      "Weijia Shi",
+      "Binyuan Hui",
+      "John Yang",
+      "Dapeng Jiang",
+      "Mika Senghaas",
+      "Fares Obeid",
+      "Johannes Hagemann",
+      "Sami Jaghouar",
+      "Ludwig Schmidt",
+      "Percy Liang",
+      "Jason Wei",
+      "Andrew Y. Ng",
+      "Luke Zettlemoyer",
+      "Yejin Choi",
+      "Mike Lewis"
+    ],
+    "summary": "Test-time scaling uses extra test-time compute to improve performance, such as letting language models reason longer when solving a problem. As models keep the entire reasoning trace in memory via full attention, hard tasks that need long thinking can be prohibitively expensive. However, we find most intermediate reasoning tokens lose importance as the model continues reasoning. This calls into question whether retaining them is worth the cost. Based on this insight, we propose Prefix Sliding, which discards tokens during reasoning that are not part of the prefix or the window of the last few thousand tokens. The prefix has key instructions and tools available to the model, while the most recent tokens are the current reasoning the model is working on. This caps the total memory requirement regardless of how long the model reasons, allowing for efficient long-horizon test-time scaling. Without training, Prefix Sliding can make existing models 3x faster while maintaining performance. Training with Prefix Sliding using reinforcement learning can achieve better performance by enabling scaling to reasoning traces beyond a hundred thousand tokens. Ablations show Prefix Sliding outperforms summarizing intermediate tokens or vanilla sliding window. Our code is at https://github.com/Muennighoff/prefix-sliding",
+    "published": "Aug 26",
+    "pdf_url": "https://arxiv.org/pdf/2608.26070v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.26070v1",
+    "queried_author": "Ludwig Schmidt",
+    "matching_authors": [
+      "Ludwig Schmidt",
+      "Luke Zettlemoyer",
+      "Mike Lewis",
+      "Niklas Muennighoff",
+      "Percy Liang",
+      "Yejin Choi"
+    ]
+  },
+  {
+    "title": "A Few Pages of Markdown: Committed AI Configuration and Lower Quality Cost after Coding-Agent Adoption",
+    "authors": [
+      "Yegor Denisov-Blanch",
+      "Shyam Agarwal",
+      "Pavel Azaletskiy",
+      "Hao He",
+      "Rylan Schaeffer",
+      "Brando Miranda",
+      "Bogdan Vasilescu",
+      "Sanmi Koyejo"
+    ],
+    "summary": "Coding agents increase development velocity but also technical debt. Prior work reports only average effects across adopters, hiding wide differences between teams. We introduce RAMP (Repository AI Maturity Profile), a four-level cumulative maturity model grounded in version-controlled artifacts that teams commit to configure AI tools. RAMP runs from behavioral rules and coding standards through named agent definitions to multi-agent orchestration, with observed practice concentrated in the first three levels. Across 441 repositories the levels behave as a cumulative scale, and independent human annotation reproduces RAMP's repository-level labels on 97% of a held-out sample. Adoption is cumulative, forward-only, and set-and-forget: 73.8% of artifacts are committed once and never modified. Re-estimating an existing agent-adoption panel within each stratum, agents accelerate development regardless of maturity (28-38% more commits), but quality diverges: among agent-first repositories, where the contrast is identified, those without committed AI configuration show roughly twice the increase in cognitive complexity (+53% versus +27%) and 1.7x the increase in static-analysis warnings. Because maturity is observational, correlated engineering discipline or model capability may explain part of the gap; we present these findings as hypothesis-generating and release RAMP as a reusable instrument.",
+    "published": "Aug 26",
+    "pdf_url": "https://arxiv.org/pdf/2608.25241v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.25241v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
     "title": "Your AI, On a Dial: Controlling Investment Bias in LLMs with a Single Neuron",
     "authors": [
       "Sahong Park",
@@ -31,8 +88,8 @@
     ],
     "summary": "Reinforcement learning with verifiable rewards (RLVR) is deployed to make models better at reasoning tasks, but its side effect on what models will divulge is under studied. Here we show that RLVR on facts increases extraction of personally identifiable information (PII) the instruct model had already memorized. We first confirm that instruct models have already memorized PII but leave them latent, rarely surfacing one when asked. We then apply RL on benign factual data that contains no PII of any kind, and re-probe: a targeted probe over name->email pairs, and an untargeted free-recall prompt that simply asks the model to list the addresses it knows. PII extraction rises sharply under both: on DeepSeek-V3.1, verbatim recall@k increases from 0.155 to 0.370, a 2.4x gain. The effect scales with model size: across three models spanning 8B to 671B parameters, absolute leakage is largest in the biggest model. Meanwhile model's reasoning abilities and refusal rates are retained, indicating that RL selectively changes which memorized information is accessible rather than broadly altering the model. In summary, memorized private data can be made markedly more extractable by training that never touches it. This gives an adversary a route to memorized data that requires no privacy-relevant training signal and no access to the data itself -- only the ability to fine-tune on something innocuous.",
     "published": "Aug 22",
-    "pdf_url": "https://arxiv.org/pdf/2608.21727v1",
-    "arxiv_url": "http://arxiv.org/abs/2608.21727v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.21727v2",
+    "arxiv_url": "http://arxiv.org/abs/2608.21727v2",
     "queried_author": "Niloofar Mireshghallah",
     "matching_authors": [
       "Niloofar Mireshghallah"
@@ -1723,10 +1780,10 @@
       "Xin Dong",
       "Wen-Tau Yih"
     ],
-    "summary": "As wearable devices enable continuous first-person recording, AI assistants must reason across long time horizons to recall past experiences-a capability known as episodic memory. Current benchmarks often rely on offline evaluation with access to entire video files, failing to simulate the streaming reality of wearable intelligence. We introduce S-EMBER (Streaming Egocentric Memory Benchmark for Episodic Retrieval), a large-scale benchmark comprising 3,141 videos totaling 388 hours of organic activity captured via Ray-Ban Meta smart glasses. S-EMBER formalizes grounded streaming episodic retrieval, a paradigm shift from global offline search to causal, active recall triggered by visual events in a continuous stream. We provide 9,448 QA pairs requiring manual visual proof through precise temporal localization and supporting flexible response lengths to simulate natural human-AI interaction. Our extensive benchmarking of frontier models uncovers a localization paradox: while semantic reasoning improves with parameter scale, temporal grounding precision remains a stagnant architectural bottleneck that does not benefit from brute-force increases in model size, resolution, or frame density. S-EMBER establishes a hardware-authentic foundation for developing grounded, reliable episodic memory in the next generation of wearable AI agents.",
+    "summary": "As wearable devices enable continuous first-person recording, AI assistants must reason across long time horizons to recall past experiences-a capability known as episodic memory. Current benchmarks often rely on offline evaluation with access to entire video files, failing to simulate the streaming reality of wearable intelligence. We introduce S-EMBER (Streaming Egocentric Memory Benchmark for Episodic Retrieval), a large-scale benchmark comprising 3,141 videos totaling 388 hours of organic activity captured via Ray-Ban Meta smart glasses. S-EMBER formalizes grounded streaming episodic retrieval, a paradigm shift from global offline search to causal, active recall triggered by visual events in a continuous stream. We provide 9,448 QA pairs requiring manual visual proof through precise temporal localization and supporting flexible response lengths to simulate natural human-AI interaction. Our extensive benchmarking of frontier models reveals a grounded recall gap: models answer and localize with moderate competence in isolation, yet fall furthest short of human performance when both must hold for the same query, the strongest reaching less than half the human rate. S-EMBER establishes a hardware-authentic foundation for developing grounded, reliable episodic memory in the next generation of wearable AI agents.",
     "published": "Jul 02",
-    "pdf_url": "https://arxiv.org/pdf/2607.02689v1",
-    "arxiv_url": "http://arxiv.org/abs/2607.02689v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.02689v2",
+    "arxiv_url": "http://arxiv.org/abs/2607.02689v2",
     "queried_author": "Wen-tau Yih",
     "matching_authors": [
       "Wen-tau Yih"
@@ -12714,45 +12771,6 @@
     "queried_author": "Nicholas Carlini",
     "matching_authors": [
       "Nicholas Carlini"
-    ]
-  },
-  {
-    "title": "iGRPO: Self-Feedback-Driven LLM Reasoning",
-    "authors": [
-      "Ali Hatamizadeh",
-      "Shrimai Prabhumoye",
-      "Igor Gitman",
-      "Ximing Lu",
-      "Seungju Han",
-      "Wei Ping",
-      "Yejin Choi",
-      "Jan Kautz"
-    ],
-    "summary": "Large Language Models (LLMs) have shown promise in solving complex mathematical problems, yet they still fall short of producing accurate and consistent solutions. Reinforcement Learning (RL) is a framework for aligning these models with task-specific rewards, improving overall quality and reliability. Group Relative Policy Optimization (GRPO) is an efficient, value-function-free alternative to Proximal Policy Optimization (PPO) that leverages group-relative reward normalization. We introduce Iterative Group Relative Policy Optimization (iGRPO), a two-stage extension of GRPO that adds dynamic self-conditioning through model-generated drafts. In Stage 1, iGRPO samples multiple exploratory drafts and selects the highest-reward draft using the same scalar reward signal used for optimization. In Stage 2, it appends this best draft to the original prompt and applies a GRPO-style update on draft-conditioned refinements, training the policy to improve beyond its strongest prior attempt. Under matched rollout budgets, iGRPO consistently outperforms GRPO across base models (e.g., Nemotron-H-8B-Base-8K and DeepSeek-R1 Distilled), validating its effectiveness on diverse reasoning benchmarks. Moreover, applying iGRPO to OpenReasoning-Nemotron-7B trained on AceReason-Math achieves new state-of-the-art results of 85.62\\% and 79.64\\% on AIME24 and AIME25, respectively. Ablations further show that the refinement wrapper generalizes beyond GRPO variants, benefits from a generative judge, and alters learning dynamics by delaying entropy collapse. These results underscore the potential of ite...",
-    "published": "Feb 09",
-    "pdf_url": "https://arxiv.org/pdf/2602.09000v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.09000v1",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "How2Everything: Mining the Web for How-To Procedures to Evaluate and Improve LLMs",
-    "authors": [
-      "Yapei Chang",
-      "Kyle Lo",
-      "Mohit Iyyer",
-      "Luca Soldaini"
-    ],
-    "summary": "Generating step-by-step \"how-to\" procedures is a key LLM capability: how-to advice is commonly requested in chatbots, and step-by-step planning is critical for reasoning over complex tasks. Yet, measuring and improving procedural validity at scale on real-world tasks remains challenging and understudied. To address this, we introduce How2Everything, a scalable framework to evaluate and improve goal-conditioned procedure generation. Our framework includes How2Mine, which mines 351K procedures from 980K web pages across 14 topics and readily scales to larger corpora. From this pool we build How2Bench, a 7K-example evaluation set balanced across topics. To reliably score model outputs, we develop How2Score, an evaluation protocol that uses an LLM judge to detect whether a generation contains any critical failure that would prevent achieving the goal. For low-cost, reproducible evaluation, we distill a frontier model into an open 8B model, achieving 80.5% agreement with human annotators. How2Bench reveals clear scaling trends across model sizes and training stages, providing signal early in pretraining. Finally, RL using How2Score as a reward improves performance on How2Bench by >10 points across three models without systematic regressions on standard benchmarks, with gains robust to superficial source-document memorization or format compliance. Taken together, How2Everything shows how pretraining web data can support a closed loop of capability evaluation and improvement at scale.",
-    "published": "Feb 09",
-    "pdf_url": "https://arxiv.org/pdf/2602.08808v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.08808v1",
-    "queried_author": "Kyle Lo",
-    "matching_authors": [
-      "Kyle Lo",
-      "Luca Soldaini"
     ]
   }
 ]
