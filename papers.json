@@ -1,5 +1,27 @@
 [
   {
+    "title": "Co-Evolving Structured Knowledge and Reasoning in Language Models",
+    "authors": [
+      "Ryan Thomas Noonan",
+      "Linxi Zhao",
+      "Menghan Xu",
+      "Akanksha Sarkar",
+      "Mihir Mishra",
+      "Dongyoung Go",
+      "Kilian Q. Weinberger",
+      "Yoav Artzi",
+      "Jennifer J. Sun"
+    ],
+    "summary": "Retrieval-augmented methods improve factual accuracy by grounding language models in external knowledge, but retrieving over unstructured text often introduces irrelevant context and offers limited control over the retrieved information. Structured knowledge bases offer a more controllable alternative, yet they are expensive to construct and often brittle to reason over. To address these limitations, we propose KBevo: a co-evolving framework that jointly learns to construct a structured knowledge base and reason over it for knowledge-intensive question answering. By optimizing both components end-to-end with QA outcome rewards, our method enables reasoning success to directly improve the quality of the constructed knowledge base. This leads to larger, better-connected knowledge structures with higher answer reachability, while also improving compositional factual reasoning and controllability compared to standard retrieval baselines.",
+    "published": "Aug 26",
+    "pdf_url": "https://arxiv.org/pdf/2608.26386v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.26386v1",
+    "queried_author": "Yoav Artzi",
+    "matching_authors": [
+      "Yoav Artzi"
+    ]
+  },
+  {
     "title": "Prefix Sliding for efficient test-time scaling",
     "authors": [
       "Niklas Muennighoff",
@@ -351,8 +373,8 @@
     ],
     "summary": "Large-scale pre-training has made robot policy fine-tuning increasingly data-efficient, but this progress has largely been driven by datasets and embodiments built around simple parallel-jaw grippers. Dexterous, multi-fingered hands remain comparatively data-starved because real teleoperation is costly to scale, while human hand video is off-embodiment and requires lossy pose estimation and retargeting. We introduce Simulation Pre-training for Dexterity (SPD), a pre-training framework for dexterous manipulation that uses data entirely collected in simulation. In SPD, humans manipulate virtual objects inside a VR headset, enabling on-embodiment trajectories and robot-free collection. With the help of five operators, we collect 75 hours of multi-task dexterous manipulation over one week, and use it to pre-train a causal transformer on a sequence modeling objective. We study the benefits of simulation pre-training on real-world tasks by fine-tuning on 1-2 hours of physical demonstrations on a 56-DoF bimanual dexterous setup. We find that our approach outperforms training behavior cloning policies from scratch, showing that simulation teleoperation is a viable pre-training source for real-world dexterous manipulation. We perform ablation studies, measuring the benefits of history conditioning and short action chunks for reactive control.",
     "published": "Aug 16",
-    "pdf_url": "https://arxiv.org/pdf/2608.15917v1",
-    "arxiv_url": "http://arxiv.org/abs/2608.15917v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.15917v2",
+    "arxiv_url": "http://arxiv.org/abs/2608.15917v2",
     "queried_author": "Phillip Isola",
     "matching_authors": [
       "Phillip Isola"
@@ -1339,8 +1361,8 @@
     ],
     "summary": "We revisit the evaluation of automatic harness evolution for LLM agents. Existing harness evolution methods use unit test cases to search for harness configurations and then report final performance on the same public benchmark. This protocol raises two fundamental concerns. First, harness evolution is itself an iterative search procedure that repeatedly evaluates and revises candidate harnesses using task feedback. As in agentic test-time scaling, it should therefore be compared with simple task-level search baselines under matched feedback and inference budgets to determine whether its gains arise from improved harness design or from additional search alone. Second, because the search and the final evaluation share the same benchmark, the reported gains risk overfitting to that specific task set. To address these concerns, we conduct an extensive evaluation comparing harness evolution with simple test-time scaling and discovery baselines under comparable feedback and inference budgets, and also evaluate evolved harnesses on held-out tasks to assess whether the discovered improvements generalize. Experiments on Terminal-Bench 2.1 with GPT-5.4 and Claude Opus 4.6 show that automatic harness evolution does not consistently outperform simple test-time scaling methods and exhibits limited generalization. Our results raise important questions about the effectiveness of automatic harness evolution and highlight the need for fairer evaluation protocols and benchmarks for automatic harness design. Our code is available at https://github.com/rethinking-harness-evolution.",
     "published": "Jul 14",
-    "pdf_url": "https://arxiv.org/pdf/2607.12227v1",
-    "arxiv_url": "http://arxiv.org/abs/2607.12227v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.12227v2",
+    "arxiv_url": "http://arxiv.org/abs/2607.12227v2",
     "queried_author": "Hannaneh Hajishirzi",
     "matching_authors": [
       "Hannaneh Hajishirzi"
@@ -12755,24 +12777,6 @@
     "queried_author": "Alisa Liu",
     "matching_authors": [
       "Alisa Liu"
-    ]
-  },
-  {
-    "title": "Haiku to Opus in Just 10 bits: LLMs Unlock Large Compression Gains",
-    "authors": [
-      "Roy Rinberg",
-      "Annabelle Michael Carrell",
-      "Simon Henniger",
-      "Nicholas Carlini",
-      "Keri Warr"
-    ],
-    "summary": "We study the compression of LLM-generated text across lossless and lossy regimes, characterizing a compression-compute frontier where more compression is possible at the cost of more compute. For lossless compression, domain-adapted LoRA adapters can improve LLM-based arithmetic coding by 2x over compression with the base LLM alone. For lossy compression, prompting a model for a succinct rewrite then applying arithmetic coding can achieve compression ratios of approximately 0.03, a 2x improvement over compressing the original response.\n  We further introduce Question-Asking compression (QA), an interactive lossy protocol inspired by the game 'Twenty Questions'. A small model iteratively refines its response by asking yes/no questions to a stronger model, transferring exactly one bit per answer. On 8 benchmarks spanning math, science, and code, 10 binary questions recover 23% to 72% of the capability gap between a small and large model on standard benchmarks and 7% to 38% on harder benchmarks, achieving compression ratios of 0.0006 to 0.004. This is over 100x smaller than prior LLM-based compression (Deletang et al., 2024), suggesting that interactive protocols can transfer knowledge far more efficiently than transmitting full responses.",
-    "published": "Feb 09",
-    "pdf_url": "https://arxiv.org/pdf/2604.02343v2",
-    "arxiv_url": "http://arxiv.org/abs/2604.02343v2",
-    "queried_author": "Nicholas Carlini",
-    "matching_authors": [
-      "Nicholas Carlini"
     ]
   }
 ]
