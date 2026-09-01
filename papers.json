@@ -1,5 +1,79 @@
 [
   {
+    "title": "Sycophantic Agreement Transfers with Neutral Data via Contrastive Preference Optimization",
+    "authors": [
+      "Camila Blank",
+      "Zhuofan Ying",
+      "Christopher Potts",
+      "Peter Hase",
+      "Jing Huang"
+    ],
+    "summary": "Sycophantic agreement refers to a behavior in which language models excessively affirm the user, often at the cost of factual accuracy. Although sycophantic agreement is a well-known failure of model alignment, there is limited understanding of how it emerges from model training. In this work, we demonstrate that sycophantic agreement can emerge as an unintended consequence of widely used contrastive preference optimization objectives. Using the OLMo 3 post-training pipeline, we show that, for various pairs of teacher models across three families, there is a strong correlation between the log-ratio of the teacher model sycophantic agreement rates and the resulting student model sycophantic agreement rate. We further demonstrate that this unintended transfer is not limited to DPO but also occurs across 6 other preference optimization objectives. To understand whether this effect can be attributed to particular training examples, we analyze the preference data and find that the sycophancy signal is diffused across the entire dataset rather than concentrated in a sparse set of examples: each example appears neutral, i.e., there are no explicit instances of sycophantic agreement, and filtering based on probe-based data attribution or logit-linear selection fails to mitigate sycophancy without removing a large portion of the dataset. Overall, our findings suggest that the teacher models used to generate preference data can interact with alignment training objectives in unexpected ways, generalizing to undesirable and potentially harmful behaviors like sycophantic agreement.",
+    "published": "Aug 31",
+    "pdf_url": "https://arxiv.org/pdf/2608.31079v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.31079v1",
+    "queried_author": "Christopher Potts",
+    "matching_authors": [
+      "Christopher Potts"
+    ]
+  },
+  {
+    "title": "VibeJam: A User Study Platform for Web Development with Agents",
+    "authors": [
+      "Nishant Balepur",
+      "Connor Baumler",
+      "Valerie Chen",
+      "Eunsol Choi",
+      "Rachel Rudinger",
+      "Jordan Boyd-Graber"
+    ],
+    "summary": "Programming with AI is increasingly agentic, users prompt LLMs to directly edit their code and review the changes, with adoption growing especially for web development tasks. Despite this growth, most NLP work uses offline evaluation and lacks support for online studies, losing insights into how programmers truly use coding agents. We release VibeJam, a browser-based user study platform for users to collaborate with AI agents to develop websites. VibeJam enables agent customization and uses the open-source Aider agent by default, and to mirror downstream use, we add diff review, chat and plan modes, and live website previews. In a pilot study with 55 released, game-based website creation tasks, five experienced AI programmers rate our system as fun, simple, and resembling commercial tools, while 13 junior students use VibeJam to make websites of higher quality than agents in the same task. We open-source VibeJam to spur extensions and support studies on how coding agents can help users.",
+    "published": "Aug 30",
+    "pdf_url": "https://arxiv.org/pdf/2608.29889v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.29889v1",
+    "queried_author": "Eunsol Choi",
+    "matching_authors": [
+      "Eunsol Choi"
+    ]
+  },
+  {
+    "title": "Check The Scoreboard: An Analysis of Scoring Schemes on Multiple-Choice Evaluation",
+    "authors": [
+      "Nishant Balepur",
+      "Paiheng Xu",
+      "Wei Ai",
+      "Eunsol Choi",
+      "Rachel Rudinger",
+      "Jordan Boyd-Graber"
+    ],
+    "summary": "Multiple-choice question answering (MCQA) benchmarks in NLP use number-right scoring (accuracy), but in educational testing, the scoring scheme, the combination of the response mode models follow and the rule for grading responses, is a key design choice that dictates which abilities to reward. We examine how alternatives to number right change what MCQA measures with six education-inspired schemes that assess abilities beyond accuracy: distractor elimination, abstention, confidence calibration, and self-correction. On LLM benchmarks, these schemes: 1) shift rankings of 31 LLMs beyond rephrased number right prompts; 2) better predict the LLMs users prefer in LLM Arena; and 3) reveal distinct model capabilities, like that GPT-5 rarely abstains and readily self-corrects, while weaker open-weight models often abstain and hesitate to eliminate choices. Given the benefits of alternative scoring schemes, we discuss ways to extend them to tasks beyond MCQA.",
+    "published": "Aug 30",
+    "pdf_url": "https://arxiv.org/pdf/2608.29887v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.29887v1",
+    "queried_author": "Eunsol Choi",
+    "matching_authors": [
+      "Eunsol Choi"
+    ]
+  },
+  {
+    "title": "An Eye-Tracking Dataset for Viewing Distance Categories in Real-World Scenarios",
+    "authors": [
+      "Dohwa Kim",
+      "Yejin Choi",
+      "Seungbok Lee",
+      "Chi Yoon Jeong",
+      "Eunji Park"
+    ],
+    "summary": "Estimating viewing distance from gaze behavior is essential for understanding user intent and enabling distance-aware interactive systems. However, most existing eye-tracking datasets have been collected in constrained settings, such as laboratory environments or static tasks. Consequently, they only partially capture viewing behaviors in real-world situations where viewing distance changes with natural head and body movements. We introduce GazeDepth, an eye-tracking dataset collected from 19 participants using a wearable tracker during tasks reflecting real-world scenarios. GazeDepth includes fixed-distance viewing scenarios with constant observer-target distances at near (33 cm), middle (50 cm), and far (300 cm), as well as variable-distance viewing scenarios in which participants shift gaze among targets at different depths in indoor and outdoor environments. The dataset provides synchronized gaze data, pupil size, 3D eye-vectors, and head-motion signals, along with distance labels. Statistical analyses showed that distance-related gaze features, such as vergence angle and estimated viewing distance, differed consistently across viewing-distance categories. In addition, classification models trained on GazeDepth further demonstrated that the dataset captures gaze characteristics that distinguish the three viewing-distance categories, supporting gaze-based distance inference and distance-aware interaction in realistic scenarios.",
+    "published": "Aug 29",
+    "pdf_url": "https://arxiv.org/pdf/2608.29192v1",
+    "arxiv_url": "http://arxiv.org/abs/2608.29192v1",
+    "queried_author": "Yejin Choi",
+    "matching_authors": [
+      "Yejin Choi"
+    ]
+  },
+  {
     "title": "Co-Evolving Structured Knowledge and Reasoning in Language Models",
     "authors": [
       "Ryan Thomas Noonan",
@@ -111,8 +185,8 @@
     ],
     "summary": "Reinforcement learning with verifiable rewards (RLVR) is deployed to make models better at reasoning tasks, but its side effect on what models will divulge is under studied. Here we show that RLVR on facts increases extraction of personally identifiable information (PII) the instruct model had already memorized. We first confirm that instruct models have already memorized PII but leave them latent, rarely surfacing one when asked. We then apply RL on benign factual data that contains no PII of any kind, and re-probe: a targeted probe over name->email pairs, and an untargeted free-recall prompt that simply asks the model to list the addresses it knows. PII extraction rises sharply under both: on DeepSeek-V3.1, verbatim recall@k increases from 0.155 to 0.370, a 2.4x gain. The effect scales with model size: across three models spanning 8B to 671B parameters, absolute leakage is largest in the biggest model. Meanwhile model's reasoning abilities and refusal rates are retained, indicating that RL selectively changes which memorized information is accessible rather than broadly altering the model. In summary, memorized private data can be made markedly more extractable by training that never touches it. This gives an adversary a route to memorized data that requires no privacy-relevant training signal and no access to the data itself -- only the ability to fine-tune on something innocuous.",
     "published": "Aug 22",
-    "pdf_url": "https://arxiv.org/pdf/2608.21727v2",
-    "arxiv_url": "http://arxiv.org/abs/2608.21727v2",
+    "pdf_url": "https://arxiv.org/pdf/2608.21727v3",
+    "arxiv_url": "http://arxiv.org/abs/2608.21727v3",
     "queried_author": "Niloofar Mireshghallah",
     "matching_authors": [
       "Niloofar Mireshghallah"
@@ -250,8 +324,8 @@
     ],
     "summary": "Continuous self-improvement requires an ever-expanding pool of self-generated, diverse, adaptive goals. For language agents, existing training environment pools (hand-curated, statically synthesized, or frozen-verifier) keep the goal distribution fixed as the learner scales. We introduce SPADE (Self-Play in Adaptive Synthetic Executable Environments), a self-play RL framework in which a single LLM plays two roles: an Environment Designer that writes complete, long-horizon training environments as executable code with an OpenAI Gym-style reset()/step() interface, and a Reasoning Agent that learns to act in them. Each is a stateful, multi-turn environment (state transitions, reward functions, and verification code), so one interface spans reasoning problems and multi-step agentic tool use. The Reasoning Agent's regret is estimated using the gap between its reward with and without privileged hints; in optimizing this regret signal the Environment Designer learns to target environments at the edge of the agent's capabilities while keeping them feasible. Through extensive experimentation, we find several components critical to success: grounding the Environment Designer on documents sampled from a large pretraining corpus, and giving it an accumulated environment memory. Scaling to 30B-parameter models, SPADE improves over the strongest fixed-environment baseline by +5.3 on average across eight held-out math, science, code, and reasoning benchmarks, and lifts the tool-use setting by +5.7 on BFCL-v4 multi-turn and +13.9 on ACEBench-Agent; on the games setting, the margin over the...",
     "published": "Aug 19",
-    "pdf_url": "https://arxiv.org/pdf/2608.19197v2",
-    "arxiv_url": "http://arxiv.org/abs/2608.19197v2",
+    "pdf_url": "https://arxiv.org/pdf/2608.19197v3",
+    "arxiv_url": "http://arxiv.org/abs/2608.19197v3",
     "queried_author": "Luke Zettlemoyer",
     "matching_authors": [
       "Luke Zettlemoyer",
@@ -2458,10 +2532,10 @@
       "Fangcong Yin",
       "Greg Durrett"
     ],
-    "summary": "Large language models (LLMs) are typically pretrained on short sequences and then extended to work on longer sequences with additional training. However, such LLMs still struggle to further generalize to very long sequences. We propose Randomized YaRN, a training method that improves length generalization by combining YaRN-based positional extrapolation with randomized positional encoding and a length curriculum. During training on short context data, tokens are assigned YaRN positional encodings sampled from a larger position range, exposing the model to out-of-distribution positional representations even on short-context inputs. We evaluate Randomized YaRN on two challenging long-context reasoning benchmarks, BABILong and Multi-Round Coreference Resolution (MRCR). When training on data with <8K context, Randomized YaRN consistently improves reasoning performance on context lengths from 16K to 128K and outperforms standard fine-tuning, with the largest gains appearing at far out-of-distribution lengths. Our results suggest that progressively exposing models to OOD positional distributions provides an effective recipe for generalizable long-context reasoning.",
+    "summary": "Large language models (LLMs) are typically pretrained on short sequences and then extended to work on longer sequences with additional training. However, such LLMs still struggle to further generalize to very long sequences. We propose Randomized YaRN, a training method that improves length generalization by combining YaRN-based positional extrapolation with randomized positional encoding and a length curriculum. During training on short context data, tokens are assigned YaRN positional encodings sampled from a larger position range, exposing the model to out-of-distribution positional representations even on short-context inputs. We evaluate Randomized YaRN on three challenging long-context reasoning benchmarks, BABILong, Multi-Round Coreference Resolution (MRCR), and LongBench v2. When training on data with short context, Randomized YaRN consistently improves reasoning performance on context lengths from 16K to 128K and outperforms standard fine-tuning, with the largest gains appearing at far out-of-distribution lengths. Our results suggest that progressively exposing models to OOD positional distributions provides an effective recipe for generalizable long-context reasoning.",
     "published": "Jun 22",
-    "pdf_url": "https://arxiv.org/pdf/2606.23687v1",
-    "arxiv_url": "http://arxiv.org/abs/2606.23687v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.23687v2",
+    "arxiv_url": "http://arxiv.org/abs/2606.23687v2",
     "queried_author": "Greg Durrett",
     "matching_authors": [
       "Greg Durrett"
@@ -9442,10 +9516,10 @@
       "Dan Jurafsky",
       "Chen Shani"
     ],
-    "summary": "The next-token prediction (NTP) objective trains language models to predict a single token at each step, even though many continuations can express the same meaning. For example, in the sentence ``this sticker can be placed here'', positioned, attached, or put are all plausible alternatives. While standard NTP training treats these alternatives as mutually exclusive targets, we explore a self-supervised framework that encourages models to predict concepts, approximated as sets of semantically equivalent tokens. Models trained with this concept supervision align better with human similarity judgments, improve classification, clustering, and reranking performance, and achieve comparable or stronger downstream reasoning. These gains come with lower perplexity on semantically meaningful words (Section 3.2) and only minimal increases in global perplexity, suggesting that concepts enhance semantic alignment while preserving language modeling quality. Our code is available at https://anonymous.4open.science/r/learning-concepts-9025 .",
+    "summary": "The next-token prediction (NTP) objective trains language models to predict a single token at each step, even though many continuations can express the same meaning. For example, in the sentence ``this sticker can be placed here'', positioned, attached, or put are all plausible alternatives. While standard NTP training treats these alternatives as mutually exclusive targets, we explore a self-supervised framework that encourages models to predict concepts, approximated as sets of semantically equivalent tokens. Models trained with this concept supervision align better with human similarity judgments, improve classification, clustering, and reranking performance, and achieve comparable or stronger downstream reasoning. These gains come with lower perplexity on semantically meaningful words (Section 3.2) and only minimal increases in global perplexity, suggesting that concepts enhance semantic alignment while preserving language modeling quality. Our code is available at https://github.com/christine-zhang1/learning-concepts",
     "published": "Mar 31",
-    "pdf_url": "https://arxiv.org/pdf/2603.29123v3",
-    "arxiv_url": "http://arxiv.org/abs/2603.29123v3",
+    "pdf_url": "https://arxiv.org/pdf/2603.29123v4",
+    "arxiv_url": "http://arxiv.org/abs/2603.29123v4",
     "queried_author": "Dan Jurafsky",
     "matching_authors": [
       "Dan Jurafsky"
@@ -12394,8 +12468,8 @@
     ],
     "summary": "Reward models (RMs) play a central role throughout the language model (LM) pipeline, particularly in non-verifiable domains. However, the dominant LLM-as-a-Judge paradigm relies on the strong reasoning capabilities of large models, while alternative approaches require reference responses or explicit rubrics, limiting flexibility and broader accessibility. In this work, we propose FLIP (FLipped Inference for Prompt reconstruction), a reference-free and rubric-free reward modeling approach that reformulates reward modeling through backward inference: inferring the instruction that would most plausibly produce a given response. The similarity between the inferred and the original instructions is then used as the reward signal. Evaluations across four domains using 13 small language models show that FLIP outperforms LLM-as-a-Judge baselines by an average of 79.6%. Moreover, FLIP substantially improves downstream performance in extrinsic evaluations under test-time scaling via parallel sampling and GRPO training. We further find that FLIP is particularly effective for longer outputs and robust to common forms of reward hacking. By explicitly exploiting the validation-generation gap, FLIP enables reliable reward modeling in downscaled regimes where judgment methods fail. Code available at https://github.com/yikee/FLIP.",
     "published": "Feb 14",
-    "pdf_url": "https://arxiv.org/pdf/2602.13551v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.13551v2",
+    "pdf_url": "https://arxiv.org/pdf/2602.13551v3",
+    "arxiv_url": "http://arxiv.org/abs/2602.13551v3",
     "queried_author": "Hannaneh Hajishirzi",
     "matching_authors": [
       "Hannaneh Hajishirzi"
@@ -12696,87 +12770,6 @@
     "queried_author": "Noah A. Smith",
     "matching_authors": [
       "Noah A. Smith"
-    ]
-  },
-  {
-    "title": "Features as Rewards: Scalable Supervision for Open-Ended Tasks via Interpretability",
-    "authors": [
-      "Aaditya Vikram Prasad",
-      "Connor Watts",
-      "Jack Merullo",
-      "Dhruvil Gala",
-      "Owen Lewis",
-      "Thomas McGrath",
-      "Ekdeep Singh Lubana"
-    ],
-    "summary": "Language models trained on large-scale datasets have been shown to learn features that encode abstract concepts such as factuality or intent. Such features are traditionally used for test-time monitoring or steering. We present an alternative affordance: features as scalable supervision for open-ended tasks. We consider the case of hallucination-reduction as a desirable, yet open-ended behavior and design a reinforcement learning (RL) pipeline, titled RLFR (Reinforcement Learning from Feature Rewards), that uses features as reward functions. Grounded in a novel probing framework that identifies candidate hallucinated claims, our pipeline teaches a model to intervene and correct its completions when it is uncertain of their factuality. Furthermore, the pipeline enables scalable test-time compute, guided once more by our reward features. This end-to-end process operationalized on Gemma-3-12B-IT results in a policy that is 58% less likely to hallucinate compared to the original model (when run in tandem with our probing harness), while preserving performance on standard benchmarks. Taken together, by grounding supervision in the language of features, this paper introduces a novel paradigm in the use of interpretability for learning open-ended tasks.",
-    "published": "Feb 10",
-    "pdf_url": "https://arxiv.org/pdf/2602.10067v3",
-    "arxiv_url": "http://arxiv.org/abs/2602.10067v3",
-    "queried_author": "Jack Merullo",
-    "matching_authors": [
-      "Jack Merullo"
-    ]
-  },
-  {
-    "title": "Overview of the TREC 2025 RAGTIME Track",
-    "authors": [
-      "Dawn Lawrie",
-      "Sean MacAvaney",
-      "James Mayfield",
-      "Luca Soldaini",
-      "Eugene Yang",
-      "Andrew Yates"
-    ],
-    "summary": "The principal goal of the RAG TREC Instrument for Multilingual Evaluation (RAGTIME) track at TREC is to study report generation from multilingual source documents. The track has created a document collection containing Arabic, Chinese, English, and Russian news stories. RAGTIME includes three task types: Multilingual Report Generation, English Report Generation, and Multilingual Information Retrieval (MLIR). A total of 125 runs were submitted by 13 participating teams (and as baselines by the track coordinators) for three tasks. This overview describes these three tasks and presents the available results.",
-    "published": "Feb 10",
-    "pdf_url": "https://arxiv.org/pdf/2602.10024v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.10024v2",
-    "queried_author": "Luca Soldaini",
-    "matching_authors": [
-      "Luca Soldaini"
-    ]
-  },
-  {
-    "title": "Predictive Query Language: A Domain-Specific Language for Predictive Modeling on Relational Databases",
-    "authors": [
-      "Vid Kocijan",
-      "Jinu Sunil",
-      "Jan Eric Lenssen",
-      "Viman Deb",
-      "Xinwei Xe",
-      "Federico Reyes Gomez",
-      "Matthias Fey",
-      "Jure Leskovec"
-    ],
-    "summary": "The purpose of predictive modeling on relational data is to predict future or missing values in a relational database, for example, future purchases of a user, risk of readmission of the patient, or the likelihood that a financial transaction is fraudulent. Typically powered by machine learning methods, predictive models are used in recommendations, financial fraud detection, supply chain optimization, and other systems, providing billions of predictions every day. However, training a machine learning model requires manual work to extract the required training examples - prediction entities and target labels - from the database, which is slow, laborious, and prone to mistakes. Here, we present the Predictive Query Language (PQL), an SQL-inspired declarative language for defining predictive tasks on relational databases. PQL allows specifying a predictive task in a single declarative query, enabling the automatic computation of training labels for a large variety of machine learning tasks, such as regression, classification, time-series forecasting, and recommender systems. PQL is already successfully integrated and used in a collection of use cases as part of a predictive AI platform. The versatility of the language can be demonstrated through its many ongoing use cases, including financial fraud, item recommendations, and workload prediction. We demonstrate its versatile design through two implementations; one for small-scale, low-latency use and one that can handle large-scale databases.",
-    "published": "Feb 10",
-    "pdf_url": "https://arxiv.org/pdf/2602.09572v3",
-    "arxiv_url": "http://arxiv.org/abs/2602.09572v3",
-    "queried_author": "Jure Leskovec",
-    "matching_authors": [
-      "Jure Leskovec"
-    ]
-  },
-  {
-    "title": "Are Language Models Sensitive to Morally Irrelevant Distractors?",
-    "authors": [
-      "Andrew Shaw",
-      "Christina Hahn",
-      "Catherine Rasgaitis",
-      "Yash Mishra",
-      "Alisa Liu",
-      "Natasha Jaques",
-      "Yulia Tsvetkov",
-      "Amy X. Zhang"
-    ],
-    "summary": "With the rapid uptake of large language models (LLMs) across high-stakes settings, it is becoming increasingly important to ensure that LLMs behave in ways that align with human values. Existing moral benchmarks for this purpose often prompt LLMs with value statements, moral scenarios, or psychological questionnaires, with the implicit underlying assumption that LLMs report somewhat stable moral preferences. However, moral psychology research has shown that even human moral judgements are sensitive to morally irrelevant situational factors such as the smell of cinnamon rolls or the level of ambient noise, thereby challenging moral theories which assume that human moral judgements are stable. Here we draw inspiration from this \"situationist\" view of moral psychology to evaluate whether LLMs exhibit similar cognitive moral biases. We curate a novel multimodal dataset of 60 \"moral distractors\" from existing psychological datasets of emotionally-valenced images and narratives, which have no moral relevance to the situation presented. After injecting these distractors into existing moral benchmarks, we find that moral distractors can shift the moral judgements of LLMs by over 30% even in unambiguous scenarios, highlighting the instability of LLMs' moral judgements and the need for more contextual approaches to AI alignment.",
-    "published": "Feb 10",
-    "pdf_url": "https://arxiv.org/pdf/2602.09416v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.09416v2",
-    "queried_author": "Alisa Liu",
-    "matching_authors": [
-      "Alisa Liu"
     ]
   }
 ]
