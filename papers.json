@@ -1,5 +1,69 @@
 [
   {
+    "title": "Knowledge Distillation During Mid-Training Favors Reasoning over Factual Recall",
+    "authors": [
+      "Jacqueline He",
+      "Howard Yen",
+      "Shuyue Stella Li",
+      "Margaret Li",
+      "Hanqing Zeng",
+      "Yinglong Xia",
+      "Benyu Zhang",
+      "Zhuokai Zhao",
+      "Qiang Zhang",
+      "Pang Wei Koh",
+      "Luke Zettlemoyer",
+      "Wen-tau Yih"
+    ],
+    "summary": "Logit-based knowledge distillation (KD) is used to train smaller language models (LMs) via supervision from stronger teachers, but whether its benefits are consistent across training stages remains unclear. Through controlled experiments, we find that forward Kullback-Leibler (KL) distillation--the standard KD formulation--with post-trained teachers behaves fundamentally differently during mid-training, an intermediate phase of self-supervised learning on curated corpora. Surprisingly, while forward KD simultaneously improves reasoning and factual recall during pre-training relative to standard next-token prediction (NTP), it instead slows factual recall acquisition during mid-training despite continued reasoning gains. We trace this stage dependence to an asymmetry in teacher confidence across data domains and the student's evolving knowledge state: teachers are more confident on procedural than knowledge-intensive data, while students acquire low-entropy factual knowledge earlier in training. To mitigate this imbalance, we propose Switch Distillation, a simple mid-training objective that distills on tokens where the teacher is confident, using teacher predictive entropy as a lightweight routing signal, and otherwise falls back to cross-entropy. Switch Distillation consistently outperforms existing distillation objectives across teacher sizes. Relative to standard NTP, it achieves 1.61-1.71x the reasoning performance and 1.13-1.19x the knowledge and commonsense performance while preserving 96.7-96.8% of factual recall. Crucially, these benefits persist after post-training:...",
+    "published": "Sep 01",
+    "pdf_url": "https://arxiv.org/pdf/2609.01532v1",
+    "arxiv_url": "http://arxiv.org/abs/2609.01532v1",
+    "queried_author": "Luke Zettlemoyer",
+    "matching_authors": [
+      "Luke Zettlemoyer",
+      "Margaret Li",
+      "Pang Wei Koh",
+      "Wen-tau Yih"
+    ]
+  },
+  {
+    "title": "A Dataset for Modeling Iterative Problem-Solving",
+    "authors": [
+      "Fagun Patel",
+      "Sang T. Truong",
+      "Duc Q. Nguyen",
+      "Kazunori Fukuhara",
+      "Benjamin W. Domingue",
+      "Sanmi Koyejo",
+      "Nick Haber"
+    ],
+    "summary": "Solving problems through repeated attempts is a sequential modeling task: at each step, the solver receives feedback and decides how to revise their solutions. Predicting whether performance improves, plateaus, or regresses across attempts is central to understanding any iterative problem-solving process in both human learners and autonomous agents. Beyond outcomes, modeling what errors persist and how strategies shift across attempts provides deeper insight into the mechanics of sequential learning. Studying these dynamics requires observing many solvers as they attempt, receive feedback, and revise. Programming courses with automated grading provide this setting, as students iteratively submit code to test suites and receive feedback on every attempt. We therefore curate CodeInsight, a large-scale dataset of over 3 million submissions from 3,286 undergraduates across 2 introductory C++ courses in 2 academic years, with test-case-level outcomes, timestamps, and source code. On this dataset, we build a benchmark that evaluates models spanning parametric, sequential, and generative traditions under a shared calibration-and-scoring protocol, including a Recurrent State Space Model (RSSM) adapted to track solver characteristics through discrete latent variables and an LLM-based predictor that generates explicit solutions. The adapted RSSM achieves the strongest predictive accuracy on three of the four courses. The LLM predictor is less accurate but produces full submissions at each attempt, enabling direct analysis of failure modes. We find that the model's coding proficiency ...",
+    "published": "Sep 01",
+    "pdf_url": "https://arxiv.org/pdf/2609.00940v1",
+    "arxiv_url": "http://arxiv.org/abs/2609.00940v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "Lingua Franca or Probing Artifact? Rethinking Latent Language in Multilingual LLMs",
+    "authors": [
+      "Deniz Bayazit",
+      "Badr AlKhamissi",
+      "Antoine Bosselut"
+    ],
+    "summary": "Latent language identification is often used to argue that multilingual language models route computation through language-specific states, such as English pivots. However, existing probes infer latent language from different signals, such as the geometry of hidden states or what can be decoded from intermediate representations. Since such claims shape conclusions about how models share and route information across languages, we ask whether these probes measure the same phenomenon or expose distinct aspects of multilingual computation. We study this question across model families, training regimes, domains, tasks, checkpoints, and up to 27 languages. We find that identification probes systematically disagree: the GMM-based representation probe, which draws evidence from hidden state geometry, shows earlier cross-lingual mixing, whereas decoding-based probes, which rely on output-space decodability, retain sharper language-specific and more English-biased signals. These differences track model multilinguality and training progression, but are comparatively stable across domains. Our results suggest a more cautious interpretation of latent language identification, where current probes expose different aspects of multilingual processing, rather than directly revealing a single internal lingua franca.",
+    "published": "Aug 31",
+    "pdf_url": "https://arxiv.org/pdf/2609.00155v1",
+    "arxiv_url": "http://arxiv.org/abs/2609.00155v1",
+    "queried_author": "Antoine Bosselut",
+    "matching_authors": [
+      "Antoine Bosselut"
+    ]
+  },
+  {
     "title": "Sycophantic Agreement Transfers with Neutral Data via Contrastive Preference Optimization",
     "authors": [
       "Camila Blank",
@@ -5094,8 +5158,8 @@
     ],
     "summary": "Frontier LLMs now perform strongly across a wide range of physics evaluations, but it is hard to disentangle genuine reasoning from recall of established science. We introduce DiscoverPhysics, an interactive benchmark that asks a LLM agent to discover the laws of motion of a simulated world whose physics deliberately deviates from our own. We construct 22 worlds governed by, among others, screened and fractional-power gravity, multi-species couplings, hidden dark-matter-like particles, non-coordinate-free physics, and time-varying interactions. Each world is generated on demand by an N-body simulator, for which the agent proposes several rounds of experiments, observes raw trajectory data, and ultimately submits both a natural-language explanation of the world's physics and a Python implementation of the inferred law. Because solving a world requires the agent to design informative experiments and revise its hypotheses, the benchmark probes long-horizon reasoning over an experimental history. We evaluate submissions along two complementary axes: trajectory MSE on held-out particles and an LLM-judged explanation score following an expert-written rubric assessing conceptual understanding of each world. Across eleven frontier models, we find that the strongest agents pass only half of the worlds and consistently fail on those where latent structure must be uncovered. Open-source models lag substantially behind commercial models, both in their ability to design informative experiments and in extracting conclusions from the data. We further find that good predictive accuracy doe...",
     "published": "May 25",
-    "pdf_url": "https://arxiv.org/pdf/2605.26087v1",
-    "arxiv_url": "http://arxiv.org/abs/2605.26087v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.26087v2",
+    "arxiv_url": "http://arxiv.org/abs/2605.26087v2",
     "queried_author": "Pavel Izmailov",
     "matching_authors": [
       "Pavel Izmailov"
@@ -12710,66 +12774,6 @@
     "queried_author": "Yoon Kim",
     "matching_authors": [
       "Yoon Kim"
-    ]
-  },
-  {
-    "title": "dnaHNet: A Scalable and Hierarchical Foundation Model for Genomic Sequence Learning",
-    "authors": [
-      "Arnav Shah",
-      "Junzhe Li",
-      "Parsa Idehpour",
-      "Adibvafa Fallahpour",
-      "Brandon Wang",
-      "Sukjun Hwang",
-      "Bo Wang",
-      "Patrick D. Hsu",
-      "Hani Goodarzi",
-      "Albert Gu"
-    ],
-    "summary": "Genomic foundation models have the potential to decode DNA syntax, yet face a fundamental tradeoff in their input representation. Standard fixed-vocabulary tokenizers fragment biologically meaningful motifs such as codons and regulatory elements, while nucleotide-level models preserve biological coherence but incur prohibitive computational costs for long contexts. We introduce dnaHNet, a state-of-the-art tokenizer-free autoregressive model that segments and models genomic sequences end-to-end. Using a differentiable dynamic chunking mechanism, dnaHNet compresses raw nucleotides into latent tokens adaptively, balancing compression with predictive accuracy. Pretrained on prokaryotic genomes, dnaHNet outperforms leading architectures including StripedHyena2 in scaling and efficiency. This recursive chunking yields quadratic FLOP reductions, enabling $>3 \\times$ inference speedup over Transformers. On zero-shot tasks, dnaHNet achieves superior performance in predicting protein variant fitness and gene essentiality, while automatically discovering hierarchical biological structures without supervision. These results establish dnaHNet as a scalable, interpretable framework for next-generation genomic modeling.",
-    "published": "Feb 11",
-    "pdf_url": "https://arxiv.org/pdf/2602.10603v3",
-    "arxiv_url": "http://arxiv.org/abs/2602.10603v3",
-    "queried_author": "Albert Gu",
-    "matching_authors": [
-      "Albert Gu"
-    ]
-  },
-  {
-    "title": "Simple LLM Baselines are Competitive for Model Diffing",
-    "authors": [
-      "Elias Kempf",
-      "Simon Schrodi",
-      "Bartosz Cywi\u0144ski",
-      "Thomas Brox",
-      "Neel Nanda",
-      "Arthur Conmy"
-    ],
-    "summary": "Standard LLM evaluations only test capabilities or dispositions that evaluators designed them for, missing unexpected differences such as behavioral shifts between model revisions or emergent misaligned tendencies. Model diffing addresses this limitation by automatically surfacing systematic behavioral differences. Recent approaches include LLM-based methods that generate natural language descriptions and sparse autoencoder (SAE)-based methods that identify interpretable features. However, no systematic comparison of these approaches exists nor are there established evaluation criteria. We address this gap by proposing evaluation metrics for key desiderata (generalization, interestingness, and abstraction level) and use these to compare existing methods. Our results show that an improved LLM-based baseline performs comparably to the SAE-based method while typically surfacing more abstract behavioral differences.",
-    "published": "Feb 10",
-    "pdf_url": "https://arxiv.org/pdf/2602.10371v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.10371v1",
-    "queried_author": "Neel Nanda",
-    "matching_authors": [
-      "Neel Nanda"
-    ]
-  },
-  {
-    "title": "Encode Once, Decode Never: Reusing Audio LM Internals for Efficient Temporal Localization",
-    "authors": [
-      "Joseph An",
-      "Phillip Keung",
-      "Jiaqi Wang",
-      "Orevaoghene Ahia",
-      "Noah A. Smith"
-    ],
-    "summary": "Audio language models process input audio into rich frame-level representations, but the standard approach to temporal localization generates timestamps as sequences of text tokens, which discards the frame-level representations in favor of autoregressive decoding. However, generating timestamps as tokens is slow and not parallelizable, and tends to hallucinate when producing timestamps outside the training distribution. We propose internal frame-level reuse, a method that trains audio LMs to reuse their own internal audio representations for temporal localization directly, bypassing token generation altogether. We introduce a lightweight prediction head trained via different frame-level objectives: a binary frame classifier and a novel inhomogeneous Poisson process (IHP) loss that models temporal event intensity. Across word localization, speaker diarization, and event localization tasks, our approach can achieve a >50x inference speedup over token-based generation and demonstrates robust length generalization, maintaining high accuracy on out-of-distribution audio durations where token-based models collapse completely. We find that reusing audio frame-level representations yields localization accuracies comparable to (and often better than) finetuned token-based baselines.",
-    "published": "Feb 10",
-    "pdf_url": "https://arxiv.org/pdf/2602.10230v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.10230v2",
-    "queried_author": "Noah A. Smith",
-    "matching_authors": [
-      "Noah A. Smith"
     ]
   }
 ]
