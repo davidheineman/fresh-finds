@@ -1,5 +1,91 @@
 [
   {
+    "title": "Efficient Test-Time Adaptation through Human-AI Interaction",
+    "authors": [
+      "Zora Zhiruo Wang",
+      "Apurva Gandhi",
+      "Rulin Shao",
+      "Aspen Chen",
+      "Jonas Mueller",
+      "Zhiqi Liang",
+      "Jett Chen",
+      "Michael Ryan",
+      "Qianou Ma",
+      "Luxi He",
+      "Zhoujun Cheng",
+      "Andre He",
+      "Seungone Kim",
+      "Jiayi Geng",
+      "Mingqian Zheng",
+      "Weiwei Sun",
+      "Zheyuan Zhang",
+      "Xinran Zhao",
+      "Yike Wang",
+      "Abe Hou",
+      "Liwei Jiang",
+      "Pang Wei Koh",
+      "Diyi Yang",
+      "Graham Neubig",
+      "Daniel Fried"
+    ],
+    "summary": "AI agents are trained on population-scale data to encode broad capabilities spanning those of many practitioners. Yet the artifacts they produce rarely meet the personal bar professionals need to stake their reputation on. On realistic, open-ended tasks where success criteria are heterogeneous and insufficiently documented, individual expertise lives precisely in the elevation and departure from the average. In practice, iterative human-agent interaction surfaces criteria that users cannot fully specify up front, yet apply repeatedly across tasks. We argue this cross-session interaction data is a rich, underused signal for closing the gap to individual expertise. In this work, we propose test-time adaptation through human-agent interaction (TAHI), which integrates these signals into agent context and weights, and crystallizes each user's training and evaluation criteria via an evolving rubric module. We adapt agents to 30 individuals in two high-utility domains, writing and visual creation, on a total of 600 tasks. Our agents improve solo task success by 4.5-20.9% within only tens of tasks. Meanwhile, our evolving rubric module serves as a scalable annotation tool, creating evaluation rubrics that catch 16.0-22.3% more failures than those from LMs or humans alone. While agents are adapted towards individuals, we show these personalized agents also produce improvements in success of up to 8.8% that generalize across users.",
+    "published": "Sep 03",
+    "pdf_url": "https://arxiv.org/pdf/2609.04141v1",
+    "arxiv_url": "http://arxiv.org/abs/2609.04141v1",
+    "queried_author": "Daniel Fried",
+    "matching_authors": [
+      "Daniel Fried",
+      "Diyi Yang",
+      "Graham Neubig",
+      "Pang Wei Koh",
+      "Seungone Kim"
+    ]
+  },
+  {
+    "title": "Free Pause Tokens",
+    "authors": [
+      "John Langford",
+      "Nathan Godey",
+      "Giovanni Monea",
+      "Yoav Artzi",
+      "Harry Dong",
+      "Ying Fan",
+      "Gustavo de Rosa",
+      "Zheng Zhan"
+    ],
+    "summary": "A free pause token gives a language model extra compute to form each next-token prediction (as a pause, or thinking, token does) but carries that compute in a parallel prediction stream over a weight-shared backbone rather than as an extra token in the sequence. It improves next-token prediction by 2-3 centinats in practice on a 1B parameter model. Because the pause rides an existing position instead of adding one, it is free to use: at inference it adds no context length, no KV cache, and essentially no latency with the growth in inference flops typically irrelevant as it is not the active bottleneck on throughput. The only primary cost is in training, where additional training compute versus an optimized pretraining pipeline is reduced to as low as x1.14 while preserving most of the benefits. The result is an isoflop, isoparameter, and isotoken improvement over standard next token trained transformers.",
+    "published": "Sep 03",
+    "pdf_url": "https://arxiv.org/pdf/2609.03807v1",
+    "arxiv_url": "http://arxiv.org/abs/2609.03807v1",
+    "queried_author": "Yoav Artzi",
+    "matching_authors": [
+      "Yoav Artzi"
+    ]
+  },
+  {
+    "title": "Random Attention: Rethinking KV Cache Eviction for Efficient Reasoning",
+    "authors": [
+      "Heng Wang",
+      "Jielin Qiu",
+      "Wenting Zhao",
+      "Cheng Qian",
+      "Liangwei Yang",
+      "Jiawei Han",
+      "Heng Ji",
+      "Silvio Savarese",
+      "Shelby Heinecke",
+      "Huan Wang"
+    ],
+    "summary": "Large language models achieve superior performance on tasks that require extended reasoning, but long chains of thought make the KV cache a severe memory bottleneck. Existing KV cache compression methods share one paradigm: score each cached token by some estimate of how much it will matter later, and keep the top-scoring ones. We show that the selection signal contributes almost nothing. Random Attention keeps the prompt and evicts uniformly at random within each attention head, computing no score at all; across four models and six reasoning tasks it matches the strongest prior evictor while serving 32-43% higher throughput than it in vLLM deployment. Controlled experiments explain this by showing that 1) the prompt is the fragile part of the cache, and most of the gap between selectors is just whether their selection signal happened to keep it; 2) the reasoning trace protects itself against eviction with redundancy at two levels, in the text (the model restates what it still needs as it works) and across attention heads (each keeps its own copy of the trace), so once the prompt is safe, a random draw retains enough copies of what the model still needs, and no score is required to pick them. Our code is publicly available at https://github.com/SalesforceAIResearch/Random-Attention.",
+    "published": "Sep 03",
+    "pdf_url": "https://arxiv.org/pdf/2609.03430v1",
+    "arxiv_url": "http://arxiv.org/abs/2609.03430v1",
+    "queried_author": "Wenting Zhao",
+    "matching_authors": [
+      "Wenting Zhao"
+    ]
+  },
+  {
     "title": "Knowledge Distillation During Mid-Training Favors Reasoning over Factual Recall",
     "authors": [
       "Jacqueline He",
@@ -12697,83 +12783,6 @@
     "queried_author": "Albert Gu",
     "matching_authors": [
       "Albert Gu"
-    ]
-  },
-  {
-    "title": "MolmoSpaces: A Large-Scale Open Ecosystem for Robot Navigation and Manipulation",
-    "authors": [
-      "Yejin Kim",
-      "Wilbert Pumacay",
-      "Omar Rayyan",
-      "Max Argus",
-      "Winson Han",
-      "Eli VanderBilt",
-      "Jordi Salvador",
-      "Abhay Deshpande",
-      "Rose Hendrix",
-      "Snehal Jauhri",
-      "Shuo Liu",
-      "Nur Muhammad Mahi Shafiullah",
-      "Maya Guru",
-      "Ainaz Eftekhar",
-      "Karen Farley",
-      "Donovan Clay",
-      "Jiafei Duan",
-      "Arjun Guru",
-      "Piper Wolters",
-      "Alvaro Herrasti",
-      "Ying-Chun Lee",
-      "Georgia Chalvatzaki",
-      "Yuchen Cui",
-      "Ali Farhadi",
-      "Dieter Fox",
-      "Ranjay Krishna"
-    ],
-    "summary": "Deploying robots at scale demands robustness to the long tail of everyday situations. The countless variations in scene layout, object geometry, and task specifications that characterize real environments are vast and underrepresented in existing robot benchmarks. Measuring this level of generalization requires infrastructure at a scale and diversity that physical evaluation alone cannot provide. We introduce MolmoSpaces, a fully open ecosystem to support large-scale benchmarking of robot policies. MolmoSpaces consists of over 230k diverse indoor environments, ranging from handcrafted household scenes to procedurally generated multiroom houses, populated with 130k richly annotated object assets, including 48k manipulable objects with 42M stable grasps. Crucially, these environments are simulator-agnostic, supporting popular options such as MuJoCo, Isaac, and ManiSkill. The ecosystem supports the full spectrum of embodied tasks: static and mobile manipulation, navigation, and multiroom long-horizon tasks requiring coordinated perception, planning, and interaction across entire indoor environments. We also design MolmoSpaces-Bench, a benchmark suite of 8 tasks in which robots interact with our diverse scenes and richly annotated objects. Our experiments show MolmoSpaces-Bench exhibits strong sim-to-real correlation (R = 0.96, \\r{ho} = 0.98), confirm newer and stronger zero-shot policies outperform earlier versions in our benchmarks, and identify key sensitivities to prompt phrasing, initial joint positions, and camera occlusion. Through MolmoSpaces and its open-source assets ...",
-    "published": "Feb 11",
-    "pdf_url": "https://arxiv.org/pdf/2602.11337v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.11337v2",
-    "queried_author": "Ali Farhadi",
-    "matching_authors": [
-      "Ali Farhadi",
-      "Ranjay Krishna"
-    ]
-  },
-  {
-    "title": "Compressed Sensing for Capability Localization in Large Language Models",
-    "authors": [
-      "Anna Bair",
-      "Yixuan Even Xu",
-      "Mingjie Sun",
-      "J. Zico Kolter"
-    ],
-    "summary": "Large language models (LLMs) exhibit a wide range of capabilities, including mathematical reasoning, code generation, and linguistic behaviors. We show that Transformer architectures contain small subsets of attention heads that are necessary for certain capabilities. Zeroing out as few as five task-specific heads can degrade performance by up to $60\\%$ on standard benchmarks measuring the capability of interest, while largely preserving performance on unrelated tasks. We introduce a compressed sensing-based method that exploits the sparsity of these heads to identify them via strategic knockouts and a small number of model evaluations. We validate these findings across Llama and Qwen models ranging from 1B to 14B parameters and a diverse set of capabilities including mathematical abilities and code generation, revealing a modular organization in which specialized capabilities are dependent on sparse, functionally distinct components. Overall, our results suggest that capability localization is a general organizational principle of Transformer language models, with implications for interpretability, model editing, and AI safety. Code is released at https://github.com/locuslab/llm-components.",
-    "published": "Feb 11",
-    "pdf_url": "https://arxiv.org/pdf/2603.03335v2",
-    "arxiv_url": "http://arxiv.org/abs/2603.03335v2",
-    "queried_author": "J Zico Kolter",
-    "matching_authors": [
-      "J Zico Kolter"
-    ]
-  },
-  {
-    "title": "Cross-Sectional Asset Retrieval via Future-Aligned Soft Contrastive Learning",
-    "authors": [
-      "Hyeongmin Lee",
-      "Chanyeol Choi",
-      "Jihoon Kwon",
-      "Yoon Kim",
-      "Alejandro Lopez-Lira",
-      "Wonbin Ahn",
-      "Yongjae Lee"
-    ],
-    "summary": "Asset retrieval--finding similar assets in a financial universe--is central to quantitative investment decision-making. Existing approaches define similarity through historical price patterns or sector classifications, but such backward-looking criteria provide no guarantee about future behavior. We argue that effective asset retrieval should be future-aligned: the retrieved assets should be those most likely to exhibit correlated future returns. To this end, we propose Future-Aligned Soft Contrastive Learning (FASCL), a representation learning framework whose soft contrastive loss uses pairwise future return correlations as continuous supervision targets. We further introduce an evaluation protocol designed to directly assess whether retrieved assets share similar future trajectories. Experiments on 4,229 US equities demonstrate that FASCL consistently outperforms 13 baselines across all future-behavior metrics. The source code will be available soon.",
-    "published": "Feb 11",
-    "pdf_url": "https://arxiv.org/pdf/2602.10711v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.10711v1",
-    "queried_author": "Yoon Kim",
-    "matching_authors": [
-      "Yoon Kim"
     ]
   }
 ]
