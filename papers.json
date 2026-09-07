@@ -1,5 +1,57 @@
 [
   {
+    "title": "$\u03c4^\u03c4$-Bench: An Environment for End-To-End, Realistic Agent Construction",
+    "authors": [
+      "Quan Shi",
+      "Keshav Dhandhania",
+      "Karthik Narasimhan",
+      "Victor Barres"
+    ],
+    "summary": "LLM agents are rapidly becoming production software, deployed to handle customer service, adjudicate disputes, and operate internal systems. Notably, the work of building them is increasingly handed to coding agents, yet existing benchmarks say little about whether an AI system can deliver one under the conditions of a real client engagement. We introduce $\u03c4^\u03c4$-bench (pronounced hyper-tau-bench), a benchmark that makes agent construction the task. A developer agent is given the records a business actually keeps, a client who holds requirements, a production API that operations must run through, a codebase to inherit, and limits on serving cost and models: the same starting point a real engagement provides. From these it must deliver a complete customer-service agent, scored by deploying that agent against held-out simulated users. Across 53 tasks spanning four domains, the strongest configuration, Claude Opus 5 under Claude Code, passes just 23.9% of evaluation simulations. Meanwhile, an expert-authored reference ceiling scores 82.2%. The failures mirror ones human agent developers see: models issue shallow queries in place of deep comprehension of the records, communicate almost nothing to the client, and experiment too little with agent architecture and serving spend, shipping the first design that runs. We aim for $\u03c4^\u03c4$-bench to turn the work of cooperative agent building into a measurable target for coding agents.",
+    "published": "Sep 04",
+    "pdf_url": "https://arxiv.org/pdf/2609.04611v1",
+    "arxiv_url": "http://arxiv.org/abs/2609.04611v1",
+    "queried_author": "Karthik Narasimhan",
+    "matching_authors": [
+      "Karthik Narasimhan"
+    ]
+  },
+  {
+    "title": "Shared circuits predict whether LLMs generalize across formats in arithmetic reasoning",
+    "authors": [
+      "Andrea Gregor de Varda",
+      "Sana Pandey",
+      "Pengrui Han",
+      "Jacob Andreas",
+      "Evelina Fedorenko"
+    ],
+    "summary": "In many forms of reasoning, including arithmetic reasoning, generalizing across superficial changes in input format is effortless for humans: anyone who can solve 2+5 can also solve 'two plus five'. In contrast, LLMs are more brittle to surface variations of the prompts: for example, they solve numeric arithmetic problems almost perfectly but are substantially less accurate on verbal renditions of the same problems. Here, we ask whether generalization across formats can be predicted from the models' internals. Using attribution patching, we first independently localize the circuit that each model recruits to solve numeric arithmetic problems (2+5) vs. verbal ones, in three languages: English ('two plus five'), Spanish ('dos m\u00e1s cinco'), and Italian ('due pi\u00f9 cinque'); then, we test whether overlap with the model's own numeric circuit predicts its generalization to the verbal formats. Indeed, we find support for this idea at three levels: circuit overlap accounts for the relative difficulty of the three verbal formats, for which models generalize best, and for which items are solved correctly, rivaling supervised probes while requiring no labeled data.",
+    "published": "Sep 03",
+    "pdf_url": "https://arxiv.org/pdf/2609.04463v1",
+    "arxiv_url": "http://arxiv.org/abs/2609.04463v1",
+    "queried_author": "Jacob Andreas",
+    "matching_authors": [
+      "Jacob Andreas"
+    ]
+  },
+  {
+    "title": "Adapting from Downturns: Prediction of Long-Term Conversational-Skill Development in Mental-Health Crisis Counselors",
+    "authors": [
+      "Vivian Nguyen",
+      "Lillian Lee",
+      "Elizabeth A. Olson",
+      "Cristian Danescu-Niculescu-Mizil"
+    ],
+    "summary": "How do people learn to become better conversationalists? This question is especially important in the context of mental-health counseling, where conversational skills are essential, yet volunteer counselors often have limited access to supervision and structured feedback. Understanding how counselors develop their ability to steer conversations toward positive outcomes -- and identifying early which counselors are (not) on track to improve -- can help prioritize support for the counselors who need it most.\n  In this work, we introduce the task of predicting, early in a conversationalist's career, whether they will eventually improve at steering conversations toward positive outcomes, and demonstrate the feasibility of this task in the case of volunteer mental-health crisis counselors. Our central insight is that people may struggle with particular kinds of moments in a conversation, and that what is especially revealing of their likelihood of future improvement is how they learn to handle those moments over time. We operationalize this insight by designing a method that identifies the types of moments a counselor initially struggles with, captures how they adapt their response when they re-encounter similar moments in subsequent conversations, and learns which early adaptations predict improvement months or even years later. While this future-prediction task is challenging, our counselor-adaptation approach yields better results than baselines that learn directly from the conversation transcript.",
+    "published": "Sep 03",
+    "pdf_url": "https://arxiv.org/pdf/2609.04350v1",
+    "arxiv_url": "http://arxiv.org/abs/2609.04350v1",
+    "queried_author": "Lillian Lee",
+    "matching_authors": [
+      "Lillian Lee"
+    ]
+  },
+  {
     "title": "Efficient Test-Time Adaptation through Human-AI Interaction",
     "authors": [
       "Zora Zhiruo Wang",
@@ -42,7 +94,142 @@
     ]
   },
   {
-    "title": "Free Pause Tokens",
+    "title": "Harbor Adapters and Harbor-Index: Infrastructure and a Curated Meta-Dataset for Large-Scale Agentic Evaluation",
+    "authors": [
+      "Lin Shi",
+      "Haowei Lin",
+      "Zixuan Zhu",
+      "Xiaoyue Zhou",
+      "Xiang Li",
+      "Xiangning Lin",
+      "Yaxuan Deng",
+      "Han Xu",
+      "Yuangang Li",
+      "Shanda Li",
+      "Zizhao Chen",
+      "Hanwen Xing",
+      "Harsh Raj",
+      "Bo Chen",
+      "Quan Shi",
+      "Steven Dillmann",
+      "Yipeng Gao",
+      "Puneesh Khanna",
+      "Ruofan Lu",
+      "Chao Beyond Zhou",
+      "Michael Yang",
+      "Robert Zhang",
+      "Siyuan Chai",
+      "Jiayu Chang",
+      "Yizhao Chen",
+      "Xiaokun Chen",
+      "Yiwei Dai",
+      "Wenting Yang",
+      "Hange Liu",
+      "Minghao Liu",
+      "Zihan Wang",
+      "Adnan El Assadi",
+      "Benedikt Stroebl",
+      "E. Kelly Buchanan",
+      "Han Meng",
+      "Junwei He",
+      "Longxuan Yu",
+      "Radin Shayanfar",
+      "Yukyung Lee",
+      "Zhikang Dong",
+      "Allen G Hart",
+      "Anjiang Wei",
+      "Anurag Kashyap",
+      "Arpandeep Khatua",
+      "Audrey Jixin Zheng",
+      "Chengrui Ma",
+      "David Heineman",
+      "Dubing Chen",
+      "Hai-Anh Trinh",
+      "Haishuo Fang",
+      "Hefan Zhang",
+      "Hui Shen",
+      "Issa Sugiura",
+      "Jiankai Sun",
+      "Jiechao Gao",
+      "Junhong Lin",
+      "Junnan Li",
+      "Kai Yang",
+      "Lei Hsiung",
+      "Maoyu Wang",
+      "Mengze Tang",
+      "Nabil Omi",
+      "Negin Raoof",
+      "Nicholas Edwards",
+      "Octavia Guo",
+      "Orfeas Menis Mastromichalakis",
+      "Pengliang Ji",
+      "Przemys\u0142aw Hejman",
+      "Qi Qi",
+      "Qunshu Lin",
+      "Richard Zhuang",
+      "Rui Yang",
+      "Ruichen Zheng",
+      "Ryan Marten",
+      "Shaghayegh Fazliani",
+      "Shizheng Hou",
+      "Sicong Jiang",
+      "Sijie Li",
+      "Song Bian",
+      "Terry Yue Zhuo",
+      "Tianqing Wu",
+      "Tom Tang",
+      "Wanjia Zhao",
+      "Weihao Xuan",
+      "Wenhua Liang",
+      "Xian Liu",
+      "Xin Lan",
+      "Xuan Zhang",
+      "Xuandong Zhao",
+      "Yanchuan Tang",
+      "Yifan Jiang",
+      "Yijiang Li",
+      "Yitong Guan",
+      "Yizhi Li",
+      "Yonghui Liu",
+      "Yuheng Tang",
+      " Yujun",
+      " Mao",
+      "Yunfei Zhao",
+      "Yuxin Wang",
+      "Yuxuan Tang",
+      "Zhenheng Tang",
+      "Zhifei Li",
+      "Ziruo Wang",
+      "Ziyu She",
+      "Kaiyuan Liu",
+      "Iheb Chaabane",
+      "Yuxin Tang",
+      "Xiangyi Li",
+      "Andy Konwinski",
+      "Boxuan Li",
+      "Leon Liangyu Chen",
+      "Alex Dimakis",
+      "Nicholas Carlini",
+      "Soroush Vosoughi",
+      "Di He",
+      "Etash Guha",
+      "Benjamin Feuer",
+      "Mike Merrill",
+      "Ludwig Schmidt",
+      "Alex Shaw"
+    ],
+    "summary": "Evaluating agents on the growing number of agentic benchmarks is challenging because they often require complex environments and agent integrations. We introduce Harbor Adapters, a unified evaluation infrastructure for agentic benchmarks. Our work makes three contributions. First, we develop benchmark adapters that port more than 80 benchmarks to evaluate arbitrary agents, and validate them through rigorous code review and parity experiments. Second, we conduct a large-scale evaluation of 8 models spanning capability tiers across 54 benchmarks; every model is run with Terminus-2 and with one of 3 native harnesses. This enables a broader analysis of agent capabilities and failure modes than was previously possible. Third, we introduce Harbor-Index, a curated set of 82 difficult, diverse, and high-quality tasks spanning 29 benchmarks, refined from the adapted suite through difficulty filtering, AI and human audit, and an audit-and-fix loop. Harbor-Index preserves the challenge and breadth of large-scale agentic evaluations while being affordable to run; no evaluated model-harness configuration exceeds 30% pass rate, and the strongest (GPT-5.5 with Codex) reaches 28.0%. We release the adapters, evaluation results, in-depth analysis, and Harbor-Index as open-source artifacts to support more reliable and comprehensive evaluation of language-model agents.",
+    "published": "Sep 03",
+    "pdf_url": "https://arxiv.org/pdf/2609.04298v1",
+    "arxiv_url": "http://arxiv.org/abs/2609.04298v1",
+    "queried_author": "Ludwig Schmidt",
+    "matching_authors": [
+      "Ludwig Schmidt",
+      "Nicholas Carlini"
+    ]
+  },
+  {
+    "title": "Almost Free State Prediction Separation",
     "authors": [
       "John Langford",
       "Nathan Godey",
@@ -55,8 +242,8 @@
     ],
     "summary": "A free pause token gives a language model extra compute to form each next-token prediction (as a pause, or thinking, token does) but carries that compute in a parallel prediction stream over a weight-shared backbone rather than as an extra token in the sequence. It improves next-token prediction by 2-3 centinats in practice on a 1B parameter model. Because the pause rides an existing position instead of adding one, it is free to use: at inference it adds no context length, no KV cache, and essentially no latency with the growth in inference flops typically irrelevant as it is not the active bottleneck on throughput. The only primary cost is in training, where additional training compute versus an optimized pretraining pipeline is reduced to as low as x1.14 while preserving most of the benefits. The result is an isoflop, isoparameter, and isotoken improvement over standard next token trained transformers.",
     "published": "Sep 03",
-    "pdf_url": "https://arxiv.org/pdf/2609.03807v1",
-    "arxiv_url": "http://arxiv.org/abs/2609.03807v1",
+    "pdf_url": "https://arxiv.org/pdf/2609.03807v2",
+    "arxiv_url": "http://arxiv.org/abs/2609.03807v2",
     "queried_author": "Yoav Artzi",
     "matching_authors": [
       "Yoav Artzi"
@@ -83,6 +270,29 @@
     "queried_author": "Wenting Zhao",
     "matching_authors": [
       "Wenting Zhao"
+    ]
+  },
+  {
+    "title": "When Seeing Overrides Knowing: Visual Dominance and Deferral-Based Method for Personalized Safety in VLMs",
+    "authors": [
+      "Edward Sun",
+      "Yuchen Wu",
+      "Zixian Ma",
+      "Eric Hanchen Jiang",
+      "Yijia Xiao",
+      "Xiaoyuan Yi",
+      "Ranjay Krishna",
+      "Wei Wang",
+      "Jindong Wang",
+      "Aylin Caliskan"
+    ],
+    "summary": "Vision-language models (VLMs) are increasingly deployed in high-stakes settings, where a response that is reasonable in general may still be unsafe for a particular user whose medical, emotional, or situational context is unknown to the model. We study this problem of personalized safety in multimodal systems and introduce MPS-Bench, a benchmark of 5,181 scenarios from 584 real-world images across 12 high-risk domains, each paired with a hidden user profile. Evaluating eight frontier VLMs, we find that they almost always respond directly (86-99%) rather than seek missing context, and none exceeds 2.6/5 on personalized safety. To understand why these failures arise, we analyze multimodal interactions and identify visual dominance: visual information enters text representations early and suppresses textual risk signals during multimodal fusion. Causal interventions reveal a two-stage mechanism in which visual affect is first transferred into the text stream in early layers and then shapes the final decision through this altered text representation, making late-stage internal remediation unreliable. Motivated by this mechanism, we propose PRISM, a lightweight input monitor that uses bidirectional cross-modal modulation to predict when a query is likely to require deferral. PRISM achieves 0.978 AUC and strictly dominates the safety-utility Pareto frontier across all tested models.",
+    "published": "Sep 03",
+    "pdf_url": "https://arxiv.org/pdf/2609.04281v1",
+    "arxiv_url": "http://arxiv.org/abs/2609.04281v1",
+    "queried_author": "Ranjay Krishna",
+    "matching_authors": [
+      "Ranjay Krishna"
     ]
   },
   {
@@ -1273,8 +1483,8 @@
     ],
     "summary": "A key question for AI safety is whether a language model expresses all of its reasoning in its output tokens. We demonstrate a concrete failure mode where frontier models exhibit invisible reasoning by leveraging semantically irrelevant filler tokens to improve performance on synthetic reasoning tasks. We evaluate 13 frontier language models across three tasks and find that many models benefit significantly from filler tokens, with accuracy improvements of up to 13 percentage points. The benefit depends on which tokens are used and differs across models. We further show that filler tokens enable Claude Opus 4.5 to satisfy a hidden modular arithmetic constraint without sacrificing accuracy on its primary task, demonstrating that invisible reasoning can serve objectives entirely invisible to CoT monitoring. Reinforcement learning gives Qwen3-235B strong preferences over filler token content, but neither RL nor supervised fine-tuning produces a filler token benefit that persists at test time. Our results indicate that frontier models already perform consequential computation with no interpretable trace in their output tokens.",
     "published": "Jul 24",
-    "pdf_url": "https://arxiv.org/pdf/2607.22925v1",
-    "arxiv_url": "http://arxiv.org/abs/2607.22925v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.22925v2",
+    "arxiv_url": "http://arxiv.org/abs/2607.22925v2",
     "queried_author": "Ashwinee Panda",
     "matching_authors": [
       "Ashwinee Panda"
@@ -12663,126 +12873,6 @@
     "matching_authors": [
       "Antoine Bosselut",
       "Pang Wei Koh"
-    ]
-  },
-  {
-    "title": "RelBench v2: A Large-Scale Benchmark and Repository for Relational Data",
-    "authors": [
-      "Justin Gu",
-      "Rishabh Ranjan",
-      "Charilaos Kanatsoulis",
-      "Haiming Tang",
-      "Martin Jurkovic",
-      "Valter Hudovernik",
-      "Mark Znidar",
-      "Pranshu Chaturvedi",
-      "Parth Shroff",
-      "Fengyu Li",
-      "Jure Leskovec"
-    ],
-    "summary": "Relational deep learning (RDL) has emerged as a powerful paradigm for learning directly on relational databases by modeling entities and their relationships across multiple interconnected tables. As this paradigm evolves toward larger models and relational foundation models, scalable and realistic benchmarks are essential for enabling systematic evaluation and progress. In this paper, we introduce RelBench v2, a major expansion of the RelBench benchmark for RDL. RelBench v2 adds four large-scale relational datasets spanning scholarly publications, enterprise resource planning, consumer platforms, and clinical records, increasing the benchmark to 11 datasets comprising over 22 million rows across 29 tables. We further introduce autocomplete tasks, a new class of predictive objectives that require models to infer missing attribute values directly within relational tables while respecting temporal constraints, expanding beyond traditional forecasting tasks constructed via SQL queries. In addition, RelBench v2 expands beyond its native datasets by integrating external benchmarks and evaluation frameworks: we translate event streams from the Temporal Graph Benchmark into relational schemas for unified relational-temporal evaluation, interface with ReDeLEx to provide uniform access to 70+ real-world databases suitable for pretraining, and incorporate 4DBInfer datasets and tasks to broaden multi-table prediction coverage. Experimental results demonstrate that RDL models consistently outperform single-table baselines across autocomplete, forecasting, and recommendation tasks, highl...",
-    "published": "Feb 13",
-    "pdf_url": "https://arxiv.org/pdf/2602.12606v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.12606v2",
-    "queried_author": "Jure Leskovec",
-    "matching_authors": [
-      "Jure Leskovec"
-    ]
-  },
-  {
-    "title": "The Appeal and Reality of Recycling LoRAs with Adaptive Merging",
-    "authors": [
-      "Haokun Liu",
-      "Gyung Hyun Je",
-      "Marco Ciccone",
-      "Zhenlin Xu",
-      "Prasanth YSS",
-      "Colin Raffel"
-    ],
-    "summary": "The widespread availability of fine-tuned LoRA modules for open pre-trained models has led to an interest in methods that can adaptively merge LoRAs to improve performance. These methods typically include some way of selecting LoRAs from a pool and tune merging coefficients based on a task-specific dataset. While adaptive merging methods have demonstrated improvements in some settings, no past work has attempted to recycle LoRAs found \"in the wild\" on model repositories like the Hugging Face Hub. To address this gap, we consider recycling from a pool of nearly 1,000 user-contributed LoRAs trained from the Llama 3.1 8B-Instruct language model. Our empirical study includes a range of adaptive and non-adaptive merging methods in addition to a new method designed via a wide search over the methodological design space. We demonstrate that adaptive merging methods can improve performance over the base model but provide limited benefit over training a new LoRA on the same data used to set merging coefficients. We additionally find not only that the specific choice of LoRAs to merge has little importance, but that using LoRAs with randomly initialized parameter values yields similar performance. This raises the possibility that adaptive merging from recycled LoRAs primarily works via some kind of regularization effect, rather than by enabling positive cross-task transfer. To better understand why past work has proven successful, we confirm that positive transfer is indeed possible when there are highly relevant LoRAs in the pool. We release the model checkpoints and code online.",
-    "published": "Feb 12",
-    "pdf_url": "https://arxiv.org/pdf/2602.12323v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.12323v2",
-    "queried_author": "Colin Raffel",
-    "matching_authors": [
-      "Colin Raffel"
-    ]
-  },
-  {
-    "title": "Olmix: A Framework for Data Mixing Throughout LM Development",
-    "authors": [
-      "Mayee F. Chen",
-      "Tyler Murray",
-      "David Heineman",
-      "Matt Jordan",
-      "Hannaneh Hajishirzi",
-      "Christopher R\u00e9",
-      "Luca Soldaini",
-      "Kyle Lo"
-    ],
-    "summary": "Data mixing -- determining the ratios of data from different domains -- is a first-order concern for training language models (LMs). While existing mixing methods show promise, they fall short when applied during real-world LM development. We present Olmix, a framework that addresses two such challenges. First, the configuration space for developing a mixing method is not well understood -- design choices across existing methods lack justification or consensus and overlook practical issues like data constraints. We conduct a comprehensive empirical study of this space, identifying which design choices lead to a strong mixing method. Second, in practice, the domain set evolves throughout LM development as datasets are added, removed, partitioned, and revised -- a problem setting largely unaddressed by existing works, which assume fixed domains. We study how to efficiently recompute the mixture after the domain set is updated, leveraging information from past mixtures. We introduce mixture reuse, a mechanism that reuses existing ratios and recomputes ratios only for domains affected by the update. Over a sequence of five domain-set updates mirroring real-world LM development, mixture reuse matches the performance of fully recomputing the mix after each update with 74% less compute and improves over training without mixing by 11.6% on downstream tasks.",
-    "published": "Feb 12",
-    "pdf_url": "https://arxiv.org/pdf/2602.12237v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.12237v1",
-    "queried_author": "Christopher R\u00e9",
-    "matching_authors": [
-      "Christopher R\u00e9",
-      "Hannaneh Hajishirzi",
-      "Kyle Lo",
-      "Luca Soldaini"
-    ]
-  },
-  {
-    "title": "Extending Puzzle for Mixture-of-Experts Reasoning Models with Application to GPT-OSS Acceleration",
-    "authors": [
-      "Akhiad Bercovich",
-      "Nir Ailon",
-      "Vladimir Anisimov",
-      "Tomer Asida",
-      "Nave Assaf",
-      "Mohammad Dabbah",
-      "Ido Galil",
-      "Amnon Geifman",
-      "Yonatan Geifman",
-      "Izhak Golan",
-      "Roi Koren",
-      "Itay Levy",
-      "Zach Moshe",
-      "Pavlo Molchanov",
-      "Najeeb Nabwani",
-      "Mostofa Patwary",
-      "Omri Puny",
-      "Tomer Ronen",
-      "Itamar Schen",
-      "Elad Segal",
-      "Ido Shahaf",
-      "Oren Tropp",
-      "Ran Zilberstein",
-      "Ran El-Yaniv"
-    ],
-    "summary": "Reasoning-focused LLMs improve answer quality by generating longer reasoning traces, but the additional tokens dramatically increase serving cost, motivating inference optimization. We extend and apply Puzzle, a post-training neural architecture search (NAS) framework, to gpt-oss-120B to produce gpt-oss-puzzle-88B, a deployment-optimized derivative. Our approach combines heterogeneous MoE expert pruning, selective replacement of full-context attention with window attention, FP8 KV-cache quantization with calibrated scales, and post-training reinforcement learning to recover accuracy, while maintaining low generation length. In terms of per-token speeds, on an 8XH100 node we achieve 1.63X and 1.22X throughput speedups in long-context and short-context settings, respectively. gpt-oss-puzzle-88B also delivers throughput speedups of 2.82X on a single NVIDIA H100 GPU. However, because token counts can change with reasoning effort and model variants, per-token throughput (tok/s) and latency (ms/token) do not necessarily lead to end-to-end speedups: a 2X throughput gain is erased if traces grow 2X. Conversely, throughput gains can be spent on more reasoning tokens to improve accuracy; we therefore advocate request-level efficiency metrics that normalize throughput by tokens generated and trace an accuracy--speed frontier across reasoning efforts. We show that gpt-oss-puzzle-88B improves over gpt-oss-120B along the entire frontier, delivering up to 1.29X higher request-level efficiency. Across various benchmarks, gpt-oss-puzzle-88B matches or slightly exceeds the parent on suite-av...",
-    "published": "Feb 12",
-    "pdf_url": "https://arxiv.org/pdf/2602.11937v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.11937v2",
-    "queried_author": "Mostofa Patwary",
-    "matching_authors": [
-      "Mostofa Patwary"
-    ]
-  },
-  {
-    "title": "Retrieval-Aware Distillation for Transformer-SSM Hybrids",
-    "authors": [
-      "Aviv Bick",
-      "Eric P. Xing",
-      "Albert Gu"
-    ],
-    "summary": "State-space models (SSMs) offer efficient sequence modeling but lag behind Transformers on benchmarks that require in-context retrieval. Prior work links this gap to a small set of attention heads, termed Gather-and-Aggregate (G&A), which SSMs struggle to reproduce. We propose *retrieval-aware distillation*, which converts a pretrained Transformer into a hybrid student by preserving only these retrieval-critical heads and distilling the rest into recurrent heads. We identify the essential heads via ablation on a synthetic retrieval task, producing a hybrid with sparse, non-uniform attention placement. We show that preserving **just 2% of attention heads recovers over 95% of teacher performance on retrieval-heavy tasks** (10 heads in a 1B model), requiring far fewer heads than hybrids that retain at least 25%. We further find that large recurrent states often compensate for missing retrieval: once retrieval is handled by these heads, the SSM backbone can be simplified with limited loss, even with an $8\\times$ reduction in state dimension. By reducing both the attention cache and the SSM state, the resulting hybrid is $5$--$6\\times$ more memory-efficient than comparable hybrids, closing the Transformer--SSM gap at a fraction of the memory cost.",
-    "published": "Feb 11",
-    "pdf_url": "https://arxiv.org/pdf/2602.11374v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.11374v1",
-    "queried_author": "Albert Gu",
-    "matching_authors": [
-      "Albert Gu"
     ]
   }
 ]
