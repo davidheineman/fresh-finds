@@ -1,5 +1,84 @@
 [
   {
+    "title": "API Benchmark Scores Do Not Reliably Transfer to Chatbot Interfaces",
+    "authors": [
+      "Jennifer Wang",
+      "Joachim Baumann",
+      "Daniel E. Ho",
+      "Sanmi Koyejo"
+    ],
+    "summary": "Benchmark scores are a central currency in model releases: they inform purchasing decisions, shape public trust, and influence policy. Yet, a key assumption underlying benchmark scores is that the model performance measured through APIs faithfully reflects the behavior of deployed systems.\n  We challenge this assumption by auditing ChatGPT, Claude, and Gemini across seven systems and nine benchmarks spanning general capability, social bias, and sycophancy. We find systematic API--interface differences in both accuracy and consistency. On average, API evaluations score 3.4 percentage points higher in accuracy and 2.1 percentage points higher in test--retest agreement than corresponding interface evaluations. For ChatGPT, the performance difference between API and interface access exceeds the API-only difference between GPT 5.3 and GPT 5.4. Put differently, switching access surfaces can degrade performance as much as downgrading a full model generation.\n  We further test whether exposed API controls can reproduce interface behavior by varying system prompts, sampling parameters, and reasoning settings. These controls shift behavior in some cases but do not reliably eliminate the gap. Our findings document a context-validity gap: measurements obtained through APIs do not necessarily generalize to corresponding deployed interfaces, complicating the use of API evaluations as proxies for deployed systems.",
+    "published": "Sep 08",
+    "pdf_url": "https://arxiv.org/pdf/2609.08861v1",
+    "arxiv_url": "http://arxiv.org/abs/2609.08861v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "Living with AI Companions: Sustained AI Companionship Predicts Lower Well-Being Through Lower Human Interaction",
+    "authors": [
+      "Yutong Zhang",
+      "Dora Zhao",
+      "Yixin Wang",
+      "Rebecca Anselmetti",
+      "Jeffrey T. Hancock",
+      "Robert Kraut",
+      "Diyi Yang"
+    ],
+    "summary": "AI chatbots are increasingly used for companionship, emotional support, and personal self-disclosure; however, how social engagement with these systems unfolds over time and shapes users' well-being remains unclear. To address this, we conducted a two-wave longitudinal study of CharacterAI users, surveying 1,182 participants at baseline and 439 after a mean follow-up of 12 months. We examined how social engagement with AI companions evolves and how these longitudinal engagement patterns may influence well-being through two hypothesized pathways: sustained social engagement over time and the displacement of human social interaction. We found that interaction intensity, companionship use, and self-disclosure all showed substantial continuity over time. Greater interaction intensity at baseline predicted greater subsequent interaction intensity, companionship use, and self-disclosure. Consistent with the longitudinal engagement pathway, sustained social engagement across these dimensions was consistently associated with lower well-being. Results further support the social displacement pathway, indicating that these links were mainly explained by lower in-person social interaction. These findings highlight the importance of designing AI companions that support human social relationships without displacing them",
+    "published": "Sep 07",
+    "pdf_url": "https://arxiv.org/pdf/2609.07243v1",
+    "arxiv_url": "http://arxiv.org/abs/2609.07243v1",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang"
+    ]
+  },
+  {
+    "title": "XYBench: Can LLMs Respond Pragmatically to Queries with Misconceptions?",
+    "authors": [
+      "Akhila Yerukola",
+      "Jena D. Hwang",
+      "Mingqian Zheng",
+      "Jenna Godsey",
+      "Hyunwoo Kim",
+      "Valentina Pyatkin",
+      "Jennifer Hu",
+      "Maarten Sap"
+    ],
+    "summary": "When non-expert users ask LLMs for assistance, their queries can often have misconceptions (e.g., \"How do I parse XML with regex?\"). In such cases, often referred to as the XY-problem, LLMs must identify the misconception (\"regex are fragile\") and meaningfully direct the user toward a pragmatic solution that will address the root problem implicit in the request (\"use an XML parser\"). We introduce XYBench, a benchmark of 8,115 such queries, drawn from technical (StackOverflow/StackExchange) and everyday (WikiHow and a manually-curated subset) domains. We design an evaluation paradigm that assesses model responses along three criteria grounded in cooperative response theory: (a) presence and (b) emphasis on pragmatic solutions, and (c) identification of misconceptions. Our experiments show that even the strongest LLMs predominantly answer the literal request (0.75--0.92) and far less often the intended one (0.33--0.71), while substantially lagging behind humans at identifying misconceptions (at most 63% vs. 79--90%). Further, models overwhelmingly prefer pragmatic responses in a multiple choice setting yet consistently fail to generate them. Oracle ablation experiments show that providing explicit user intent at generation time helps; however a large gap remains, suggesting pragmatic redirection is a fundamentally underdeveloped capability in current LLMs.",
+    "published": "Sep 06",
+    "pdf_url": "https://arxiv.org/pdf/2609.06842v1",
+    "arxiv_url": "http://arxiv.org/abs/2609.06842v1",
+    "queried_author": "Maarten Sap",
+    "matching_authors": [
+      "Maarten Sap"
+    ]
+  },
+  {
+    "title": "NormViz: A Benchmark and Framework for Grounding Multimodal Reasoning in Global Cultures",
+    "authors": [
+      "Akhila Yerukola",
+      "Fabrice Y Harel-Canada",
+      "Simran Khanuja",
+      "Abhinav Sukumar Rao",
+      "Ashima Suvarna",
+      "Nanyun Peng",
+      "Saadia Gabriel",
+      "Maarten Sap"
+    ],
+    "summary": "AI systems are used worldwide, but they struggle to serve the needs of culturally diverse populations. Prior work on cultural understanding evaluates AI systems on text-only settings or on visual artifact recognition (e.g. foods, clothing). The ability to reason about visually observable behaviors through local social norms, which we call visual norm understanding, remains unexamined. We introduce NormViz-Bench, a high quality, human-validated benchmark of 3,268 contrastive image pairs (6,536 images) spanning 16 countries. Each pair varies only in the culturally relevant behavior (e.g., objects, attributes, spatial relations, and actions) that alters how each image is interpreted. Each image is labeled as conforming to, violating, or irrelevant to local social norms, and pair-level evaluation requires both images to be correctly classified, thereby preventing reliance on superficial visual shortcuts. Even the strongest VLMs, Gemini 3.0 Flash and Qwen2.5 VL 7B, succeed on only 26.6% and 21.6% of pairs, struggling most with identifying violating and culturally benign visual behaviors. Towards bridging this, we introduce NormViz-Train, a training dataset of 64k images paired with explanations. Though absolute performance remains low (<30%), finetuning on NormViz-Train improves pair accuracy relatively by up to 125% and 36% Qwen3-VL 4B and 8B respectively, showing a path forward to teach models to connect visual perception to cultural significance. Together, NormViz-Bench and NormViz-Train establish visual norm understanding as a challenging and consequential frontier for multi...",
+    "published": "Sep 06",
+    "pdf_url": "https://arxiv.org/pdf/2609.06831v1",
+    "arxiv_url": "http://arxiv.org/abs/2609.06831v1",
+    "queried_author": "Maarten Sap",
+    "matching_authors": [
+      "Maarten Sap"
+    ]
+  },
+  {
     "title": "$\u03c4^\u03c4$-Bench: An Environment for End-To-End, Realistic Agent Construction",
     "authors": [
       "Quan Shi",
@@ -240,10 +319,10 @@
       "Gustavo de Rosa",
       "Zheng Zhan"
     ],
-    "summary": "A free pause token gives a language model extra compute to form each next-token prediction (as a pause, or thinking, token does) but carries that compute in a parallel prediction stream over a weight-shared backbone rather than as an extra token in the sequence. It improves next-token prediction by 2-3 centinats in practice on a 1B parameter model. Because the pause rides an existing position instead of adding one, it is free to use: at inference it adds no context length, no KV cache, and essentially no latency with the growth in inference flops typically irrelevant as it is not the active bottleneck on throughput. The only primary cost is in training, where additional training compute versus an optimized pretraining pipeline is reduced to as low as x1.14 while preserving most of the benefits. The result is an isoflop, isoparameter, and isotoken improvement over standard next token trained transformers.",
+    "summary": "State--prediction separation (SPS) relieves a language model's hidden state of two competing burdens---summarizing the context and predicting the next token---by splitting the forward pass into a state stream and a prediction stream. The separation works, but it is expensive: the prediction stream is a second pass over the whole backbone, costing $\\sim$1.9$\\times$ the pretraining FLOPs, and even more in terms of wall-clock time when using a flexible attention mask. This paper makes state--prediction separation almost free. We take the separation to its limit with a free pause token: a prediction stream that writes no keys or values at all and so rides the sequence's existing positions. It improves next-token prediction of a standard Transformer by 2-3 centinats in practice on a 1B parameter model, and because it adds no position it costs nothing at inference---no added context length, no KV cache, no decode steps, and essentially no latency, with the growth in inference flops typically irrelevant as it is not the active bottleneck on throughput. The cost is therefore entirely in training where we use four mechanisms to drive it down: a two-pass split that keeps FlashAttention kernels viable, the $w{=}0$ prediction window, a shared gated FFN that evaluates one FFN per position rather than one per stream, and phasing the separation onto the tail of the run. Together these bring the overhead versus an optimized pretraining pipeline to $1.33\\times$ wall-clock while recovering ~94% of the gain compared to SPS, and to as low as $1.09\\times$ along a graceful quality/compute tradeo...",
     "published": "Sep 03",
-    "pdf_url": "https://arxiv.org/pdf/2609.03807v2",
-    "arxiv_url": "http://arxiv.org/abs/2609.03807v2",
+    "pdf_url": "https://arxiv.org/pdf/2609.03807v3",
+    "arxiv_url": "http://arxiv.org/abs/2609.03807v3",
     "queried_author": "Yoav Artzi",
     "matching_authors": [
       "Yoav Artzi"
@@ -448,8 +527,8 @@
     ],
     "summary": "Retrieval-augmented methods improve factual accuracy by grounding language models in external knowledge, but retrieving over unstructured text often introduces irrelevant context and offers limited control over the retrieved information. Structured knowledge bases offer a more controllable alternative, yet they are expensive to construct and often brittle to reason over. To address these limitations, we propose KBevo: a co-evolving framework that jointly learns to construct a structured knowledge base and reason over it for knowledge-intensive question answering. By optimizing both components end-to-end with QA outcome rewards, our method enables reasoning success to directly improve the quality of the constructed knowledge base. This leads to larger, better-connected knowledge structures with higher answer reachability, while also improving compositional factual reasoning and controllability compared to standard retrieval baselines.",
     "published": "Aug 26",
-    "pdf_url": "https://arxiv.org/pdf/2608.26386v1",
-    "arxiv_url": "http://arxiv.org/abs/2608.26386v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.26386v2",
+    "arxiv_url": "http://arxiv.org/abs/2608.26386v2",
     "queried_author": "Yoav Artzi",
     "matching_authors": [
       "Yoav Artzi"
@@ -764,8 +843,8 @@
     ],
     "summary": "This first release of Prior Labs in relational learning shows our continued commitment to open science. We open-source three pieces of software that we expect to accelerate research in the field towards meaningful real-world impact. We aim to steer further development based on feedback from, and in collaboration with, the community. Given the early stage of development, our $\u03b1$-release targets researchers and early-adopting practitioners. Over the past years, a variety of datasets and tasks for relational learning have emerged, but the community has not converged on a reliable, reproducible way to compare different methods on these tasks. Our $\u03b1$-release, RelArena-$\u03b1$, provides a unified framework for running and comparing baselines on RelBench v1 by standardizing data loading, evaluation protocols, tuning regimes, and support for systems with custom tuning, inspired by established tabular benchmarks such as TabArena. We plan to work with the research community to further develop RelArena-$\u03b1$ into a catalyst for progress in the relational learning community. We release the initial version of TabPFN-Rel, a purpose-built relational harness for TabPFN-3. Currently ranked first among models on RelArena-$\u03b1$, TabPFN-Rel makes key improvements upon RDBLearn. Beyond its ranking, TabPFN-Rel serves as a strong baseline, adding to the growing evidence that flattening a relational database into a single table remains competitive with specialized relational architectures on real-world tasks.\n  To facilitate adoption of relational learning methods in research and industry, we release an ...",
     "published": "Aug 17",
-    "pdf_url": "https://arxiv.org/pdf/2608.16319v1",
-    "arxiv_url": "http://arxiv.org/abs/2608.16319v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.16319v2",
+    "arxiv_url": "http://arxiv.org/abs/2608.16319v2",
     "queried_author": "Jure Leskovec",
     "matching_authors": [
       "Jure Leskovec"
@@ -3937,8 +4016,8 @@
     ],
     "summary": "Large language models are increasingly deployed as human simulators for interactive evaluation and social simulation. Yet helpfulness-driven post-training pulls them toward a homogeneous, overly agreeable assistant register, creating a behavioral Sim2Real gap. We present OdysSim, the largest open systematic investigation of behavioral foundation models, i.e., models trained to simulate human behavior at scale. We propose SOUL, a taxonomy of five capability axes (CONV, SS, COG, ROLE, EVAL) that unifies 62 datasets and 23 benchmark tasks under one framework. Specifically, we curate the OdysSim corpus (21.4M interactions, 10B tokens, retrofitted with back-generated social contexts), construct the SOUL-Index benchmark, and develop an end-to-end training recipe combining midtraining, task-specific RL, and expert distillation. The resulting open 8B OSim model ranks first or tied-first on 8 of 23 tasks, outperforming any individual frontier model by this count, with the strongest gains on conversational and social tasks. Its outputs are also more human-like in length, formatting, and word choice, and it transfers zero-shot to out-of-distribution user simulation on $\u03c4$-bench, nearly matching real users on reaction alignment (93.2 vs. 93.5). We further show that LLM-as-judge RL induces reward-hacking patterns, and that our detectors can mitigate them during post-training. Together, our findings suggest that behavioral foundation models require rethinking the LLM training paradigm. We release all artifacts to support future research.",
     "published": "Jun 12",
-    "pdf_url": "https://arxiv.org/pdf/2606.14199v1",
-    "arxiv_url": "http://arxiv.org/abs/2606.14199v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.14199v2",
+    "arxiv_url": "http://arxiv.org/abs/2606.14199v2",
     "queried_author": "Maarten Sap",
     "matching_authors": [
       "Maarten Sap"
@@ -5109,8 +5188,8 @@
     ],
     "summary": "Subliminal learning is a phenomenon where language models can transmit behavioral traits to other models through seemingly innocuous data (Cloud et al., 2025). In subliminal learning, a teacher model with a behavioral trait (e.g. obsession with cats) can transmit this cat obsession to a student model finetuned only on numerical sequences generated by the teacher. In this paper, we ask: how does this unexpected behavioral transmission occur? We show that subliminal learning is a LoRA artifact. When subliminal learning occurs, transmission has an inverted U-shaped relationship with LoRA rank; it also disappears with full finetuning. We show that subliminal learning is highly dependent on the context seen during finetuning and evaluation. For example, a Qwen model with the default system prompt during finetuning (\"You are Qwen, created by Alibaba Cloud. You are a helpful assistant.\") does not show subliminal learning during generation when no system prompt is included. We further demonstrate that subliminal behavior is localized to computation at tokens seen during both finetuning and evaluation (e.g. the model's default system prompt, the standard chat template tokens, etc.). Overall, subliminal learning seems to be a fragile artifact of LoRA hyperparameters and finetuning context, making it an unstable channel for behavioral transmission.",
     "published": "May 30",
-    "pdf_url": "https://arxiv.org/pdf/2606.00831v1",
-    "arxiv_url": "http://arxiv.org/abs/2606.00831v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.00831v2",
+    "arxiv_url": "http://arxiv.org/abs/2606.00831v2",
     "queried_author": "Ari Holtzman",
     "matching_authors": [
       "Ari Holtzman"
@@ -7201,8 +7280,8 @@
     ],
     "summary": "Retrieval-augmented generation (RAG) has proven effective for knowledge-intensive tasks, but is widely believed to offer limited benefit for reasoning-intensive problems such as math and code generation. We challenge this assumption by showing that the limitation lies not in RAG itself, but in the choice of corpus. Instead of retrieving documents, we propose retrieving thinking traces, i.e., intermediate thinking trajectories generated during problem solving attempts. We show that thinking traces are already a strong retrieval source, and further introduce T3, an offline method that transforms them into structured, retrieval-friendly representations, to improve usability. Using these traces as a corpus, a simple retrieve-then-generate pipeline consistently improves reasoning performance across strong models and benchmarks such as AIME 2025--2026, LiveCodeBench, and GPQA-Diamond, outperforming both non-RAG baselines and retrieval over standard web corpora. For instance, on AIME 2025-2026, RAG with traces generated by Gemini-2-thinking achieves relative gains of +56.3%, +8.6%, and +7.6% for Gemini-2.5-Flash, GPT-OSS-120B, and GPT-5, respectively, even though these are more recent models. Overall, our results suggest that thinking traces are an effective retrieval corpus for reasoning tasks, and transforming them into structured, compact, or diagnostic representations unlocks even stronger gains. Code available at https://github.com/Narabzad/t3.",
     "published": "May 05",
-    "pdf_url": "https://arxiv.org/pdf/2605.03344v2",
-    "arxiv_url": "http://arxiv.org/abs/2605.03344v2",
+    "pdf_url": "https://arxiv.org/pdf/2605.03344v3",
+    "arxiv_url": "http://arxiv.org/abs/2605.03344v3",
     "queried_author": "Sewon Min",
     "matching_authors": [
       "Sewon Min"
@@ -8339,10 +8418,10 @@
       "Yiming Yang",
       "Sean Welleck"
     ],
-    "summary": "Recent large language model (LLM) agents have shown promise in using execution feedback for test-time adaptation. However, robust self-improvement remains far from solved: most approaches still treat each problem instance independently, without accumulating reusable knowledge. This limitation is particularly pronounced in domain-specific languages such as Triton, which are underrepresented in LLM pretraining data. Their strict constraints and non-linear optimization landscape further make naive generation and local refinement unreliable. We propose AdaExplore, an agent framework that enables self-improvement via accumulated execution feedback for performance-critical kernel code generation through two complementary stages: failure-driven adaptation and diversity-preserving search, jointly improving correctness and optimization performance without additional fine-tuning or external knowledge. In the adaptation stage, the agent synthesizes tasks and converts recurring failures into a reusable memory of validity rules, helping subsequent generations remain within the feasible set. In the search stage, the agent organizes candidate kernels as a tree and alternates between small local refinements and larger structural regeneration, allowing it to explore the optimization landscape beyond local optima. Experiments on kernel runtime optimization benchmarks validate these gains: AdaExplore achieves 3.12x and 1.72x speedups on KernelBench Level-2 and Level-3, respectively, within 100 steps, and continues to improve with additional computation.",
+    "summary": "Recent large language model (LLM) agents have shown promise in using execution feedback for test-time adaptation. However, robust self-improvement remains far from solved: most approaches still treat each problem instance independently, without accumulating reusable knowledge. This limitation is particularly pronounced in domain-specific languages such as Triton, which are underrepresented in LLM pretraining data. Their strict constraints and non-linear optimization landscape further make naive generation and local refinement unreliable. We propose AdaExplore, an agent framework that enables self-improvement via accumulated execution feedback for performance-critical kernel code generation through two complementary stages: failure-driven adaptation and diversity-preserving search, jointly improving correctness and optimization performance without additional fine-tuning or external knowledge. In the adaptation stage, the agent synthesizes tasks and converts recurring failures into a reusable memory of validity rules, helping subsequent generations remain within the feasible set. In the search stage, the agent organizes candidate kernels as a tree and alternates between small local refinements and larger structural regeneration, allowing it to explore the optimization landscape beyond local optima. Experiments on kernel runtime optimization benchmarks validate these gains: AdaExplore achieves 3.11x and 1.62x speedups on KernelBench Level-2 and Level-3, respectively, within 100 steps, and continues to improve with additional computation.",
     "published": "Apr 17",
-    "pdf_url": "https://arxiv.org/pdf/2604.16625v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.16625v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.16625v2",
+    "arxiv_url": "http://arxiv.org/abs/2604.16625v2",
     "queried_author": "Sean Welleck",
     "matching_authors": [
       "Sean Welleck"
@@ -10227,8 +10306,8 @@
     ],
     "summary": "Frontier LLM companies have repeatedly assured courts and regulators that their models do not store copies of training data. They further rely on safety alignment strategies via RLHF, system prompts, and output filters to block verbatim regurgitation of copyrighted works, and have cited the efficacy of these measures in their legal defenses against copyright infringement claims. We show that finetuning bypasses these protections: by training models to expand plot summaries into full text, a task naturally suited for commercial writing assistants, we cause GPT-4o, Gemini-2.5-Pro, and DeepSeek-V3.1 to reproduce up to 85-90% of held-out copyrighted books, with single verbatim spans exceeding 460 words, using only semantic descriptions as prompts and no actual book text. This extraction generalizes across authors: finetuning exclusively on Haruki Murakami's novels unlocks verbatim recall of copyrighted books from over 30 unrelated authors. The effect is not specific to any training author or corpus: random author pairs and public-domain finetuning data produce comparable extraction, while finetuning on synthetic text yields near-zero extraction, indicating that finetuning on individual authors' works reactivates latent memorization from pretraining. Three models from different providers memorize the same books in the same regions ($r \\ge 0.90$), pointing to an industry-wide vulnerability. Our findings offer compelling evidence that model weights store copies of copyrighted works and that the security failures that manifest after finetuning on individual authors' works undermine...",
     "published": "Mar 21",
-    "pdf_url": "https://arxiv.org/pdf/2603.20957v3",
-    "arxiv_url": "http://arxiv.org/abs/2603.20957v3",
+    "pdf_url": "https://arxiv.org/pdf/2603.20957v4",
+    "arxiv_url": "http://arxiv.org/abs/2603.20957v4",
     "queried_author": "Niloofar Mireshghallah",
     "matching_authors": [
       "Niloofar Mireshghallah"
@@ -12792,87 +12871,6 @@
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "ALMo: Interactive Aim-Limit-Defined, Multi-Objective System for Personalized High-Dose-Rate Brachytherapy Treatment Planning and Visualization for Cervical Cancer",
-    "authors": [
-      "Edward Chen",
-      "Natalie Dullerud",
-      "Pang Wei Koh",
-      "Thomas Niedermayr",
-      "Elizabeth Kidd",
-      "Sanmi Koyejo",
-      "Carlos Guestrin"
-    ],
-    "summary": "In complex clinical decision-making, clinicians must often track a variety of competing metrics defined by aim (ideal) and limit (strict) thresholds. Sifting through these high-dimensional tradeoffs to infer the optimal patient-specific strategy is cognitively demanding and historically prone to variability. In this paper, we address this challenge within the context of High-Dose-Rate (HDR) brachytherapy for cervical cancer, where planning requires strictly managing radiation hot spots while balancing tumor coverage against organ sparing. We present ALMo (Aim-Limit-defined Multi-Objective system), an interactive decision support system designed to infer and operationalize clinician intent. ALMo employs a novel optimization framework that minimizes manual input through automated parameter setup and enables flexible control over toxicity risks. Crucially, the system allows clinicians to navigate the Pareto surface of dosimetric tradeoffs by directly manipulating intuitive aim and limit values. In a retrospective evaluation of 25 clinical cases, ALMo generated treatment plans that consistently met or exceeded manual planning quality, with 65% of cases demonstrating dosimetric improvements. Furthermore, the system significantly enhanced efficiency, reducing average planning time to approximately 17 minutes, compared to the conventional 30-60 minutes. While validated in brachytherapy, ALMo demonstrates a generalized framework for streamlining interaction in multi-criteria clinical decision-making.",
-    "published": "Feb 14",
-    "pdf_url": "https://arxiv.org/pdf/2602.13666v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.13666v1",
-    "queried_author": "Carlos Guestrin",
-    "matching_authors": [
-      "Carlos Guestrin",
-      "Pang Wei Koh",
-      "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "Small Reward Models via Backward Inference",
-    "authors": [
-      "Yike Wang",
-      "Faeze Brahman",
-      "Shangbin Feng",
-      "Teng Xiao",
-      "Hannaneh Hajishirzi",
-      "Yulia Tsvetkov"
-    ],
-    "summary": "Reward models (RMs) play a central role throughout the language model (LM) pipeline, particularly in non-verifiable domains. However, the dominant LLM-as-a-Judge paradigm relies on the strong reasoning capabilities of large models, while alternative approaches require reference responses or explicit rubrics, limiting flexibility and broader accessibility. In this work, we propose FLIP (FLipped Inference for Prompt reconstruction), a reference-free and rubric-free reward modeling approach that reformulates reward modeling through backward inference: inferring the instruction that would most plausibly produce a given response. The similarity between the inferred and the original instructions is then used as the reward signal. Evaluations across four domains using 13 small language models show that FLIP outperforms LLM-as-a-Judge baselines by an average of 79.6%. Moreover, FLIP substantially improves downstream performance in extrinsic evaluations under test-time scaling via parallel sampling and GRPO training. We further find that FLIP is particularly effective for longer outputs and robust to common forms of reward hacking. By explicitly exploiting the validation-generation gap, FLIP enables reliable reward modeling in downscaled regimes where judgment methods fail. Code available at https://github.com/yikee/FLIP.",
-    "published": "Feb 14",
-    "pdf_url": "https://arxiv.org/pdf/2602.13551v3",
-    "arxiv_url": "http://arxiv.org/abs/2602.13551v3",
-    "queried_author": "Hannaneh Hajishirzi",
-    "matching_authors": [
-      "Hannaneh Hajishirzi"
-    ]
-  },
-  {
-    "title": "Imitating What Works: Simulation-Filtered Modular Policy Learning from Human Videos",
-    "authors": [
-      "Albert J. Zhai",
-      "Kuo-Hao Zeng",
-      "Jiasen Lu",
-      "Ali Farhadi",
-      "Shenlong Wang",
-      "Wei-Chiu Ma"
-    ],
-    "summary": "The ability to learn manipulation skills by watching videos of humans has the potential to unlock a new source of highly scalable data for robot learning. Here, we tackle prehensile manipulation, in which tasks involve grasping an object before performing various post-grasp motions. Human videos offer strong signals for learning the post-grasp motions, but they are less useful for learning the prerequisite grasping behaviors, especially for robots without human-like hands. A promising way forward is to use a modular policy design, leveraging a dedicated grasp generator to produce stable grasps. However, arbitrary stable grasps are often not task-compatible, hindering the robot's ability to perform the desired downstream motion. To address this challenge, we present Perceive-Simulate-Imitate (PSI), a framework for training a modular manipulation policy using human video motion data processed by paired grasp-trajectory filtering in simulation. This simulation step extends the trajectory data with grasp suitability labels, which allows for supervised learning of task-oriented grasping capabilities. We show through real-world experiments that our framework can be used to learn precise manipulation skills efficiently without any robot data, resulting in significantly more robust performance than using a grasp generator naively.",
-    "published": "Feb 13",
-    "pdf_url": "https://arxiv.org/pdf/2602.13197v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.13197v2",
-    "queried_author": "Ali Farhadi",
-    "matching_authors": [
-      "Ali Farhadi"
-    ]
-  },
-  {
-    "title": "Buy versus Build an LLM: A Decision Framework for Governments",
-    "authors": [
-      "Jiahao Lu",
-      "Ziwei Xu",
-      "William Tjhi",
-      "Junnan Li",
-      "Antoine Bosselut",
-      "Pang Wei Koh",
-      "Mohan Kankanhalli"
-    ],
-    "summary": "Large Language Models (LLMs) represent a new frontier of digital infrastructure that can support a wide range of public-sector applications, from general purpose citizen services to specialized and sensitive state functions. When expanding AI access, governments face a set of strategic choices over whether to buy existing services, build domestic capabilities, or adopt hybrid approaches across different domains and use cases. These are critical decisions especially when leading model providers are often foreign corporations, and LLM outputs are increasingly treated as trusted inputs to public decision-making and public discourse. In practice, these decisions are not intended to mandate a single approach across all domains; instead, national AI strategies are typically pluralistic, with sovereign, commercial and open-source models coexisting to serve different purposes. Governments may rely on commercial models for non-sensitive or commodity tasks, while pursuing greater control for critical, high-risk or strategically important applications.\n  This paper provides a strategic framework for making this decision by evaluating these options across dimensions including sovereignty, safety, cost, resource capability, cultural fit, and sustainability. Importantly, \"building\" does not imply that governments must act alone: domestic capabilities may be developed through public research institutions, universities, state-owned enterprises, joint ventures, or broader national ecosystems. By detailing the technical requirements and practical challenges of each pathway, this work aims to...",
-    "published": "Feb 13",
-    "pdf_url": "https://arxiv.org/pdf/2602.13033v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.13033v2",
-    "queried_author": "Antoine Bosselut",
-    "matching_authors": [
-      "Antoine Bosselut",
-      "Pang Wei Koh"
     ]
   }
 ]
