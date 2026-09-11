@@ -1,5 +1,73 @@
 [
   {
+    "title": "Data Scarcity and Model Sparsity: Mixtures-of-Experts Overfit More to Repeated Data",
+    "authors": [
+      "Atindra Jha",
+      "Margaret Li",
+      "Jure Leskovec",
+      "Percy Liang",
+      "Luke Zettlemoyer"
+    ],
+    "summary": "As the supply of human-written text is exhausted, it has become standard practice to repeat language model training data. Prior work has studied data repetition for densely activated Transformers, but the effects of data repetition remains largely unexplored for recently dominant sparse architectures such as Mixture-of-Experts (MoE), despite their increased compute efficiency. We vary data repetition rates across single- and multi-domain data mixes, and across MoE settings, including expert count and granularity. We consistently find, for models ranging from 80M to 1B active (8.5B total) parameters, that MoEs degrade more rapidly under data repetition. This effect increases with sparsity, dictated by total rather than active parameters. While 80M dense models can repeat data over 8x with minimal degradation, MoEs instead begin to suffer at 4x, and deteriorate rapidly, ceding their performance benefits in all-unique data settings to underperform dense models after 32x. We experiment with existing regularization methods as a potential remedy. We find that some methods, such as dropout, can mitigate overfitting. In particular, with strong masking-based regularization, MoEs are able to outperform dense models even when data is repeated more than 64 times. However, no method fully matches the performance of all-unique training data. Finally, we analyze internal mechanisms correlated with MoE overfitting in high repetition regimes, and find that MoE routing universally stabilizes early in training, and that expert specialization correlates with overfitting to repeated data. In su...",
+    "published": "Sep 10",
+    "pdf_url": "https://arxiv.org/pdf/2609.11917v1",
+    "arxiv_url": "http://arxiv.org/abs/2609.11917v1",
+    "queried_author": "Jure Leskovec",
+    "matching_authors": [
+      "Jure Leskovec",
+      "Luke Zettlemoyer",
+      "Margaret Li",
+      "Percy Liang"
+    ]
+  },
+  {
+    "title": "Making Alternative Data Work: Context-Augmented LLMs for Financial Forecasting",
+    "authors": [
+      "Jihoon Kwon",
+      "Lawrence Liu",
+      "Daekyung Park",
+      "Sumin Kim",
+      "Haverty Jack",
+      "Hoyoung Lee",
+      "Katherine Bjorkman",
+      "Josh McKenney",
+      "Peter Laurelli",
+      "Nicole Kagan",
+      "Zach Golkhou",
+      "Thorsten Neumann",
+      "Edward Tong",
+      "Pete Petersen",
+      "Yoon Kim",
+      "Alejandro Lopez-Lira",
+      "Yongjae Lee",
+      "Chanyeol Choi"
+    ],
+    "summary": "When forecasting a firm's future financial performance, alternative data - data collected from non-traditional sources such as consumer transactions, web traffic, and prediction markets - can provide timely signals about firms' operating activities and broader market conditions. These signals may reveal information that is not captured by traditional public sources and can therefore provide complementary information for forecasting firms' future financial performance. However, firm-level alternative data often have limited historical coverage, are relevant only to specific prediction targets or subsets of firms, and are distributed across numerous heterogeneous channels, making them difficult to incorporate flexibly into conventional forecasting approaches. Meanwhile, large language models (LLMs) can interpret instructions, learn from in-context examples, and generate predictions by combining heterogeneous information without task-specific parameter updates. Motivated by this potential flexibility, we investigate whether an LLM can forecast firm performance by integrating alternative data with other financial information through in-context learning. We propose a two-agent framework that first identifies the firms for which each alternative data channel is likely to be informative and then predicts revenue using firm- and channel-specific context. We evaluate the framework across four commercial alternative data channels. In our experiments, adding alternative data in context alongside other financial information improves the LLM's forecasting relative to either source alone...",
+    "published": "Sep 10",
+    "pdf_url": "https://arxiv.org/pdf/2609.11607v1",
+    "arxiv_url": "http://arxiv.org/abs/2609.11607v1",
+    "queried_author": "Yoon Kim",
+    "matching_authors": [
+      "Yoon Kim"
+    ]
+  },
+  {
+    "title": "Think Before You Link: Rarity, Reasoning, and Retrieval in Multilingual Entity Linking",
+    "authors": [
+      "Parinthapat Pengpun",
+      "Simran Khanuja",
+      "Graham Neubig"
+    ],
+    "summary": "Multimodal entity linking grounds entity mentions in text and images to knowledge-base entries. These systems degrade on rare entities, but prior work measures rarity primarily through popularity-based metrics such as pageviews. We broaden this view using knowledge-graph structural metrics that capture how well an entity is documented and connected. These metrics identify many rare entities that popularity metrics miss. Across the resulting rare-entity slices, state-of-the-art accuracy drops by 15.4-39.9%, showing that different rarity definitions expose different failure modes. To address these failures, we introduce a simple, training-free framework in which a reasoning-capable vision-language model iteratively searches and reasons over Wikipedia, gathering evidence dynamically. Controlled experiments show that reasoning and retrieval are complementary. Reasoning alone does not significantly improve accuracy on rare entities. Retrieval without reasoning improves rare-entity accuracy but can hurt overall accuracy. Their combination performs best. On MERLIN, a multilingual multimodal entity linking benchmark over five languages (Hindi, Indonesian, Japanese, Tamil, Vietnamese), our best system improves over the state of the art by 6.9% overall and by up to 23.3% on rare-entity slices. We release MERLIN-Rare, rare-entity test slices for targeted evaluation, with our framework.",
+    "published": "Sep 09",
+    "pdf_url": "https://arxiv.org/pdf/2609.10745v1",
+    "arxiv_url": "http://arxiv.org/abs/2609.10745v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
     "title": "API Benchmark Scores Do Not Reliably Transfer to Chatbot Interfaces",
     "authors": [
       "Jennifer Wang",
@@ -253,6 +321,8 @@
       "Shizheng Hou",
       "Sicong Jiang",
       "Sijie Li",
+      "Boqin Yuan",
+      "Michael Glass",
       "Song Bian",
       "Terry Yue Zhuo",
       "Tianqing Wu",
@@ -284,12 +354,15 @@
       "Iheb Chaabane",
       "Yuxin Tang",
       "Xiangyi Li",
+      "Satya Sai Srinath Namburi GNVV",
+      "Xinyue Zheng",
       "Andy Konwinski",
       "Boxuan Li",
       "Leon Liangyu Chen",
       "Alex Dimakis",
       "Nicholas Carlini",
       "Soroush Vosoughi",
+      "Sanmi Koyejo",
       "Di He",
       "Etash Guha",
       "Benjamin Feuer",
@@ -299,11 +372,12 @@
     ],
     "summary": "Evaluating agents on the growing number of agentic benchmarks is challenging because they often require complex environments and agent integrations. We introduce Harbor Adapters, a unified evaluation infrastructure for agentic benchmarks. Our work makes three contributions. First, we develop benchmark adapters that port more than 80 benchmarks to evaluate arbitrary agents, and validate them through rigorous code review and parity experiments. Second, we conduct a large-scale evaluation of 8 models spanning capability tiers across 54 benchmarks; every model is run with Terminus-2 and with one of 3 native harnesses. This enables a broader analysis of agent capabilities and failure modes than was previously possible. Third, we introduce Harbor-Index, a curated set of 82 difficult, diverse, and high-quality tasks spanning 29 benchmarks, refined from the adapted suite through difficulty filtering, AI and human audit, and an audit-and-fix loop. Harbor-Index preserves the challenge and breadth of large-scale agentic evaluations while being affordable to run; no evaluated model-harness configuration exceeds 30% pass rate, and the strongest (GPT-5.5 with Codex) reaches 28.0%. We release the adapters, evaluation results, in-depth analysis, and Harbor-Index as open-source artifacts to support more reliable and comprehensive evaluation of language-model agents.",
     "published": "Sep 03",
-    "pdf_url": "https://arxiv.org/pdf/2609.04298v2",
-    "arxiv_url": "http://arxiv.org/abs/2609.04298v2",
+    "pdf_url": "https://arxiv.org/pdf/2609.04298v3",
+    "arxiv_url": "http://arxiv.org/abs/2609.04298v3",
     "queried_author": "Ludwig Schmidt",
     "matching_authors": [
       "Ludwig Schmidt",
+      "Sanmi Koyejo",
       "Nicholas Carlini"
     ]
   },
@@ -12808,69 +12882,6 @@
     "queried_author": "Jack Hessel",
     "matching_authors": [
       "Jack Hessel"
-    ]
-  },
-  {
-    "title": "Cold-Start Personalization via Training-Free Priors from Structured World Models",
-    "authors": [
-      "Avinandan Bose",
-      "Shuyue Stella Li",
-      "Faeze Brahman",
-      "Pang Wei Koh",
-      "Simon Shaolei Du",
-      "Yulia Tsvetkov",
-      "Maryam Fazel",
-      "Lin Xiao",
-      "Asli Celikyilmaz"
-    ],
-    "summary": "Cold-start personalization requires inferring user preferences through interaction when no user-specific historical data is available. The core challenge is a routing problem: each task admits dozens of preference dimensions, yet individual users care about only a few, and which ones matter depends on who is asking. With a limited question budget, asking without structure will miss the dimensions that matter. Reinforcement learning is the natural formulation, but in multi-turn settings its terminal reward fails to exploit the factored, per-criterion structure of preference data, and in practice learned policies collapse to static question sequences that ignore user responses. We propose decomposing cold-start elicitation into offline structure learning and online Bayesian inference. Pep (Preference Elicitation with Priors) learns a structured world model of preference correlations offline from complete profiles, then performs training-free Bayesian inference online to select informative questions and predict complete preference profiles, including dimensions never asked about. The framework is modular across downstream solvers and requires only simple belief models. Across medical, mathematical, social, and commonsense reasoning, Pep achieves 80.8% alignment between generated responses and users' stated preferences versus 68.5% for RL, with 3-5x fewer interactions. When two users give different answers to the same question, Pep changes its follow-up 39-62% of the time versus 0-28% for RL. It does so with ~10K parameters versus 8B for RL, showing that the bottleneck in cold-...",
-    "published": "Feb 16",
-    "pdf_url": "https://arxiv.org/pdf/2602.15012v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.15012v1",
-    "queried_author": "Pang Wei Koh",
-    "matching_authors": [
-      "Pang Wei Koh"
-    ]
-  },
-  {
-    "title": "S2D: Selective Spectral Decay for Quantization-Friendly Conditioning of Neural Activations",
-    "authors": [
-      "Arnav Chavan",
-      "Nahush Lele",
-      "Udbhav Bamba",
-      "Sankalp Dayal",
-      "Aditi Raghunathan",
-      "Deepak Gupta"
-    ],
-    "summary": "Activation outliers in large-scale transformer models pose a fundamental challenge to model quantization, creating excessively large ranges that cause severe accuracy drops during quantization. We empirically observe that outlier severity intensifies with pre-training scale (e.g., progressing from CLIP to the more extensively trained SigLIP and SigLIP2). Through theoretical analysis as well as empirical correlation studies, we establish the direct link between these activation outliers and dominant singular values of the weights. Building on this insight, we propose Selective Spectral Decay ($S^2D$), a geometrically-principled conditioning method that surgically regularizes only the weight components corresponding to the largest singular values during fine-tuning. Through extensive experiments, we demonstrate that $S^2D$ significantly reduces activation outliers and produces well-conditioned representations that are inherently quantization-friendly. Models trained with $S^2D$ achieve up to 7% improved PTQ accuracy on ImageNet under W4A4 quantization and 4% gains when combined with QAT. These improvements also generalize across downstream tasks and vision-language models, enabling the scaling of increasingly large and rigorously trained models without sacrificing deployment efficiency.",
-    "published": "Feb 16",
-    "pdf_url": "https://arxiv.org/pdf/2602.14432v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.14432v1",
-    "queried_author": "Aditi Raghunathan",
-    "matching_authors": [
-      "Aditi Raghunathan"
-    ]
-  },
-  {
-    "title": "Attention Head Entropy of LLMs Predicts Answer Correctness",
-    "authors": [
-      "Sophie Ostmeier",
-      "Brian Axelrod",
-      "Maya Varma",
-      "Asad Aali",
-      "Yabin Zhang",
-      "Magdalini Paschali",
-      "Sanmi Koyejo",
-      "Curtis Langlotz",
-      "Akshay Chaudhari"
-    ],
-    "summary": "Large language models (LLMs) often generate plausible yet incorrect answers, posing risks in safety-critical settings such as medicine. Human evaluation is expensive, and LLM-as-judge approaches risk introducing hidden errors. Recent white-box methods detect contextual hallucinations using model internals, focusing on the localization of the attention mass, but two questions remain open: do these approaches extend to predicting answer correctness, and do they generalize out-of-domains? We introduce Head Entropy, a method that predicts answer correctness from attention entropy patterns, specifically measuring the spread of the attention mass. Using sparse logistic regression on per-head 2-Renyi entropies, Head Entropy matches or exceeds baselines in-distribution and generalizes substantially better on out-of-domains, it outperforms the closest baseline on average by +8.5% AUROC. We further show that attention patterns over the question/context alone, before answer generation, already carry predictive signal using Head Entropy with on average +17.7% AUROC over the closest baseline. We evaluate across 5 instruction-tuned LLMs and 3 QA datasets spanning general knowledge, multi-hop reasoning, and medicine.",
-    "published": "Feb 14",
-    "pdf_url": "https://arxiv.org/pdf/2602.13699v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.13699v1",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
     ]
   }
 ]
