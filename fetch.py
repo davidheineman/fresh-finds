@@ -294,8 +294,33 @@ def backfill_from_api(authors: List[str]) -> List[Paper]:
     return papers
 
 
+def infer_missing_dates(papers: List[Dict]) -> None:
+    """Papers saved before published_iso existed only kept a "Mon DD" label. They are
+    still in newest-first order, so walk them and step back a year whenever the date
+    jumps forward, which recovers the year each one was published."""
+    ceiling = datetime.now(timezone.utc)
+
+    for paper in papers:
+        if paper.get('published_iso'):
+            continue
+        try:
+            parsed = datetime.strptime(paper.get('published', ''), "%b %d")
+        except ValueError:
+            continue
+
+        for year in (ceiling.year, ceiling.year - 1):
+            try:
+                candidate = parsed.replace(year=year, tzinfo=timezone.utc)
+            except ValueError:  # Feb 29 in a non-leap year
+                continue
+            if candidate <= ceiling:
+                paper['published_iso'] = candidate.isoformat()
+                ceiling = candidate
+                break
+
+
 def _sort_key(paper: Dict) -> tuple:
-    """Sort newest first. Entries predating published_iso keep their existing order."""
+    """Sort newest first. Anything still undated keeps its existing relative order."""
     return (0, '') if not paper.get('published_iso') else (1, paper['published_iso'])
 
 
@@ -328,6 +353,7 @@ def main():
     print(f"Found {len(authors)} authors")
 
     existing = load_existing(json_path)
+    infer_missing_dates(existing)
     print(f"Loaded {len(existing)} previously saved papers\n")
 
     fetched, failed_feeds = fetch_from_rss(authors)
