@@ -1,5 +1,165 @@
 [
   {
+    "title": "Learning to Solve Hard Problems in RL for LLMs by Never Giving Up",
+    "authors": [
+      "Michael Noukhovitch",
+      "Hamish Ivison",
+      "Nathan Lambert",
+      "Aaron Courville"
+    ],
+    "summary": "We demonstrate that training LLMs with RL does not improve performance equally across a dataset. RL shows large improvements on easy problems that an LLM is already good at solving, but small improvements on hard problems. We call this the Matthew Effect in RL for LLMs, after the phenomenon of cumulative advantage from economics and network science summarized as \"the rich get richer\". The naive explanation is that hard problems require more compute to find a solution. We argue that modern RL methods are exacerbating the issue by wasting too much compute on easy problems and instead should dynamically reallocate how they use compute. We introduce Never Give Up (NGU), a simple adaptive sampling method that keeps generating samples for a problem until one is correct. By leveraging asynchronous RL, this naturally uses fewer samples to filter out easy problems and allocates more compute to solving harder problems. We investigate the design choices that affect NGU, such as off-policy robustness, and develop a set of best practices. On the math benchmark Deepscaler, NGU improves performance per compute, especially on harder problems. On a recent coding task, Manufactoria, standard GRPO with a per-test reward fails to fully solve problems that have a range of easy and difficult tests. NGU iteratively improves, solving harder and harder tests, until it learns to fully solve coding problems.",
+    "published": "Sep 15",
+    "published_iso": "2026-09-15T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2609.13443",
+    "arxiv_url": "https://arxiv.org/abs/2609.13443",
+    "queried_author": "Hamish Ivison",
+    "matching_authors": [
+      "Hamish Ivison"
+    ]
+  },
+  {
+    "title": "JumpStart Your Policy Learning with Lessons from 160,000 Training Runs",
+    "authors": [
+      "Nabil Omi",
+      "Eric Bae",
+      "Chung Yik Edward Yeung",
+      "Siddhartha Sen",
+      "Ali Farhadi"
+    ],
+    "summary": "Reliable progress in offline policy learning depends on careful reporting, well-tuned baselines, and evaluation across diverse conditions. Prior work has shown that results can be sensitive to reporting choices, hyperparameter tuning, and dataset properties, but these sources of variability have not been systematically investigated together at the scale needed to understand how they shape conclusions. To address this gap, we present a large-scale empirical study of offline reinforcement and imitation learning, training over 160,000 policies across 114 datasets. At this scale, no algorithm dominates: aggregate performance among the strongest methods is often close, but the leaders differ substantially across environments. We find that proper hyperparameter tuning frequently reshuffles perceived algorithm rankings and that benchmark composition can produce conflicting conclusions. We also study hyperparameter sensitivity and transfer across environments, identifying a simple strategy for deriving strong default configurations. We use our findings to develop a dataset-conditioned recommender that provides task-specific algorithm recommendations for practitioners. Finally, we release JumpStart: a resource suite containing every trained policy, per-model scores and hyperparameters, strong baselines across all environments, training and evaluation code, and an extensible website for retrieving, analyzing, and contributing results. Together, these resources aim to make offline policy-learning research more reliable and enable future work beyond the scope of this study.",
+    "published": "Sep 15",
+    "published_iso": "2026-09-15T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2609.13730",
+    "arxiv_url": "https://arxiv.org/abs/2609.13730",
+    "queried_author": "Ali Farhadi",
+    "matching_authors": [
+      "Ali Farhadi"
+    ]
+  },
+  {
+    "title": "Forty Shades of Blue: Quality-Diversity Alignment via Mode-Conditioned Reinforcement Learning",
+    "authors": [
+      "Jiayi Yuan",
+      "Hangoo Kang",
+      "James Jihao Liu",
+      "Yejin Choi",
+      "Vikram Iyer",
+      "Liwei Jiang",
+      "Natasha Jaques"
+    ],
+    "summary": "A notable byproduct of LLM alignment training is mode collapse: the progressive loss of output diversity that narrows a model's expressivity at inference time. This degradation is especially limiting for applications requiring open-ended exploration and pluralistic perspectives, such as scientific ideation and creative writing. We present MoDA (Mode-conditioned Diversity Alignment), an online post-training RL algorithm that jointly optimizes generation quality and diversity, inspired by the coordination perspective in multi-agent reinforcement learning (MARL). MoDA trains a single shared LLM policy conditioned on abstract numbered roles, where each role acts as an agent competing to produce outputs distinct from the others. This formulation encourages mode-conditioned agents to explore complementary regions of the high-quality output space without requiring hand-crafted personas or architectural modifications. MoDA employs a prompt-adaptive quality gating mechanism that calibrates a reference quality threshold and grants diversity rewards only to responses that meet the threshold, preventing reward-hacking behaviors that compromise response quality. To study quality-diversity tradeoffs, we evaluate MoDA on a comprehensive suite of benchmarks spanning seven general capability tasks and four domain-specific diversity tasks in scientific ideation and creative writing. MoDA improves SBERT diversity by 265% on the Infinite-Chat held-out prompts, while increasing average general capability pass@1 by 10.3% over the Qwen3-8B baseline. Compared with the strongest DivPO baseline, MoD...",
+    "published": "Sep 15",
+    "published_iso": "2026-09-15T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2609.14896",
+    "arxiv_url": "https://arxiv.org/abs/2609.14896",
+    "queried_author": "Yejin Choi",
+    "matching_authors": [
+      "Yejin Choi"
+    ]
+  },
+  {
+    "title": "Salesforce Koa: An Enterprise Language Model for Agentic Tool Use",
+    "authors": [
+      "Zixiang Chen",
+      "Sufeng Niu",
+      "Yingchi Liu",
+      "Wenting Zhao",
+      "Akshara Prabhakar",
+      "Shubham Mehrotra",
+      "Bin Bi",
+      "Zhujun Lan",
+      "Katherine Tan",
+      "Mohammad Ramezanali",
+      "Tulika Manoj Awalgaonkar",
+      "Monojit Banerjee",
+      "Jielin Qiu",
+      "Shiva Kumar Pentyala",
+      "Zhepeng Cen",
+      "Anupam Tripathi",
+      "Ali Ziaei",
+      "Regunathan Radhakrishnan",
+      "Darvish Lee Shadravan",
+      "Shelby Heinecke",
+      "Sitaram Asur",
+      "Silvio Savarese",
+      "James Zhu",
+      "Phil Mui",
+      "Huan Wang"
+    ],
+    "summary": "We present Salesforce Koa, an enterprise language model built by post-training the open-weight Nemotron-3-Super-120B foundation model with reinforcement learning using Group Relative Policy Optimization (GRPO). Salesforce Koa is trained on public and synthetically generated data, with no customer data, to improve tool use and agentic capabilities while preserving strong general-purpose performance. Its distinctive component is a simulation-to-reward pipeline that expands workflow specifications into persona-conditioned multi-turn tasks with task-resolution rewards grounded in successful tool use for data-dependent requests. For enterprise domains, these specifications are written in Agent Script, Salesforce's declarative language for building Agentforce agents; for public tool-use domains, we synthesize the workflow structure directly. The same simulation and grounded-reward machinery drives GRPO across both. Across public tool-use, agentic-reasoning, and enterprise Customer Relationship Management (CRM) benchmarks, Salesforce Koa improves over its open-weight base, with the clearest gains on multi-turn tool use, and surpasses a strong proprietary baseline while remaining below the strongest frontier models. These results show that specification-driven reinforcement learning is a practical path to specializing open-weight foundation models for enterprise agentic tasks.",
+    "published": "Sep 15",
+    "published_iso": "2026-09-15T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2609.15066",
+    "arxiv_url": "https://arxiv.org/abs/2609.15066",
+    "queried_author": "Wenting Zhao",
+    "matching_authors": [
+      "Wenting Zhao"
+    ]
+  },
+  {
+    "title": "Crypto Accounting Bench: Evaluating Frontier and Open-Weight Models on Crypto-Asset Accounting Tasks",
+    "authors": [
+      "Kareem Khattab",
+      "Omar Khattab",
+      "Mohamed Ibrahem"
+    ],
+    "summary": "We introduce Crypto Accounting Bench (CAB), a benchmark for assessing whether frontier and open-weight language models can reconstruct the complete journal entry that an organization actually posted for a crypto-asset transaction. CAB contains 118 evaluation tasks drawn from 7 pseudonymized organizations. Each task combines transaction mechanics, asset quantities and base-currency values, wallet and legal-entity context, counterparty evidence, related transaction legs, recurrence, tax-lot evidence, and the organization's complete chart of accounts. The target is a balanced structured entry with every required account, side, amount, currency, and full-precision asset quantity. We evaluate 12 models spanning proprietary frontier systems and open-weight releases over 3 independent attempts per task, producing 4,248 trajectories. We report 3 metrics: Mean Score, Best@3, and Pass@3. Pass@3 is the fraction of tasks with at least 1 of 3 attempts that satisfies every rubric criterion and required gate. The leading model reaches 77.43% Mean Score, while the best Pass@3 is 56.78%. Deterministic diagnostics, read from each task's best of 3 attempts and macro-averaged across the 12 models, show higher base-amount agreement (97.8%) than deciding-account accuracy (56.3%). Together with the failure analysis, these results identify account selection and complete-entry composition as the main remaining challenges on CAB.",
+    "published": "Sep 15",
+    "published_iso": "2026-09-15T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2609.14811",
+    "arxiv_url": "https://arxiv.org/abs/2609.14811",
+    "queried_author": "Omar Khattab",
+    "matching_authors": [
+      "Omar Khattab"
+    ]
+  },
+  {
+    "title": "LLMs as Oracles: Reliance on LLMs for Subjective Personal Questions",
+    "authors": [
+      "Myra Cheng",
+      "Lujain Ibrahim",
+      "Grace Liu",
+      "Michelle S. Lam",
+      "Vishakh Padmakumar",
+      "Nick Madibekov",
+      "Diyi Yang",
+      "Dan Jurafsky"
+    ],
+    "summary": "We characterize how people are turning to LLMs as oracles: all-knowing authorities on subjective personal questions. Motivated by risks to users' autonomy and well-being, we develop a typology and LLM-based methods to measure this form of AI reliance at scale and understand how people are offloading judgment and decision-making to AI. Applying our typology to public usage data (68K prompts from WildChat and ThoughtTrace), we find that LLM-as-oracle use has increased over time (2023-2026) and is more prevalent among younger users. We further build a privacy-preserving data donation tool to analyze individuals' longitudinal usage data (140K prompts from 52 participants), identifying similar trends. People are often unaware of their own LLM-as-oracle use, and express dissatisfaction with this behavior after seeing our tool's analysis. Finally, we identify two drivers of LLM-as-oracle use: people's perceptions of AI and the behavior of AI models themselves, which motivate possible interventions to support users' self-deliberation.",
+    "published": "Sep 15",
+    "published_iso": "2026-09-15T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2609.14849",
+    "arxiv_url": "https://arxiv.org/abs/2609.14849",
+    "queried_author": "Dan Jurafsky",
+    "matching_authors": [
+      "Dan Jurafsky",
+      "Diyi Yang"
+    ]
+  },
+  {
+    "title": "When Agents Slow Down: Understanding LLM Agents' Test-Time Strategies via Elo-per-token Analysis",
+    "authors": [
+      "Kaiyuan Liu",
+      "Qiuyang Mang",
+      "Bo Peng",
+      "Wenhao Chai",
+      "Hanchen Li",
+      "Shreyas Pimpalgaonkar",
+      "Luke Zettlemoyer",
+      "Alex Dimakis",
+      "Alvin Cheung"
+    ],
+    "summary": "Large language model (LLM) agents allocate test-time compute adaptively as they revise solutions, use tools, explore alternatives, and decide when to stop. This test-time strategy makes it difficult to measure how agent performance scales. We study open-ended tasks that provide continuous scores for intermediate submissions, making progress observable throughout long trajectories. We propose Elo-per-token analysis, which tracks the best solution found at each token budget and uses a Bradley-Terry model to aggregate within-task orderings into Elo ratings across tasks with different score scales. We apply it to four general-purpose agents on four open-ended benchmarks, with sessions of up to 100M tokens, and to three feedback-driven LLM optimization harnesses in controlled single-task interventions. Independent sampling provides a theoretically characterized reference, for which Elo grows linearly with log compute. Against this reference, agents can initially convert tokens into Elo faster than independent sampling, but their marginal gains diminish and eventually fall below the reference. In contrast, the strongest historical human contestants improve superlinearly over contest time on shared AtCoder Heuristic Contest tasks, providing evidence of continual learning and substantial headroom after agents slow down. We define the scaling inflection point as the per-session budget where marginal Elo gains match the independent-sampling reference. Using this point as the per-session budget, we split 100M tokens across parallel sessions on FrontierCS Polyomino Packing, gaining +26...",
+    "published": "Sep 15",
+    "published_iso": "2026-09-15T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2609.15309",
+    "arxiv_url": "https://arxiv.org/abs/2609.15309",
+    "queried_author": "Luke Zettlemoyer",
+    "matching_authors": [
+      "Luke Zettlemoyer"
+    ]
+  },
+  {
     "title": "Breaking the Token Ceiling: Distilling Smaller, Stronger Byte Models",
     "authors": [
       "Kalyani Marathe",
@@ -13300,204 +13460,6 @@
     "queried_author": "Jure Leskovec",
     "matching_authors": [
       "Jure Leskovec"
-    ]
-  },
-  {
-    "title": "Beyond Binary Rewards: Training LMs to Reason About Their Uncertainty",
-    "authors": [
-      "Mehul Damani",
-      "Isha Puri",
-      "Stewart Slocum",
-      "Idan Shenfeld",
-      "Leshem Choshen",
-      "Yoon Kim",
-      "Jacob Andreas"
-    ],
-    "summary": "When language models (LMs) are trained via reinforcement learning (RL) to generate natural language \"reasoning chains\", their performance improves on a variety of difficult question answering tasks. Today, almost all successful applications of RL for reasoning use binary reward functions that evaluate the correctness of LM outputs. Because such reward functions do not penalize guessing or low-confidence outputs, they often have the unintended side-effect of degrading calibration and increasing the rate at which LMs generate incorrect responses (or \"hallucinate\") in other problem domains. This paper describes RLCR (Reinforcement Learning with Calibration Rewards), an approach to training reasoning models that jointly improves accuracy and calibrated confidence estimation. During RLCR, LMs generate both predictions and numerical confidence estimates after reasoning. They are trained to optimize a reward function that augments a binary correctness score with a Brier score -- a scoring rule for confidence estimates that incentivizes calibrated prediction. We first prove that this reward function (or any reward function that uses a bounded, proper scoring rule) yields models whose predictions are both accurate and well-calibrated. We next show that across diverse datasets, RLCR substantially improves calibration with no loss in accuracy, on both in-domain and out-of-domain evaluations -- outperforming both ordinary RL training and classifiers trained to assign post-hoc confidence scores. While ordinary RL hurts calibration, RLCR improves it. Finally, we demonstrate that verbaliz...",
-    "published": "Jul 22",
-    "published_iso": "2025-07-22T17:56:01+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2507.16806v2",
-    "arxiv_url": "http://arxiv.org/abs/2507.16806v2",
-    "queried_author": "Jacob Andreas",
-    "matching_authors": [
-      "Jacob Andreas",
-      "Yoon Kim"
-    ]
-  },
-  {
-    "title": "Intent-Aware Schema Generation And Refinement For Literature Review Tables",
-    "authors": [
-      "Vishakh Padmakumar",
-      "Joseph Chee Chang",
-      "Kyle Lo",
-      "Doug Downey",
-      "Aakanksha Naik"
-    ],
-    "summary": "The increasing volume of academic literature makes it essential for researchers to organize, compare, and contrast collections of documents. Large language models (LLMs) can support this process by generating schemas defining shared aspects along which to compare papers. However, progress on schema generation has been slow due to: (i) ambiguity in reference-based evaluations, and (ii) lack of editing/refinement methods. Our work is the first to address both issues. First, we present an approach for augmenting unannotated table corpora with \\emph{synthesized intents}, and apply it to create a dataset for studying schema generation conditioned on a given information need, thus reducing ambiguity. With this dataset, we show how incorporating table intents significantly improves baseline performance in reconstructing reference schemas. We start by comprehensively benchmarking several single-shot schema generation methods, including prompted LLM workflows and fine-tuned models, showing that smaller, open-weight models can be fine-tuned to be competitive with state-of-the-art prompted LLMs. Next, we propose several LLM-based schema refinement techniques and show that these can further improve schemas generated by these methods.",
-    "published": "Jul 18",
-    "published_iso": "2025-07-18T22:01:27+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2507.19521v2",
-    "arxiv_url": "http://arxiv.org/abs/2507.19521v2",
-    "queried_author": "Kyle Lo",
-    "matching_authors": [
-      "Kyle Lo"
-    ]
-  },
-  {
-    "title": "Assessing Adaptive World Models in Machines with Novel Games",
-    "authors": [
-      "Lance Ying",
-      "Katherine M. Collins",
-      "Prafull Sharma",
-      "Cedric Colas",
-      "Kaiya Ivy Zhao",
-      "Adrian Weller",
-      "Zenna Tavares",
-      "Phillip Isola",
-      "Samuel J. Gershman",
-      "Jacob D. Andreas",
-      "Thomas L. Griffiths",
-      "Francois Chollet",
-      "Kelsey R. Allen",
-      "Joshua B. Tenenbaum"
-    ],
-    "summary": "Human intelligence exhibits a remarkable capacity for rapid adaptation and effective problem-solving in novel and unfamiliar contexts. We argue that this profound adaptability is fundamentally linked to the efficient construction and refinement of internal representations of the environment, commonly referred to as world models, and we refer to this adaptation mechanism as world model induction. However, current understanding and evaluation of world models in artificial intelligence (AI) remains narrow, often focusing on static representations learned from training on massive corpora of data, instead of the efficiency and efficacy in learning these representations through interaction and exploration within a novel environment. In this Perspective, we provide a view of world model induction drawing on decades of research in cognitive science on how humans learn and adapt so efficiently; we then call for a new evaluation framework for assessing adaptive world models in AI. Concretely, we propose a new benchmarking paradigm based on suites of carefully designed games with genuine, deep and continually refreshing novelty in the underlying game structures -- we refer to this class of games as novel games. We detail key desiderata for constructing these games and propose appropriate metrics to explicitly challenge and evaluate the agent's ability for rapid world model induction. We hope that this new evaluation framework will inspire future evaluation efforts on world models in AI and provide a crucial step towards developing AI systems capable of human-like rapid adaptation and ...",
-    "published": "Jul 17",
-    "published_iso": "2025-07-17T06:28:14+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2507.12821v2",
-    "arxiv_url": "http://arxiv.org/abs/2507.12821v2",
-    "queried_author": "Phillip Isola",
-    "matching_authors": [
-      "Phillip Isola"
-    ]
-  },
-  {
-    "title": "FlexOlmo: Open Language Models for Flexible Data Use",
-    "authors": [
-      "Weijia Shi",
-      "Akshita Bhagia",
-      "Kevin Farhat",
-      "Niklas Muennighoff",
-      "Pete Walsh",
-      "Jacob Morrison",
-      "Dustin Schwenk",
-      "Shayne Longpre",
-      "Jake Poznanski",
-      "Allyson Ettinger",
-      "Daogao Liu",
-      "Margaret Li",
-      "Dirk Groeneveld",
-      "Mike Lewis",
-      "Wen-tau Yih",
-      "Luca Soldaini",
-      "Kyle Lo",
-      "Noah A. Smith",
-      "Luke Zettlemoyer",
-      "Pang Wei Koh",
-      "Hannaneh Hajishirzi",
-      "Ali Farhadi",
-      "Sewon Min"
-    ],
-    "summary": "We introduce FlexOlmo, a new class of language models (LMs) that supports (1) distributed training without data sharing, where different model parameters are independently trained on closed datasets, and (2) data-flexible inference, where these parameters along with their associated data can be flexibly included or excluded from model inferences with no further training. FlexOlmo employs a mixture-of-experts (MoE) architecture where each expert is trained independently on closed datasets and later integrated through a new domain-informed routing without any joint training. FlexOlmo is trained on FlexMix, a corpus we curate comprising publicly available datasets alongside seven domain-specific sets, representing realistic approximations of closed sets. We evaluate models with up to 37 billion parameters (20 billion active) on 31 diverse downstream tasks. We show that a general expert trained on public data can be effectively combined with independently trained experts from other data owners, leading to an average 41% relative improvement while allowing users to opt out of certain data based on data licensing or permission requirements. Our approach also outperforms prior model merging methods by 10.1% on average and surpasses the standard MoE trained without data restrictions using the same training FLOPs. Altogether, this research presents a solution for both data owners and researchers in regulated industries with sensitive or protected data. FlexOlmo enables benefiting from closed data while respecting data owners' preferences by keeping their data local and supporting fi...",
-    "published": "Jul 09",
-    "published_iso": "2025-07-09T16:54:21+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2507.07024v4",
-    "arxiv_url": "http://arxiv.org/abs/2507.07024v4",
-    "queried_author": "Ali Farhadi",
-    "matching_authors": [
-      "Ali Farhadi",
-      "Hannaneh Hajishirzi",
-      "Kyle Lo",
-      "Luca Soldaini",
-      "Luke Zettlemoyer",
-      "Margaret Li",
-      "Mike Lewis",
-      "Niklas Muennighoff",
-      "Noah A. Smith",
-      "Pang Wei Koh",
-      "Sewon Min",
-      "Wen-tau Yih",
-      "Weijia Shi"
-    ]
-  },
-  {
-    "title": "LLM Hypnosis: Exploiting User Feedback for Unauthorized Knowledge Injection to All Users",
-    "authors": [
-      "Almog Hilel",
-      "Riddhi Bhagwat",
-      "Idan Shenfeld",
-      "Jacob Andreas",
-      "Leshem Choshen"
-    ],
-    "summary": "We describe a vulnerability in language models (LMs) trained with user feedback, whereby a single user can persistently alter LM knowledge and behavior given only the ability to provide prompts and upvote / downvote feedback on LM outputs. To implement the attack, the attacker prompts the LM to stochastically output either a \"poisoned\" or benign response, then upvotes the poisoned response or downvotes the benign one. When feedback signals are used in a subsequent preference tuning behavior, LMs exhibit increased probability of producing poisoned responses even in contexts without malicious prompts. We show that this attack can be used to (1) insert factual knowledge the model did not previously possess, (2) modify code generation patterns in ways that introduce exploitable security flaws, and (3) inject fake financial news. Our finding both identifies a new qualitative feature of language model preference tuning (showing that it even highly restricted forms of preference data can be used to exert fine-grained control over behavior), and a new attack mechanism for LMs trained with user feedback (extending work on pretraining-time data poisoning and deployment-time prompt injection).",
-    "published": "Jul 03",
-    "published_iso": "2025-07-03T17:55:40+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2507.02850v3",
-    "arxiv_url": "http://arxiv.org/abs/2507.02850v3",
-    "queried_author": "Jacob Andreas",
-    "matching_authors": [
-      "Jacob Andreas"
-    ]
-  },
-  {
-    "title": "Optimas: Optimizing Compound AI Systems with Globally Aligned Local Rewards",
-    "authors": [
-      "Shirley Wu",
-      "Parth Sarthi",
-      "Shiyu Zhao",
-      "Aaron Lee",
-      "Herumb Shandilya",
-      "Adrian Mladenic Grobelnik",
-      "Nurendra Choudhary",
-      "Eddie Huang",
-      "Karthik Subbian",
-      "Linjun Zhang",
-      "Diyi Yang",
-      "James Zou",
-      "Jure Leskovec"
-    ],
-    "summary": "Compound AI systems integrating multiple components, such as Large Language Models, specialized tools, and traditional machine learning models, are increasingly deployed to solve complex real-world tasks. However, optimizing compound systems remains challenging due to their non-differentiable structures and diverse configuration types across components, including prompts, hyperparameters, and model parameters. To address this challenge, we propose Optimas, a unified framework for effective optimization of compound systems. The core idea of Optimas is to maintain one Local Reward Function (LRF) per component, each satisfying a local-global alignment property, i.e., each component's local reward correlates with the global system performance. In each iteration, Optimas efficiently adapts the LRFs to maintain this property while simultaneously maximizing each component's local reward. This approach enables independent updates of heterogeneous configurations using the designated optimization method, while ensuring that local improvements consistently lead to performance gains. We present extensive evaluations across five real-world compound systems to demonstrate that Optimas outperforms strong baselines by an average improvement of 11.92%, offering a general and effective approach for improving compound systems. Our website is at https://optimas.stanford.edu.",
-    "published": "Jul 03",
-    "published_iso": "2025-07-03T07:12:48+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2507.03041v4",
-    "arxiv_url": "http://arxiv.org/abs/2507.03041v4",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang",
-      "Jure Leskovec"
-    ]
-  },
-  {
-    "title": "SciArena: An Open Evaluation Platform for Non-Verifiable Scientific Literature-Grounded Tasks",
-    "authors": [
-      "Yilun Zhao",
-      "Kaiyan Zhang",
-      "Tiansheng Hu",
-      "Sihong Wu",
-      "Ronan Le Bras",
-      "Charles McGrady",
-      "Taira Anderson",
-      "Jonathan Bragg",
-      "Joseph Chee Chang",
-      "Jesse Dodge",
-      "Matt Latzke",
-      "Yixin Liu",
-      "Xiangru Tang",
-      "Zihang Wang",
-      "Chen Zhao",
-      "Hannaneh Hajishirzi",
-      "Doug Downey",
-      "Arman Cohan"
-    ],
-    "summary": "We present SciArena, an open and collaborative platform for evaluating foundation models on scientific literature-grounded tasks. Unlike traditional benchmarks for scientific literature understanding and synthesis, SciArena engages the research community directly, following the Chatbot Arena evaluation approach of community voting on model comparisons. By leveraging collective intelligence, SciArena offers a community-driven evaluation of model performance on open-ended scientific tasks that demand literature-grounded, long-form responses. The platform currently supports 47 foundation models and has collected over 20,000 votes from human researchers across diverse scientific domains. Our analysis of the data collected so far confirms its high quality. We discuss the results and insights based on the model ranking leaderboard. To further promote research in building model-based automated evaluation systems for literature tasks, we release SciArena-Eval, a meta-evaluation benchmark based on collected preference data. It measures the accuracy of models in judging answer quality by comparing their pairwise assessments with human votes. Our experiments highlight the benchmark's challenges and emphasize the need for more reliable automated evaluation methods.",
-    "published": "Jul 01",
-    "published_iso": "2025-07-01T17:51:59+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2507.01001v2",
-    "arxiv_url": "http://arxiv.org/abs/2507.01001v2",
-    "queried_author": "Hannaneh Hajishirzi",
-    "matching_authors": [
-      "Hannaneh Hajishirzi",
-      "Jesse Dodge"
     ]
   }
 ]
