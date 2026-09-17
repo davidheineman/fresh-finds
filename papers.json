@@ -12314,6 +12314,26 @@
     "published_iso": "2026-03-05T00:00:00+00:00"
   },
   {
+    "title": "AgentIR: Reasoning-Aware Retrieval for Deep Research Agents",
+    "authors": [
+      "Zijian Chen",
+      "Xueguang Ma",
+      "Shengyao Zhuang",
+      "Jimmy Lin",
+      "Akari Asai",
+      "Victor Zhong"
+    ],
+    "summary": "Deep Research agents are rapidly emerging as primary consumers of modern retrieval systems. Unlike human users who issue and refine queries without documenting their intermediate thought processes, Deep Research agents generate explicit natural language reasoning before each search call, revealing rich intent and contextual information that existing retrievers entirely ignore. To exploit this overlooked signal, we introduce: (1) Reasoning-Aware Retrieval, a retrieval paradigm that jointly embeds the agent's reasoning trace alongside its query; and (2) DR-Synth, a data synthesis method that generates Deep Research retriever training data from standard QA datasets. We demonstrate that both components are independently effective, and their combination yields a trained embedding model, AgentIR-4B, with substantial gains. On the challenging BrowseComp-Plus benchmark, AgentIR-4B achieves 68\\% accuracy with the open-weight agent Tongyi-DeepResearch, compared to 50\\% with conventional embedding models twice its size, and 37\\% with BM25. Code and data are available at: https://texttron.github.io/AgentIR/.",
+    "published": "Mar 04",
+    "published_iso": "2026-03-04T18:47:26+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2603.04384v3",
+    "arxiv_url": "http://arxiv.org/abs/2603.04384v3",
+    "queried_author": "Akari Asai",
+    "matching_authors": [
+      "Akari Asai"
+    ]
+  },
+  {
     "title": "$\u03c4$-Knowledge: Evaluating Conversational Agents over Unstructured Knowledge",
     "authors": [
       "Quan Shi",
@@ -12576,6 +12596,40 @@
     "queried_author": "Mohammad Shoeybi",
     "matching_authors": [
       "Mohammad Shoeybi"
+    ]
+  },
+  {
+    "title": "Transcoder Adapters for Reasoning-Model Diffing",
+    "authors": [
+      "Nathan Hu",
+      "Jake Ward",
+      "Thomas Icard",
+      "Christopher Potts"
+    ],
+    "summary": "While reasoning models are increasingly ubiquitous, the effects of reasoning training on a model's internal mechanisms remain poorly understood. In this work, we introduce transcoder adapters, a technique for learning an interpretable approximation of the difference in MLP computation before and after fine-tuning. We apply transcoder adapters to characterize the differences between Qwen2.5-Math-7B and its reasoning-distilled variant, DeepSeek-R1-Distill-Qwen-7B. Learned adapters are faithful to the target model's internal computation and next-token predictions. When evaluated on reasoning benchmarks, adapters match the reasoning model's response lengths and typically recover 50-90% of the accuracy gains from reasoning fine-tuning. Adapter features are sparsely activating and interpretable. When examining adapter features, we find that only ~8% have activating examples directly related to reasoning behaviors. We deeply study one such behavior -- the production of hesitation tokens (e.g., \"wait\"). Using attribution graphs, we trace hesitation to only ~2.4% of adapter features (5.6k total) performing one of two functions. These features are necessary and sufficient for producing hesitation tokens; removing them reduces response length, often without affecting accuracy. Overall, our results provide insight into reasoning training and suggest transcoder adapters may be useful for studying fine-tuning more broadly.",
+    "published": "Feb 24",
+    "published_iso": "2026-02-24T13:40:28+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2602.20904v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.20904v1",
+    "queried_author": "Christopher Potts",
+    "matching_authors": [
+      "Christopher Potts"
+    ]
+  },
+  {
+    "title": "Counterfactual Simulation Training for Chain-of-Thought Faithfulness",
+    "authors": [
+      "Peter Hase",
+      "Christopher Potts"
+    ],
+    "summary": "Inspecting Chain-of-Thought reasoning is among the most common means of understanding why an LLM produced its output. But well-known problems with CoT faithfulness severely limit what insights can be gained from this practice. In this paper, we introduce a training method called Counterfactual Simulation Training (CST), which aims to improve CoT faithfulness by rewarding CoTs that enable a simulator to accurately predict a model's outputs over counterfactual inputs. We apply CST in two settings: (1) CoT monitoring with cue-based counterfactuals, to detect when models rely on spurious features, reward hack, or are sycophantic, and (2) counterfactual simulation over generic model-based counterfactuals, to encourage models to produce more faithful, generalizable reasoning in the CoT. Experiments with models up to 235B parameters show that CST can substantially improve monitor accuracy on cue-based counterfactuals (by 35 accuracy points) as well as simulatability over generic counterfactuals (by 2 points). We further show that: (1) CST outperforms prompting baselines, (2) rewriting unfaithful CoTs with an LLM is 5x more efficient than RL alone, (3) faithfulness improvements do not generalize to dissuading cues (as opposed to persuading cues), and (4) larger models do not show more faithful CoT out of the box, but they do benefit more from CST. These results suggest that CST can improve CoT faithfulness in general, with promising applications for CoT monitoring. Code for experiments in this paper is available at https://github.com/peterbhase/counterfactual-simulation-training",
+    "published": "Feb 24",
+    "published_iso": "2026-02-24T09:15:30+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2602.20710v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.20710v2",
+    "queried_author": "Christopher Potts",
+    "matching_authors": [
+      "Christopher Potts"
     ]
   },
   {
@@ -12866,6 +12920,25 @@
     ]
   },
   {
+    "title": "Helpful to a Fault: Measuring Illicit Assistance in Multi-Turn, Multilingual LLM Agents",
+    "authors": [
+      "Nivya Talokar",
+      "Ayush K Tarun",
+      "Murari Mandal",
+      "Maksym Andriushchenko",
+      "Antoine Bosselut"
+    ],
+    "summary": "LLM-based agents execute real-world workflows via tools and memory. These affordances enable ill-intended adversaries to also use these agents to carry out complex misuse scenarios. Existing agent misuse benchmarks largely test single-prompt instructions, leaving a gap in measuring how agents end up helping with harmful or illegal tasks over multiple turns. We introduce STING (Sequential Testing of Illicit N-step Goal execution), an automated red-teaming framework that constructs a step-by-step illicit plan grounded in a benign persona and iteratively probes a target agent with adaptive follow-ups, using judge agents to track phase completion. We further introduce an analysis framework that models multi-turn red-teaming as a time-to-first-jailbreak random variable, enabling analysis tools like discovery curves, hazard-ratio attribution by attack language, and a new metric: Restricted Mean Jailbreak Discovery. Across AgentHarm scenarios, STING yields substantially higher illicit-task completion than single-turn prompting and chat-oriented multi-turn baselines adapted to tool-using agents. In multilingual evaluations across six non-English settings, we find that attack success and illicit-task completion do not consistently increase in lower-resource languages, diverging from common chatbot findings. Overall, STING provides a practical way to evaluate and stress-test agent misuse in realistic deployment settings, where interactions are inherently multi-turn and often multilingual.",
+    "published": "Feb 18",
+    "published_iso": "2026-02-18T10:31:19+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2602.16346v4",
+    "arxiv_url": "http://arxiv.org/abs/2602.16346v4",
+    "queried_author": "Antoine Bosselut",
+    "matching_authors": [
+      "Antoine Bosselut"
+    ]
+  },
+  {
     "title": "MemoryArena: Benchmarking Agent Memory in Interdependent Multi-Session Agentic Tasks",
     "authors": [
       "Zexue He",
@@ -12941,6 +13014,24 @@
     "queried_author": "Niklas Muennighoff",
     "matching_authors": [
       "Niklas Muennighoff"
+    ]
+  },
+  {
+    "title": "Discovering Implicit Large Language Model Alignment Objectives",
+    "authors": [
+      "Edward Chen",
+      "Sanmi Koyejo",
+      "Carlos Guestrin"
+    ],
+    "summary": "Large language model (LLM) alignment relies on complex reward signals that often obscure the specific behaviors being incentivized, creating critical risks of misalignment and reward hacking. Existing interpretation methods typically rely on pre-defined rubrics, risking the omission of \"unknown unknowns\", or fail to identify objectives that comprehensively cover and are causal to the model behavior. To address these limitations, we introduce Obj-Disco, a framework that automatically decomposes an alignment reward signal into a sparse, weighted combination of human-interpretable natural language objectives. Our approach utilizes an iterative greedy algorithm to analyze behavioral changes across training checkpoints, identifying and validating candidate objectives that best explain the residual reward signal. Extensive evaluations across diverse tasks, model sizes, and alignment algorithms demonstrate the framework's robustness. Experiments with popular open-source reward models show that the framework consistently captures > 90% of reward behavior, a finding further corroborated by human evaluation. Additionally, a case study on alignment with an open-source reward model reveals that Obj-Disco can successfully identify latent misaligned incentives that emerge alongside intended behaviors. Our work provides a crucial tool for uncovering the implicit objectives in LLM alignment, paving the way for more transparent and safer AI development.",
+    "published": "Feb 17",
+    "published_iso": "2026-02-17T03:58:55+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2602.15338v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.15338v2",
+    "queried_author": "Carlos Guestrin",
+    "matching_authors": [
+      "Carlos Guestrin",
+      "Sanmi Koyejo"
     ]
   },
   {
@@ -13031,6 +13122,26 @@
     ]
   },
   {
+    "title": "Imitating What Works: Simulation-Filtered Modular Policy Learning from Human Videos",
+    "authors": [
+      "Albert J. Zhai",
+      "Kuo-Hao Zeng",
+      "Jiasen Lu",
+      "Ali Farhadi",
+      "Shenlong Wang",
+      "Wei-Chiu Ma"
+    ],
+    "summary": "The ability to learn manipulation skills by watching videos of humans has the potential to unlock a new source of highly scalable data for robot learning. Here, we tackle prehensile manipulation, in which tasks involve grasping an object before performing various post-grasp motions. Human videos offer strong signals for learning the post-grasp motions, but they are less useful for learning the prerequisite grasping behaviors, especially for robots without human-like hands. A promising way forward is to use a modular policy design, leveraging a dedicated grasp generator to produce stable grasps. However, arbitrary stable grasps are often not task-compatible, hindering the robot's ability to perform the desired downstream motion. To address this challenge, we present Perceive-Simulate-Imitate (PSI), a framework for training a modular manipulation policy using human video motion data processed by paired grasp-trajectory filtering in simulation. This simulation step extends the trajectory data with grasp suitability labels, which allows for supervised learning of task-oriented grasping capabilities. We show through real-world experiments that our framework can be used to learn precise manipulation skills efficiently without any robot data, resulting in significantly more robust performance than using a grasp generator naively.",
+    "published": "Feb 13",
+    "published_iso": "2026-02-13T18:59:10+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2602.13197v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.13197v2",
+    "queried_author": "Ali Farhadi",
+    "matching_authors": [
+      "Ali Farhadi"
+    ]
+  },
+  {
     "title": "Buy versus Build an LLM: A Decision Framework for Governments",
     "authors": [
       "Jiahao Lu",
@@ -13075,6 +13186,26 @@
     "queried_author": "Jure Leskovec",
     "matching_authors": [
       "Jure Leskovec"
+    ]
+  },
+  {
+    "title": "The Appeal and Reality of Recycling LoRAs with Adaptive Merging",
+    "authors": [
+      "Haokun Liu",
+      "Gyung Hyun Je",
+      "Marco Ciccone",
+      "Zhenlin Xu",
+      "Prasanth YSS",
+      "Colin Raffel"
+    ],
+    "summary": "The widespread availability of fine-tuned LoRA modules for open pre-trained models has led to an interest in methods that can adaptively merge LoRAs to improve performance. These methods typically include some way of selecting LoRAs from a pool and tune merging coefficients based on a task-specific dataset. While adaptive merging methods have demonstrated improvements in some settings, no past work has attempted to recycle LoRAs found \"in the wild\" on model repositories like the Hugging Face Hub. To address this gap, we consider recycling from a pool of nearly 1,000 user-contributed LoRAs trained from the Llama 3.1 8B-Instruct language model. Our empirical study includes a range of adaptive and non-adaptive merging methods in addition to a new method designed via a wide search over the methodological design space. We demonstrate that adaptive merging methods can improve performance over the base model but provide limited benefit over training a new LoRA on the same data used to set merging coefficients. We additionally find not only that the specific choice of LoRAs to merge has little importance, but that using LoRAs with randomly initialized parameter values yields similar performance. This raises the possibility that adaptive merging from recycled LoRAs primarily works via some kind of regularization effect, rather than by enabling positive cross-task transfer. To better understand why past work has proven successful, we confirm that positive transfer is indeed possible when there are highly relevant LoRAs in the pool. We release the model checkpoints and code online.",
+    "published": "Feb 12",
+    "published_iso": "2026-02-12T18:59:20+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2602.12323v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.12323v2",
+    "queried_author": "Colin Raffel",
+    "matching_authors": [
+      "Colin Raffel"
     ]
   },
   {
@@ -13141,6 +13272,64 @@
     ]
   },
   {
+    "title": "Retrieval-Aware Distillation for Transformer-SSM Hybrids",
+    "authors": [
+      "Aviv Bick",
+      "Eric P. Xing",
+      "Albert Gu"
+    ],
+    "summary": "State-space models (SSMs) offer efficient sequence modeling but lag behind Transformers on benchmarks that require in-context retrieval. Prior work links this gap to a small set of attention heads, termed Gather-and-Aggregate (G&A), which SSMs struggle to reproduce. We propose *retrieval-aware distillation*, which converts a pretrained Transformer into a hybrid student by preserving only these retrieval-critical heads and distilling the rest into recurrent heads. We identify the essential heads via ablation on a synthetic retrieval task, producing a hybrid with sparse, non-uniform attention placement. We show that preserving **just 2% of attention heads recovers over 95% of teacher performance on retrieval-heavy tasks** (10 heads in a 1B model), requiring far fewer heads than hybrids that retain at least 25%. We further find that large recurrent states often compensate for missing retrieval: once retrieval is handled by these heads, the SSM backbone can be simplified with limited loss, even with an $8\\times$ reduction in state dimension. By reducing both the attention cache and the SSM state, the resulting hybrid is $5$--$6\\times$ more memory-efficient than comparable hybrids, closing the Transformer--SSM gap at a fraction of the memory cost.",
+    "published": "Feb 11",
+    "published_iso": "2026-02-11T21:05:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2602.11374v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.11374v1",
+    "queried_author": "Albert Gu",
+    "matching_authors": [
+      "Albert Gu"
+    ]
+  },
+  {
+    "title": "MolmoSpaces: A Large-Scale Open Ecosystem for Robot Navigation and Manipulation",
+    "authors": [
+      "Yejin Kim",
+      "Wilbert Pumacay",
+      "Omar Rayyan",
+      "Max Argus",
+      "Winson Han",
+      "Eli VanderBilt",
+      "Jordi Salvador",
+      "Abhay Deshpande",
+      "Rose Hendrix",
+      "Snehal Jauhri",
+      "Shuo Liu",
+      "Nur Muhammad Mahi Shafiullah",
+      "Maya Guru",
+      "Ainaz Eftekhar",
+      "Karen Farley",
+      "Donovan Clay",
+      "Jiafei Duan",
+      "Arjun Guru",
+      "Piper Wolters",
+      "Alvaro Herrasti",
+      "Ying-Chun Lee",
+      "Georgia Chalvatzaki",
+      "Yuchen Cui",
+      "Ali Farhadi",
+      "Dieter Fox",
+      "Ranjay Krishna"
+    ],
+    "summary": "Deploying robots at scale demands robustness to the long tail of everyday situations. The countless variations in scene layout, object geometry, and task specifications that characterize real environments are vast and underrepresented in existing robot benchmarks. Measuring this level of generalization requires infrastructure at a scale and diversity that physical evaluation alone cannot provide. We introduce MolmoSpaces, a fully open ecosystem to support large-scale benchmarking of robot policies. MolmoSpaces consists of over 230k diverse indoor environments, ranging from handcrafted household scenes to procedurally generated multiroom houses, populated with 130k richly annotated object assets, including 48k manipulable objects with 42M stable grasps. Crucially, these environments are simulator-agnostic, supporting popular options such as MuJoCo, Isaac, and ManiSkill. The ecosystem supports the full spectrum of embodied tasks: static and mobile manipulation, navigation, and multiroom long-horizon tasks requiring coordinated perception, planning, and interaction across entire indoor environments. We also design MolmoSpaces-Bench, a benchmark suite of 8 tasks in which robots interact with our diverse scenes and richly annotated objects. Our experiments show MolmoSpaces-Bench exhibits strong sim-to-real correlation (R = 0.96, \\r{ho} = 0.98), confirm newer and stronger zero-shot policies outperform earlier versions in our benchmarks, and identify key sensitivities to prompt phrasing, initial joint positions, and camera occlusion. Through MolmoSpaces and its open-source assets ...",
+    "published": "Feb 11",
+    "published_iso": "2026-02-11T20:16:31+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2602.11337v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.11337v2",
+    "queried_author": "Ali Farhadi",
+    "matching_authors": [
+      "Ali Farhadi",
+      "Ranjay Krishna"
+    ]
+  },
+  {
     "title": "Cross-Sectional Asset Retrieval via Future-Aligned Soft Contrastive Learning",
     "authors": [
       "Hyeongmin Lee",
@@ -13159,6 +13348,30 @@
     "queried_author": "Yoon Kim",
     "matching_authors": [
       "Yoon Kim"
+    ]
+  },
+  {
+    "title": "dnaHNet: A Scalable and Hierarchical Foundation Model for Genomic Sequence Learning",
+    "authors": [
+      "Arnav Shah",
+      "Junzhe Li",
+      "Parsa Idehpour",
+      "Adibvafa Fallahpour",
+      "Brandon Wang",
+      "Sukjun Hwang",
+      "Bo Wang",
+      "Patrick D. Hsu",
+      "Hani Goodarzi",
+      "Albert Gu"
+    ],
+    "summary": "Genomic foundation models have the potential to decode DNA syntax, yet face a fundamental tradeoff in their input representation. Standard fixed-vocabulary tokenizers fragment biologically meaningful motifs such as codons and regulatory elements, while nucleotide-level models preserve biological coherence but incur prohibitive computational costs for long contexts. We introduce dnaHNet, a state-of-the-art tokenizer-free autoregressive model that segments and models genomic sequences end-to-end. Using a differentiable dynamic chunking mechanism, dnaHNet compresses raw nucleotides into latent tokens adaptively, balancing compression with predictive accuracy. Pretrained on prokaryotic genomes, dnaHNet outperforms leading architectures including StripedHyena2 in scaling and efficiency. This recursive chunking yields quadratic FLOP reductions, enabling $>3 \\times$ inference speedup over Transformers. On zero-shot tasks, dnaHNet achieves superior performance in predicting protein variant fitness and gene essentiality, while automatically discovering hierarchical biological structures without supervision. These results establish dnaHNet as a scalable, interpretable framework for next-generation genomic modeling.",
+    "published": "Feb 11",
+    "published_iso": "2026-02-11T07:48:21+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2602.10603v3",
+    "arxiv_url": "http://arxiv.org/abs/2602.10603v3",
+    "queried_author": "Albert Gu",
+    "matching_authors": [
+      "Albert Gu"
     ]
   },
   {
@@ -13219,209 +13432,6 @@
     "queried_author": "Jack Merullo",
     "matching_authors": [
       "Jack Merullo"
-    ]
-  },
-  {
-    "title": "Overview of the TREC 2025 RAGTIME Track",
-    "authors": [
-      "Dawn Lawrie",
-      "Sean MacAvaney",
-      "James Mayfield",
-      "Luca Soldaini",
-      "Eugene Yang",
-      "Andrew Yates"
-    ],
-    "summary": "The principal goal of the RAG TREC Instrument for Multilingual Evaluation (RAGTIME) track at TREC is to study report generation from multilingual source documents. The track has created a document collection containing Arabic, Chinese, English, and Russian news stories. RAGTIME includes three task types: Multilingual Report Generation, English Report Generation, and Multilingual Information Retrieval (MLIR). A total of 125 runs were submitted by 13 participating teams (and as baselines by the track coordinators) for three tasks. This overview describes these three tasks and presents the available results.",
-    "published": "Feb 10",
-    "published_iso": "2026-02-10T17:47:20+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.10024v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.10024v2",
-    "queried_author": "Luca Soldaini",
-    "matching_authors": [
-      "Luca Soldaini"
-    ]
-  },
-  {
-    "title": "Predictive Query Language: A Domain-Specific Language for Predictive Modeling on Relational Databases",
-    "authors": [
-      "Vid Kocijan",
-      "Jinu Sunil",
-      "Jan Eric Lenssen",
-      "Viman Deb",
-      "Xinwei Xe",
-      "Federico Reyes Gomez",
-      "Matthias Fey",
-      "Jure Leskovec"
-    ],
-    "summary": "The purpose of predictive modeling on relational data is to predict future or missing values in a relational database, for example, future purchases of a user, risk of readmission of the patient, or the likelihood that a financial transaction is fraudulent. Typically powered by machine learning methods, predictive models are used in recommendations, financial fraud detection, supply chain optimization, and other systems, providing billions of predictions every day. However, training a machine learning model requires manual work to extract the required training examples - prediction entities and target labels - from the database, which is slow, laborious, and prone to mistakes. Here, we present the Predictive Query Language (PQL), an SQL-inspired declarative language for defining predictive tasks on relational databases. PQL allows specifying a predictive task in a single declarative query, enabling the automatic computation of training labels for a large variety of machine learning tasks, such as regression, classification, time-series forecasting, and recommender systems. PQL is already successfully integrated and used in a collection of use cases as part of a predictive AI platform. The versatility of the language can be demonstrated through its many ongoing use cases, including financial fraud, item recommendations, and workload prediction. We demonstrate its versatile design through two implementations; one for small-scale, low-latency use and one that can handle large-scale databases.",
-    "published": "Feb 10",
-    "published_iso": "2026-02-10T09:22:17+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.09572v3",
-    "arxiv_url": "http://arxiv.org/abs/2602.09572v3",
-    "queried_author": "Jure Leskovec",
-    "matching_authors": [
-      "Jure Leskovec"
-    ]
-  },
-  {
-    "title": "Haiku to Opus in Just 10 bits: LLMs Unlock Large Compression Gains",
-    "authors": [
-      "Roy Rinberg",
-      "Annabelle Michael Carrell",
-      "Simon Henniger",
-      "Nicholas Carlini",
-      "Keri Warr"
-    ],
-    "summary": "We study the compression of LLM-generated text across lossless and lossy regimes, characterizing a compression-compute frontier where more compression is possible at the cost of more compute. For lossless compression, domain-adapted LoRA adapters can improve LLM-based arithmetic coding by 2x over compression with the base LLM alone. For lossy compression, prompting a model for a succinct rewrite then applying arithmetic coding can achieve compression ratios of approximately 0.03, a 2x improvement over compressing the original response. We further introduce Question-Asking compression (QA), an interactive lossy protocol inspired by the game 'Twenty Questions'. A small model iteratively refines its response by asking yes/no questions to a stronger model, transferring exactly one bit per answer. On 8 benchmarks spanning math, science, and code, 10 binary questions recover 23% to 72% of the capability gap between a small and large model on standard benchmarks and 7% to 38% on harder benchmarks, achieving compression ratios of 0.0006 to 0.004. This is over 100x smaller than prior LLM-based compression (Deletang et al., 2024), suggesting that interactive protocols can transfer knowledge far more efficiently than transmitting full responses.",
-    "published": "Feb 09",
-    "published_iso": "2026-02-09T18:52:02+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2604.02343v2",
-    "arxiv_url": "http://arxiv.org/abs/2604.02343v2",
-    "queried_author": "Nicholas Carlini",
-    "matching_authors": [
-      "Nicholas Carlini"
-    ]
-  },
-  {
-    "title": "iGRPO: Self-Feedback-Driven LLM Reasoning",
-    "authors": [
-      "Ali Hatamizadeh",
-      "Shrimai Prabhumoye",
-      "Igor Gitman",
-      "Ximing Lu",
-      "Seungju Han",
-      "Wei Ping",
-      "Yejin Choi",
-      "Jan Kautz"
-    ],
-    "summary": "Large Language Models (LLMs) have shown promise in solving complex mathematical problems, yet they still fall short of producing accurate and consistent solutions. Reinforcement Learning (RL) is a framework for aligning these models with task-specific rewards, improving overall quality and reliability. Group Relative Policy Optimization (GRPO) is an efficient, value-function-free alternative to Proximal Policy Optimization (PPO) that leverages group-relative reward normalization. We introduce Iterative Group Relative Policy Optimization (iGRPO), a two-stage extension of GRPO that adds dynamic self-conditioning through model-generated drafts. In Stage 1, iGRPO samples multiple exploratory drafts and selects the highest-reward draft using the same scalar reward signal used for optimization. In Stage 2, it appends this best draft to the original prompt and applies a GRPO-style update on draft-conditioned refinements, training the policy to improve beyond its strongest prior attempt. Under matched rollout budgets, iGRPO consistently outperforms GRPO across base models (e.g., Nemotron-H-8B-Base-8K and DeepSeek-R1 Distilled), validating its effectiveness on diverse reasoning benchmarks. Moreover, applying iGRPO to OpenReasoning-Nemotron-7B trained on AceReason-Math achieves new state-of-the-art results of 85.62\\% and 79.64\\% on AIME24 and AIME25, respectively. Ablations further show that the refinement wrapper generalizes beyond GRPO variants, benefits from a generative judge, and alters learning dynamics by delaying entropy collapse. These results underscore the potential of ite...",
-    "published": "Feb 09",
-    "published_iso": "2026-02-09T18:45:11+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.09000v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.09000v1",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "How2Everything: Mining the Web for How-To Procedures to Evaluate and Improve LLMs",
-    "authors": [
-      "Yapei Chang",
-      "Kyle Lo",
-      "Mohit Iyyer",
-      "Luca Soldaini"
-    ],
-    "summary": "Generating step-by-step \"how-to\" procedures is a key LLM capability: how-to advice is commonly requested in chatbots, and step-by-step planning is critical for reasoning over complex tasks. Yet, measuring and improving procedural validity at scale on real-world tasks remains challenging and understudied. To address this, we introduce How2Everything, a scalable framework to evaluate and improve goal-conditioned procedure generation. Our framework includes How2Mine, which mines 351K procedures from 980K web pages across 14 topics and readily scales to larger corpora. From this pool we build How2Bench, a 7K-example evaluation set balanced across topics. To reliably score model outputs, we develop How2Score, an evaluation protocol that uses an LLM judge to detect whether a generation contains any critical failure that would prevent achieving the goal. For low-cost, reproducible evaluation, we distill a frontier model into an open 8B model, achieving 80.5% agreement with human annotators. How2Bench reveals clear scaling trends across model sizes and training stages, providing signal early in pretraining. Finally, RL using How2Score as a reward improves performance on How2Bench by >10 points across three models without systematic regressions on standard benchmarks, with gains robust to superficial source-document memorization or format compliance. Taken together, How2Everything shows how pretraining web data can support a closed loop of capability evaluation and improvement at scale.",
-    "published": "Feb 09",
-    "published_iso": "2026-02-09T15:47:14+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.08808v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.08808v1",
-    "queried_author": "Kyle Lo",
-    "matching_authors": [
-      "Kyle Lo",
-      "Luca Soldaini"
-    ]
-  },
-  {
-    "title": "Emergent Misalignment is Easy, Narrow Misalignment is Hard",
-    "authors": [
-      "Anna Soligo",
-      "Edward Turner",
-      "Senthooran Rajamanoharan",
-      "Neel Nanda"
-    ],
-    "summary": "Finetuning large language models on narrowly harmful datasets can cause them to become emergently misaligned, giving stereotypically `evil' responses across diverse unrelated settings. Concerningly, a pre-registered survey of experts failed to predict this result, highlighting our poor understanding of the inductive biases governing learning and generalisation in LLMs. We use emergent misalignment (EM) as a case study to investigate these inductive biases and find that models can just learn the narrow dataset task, but that the general solution appears to be more stable and more efficient. To establish this, we build on the result that different EM finetunes converge to the same linear representation of general misalignment, which can be used to mediate misaligned behaviour. We find a linear representation of the narrow solution also exists, and can be learned by introducing a KL divergence loss. Comparing these representations reveals that general misalignment achieves lower loss, is more robust to perturbations, and is more influential in the pre-training distribution. This work isolates a concrete representation of general misalignment for monitoring and mitigation. More broadly, it offers a detailed case study and preliminary metrics for investigating how inductive biases shape generalisation in LLMs. We open-source all code, datasets and model finetunes.",
-    "published": "Feb 08",
-    "published_iso": "2026-02-08T07:50:04+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.07852v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.07852v1",
-    "queried_author": "Neel Nanda",
-    "matching_authors": [
-      "Neel Nanda"
-    ]
-  },
-  {
-    "title": "LLMs Know More About Numbers than They Can Say",
-    "authors": [
-      "Fengting Yuchi",
-      "Li Du",
-      "Jason Eisner"
-    ],
-    "summary": "Although state-of-the-art LLMs can solve math problems, we find that they make errors on numerical comparisons with mixed notation: \"Which is larger, $5.7 \\times 10^2$ or $580$?\" This raises a fundamental question: Do LLMs even know how big these numbers are? We probe the hidden states of several smaller open-source LLMs. A single linear projection of an appropriate hidden layer encodes the log-magnitudes of both kinds of numerals, allowing us to recover the numbers with relative error of about 2.3% (on restricted synthetic text) or 19.06% (on scientific papers). Furthermore, the hidden state after reading a pair of numerals encodes their ranking, with a linear classifier achieving over 90% accuracy. Yet surprisingly, when explicitly asked to rank the same pairs of numerals, these LLMs achieve only 50-70% accuracy, with worse performance for models whose probes are less effective. Finally, we show that incorporating the classifier probe's log-loss as an auxiliary objective during finetuning brings an additional 3.22% improvement in verbalized accuracy over base models, demonstrating that improving models' internal magnitude representations can enhance their numerical reasoning capabilities. Our code is available at https://github.com/VCY019/Numeracy-Probing.",
-    "published": "Feb 08",
-    "published_iso": "2026-02-08T04:15:24+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.07812v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.07812v2",
-    "queried_author": "Jason Eisner",
-    "matching_authors": [
-      "Jason Eisner"
-    ]
-  },
-  {
-    "title": "Fairness Aware Reward Optimization",
-    "authors": [
-      "Ching Lam Choi",
-      "Vighnesh Subramaniam",
-      "Phillip Isola",
-      "Antonio Torralba",
-      "Stefanie Jegelka"
-    ],
-    "summary": "Demographic skews in human preference data propagate systematic unfairness through reward models into aligned LLMs. We introduce Fairness Aware Reward Optimization (Faro), an in-processing framework that trains reward models under demographic parity, equalized odds, or counterfactual fairness constraints. We provide the first theoretical analysis of reward-level fairness in LLM alignment, establishing: (i) provable fairness certificates for Faro-trained rewards with controllable slack; a (ii) formal characterization of the accuracy-fairness trade-off induced by KL-regularized fine-tuning, proving fairness transfers from reward to policy; and the (iii) existence of a non-empty Pareto frontier. Unlike pre- and post-processing methods, Faro ensures reward models are simultaneously ordinal (ranking correctly), cardinal (calibrated), and fair. Across multiple LLMs and benchmarks, Faro significantly reduces bias and harmful generations while maintaining or improving model quality.",
-    "published": "Feb 08",
-    "published_iso": "2026-02-08T03:35:49+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.07799v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.07799v1",
-    "queried_author": "Phillip Isola",
-    "matching_authors": [
-      "Phillip Isola"
-    ]
-  },
-  {
-    "title": "HumanLM: Simulating Users with State Alignment Beats Response Imitation",
-    "authors": [
-      "Shirley Wu",
-      "Evelyn Choi",
-      "Arpandeep Khatua",
-      "Zhanghan Wang",
-      "Joy He-Yueya",
-      "Tharindu Cyril Weerasooriya",
-      "Wei Wei",
-      "Diyi Yang",
-      "Jure Leskovec",
-      "James Zou"
-    ],
-    "summary": "Large Language Models (LLMs) are increasingly used to simulate how specific users respond to a given context, enabling more user-centric applications that rely on user feedback. However, existing user simulators mostly imitate surface-level patterns and language styles, which fail to reflect the underlying states of real users (e.g., beliefs and emotions). To address these limitations, we propose a novel training framework, HumanLM, which builds user simulators that accurately reflect real users. Our key insight is that, in addition to generating responses, the model should generate natural-language latent states that align with ground-truth responses through reinforcement learning. These latent states correspond to a set of psychologically grounded state dimensions that drive how real users respond. HumanLM further synthesizes these aligned latent states into responses that accurately represent real users. For extensive evaluation, we develop Humanual, a comprehensive benchmark for simulating real users based on public data. Humanual consists of six large-scale datasets with 26k users and 216k responses in total, spanning diverse tasks such as generating user responses to daily life issues, political blogs, and chat sessions with LLM assistants. Across datasets, HumanLM significantly outperforms alternative approaches, achieving an average relative improvement of 16.3% in alignment scores from an LLM judge. In a real-time simulation study with 111 participants, HumanLM achieves the highest similarity to real user responses and competitive human-likeness scores.",
-    "published": "Feb 07",
-    "published_iso": "2026-02-07T20:26:28+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2603.03303v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.03303v1",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang",
-      "Jure Leskovec"
-    ]
-  },
-  {
-    "title": "Anchored Decoding: Provably Reducing Copyright Risk for Any Language Model",
-    "authors": [
-      "Jacqueline He",
-      "Jonathan Hayase",
-      "Wen-tau Yih",
-      "Sewoong Oh",
-      "Luke Zettlemoyer",
-      "Pang Wei Koh"
-    ],
-    "summary": "Language models (LMs) tend to memorize portions of their training data and emit verbatim spans. When the underlying sources are sensitive or copyright-protected, such reproduction raises issues of consent and compensation for creators and compliance risks for developers. We propose Anchored Decoding, a plug-and-play inference-time method for suppressing verbatim copying: it enables decoding from any risky LM trained on mixed-license data by keeping generation in bounded proximity to a permissively trained safe LM. Anchored Decoding adaptively allocates a user-chosen information budget over the generation trajectory and enforces per-step constraints that yield a sequence-level guarantee, enabling a tunable risk-utility trade-off. To make Anchored Decoding practically useful, we introduce a new permissively trained safe model (TinyComma 1.8B), as well as Anchored$_{\\mathrm{Byte}}$ Decoding, a byte-level variant of our method that enables cross-vocabulary fusion via the ByteSampler framework (Hayase et al., 2025). Across six model pairs on long-form metrics for copying risk and utility, Anchored and Anchored$_{\\mathrm{Byte}}$ Decoding define a new Pareto frontier, preserving near-original fluency and factuality while closing up to 75% of the measurable copying gap between the risky baseline and a safe reference, at a modest inference overhead.",
-    "published": "Feb 06",
-    "published_iso": "2026-02-06T19:00:14+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.07120v3",
-    "arxiv_url": "http://arxiv.org/abs/2602.07120v3",
-    "queried_author": "Luke Zettlemoyer",
-    "matching_authors": [
-      "Luke Zettlemoyer",
-      "Pang Wei Koh",
-      "Wen-tau Yih"
     ]
   }
 ]
