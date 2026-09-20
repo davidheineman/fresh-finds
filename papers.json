@@ -12353,6 +12353,46 @@
     ]
   },
   {
+    "title": "A Rubric-Supervised Critic from Sparse Real-World Outcomes",
+    "authors": [
+      "Xingyao Wang",
+      "Valerie Chen",
+      "Heng Ji",
+      "Graham Neubig"
+    ],
+    "summary": "Academic benchmarks for coding agents tend to reward autonomous task completion, measured by verifiable rewards such as unit-test success. In contrast, real-world coding agents operate with humans in the loop, where success signals are typically noisy, delayed, and sparse. How can we bridge this gap? In this paper, we propose a process to learn a \"critic\" model from sparse and noisy interaction data, which can then be used both as a reward model for either RL-based training or inference-time scaling. Specifically, we introduce Critic Rubrics, a rubric-based supervision framework with 24 behavioral features that can be derived from human-agent interaction traces alone. Using a semi-supervised objective, we can then jointly predict these rubrics and sparse human feedback (when present). In experiments, we demonstrate that, despite being trained primarily from trace-observable rubrics and sparse real-world outcome proxies, these critics improve best-of-N reranking on SWE-bench (Best@8 +15.9 over Random@8 over the rerankable subset of trajectories), enable early stopping (+17.7 with 83% fewer attempts), and support training-time data curation via critic-selected trajectories.",
+    "published": "Mar 04",
+    "published_iso": "2026-03-04T07:23:54+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2603.03800v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.03800v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
+    "title": "Real-Time Generation of Game Video Commentary with Multimodal LLMs: Pause-Aware Decoding Approaches",
+    "authors": [
+      "Anum Afzal",
+      "Yuki Saito",
+      "Hiroya Takamura",
+      "Katsuhito Sudoh",
+      "Shinnosuke Takamichi",
+      "Graham Neubig",
+      "Florian Matthes",
+      "Tatsuya Ishigaki"
+    ],
+    "summary": "Real-time video commentary generation provides textual descriptions of ongoing events in videos. It supports accessibility and engagement in domains such as sports, esports, and livestreaming. Commentary generation involves two essential decisions: what to say and when to say it. While recent prompting-based approaches using multimodal large language models (MLLMs) have shown strong performance in content generation, they largely ignore the timing aspect. We investigate whether in-context prompting alone can support real-time commentary generation that is both semantically relevant and well-timed. We propose two prompting-based decoding strategies: 1) a fixed-interval approach, and 2) a novel dynamic interval-based decoding approach that adjusts the next prediction timing based on the estimated duration of the previous utterance. Both methods enable pause-aware generation without any fine-tuning. Experiments on Japanese and English datasets of racing and fighting games show that the dynamic interval-based decoding can generate commentary more closely aligned with human utterance timing and content using prompting alone. We release a multilingual benchmark dataset, trained models, and implementations to support future research on real-time video commentary generation.",
+    "published": "Mar 03",
+    "published_iso": "2026-03-03T06:39:04+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2603.02655v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.02655v1",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
+    ]
+  },
+  {
     "title": "Robometer: Scaling General-Purpose Robotic Reward Models via Trajectory Comparisons",
     "authors": [
       "Anthony Liang",
@@ -12431,6 +12471,32 @@
     "queried_author": "Pang Wei Koh",
     "matching_authors": [
       "Pang Wei Koh"
+    ]
+  },
+  {
+    "title": "How Well Does Agent Development Reflect Real-World Work?",
+    "authors": [
+      "Zora Zhiruo Wang",
+      "Sanidhya Vijayvargiya",
+      "Aspen Chen",
+      "Hanmo Zhang",
+      "Venu Arvind Arangarajan",
+      "Jett Chen",
+      "Valerie Chen",
+      "Diyi Yang",
+      "Daniel Fried",
+      "Graham Neubig"
+    ],
+    "summary": "AI agents are increasingly developed and evaluated on benchmarks relevant to human work, yet it remains unclear how representative these benchmarking efforts are of the labor market as a whole. In this work, we systematically study the relationship between agent development efforts and the distribution of real-world human work by mapping benchmark instances to work domains and skills. We first analyze 43 benchmarks and 72,342 tasks, measuring their alignment with human employment and capital allocation across all 1,016 real-world occupations in the U.S. labor market. We reveal substantial mismatches between agent development that tends to be programming-centric, and the categories in which human labor and economic value are concentrated. Within work areas that agents currently target, we further characterize current agent utility by measuring their autonomy levels, providing practical guidance for agent interaction strategies across work scenarios. Building on these findings, we propose three measurable principles for designing benchmarks that better capture socially important and technically challenging forms of work: coverage, realism, and granular evaluation.",
+    "published": "Mar 01",
+    "published_iso": "2026-03-01T17:55:49+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2603.01203v2",
+    "arxiv_url": "http://arxiv.org/abs/2603.01203v2",
+    "queried_author": "Daniel Fried",
+    "matching_authors": [
+      "Daniel Fried",
+      "Diyi Yang",
+      "Graham Neubig"
     ]
   },
   {
@@ -12539,6 +12605,25 @@
     "matching_authors": [
       "Ranjay Krishna",
       "Jack Hessel"
+    ]
+  },
+  {
+    "title": "Identifying Crucial Attention Heads for Multilingual Language Models: Retrieval and Retrieval-Transition Heads",
+    "authors": [
+      "Shaswat Patel",
+      "Vishvesh Trivedi",
+      "Yue Han",
+      "Yihuai Hong",
+      "Eunsol Choi"
+    ],
+    "summary": "Retrieval heads, a subset of attention heads in Transformers, were studied in English, showing its crucial role in retrieving information from the context. We expand the study of retrieval heads to multilingual context and find that while nearly half of all retrieval heads are often shared across multiple languages, language-specific retrieval heads also emerge. We further design a cross-lingual needle-in-the-haystack task, to identify $\\textit{Retrieval Transition Heads (RTH)}$ that retrieve key information and further map it to target-language output. Our experiments reveal that RTHs do not always overlap with RH, and can be more vital for Chain-of-Thought reasoning in multilingual LLMs. Across four multilingual benchmarks (MMLU-ProX, MGSM, MLQA, and XQuAD) and two model families (Qwen2.5-7B Instruct and Llama3.1-8B Instruct), we demonstrate that masking RTH induces bigger performance drop than masking Retrieval Heads (RH). Specifically, for Llama3.1-8B Instruct, masking the top-25 RTHs results in an average 37.3-point drop (against 19.5-point drop from RH masking) in reasoning accuracy (MMLU-ProX, MGSM) and 9.0 F1-score reduction (against 5.1 drop for RH) in extractive QA (MLQA, XQuAD). Our work advances the understanding of multilingual LMs by isolating the attention heads responsible for mapping to target languages.",
+    "published": "Feb 25",
+    "published_iso": "2026-02-25T22:28:50+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2602.22453v4",
+    "arxiv_url": "http://arxiv.org/abs/2602.22453v4",
+    "queried_author": "Eunsol Choi",
+    "matching_authors": [
+      "Eunsol Choi"
     ]
   },
   {
@@ -12735,6 +12820,71 @@
     ]
   },
   {
+    "title": "DP-RFT: Learning to Generate Synthetic Text via Differentially Private Reinforcement Fine-Tuning",
+    "authors": [
+      "Fangyuan Xu",
+      "Sihao Chen",
+      "Zinan Lin",
+      "Taiwei Shi",
+      "Sydney Graham",
+      "Pei Zhou",
+      "Mengting Wan",
+      "Alex Stein",
+      "Virginia Estellers",
+      "Charles Chen",
+      "Morris Sharp",
+      "Richard Speyer",
+      "Tadas Baltrusaitis",
+      "Jennifer Neville",
+      "Eunsol Choi",
+      "Longqi Yang"
+    ],
+    "summary": "Differentially private (DP) synthetic data generation plays a pivotal role in developing large language models (LLMs) on private data, where data owners cannot provide eyes-on access to individual examples. Generating DP synthetic data typically involves a difficult trade-off. On one hand, DP finetuning methods train an LLM as a synthetic data generator with formal privacy guarantees, yet it still requires the raw content of private examples for model training. However, methods that avoid direct exposure to private data are bounded by an off-the-shelf, un-finetuned model, whose outputs often lack domain fidelity. Can we train an LLM to generate high-quality synthetic text without eyes-on access to individual private examples? In this work, we introduce Differentially Private Reinforcement Fine-Tuning (DP-RFT), an online reinforcement learning algorithm for synthetic data generation with LLMs. DP-RFT leverages DP-protected nearest-neighbor votes from an eyes-off private corpus as a reward signal for on-policy synthetic samples generated by an LLM. The LLM iteratively learns to generate synthetic data to maximize the expected DP votes through Proximal Policy Optimization (PPO). We evaluate DP-RFT for long-form and domain-specific synthetic data generation, such as news articles, meeting transcripts, and medical article abstracts. Our experiments show that DP-RFT closes the gap between private evolution and DP finetuning methods in terms of the fidelity and downstream utility of the generated synthetic data, while respecting the private data boundary.",
+    "published": "Feb 20",
+    "published_iso": "2026-02-20T22:03:56+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2602.18633v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.18633v1",
+    "queried_author": "Eunsol Choi",
+    "matching_authors": [
+      "Eunsol Choi"
+    ]
+  },
+  {
+    "title": "RVR: Retrieve-Verify-Retrieve for Comprehensive Question Answering",
+    "authors": [
+      "Deniz Qian",
+      "Hung-Ting Chen",
+      "Eunsol Choi"
+    ],
+    "summary": "Comprehensively retrieving diverse documents is crucial to address queries that admit a wide range of valid answers. We introduce retrieve-verify-retrieve (RVR), a multi-round retrieval framework designed to maximize answer coverage. Initially, a retriever takes the original query and returns a candidate document set, followed by a verifier that identifies a high-quality subset. For subsequent rounds, the query is augmented with previously verified documents to uncover answers that are not yet covered in previous rounds. RVR is effective even with off-the-shelf retrievers, and fine-tuning retrievers for our inference procedure brings further gains. Our method outperforms baselines, including agentic search approaches, achieving at least 10% relative and 3% absolute gain in complete recall percentage on a multi-answer retrieval dataset (QAMPARI). We also see consistent gains on two out-of-domain datasets (QUEST and WebQuestionsSP) across different base retrievers. Our work presents a promising iterative approach for comprehensive answer recall leveraging a verifier and adapting retrievers to a new inference scenario.",
+    "published": "Feb 20",
+    "published_iso": "2026-02-20T18:48:05+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2602.18425v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.18425v1",
+    "queried_author": "Eunsol Choi",
+    "matching_authors": [
+      "Eunsol Choi"
+    ]
+  },
+  {
+    "title": "VeriSoftBench: Repository-Scale Formal Verification Benchmarks for Lean",
+    "authors": [
+      "Yutong Xin",
+      "Qiaochu Chen",
+      "Greg Durrett",
+      "I\u015fil Dillig"
+    ],
+    "summary": "Large language models have achieved striking results in interactive theorem proving, particularly in Lean. However, most benchmarks for LLM-based proof automation are drawn from mathematics in the Mathlib ecosystem, whereas proofs in software verification are developed inside definition-rich codebases with substantial project-specific libraries. We introduce VeriSoftBench, a benchmark of 500 Lean 4 proof obligations drawn from open-source formal-methods developments and packaged to preserve realistic repository context and cross-file dependencies. Our evaluation of frontier LLMs and specialized provers yields three observations. First, provers tuned for Mathlib-style mathematics transfer poorly to this repository-centric setting. Second, success is strongly correlated with transitive repository dependence: tasks whose proofs draw on large, multi-hop dependency closures are less likely to be solved. Third, providing curated context restricted to a proof's dependency closure improves performance relative to exposing the full repository, but nevertheless leaves substantial room for improvement. Our benchmark and evaluation suite are released at https://github.com/utopia-group/VeriSoftBench.",
+    "published": "Feb 20",
+    "published_iso": "2026-02-20T16:05:06+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2602.18307v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.18307v1",
+    "queried_author": "Greg Durrett",
+    "matching_authors": [
+      "Greg Durrett"
+    ]
+  },
+  {
     "title": "Understanding the Fine-Grained Knowledge Capabilities of Vision-Language Models",
     "authors": [
       "Dhruba Ghosh",
@@ -12793,6 +12943,29 @@
     "queried_author": "Phillip Isola",
     "matching_authors": [
       "Phillip Isola"
+    ]
+  },
+  {
+    "title": "Modeling Distinct Human Interaction in Web Agents",
+    "authors": [
+      "Faria Huq",
+      "Zora Zhiruo Wang",
+      "Zhanqiu Guo",
+      "Venu Arvind Arangarajan",
+      "Tianyue Ou",
+      "Frank Xu",
+      "Shuyan Zhou",
+      "Graham Neubig",
+      "Jeffrey P. Bigham"
+    ],
+    "summary": "Despite rapid progress in autonomous web agents, human involvement remains essential for shaping preferences and correcting agent behavior as tasks unfold. However, current agentic systems lack a principled understanding of when and why humans intervene, often proceeding autonomously past critical decision points or requesting unnecessary confirmation. In this work, we introduce the task of modeling human intervention to support collaborative web task execution. We collect CowCorpus, a dataset of 400 real-user web navigation trajectories containing over 4,200 interleaved human and agent actions. We identify four distinct patterns of user interaction with agents -- hands-off supervision, hands-on oversight, collaborative task-solving, and full user takeover. Leveraging these insights, we train language models (LMs) to anticipate when users are likely to intervene based on their interaction styles, yielding a 61.4-63.4% improvement in intervention prediction accuracy over base LMs. Finally, we deploy these intervention-aware models in live web navigation agents and evaluate them in a user study, finding a 36.8% increase in user-rated agent usefulness. Together, our results show structured modeling of human intervention leads to more adaptive, collaborative agents.",
+    "published": "Feb 19",
+    "published_iso": "2026-02-19T18:11:28+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2602.17588v4",
+    "arxiv_url": "http://arxiv.org/abs/2602.17588v4",
+    "queried_author": "Graham Neubig",
+    "matching_authors": [
+      "Graham Neubig"
     ]
   },
   {
@@ -12877,6 +13050,31 @@
     ]
   },
   {
+    "title": "Hybrid-Gym: Training Coding Agents to Generalize Across Tasks",
+    "authors": [
+      "Yiqing Xie",
+      "Emmy Liu",
+      "Gaokai Zhang",
+      "Nachiket Kotalwar",
+      "Shubham Gandhi",
+      "Sathwik Acharya",
+      "Xingyao Wang",
+      "Carolyn Rose",
+      "Graham Neubig",
+      "Daniel Fried"
+    ],
+    "summary": "When assessing the quality of coding agents, predominant benchmarks focus on solving single issues on GitHub, such as SWE-Bench. In contrast, in real use, these agents solve more various and complex tasks that involve other skills such as exploring codebases, testing software, and designing architecture. In this paper, we first characterize some transferable skills that are shared across diverse tasks by decomposing trajectories into fine-grained components, and derive a set of principles for designing auxiliary training tasks to teach language models these skills. Guided by these principles, we propose a training environment, Hybrid-Gym, consisting of a set of scalable synthetic tasks, such as function localization and dependency search. Experiments show that agents trained on our synthetic tasks effectively generalize to diverse real-world tasks that are not present in training, improving a base model by 25.4% absolute gain on SWE-Bench Verified, 7.9% on SWT-Bench Verified, and 5.1% on Commit-0 Lite. Hybrid-Gym also complements datasets built for the downstream tasks (e.g., improving SWE-Play by 4.9% on SWT-Bench Verified). Code available at: https://github.com/yiqingxyq/Hybrid-Gym.",
+    "published": "Feb 18",
+    "published_iso": "2026-02-18T19:30:55+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2602.16819v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.16819v1",
+    "queried_author": "Daniel Fried",
+    "matching_authors": [
+      "Daniel Fried",
+      "Graham Neubig"
+    ]
+  },
+  {
     "title": "Flow Map Language Models: One-step Language Modeling via Continuous Denoising",
     "authors": [
       "Chanhyuk Lee",
@@ -12917,6 +13115,23 @@
     "queried_author": "Nicholas Carlini",
     "matching_authors": [
       "Nicholas Carlini"
+    ]
+  },
+  {
+    "title": "Calibrate-Then-Act: Cost-Aware Exploration in LLM Agents",
+    "authors": [
+      "Wenxuan Ding",
+      "Nicholas Tomlin",
+      "Greg Durrett"
+    ],
+    "summary": "LLM agents are deployed in environments where they must interact to acquire information. In these scenarios, the agent must reason about inherent cost-uncertainty tradeoffs in how to act, such as when to stop exploring and commit to an answer. For instance, on a programming task, an agent might run the code it generates, or it might generate tests for that code snippet; the cost of writing and running a test is nonzero, but typically lower than the cost of running buggy code. In this work, we show that we can induce LLM agents to explicitly reason about balancing these cost-uncertainty tradeoffs, then act more optimally in their environments. We formalize multiple tasks, including retrieval-augmented QA and a file reading coding task, as sequential decision-making problems under uncertainty. Each problem has latent environment state that impacts the agent's performance. We introduce a framework called Calibrate-Then-Act (CTA), where we pass the agent an inferred prior about this environment state to enable it to act more optimally. This information qualitatively changes agent behavior, and adds environment sensitivity to the agent which is not learned via standard RL training. Our results on a synthetic task, QA, and file reading show that making cost-benefit tradeoffs explicit with CTA helps agents discover more optimal decision-making strategies.",
+    "published": "Feb 18",
+    "published_iso": "2026-02-18T18:46:14+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2602.16699v3",
+    "arxiv_url": "http://arxiv.org/abs/2602.16699v3",
+    "queried_author": "Greg Durrett",
+    "matching_authors": [
+      "Greg Durrett"
     ]
   },
   {
@@ -13122,6 +13337,26 @@
     ]
   },
   {
+    "title": "Small Reward Models via Backward Inference",
+    "authors": [
+      "Yike Wang",
+      "Faeze Brahman",
+      "Shangbin Feng",
+      "Teng Xiao",
+      "Hannaneh Hajishirzi",
+      "Yulia Tsvetkov"
+    ],
+    "summary": "Reward models (RMs) play a central role throughout the language model (LM) pipeline, particularly in non-verifiable domains. However, the dominant LLM-as-a-Judge paradigm relies on the strong reasoning capabilities of large models, while alternative approaches require reference responses or explicit rubrics, limiting flexibility and broader accessibility. In this work, we propose FLIP (FLipped Inference for Prompt reconstruction), a reference-free and rubric-free reward modeling approach that reformulates reward modeling through backward inference: inferring the instruction that would most plausibly produce a given response. The similarity between the inferred and the original instructions is then used as the reward signal. Evaluations across four domains using 13 small language models show that FLIP outperforms LLM-as-a-Judge baselines by an average of 79.6%. Moreover, FLIP substantially improves downstream performance in extrinsic evaluations under test-time scaling via parallel sampling and GRPO training. We further find that FLIP is particularly effective for longer outputs and robust to common forms of reward hacking. By explicitly exploiting the validation-generation gap, FLIP enables reliable reward modeling in downscaled regimes where judgment methods fail. Code available at https://github.com/yikee/FLIP.",
+    "published": "Feb 14",
+    "published_iso": "2026-02-14T01:55:39+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2602.13551v3",
+    "arxiv_url": "http://arxiv.org/abs/2602.13551v3",
+    "queried_author": "Hannaneh Hajishirzi",
+    "matching_authors": [
+      "Hannaneh Hajishirzi"
+    ]
+  },
+  {
     "title": "Imitating What Works: Simulation-Filtered Modular Policy Learning from Human Videos",
     "authors": [
       "Albert J. Zhai",
@@ -13161,277 +13396,6 @@
     "matching_authors": [
       "Antoine Bosselut",
       "Pang Wei Koh"
-    ]
-  },
-  {
-    "title": "RelBench v2: A Large-Scale Benchmark and Repository for Relational Data",
-    "authors": [
-      "Justin Gu",
-      "Rishabh Ranjan",
-      "Charilaos Kanatsoulis",
-      "Haiming Tang",
-      "Martin Jurkovic",
-      "Valter Hudovernik",
-      "Mark Znidar",
-      "Pranshu Chaturvedi",
-      "Parth Shroff",
-      "Fengyu Li",
-      "Jure Leskovec"
-    ],
-    "summary": "Relational deep learning (RDL) has emerged as a powerful paradigm for learning directly on relational databases by modeling entities and their relationships across multiple interconnected tables. As this paradigm evolves toward larger models and relational foundation models, scalable and realistic benchmarks are essential for enabling systematic evaluation and progress. In this paper, we introduce RelBench v2, a major expansion of the RelBench benchmark for RDL. RelBench v2 adds four large-scale relational datasets spanning scholarly publications, enterprise resource planning, consumer platforms, and clinical records, increasing the benchmark to 11 datasets comprising over 22 million rows across 29 tables. We further introduce autocomplete tasks, a new class of predictive objectives that require models to infer missing attribute values directly within relational tables while respecting temporal constraints, expanding beyond traditional forecasting tasks constructed via SQL queries. In addition, RelBench v2 expands beyond its native datasets by integrating external benchmarks and evaluation frameworks: we translate event streams from the Temporal Graph Benchmark into relational schemas for unified relational-temporal evaluation, interface with ReDeLEx to provide uniform access to 70+ real-world databases suitable for pretraining, and incorporate 4DBInfer datasets and tasks to broaden multi-table prediction coverage. Experimental results demonstrate that RDL models consistently outperform single-table baselines across autocomplete, forecasting, and recommendation tasks, highl...",
-    "published": "Feb 13",
-    "published_iso": "2026-02-13T04:23:48+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.12606v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.12606v2",
-    "queried_author": "Jure Leskovec",
-    "matching_authors": [
-      "Jure Leskovec"
-    ]
-  },
-  {
-    "title": "The Appeal and Reality of Recycling LoRAs with Adaptive Merging",
-    "authors": [
-      "Haokun Liu",
-      "Gyung Hyun Je",
-      "Marco Ciccone",
-      "Zhenlin Xu",
-      "Prasanth YSS",
-      "Colin Raffel"
-    ],
-    "summary": "The widespread availability of fine-tuned LoRA modules for open pre-trained models has led to an interest in methods that can adaptively merge LoRAs to improve performance. These methods typically include some way of selecting LoRAs from a pool and tune merging coefficients based on a task-specific dataset. While adaptive merging methods have demonstrated improvements in some settings, no past work has attempted to recycle LoRAs found \"in the wild\" on model repositories like the Hugging Face Hub. To address this gap, we consider recycling from a pool of nearly 1,000 user-contributed LoRAs trained from the Llama 3.1 8B-Instruct language model. Our empirical study includes a range of adaptive and non-adaptive merging methods in addition to a new method designed via a wide search over the methodological design space. We demonstrate that adaptive merging methods can improve performance over the base model but provide limited benefit over training a new LoRA on the same data used to set merging coefficients. We additionally find not only that the specific choice of LoRAs to merge has little importance, but that using LoRAs with randomly initialized parameter values yields similar performance. This raises the possibility that adaptive merging from recycled LoRAs primarily works via some kind of regularization effect, rather than by enabling positive cross-task transfer. To better understand why past work has proven successful, we confirm that positive transfer is indeed possible when there are highly relevant LoRAs in the pool. We release the model checkpoints and code online.",
-    "published": "Feb 12",
-    "published_iso": "2026-02-12T18:59:20+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.12323v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.12323v2",
-    "queried_author": "Colin Raffel",
-    "matching_authors": [
-      "Colin Raffel"
-    ]
-  },
-  {
-    "title": "Olmix: A Framework for Data Mixing Throughout LM Development",
-    "authors": [
-      "Mayee F. Chen",
-      "Tyler Murray",
-      "David Heineman",
-      "Matt Jordan",
-      "Hannaneh Hajishirzi",
-      "Christopher R\u00e9",
-      "Luca Soldaini",
-      "Kyle Lo"
-    ],
-    "summary": "Data mixing -- determining the ratios of data from different domains -- is a first-order concern for training language models (LMs). While existing mixing methods show promise, they fall short when applied during real-world LM development. We present Olmix, a framework that addresses two such challenges. First, the configuration space for developing a mixing method is not well understood -- design choices across existing methods lack justification or consensus and overlook practical issues like data constraints. We conduct a comprehensive empirical study of this space, identifying which design choices lead to a strong mixing method. Second, in practice, the domain set evolves throughout LM development as datasets are added, removed, partitioned, and revised -- a problem setting largely unaddressed by existing works, which assume fixed domains. We study how to efficiently recompute the mixture after the domain set is updated, leveraging information from past mixtures. We introduce mixture reuse, a mechanism that reuses existing ratios and recomputes ratios only for domains affected by the update. Over a sequence of five domain-set updates mirroring real-world LM development, mixture reuse matches the performance of fully recomputing the mix after each update with 74% less compute and improves over training without mixing by 11.6% on downstream tasks.",
-    "published": "Feb 12",
-    "published_iso": "2026-02-12T18:16:05+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.12237v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.12237v1",
-    "queried_author": "Christopher R\u00e9",
-    "matching_authors": [
-      "Christopher R\u00e9",
-      "Hannaneh Hajishirzi",
-      "Kyle Lo",
-      "Luca Soldaini"
-    ]
-  },
-  {
-    "title": "Extending Puzzle for Mixture-of-Experts Reasoning Models with Application to GPT-OSS Acceleration",
-    "authors": [
-      "Akhiad Bercovich",
-      "Nir Ailon",
-      "Vladimir Anisimov",
-      "Tomer Asida",
-      "Nave Assaf",
-      "Mohammad Dabbah",
-      "Ido Galil",
-      "Amnon Geifman",
-      "Yonatan Geifman",
-      "Izhak Golan",
-      "Roi Koren",
-      "Itay Levy",
-      "Zach Moshe",
-      "Pavlo Molchanov",
-      "Najeeb Nabwani",
-      "Mostofa Patwary",
-      "Omri Puny",
-      "Tomer Ronen",
-      "Itamar Schen",
-      "Elad Segal",
-      "Ido Shahaf",
-      "Oren Tropp",
-      "Ran Zilberstein",
-      "Ran El-Yaniv"
-    ],
-    "summary": "Reasoning-focused LLMs improve answer quality by generating longer reasoning traces, but the additional tokens dramatically increase serving cost, motivating inference optimization. We extend and apply Puzzle, a post-training neural architecture search (NAS) framework, to gpt-oss-120B to produce gpt-oss-puzzle-88B, a deployment-optimized derivative. Our approach combines heterogeneous MoE expert pruning, selective replacement of full-context attention with window attention, FP8 KV-cache quantization with calibrated scales, and post-training reinforcement learning to recover accuracy, while maintaining low generation length. In terms of per-token speeds, on an 8XH100 node we achieve 1.63X and 1.22X throughput speedups in long-context and short-context settings, respectively. gpt-oss-puzzle-88B also delivers throughput speedups of 2.82X on a single NVIDIA H100 GPU. However, because token counts can change with reasoning effort and model variants, per-token throughput (tok/s) and latency (ms/token) do not necessarily lead to end-to-end speedups: a 2X throughput gain is erased if traces grow 2X. Conversely, throughput gains can be spent on more reasoning tokens to improve accuracy; we therefore advocate request-level efficiency metrics that normalize throughput by tokens generated and trace an accuracy--speed frontier across reasoning efforts. We show that gpt-oss-puzzle-88B improves over gpt-oss-120B along the entire frontier, delivering up to 1.29X higher request-level efficiency. Across various benchmarks, gpt-oss-puzzle-88B matches or slightly exceeds the parent on suite-av...",
-    "published": "Feb 12",
-    "published_iso": "2026-02-12T13:36:19+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.11937v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.11937v2",
-    "queried_author": "Mostofa Patwary",
-    "matching_authors": [
-      "Mostofa Patwary"
-    ]
-  },
-  {
-    "title": "Retrieval-Aware Distillation for Transformer-SSM Hybrids",
-    "authors": [
-      "Aviv Bick",
-      "Eric P. Xing",
-      "Albert Gu"
-    ],
-    "summary": "State-space models (SSMs) offer efficient sequence modeling but lag behind Transformers on benchmarks that require in-context retrieval. Prior work links this gap to a small set of attention heads, termed Gather-and-Aggregate (G&A), which SSMs struggle to reproduce. We propose *retrieval-aware distillation*, which converts a pretrained Transformer into a hybrid student by preserving only these retrieval-critical heads and distilling the rest into recurrent heads. We identify the essential heads via ablation on a synthetic retrieval task, producing a hybrid with sparse, non-uniform attention placement. We show that preserving **just 2% of attention heads recovers over 95% of teacher performance on retrieval-heavy tasks** (10 heads in a 1B model), requiring far fewer heads than hybrids that retain at least 25%. We further find that large recurrent states often compensate for missing retrieval: once retrieval is handled by these heads, the SSM backbone can be simplified with limited loss, even with an $8\\times$ reduction in state dimension. By reducing both the attention cache and the SSM state, the resulting hybrid is $5$--$6\\times$ more memory-efficient than comparable hybrids, closing the Transformer--SSM gap at a fraction of the memory cost.",
-    "published": "Feb 11",
-    "published_iso": "2026-02-11T21:05:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.11374v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.11374v1",
-    "queried_author": "Albert Gu",
-    "matching_authors": [
-      "Albert Gu"
-    ]
-  },
-  {
-    "title": "MolmoSpaces: A Large-Scale Open Ecosystem for Robot Navigation and Manipulation",
-    "authors": [
-      "Yejin Kim",
-      "Wilbert Pumacay",
-      "Omar Rayyan",
-      "Max Argus",
-      "Winson Han",
-      "Eli VanderBilt",
-      "Jordi Salvador",
-      "Abhay Deshpande",
-      "Rose Hendrix",
-      "Snehal Jauhri",
-      "Shuo Liu",
-      "Nur Muhammad Mahi Shafiullah",
-      "Maya Guru",
-      "Ainaz Eftekhar",
-      "Karen Farley",
-      "Donovan Clay",
-      "Jiafei Duan",
-      "Arjun Guru",
-      "Piper Wolters",
-      "Alvaro Herrasti",
-      "Ying-Chun Lee",
-      "Georgia Chalvatzaki",
-      "Yuchen Cui",
-      "Ali Farhadi",
-      "Dieter Fox",
-      "Ranjay Krishna"
-    ],
-    "summary": "Deploying robots at scale demands robustness to the long tail of everyday situations. The countless variations in scene layout, object geometry, and task specifications that characterize real environments are vast and underrepresented in existing robot benchmarks. Measuring this level of generalization requires infrastructure at a scale and diversity that physical evaluation alone cannot provide. We introduce MolmoSpaces, a fully open ecosystem to support large-scale benchmarking of robot policies. MolmoSpaces consists of over 230k diverse indoor environments, ranging from handcrafted household scenes to procedurally generated multiroom houses, populated with 130k richly annotated object assets, including 48k manipulable objects with 42M stable grasps. Crucially, these environments are simulator-agnostic, supporting popular options such as MuJoCo, Isaac, and ManiSkill. The ecosystem supports the full spectrum of embodied tasks: static and mobile manipulation, navigation, and multiroom long-horizon tasks requiring coordinated perception, planning, and interaction across entire indoor environments. We also design MolmoSpaces-Bench, a benchmark suite of 8 tasks in which robots interact with our diverse scenes and richly annotated objects. Our experiments show MolmoSpaces-Bench exhibits strong sim-to-real correlation (R = 0.96, \\r{ho} = 0.98), confirm newer and stronger zero-shot policies outperform earlier versions in our benchmarks, and identify key sensitivities to prompt phrasing, initial joint positions, and camera occlusion. Through MolmoSpaces and its open-source assets ...",
-    "published": "Feb 11",
-    "published_iso": "2026-02-11T20:16:31+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.11337v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.11337v2",
-    "queried_author": "Ali Farhadi",
-    "matching_authors": [
-      "Ali Farhadi",
-      "Ranjay Krishna"
-    ]
-  },
-  {
-    "title": "Cross-Sectional Asset Retrieval via Future-Aligned Soft Contrastive Learning",
-    "authors": [
-      "Hyeongmin Lee",
-      "Chanyeol Choi",
-      "Jihoon Kwon",
-      "Yoon Kim",
-      "Alejandro Lopez-Lira",
-      "Wonbin Ahn",
-      "Yongjae Lee"
-    ],
-    "summary": "Asset retrieval--finding similar assets in a financial universe--is central to quantitative investment decision-making. Existing approaches define similarity through historical price patterns or sector classifications, but such backward-looking criteria provide no guarantee about future behavior. We argue that effective asset retrieval should be future-aligned: the retrieved assets should be those most likely to exhibit correlated future returns. To this end, we propose Future-Aligned Soft Contrastive Learning (FASCL), a representation learning framework whose soft contrastive loss uses pairwise future return correlations as continuous supervision targets. We further introduce an evaluation protocol designed to directly assess whether retrieved assets share similar future trajectories. Experiments on 4,229 US equities demonstrate that FASCL consistently outperforms 13 baselines across all future-behavior metrics. The source code will be available soon.",
-    "published": "Feb 11",
-    "published_iso": "2026-02-11T10:17:52+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.10711v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.10711v1",
-    "queried_author": "Yoon Kim",
-    "matching_authors": [
-      "Yoon Kim"
-    ]
-  },
-  {
-    "title": "dnaHNet: A Scalable and Hierarchical Foundation Model for Genomic Sequence Learning",
-    "authors": [
-      "Arnav Shah",
-      "Junzhe Li",
-      "Parsa Idehpour",
-      "Adibvafa Fallahpour",
-      "Brandon Wang",
-      "Sukjun Hwang",
-      "Bo Wang",
-      "Patrick D. Hsu",
-      "Hani Goodarzi",
-      "Albert Gu"
-    ],
-    "summary": "Genomic foundation models have the potential to decode DNA syntax, yet face a fundamental tradeoff in their input representation. Standard fixed-vocabulary tokenizers fragment biologically meaningful motifs such as codons and regulatory elements, while nucleotide-level models preserve biological coherence but incur prohibitive computational costs for long contexts. We introduce dnaHNet, a state-of-the-art tokenizer-free autoregressive model that segments and models genomic sequences end-to-end. Using a differentiable dynamic chunking mechanism, dnaHNet compresses raw nucleotides into latent tokens adaptively, balancing compression with predictive accuracy. Pretrained on prokaryotic genomes, dnaHNet outperforms leading architectures including StripedHyena2 in scaling and efficiency. This recursive chunking yields quadratic FLOP reductions, enabling $>3 \\times$ inference speedup over Transformers. On zero-shot tasks, dnaHNet achieves superior performance in predicting protein variant fitness and gene essentiality, while automatically discovering hierarchical biological structures without supervision. These results establish dnaHNet as a scalable, interpretable framework for next-generation genomic modeling.",
-    "published": "Feb 11",
-    "published_iso": "2026-02-11T07:48:21+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.10603v3",
-    "arxiv_url": "http://arxiv.org/abs/2602.10603v3",
-    "queried_author": "Albert Gu",
-    "matching_authors": [
-      "Albert Gu"
-    ]
-  },
-  {
-    "title": "Simple LLM Baselines are Competitive for Model Diffing",
-    "authors": [
-      "Elias Kempf",
-      "Simon Schrodi",
-      "Bartosz Cywi\u0144ski",
-      "Thomas Brox",
-      "Neel Nanda",
-      "Arthur Conmy"
-    ],
-    "summary": "Standard LLM evaluations only test capabilities or dispositions that evaluators designed them for, missing unexpected differences such as behavioral shifts between model revisions or emergent misaligned tendencies. Model diffing addresses this limitation by automatically surfacing systematic behavioral differences. Recent approaches include LLM-based methods that generate natural language descriptions and sparse autoencoder (SAE)-based methods that identify interpretable features. However, no systematic comparison of these approaches exists nor are there established evaluation criteria. We address this gap by proposing evaluation metrics for key desiderata (generalization, interestingness, and abstraction level) and use these to compare existing methods. Our results show that an improved LLM-based baseline performs comparably to the SAE-based method while typically surfacing more abstract behavioral differences.",
-    "published": "Feb 10",
-    "published_iso": "2026-02-10T23:45:26+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.10371v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.10371v1",
-    "queried_author": "Neel Nanda",
-    "matching_authors": [
-      "Neel Nanda"
-    ]
-  },
-  {
-    "title": "Encode Once, Decode Never: Reusing Audio LM Internals for Efficient Temporal Localization",
-    "authors": [
-      "Joseph An",
-      "Phillip Keung",
-      "Jiaqi Wang",
-      "Orevaoghene Ahia",
-      "Noah A. Smith"
-    ],
-    "summary": "Audio language models process input audio into rich frame-level representations, but the standard approach to temporal localization generates timestamps as sequences of text tokens, which discards the frame-level representations in favor of autoregressive decoding. However, generating timestamps as tokens is slow and not parallelizable, and tends to hallucinate when producing timestamps outside the training distribution. We propose internal frame-level reuse, a method that trains audio LMs to reuse their own internal audio representations for temporal localization directly, bypassing token generation altogether. We introduce a lightweight prediction head trained via different frame-level objectives: a binary frame classifier and a novel inhomogeneous Poisson process (IHP) loss that models temporal event intensity. Across word localization, speaker diarization, and event localization tasks, our approach can achieve a >50x inference speedup over token-based generation and demonstrates robust length generalization, maintaining high accuracy on out-of-distribution audio durations where token-based models collapse completely. We find that reusing audio frame-level representations yields localization accuracies comparable to (and often better than) finetuned token-based baselines.",
-    "published": "Feb 10",
-    "published_iso": "2026-02-10T19:19:52+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.10230v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.10230v2",
-    "queried_author": "Noah A. Smith",
-    "matching_authors": [
-      "Noah A. Smith"
-    ]
-  },
-  {
-    "title": "Features as Rewards: Scalable Supervision for Open-Ended Tasks via Interpretability",
-    "authors": [
-      "Aaditya Vikram Prasad",
-      "Connor Watts",
-      "Jack Merullo",
-      "Dhruvil Gala",
-      "Owen Lewis",
-      "Thomas McGrath",
-      "Ekdeep Singh Lubana"
-    ],
-    "summary": "Language models trained on large-scale datasets have been shown to learn features that encode abstract concepts such as factuality or intent. Such features are traditionally used for test-time monitoring or steering. We present an alternative affordance: features as scalable supervision for open-ended tasks. We consider the case of hallucination-reduction as a desirable, yet open-ended behavior and design a reinforcement learning (RL) pipeline, titled RLFR (Reinforcement Learning from Feature Rewards), that uses features as reward functions. Grounded in a novel probing framework that identifies candidate hallucinated claims, our pipeline teaches a model to intervene and correct its completions when it is uncertain of their factuality. Furthermore, the pipeline enables scalable test-time compute, guided once more by our reward features. This end-to-end process operationalized on Gemma-3-12B-IT results in a policy that is 58% less likely to hallucinate compared to the original model (when run in tandem with our probing harness), while preserving performance on standard benchmarks. Taken together, by grounding supervision in the language of features, this paper introduces a novel paradigm in the use of interpretability for learning open-ended tasks.",
-    "published": "Feb 10",
-    "published_iso": "2026-02-10T18:33:45+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.10067v3",
-    "arxiv_url": "http://arxiv.org/abs/2602.10067v3",
-    "queried_author": "Jack Merullo",
-    "matching_authors": [
-      "Jack Merullo"
     ]
   }
 ]
