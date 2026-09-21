@@ -6,8 +6,9 @@ import time
 import requests
 import feedparser
 from dataclasses import dataclass, field, asdict
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from typing import Dict, List, Optional, Set, Tuple
+from zoneinfo import ZoneInfo
 
 RESEARCHERS = 'https://raw.githubusercontent.com/davidheineman/conference-papers/main/constants.py'
 
@@ -34,6 +35,11 @@ MIN_REQUEST_INTERVAL = 5.0
 REQUEST_TIMEOUT = 60
 
 CATEGORIES = ['cs.LG', 'cs.AI', 'cs.CL', 'cs.HC', 'stat.ML']
+
+# Papers are dated by when they first went live on arXiv. The RSS feeds report that
+# directly; the API reports submission times, which are converted with the schedule below.
+ARXIV_TZ = ZoneInfo('America/New_York')
+SUBMISSION_CUTOFF_HOUR = 14
 
 MAX_ABSTRACT_LEN = 1600
 MAX_PAPERS = 500
@@ -125,6 +131,30 @@ def _build_paper(title, authors_list, summary, published, abs_url, pdf_url, matc
 def _published(entry) -> Optional[datetime]:
     parsed = entry.get('published_parsed')
     return datetime(*parsed[:6], tzinfo=timezone.utc) if parsed else None
+
+
+def announcement_date(submitted: datetime) -> datetime:
+    """The date a submission first went live on arXiv.
+
+    Submissions are batched at a 14:00 ET weekday cutoff, and the batch that closed
+    at that cutoff is announced the following weekday. Applying this to the v1
+    submission time gives a paper's first announcement, which never moves when a
+    later version is posted."""
+    day = submitted.astimezone(ARXIV_TZ)
+    date = day.date()
+
+    # A submission only makes a cutoff on a weekday; weekends roll into Monday's
+    if day.hour >= SUBMISSION_CUTOFF_HOUR or date.weekday() >= 5:
+        date += timedelta(days=1)
+    while date.weekday() >= 5:
+        date += timedelta(days=1)
+
+    date += timedelta(days=1)
+    while date.weekday() >= 5:
+        date += timedelta(days=1)
+
+    # Stored in UTC to match the RSS feeds, so timestamps stay directly comparable
+    return datetime(date.year, date.month, date.day, tzinfo=ARXIV_TZ).astimezone(timezone.utc)
 
 
 def fetch_from_rss(authors: List[str]) -> Tuple[List[Paper], int]:
@@ -233,8 +263,8 @@ def _parse_api_entry(entry, authors: List[str]) -> Optional[Paper]:
     if not matching:
         return None
 
-    published = _published(entry)
-    if published is None:
+    submitted = _published(entry)
+    if submitted is None:
         return None
 
     abs_url = entry.get('id', '')
@@ -247,7 +277,7 @@ def _parse_api_entry(entry, authors: List[str]) -> Optional[Paper]:
         title=entry.get('title', ''),
         authors_list=authors_list,
         summary=entry.get('summary', ''),
-        published=published,
+        published=announcement_date(submitted),
         abs_url=abs_url,
         pdf_url=pdf_url.replace('http://', 'https://'),
         matching=matching,
@@ -294,31 +324,6 @@ def backfill_from_api(authors: List[str]) -> List[Paper]:
     return papers
 
 
-def infer_missing_dates(papers: List[Dict]) -> None:
-    """Papers saved before published_iso existed only kept a "Mon DD" label. They are
-    still in newest-first order, so walk them and step back a year whenever the date
-    jumps forward, which recovers the year each one was published."""
-    ceiling = datetime.now(timezone.utc)
-
-    for paper in papers:
-        if paper.get('published_iso'):
-            continue
-        try:
-            parsed = datetime.strptime(paper.get('published', ''), "%b %d")
-        except ValueError:
-            continue
-
-        for year in (ceiling.year, ceiling.year - 1):
-            try:
-                candidate = parsed.replace(year=year, tzinfo=timezone.utc)
-            except ValueError:  # Feb 29 in a non-leap year
-                continue
-            if candidate <= ceiling:
-                paper['published_iso'] = candidate.isoformat()
-                ceiling = candidate
-                break
-
-
 def _sort_key(paper: Dict) -> tuple:
     """Sort newest first. Anything still undated keeps its existing relative order."""
     return (0, '') if not paper.get('published_iso') else (1, paper['published_iso'])
@@ -353,7 +358,6 @@ def main():
     print(f"Found {len(authors)} authors")
 
     existing = load_existing(json_path)
-    infer_missing_dates(existing)
     print(f"Loaded {len(existing)} previously saved papers\n")
 
     fetched, failed_feeds = fetch_from_rss(authors)
