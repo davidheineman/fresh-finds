@@ -12353,6 +12353,35 @@
     ]
   },
   {
+    "title": "Position: Vector Prompt Interfaces Should Be Exposed to Enable Customization of Large Language Models",
+    "authors": [
+      "Liangwei Yang",
+      "Shiyu Wang",
+      "Haolin Chen",
+      "Rithesh Murthy",
+      "Ming Zhu",
+      "Jielin Qiu",
+      "Zixiang Chen",
+      "Juntao Tan",
+      "Jianguo Zhang",
+      "Zhiwei Liu",
+      "Wenting Zhao",
+      "Silvio Savarese",
+      "Caiming Xiong",
+      "Huan Wang",
+      "Shelby Heinecke"
+    ],
+    "summary": "As large language models (LLMs) transition from research prototypes to real-world systems, customization has emerged as a central bottleneck. While text prompts can already customize LLM behavior, we argue that text-only prompting does not constitute a suitable control interface for scalable, stable, and inference-only customization. This position paper argues that model providers should expose \\emph{vector prompt inputs} as part of the public interface for customizing LLMs. We support this position with diagnostic evidence showing that vector prompt tuning continues to improve with increasing supervision whereas text-based prompt optimization saturates early, and that vector prompts exhibit dense, global attention patterns indicative of a distinct control mechanism. We further discuss why inference-only customization is increasingly important under realistic deployment constraints, and why exposing vector prompts need not fundamentally increase model leakage risk under a standard black-box threat model. We conclude with a call to action for the community to rethink prompt interfaces as a core component of LLM customization.",
+    "published": "Mar 04",
+    "published_iso": "2026-03-04T17:08:47+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2603.04292v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.04292v1",
+    "queried_author": "Wenting Zhao",
+    "matching_authors": [
+      "Wenting Zhao"
+    ]
+  },
+  {
     "title": "A Rubric-Supervised Critic from Sparse Real-World Outcomes",
     "authors": [
       "Xingyao Wang",
@@ -12368,6 +12397,23 @@
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig"
+    ]
+  },
+  {
+    "title": "Speculative Speculative Decoding",
+    "authors": [
+      "Tanishq Kumar",
+      "Tri Dao",
+      "Avner May"
+    ],
+    "summary": "Autoregressive decoding is bottlenecked by its sequential nature. Speculative decoding has become a standard way to accelerate inference by using a fast draft model to predict upcoming tokens from a slower target model, and then verifying them in parallel with a single target model forward pass. However, speculative decoding itself relies on a sequential dependence between speculation and verification. We introduce speculative speculative decoding (SSD) to parallelize these operations. While a verification is ongoing, the draft model predicts likely verification outcomes and prepares speculations pre-emptively for them. If the actual verification outcome is then in the predicted set, a speculation can be returned immediately, eliminating drafting overhead entirely. We identify three key challenges presented by speculative speculative decoding, and suggest principled methods to solve each. The result is Saguaro, an optimized SSD algorithm. Our implementation is on average 30% faster than optimized speculative decoding baselines and up to 5x faster than autoregressive decoding with open source inference engines.",
+    "published": "Mar 03",
+    "published_iso": "2026-03-03T18:41:32+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2603.03251v3",
+    "arxiv_url": "http://arxiv.org/abs/2603.03251v3",
+    "queried_author": "Tri Dao",
+    "matching_authors": [
+      "Tri Dao"
     ]
   },
   {
@@ -12519,6 +12565,40 @@
     ]
   },
   {
+    "title": "Qwen3-Coder-Next Technical Report",
+    "authors": [
+      "Ruisheng Cao",
+      "Mouxiang Chen",
+      "Jiawei Chen",
+      "Zeyu Cui",
+      "Yunlong Feng",
+      "Binyuan Hui",
+      "Yuheng Jing",
+      "Kaixin Li",
+      "Mingze Li",
+      "Junyang Lin",
+      "Zeyao Ma",
+      "Kashun Shum",
+      "Xuwu Wang",
+      "Jinxi Wei",
+      "Jiaxi Yang",
+      "Jiajun Zhang",
+      "Lei Zhang",
+      "Zongmeng Zhang",
+      "Wenting Zhao",
+      "Fan Zhou"
+    ],
+    "summary": "We present Qwen3-Coder-Next, an open-weight language model specialized for coding agents. Qwen3-Coder-Next is an 80-billion-parameter model that activates only 3 billion parameters during inference, enabling strong coding capability with efficient inference. In this work, we explore how far strong training recipes can push the capability limits of models with small parameter footprints. To achieve this, we perform agentic training through large-scale synthesis of verifiable coding tasks paired with executable environments, allowing learning directly from environment feedback via mid-training and reinforcement learning. Across agent-centric benchmarks including SWE-Bench and Terminal-Bench, Qwen3-Coder-Next achieves competitive performance relative to its active parameter count. We release both base and instruction-tuned open-weight versions to support research and real-world coding agent development.",
+    "published": "Feb 28",
+    "published_iso": "2026-02-28T16:25:04+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2603.00729v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.00729v1",
+    "queried_author": "Wenting Zhao",
+    "matching_authors": [
+      "Wenting Zhao"
+    ]
+  },
+  {
     "title": "Brittlebench: Quantifying LLM robustness via prompt sensitivity",
     "authors": [
       "Angelika Romanou",
@@ -12587,6 +12667,59 @@
     ]
   },
   {
+    "title": "AI Evaluation Should Require Standardized Item-Level Data Releases",
+    "authors": [
+      "Han Jiang",
+      "Susu Zhang",
+      "Dongyao Zhu",
+      "Yuzhuo Bai",
+      "Sang T. Truong",
+      "Xiaoyuan Yi",
+      "Sanmi Koyejo",
+      "Xing Xie",
+      "Ziang Xiao"
+    ],
+    "summary": "This position paper argues that standardized item-level benchmark data should become the default infrastructure for AI evaluation. Current evaluations suffer from underspecified item selection, construct misalignment, and poor generalization. The root cause of these failures is a misplaced focus on aggregate model scores. Without item-level evidence, validity claims cannot be assessed, resulting in inflated capability claims, misdirected research, and unwarranted trust in deployed systems. Our position is that designing valid evaluations requires empirical evidence from item-level model responses, and the standardized release of such data should be treated as core AI evaluation infrastructure. Such a release, in addition, enables transparency, replicability, and auditability of evaluation results. To show the norm is both feasible and consequential, we construct OpenEval, an item-level archive of 10M responses across 155k items from widely-used benchmarks, under a unified schema that the AI evaluation community can develop upon. We demonstrate how item-level data can identify low-quality items, document construct misalignment, and recover validity evidence about benchmarks' internal structure. We address objections around contamination and author burden, and show each is tractable relative to the cost of decisions made on claims that cannot be trusted.",
+    "published": "Feb 27",
+    "published_iso": "2026-02-27T04:31:30+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2604.03244v2",
+    "arxiv_url": "http://arxiv.org/abs/2604.03244v2",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "AudioCapBench: Quick Evaluation on Audio Captioning across Sound, Music, and Speech",
+    "authors": [
+      "Jielin Qiu",
+      "Jianguo Zhang",
+      "Zixiang Chen",
+      "Liangwei Yang",
+      "Ming Zhu",
+      "Juntao Tan",
+      "Haolin Chen",
+      "Wenting Zhao",
+      "Rithesh Murthy",
+      "Roshan Ram",
+      "Akshara Prabhakar",
+      "Shelby Heinecke",
+      "Caiming",
+      "Xiong",
+      "Silvio Savarese",
+      "Huan Wang"
+    ],
+    "summary": "We introduce AudioCapBench, a benchmark for evaluating audio captioning capabilities of large multimodal models. \\method covers three distinct audio domains, including environmental sound, music, and speech, with 1,000 curated evaluation samples drawn from established datasets. We evaluate 13 models across two providers (OpenAI, Google Gemini) using both reference-based metrics (METEOR, BLEU, ROUGE-L) and an LLM-as-Judge framework that scores predictions on three orthogonal dimensions: \\textit{accuracy} (semantic correctness), \\textit{completeness} (coverage of reference content), and \\textit{hallucination} (absence of fabricated content). Our results reveal that Gemini models generally outperform OpenAI models on overall captioning quality, with Gemini~3~Pro achieving the highest overall score (6.00/10), while OpenAI models exhibit lower hallucination rates. All models perform best on speech captioning and worst on music captioning. We release the benchmark as well as evaluation code to facilitate reproducible audio understanding research.",
+    "published": "Feb 27",
+    "published_iso": "2026-02-27T03:33:37+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2602.23649v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.23649v1",
+    "queried_author": "Wenting Zhao",
+    "matching_authors": [
+      "Wenting Zhao"
+    ]
+  },
+  {
     "title": "Scale Can't Overcome Pragmatics: The Impact of Reporting Bias on Vision-Language Reasoning",
     "authors": [
       "Amita Kamath",
@@ -12640,6 +12773,25 @@
     "queried_author": "John Hewitt",
     "matching_authors": [
       "John Hewitt"
+    ]
+  },
+  {
+    "title": "GradAlign: Gradient-Aligned Data Selection for LLM Reinforcement Learning",
+    "authors": [
+      "Ningyuan Yang",
+      "Weihua Du",
+      "Weiwei Sun",
+      "Sean Welleck",
+      "Yiming Yang"
+    ],
+    "summary": "Reinforcement learning (RL) has become a central post-training paradigm for large language models (LLMs), but its performance is highly sensitive to the quality of training problems. This sensitivity stems from the non-stationarity of RL: rollouts are generated by an evolving policy, and learning is shaped by exploration and reward feedback, unlike supervised fine-tuning (SFT) with fixed trajectories. As a result, prior work often relies on manual curation or simple heuristic filters (e.g., accuracy), which can admit incorrect or low-utility problems. We propose GradAlign, a gradient-aligned data selection method for LLM reinforcement learning that uses a small, trusted validation set to prioritize training problems whose policy gradients align with validation gradients, yielding an adaptive curriculum. We evaluate GradAlign across three challenging data regimes: unreliable reward signals, distribution imbalance, and low-utility training corpus, showing that GradAlign consistently outperforms existing baselines, underscoring the importance of directional gradient signals in navigating non-stationary policy optimization and yielding more stable training and improved final performance. We release our implementation at https://github.com/StigLidu/GradAlign",
+    "published": "Feb 25",
+    "published_iso": "2026-02-25T01:54:50+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2602.21492v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.21492v2",
+    "queried_author": "Sean Welleck",
+    "matching_authors": [
+      "Sean Welleck"
     ]
   },
   {
@@ -12715,6 +12867,25 @@
     "queried_author": "Christopher Potts",
     "matching_authors": [
       "Christopher Potts"
+    ]
+  },
+  {
+    "title": "Steering Away from Memorization: Reachability-Constrained Reinforcement Learning for Text-to-Image Diffusion",
+    "authors": [
+      "Sathwik Karnik",
+      "Juyeop Kim",
+      "Sanmi Koyejo",
+      "Jong-Seok Lee",
+      "Somil Bansal"
+    ],
+    "summary": "Text-to-image diffusion models often memorize training data, revealing a fundamental failure to generalize beyond the training set. Current mitigation strategies typically sacrifice image quality or prompt alignment to reduce memorization. To address this, we propose Reachability-Aware Diffusion Steering (RADS), an inference-time framework that prevents memorization while preserving generation fidelity. RADS models the diffusion denoising process as a dynamical system and applies concepts from reachability analysis to approximate the \"backward reachable tube\"--the set of intermediate states that inevitably evolve into memorized samples. We then formulate mitigation as a constrained reinforcement learning (RL) problem, where a policy learns to steer the trajectory away from memorization via minimal perturbations in the caption embedding space. Empirical evaluations show that RADS achieves a superior Pareto frontier between generation diversity (SSCD), quality (FID), and alignment (CLIP) compared to state-of-the-art baselines. Crucially, RADS provides robust mitigation without modifying the diffusion backbone, offering a plug-and-play solution for safe generation. Our website is available at: https://s-karnik.github.io/rads-memorization-project-page/.",
+    "published": "Feb 24",
+    "published_iso": "2026-02-24T09:07:08+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2603.00140v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.00140v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
     ]
   },
   {
@@ -12795,6 +12966,54 @@
     "matching_authors": [
       "Ludwig Schmidt",
       "Percy Liang"
+    ]
+  },
+  {
+    "title": "TherapyGym: Evaluating and Aligning Clinical Fidelity and Safety in Therapy Chatbots",
+    "authors": [
+      "Fangrui Huang",
+      "Souhad Chbeir",
+      "Arpandeep Khatua",
+      "Sheng Wang",
+      "Sijun Tan",
+      "Kenan Ye",
+      "Lily Bailey",
+      "Merryn Daniel",
+      "Ryan Louie",
+      "Sanmi Koyejo",
+      "Ehsan Adeli"
+    ],
+    "summary": "Large language models (LLMs) are increasingly used for mental-health support; yet prevailing evaluation methods--fluency metrics, preference tests, and generic dialogue benchmarks--fail to capture the clinically critical dimensions of psychotherapy. We introduce THERAPYGYM, a framework that evaluates and improves therapy chatbots along two clinical pillars: fidelity and safety. Fidelity is measured using the Cognitive Therapy Rating Scale (CTRS), implemented as an automated pipeline that scores adherence to CBT techniques over multi-turn sessions. Safety is assessed using a multi-label annotation scheme, covering therapy-specific risks (e.g., failing to address harm or abuse). To mitigate bias and unreliability in LLM-based judges, we further release THERAPYJUDGEBENCH, a validation set of 116 dialogues with 1,270 expert ratings for auditing and calibration against licensed clinicians. THERAPYGYM also serves as a training harness: CTRS and safety-based rewards drive RL with configurable patient simulations spanning diverse symptom profiles. Models trained in THERAPYGYM improve on expert ratings, with average CTRS rising from 0.10 to 0.60 (and 0.16 to 0.59 under LLM judges). Our work enables scalable development of therapy chatbots that are faithful to evidence-based practice and safer in high-stakes use.",
+    "published": "Feb 23",
+    "published_iso": "2026-02-23T06:05:01+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2603.18008v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.18008v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "TOPReward: Token Probabilities as Hidden Zero-Shot Rewards for Robotics",
+    "authors": [
+      "Shirui Chen",
+      "Cole Harrison",
+      "Ying-Chun Lee",
+      "Angela Jin Yang",
+      "Zhongzheng Ren",
+      "Lillian J. Ratliff",
+      "Jiafei Duan",
+      "Dieter Fox",
+      "Ranjay Krishna"
+    ],
+    "summary": "General-purpose robot learning requires dense, instruction-conditioned feedback that can distinguish meaningful task progress from stalled, failed, or partially completed behavior. Yet obtaining such feedback at scale remains difficult, since existing approaches often rely on manual progress annotations, task-specific demonstrations, or reward models trained on curated robot datasets. We introduce TOPReward, a training-free progress reward method that probes pretrained Video-Language Models (VLMs) through their internal token probabilities rather than asking them to generate numerical progress values. Given a video prefix and a language instruction, TOPReward measures the model's likelihood that the instructed task has been completed, converting latent video-language understanding into a dense reward signal without task-specific reward-model training or manually annotated progress labels. We evaluate TOPReward on ManiRewardBench, our real-world manipulation benchmark spanning 130 unique tasks and four robot platforms, as well as on Open X-Embodiment datasets. Across these settings, TOPReward substantially outperforms prior training-free VLM reward methods on open-source models and is competitive with a trained reward-model baseline on progress-estimation metrics, while requiring no reward-model training. Additional analyses show that the reward is sensitive to the specified instruction and is not explained by time index alone. Finally, TOPReward supports downstream applications including success detection and offline reward-weighted behavior cloning.",
+    "published": "Feb 22",
+    "published_iso": "2026-02-22T19:25:48+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2602.19313v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.19313v2",
+    "queried_author": "Ranjay Krishna",
+    "matching_authors": [
+      "Ranjay Krishna"
     ]
   },
   {
@@ -12882,6 +13101,46 @@
     "queried_author": "Greg Durrett",
     "matching_authors": [
       "Greg Durrett"
+    ]
+  },
+  {
+    "title": "Agentic Adversarial QA for Improving Domain-Specific LLMs",
+    "authors": [
+      "Vincent Grari",
+      "Ciprian Tomoiaga",
+      "Sylvain Lamprier",
+      "Tatsunori Hashimoto",
+      "Marcin Detyniecki"
+    ],
+    "summary": "Large Language Models (LLMs), despite extensive pretraining on broad internet corpora, often struggle to adapt effectively to specialized domains. There is growing interest in fine-tuning these models for such domains; however, progress is constrained by the scarcity and limited coverage of high-quality, task-relevant data. To address this, synthetic data generation methods such as paraphrasing or knowledge extraction are commonly applied. Although these approaches excel at factual recall and conceptual knowledge, they suffer from two critical shortcomings: (i) they provide minimal support for interpretive reasoning capabilities in these specialized domains, and (ii) they often produce synthetic corpora that are excessively large and redundant, resulting in poor sample efficiency. To overcome these gaps, we propose an adversarial question-generation framework that produces a compact set of semantically challenging questions. These questions are constructed by comparing the outputs of the model to be adapted and a robust expert model grounded in reference documents, using an iterative, feedback-driven process designed to reveal and address comprehension gaps. Evaluation on specialized subsets of the LegalBench corpus demonstrates that our method achieves greater accuracy with substantially fewer synthetic samples.",
+    "published": "Feb 20",
+    "published_iso": "2026-02-20T10:53:09+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2602.18137v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.18137v1",
+    "queried_author": "Tatsunori Hashimoto",
+    "matching_authors": [
+      "Tatsunori Hashimoto"
+    ]
+  },
+  {
+    "title": "Consensus is Not Verification: Why Crowd Wisdom Strategies Fail for LLM Truthfulness",
+    "authors": [
+      "Yegor Denisov-Blanch",
+      "Joshua Kazdan",
+      "Jessica Chudnovsky",
+      "Rylan Schaeffer",
+      "Sheng Guan",
+      "Soji Adeshina",
+      "Sanmi Koyejo"
+    ],
+    "summary": "Pass@k and other methods of scaling inference compute can improve language model performance in domains with external verifiers, including mathematics and code, where incorrect candidates can be filtered reliably. This raises a natural question: can we similarly scale compute to elicit gains in truthfulness for domains without convenient verification? We show that across five benchmarks and models, surprisingly, it cannot. Even at 25x the inference cost of naive sampling, polling-style aggregation yields no consistent accuracy gains over single-sample baselines and often amplifies shared misconceptions. We find that under uncertainty, models are better at predicting what other models will say within model ensembles than at identifying what is true, revealing a separation between social prediction and truth verification. Across models and benchmarks, aggregation fails to provide a robust truth signal because language model errors are strongly correlated. The source of correlation goes beyond any individual benchmark: we show that even when conditioned on out of distribution random strings and asked to produce pseudo-random outputs, different models produce correlated outputs. Confidence-based weighting provides no benefit because self-reported confidence fails to reliably distinguish correct from incorrect answers. These results delineate a boundary for inference-time scaling: in verified domains, additional samples provide more candidates for a verifier to filter; in unverified domains, additional samples merely reinforce shared misconceptions.",
+    "published": "Feb 20",
+    "published_iso": "2026-02-20T03:35:01+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2603.06612v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.06612v1",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
     ]
   },
   {
@@ -13135,267 +13394,24 @@
     ]
   },
   {
-    "title": "Helpful to a Fault: Measuring Illicit Assistance in Multi-Turn, Multilingual LLM Agents",
+    "title": "Scaling Open Discrete Audio Foundation Models with Interleaved Semantic, Acoustic, and Text Tokens",
     "authors": [
-      "Nivya Talokar",
-      "Ayush K Tarun",
-      "Murari Mandal",
-      "Maksym Andriushchenko",
-      "Antoine Bosselut"
+      "Potsawee Manakul",
+      "Woody Haosheng Gan",
+      "Martijn Bartelds",
+      "Guangzhi Sun",
+      "William Held",
+      "Diyi Yang"
     ],
-    "summary": "LLM-based agents execute real-world workflows via tools and memory. These affordances enable ill-intended adversaries to also use these agents to carry out complex misuse scenarios. Existing agent misuse benchmarks largely test single-prompt instructions, leaving a gap in measuring how agents end up helping with harmful or illegal tasks over multiple turns. We introduce STING (Sequential Testing of Illicit N-step Goal execution), an automated red-teaming framework that constructs a step-by-step illicit plan grounded in a benign persona and iteratively probes a target agent with adaptive follow-ups, using judge agents to track phase completion. We further introduce an analysis framework that models multi-turn red-teaming as a time-to-first-jailbreak random variable, enabling analysis tools like discovery curves, hazard-ratio attribution by attack language, and a new metric: Restricted Mean Jailbreak Discovery. Across AgentHarm scenarios, STING yields substantially higher illicit-task completion than single-turn prompting and chat-oriented multi-turn baselines adapted to tool-using agents. In multilingual evaluations across six non-English settings, we find that attack success and illicit-task completion do not consistently increase in lower-resource languages, diverging from common chatbot findings. Overall, STING provides a practical way to evaluate and stress-test agent misuse in realistic deployment settings, where interactions are inherently multi-turn and often multilingual.",
+    "summary": "Current audio language models are predominantly text-first, either extending pre-trained text LLM backbones or relying on semantic-only audio tokens, limiting general audio modeling. This paper presents a systematic empirical study of native audio foundation models that apply next-token prediction to audio at scale, jointly modeling semantic content, acoustic details, and text to support both general audio generation and cross-modal capabilities. We provide comprehensive empirical insights for building such models: (1) We systematically investigate design choices -- data sources, text mixture ratios, and token composition -- establishing a validated training recipe. (2) We conduct the first scaling law study for discrete audio models via IsoFLOP analysis on 64 models spanning $3{\\times}10^{18}$ to $3{\\times}10^{20}$ FLOPs, finding that optimal data grows 1.6$\\times$ faster than optimal model size. (3) We apply these lessons to train SODA (Scaling Open Discrete Audio), a suite of models from 135M to 4B parameters on 500B tokens, comparing against our scaling predictions and existing models. SODA serves as a flexible backbone for diverse audio/text tasks -- we demonstrate this by fine-tuning for voice-preserving speech-to-speech translation, using the same unified architecture.",
     "published": "Feb 18",
-    "published_iso": "2026-02-18T10:31:19+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.16346v4",
-    "arxiv_url": "http://arxiv.org/abs/2602.16346v4",
-    "queried_author": "Antoine Bosselut",
+    "published_iso": "2026-02-18T18:32:46+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2602.16687v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.16687v1",
+    "queried_author": "Diyi Yang",
     "matching_authors": [
-      "Antoine Bosselut"
-    ]
-  },
-  {
-    "title": "MemoryArena: Benchmarking Agent Memory in Interdependent Multi-Session Agentic Tasks",
-    "authors": [
-      "Zexue He",
-      "Yu Wang",
-      "Churan Zhi",
-      "Yuanzhe Hu",
-      "Tzu-Ping Chen",
-      "Lang Yin",
-      "Ze Chen",
-      "Tong Arthur Wu",
-      "Siru Ouyang",
-      "Zihan Wang",
-      "Jiaxin Pei",
-      "Julian McAuley",
-      "Yejin Choi",
-      "Alex Pentland"
-    ],
-    "summary": "Existing evaluations of agents with memory typically assess memorization and action in isolation. One class of benchmarks evaluates memorization by testing recall of past conversations or text but fails to capture how memory is used to guide future decisions. Another class focuses on agents acting in single-session tasks without the need for long-term memory. However, in realistic settings, memorization and action are tightly coupled: agents acquire memory while interacting with the environment, and subsequently rely on that memory to solve future tasks. To capture this setting, we introduce MemoryArena, a unified evaluation gym for benchmarking agent memory in multi-session Memory-Agent-Environment loops. The benchmark consists of human-crafted agentic tasks with explicitly interdependent subtasks, where agents must learn from earlier actions and feedback by distilling experiences into memory, and subsequently use that memory to guide later actions to solve the overall task. MemoryArena supports evaluation across web navigation, preference-constrained planning, progressive information search, and sequential formal reasoning, and reveals that agents with near-saturated performance on existing long-context memory benchmarks like LoCoMo perform poorly in our agentic setting, exposing a gap in current evaluations for agents with memory.",
-    "published": "Feb 18",
-    "published_iso": "2026-02-18T09:49:14+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.16313v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.16313v1",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Fast KV Compaction via Attention Matching",
-    "authors": [
-      "Adam Zweiger",
-      "Xinghong Fu",
-      "Han Guo",
-      "Yoon Kim"
-    ],
-    "summary": "Scaling language models to long contexts is often bottlenecked by the size of the key-value (KV) cache. In deployed settings, long contexts are typically managed through compaction in token space via summarization. However, summarization can be highly lossy, substantially harming downstream performance. Recent work on Cartridges has shown that it is possible to train highly compact KV caches in latent space that closely match full-context performance, but at the cost of slow and expensive end-to-end optimization. This work describes an approach for fast context compaction in latent space through Attention Matching, which constructs compact keys and values to reproduce attention outputs and preserve attention mass at a per-KV-head level. We show that this formulation naturally decomposes into simple subproblems, some of which admit efficient closed-form solutions. Within this framework, we develop a family of methods that significantly push the Pareto frontier of compaction time versus quality, achieving up to 50x compaction in seconds on some datasets with little quality loss.",
-    "published": "Feb 18",
-    "published_iso": "2026-02-18T09:06:53+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.16284v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.16284v2",
-    "queried_author": "Yoon Kim",
-    "matching_authors": [
-      "Yoon Kim"
-    ]
-  },
-  {
-    "title": "MAEB: Massive Audio Embedding Benchmark",
-    "authors": [
-      "Adnan El Assadi",
-      "Isaac Chung",
-      "Chenghao Xiao",
-      "Roman Solomatin",
-      "Animesh Jha",
-      "Rahul Chand",
-      "Silky Singh",
-      "Kaitlyn Wang",
-      "Ali Sartaz Khan",
-      "Marc Moussa Nasser",
-      "Sufen Fong",
-      "Pengfei He",
-      "Alan Xiao",
-      "Ayush Sunil Munot",
-      "Aditya Shrivastava",
-      "Artem Gazizov",
-      "Niklas Muennighoff",
-      "Kenneth Enevoldsen"
-    ],
-    "summary": "We introduce the Massive Audio Embedding Benchmark (MAEB), a large-scale benchmark covering 30 tasks across speech, music, environmental sounds, and cross-modal audio-text reasoning in 100+ languages. We evaluate 50+ models and find that no single model dominates across all tasks: contrastive audio-text models excel at environmental sound classification (e.g., ESC50) but score near random on multilingual speech tasks (e.g., SIB-FLEURS), while speech-pretrained models show the opposite pattern. Clustering remains challenging for all models, with even the best-performing model achieving only modest results. We observe that models excelling on acoustic understanding often perform poorly on linguistic tasks, and vice versa. We also show that the performance of audio encoders on MAEB correlates highly with their performance when used in audio large language models. MAEB is derived from MAEB+, a collection of 98 tasks. MAEB is designed to maintain task diversity while reducing evaluation cost, and it integrates into the MTEB ecosystem for unified evaluation across text, image, and audio modalities. We release MAEB and all 98 tasks along with code and a leaderboard at https://github.com/embeddings-benchmark/mteb.",
-    "published": "Feb 17",
-    "published_iso": "2026-02-17T21:00:51+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.16008v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.16008v1",
-    "queried_author": "Niklas Muennighoff",
-    "matching_authors": [
-      "Niklas Muennighoff"
-    ]
-  },
-  {
-    "title": "Discovering Implicit Large Language Model Alignment Objectives",
-    "authors": [
-      "Edward Chen",
-      "Sanmi Koyejo",
-      "Carlos Guestrin"
-    ],
-    "summary": "Large language model (LLM) alignment relies on complex reward signals that often obscure the specific behaviors being incentivized, creating critical risks of misalignment and reward hacking. Existing interpretation methods typically rely on pre-defined rubrics, risking the omission of \"unknown unknowns\", or fail to identify objectives that comprehensively cover and are causal to the model behavior. To address these limitations, we introduce Obj-Disco, a framework that automatically decomposes an alignment reward signal into a sparse, weighted combination of human-interpretable natural language objectives. Our approach utilizes an iterative greedy algorithm to analyze behavioral changes across training checkpoints, identifying and validating candidate objectives that best explain the residual reward signal. Extensive evaluations across diverse tasks, model sizes, and alignment algorithms demonstrate the framework's robustness. Experiments with popular open-source reward models show that the framework consistently captures > 90% of reward behavior, a finding further corroborated by human evaluation. Additionally, a case study on alignment with an open-source reward model reveals that Obj-Disco can successfully identify latent misaligned incentives that emerge alongside intended behaviors. Our work provides a crucial tool for uncovering the implicit objectives in LLM alignment, paving the way for more transparent and safer AI development.",
-    "published": "Feb 17",
-    "published_iso": "2026-02-17T03:58:55+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.15338v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.15338v2",
-    "queried_author": "Carlos Guestrin",
-    "matching_authors": [
-      "Carlos Guestrin",
-      "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "OpaqueToolsBench: Learning Nuances of Tool Behavior Through Interaction",
-    "authors": [
-      "Skyler Hallinan",
-      "Thejas Venkatesh",
-      "Xiang Ren",
-      "Sai Praneeth Karimireddy",
-      "Ashwin Paranjape",
-      "Yuhao Zhang",
-      "Jack Hessel"
-    ],
-    "summary": "Tool-calling is essential for Large Language Model (LLM) agents to complete real-world tasks. While most existing benchmarks assume simple, perfectly documented tools, real-world tools (e.g., general \"search\" APIs) are often opaque, lacking clear best practices or failure modes. Can LLM agents improve their performance in environments with opaque tools by interacting and subsequently improving documentation? To study this, we create OpaqueToolsBench, a benchmark consisting of three distinct task-oriented environments: general function calling, interactive chess playing, and long-trajectory agentic search. Each environment provides underspecified tools that models must learn to use effectively to complete the task. Results on OpaqueToolsBench suggest existing methods for automatically documenting tools are expensive and unreliable when tools are opaque. To address this, we propose a simple framework, ToolObserver, that iteratively refines tool documentation by observing execution feedback from tool-calling trajectories. Our approach outperforms existing methods on OpaqueToolsBench across datasets, even in relatively hard settings. Furthermore, for test-time tool exploration settings, our method is also efficient, consuming 3.5-7.5x fewer total tokens than the best baseline.",
-    "published": "Feb 16",
-    "published_iso": "2026-02-16T21:26:37+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.15197v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.15197v1",
-    "queried_author": "Jack Hessel",
-    "matching_authors": [
-      "Jack Hessel"
-    ]
-  },
-  {
-    "title": "Cold-Start Personalization via Training-Free Priors from Structured World Models",
-    "authors": [
-      "Avinandan Bose",
-      "Shuyue Stella Li",
-      "Faeze Brahman",
-      "Pang Wei Koh",
-      "Simon Shaolei Du",
-      "Yulia Tsvetkov",
-      "Maryam Fazel",
-      "Lin Xiao",
-      "Asli Celikyilmaz"
-    ],
-    "summary": "Cold-start personalization requires inferring user preferences through interaction when no user-specific historical data is available. The core challenge is a routing problem: each task admits dozens of preference dimensions, yet individual users care about only a few, and which ones matter depends on who is asking. With a limited question budget, asking without structure will miss the dimensions that matter. Reinforcement learning is the natural formulation, but in multi-turn settings its terminal reward fails to exploit the factored, per-criterion structure of preference data, and in practice learned policies collapse to static question sequences that ignore user responses. We propose decomposing cold-start elicitation into offline structure learning and online Bayesian inference. Pep (Preference Elicitation with Priors) learns a structured world model of preference correlations offline from complete profiles, then performs training-free Bayesian inference online to select informative questions and predict complete preference profiles, including dimensions never asked about. The framework is modular across downstream solvers and requires only simple belief models. Across medical, mathematical, social, and commonsense reasoning, Pep achieves 80.8% alignment between generated responses and users' stated preferences versus 68.5% for RL, with 3-5x fewer interactions. When two users give different answers to the same question, Pep changes its follow-up 39-62% of the time versus 0-28% for RL. It does so with ~10K parameters versus 8B for RL, showing that the bottleneck in cold-...",
-    "published": "Feb 16",
-    "published_iso": "2026-02-16T18:52:13+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.15012v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.15012v1",
-    "queried_author": "Pang Wei Koh",
-    "matching_authors": [
-      "Pang Wei Koh"
-    ]
-  },
-  {
-    "title": "S2D: Selective Spectral Decay for Quantization-Friendly Conditioning of Neural Activations",
-    "authors": [
-      "Arnav Chavan",
-      "Nahush Lele",
-      "Udbhav Bamba",
-      "Sankalp Dayal",
-      "Aditi Raghunathan",
-      "Deepak Gupta"
-    ],
-    "summary": "Activation outliers in large-scale transformer models pose a fundamental challenge to model quantization, creating excessively large ranges that cause severe accuracy drops during quantization. We empirically observe that outlier severity intensifies with pre-training scale (e.g., progressing from CLIP to the more extensively trained SigLIP and SigLIP2). Through theoretical analysis as well as empirical correlation studies, we establish the direct link between these activation outliers and dominant singular values of the weights. Building on this insight, we propose Selective Spectral Decay ($S^2D$), a geometrically-principled conditioning method that surgically regularizes only the weight components corresponding to the largest singular values during fine-tuning. Through extensive experiments, we demonstrate that $S^2D$ significantly reduces activation outliers and produces well-conditioned representations that are inherently quantization-friendly. Models trained with $S^2D$ achieve up to 7% improved PTQ accuracy on ImageNet under W4A4 quantization and 4% gains when combined with QAT. These improvements also generalize across downstream tasks and vision-language models, enabling the scaling of increasingly large and rigorously trained models without sacrificing deployment efficiency.",
-    "published": "Feb 16",
-    "published_iso": "2026-02-16T03:41:06+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.14432v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.14432v1",
-    "queried_author": "Aditi Raghunathan",
-    "matching_authors": [
-      "Aditi Raghunathan"
-    ]
-  },
-  {
-    "title": "ALMo: Interactive Aim-Limit-Defined, Multi-Objective System for Personalized High-Dose-Rate Brachytherapy Treatment Planning and Visualization for Cervical Cancer",
-    "authors": [
-      "Edward Chen",
-      "Natalie Dullerud",
-      "Pang Wei Koh",
-      "Thomas Niedermayr",
-      "Elizabeth Kidd",
-      "Sanmi Koyejo",
-      "Carlos Guestrin"
-    ],
-    "summary": "In complex clinical decision-making, clinicians must often track a variety of competing metrics defined by aim (ideal) and limit (strict) thresholds. Sifting through these high-dimensional tradeoffs to infer the optimal patient-specific strategy is cognitively demanding and historically prone to variability. In this paper, we address this challenge within the context of High-Dose-Rate (HDR) brachytherapy for cervical cancer, where planning requires strictly managing radiation hot spots while balancing tumor coverage against organ sparing. We present ALMo (Aim-Limit-defined Multi-Objective system), an interactive decision support system designed to infer and operationalize clinician intent. ALMo employs a novel optimization framework that minimizes manual input through automated parameter setup and enables flexible control over toxicity risks. Crucially, the system allows clinicians to navigate the Pareto surface of dosimetric tradeoffs by directly manipulating intuitive aim and limit values. In a retrospective evaluation of 25 clinical cases, ALMo generated treatment plans that consistently met or exceeded manual planning quality, with 65% of cases demonstrating dosimetric improvements. Furthermore, the system significantly enhanced efficiency, reducing average planning time to approximately 17 minutes, compared to the conventional 30-60 minutes. While validated in brachytherapy, ALMo demonstrates a generalized framework for streamlining interaction in multi-criteria clinical decision-making.",
-    "published": "Feb 14",
-    "published_iso": "2026-02-14T08:24:38+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.13666v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.13666v1",
-    "queried_author": "Carlos Guestrin",
-    "matching_authors": [
-      "Carlos Guestrin",
-      "Pang Wei Koh",
-      "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "Small Reward Models via Backward Inference",
-    "authors": [
-      "Yike Wang",
-      "Faeze Brahman",
-      "Shangbin Feng",
-      "Teng Xiao",
-      "Hannaneh Hajishirzi",
-      "Yulia Tsvetkov"
-    ],
-    "summary": "Reward models (RMs) play a central role throughout the language model (LM) pipeline, particularly in non-verifiable domains. However, the dominant LLM-as-a-Judge paradigm relies on the strong reasoning capabilities of large models, while alternative approaches require reference responses or explicit rubrics, limiting flexibility and broader accessibility. In this work, we propose FLIP (FLipped Inference for Prompt reconstruction), a reference-free and rubric-free reward modeling approach that reformulates reward modeling through backward inference: inferring the instruction that would most plausibly produce a given response. The similarity between the inferred and the original instructions is then used as the reward signal. Evaluations across four domains using 13 small language models show that FLIP outperforms LLM-as-a-Judge baselines by an average of 79.6%. Moreover, FLIP substantially improves downstream performance in extrinsic evaluations under test-time scaling via parallel sampling and GRPO training. We further find that FLIP is particularly effective for longer outputs and robust to common forms of reward hacking. By explicitly exploiting the validation-generation gap, FLIP enables reliable reward modeling in downscaled regimes where judgment methods fail. Code available at https://github.com/yikee/FLIP.",
-    "published": "Feb 14",
-    "published_iso": "2026-02-14T01:55:39+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.13551v3",
-    "arxiv_url": "http://arxiv.org/abs/2602.13551v3",
-    "queried_author": "Hannaneh Hajishirzi",
-    "matching_authors": [
-      "Hannaneh Hajishirzi"
-    ]
-  },
-  {
-    "title": "Imitating What Works: Simulation-Filtered Modular Policy Learning from Human Videos",
-    "authors": [
-      "Albert J. Zhai",
-      "Kuo-Hao Zeng",
-      "Jiasen Lu",
-      "Ali Farhadi",
-      "Shenlong Wang",
-      "Wei-Chiu Ma"
-    ],
-    "summary": "The ability to learn manipulation skills by watching videos of humans has the potential to unlock a new source of highly scalable data for robot learning. Here, we tackle prehensile manipulation, in which tasks involve grasping an object before performing various post-grasp motions. Human videos offer strong signals for learning the post-grasp motions, but they are less useful for learning the prerequisite grasping behaviors, especially for robots without human-like hands. A promising way forward is to use a modular policy design, leveraging a dedicated grasp generator to produce stable grasps. However, arbitrary stable grasps are often not task-compatible, hindering the robot's ability to perform the desired downstream motion. To address this challenge, we present Perceive-Simulate-Imitate (PSI), a framework for training a modular manipulation policy using human video motion data processed by paired grasp-trajectory filtering in simulation. This simulation step extends the trajectory data with grasp suitability labels, which allows for supervised learning of task-oriented grasping capabilities. We show through real-world experiments that our framework can be used to learn precise manipulation skills efficiently without any robot data, resulting in significantly more robust performance than using a grasp generator naively.",
-    "published": "Feb 13",
-    "published_iso": "2026-02-13T18:59:10+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.13197v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.13197v2",
-    "queried_author": "Ali Farhadi",
-    "matching_authors": [
-      "Ali Farhadi"
-    ]
-  },
-  {
-    "title": "Buy versus Build an LLM: A Decision Framework for Governments",
-    "authors": [
-      "Jiahao Lu",
-      "Ziwei Xu",
-      "William Tjhi",
-      "Junnan Li",
-      "Antoine Bosselut",
-      "Pang Wei Koh",
-      "Mohan Kankanhalli"
-    ],
-    "summary": "Large Language Models (LLMs) represent a new frontier of digital infrastructure that can support a wide range of public-sector applications, from general purpose citizen services to specialized and sensitive state functions. When expanding AI access, governments face a set of strategic choices over whether to buy existing services, build domestic capabilities, or adopt hybrid approaches across different domains and use cases. These are critical decisions especially when leading model providers are often foreign corporations, and LLM outputs are increasingly treated as trusted inputs to public decision-making and public discourse. In practice, these decisions are not intended to mandate a single approach across all domains; instead, national AI strategies are typically pluralistic, with sovereign, commercial and open-source models coexisting to serve different purposes. Governments may rely on commercial models for non-sensitive or commodity tasks, while pursuing greater control for critical, high-risk or strategically important applications. This paper provides a strategic framework for making this decision by evaluating these options across dimensions including sovereignty, safety, cost, resource capability, cultural fit, and sustainability. Importantly, \"building\" does not imply that governments must act alone: domestic capabilities may be developed through public research institutions, universities, state-owned enterprises, joint ventures, or broader national ecosystems. By detailing the technical requirements and practical challenges of each pathway, this work aims to s...",
-    "published": "Feb 13",
-    "published_iso": "2026-02-13T15:39:31+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.13033v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.13033v2",
-    "queried_author": "Antoine Bosselut",
-    "matching_authors": [
-      "Antoine Bosselut",
-      "Pang Wei Koh"
+      "Diyi Yang",
+      "William Held"
     ]
   }
 ]
