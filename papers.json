@@ -1,5 +1,102 @@
 [
   {
+    "title": "Critical-State RL: Diagnosing Trainable States for Multi-Turn Tool Use",
+    "authors": [
+      "Zixiang Chen",
+      "Wenting Zhao",
+      "Zhepeng Cen",
+      "Akshara Prabhakar",
+      "Jielin Qiu",
+      "Jianguo Zhang",
+      "Zhiwei Liu",
+      "Tulika Manoj Awalgaonkar",
+      "Liangwei Yang",
+      "Shelby Heinecke",
+      "Silvio Savarese",
+      "Huan Wang"
+    ],
+    "summary": "Multi-turn tool-use failures can hinge on a single model call, yet reward variation alone does not reveal which call would benefit from training. When rewards depend on later interactions, their variation can reflect downstream randomness rather than differences between the current actions. We introduce Critical-State RL to identify trainable states in multi-turn interactions. Given task-defined candidate calls and local rewards, the method assesses whether each reward captures the action's effect on task success and whether improvement over a reference policy is possible. It then uses nested sampling to separate action-dependent reward variation from continuation noise and optimizes the policy at the selected states using contextual-bandit training. Experiments on the Berkeley Function Calling Leaderboard (BFCL) v4 compare training at diagnostic-selected states with training at alternative states. For missing-function tasks, the diagnostic selects the response after the tool becomes available; for missing-argument tasks, it selects the response before the missing argument is supplied. Training the selected responses improves performance, including about 14 percentage points on the missing-function task, while training the alternatives leaves performance flat or worse. We further apply the recipe across models and tasks, including logged repeat-call avoidance and memory management.",
+    "published": "Sep 22",
+    "published_iso": "2026-09-22T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2609.24985",
+    "arxiv_url": "https://arxiv.org/abs/2609.24985",
+    "queried_author": "Wenting Zhao",
+    "matching_authors": [
+      "Wenting Zhao"
+    ]
+  },
+  {
+    "title": "Exponential Family Synthetic Controls",
+    "authors": [
+      "Hector Rodriguez-Deniz",
+      "David M. Blei"
+    ],
+    "summary": "We develop exponential family synthetic controls (EFSC), a distributional version of synthetic controls for a panel of datasets. Each cell of the panel corresponds to a dataset drawn from an exponential family whose natural parameters factorize probabilistically across units and times. We estimate the latent factors using black-box variational inference. This replaces the usual weighted-average view of synthetic controls with a flexible probabilistic model that operates on full distributions. We propose causal estimands based on divergences between pre- and post-intervention distributions induced by the posterior of the natural parameters, together with distributional placebo tests to support causal inference and assess the significance of the estimated effects. We validate the proposed framework on synthetic and real data. Across a variety of exponential-family distributions, EFSC accurately recovers causal effects induced by exponential tilts, together with the corresponding divergences between treated and counterfactual distributions. The framework also captures effects induced by structural perturbations of the latent factors and by heavy-tailed noise contamination. Finally, we apply EFSC to study the expansion of Medicaid under the Affordable Care Act (ACA) and its impact on the distribution of health insurance coverage across U.S. states. Code is available at https://github.com/blei-lab/efsc.",
+    "published": "Sep 22",
+    "published_iso": "2026-09-22T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2609.23970",
+    "arxiv_url": "https://arxiv.org/abs/2609.23970",
+    "queried_author": "David M. Blei",
+    "matching_authors": [
+      "David M. Blei"
+    ]
+  },
+  {
+    "title": "MobileCybench: Evaluating Agent Vulnerability Discovery via Executable Probes",
+    "authors": [
+      "Andy K. Zhang",
+      "Ava Huang",
+      "Joey Ji",
+      "Wai Han",
+      "Thomas Qin",
+      "Nardos Demilew",
+      "Michael Tian-Yue Liu",
+      "Brian Song",
+      "Riya Dulepet",
+      "Brian Wang",
+      "Kyleen Liao",
+      "Cuiyuanxiu Chen",
+      "Nishka Kacheria",
+      "Andrew Wu",
+      "Pratham Rangwala",
+      "Xinjie Wang",
+      "Laura Gomezjurado Gonzalez",
+      "Anita Ding",
+      "Benjamin Yi",
+      "Daniel E. Ho",
+      "Dan Boneh",
+      "Dawn Song",
+      "Ion Stoica",
+      "Percy Liang"
+    ],
+    "summary": "AI agents now report vulnerabilities faster than maintainers can review them. Reports often depend on security properties specific to the application, and require considerable human labor to process. To mitigate this, we introduce a framework for evaluating vulnerability reports via probes, executable checks of security properties. A reported exploit is evaluated by replaying it against the application and running the probes: a triggered probe indicates both that the exploit succeeded and which security property it violated. As a probe encodes a security property rather than a known vulnerability, it can detect vulnerabilities that were not known when the probe was written. We instantiate the framework as MobileCybench, a benchmark for vulnerability discovery by AI agents in 13 Android applications, with 495 probes written and reviewed by the authors. We evaluate 5 coding agents (OpenCode with GPT-5.5, GPT-5.6-Sol, and GLM-5.2; Claude Code with Opus 4.8 and Opus 5) under 4 settings: as a malicious app on the victim's device or as a remote attacker with a low-privilege account, each with either only an obfuscated APK or access to the application's source code. Given only the obfuscated APK, the top agent, OpenCode with GPT-5.6-Sol, triggers probes in 53.8% of applications in the malicious-app setting and 16.7% in the remote-attacker setting. With source code, the trigger rate across all agents and both attack settings increases from 28.8% to 32.8%. Building and running the benchmark surfaced 23 previously unreported vulnerabilities, the majority of which have been confirmed ...",
+    "published": "Sep 22",
+    "published_iso": "2026-09-22T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2609.23980",
+    "arxiv_url": "https://arxiv.org/abs/2609.23980",
+    "queried_author": "Percy Liang",
+    "matching_authors": [
+      "Percy Liang"
+    ]
+  },
+  {
+    "title": "Emergent Collusion in Long-Horizon LLM Agent Interaction",
+    "authors": [
+      "Xinrui Shi",
+      "Yanzhe Zhang",
+      "Diyi Yang"
+    ],
+    "summary": "LLM agents are increasingly deployed in collaborative settings, yet long-term interaction may give rise to undesirable coordination. We study the emergence of collusion in a long-horizon multi-agent environment: two agents repeatedly complete individual tasks, share task logs, verify each other's work, and receive rewards. We introduce realistic constraints that make compliance with the verification protocol incompatible with reward maximization, and find that agents increasingly deviate from the protocol over repeated interactions. Collusion emerges in 94% of trajectories across 10 models, and more capable models within the same family reach it earlier. Controlled peer interventions show that collusion is shaped by peer behavior, while ablations reveal additional effects of reward structure, the verification feedback agents receive, and their interaction history. In particular, restricting the amount and scope of interaction history available to agents reduces collusion. Overall, our findings show that long-horizon interaction can reshape how agents coordinate in ways that create safety risks.",
+    "published": "Sep 22",
+    "published_iso": "2026-09-22T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2609.24967",
+    "arxiv_url": "https://arxiv.org/abs/2609.24967",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang"
+    ]
+  },
+  {
     "title": "Locating Hidden Failures Makes Long-Horizon Agents More Reliable",
     "authors": [
       "Salman Rahman",
@@ -12439,6 +12536,26 @@
     ]
   },
   {
+    "title": "Contextualized Privacy Defense for LLM Agents",
+    "authors": [
+      "Yule Wen",
+      "Yanzhe Zhang",
+      "Jianxun Lian",
+      "Xiaoyuan Yi",
+      "Xing Xie",
+      "Diyi Yang"
+    ],
+    "summary": "LLM agents increasingly act on users' personal information, yet existing privacy defenses remain limited in both design and adaptability. Most prior approaches rely on static or passive defenses, such as prompting and guarding. These paradigms are insufficient for supporting contextual, proactive privacy decisions in multi-step agent execution. We propose Contextualized Defense Instructing (CDI), a new privacy defense paradigm in which an instructor model generates step-specific, context-aware privacy guidance during execution, proactively shaping actions rather than merely constraining or vetoing them. Crucially, CDI is paired with an experience-driven optimization framework that trains the instructor via reinforcement learning (RL), where we convert failure trajectories with privacy violations into learning environments. We formalize baseline defenses and CDI as distinct intervention points in a canonical agent loop, and compare their privacy-helpfulness trade-offs within a unified simulation framework. Results show that our CDI consistently achieves a better balance between privacy preservation (94.2%) and helpfulness (80.6%) than baselines, with superior robustness to adversarial conditions and generalization.",
+    "published": "Mar 04",
+    "published_iso": "2026-03-04T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2603.02983v1",
+    "arxiv_url": "http://arxiv.org/abs/2603.02983v1",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang"
+    ]
+  },
+  {
     "title": "Robometer: Scaling General-Purpose Robotic Reward Models via Trajectory Comparisons",
     "authors": [
       "Anthony Liang",
@@ -12795,6 +12912,64 @@
     ]
   },
   {
+    "title": "SumTablets: A Transliteration Dataset of Sumerian Tablets",
+    "authors": [
+      "Cole Simmons",
+      "Richard Diehl Martinez",
+      "Dan Jurafsky"
+    ],
+    "summary": "Sumerian transliteration is a conventional system for representing a scholar's interpretation of a tablet in the Latin script. Thanks to visionary digital Assyriology projects such as ETCSL, CDLI, and Oracc, a large number of Sumerian transliterations have been published online, and these data are well-structured for a variety of search and analysis tasks. However, the absence of a comprehensive, accessible dataset pairing transliterations with a digital representation of the tablet's cuneiform glyphs has prevented the application of modern Natural Language Processing (NLP) methods to the task of Sumerian transliteration. To address this gap, we present SumTablets, a dataset pairing Unicode representations of 91,606 Sumerian cuneiform tablets (totaling 6,970,407 glyphs) with the associated transliterations published by Oracc. We construct SumTablets by first preprocessing and standardizing the Oracc transliterations before mapping each reading back to the Unicode representation of the source glyph. Further, we retain parallel structural information (e.g., surfaces, newlines, broken segments) through the use of special tokens. We release SumTablets as a Hugging Face Dataset (CC BY 4.0) and open source data preparation code via GitHub. Additionally, we leverage SumTablets to implement and evaluate two transliteration baselines: (1) weighted sampling from a glyph's possible readings, and (2) fine-tuning an autoregressive language model. Our fine-tuned language model achieves an average transliteration character-level F-score (chrF) of 97.55, demonstrating the immediate potenti...",
+    "published": "Feb 26",
+    "published_iso": "2026-02-26T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2602.22200v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.22200v1",
+    "queried_author": "Dan Jurafsky",
+    "matching_authors": [
+      "Dan Jurafsky"
+    ]
+  },
+  {
+    "title": "DySCO: Dynamic Attention-Scaling Decoding for Long-Context Language Models",
+    "authors": [
+      "Xi Ye",
+      "Wuwei Zhang",
+      "Fangcong Yin",
+      "Howard Yen",
+      "Danqi Chen"
+    ],
+    "summary": "Understanding and reasoning over long contexts is a crucial capability for language models (LMs). Although recent models support increasingly long context windows, their accuracy often deteriorates as input length grows. In practice, models often struggle to keep attention aligned with the most relevant context throughout decoding. In this work, we propose DYSCO, a novel decoding algorithm for improving long-context reasoning. DYSCO leverages retrieval heads--a subset of attention heads specialized for longcontext retrieval--to identify task-relevant tokens at each decoding step and explicitly up-weight them. By doing so, DYSCO dynamically adjusts attention during generation to better utilize relevant context. The method is training-free and can be applied directly to any off-the-shelf LMs. Across multiple instruction-tuned and reasoning models, DYSCO consistently improves performance on challenging long-context reasoning benchmarks, yielding relative gains of up to 25% on MRCR and LongBenchV2 at 128K context length with modest additional compute. Further analysis highlights the importance of both dynamic attention rescaling and retrievalhead guided selection for the effectiveness of the method, while providing interpretability insights into decoding-time attention behavior. Our code is available at https://github.com/princeton-pli/DySCO.",
+    "published": "Feb 26",
+    "published_iso": "2026-02-26T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2602.22175v2",
+    "arxiv_url": "http://arxiv.org/abs/2602.22175v2",
+    "queried_author": "Danqi Chen",
+    "matching_authors": [
+      "Danqi Chen"
+    ]
+  },
+  {
+    "title": "Duel-Evolve: Reward-Free Test-Time Scaling via LLM Self-Preferences",
+    "authors": [
+      "Sweta Karlekar",
+      "Carolina Zheng",
+      "Magnus Saebo",
+      "Nicolas Beltran-Velez",
+      "Shuyang Yu",
+      "John Bowlan",
+      "Michal Kucer",
+      "David Blei"
+    ],
+    "summary": "Many applications seek to optimize LLM outputs at test time by iteratively proposing, scoring, and refining candidates over a discrete output space. Existing methods use a calibrated scalar evaluator for the target objective to guide search, but for many tasks such scores are unavailable, too sparse, or unreliable. Pairwise comparisons, by contrast, are often easier to elicit, still provide useful signal on improvement directions, and can be obtained from the LLM itself without external supervision. Building on this observation, we introduce Duel-Evolve, an evolutionary optimization algorithm that replaces external scalar rewards with pairwise preferences elicited from the same LLM used to generate candidates. Duel-Evolve aggregates these noisy candidate comparisons via a Bayesian Bradley-Terry model, yielding uncertainty-aware estimates of candidate quality. These quality estimates guide allocation of the comparison budget toward plausible optima using Double Thompson Sampling, as well as selection of high-quality parents to generate improved candidates. We evaluate Duel-Evolve on MathBench, where it achieves 20 percentage points higher accuracy over existing methods and baselines, and on LiveCodeBench, where it improves over comparable iterative methods by over 12 percentage points. Notably, the method requires no reward model, no ground-truth labels during search, and no hand-crafted scoring function. Results show that pairwise self-preferences provide strong optimization signal for test-time improvement over large, discrete output spaces.",
+    "published": "Feb 26",
+    "published_iso": "2026-02-26T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2602.21585v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.21585v1",
+    "queried_author": "David Blei",
+    "matching_authors": [
+      "David Blei"
+    ]
+  },
+  {
     "title": "Learning from Trials and Errors: Reflective Test-Time Planning for Embodied LLMs",
     "authors": [
       "Yining Hong",
@@ -12886,6 +13061,23 @@
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "SparkMe: Adaptive Semi-Structured Interviewing for Qualitative Insight Discovery",
+    "authors": [
+      "David Anugraha",
+      "Vishakh Padmakumar",
+      "Diyi Yang"
+    ],
+    "summary": "Qualitative insights from user experiences are critical for informing product and policy decisions, but collecting such data at scale is constrained by the time and availability of experts to conduct semi-structured interviews. Recent work has explored using large language models (LLMs) to automate interviewing, yet existing systems lack a principled mechanism for balancing systematic coverage of predefined topics with adaptive exploration, or the ability to pursue follow-ups, deep dives, and emergent themes that arise organically during conversation. In this work, we formulate adaptive semi-structured interviewing as an optimization problem over the interviewer's behavior. We define interview utility as a trade-off between coverage of a predefined interview topic guide, discovery of relevant emergent themes, and interview cost measured by length. Based on this formulation, we introduce SparkMe, a multi-agent LLM interviewer that performs deliberative planning via simulated conversation rollouts to select questions with high expected utility. We evaluate SparkMe through controlled experiments with LLM-based interviewees, showing that it achieves higher interview utility, improving topic guide coverage (+4.7% over the best baseline) and eliciting richer emergent insights while using fewer conversational turns than prior LLM interviewing approaches. We further validate SparkMe in a user study with 70 participants across 7 professions on the impact of AI on their workflows. Domain experts rate SparkMe as producing high-quality adaptive interviews that surface helpful professio...",
+    "published": "Feb 25",
+    "published_iso": "2026-02-25T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2602.21136v1",
+    "arxiv_url": "http://arxiv.org/abs/2602.21136v1",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang"
     ]
   },
   {
@@ -13225,193 +13417,6 @@
     "queried_author": "Graham Neubig",
     "matching_authors": [
       "Graham Neubig"
-    ]
-  },
-  {
-    "title": "Canonicalizing Multimodal Contrastive Representation Learning",
-    "authors": [
-      "Sharut Gupta",
-      "Sanyam Kansal",
-      "Stefanie Jegelka",
-      "Phillip Isola",
-      "Vikas Garg"
-    ],
-    "summary": "As models and data scale, independently trained networks often induce analogous notions of similarity. But, matching similarities is weaker than establishing an explicit correspondence between the representation spaces, especially for multimodal models, where consistency must hold not only within each modality, but also for the learned image-text coupling. We therefore ask: given two independently trained multimodal contrastive models (with encoders $(f, g)$ and $(\\widetilde{f},\\widetilde{g})$) -- trained on different distributions and with different architectures -- does a systematic geometric relationship exist between their embedding spaces? If so, what form does it take, and does it hold uniformly across modalities? In this work, we show that across model families such as CLIP, SigLIP, and FLAVA, this geometric relationship is well approximated by an orthogonal map (up to a global mean shift), i.e., there exists an orthogonal map $Q$ where $Q^\\top Q = I$ such that $\\widetilde{f}(x)\\approx Q f(x)$ for paired images $x$. Strikingly, the same $Q$ simultaneously aligns the text encoders i.e., $\\widetilde{g}(y)\\approx Q g(y)$ for texts $y$. Theoretically, we prove that if the multimodal kernel agrees across models on a small anchor set i.e. $\\langle f(x), g(y)\\rangle \\approx \\langle \\widetilde{f}(x), \\widetilde{g}(y)\\rangle$, then the two models must be related by a single orthogonal map $Q$ and the same $Q$ maps images and text across models. More broadly, this finding enables backward-compatible model upgrades, avoiding costly re-embedding, and has implications for the pri...",
-    "published": "Feb 20",
-    "published_iso": "2026-02-20T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.17584v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.17584v1",
-    "queried_author": "Phillip Isola",
-    "matching_authors": [
-      "Phillip Isola"
-    ]
-  },
-  {
-    "title": "ODESteer: A Unified ODE-Based Steering Framework for LLM Alignment",
-    "authors": [
-      "Hongjue Zhao",
-      "Haosen Sun",
-      "Jiangtao Kong",
-      "Xiaochang Li",
-      "Qineng Wang",
-      "Liwei Jiang",
-      "Qi Zhu",
-      "Tarek Abdelzaher",
-      "Yejin Choi",
-      "Manling Li",
-      "Huajie Shao"
-    ],
-    "summary": "Activation steering, or representation engineering, offers a lightweight approach to align large language models (LLMs) by manipulating their internal activations at inference time. However, current methods suffer from two key limitations: (i) the lack of a unified theoretical framework for guiding the design of steering directions, and (ii) an over-reliance on one-step steering that fail to capture complex patterns of activation distributions. In this work, we propose a unified ordinary differential equations (ODEs)-based theoretical framework for activation steering in LLM alignment. We show that conventional activation addition can be interpreted as a first-order approximation to the solution of an ODE. Based on this ODE perspective, identifying a steering direction becomes equivalent to designing a barrier function from control theory. Derived from this framework, we introduce ODESteer, a kind of ODE-based steering guided by barrier functions, which shows empirical advancement in LLM alignment. ODESteer identifies steering directions by defining the barrier function as the log-density ratio between positive and negative activations, and employs it to construct an ODE for multi-step and adaptive steering. Compared to state-of-the-art activation steering methods, ODESteer achieves consistent empirical improvements on diverse LLM alignment benchmarks, a notable $5.7\\%$ improvement over TruthfulQA, $2.5\\%$ over UltraFeedback, and $2.4\\%$ over RealToxicityPrompts. Our work establishes a principled new view of activation steering in LLM alignment by unifying its theoretical f...",
-    "published": "Feb 20",
-    "published_iso": "2026-02-20T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.17560v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.17560v2",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ]
-  },
-  {
-    "title": "Privacy-Preserving Mechanisms Enable Cheap Verifiable Inference of LLMs",
-    "authors": [
-      "Arka Pal",
-      "Louai Zahran",
-      "William Gvozdjak",
-      "Akilesh Potti",
-      "Micah Goldblum"
-    ],
-    "summary": "As large language models (LLMs) continue to grow in size, fewer users are able to host and run models locally. This has led to increased use of third-party hosting services. However, in this setting, there is a lack of guarantees on the computation performed by the inference provider. For example, a dishonest provider may replace an expensive large model with a cheaper-to-run weaker model and return the results from the weaker model to the user. Existing tools to verify inference typically rely on methods from cryptography such as zero-knowledge proofs (ZKPs), but these add significant computational overhead, and remain infeasible for use for large models. In this work, we develop a new insight -- that given a method for performing private LLM inference, one can obtain forms of verified inference at marginal extra cost. Specifically, we propose two new protocols which leverage privacy-preserving LLM inference in order to provide guarantees over the inference that was carried out. Our approaches are cheap, requiring the addition of a few extra tokens of computation, and have little to no downstream impact. As the fastest privacy-preserving inference methods are typically faster than ZK methods, the proposed protocols also improve verification runtime. Our work provides novel insights into the connections between privacy and verifiability in LLM inference.",
-    "published": "Feb 20",
-    "published_iso": "2026-02-20T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.17223v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.17223v1",
-    "queried_author": "Micah Goldblum",
-    "matching_authors": [
-      "Micah Goldblum"
-    ]
-  },
-  {
-    "title": "Dynamic Delayed Tree Expansion For Improved Multi-Path Speculative Decoding",
-    "authors": [
-      "Rahul Thomas",
-      "Teo Kitanovski",
-      "Micah Goldblum",
-      "Arka Pal"
-    ],
-    "summary": "Multi-path speculative decoding accelerates lossless sampling from a target model by using a cheaper draft model to generate a draft tree of tokens, and then applies a verification algorithm that accepts a subset of these. While prior work has proposed various verification algorithms for i.i.d rollouts, their relative performance under matched settings remains unclear. In this work, we firstly present a systematic evaluation of verification strategies across model families, tasks, and sampling regimes, and find that Traversal Verification dominates consistently, with OT-based methods lagging far behind. Our analysis uncovers that this occurs because OT-based methods achieve high multi-token acceptance near the root of the draft tree, while multi-token gains are most impactful deeper in the draft tree, where draft and target distributions diverge. Based on this insight, we propose delayed tree expansion, which drafts a partial single path, delaying the i.i.d. branching point. We show that delayed tree expansion preserves the target distribution and improves on root-node i.i.d rollouts. Further, we develop a dynamic neural selector that estimates the expected block efficiency of optimal-transport-based verification methods from draft and target features, enabling context-dependent expansion decisions. Our neural selector allows OT-based methods like SpecInfer to outperform Traversal Verification for the first time, achieving 5% higher average throughput across a wide range of models, datasets, and sampling settings.",
-    "published": "Feb 20",
-    "published_iso": "2026-02-20T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.16994v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.16994v1",
-    "queried_author": "Micah Goldblum",
-    "matching_authors": [
-      "Micah Goldblum"
-    ]
-  },
-  {
-    "title": "Hybrid-Gym: Training Coding Agents to Generalize Across Tasks",
-    "authors": [
-      "Yiqing Xie",
-      "Emmy Liu",
-      "Gaokai Zhang",
-      "Nachiket Kotalwar",
-      "Shubham Gandhi",
-      "Sathwik Acharya",
-      "Xingyao Wang",
-      "Carolyn Rose",
-      "Graham Neubig",
-      "Daniel Fried"
-    ],
-    "summary": "When assessing the quality of coding agents, predominant benchmarks focus on solving single issues on GitHub, such as SWE-Bench. In contrast, in real use, these agents solve more various and complex tasks that involve other skills such as exploring codebases, testing software, and designing architecture. In this paper, we first characterize some transferable skills that are shared across diverse tasks by decomposing trajectories into fine-grained components, and derive a set of principles for designing auxiliary training tasks to teach language models these skills. Guided by these principles, we propose a training environment, Hybrid-Gym, consisting of a set of scalable synthetic tasks, such as function localization and dependency search. Experiments show that agents trained on our synthetic tasks effectively generalize to diverse real-world tasks that are not present in training, improving a base model by 25.4% absolute gain on SWE-Bench Verified, 7.9% on SWT-Bench Verified, and 5.1% on Commit-0 Lite. Hybrid-Gym also complements datasets built for the downstream tasks (e.g., improving SWE-Play by 4.9% on SWT-Bench Verified). Code available at: https://github.com/yiqingxyq/Hybrid-Gym.",
-    "published": "Feb 20",
-    "published_iso": "2026-02-20T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.16819v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.16819v1",
-    "queried_author": "Daniel Fried",
-    "matching_authors": [
-      "Daniel Fried",
-      "Graham Neubig"
-    ]
-  },
-  {
-    "title": "Flow Map Language Models: One-step Language Modeling via Continuous Denoising",
-    "authors": [
-      "Chanhyuk Lee",
-      "Jaehoon Yoo",
-      "Manan Agarwal",
-      "Sheel Shah",
-      "Jerry Huang",
-      "Aditi Raghunathan",
-      "Seunghoon Hong",
-      "Nicholas M. Boffi",
-      "Jinwoo Kim"
-    ],
-    "summary": "Language models based on discrete diffusion have attracted widespread interest for their potential to provide faster generation than autoregressive models. Despite their promise, these models typically produce samples whose quality sharply degrades in the few-step regime, preventing a dramatic speedup in practice. Here, we show that language models based on continuous flows over one-hot token embeddings can outperform discrete diffusion in both quality and speed. Importantly, our continuous formulation defines a unique flow map that can be learned directly for efficient few-step inference, a structure we show is unavailable to discrete methods. In this setting, we show that both the flow and its associated flow map can be learned with simple cross-entropy objectives that respect the simplex geometry of the data, and we identify three distinct choices for flow map distillation whose performance we compare in practice. Using these insights, we build a flow language model (FLM), a continuous flow that matches state-of-the-art discrete diffusion baselines on the One Billion Words (LM1B) and OpenWebText (OWT) datasets. We then distill FLM into a flow map language model (FMLM), whose one-step generation exceeds the 8-step quality of recent few-step discrete diffusion language models. Our work challenges the widely-held hypothesis that discrete noising processes are necessary for generative modeling over discrete modalities and paves the way toward accelerated language modeling at scale. Code is available at https://github.com/david3684/flm.",
-    "published": "Feb 20",
-    "published_iso": "2026-02-20T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.16813v3",
-    "arxiv_url": "http://arxiv.org/abs/2602.16813v3",
-    "queried_author": "Aditi Raghunathan",
-    "matching_authors": [
-      "Aditi Raghunathan"
-    ]
-  },
-  {
-    "title": "Large-scale online deanonymization with LLMs",
-    "authors": [
-      "Simon Lermen",
-      "Daniel Paleka",
-      "Joshua Swanson",
-      "Michael Aerni",
-      "Nicholas Carlini",
-      "Florian Tram\u00e8r"
-    ],
-    "summary": "We show that large language models can be used to perform at-scale deanonymization. With full Internet access, our agent can re-identify Hacker News users and Anthropic Interviewer participants at high precision, given pseudonymous online profiles and conversations alone, matching what would take hours for a dedicated human investigator. We then design attacks for the closed-world setting. Given two databases of pseudonymous individuals, each containing unstructured text written by or about that individual, we implement a scalable attack pipeline that uses LLMs to: (1) extract identity-relevant features, (2) search for candidate matches via semantic embeddings, and (3) reason over top candidates to verify matches and reduce false positives. Compared to classical deanonymization work (e.g., on the Netflix prize) that required structured data, our approach works directly on raw user content across arbitrary platforms. We construct three datasets with known ground-truth data to evaluate our attacks. The first links Hacker News to LinkedIn profiles, using cross-platform references that appear in the profiles. Our second dataset matches users across Reddit movie discussion communities; and the third splits a single user's Reddit history in time to create two pseudonymous profiles to be matched. In each setting, LLM-based methods substantially outperform classical baselines, achieving up to 68% recall at 90% precision compared to near 0% for the best non-LLM method. Our results show that the practical obscurity protecting pseudonymous users online no longer holds and that threat ...",
-    "published": "Feb 20",
-    "published_iso": "2026-02-20T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.16800v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.16800v2",
-    "queried_author": "Nicholas Carlini",
-    "matching_authors": [
-      "Nicholas Carlini"
-    ]
-  },
-  {
-    "title": "Calibrate-Then-Act: Cost-Aware Exploration in LLM Agents",
-    "authors": [
-      "Wenxuan Ding",
-      "Nicholas Tomlin",
-      "Greg Durrett"
-    ],
-    "summary": "LLM agents are deployed in environments where they must interact to acquire information. In these scenarios, the agent must reason about inherent cost-uncertainty tradeoffs in how to act, such as when to stop exploring and commit to an answer. For instance, on a programming task, an agent might run the code it generates, or it might generate tests for that code snippet; the cost of writing and running a test is nonzero, but typically lower than the cost of running buggy code. In this work, we show that we can induce LLM agents to explicitly reason about balancing these cost-uncertainty tradeoffs, then act more optimally in their environments. We formalize multiple tasks, including retrieval-augmented QA and a file reading coding task, as sequential decision-making problems under uncertainty. Each problem has latent environment state that impacts the agent's performance. We introduce a framework called Calibrate-Then-Act (CTA), where we pass the agent an inferred prior about this environment state to enable it to act more optimally. This information qualitatively changes agent behavior, and adds environment sensitivity to the agent which is not learned via standard RL training. Our results on a synthetic task, QA, and file reading show that making cost-benefit tradeoffs explicit with CTA helps agents discover more optimal decision-making strategies.",
-    "published": "Feb 19",
-    "published_iso": "2026-02-19T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.16699v3",
-    "arxiv_url": "http://arxiv.org/abs/2602.16699v3",
-    "queried_author": "Greg Durrett",
-    "matching_authors": [
-      "Greg Durrett"
-    ]
-  },
-  {
-    "title": "Scaling Open Discrete Audio Foundation Models with Interleaved Semantic, Acoustic, and Text Tokens",
-    "authors": [
-      "Potsawee Manakul",
-      "Woody Haosheng Gan",
-      "Martijn Bartelds",
-      "Guangzhi Sun",
-      "William Held",
-      "Diyi Yang"
-    ],
-    "summary": "Current audio language models are predominantly text-first, either extending pre-trained text LLM backbones or relying on semantic-only audio tokens, limiting general audio modeling. This paper presents a systematic empirical study of native audio foundation models that apply next-token prediction to audio at scale, jointly modeling semantic content, acoustic details, and text to support both general audio generation and cross-modal capabilities. We provide comprehensive empirical insights for building such models: (1) We systematically investigate design choices -- data sources, text mixture ratios, and token composition -- establishing a validated training recipe. (2) We conduct the first scaling law study for discrete audio models via IsoFLOP analysis on 64 models spanning $3{\\times}10^{18}$ to $3{\\times}10^{20}$ FLOPs, finding that optimal data grows 1.6$\\times$ faster than optimal model size. (3) We apply these lessons to train SODA (Scaling Open Discrete Audio), a suite of models from 135M to 4B parameters on 500B tokens, comparing against our scaling predictions and existing models. SODA serves as a flexible backbone for diverse audio/text tasks -- we demonstrate this by fine-tuning for voice-preserving speech-to-speech translation, using the same unified architecture.",
-    "published": "Feb 19",
-    "published_iso": "2026-02-19T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.16687v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.16687v1",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang",
-      "William Held"
     ]
   }
 ]
