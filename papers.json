@@ -1,5 +1,28 @@
 [
   {
+    "title": "Matryoshka attribution: Learning to attribute language model outputs to representations and weights",
+    "authors": [
+      "Aryaman Arora",
+      "Kirill Acharya",
+      "Nathan Hu",
+      "Yanzhe Zhang",
+      "Noah Goodman",
+      "Dan Jurafsky",
+      "Christopher Potts"
+    ],
+    "summary": "Attributing language model outputs to their internal computations is an open problem in interpretability. Existing methods, which use causal interventions, gradients, or learnable masks, either are infeasibly expensive or struggle to identify actual causally-important internal computations. We propose framing attribution as the problem of identifying nested subsets of internal components which minimise a downstream loss. To learn this task, we introduce Matryoshka Attribution (MAttr), a mask learning method that parametrises the mask with a simple differentiable sigmoid top-$k$ operator. We supervise training over all sparsities simultaneously by randomising $k$ over training, resulting in a learned ordering of components by attribution score. MAttr achieves number 1 on the official leaderboard of the Mechanistic Interpretability Benchmark (Mueller et al., 2025); our method identifies sparse and task-transferrable circuits across varying circuit bases. As a practical application, we show that MAttr can be trained with reinforcement learning to identify weight changes responsible for downstream behaviours in LLM finetuning. We train MAttr on refusal judge scores and find that restoring $1\\%$ of Llama 3.1 8B Instruct's weights to their base model state is sufficient to remove refusals while maintaining capabilities. We view MAttr as a successful formulation of interpretability into a learnable objective that we can tackle with gradient descent, and encourage future work along these lines.",
+    "published": "Sep 23",
+    "published_iso": "2026-09-23T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2609.25518",
+    "arxiv_url": "https://arxiv.org/abs/2609.25518",
+    "queried_author": "Christopher Potts",
+    "matching_authors": [
+      "Christopher Potts",
+      "Dan Jurafsky",
+      "Noah Goodman"
+    ]
+  },
+  {
     "title": "Critical-State RL: Diagnosing Trainable States for Multi-Turn Tool Use",
     "authors": [
       "Zixiang Chen",
@@ -13387,24 +13410,6 @@
     "queried_author": "Ludwig Schmidt",
     "matching_authors": [
       "Ludwig Schmidt"
-    ]
-  },
-  {
-    "title": "Reverso: Efficient Time Series Foundation Models for Zero-shot Forecasting",
-    "authors": [
-      "Xinghong Fu",
-      "Yanhong Li",
-      "Georgios Papaioannou",
-      "Yoon Kim"
-    ],
-    "summary": "Learning time series foundation models has been shown to be a promising approach for zero-shot time series forecasting across diverse time series domains. Insofar as scaling has been a critical driver of performance of foundation models in other modalities such as language and vision, much recent work on time series foundation modeling has focused on scaling. This has resulted in time series foundation models with hundreds of millions of parameters that are, while performant, inefficient and expensive to use in practice. This paper describes a simple recipe for learning efficient foundation models for zero-shot time series forecasting that are orders of magnitude smaller. We show that large-scale transformers are not necessary: small hybrid models that interleave long convolution and linear RNN layers (in particular DeltaNet layers) can match the performance of larger transformer-based models while being more than a hundred times smaller. We also describe several data augmentation and inference strategies that further improve performance. This recipe results in Reverso, a family of efficient time series foundation models for zero-shot forecasting that significantly push the performance-efficiency Pareto frontier.",
-    "published": "Feb 20",
-    "published_iso": "2026-02-20T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.17634v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.17634v2",
-    "queried_author": "Yoon Kim",
-    "matching_authors": [
-      "Yoon Kim"
     ]
   }
 ]
