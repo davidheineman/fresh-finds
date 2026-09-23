@@ -97,6 +97,43 @@
     ]
   },
   {
+    "title": "Pinocchio: Fast Uncertainty Estimates for Black-Box Language Models",
+    "authors": [
+      "Kevin David Hayes",
+      "Arka Pal",
+      "Haosong Zhang",
+      "Tom Goldstein",
+      "Micah Goldblum"
+    ],
+    "summary": "In high-stakes decision-making applications of large language models (LLMs), practitioners require not only accurate LLMs but also uncertainty estimates for their predictions. Existing approaches to uncertainty estimation for LLMs require access to log-probabilities output by the model or require fine-tuning access. However, many industrial LLM products use closed-source API models, and many such API models like GPT do not return log-probabilities and may not allow fine-tuning. We introduce Pinocchio, an external calibrator that estimates the correctness of responses from black-box API models. Trained jointly on responses from seven LLMs, it achieves 0.862 AUROC predicting the correctness of held-out responses from those same models, and shows zero-shot transfer to thirteen unseen models across eight organizations. Our model needs only a single forward pass to generate an uncertainty estimate and requires no access to the target model's logits, weights, or internal states. A lightweight text only 0.8B checkpoint matches our largest model's AUROC. We release code for adding uncertainty estimation to existing repos in only two additional lines of code.",
+    "published": "Sep 22",
+    "published_iso": "2026-09-22T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2609.24881",
+    "arxiv_url": "https://arxiv.org/abs/2609.24881",
+    "queried_author": "Micah Goldblum",
+    "matching_authors": [
+      "Micah Goldblum"
+    ]
+  },
+  {
+    "title": "Et Tu, Brute? Economic Misalignment in Personal AI Agents",
+    "authors": [
+      "Aman Priyanshu",
+      "Supriti Vijay",
+      "Brian Jabarian",
+      "Niloofar Mireshghallah"
+    ],
+    "summary": "Personal AI agents make recommendations and take actions on people's behalf in high-stakes economic contexts, e.g., buying a flight, choosing health insurance, or selecting a graduate program. The agent is given access to the user's personal context, e.g., their email inbox and a structured profile of personal attributes, with the intention of making an optimal, personalized decision for the user. We show that by simply providing this personal context, the agent steers recommendations based on inferred wealth, without being explicitly instructed to do so. In a suite of 325K experiments on 13 agents across three types of economic decisions (flights, health insurance, and graduate programs), we find that 8 models systematically choose more expensive options for wealthier users when requests are identical. This steering continues even when it directly goes against the user's stated objective: when explicitly instructed to find the cheapest option, some agents still act on the wealth profile they have inferred. It also occurs when wealth is inferred from ambient data, such as emails unrelated to the task. And it persists under privacy controls that block specific attributes: blocking financial attributes largely removes the disparity, but blocking other attributes leaves it unchanged and can increase it by up to 40% for insurance, as agents rely on the remaining signals to infer wealth. Larger and more capable models are no better; Claude Opus 4.8 shows the largest effect. We term this misalignment \"adversarial delegation\", in which the very conditions that make a personal AI a...",
+    "published": "Sep 22",
+    "published_iso": "2026-09-22T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2609.24927",
+    "arxiv_url": "https://arxiv.org/abs/2609.24927",
+    "queried_author": "Niloofar Mireshghallah",
+    "matching_authors": [
+      "Niloofar Mireshghallah"
+    ]
+  },
+  {
     "title": "Locating Hidden Failures Makes Long-Horizon Agents More Reliable",
     "authors": [
       "Salman Rahman",
@@ -13368,55 +13405,6 @@
     "queried_author": "Yoon Kim",
     "matching_authors": [
       "Yoon Kim"
-    ]
-  },
-  {
-    "title": "AI Gamestore: Scalable, Open-Ended Evaluation of Machine General Intelligence with Human Games",
-    "authors": [
-      "Lance Ying",
-      "Ryan Truong",
-      "Prafull Sharma",
-      "Kaiya Ivy Zhao",
-      "Nathan Cloos",
-      "Kelsey R. Allen",
-      "Thomas L. Griffiths",
-      "Katherine M. Collins",
-      "Jos\u00e9 Hern\u00e1ndez-Orallo",
-      "Phillip Isola",
-      "Samuel J. Gershman",
-      "Joshua B. Tenenbaum"
-    ],
-    "summary": "Rigorously evaluating machine intelligence against the broad spectrum of human general intelligence has become increasingly important and challenging in this era of rapid technological advance. Conventional AI benchmarks typically assess only narrow capabilities in a limited range of human activity. Most are also static, quickly saturating as developers explicitly or implicitly optimize for them. We propose that a more promising way to evaluate human-like general intelligence in AI systems is through a particularly strong form of general game playing: studying how and how well they play and learn to play \\textbf{all conceivable human games}, in comparison to human players with the same level of experience, time, or other resources. We define a \"human game\" to be a game designed by humans for humans, and argue for the evaluative suitability of this space of all such games people can imagine and enjoy -- the \"Multiverse of Human Games\". Taking a first step towards this vision, we introduce the AI GameStore, a scalable and open-ended platform that uses LLMs with humans-in-the-loop to synthesize new representative human games, by automatically sourcing and adapting standardized and containerized variants of game environments from popular human digital gaming platforms. As a proof of concept, we generated 100 such games based on the top charts of Apple App Store and Steam, and evaluated seven frontier vision-language models (VLMs) on short episodes of play. The best models achieved less than 10\\% of the human average score on the majority of the games, and especially struggled w...",
-    "published": "Feb 20",
-    "published_iso": "2026-02-20T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.17594v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.17594v1",
-    "queried_author": "Phillip Isola",
-    "matching_authors": [
-      "Phillip Isola"
-    ]
-  },
-  {
-    "title": "Modeling Distinct Human Interaction in Web Agents",
-    "authors": [
-      "Faria Huq",
-      "Zora Zhiruo Wang",
-      "Zhanqiu Guo",
-      "Venu Arvind Arangarajan",
-      "Tianyue Ou",
-      "Frank Xu",
-      "Shuyan Zhou",
-      "Graham Neubig",
-      "Jeffrey P. Bigham"
-    ],
-    "summary": "Despite rapid progress in autonomous web agents, human involvement remains essential for shaping preferences and correcting agent behavior as tasks unfold. However, current agentic systems lack a principled understanding of when and why humans intervene, often proceeding autonomously past critical decision points or requesting unnecessary confirmation. In this work, we introduce the task of modeling human intervention to support collaborative web task execution. We collect CowCorpus, a dataset of 400 real-user web navigation trajectories containing over 4,200 interleaved human and agent actions. We identify four distinct patterns of user interaction with agents -- hands-off supervision, hands-on oversight, collaborative task-solving, and full user takeover. Leveraging these insights, we train language models (LMs) to anticipate when users are likely to intervene based on their interaction styles, yielding a 61.4-63.4% improvement in intervention prediction accuracy over base LMs. Finally, we deploy these intervention-aware models in live web navigation agents and evaluate them in a user study, finding a 36.8% increase in user-rated agent usefulness. Together, our results show structured modeling of human intervention leads to more adaptive, collaborative agents.",
-    "published": "Feb 20",
-    "published_iso": "2026-02-20T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.17588v4",
-    "arxiv_url": "http://arxiv.org/abs/2602.17588v4",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
     ]
   }
 ]
