@@ -37,6 +37,30 @@
     ]
   },
   {
+    "title": "Harness as a Language: A Minimalist Agent Framework With Maximal Expressivity",
+    "authors": [
+      "Zhening Li",
+      "Joshua Liu",
+      "Mateja Vukelic",
+      "Nicole Shen",
+      "Supriya Lall",
+      "Amitayush Thakur",
+      "Alex Zhang",
+      "Omar Khattab",
+      "Jonathan Light",
+      "Armando Solar-Lezama"
+    ],
+    "summary": "Modern language-model agents are built around the \\textit{agent loop}, where the LLM is placed in an environment exposing a set of tools, and the LLM has full control over the workflow by alternating between tool calls and observing their output. However, certain workflows currently require additional engineering beyond the agent loop itself, such as memory systems and self-improving systems. We built an LLM agent framework, JAZ, to explore the extent to which a minimal harness that is little more than the agent loop itself can accomplish tasks these specialized systems are built for. JAZ exposes a single LLM-based primitive invoke and provides a set of built-in hooks that allow the programmer to apply constraints and monitoring. Generalizing existing code-mode agent loops, \\texttt{invoke} is the simplest loop that satisfies two defining properties: (1) the LLM can write arbitrary executable code that can include recursive \\texttt{invoke}; (2) everything visible to the LLM --- all inputs to \\texttt{invoke} as well as its interaction history with the code environment --- are variables in the code environment. We motivate our design from first principles, viewing \\texttt{invoke} as a language primitive representing a function whose implementation is provided at runtime by an LLM every time it is called. To validate the design of our core \\texttt{invoke} primitive, we evaluate \\texttt{invoke} --- with only prompting, no manually designed tools, harness, or external systems (e.g., memory or the file system) --- on workflows traditionally implemented through specialized external...",
+    "published": "Sep 24",
+    "published_iso": "2026-09-24T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2609.26891v1",
+    "arxiv_url": "http://arxiv.org/abs/2609.26891v1",
+    "queried_author": "Omar Khattab",
+    "matching_authors": [
+      "Omar Khattab"
+    ]
+  },
+  {
     "title": "Matryoshka attribution: Learning to attribute language model outputs to representations and weights",
     "authors": [
       "Aryaman Arora",
@@ -13390,25 +13414,6 @@
     "queried_author": "Greg Durrett",
     "matching_authors": [
       "Greg Durrett"
-    ]
-  },
-  {
-    "title": "Agentic Adversarial QA for Improving Domain-Specific LLMs",
-    "authors": [
-      "Vincent Grari",
-      "Ciprian Tomoiaga",
-      "Sylvain Lamprier",
-      "Tatsunori Hashimoto",
-      "Marcin Detyniecki"
-    ],
-    "summary": "Large Language Models (LLMs), despite extensive pretraining on broad internet corpora, often struggle to adapt effectively to specialized domains. There is growing interest in fine-tuning these models for such domains; however, progress is constrained by the scarcity and limited coverage of high-quality, task-relevant data. To address this, synthetic data generation methods such as paraphrasing or knowledge extraction are commonly applied. Although these approaches excel at factual recall and conceptual knowledge, they suffer from two critical shortcomings: (i) they provide minimal support for interpretive reasoning capabilities in these specialized domains, and (ii) they often produce synthetic corpora that are excessively large and redundant, resulting in poor sample efficiency. To overcome these gaps, we propose an adversarial question-generation framework that produces a compact set of semantically challenging questions. These questions are constructed by comparing the outputs of the model to be adapted and a robust expert model grounded in reference documents, using an iterative, feedback-driven process designed to reveal and address comprehension gaps. Evaluation on specialized subsets of the LegalBench corpus demonstrates that our method achieves greater accuracy with substantially fewer synthetic samples.",
-    "published": "Feb 23",
-    "published_iso": "2026-02-23T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.18137v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.18137v1",
-    "queried_author": "Tatsunori Hashimoto",
-    "matching_authors": [
-      "Tatsunori Hashimoto"
     ]
   }
 ]
