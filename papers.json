@@ -1,5 +1,27 @@
 [
   {
+    "title": "Up and Down the Abstraction Ladder: Code-Based Skills for Language Agents",
+    "authors": [
+      "Bart{\\l}omiej Cupia{\\l}",
+      "Jens Tuyls",
+      "Maciej Wo{\\l}czyk",
+      "Davide Paglieri",
+      "Martin Klissarov",
+      "Benjamin Eysenbach",
+      "Piotr Mi{\\l}o\\'s",
+      "Karthik R. Narasimhan"
+    ],
+    "summary": "Language agents struggle to act and learn in environments that require long sequences of low-level actions. Code-based abstractions can make these agents more productive by letting them invoke reusable skills instead of repeatedly selecting individual actions. The code handles recurring local decisions, while the language model decides which skills to use and how to combine them. Yet abstractions are leaky, and situations beyond a skill's capabilities may require a return to primitive actions. Motivated by this tradeoff between productivity and flexibility, we systematically study how code-based action abstraction affects the performance, inference cost, and learning of language agents. We study this in NetHack, a challenging, long-horizon game environment, using CodeHack, our library of code-based skills with natural-language descriptions. We use this library to compare agents restricted to primitives with those using semantic skills alone or in combination with primitives. We evaluate these agents in three settings: zero-shot prompting, supervised fine-tuning, and reinforcement learning. Across a broad zero-shot evaluation on NetHack, we find that compared with primitives, skills nearly triple game progression, while reducing inference cost per episode by 86%. Combining skills with primitives retains much of this benefit while preserving a path back down to low-level actions. Finally, in RL, we find that skill-based agents learn significantly faster than agents acting on primitives, achieving a 7.2x larger average gain in dungeon level over the same training budget. These...",
+    "published": "Sep 28",
+    "published_iso": "2026-09-28T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2609.31076",
+    "arxiv_url": "https://arxiv.org/abs/2609.31076",
+    "queried_author": "Karthik R Narasimhan",
+    "matching_authors": [
+      "Karthik R Narasimhan"
+    ]
+  },
+  {
     "title": "How does Adversarial Influence Scale in Multi-Agent Systems?",
     "authors": [
       "Addison J. Wu",
@@ -13396,24 +13418,6 @@
     "queried_author": "Eunsol Choi",
     "matching_authors": [
       "Eunsol Choi"
-    ]
-  },
-  {
-    "title": "VeriSoftBench: Repository-Scale Formal Verification Benchmarks for Lean",
-    "authors": [
-      "Yutong Xin",
-      "Qiaochu Chen",
-      "Greg Durrett",
-      "I\u015fil Dillig"
-    ],
-    "summary": "Large language models have achieved striking results in interactive theorem proving, particularly in Lean. However, most benchmarks for LLM-based proof automation are drawn from mathematics in the Mathlib ecosystem, whereas proofs in software verification are developed inside definition-rich codebases with substantial project-specific libraries. We introduce VeriSoftBench, a benchmark of 500 Lean 4 proof obligations drawn from open-source formal-methods developments and packaged to preserve realistic repository context and cross-file dependencies. Our evaluation of frontier LLMs and specialized provers yields three observations. First, provers tuned for Mathlib-style mathematics transfer poorly to this repository-centric setting. Second, success is strongly correlated with transitive repository dependence: tasks whose proofs draw on large, multi-hop dependency closures are less likely to be solved. Third, providing curated context restricted to a proof's dependency closure improves performance relative to exposing the full repository, but nevertheless leaves substantial room for improvement. Our benchmark and evaluation suite are released at https://github.com/utopia-group/VeriSoftBench.",
-    "published": "Feb 23",
-    "published_iso": "2026-02-23T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.18307v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.18307v1",
-    "queried_author": "Greg Durrett",
-    "matching_authors": [
-      "Greg Durrett"
     ]
   }
 ]
