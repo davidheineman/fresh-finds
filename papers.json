@@ -36,6 +36,82 @@
     ]
   },
   {
+    "title": "Mind the Spike: Mechanisms and Brittleness of Visual Massive Activations in Large Vision-Language Models",
+    "authors": [
+      "Jonas Ngnaw\\'e",
+      "Yann Pequignot",
+      "Sabyasachi Sahoo",
+      "Christian Gagn\\'e",
+      "Fr\\'ed\\'eric Precioso",
+      "Sanmi Koyejo"
+    ],
+    "summary": "Large vision-language models (LVLMs) inherit massive activations from their text-only bases: spikes where a few fixed hidden channels receive values thousands of times above the typical magnitude. The text spike systematically appears in early layers at a fixed initial position, independently of input content. Visual spikes vary across images, but whether their formation follows a consistent pattern across LVLMs and how they respond to image perturbations remain open questions. We find that some LVLMs do not form visual spikes, while others spike at different rates, typically in deeper layers. We identify the trigger direction from model weights and an interpretable location rule: before the language model decoder runs, eventual spike tokens are largely restricted to those sharing least with the rest of the image. Crucially, visual spikes are strikingly brittle. Common corruptions frequently create and relocate spikes, and less often remove them, raising overall incidence. Our trigger-guided spike attack deliberately creates or removes spikes under a small $\\ell_\\infty$ budget, with 1/255 enough in nine of the ten models that spike. Finally, our preventive intervention removes only the trigger component before spikes erupt, eliminating or substantially reducing spikes on clean and perturbed images while leaving the other image tokens nearly unchanged. Our study spans 25 adapter-based LVLMs built on 18 released text-only bases from 10 families, ranging from 2B to 72B parameters.",
+    "published": "Sep 29",
+    "published_iso": "2026-09-29T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2609.32808",
+    "arxiv_url": "https://arxiv.org/abs/2609.32808",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "How Strong Is the Evidence for the Artificial Hivemind? Reevaluating Evidence for the Open-Ended Homogeneity of Language Models",
+    "authors": [
+      "Rylan Schaeffer",
+      "Brando Miranda",
+      "Joshua Kazdan",
+      "Jessica Chudnovsky",
+      "Sanmi Koyejo"
+    ],
+    "summary": "Recent research argues that language models exhibit pronounced homogeneity in open-ended generation, framing such behavior as an Artificial Hivemind that poses a long-term threat to human creativity. We examine three of its central results. First, the flagship example is that model responses to \"Write a metaphor involving time\" collapse into two clusters. Visualization, spectral analysis, clustering, and language model labels all contradict this description. The labels record each response's vehicle, what it compares time to. Our responses and the original authors' own show one dominant vehicle plus a heavy tail of distinct minority vehicles. \"Time\" is one of our least diverse topics, so the example is a favorable case, not a representative one. Second, the paper measures homogeneity against an undemanding null: responses to unrelated prompts. Under a more demanding null (same-prompt responses expressing genuinely different ideas), 20%-32% of such pairs already exceed the paper's 0.8 convergence threshold. A residual effect survives this null. The paper's same-prompt pairs exceed 0.8 roughly two to three times as often as our different-idea pairs. Much of what the paper calls homogeneity is the shared geometry of answering the same prompt. The remaining measurements lack any null: no human baseline is collected, and the model-indistinguishability statistic has no null. Third, the paper concludes that inference-time interventions are inadequate for combating the Artificial Hivemind, writing that \"more generalizable solutions are needed at the model training level.\" We show t...",
+    "published": "Sep 29",
+    "published_iso": "2026-09-29T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2609.33936",
+    "arxiv_url": "https://arxiv.org/abs/2609.33936",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "Reinforcement Learning from Intermediate Renders for Image-to-Code Generation",
+    "authors": [
+      "Omri Kaduri",
+      "Kate Feingold",
+      "Phillip Isola",
+      "Tali Dekel"
+    ],
+    "summary": "Reinforcement learning is increasingly used to post-train vision-language models for image-to-code generation, such as generating SVG code from a reference image, by optimizing rewards computed from the final rendered output. However, relying on a single terminal reward provides sparse feedback that is poorly aligned with the contribution of individual tokens. A generated program may contain operations that accurately reproduce some parts of the target image alongside others that introduce errors, yet all tokens are trained from the same final outcome. We observe that many intermediate code prefixes are not only executable, but already produce meaningful partial renders that reflect progress toward the target. This property provides a natural source of denser supervision during generation. Based on this observation, we introduce IR4RL, an RL framework with a token-level render-progress reward that turns changes between intermediate renders into localized feedback for the generated sequence. We evaluate our approach on Image-to-SVG and Image-to-TikZ generation. Across both tasks, our method improves over supervised fine-tuning and standard GRPO, yielding new state-of-the-art open-source models. This shows that intermediate rendering provides a simple and effective source of process supervision for RL post-training of image-to-code models.",
+    "published": "Sep 29",
+    "published_iso": "2026-09-29T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2609.34587",
+    "arxiv_url": "https://arxiv.org/abs/2609.34587",
+    "queried_author": "Phillip Isola",
+    "matching_authors": [
+      "Phillip Isola"
+    ]
+  },
+  {
+    "title": "Turning Speech Language Models into Multilingual Listeners",
+    "authors": [
+      "Tol\\'{u}lop\\'{e} \\`{O}g\\'{u}nr\\`{e}m\\'{i}",
+      "Dan Jurafsky",
+      "Chris Manning",
+      "Ahmet \\\"Ust\\\"un",
+      "Martijn Bartelds"
+    ],
+    "summary": "Speech Language Models (SLMs) that understand spoken language questions support only a few high-resource languages, limiting access to millions of people worldwide. This gap stems from the scarcity of multilingual speech instruction-tuning datasets. We present MULTISPEECHQA, a large-scale, synthetically generated and human-verified dataset comprising 9200 hours of 10.8 million spoken question-answer pairs in 23 typologically diverse languages. Using MULTISPEECHQA, we also introduce MULTISPEECH-BENCH, a multi-task benchmark for evaluating SLM performance on 23 languages. We compare the performance of a cascading system to open-weight and closed SLMs on MULTISPEECH-BENCH and find that the cascading system outperforms open-weight SLMs but not all closed SLMs. We use MULTISPEECHQA to finetune Qwen 2.5-Omni, which improves its performance on our benchmark. Our findings show that high-quality synthetic datasets offer a cheap solution to improving the multilingual capabilities of SLMs.",
+    "published": "Sep 29",
+    "published_iso": "2026-09-29T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2609.33204",
+    "arxiv_url": "https://arxiv.org/abs/2609.33204",
+    "queried_author": "Dan Jurafsky",
+    "matching_authors": [
+      "Dan Jurafsky"
+    ]
+  },
+  {
     "title": "Up and Down the Abstraction Ladder: Code-Based Skills for Language Agents",
     "authors": [
       "Bart{\\l}omiej Cupia{\\l}",
@@ -13309,104 +13385,6 @@
     "queried_author": "Maarten Sap",
     "matching_authors": [
       "Maarten Sap"
-    ]
-  },
-  {
-    "title": "Beyond a Single Extractor: Re-thinking HTML-to-Text Extraction for LLM Pretraining",
-    "authors": [
-      "Jeffrey Li",
-      "Josh Gardner",
-      "Doug Kang",
-      "Fangping Shi",
-      "Karanjeet Singh",
-      "Chun-Liang Li",
-      "Herumb Shandilya",
-      "David Hall",
-      "Oncel Tuzel",
-      "Percy Liang",
-      "Ludwig Schmidt",
-      "Hadi Pour Ansari",
-      "Fartash Faghri"
-    ],
-    "summary": "One of the first pre-processing steps for constructing web-scale LLM pretraining datasets involves extracting text from HTML. Despite the immense diversity of web content, existing open-source datasets predominantly apply a single fixed extractor to all webpages. In this work, we investigate whether this practice leads to suboptimal coverage and utilization of Internet data. We first show that while different extractors may lead to similar model performance on standard language understanding tasks, the pages surviving a fixed filtering pipeline can differ substantially. This suggests a simple intervention: by taking a Union over different extractors, we can increase the token yield of DCLM-Baseline by up to 71% while maintaining benchmark performance. We further show that for structured content such as tables and code blocks, extractor choice can significantly impact downstream task performance, with differences of up to 10 percentage points (p.p.) on WikiTQ and 3 p.p. on HumanEval.",
-    "published": "Feb 24",
-    "published_iso": "2026-02-24T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.19548v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.19548v1",
-    "queried_author": "Ludwig Schmidt",
-    "matching_authors": [
-      "Ludwig Schmidt",
-      "Percy Liang"
-    ]
-  },
-  {
-    "title": "TherapyGym: Evaluating and Aligning Clinical Fidelity and Safety in Therapy Chatbots",
-    "authors": [
-      "Fangrui Huang",
-      "Souhad Chbeir",
-      "Arpandeep Khatua",
-      "Sheng Wang",
-      "Sijun Tan",
-      "Kenan Ye",
-      "Lily Bailey",
-      "Merryn Daniel",
-      "Ryan Louie",
-      "Sanmi Koyejo",
-      "Ehsan Adeli"
-    ],
-    "summary": "Large language models (LLMs) are increasingly used for mental-health support; yet prevailing evaluation methods--fluency metrics, preference tests, and generic dialogue benchmarks--fail to capture the clinically critical dimensions of psychotherapy. We introduce THERAPYGYM, a framework that evaluates and improves therapy chatbots along two clinical pillars: fidelity and safety. Fidelity is measured using the Cognitive Therapy Rating Scale (CTRS), implemented as an automated pipeline that scores adherence to CBT techniques over multi-turn sessions. Safety is assessed using a multi-label annotation scheme, covering therapy-specific risks (e.g., failing to address harm or abuse). To mitigate bias and unreliability in LLM-based judges, we further release THERAPYJUDGEBENCH, a validation set of 116 dialogues with 1,270 expert ratings for auditing and calibration against licensed clinicians. THERAPYGYM also serves as a training harness: CTRS and safety-based rewards drive RL with configurable patient simulations spanning diverse symptom profiles. Models trained in THERAPYGYM improve on expert ratings, with average CTRS rising from 0.10 to 0.60 (and 0.16 to 0.59 under LLM judges). Our work enables scalable development of therapy chatbots that are faithful to evidence-based practice and safer in high-stakes use.",
-    "published": "Feb 24",
-    "published_iso": "2026-02-24T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2603.18008v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.18008v1",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "TOPReward: Token Probabilities as Hidden Zero-Shot Rewards for Robotics",
-    "authors": [
-      "Shirui Chen",
-      "Cole Harrison",
-      "Ying-Chun Lee",
-      "Angela Jin Yang",
-      "Zhongzheng Ren",
-      "Lillian J. Ratliff",
-      "Jiafei Duan",
-      "Dieter Fox",
-      "Ranjay Krishna"
-    ],
-    "summary": "General-purpose robot learning requires dense, instruction-conditioned feedback that can distinguish meaningful task progress from stalled, failed, or partially completed behavior. Yet obtaining such feedback at scale remains difficult, since existing approaches often rely on manual progress annotations, task-specific demonstrations, or reward models trained on curated robot datasets. We introduce TOPReward, a training-free progress reward method that probes pretrained Video-Language Models (VLMs) through their internal token probabilities rather than asking them to generate numerical progress values. Given a video prefix and a language instruction, TOPReward measures the model's likelihood that the instructed task has been completed, converting latent video-language understanding into a dense reward signal without task-specific reward-model training or manually annotated progress labels. We evaluate TOPReward on ManiRewardBench, our real-world manipulation benchmark spanning 130 unique tasks and four robot platforms, as well as on Open X-Embodiment datasets. Across these settings, TOPReward substantially outperforms prior training-free VLM reward methods on open-source models and is competitive with a trained reward-model baseline on progress-estimation metrics, while requiring no reward-model training. Additional analyses show that the reward is sensitive to the specified instruction and is not explained by time index alone. Finally, TOPReward supports downstream applications including success detection and offline reward-weighted behavior cloning.",
-    "published": "Feb 24",
-    "published_iso": "2026-02-24T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.19313v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.19313v2",
-    "queried_author": "Ranjay Krishna",
-    "matching_authors": [
-      "Ranjay Krishna"
-    ]
-  },
-  {
-    "title": "Learning to Detect Language Model Training Data via Active Reconstruction",
-    "authors": [
-      "Junjie Oscar Yin",
-      "John X. Morris",
-      "Vitaly Shmatikov",
-      "Sewon Min",
-      "Hannaneh Hajishirzi"
-    ],
-    "summary": "Detecting LLM training data is generally framed as a membership inference attack (MIA) problem. However, conventional MIAs operate passively on fixed model weights, using log-likelihoods or text generations. In this work, we introduce \\textbf{Active Data Reconstruction Attack} (ADRA), a family of MIA that actively induces a model to reconstruct a given text through training. We hypothesize that training data are \\textit{more reconstructible} than non-members, and the difference in their reconstructibility can be exploited for membership inference. Motivated by findings that reinforcement learning (RL) sharpens behaviors already encoded in weights, we leverage on-policy RL to actively elicit data reconstruction by finetuning a policy initialized from the target model. To effectively use RL for MIA, we design reconstruction metrics and contrastive rewards. The resulting algorithms, \\textsc{ADRA} and its adaptive variant \\textsc{ADRA+}, improve both reconstruction and detection given a pool of candidate data. Experiments show that our methods consistently outperform existing MIAs in detecting pre-training, post-training, and distillation data, with an average improvement of 10.7\\% over the previous runner-up. In particular, \\MethodPlus~improves over Min-K\\%++ by 18.8\\% on BookMIA for pre-training detection and by 7.6\\% on AIME for post-training detection.",
-    "published": "Feb 24",
-    "published_iso": "2026-02-24T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.19020v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.19020v1",
-    "queried_author": "Hannaneh Hajishirzi",
-    "matching_authors": [
-      "Hannaneh Hajishirzi",
-      "John X. Morris",
-      "Junjie Oscar Yin",
-      "Sewon Min"
     ]
   }
 ]
