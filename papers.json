@@ -1,5 +1,41 @@
 [
   {
+    "title": "Verifiable Visual Rewards Transfer from Synthetic Scenes to Natural Prompts",
+    "authors": [
+      "Shuyue Stella Li",
+      "Xiaochuang Han",
+      "Yulia Tsvetkov",
+      "Luke Zettlemoyer"
+    ],
+    "summary": "Precise instruction following in image generation, such as satisfying object counts and spatial relations, remains an open challenge at least in part because it is learned using unreliable reward models such as object detectors and vision-language models. We introduce Verifiable Visual Rewards (VVR), the first framework for programmatically verifiable image rewards, and show that training on it generalizes to natural prompts. Each VVR task is a scene of geometric objects and relations among them, from which we derive both the prompt and a deterministic verifier, so tasks can be generated in any number and at any chosen complexity. We release VVRBench, with 10,000 tasks over 32 constraint types, and VVRBench-Challenge, with 720 more complex tasks; the strongest model we evaluate---GPT-Image-2.5---solves 21.4% of VVRBench-Challenge. Using VVR scores as rewards for reinforcement learning (RLVVR) raises the accuracy of Stable Diffusion 3.5 Medium on VVRBench from 2.8% to 28.3% and demonstrates consistent easy-to-hard generalization. These gains extend to out-of-domain benchmarks, and mixing VVR into existing objectives further improves overall performance and human preference, motivating the adoption of VVR into standard image generation post-training recipes.",
+    "published": "Sep 29",
+    "published_iso": "2026-09-29T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2609.35641v1",
+    "arxiv_url": "http://arxiv.org/abs/2609.35641v1",
+    "queried_author": "Luke Zettlemoyer",
+    "matching_authors": [
+      "Luke Zettlemoyer"
+    ]
+  },
+  {
+    "title": "TANGO: Watermarking Masked Diffusion Language Models in Token Pairs",
+    "authors": [
+      "Kasra Arabi",
+      "Nir Weinberger",
+      "Micah Goldblum",
+      "Niv Cohen"
+    ],
+    "summary": "Masked-diffusion language models fill in masked positions in parallel and in no fixed order. Most practical text watermarks assume left-to-right generation. They key each token to the tokens before it, and in a diffusion model those tokens may still be masked. A fixed green list needs no such context, but it favors the same tokens at every position, so these tokens appear more often in watermarked text. An attacker who compares token frequencies in watermarked and unwatermarked text can recover the list and forge text that the provider's own detector accepts. We present TANGO, a watermark for masked-diffusion language models that keys each new token to a nearby token that is already unmasked. A secret key splits the vocabulary into color classes, and TANGO biases the new token toward a color determined by the key and the nearby token's color. The watermark is therefore embedded in pairs of tokens. Because the favored color changes from position to position, token frequencies stay much closer to those of unwatermarked text than under a fixed green list. Detection needs only the text and the key, and it does not assume any unmasking order. On two masked-diffusion models, TANGO detects nearly all unedited watermarked texts and most edited ones, and frequency attacks that forge the fixed green list fail against it.",
+    "published": "Sep 29",
+    "published_iso": "2026-09-29T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2609.35224v1",
+    "arxiv_url": "http://arxiv.org/abs/2609.35224v1",
+    "queried_author": "Micah Goldblum",
+    "matching_authors": [
+      "Micah Goldblum"
+    ]
+  },
+  {
     "title": "Up and Down the Abstraction Ladder: Code-Based Skills for Language Agents",
     "authors": [
       "Bart{\\l}omiej Cupia{\\l}",
@@ -13371,53 +13407,6 @@
       "John X. Morris",
       "Junjie Oscar Yin",
       "Sewon Min"
-    ]
-  },
-  {
-    "title": "DP-RFT: Learning to Generate Synthetic Text via Differentially Private Reinforcement Fine-Tuning",
-    "authors": [
-      "Fangyuan Xu",
-      "Sihao Chen",
-      "Zinan Lin",
-      "Taiwei Shi",
-      "Sydney Graham",
-      "Pei Zhou",
-      "Mengting Wan",
-      "Alex Stein",
-      "Virginia Estellers",
-      "Charles Chen",
-      "Morris Sharp",
-      "Richard Speyer",
-      "Tadas Baltrusaitis",
-      "Jennifer Neville",
-      "Eunsol Choi",
-      "Longqi Yang"
-    ],
-    "summary": "Differentially private (DP) synthetic data generation plays a pivotal role in developing large language models (LLMs) on private data, where data owners cannot provide eyes-on access to individual examples. Generating DP synthetic data typically involves a difficult trade-off. On one hand, DP finetuning methods train an LLM as a synthetic data generator with formal privacy guarantees, yet it still requires the raw content of private examples for model training. However, methods that avoid direct exposure to private data are bounded by an off-the-shelf, un-finetuned model, whose outputs often lack domain fidelity. Can we train an LLM to generate high-quality synthetic text without eyes-on access to individual private examples? In this work, we introduce Differentially Private Reinforcement Fine-Tuning (DP-RFT), an online reinforcement learning algorithm for synthetic data generation with LLMs. DP-RFT leverages DP-protected nearest-neighbor votes from an eyes-off private corpus as a reward signal for on-policy synthetic samples generated by an LLM. The LLM iteratively learns to generate synthetic data to maximize the expected DP votes through Proximal Policy Optimization (PPO). We evaluate DP-RFT for long-form and domain-specific synthetic data generation, such as news articles, meeting transcripts, and medical article abstracts. Our experiments show that DP-RFT closes the gap between private evolution and DP finetuning methods in terms of the fidelity and downstream utility of the generated synthetic data, while respecting the private data boundary.",
-    "published": "Feb 24",
-    "published_iso": "2026-02-24T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.18633v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.18633v1",
-    "queried_author": "Eunsol Choi",
-    "matching_authors": [
-      "Eunsol Choi"
-    ]
-  },
-  {
-    "title": "RVR: Retrieve-Verify-Retrieve for Comprehensive Question Answering",
-    "authors": [
-      "Deniz Qian",
-      "Hung-Ting Chen",
-      "Eunsol Choi"
-    ],
-    "summary": "Comprehensively retrieving diverse documents is crucial to address queries that admit a wide range of valid answers. We introduce retrieve-verify-retrieve (RVR), a multi-round retrieval framework designed to maximize answer coverage. Initially, a retriever takes the original query and returns a candidate document set, followed by a verifier that identifies a high-quality subset. For subsequent rounds, the query is augmented with previously verified documents to uncover answers that are not yet covered in previous rounds. RVR is effective even with off-the-shelf retrievers, and fine-tuning retrievers for our inference procedure brings further gains. Our method outperforms baselines, including agentic search approaches, achieving at least 10% relative and 3% absolute gain in complete recall percentage on a multi-answer retrieval dataset (QAMPARI). We also see consistent gains on two out-of-domain datasets (QUEST and WebQuestionsSP) across different base retrievers. Our work presents a promising iterative approach for comprehensive answer recall leveraging a verifier and adapting retrievers to a new inference scenario.",
-    "published": "Feb 23",
-    "published_iso": "2026-02-23T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.18425v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.18425v1",
-    "queried_author": "Eunsol Choi",
-    "matching_authors": [
-      "Eunsol Choi"
     ]
   }
 ]
