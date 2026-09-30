@@ -1,5 +1,143 @@
 [
   {
+    "title": "Can Agents Design Libraries for Agents?",
+    "authors": [
+      "Gabriel Orlanski",
+      "Alex L. Zhang",
+      "Avi Trost",
+      "Vincent Sunn Chen",
+      "Frederic Sala",
+      "Aws Albarghouthi",
+      "Ludwig Schmidt"
+    ],
+    "summary": "Agents increasingly build on code written by other agents, and they reimplement rather than reuse, growing the codebases later agents must work in. To measure how well agents design libraries for other agents, we introduce LibraryDesignBench, a two-phase benchmark in which an agent implements a full-featured library from a specification that defines required capabilities and potential use cases without prescribing the design. We evaluate the library through the correctness and simplicity of programs written by three user agents from different model families. The benchmark spans 242 expert-validated programming problems across 15 library-design tasks in four languages. On eleven of the fifteen tasks, agent designers reproduce the abstractions of the human-written production library. Downstream agents adopt agent- and human-written libraries alike but underuse them, reimplementing capabilities the library already provides. Our failure analysis finds that downstream agents write extra code mainly because agent-written libraries are rigid or hard to use, not because capabilities are missing. We also experiment with giving designers more prescriptive, agent-first guidance and having them test their library with subagents; this improves downstream scores and yields simpler programs. LibraryDesignBench provides both a testbed for evaluating library-design practices for agent users and an initial design baseline that improves downstream reuse.",
+    "published": "Sep 30",
+    "published_iso": "2026-09-30T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2609.36730",
+    "arxiv_url": "https://arxiv.org/abs/2609.36730",
+    "queried_author": "Ludwig Schmidt",
+    "matching_authors": [
+      "Ludwig Schmidt"
+    ]
+  },
+  {
+    "title": "Context Language Models",
+    "authors": [
+      "Rulin Shao",
+      "Shannon Zejiang Shen",
+      "Junjie Oscar Yin",
+      "Yuetai Li",
+      "Minheng Wang",
+      "Hamish Ivison",
+      "Radha Poovendran",
+      "Nathan Lambert",
+      "Teng Xiao",
+      "Mike Lewis",
+      "Wen-tau Yih",
+      "Luke Zettlemoyer",
+      "Pang Wei Koh"
+    ],
+    "summary": "We introduce Context Language Models (CLMs), language models that natively manage their own context. We implement this by treating the context as a file and allowing the model to make unrestricted updates to this file. This allows the model to learn what is most important to maintain in context, and naturally extends to multi-agent systems where multiple agent contexts coexist as files. Building CLMs zero-shot with existing models outperforms SOTA context management strategies across a variety of tasks: 11.4% higher accuracy with 21.5% fewer FLOPs on BrowseComp-Plus, 5% higher scores with 59% fewer FLOPs on 12-hour EdgeBench, and 65% greater improvement with the same compute on a 24-hour multi-repository agent-swarm task. Moreover, by shifting context management from external harness control to intrinsic model behavior, CLMs naturally enable both in-context and parametric learning of context-management strategies. We show that CLMs can be steered with natural-language instructions evolved through a standard skill-optimization loop, improving held-out accuracy by up to 35.9 points on a context-management task while reducing compute. We also introduce an online reinforcement learning method for CLMs, improving Qwen3.5-9B performance on BrowseComp-Plus by 47.6% while using 12% fewer FLOPs. Finally, we co-design Suffix Cache Reuse for CLM serving, further reducing server-side compute by 35% relative to standard SGLang at matched performance.",
+    "published": "Sep 30",
+    "published_iso": "2026-09-30T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2609.37725",
+    "arxiv_url": "https://arxiv.org/abs/2609.37725",
+    "queried_author": "Hamish Ivison",
+    "matching_authors": [
+      "Hamish Ivison",
+      "Junjie Oscar Yin",
+      "Luke Zettlemoyer",
+      "Mike Lewis",
+      "Pang Wei Koh",
+      "Wen-tau Yih"
+    ]
+  },
+  {
+    "title": "Thinking Before Thinking: Scaling Agentic Inference Through Meta-Reasoning",
+    "authors": [
+      "Paras Dahal",
+      "Anton Bakhtin",
+      "Taco Cohen",
+      "Zhengxing Chen",
+      "Carole-Jean Wu",
+      "Rob Fergus",
+      "Scott Yih",
+      "Gabriel Synnaeve",
+      "Ruslan Salakhutdinov",
+      "Sanjeev Arora",
+      "Jason Weston",
+      "Anirudh Goyal"
+    ],
+    "summary": "As agents take on longer and more complex problems, controlling the execution becomes a task in its own right. Each step in the run brings new control choices, like which partial work to build on, whether to start fresh, or when to stop. We introduce agentic meta-reasoning, an inference-time harness that makes these choices an explicit and structured reasoning process. Workers carry out the task-level computation, while a controller consolidates what the run has established, explores next options, assesses what each option is worth under the remaining budget, and dispatches the chosen work with context drawn from persistent memory. Between decisions the controller carries only a compact account of the run rather than replaying its full history. Our baselines span production coding agents and research harnesses, together with a Direct Control Agent using the same workers and compute budget allowance. On ProgramBench, which tests long-horizon agentic capability through program reconstruction, meta-reasoning achieves 71.5% with GPT-5.5 against 58.0% for Codex; with Opus 4.8 it achieves 67.2% against 65.5% for Claude Code. On the other benchmarks, spanning abstract reasoning, multi-domain long-horizon reasoning, and proof generation, it gains between 3.6 and 4.2 points over direct control, averaged across three frontier models. It keeps improving over the tested budget ranges where direct control plateaus, though its overhead can hurt at small budgets. Artifact-graph analysis reveals more reuse of earlier work, higher coverage of correct solutions in most settings, and nonunifo...",
+    "published": "Sep 30",
+    "published_iso": "2026-09-30T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2609.38147",
+    "arxiv_url": "https://arxiv.org/abs/2609.38147",
+    "queried_author": "Scott Yih",
+    "matching_authors": [
+      "Scott Yih"
+    ]
+  },
+  {
+    "title": "$\\tau$-Multilingual: Benchmarking Voice Agents Across Languages",
+    "authors": [
+      "Soham Ray",
+      "Edgard dos Santos Paiva",
+      "Ruben Valenzuela",
+      "Karthik Narasimhan",
+      "Keshav Dhandhania",
+      "Victor Barres"
+    ],
+    "summary": "English-only benchmarks expose only a narrow slice of voice-agent behavior. We introduce $\\tau$-Multilingual, extending $\\tau$-Voice to Spanish, Brazilian Portuguese, Hindi, Korean, and Mandarin with native-speaker review and evaluation of generated language and spoken output. Across 4,500 full-duplex calls and five voice configurations, Spanish, Portuguese, and Hindi remain within 3.2 task-completion points of English, but Korean and Mandarin fall by 14.7 and 8.4 points. The failure modes also vary: Korean systems miss more responses, Mandarin systems interrupt more often, and both struggle with tools and entities. Grok leads task completion but scores lowest on generation quality, motivating separate task, interaction, and generation reporting. We release language packs, validated judges, and tools for community-built multilingual voice-agent evaluation.",
+    "published": "Sep 30",
+    "published_iso": "2026-09-30T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2609.35820",
+    "arxiv_url": "https://arxiv.org/abs/2609.35820",
+    "queried_author": "Karthik Narasimhan",
+    "matching_authors": [
+      "Karthik Narasimhan"
+    ]
+  },
+  {
+    "title": "Scaling Video Generation for Reasoning: At What Cost?",
+    "authors": [
+      "Weihang Guo",
+      "Xiaoyu Wu",
+      "Yifei Wang",
+      "Niloofar Mireshghallah",
+      "Lydia E. Kavraki"
+    ],
+    "summary": "We study whether scaling video generation enables models to reason about hidden information from the past frames, and at what computational cost. Our controlled benchmark requires predicting nine prescribed moves of an initially solved 2x2x2 Rubik's Cube from a fixed view of three faces. Correct predictions require inferring how actions change hidden states, and the simulator provides exact ground truth for evaluation. Models learn plausible cube geometry early, while correct sticker configurations require substantially more training. Although validation MSE follows approximate power-law scaling, lower MSE loss does not reliably indicate downstream reasoning capabilities. Smaller autoregressive models achieve higher state accuracy with limited compute, while larger models reach higher accuracy after more training. At roughly 0.1 PF-days, the 70M-parameter model correctly predicts the visible sticker configuration in 44.6% of post-action frames, compared with 0.3% for the 1B model, which reaches 83.7% at 3.14 PF-days. Symbolic state supervision raises the 20M model's frame accuracy from 31.1% to 67.3% at the same training-data budget, suggesting that learning representations of state changes can complement scaling.",
+    "published": "Sep 30",
+    "published_iso": "2026-09-30T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2609.36599",
+    "arxiv_url": "https://arxiv.org/abs/2609.36599",
+    "queried_author": "Niloofar Mireshghallah",
+    "matching_authors": [
+      "Niloofar Mireshghallah"
+    ]
+  },
+  {
+    "title": "Triadic Linear Attention: Three-Dimensional Recurrent States for Long-Context Sequence Modeling",
+    "authors": [
+      "Oliver Sieberling",
+      "Bharat Runwal",
+      "David Jin",
+      "Ryan Chin",
+      "Rameswar Panda",
+      "Yoon Kim"
+    ],
+    "summary": "Recurrent neural networks (RNNs) compress the historical context into a memory state of fixed size, thus allowing for constant-time inference. The memory state size is a crucial factor in their performance, as exemplified by the strong performance and resurgence of linear attention, which extends the vector-valued hidden states of ordinary RNNs to matrix-valued hidden states. Crucially, linear attention does so in a parameter-efficient way, in particular by using an outer product of the key and value vectors to write to the matrix-valued hidden state. We generalize this construction and propose triadic linear attention, which writes the triadic outer product of a key, a second key, and a value, into a third-order (i.e., 3D) tensor state, and reads from it by contracting both key axes with two queries. An $E$-dimensional second key thus yields an $E$-fold increase in state size while adding only two projections. Triadic linear attention is compatible with data-dependent forgetting, the delta rule, and chunkwise-parallel training. Applied to Gated DeltaNet and scalar-gated linear attention, triadic linear attention substantially improves long-context language modeling and recall, outperforming alternatives that enlarge the state.",
+    "published": "Sep 30",
+    "published_iso": "2026-09-30T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2609.36529v1",
+    "arxiv_url": "http://arxiv.org/abs/2609.36529v1",
+    "queried_author": "Yoon Kim",
+    "matching_authors": [
+      "Yoon Kim"
+    ]
+  },
+  {
     "title": "Verifiable Visual Rewards Transfer from Synthetic Scenes to Natural Prompts",
     "authors": [
       "Shuyue Stella Li",
@@ -13243,148 +13381,6 @@
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
-    ]
-  },
-  {
-    "title": "On Data Engineering for Scaling LLM Terminal Capabilities",
-    "authors": [
-      "Renjie Pi",
-      "Grace Lam",
-      "Mohammad Shoeybi",
-      "Pooya Jannaty",
-      "Bryan Catanzaro",
-      "Wei Ping"
-    ],
-    "summary": "Despite rapid recent progress in the terminal capabilities of large language models, the training data strategies behind state-of-the-art terminal agents remain largely undisclosed. We address this gap through a systematic study of data engineering practices for terminal agents, making two key contributions: (1) Terminal-Task-Gen, a lightweight synthetic task generation pipeline that supports seed-based and skill-based task construction, and (2) a comprehensive analysis of data and training strategies, including filtering, curriculum learning, long context training, and scaling behavior. Our pipeline yields Terminal-Corpus, a large-scale open-source dataset for terminal tasks. Using this dataset, we train Nemotron-Terminal, a family of models initialized from Qwen3(8B, 14B, 32B) that achieve substantial gains on Terminal-Bench 2.0: Nemotron-Terminal-8B improves from 2.5% to 13.0% Nemotron-Terminal-14B improves from 4.0% to 20.2%, and Nemotron-Terminal-32B improves from 3.4% to 27.4%, matching the performance of significantly larger models. To accelerate research in this domain, we open-source our model checkpoints and most of our synthetic datasets at https://huggingface.co/collections/nvidia/nemotron-terminal.",
-    "published": "Feb 25",
-    "published_iso": "2026-02-25T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.21193v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.21193v1",
-    "queried_author": "Mohammad Shoeybi",
-    "matching_authors": [
-      "Mohammad Shoeybi"
-    ]
-  },
-  {
-    "title": "Transcoder Adapters for Reasoning-Model Diffing",
-    "authors": [
-      "Nathan Hu",
-      "Jake Ward",
-      "Thomas Icard",
-      "Christopher Potts"
-    ],
-    "summary": "While reasoning models are increasingly ubiquitous, the effects of reasoning training on a model's internal mechanisms remain poorly understood. In this work, we introduce transcoder adapters, a technique for learning an interpretable approximation of the difference in MLP computation before and after fine-tuning. We apply transcoder adapters to characterize the differences between Qwen2.5-Math-7B and its reasoning-distilled variant, DeepSeek-R1-Distill-Qwen-7B. Learned adapters are faithful to the target model's internal computation and next-token predictions. When evaluated on reasoning benchmarks, adapters match the reasoning model's response lengths and typically recover 50-90% of the accuracy gains from reasoning fine-tuning. Adapter features are sparsely activating and interpretable. When examining adapter features, we find that only ~8% have activating examples directly related to reasoning behaviors. We deeply study one such behavior -- the production of hesitation tokens (e.g., \"wait\"). Using attribution graphs, we trace hesitation to only ~2.4% of adapter features (5.6k total) performing one of two functions. These features are necessary and sufficient for producing hesitation tokens; removing them reduces response length, often without affecting accuracy. Overall, our results provide insight into reasoning training and suggest transcoder adapters may be useful for studying fine-tuning more broadly.",
-    "published": "Feb 25",
-    "published_iso": "2026-02-25T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.20904v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.20904v1",
-    "queried_author": "Christopher Potts",
-    "matching_authors": [
-      "Christopher Potts"
-    ]
-  },
-  {
-    "title": "Counterfactual Simulation Training for Chain-of-Thought Faithfulness",
-    "authors": [
-      "Peter Hase",
-      "Christopher Potts"
-    ],
-    "summary": "Inspecting Chain-of-Thought reasoning is among the most common means of understanding why an LLM produced its output. But well-known problems with CoT faithfulness severely limit what insights can be gained from this practice. In this paper, we introduce a training method called Counterfactual Simulation Training (CST), which aims to improve CoT faithfulness by rewarding CoTs that enable a simulator to accurately predict a model's outputs over counterfactual inputs. We apply CST in two settings: (1) CoT monitoring with cue-based counterfactuals, to detect when models rely on spurious features, reward hack, or are sycophantic, and (2) counterfactual simulation over generic model-based counterfactuals, to encourage models to produce more faithful, generalizable reasoning in the CoT. Experiments with models up to 235B parameters show that CST can substantially improve monitor accuracy on cue-based counterfactuals (by 35 accuracy points) as well as simulatability over generic counterfactuals (by 2 points). We further show that: (1) CST outperforms prompting baselines, (2) rewriting unfaithful CoTs with an LLM is 5x more efficient than RL alone, (3) faithfulness improvements do not generalize to dissuading cues (as opposed to persuading cues), and (4) larger models do not show more faithful CoT out of the box, but they do benefit more from CST. These results suggest that CST can improve CoT faithfulness in general, with promising applications for CoT monitoring. Code for experiments in this paper is available at https://github.com/peterbhase/counterfactual-simulation-training",
-    "published": "Feb 25",
-    "published_iso": "2026-02-25T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.20710v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.20710v2",
-    "queried_author": "Christopher Potts",
-    "matching_authors": [
-      "Christopher Potts"
-    ]
-  },
-  {
-    "title": "Steering Away from Memorization: Reachability-Constrained Reinforcement Learning for Text-to-Image Diffusion",
-    "authors": [
-      "Sathwik Karnik",
-      "Juyeop Kim",
-      "Sanmi Koyejo",
-      "Jong-Seok Lee",
-      "Somil Bansal"
-    ],
-    "summary": "Text-to-image diffusion models often memorize training data, revealing a fundamental failure to generalize beyond the training set. Current mitigation strategies typically sacrifice image quality or prompt alignment to reduce memorization. To address this, we propose Reachability-Aware Diffusion Steering (RADS), an inference-time framework that prevents memorization while preserving generation fidelity. RADS models the diffusion denoising process as a dynamical system and applies concepts from reachability analysis to approximate the \"backward reachable tube\"--the set of intermediate states that inevitably evolve into memorized samples. We then formulate mitigation as a constrained reinforcement learning (RL) problem, where a policy learns to steer the trajectory away from memorization via minimal perturbations in the caption embedding space. Empirical evaluations show that RADS achieves a superior Pareto frontier between generation diversity (SSCD), quality (FID), and alignment (CLIP) compared to state-of-the-art baselines. Crucially, RADS provides robust mitigation without modifying the diffusion backbone, offering a plug-and-play solution for safe generation. Our website is available at: https://s-karnik.github.io/rads-memorization-project-page/.",
-    "published": "Feb 25",
-    "published_iso": "2026-02-25T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2603.00140v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.00140v1",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
-    ]
-  },
-  {
-    "title": "SparkMe: Adaptive Semi-Structured Interviewing for Qualitative Insight Discovery",
-    "authors": [
-      "David Anugraha",
-      "Vishakh Padmakumar",
-      "Diyi Yang"
-    ],
-    "summary": "Qualitative insights from user experiences are critical for informing product and policy decisions, but collecting such data at scale is constrained by the time and availability of experts to conduct semi-structured interviews. Recent work has explored using large language models (LLMs) to automate interviewing, yet existing systems lack a principled mechanism for balancing systematic coverage of predefined topics with adaptive exploration, or the ability to pursue follow-ups, deep dives, and emergent themes that arise organically during conversation. In this work, we formulate adaptive semi-structured interviewing as an optimization problem over the interviewer's behavior. We define interview utility as a trade-off between coverage of a predefined interview topic guide, discovery of relevant emergent themes, and interview cost measured by length. Based on this formulation, we introduce SparkMe, a multi-agent LLM interviewer that performs deliberative planning via simulated conversation rollouts to select questions with high expected utility. We evaluate SparkMe through controlled experiments with LLM-based interviewees, showing that it achieves higher interview utility, improving topic guide coverage (+4.7% over the best baseline) and eliciting richer emergent insights while using fewer conversational turns than prior LLM interviewing approaches. We further validate SparkMe in a user study with 70 participants across 7 professions on the impact of AI on their workflows. Domain experts rate SparkMe as producing high-quality adaptive interviews that surface helpful professio...",
-    "published": "Feb 25",
-    "published_iso": "2026-02-25T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.21136v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.21136v1",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang"
-    ]
-  },
-  {
-    "title": "Agents of Chaos",
-    "authors": [
-      "Natalie Shapira",
-      "Chris Wendler",
-      "Avery Yen",
-      "Gabriele Sarti",
-      "Koyena Pal",
-      "Olivia Floody",
-      "Adam Belfki",
-      "Alex Loftus",
-      "Aditya Ratan Jannali",
-      "Nikhil Prakash",
-      "Jasmine Cui",
-      "Giordano Rogers",
-      "Jannik Brinkmann",
-      "Can Rager",
-      "Amir Zur",
-      "Michael Ripa",
-      "Aruna Sankaranarayanan",
-      "David Atkinson",
-      "Rohit Gandikota",
-      "Jaden Fiotto-Kaufman",
-      "EunJeong Hwang",
-      "Hadas Orgad",
-      "P Sam Sahil",
-      "Negev Taglicht",
-      "Tomer Shabtay",
-      "Atai Ambus",
-      "Nitay Alon",
-      "Shiri Oron",
-      "Ayelet Gordon-Tapiero",
-      "Yotam Kaplan",
-      "Vered Shwartz",
-      "Tamar Rott Shaham",
-      "Christoph Riedl",
-      "Reuth Mirsky",
-      "Maarten Sap",
-      "David Manheim",
-      "Tomer Ullman",
-      "David Bau"
-    ],
-    "summary": "We report an exploratory red-teaming study of autonomous language-model-powered agents deployed in a live laboratory environment with persistent memory, email accounts, Discord access, file systems, and shell execution. Over a two-week period, twenty AI researchers interacted with the agents under benign and adversarial conditions. Focusing on failures emerging from the integration of language models with autonomy, tool use, and multi-party communication, we document eleven representative case studies. Observed behaviors include unauthorized compliance with non-owners, disclosure of sensitive information, execution of destructive system-level actions, denial-of-service conditions, uncontrolled resource consumption, identity spoofing vulnerabilities, cross-agent propagation of unsafe practices, and partial system takeover. In several cases, agents reported task completion while the underlying system state contradicted those reports. We also report on some of the failed attempts. Our findings establish the existence of security-, privacy-, and governance-relevant vulnerabilities in realistic deployment settings. These behaviors raise unresolved questions regarding accountability, delegated authority, and responsibility for downstream harms, and warrant urgent attention from legal scholars, policymakers, and researchers across disciplines. This report serves as an initial empirical contribution to that broader conversation.",
-    "published": "Feb 24",
-    "published_iso": "2026-02-24T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.20021v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.20021v1",
-    "queried_author": "Maarten Sap",
-    "matching_authors": [
-      "Maarten Sap"
     ]
   }
 ]
