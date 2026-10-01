@@ -1,5 +1,78 @@
 [
   {
+    "title": "cua-speedrun: Standardized Benchmarking of the Speed of Computer-Use Agents",
+    "authors": [
+      "Pranjal Aggarwal",
+      "Lawrence Keunho Jang",
+      "Sean Welleck",
+      "Daniel Fried",
+      "Ruslan Salakhutdinov",
+      "Jing Yu Koh"
+    ],
+    "summary": "Computer use agents (CUAs), which use graphical user interfaces (GUIs) to complete tasks on a computer, have recently surpassed human performance on many standard benchmarks, including difficult long-horizon tasks. Their capabilities are undoubtedly impressive, however, a key barrier to the widespread adoption and deployment of CUAs remains their speed and cost. Progress towards faster yet capable CUAs requires reliable evaluation of their speed, but many CUA benchmarks currently face a reproducibility crisis. Benchmarks are based on complex infrastructure with varying machine and container configurations that confound the evaluation of the execution speed of CUAs. Towards addressing this gap, we propose cua-speedrun, which introduces standardized infrastructure and task sets, with a focus on evaluating the speed and efficiency of CUAs. cua-speedrun uses a uniform virtual machine setup and execution pipeline, along with a common agent interface that enables single-agent implementations to operate seamlessly across different benchmarks. Across four different CUA benchmarks, we evaluate how reasoning effort, agent harnesses, and environment latency affect performance, speed, and cost. We find no single model family is optimal for all three; none of the open-weight models are on the frontier, and also, unintuitively, for some models increasing the reasoning effort can speed up task completion, while faster environment input-output can slow down overall task completion time. We also demonstrate that we can effectively reduce the evaluation task set of most CUA benchmarks withou...",
+    "published": "Oct 01",
+    "published_iso": "2026-10-01T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2609.40284",
+    "arxiv_url": "https://arxiv.org/abs/2609.40284",
+    "queried_author": "Daniel Fried",
+    "matching_authors": [
+      "Daniel Fried",
+      "Sean Welleck"
+    ]
+  },
+  {
+    "title": "UniEvo-VL: An On-policy Self-Distillation Training Recipe for Multimodal Model Self-improvement",
+    "authors": [
+      "Fang Wu",
+      "Da Xing",
+      "Yanjie Huang",
+      "Junxi Wang",
+      "Ji Wang",
+      "Hejia Geng",
+      "Guancheng Wan",
+      "Bowen Zuo",
+      "Xiaomin Li",
+      "Shixiang Tang",
+      "Xinyu Xiang",
+      "Zehong Wang",
+      "Shiyi Du",
+      "Peng Xia",
+      "Shuangjia Zheng",
+      "Yining Hong",
+      "Li Erran Li",
+      "Jure Leskovec",
+      "Yejin Choi"
+    ],
+    "summary": "Modern multimodal models bring generation and understanding into a single unified system, which enables them to provide and learn from their own feedback. Motivated by this unified capacity, we introduce UniEvo-VL, a self-evolving framework for multimodal models to learn from this constructive self-correction feedback during test-time compute. Instead of relying on a separate, often larger, teacher, we leverage their self-critiques as privileged information and ask a single multimodal model to act as both teacher and student with different contexts. The student only sees the vanilla question, while the teacher conditions on the privileged critique. Then training minimizes the per-state divergence between their denoising diffusion distributions over the student's own sampling trajectories. Experiments demonstrate that UniEvo-VL improves the image generation capabilities of multimodal models, while maintaining their sensitivity to additional reflection information. Specifically, we build on top of the open-source Qwen-image-2512 and observe a significant performance gain from 0.747 to 0.808 on GenEval and from 32.97 to 35.53 on GenEval2 Soft-TIFA. Moreover, attempts with more powerful external critics (e.g., GPT5.6-Luna) show that multimodal models with strong judge capabilities can anticipate a higher self-evolving ceiling. Last but not least, mixed text-rendering outcomes show that our self-improvements may not be uniform across different tasks. Our study aims to shed light on the current hot recursive self-improvement research line to enhance the user experience when using...",
+    "published": "Oct 01",
+    "published_iso": "2026-10-01T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2609.38721",
+    "arxiv_url": "https://arxiv.org/abs/2609.38721",
+    "queried_author": "Jure Leskovec",
+    "matching_authors": [
+      "Jure Leskovec",
+      "Yejin Choi"
+    ]
+  },
+  {
+    "title": "Making LLMs Say What They Think: Measuring and Improving CoT-Interpretability Alignment",
+    "authors": [
+      "Yihuai Hong",
+      "Shauli Ravfogel",
+      "Chen Zhao",
+      "Eunsol Choi"
+    ],
+    "summary": "Chain-of-thought (CoT) traces often serve as a proxy for how Large Language Models (LLMs) arrive at their answers. However, growing evidence shows that models' CoT often fails to reflect their internal computations and can be changed without affecting their final answers. In this work, we measure and improve the alignment between the reasoning described in an LLM's CoT and what it computes internally. We propose CoT-Interpretability Alignment (CIA), a metric that measures the agreement between a model's CoT traces and its internal reasoning strategies as detected by interpretability tools. We evaluate CIA on three tasks (two-hop question answering, hint intervention, and integer multiplication) across three LLMs, finding that LLMs exhibit limited alignment across all tasks (44.8-75.9%). We then experiment with improving CIA via post-training, setting both the task accuracy and parametric faithfulness signals as a reward. Experiments show that we can substantially improve CoT parametric faithfulness while maintaining or improving the task accuracy. We provide rich analysis, such as their generalization patterns. Our work provides both a framework for auditing CoT parametric faithfulness and a pathway toward making models' explicit reasoning more trustworthy. Code and data are available at https://github.com/yihuaihong/CIA-minimal-repro.",
+    "published": "Oct 01",
+    "published_iso": "2026-10-01T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2609.38972",
+    "arxiv_url": "https://arxiv.org/abs/2609.38972",
+    "queried_author": "Eunsol Choi",
+    "matching_authors": [
+      "Eunsol Choi"
+    ]
+  },
+  {
     "title": "Can Agents Design Libraries for Agents?",
     "authors": [
       "Gabriel Orlanski",
@@ -173,6 +246,30 @@
     "queried_author": "Christopher R\u00e9",
     "matching_authors": [
       "Christopher R\u00e9"
+    ]
+  },
+  {
+    "title": "EasyPPO: Stabilizing the Critic Is Key",
+    "authors": [
+      "Xuanyi Zhou",
+      "Qiuyang Mang",
+      "Huanzhi Mao",
+      "Dacheng Li",
+      "Wenhao Chai",
+      "Mayank Mishra",
+      "Yichuan Wang",
+      "Karthik Narasimhan",
+      "Alvin Cheung",
+      "Joseph E. Gonzalez"
+    ],
+    "summary": "A key strength of Proximal Policy Optimization (PPO) is its learned critic, which uses historical trajectories collected during reinforcement learning to estimate expected returns and reduce policy-gradient variance. However, we find that the critic is also a major source of instability in reinforcement learning for large language models (LLMs). We identify two critic failure modes that destabilize PPO. First, filtering truncated rollouts from both actor and critic shifts the policy objective to reward conditioned on completion, allowing truncation to increase even as conditional reward improves. Second, heterogeneous return noise can cause high-variance prompts to dominate critic updates in finite batches. We introduce EasyPPO to address these failures. Actor-only overlong filtering trains the critic on returns from both completed and truncated rollouts. Noise-normalized critic regression weights each prompt's critic loss by the inverse standard deviation of its sampled returns, balancing noise contributions across prompts. Moderately smaller critic mini-batches confine outlier influence to fewer rollouts during gradient clipping. Across continuous-reward coding on FrontierCS, binary-reward mathematical reasoning on AIME24, and multi-turn search on Search-R1, EasyPPO remains stable throughout the full training horizon and consistently outperforms vanilla PPO, VAPO, and HL-Gauss PPO. Its best validation scores show relative gains of 14.89%, 2.28%, and 9.47% over PPO, respectively.",
+    "published": "Sep 30",
+    "published_iso": "2026-09-30T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2609.36802v1",
+    "arxiv_url": "http://arxiv.org/abs/2609.36802v1",
+    "queried_author": "Karthik Narasimhan",
+    "matching_authors": [
+      "Karthik Narasimhan"
     ]
   },
   {
@@ -13305,77 +13402,6 @@
     "queried_author": "Eunsol Choi",
     "matching_authors": [
       "Eunsol Choi"
-    ]
-  },
-  {
-    "title": "Improving Parametric Knowledge Access in Reasoning Language Models",
-    "authors": [
-      "Melody Ma",
-      "John Hewitt"
-    ],
-    "summary": "We study reasoning for accessing world knowledge stored in a language model's parameters. For example, recalling that Canberra is Australia's capital may benefit from thinking through major cities and the concept of purpose-built capitals. While reasoning language models are trained via reinforcement learning to produce reasoning traces on tasks such as mathematics, they may not reason well for accessing their own world knowledge. We first find that models do not generate their best world knowledge reasoning by default: adding a simple \"think step-by-step\" cue demonstrates statistically significant improvement in knowledge recall but not math. Motivated by this, we propose training models to reason over their parametric knowledge using world-knowledge question answering as a verifiable reward. After reinforcement learning on TriviaQA (+9.9%), performance also improves on Natural Questions, HotpotQA, SimpleQA, and StrategyQA by 4.2%, 2.1%, 0.6%, and 3.0%, respectively. Reasoning models are under-optimized for parametric knowledge access, but can be easily trained to reason better.",
-    "published": "Feb 26",
-    "published_iso": "2026-02-26T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.22193v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.22193v1",
-    "queried_author": "John Hewitt",
-    "matching_authors": [
-      "John Hewitt"
-    ]
-  },
-  {
-    "title": "GradAlign: Gradient-Aligned Data Selection for LLM Reinforcement Learning",
-    "authors": [
-      "Ningyuan Yang",
-      "Weihua Du",
-      "Weiwei Sun",
-      "Sean Welleck",
-      "Yiming Yang"
-    ],
-    "summary": "Reinforcement learning (RL) has become a central post-training paradigm for large language models (LLMs), but its performance is highly sensitive to the quality of training problems. This sensitivity stems from the non-stationarity of RL: rollouts are generated by an evolving policy, and learning is shaped by exploration and reward feedback, unlike supervised fine-tuning (SFT) with fixed trajectories. As a result, prior work often relies on manual curation or simple heuristic filters (e.g., accuracy), which can admit incorrect or low-utility problems. We propose GradAlign, a gradient-aligned data selection method for LLM reinforcement learning that uses a small, trusted validation set to prioritize training problems whose policy gradients align with validation gradients, yielding an adaptive curriculum. We evaluate GradAlign across three challenging data regimes: unreliable reward signals, distribution imbalance, and low-utility training corpus, showing that GradAlign consistently outperforms existing baselines, underscoring the importance of directional gradient signals in navigating non-stationary policy optimization and yielding more stable training and improved final performance. We release our implementation at https://github.com/StigLidu/GradAlign",
-    "published": "Feb 26",
-    "published_iso": "2026-02-26T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.21492v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.21492v2",
-    "queried_author": "Sean Welleck",
-    "matching_authors": [
-      "Sean Welleck"
-    ]
-  },
-  {
-    "title": "SumTablets: A Transliteration Dataset of Sumerian Tablets",
-    "authors": [
-      "Cole Simmons",
-      "Richard Diehl Martinez",
-      "Dan Jurafsky"
-    ],
-    "summary": "Sumerian transliteration is a conventional system for representing a scholar's interpretation of a tablet in the Latin script. Thanks to visionary digital Assyriology projects such as ETCSL, CDLI, and Oracc, a large number of Sumerian transliterations have been published online, and these data are well-structured for a variety of search and analysis tasks. However, the absence of a comprehensive, accessible dataset pairing transliterations with a digital representation of the tablet's cuneiform glyphs has prevented the application of modern Natural Language Processing (NLP) methods to the task of Sumerian transliteration. To address this gap, we present SumTablets, a dataset pairing Unicode representations of 91,606 Sumerian cuneiform tablets (totaling 6,970,407 glyphs) with the associated transliterations published by Oracc. We construct SumTablets by first preprocessing and standardizing the Oracc transliterations before mapping each reading back to the Unicode representation of the source glyph. Further, we retain parallel structural information (e.g., surfaces, newlines, broken segments) through the use of special tokens. We release SumTablets as a Hugging Face Dataset (CC BY 4.0) and open source data preparation code via GitHub. Additionally, we leverage SumTablets to implement and evaluate two transliteration baselines: (1) weighted sampling from a glyph's possible readings, and (2) fine-tuning an autoregressive language model. Our fine-tuned language model achieves an average transliteration character-level F-score (chrF) of 97.55, demonstrating the immediate potenti...",
-    "published": "Feb 26",
-    "published_iso": "2026-02-26T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.22200v1",
-    "arxiv_url": "http://arxiv.org/abs/2602.22200v1",
-    "queried_author": "Dan Jurafsky",
-    "matching_authors": [
-      "Dan Jurafsky"
-    ]
-  },
-  {
-    "title": "DySCO: Dynamic Attention-Scaling Decoding for Long-Context Language Models",
-    "authors": [
-      "Xi Ye",
-      "Wuwei Zhang",
-      "Fangcong Yin",
-      "Howard Yen",
-      "Danqi Chen"
-    ],
-    "summary": "Understanding and reasoning over long contexts is a crucial capability for language models (LMs). Although recent models support increasingly long context windows, their accuracy often deteriorates as input length grows. In practice, models often struggle to keep attention aligned with the most relevant context throughout decoding. In this work, we propose DYSCO, a novel decoding algorithm for improving long-context reasoning. DYSCO leverages retrieval heads--a subset of attention heads specialized for longcontext retrieval--to identify task-relevant tokens at each decoding step and explicitly up-weight them. By doing so, DYSCO dynamically adjusts attention during generation to better utilize relevant context. The method is training-free and can be applied directly to any off-the-shelf LMs. Across multiple instruction-tuned and reasoning models, DYSCO consistently improves performance on challenging long-context reasoning benchmarks, yielding relative gains of up to 25% on MRCR and LongBenchV2 at 128K context length with modest additional compute. Further analysis highlights the importance of both dynamic attention rescaling and retrievalhead guided selection for the effectiveness of the method, while providing interpretability insights into decoding-time attention behavior. Our code is available at https://github.com/princeton-pli/DySCO.",
-    "published": "Feb 26",
-    "published_iso": "2026-02-26T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2602.22175v2",
-    "arxiv_url": "http://arxiv.org/abs/2602.22175v2",
-    "queried_author": "Danqi Chen",
-    "matching_authors": [
-      "Danqi Chen"
     ]
   }
 ]
