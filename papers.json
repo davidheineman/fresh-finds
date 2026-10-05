@@ -1,5 +1,87 @@
 [
   {
+    "title": "The Surprising Effectiveness of Shared Memory in Looped Transformers",
+    "authors": [
+      "Giovanni Monea",
+      "Keshav Ramji",
+      "Yousef El-Kurdi",
+      "Luis A. Lastras",
+      "Yoav Artzi",
+      "Nathan Godey",
+      "Ram\\'on Fernandez Astudillo"
+    ],
+    "summary": "Looped Transformers apply the same layers several times per token, adding compute to improve quality without more parameters. Each recursion, however, writes its own key-value cache, so memory still grows with compute. Inference-time techniques can shrink this cache at a cost in quality. We pretrain looped language models to share memory: only the first recursion writes a cache, and later recursions read it while keeping a short window of their own. Surprisingly, we find that sharing memory does not cost quality and instead improves it. At 150M-1B parameters, our Looped Prediction Transformer (LPT) and its hybrid variant set a new quality-memory frontier for looped models: with five recursions, the hybrid lowers validation perplexity on FineWeb-Edu by 1.12-1.82 relative to a same-size standard Transformer while using 76-79% less context memory. Through an extensive analysis, we investigate why memory sharing helps. Shared and local memory develop different representations, and later recursions attend mostly to the shared memory, which also acts as a gradient highway to the first recursion.",
+    "published": "Oct 05",
+    "published_iso": "2026-10-05T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.02383",
+    "arxiv_url": "https://arxiv.org/abs/2610.02383",
+    "queried_author": "Yoav Artzi",
+    "matching_authors": [
+      "Yoav Artzi"
+    ]
+  },
+  {
+    "title": "Verifiable, Articulable, and Tacit Components of Preference",
+    "authors": [
+      "Alexander Spangher",
+      "Sheldon Huang",
+      "Andreas Haupt",
+      "Noah D. Goodman",
+      "Diyi Yang",
+      "Daniel E. Ho",
+      "Sanmi Koyejo"
+    ],
+    "summary": "What makes a short story gripping; a news article newsworthy; or a math proof elegant? These constructs resist articulation or verification; their meaning is at least partially tacit. However, modern AI models are improved primarily via articulated constitutions, rubrics and verifiers (i.e. in RLAIF and RLVR); tacit components of preferences are typically understudied. We introduce a large, labeled preference dataset CreativePreferences, containing 2.8M texts labeled by 317M human preference judgments across 7 creative domains, with 42 benchmark tasks. We model these labels with executable programs, rubric banks and densely trained models (V, A and VAT, respectively). We observe robust articulability gaps, VAT-VA; and verifiability gaps, VAT-V; we estimate upper and lower bounds for each gap with a novel measurement approach that discovers articulable and verifiable metrics, identifies spurious variables and estimates the value of undiscovered metrics using capture-recapture. These gaps occur across all domains, even in domains traditionally treated as fully verifiable: correctness-centered domains (i.e. mathematics and software engineering) and claim- and novelty-centric domains (i.e. news, patents, peer review). The size of the gap varies based on domain (e.g. peer review and creative writing have the largest articulability gaps) and widens as more people take part in the judgment, consistent with Collins' collective tacit knowledge. We show two consequences: (1) on human generations, the full model more closely matches human preferences, often in disagreement with articu...",
+    "published": "Oct 05",
+    "published_iso": "2026-10-05T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.03025",
+    "arxiv_url": "https://arxiv.org/abs/2610.03025",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang",
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "FrugalEvo: Towards Cost-Aware LLM-Guided Program Evolution",
+    "authors": [
+      "Hui Chen",
+      "Xuan Qi",
+      "James Xu Zhao",
+      "Zhaopeng Feng",
+      "Shilong Liu",
+      "Kuang Xu",
+      "Pang Wei Koh",
+      "Bryan Hooi"
+    ],
+    "summary": "LLM-guided evolutionary methods, such as AlphaEvolve, have emerged as powerful approaches for challenging computational optimization problems, such as circle packing. However, prior work typically optimizes performance gain over a fixed number of iterations. We argue that practical optimization should maximize gain per unit cost. To this end, we propose FrugalEvo, a cost-aware evolutionary framework where a stronger, higher-cost LLM explores solution strategies, and a cheaper LLM implements them and iteratively refines the resulting code. We also design a cache-efficient evolution process, where our harness and prompts maximize the sharing of prefixes across different evolution steps, to improve cache reuse. To measure solution quality throughout a fixed cost budget, we introduce Budget-Aware Area Under the Curve (BA-AUC), defined as the area under the best-so-far evaluation score curve over cumulative LLM cost, up to the budget. Across 10 mathematical and systems optimization tasks, FrugalEvo matches or surpasses state-of-the-art baselines, including OpenEvolve, ShinkaEvolve, AdaEvolve, and EvoX, in final solution quality and achieves higher BA-AUC on 9 tasks. It also achieves higher average performance than these baselines on 10 algorithmic optimization tasks from ALE-Bench-Lite. Notably, on circle packing, FrugalEvo achieves new state-of-the-art performance with GPT-5.6 Terra and Luna for only 1.68 USD and with GLM-5.3 and its Flash variant for only 0.55 USD, matching or surpassing all baselines, including multi-agent methods such as CORAL and SwarmResearch, which cost a...",
+    "published": "Oct 05",
+    "published_iso": "2026-10-05T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.03675",
+    "arxiv_url": "https://arxiv.org/abs/2610.03675",
+    "queried_author": "Pang Wei Koh",
+    "matching_authors": [
+      "Pang Wei Koh"
+    ]
+  },
+  {
+    "title": "Language Models that Play Chess and Explain Their Moves",
+    "authors": [
+      "Adithya Bhaskar",
+      "Jeffrey Cheng",
+      "Danqi Chen"
+    ],
+    "summary": "Modern chess engines are silent experts: they play at a superhuman level, but do not offer explanations for their play. On the other hand, language models (LMs) can generate plausible-sounding explanations, but their weak playing strength limits the utility of their explanations. We introduce Queen, a 4B-parameter chess-language model that can explain its moves and plans while playing at the level of a typical Grandmaster. Our novel framework enables domain-specific reasoning through complementary components: an encoder-decoder architecture and an iterative distillation algorithm. This architecture integrates a silent expert chess encoder with an instruction-tuned LM through cross-attention, which we train via a question-answering curriculum to extract chess concepts from the encoder's representations. Building on this domain-adapted model, we iteratively improve its explanations with a natural-language analog of the Bellman update: the model analyzes the positions after its top candidate moves and consolidates them into an explanation of the current position, which is then distilled back into the model. Over seven iterations, our model gains over 900 Elo points (1782 to 2697), substantially surpassing all frontier models on both playing strength and puzzle accuracy, despite containing three orders of magnitude fewer parameters. Furthermore, LM-based evaluations show that our explanations are fluent and approach GPT-5.6-Sol (high) in coherence. The generality of our architecture and training procedure suggests a recipe for applying language models to domains where silent ex...",
+    "published": "Oct 05",
+    "published_iso": "2026-10-05T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.03695",
+    "arxiv_url": "https://arxiv.org/abs/2610.03695",
+    "queried_author": "Danqi Chen",
+    "matching_authors": [
+      "Danqi Chen"
+    ]
+  },
+  {
     "title": "Initialization Improves LLM-Driven Discovery",
     "authors": [
       "Mansi Sakarvadia",
@@ -13302,111 +13384,6 @@
     "queried_author": "Pang Wei Koh",
     "matching_authors": [
       "Pang Wei Koh"
-    ]
-  },
-  {
-    "title": "How Well Does Agent Development Reflect Real-World Work?",
-    "authors": [
-      "Zora Zhiruo Wang",
-      "Sanidhya Vijayvargiya",
-      "Aspen Chen",
-      "Hanmo Zhang",
-      "Venu Arvind Arangarajan",
-      "Jett Chen",
-      "Valerie Chen",
-      "Diyi Yang",
-      "Daniel Fried",
-      "Graham Neubig"
-    ],
-    "summary": "AI agents are increasingly developed and evaluated on benchmarks relevant to human work, yet it remains unclear how representative these benchmarking efforts are of the labor market as a whole. In this work, we systematically study the relationship between agent development efforts and the distribution of real-world human work by mapping benchmark instances to work domains and skills. We first analyze 43 benchmarks and 72,342 tasks, measuring their alignment with human employment and capital allocation across all 1,016 real-world occupations in the U.S. labor market. We reveal substantial mismatches between agent development that tends to be programming-centric, and the categories in which human labor and economic value are concentrated. Within work areas that agents currently target, we further characterize current agent utility by measuring their autonomy levels, providing practical guidance for agent interaction strategies across work scenarios. Building on these findings, we propose three measurable principles for designing benchmarks that better capture socially important and technically challenging forms of work: coverage, realism, and granular evaluation.",
-    "published": "Mar 03",
-    "published_iso": "2026-03-03T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2603.01203v2",
-    "arxiv_url": "http://arxiv.org/abs/2603.01203v2",
-    "queried_author": "Daniel Fried",
-    "matching_authors": [
-      "Daniel Fried",
-      "Diyi Yang",
-      "Graham Neubig"
-    ]
-  },
-  {
-    "title": "The Aftermath of DrawEduMath: Vision Language Models Underperform with Struggling Students and Misdiagnose Errors",
-    "authors": [
-      "Li Lucy",
-      "Albert Zhang",
-      "Nathan Anderson",
-      "Ryan Knight",
-      "Kyle Lo"
-    ],
-    "summary": "Effective mathematics education requires identifying and responding to students' mistakes. For AI to support pedagogical applications, models must perform well across different levels of student proficiency. Our work provides an extensive, year-long snapshot of how 11 vision-language models (VLMs) perform on DrawEduMath, a QA benchmark involving real students' handwritten, hand-drawn responses to math problems. We find that models' weaknesses concentrate on a core component of math education: student error. All evaluated VLMs underperform when describing work from students who require more pedagogical help, and across all QA, they struggle the most on questions related to assessing student error. Thus, while VLMs may be optimized to be math problem solving experts, our results suggest that they require alternative development incentives to adequately support educational use cases.",
-    "published": "Mar 03",
-    "published_iso": "2026-03-03T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2603.00925v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.00925v1",
-    "queried_author": "Kyle Lo",
-    "matching_authors": [
-      "Kyle Lo"
-    ]
-  },
-  {
-    "title": "Qwen3-Coder-Next Technical Report",
-    "authors": [
-      "Ruisheng Cao",
-      "Mouxiang Chen",
-      "Jiawei Chen",
-      "Zeyu Cui",
-      "Yunlong Feng",
-      "Binyuan Hui",
-      "Yuheng Jing",
-      "Kaixin Li",
-      "Mingze Li",
-      "Junyang Lin",
-      "Zeyao Ma",
-      "Kashun Shum",
-      "Xuwu Wang",
-      "Jinxi Wei",
-      "Jiaxi Yang",
-      "Jiajun Zhang",
-      "Lei Zhang",
-      "Zongmeng Zhang",
-      "Wenting Zhao",
-      "Fan Zhou"
-    ],
-    "summary": "We present Qwen3-Coder-Next, an open-weight language model specialized for coding agents. Qwen3-Coder-Next is an 80-billion-parameter model that activates only 3 billion parameters during inference, enabling strong coding capability with efficient inference. In this work, we explore how far strong training recipes can push the capability limits of models with small parameter footprints. To achieve this, we perform agentic training through large-scale synthesis of verifiable coding tasks paired with executable environments, allowing learning directly from environment feedback via mid-training and reinforcement learning. Across agent-centric benchmarks including SWE-Bench and Terminal-Bench, Qwen3-Coder-Next achieves competitive performance relative to its active parameter count. We release both base and instruction-tuned open-weight versions to support research and real-world coding agent development.",
-    "published": "Mar 03",
-    "published_iso": "2026-03-03T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2603.00729v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.00729v1",
-    "queried_author": "Wenting Zhao",
-    "matching_authors": [
-      "Wenting Zhao"
-    ]
-  },
-  {
-    "title": "Brittlebench: Quantifying LLM robustness via prompt sensitivity",
-    "authors": [
-      "Angelika Romanou",
-      "Mark Ibrahim",
-      "Candace Ross",
-      "Chantal Shaib",
-      "Kerem Oktar",
-      "Samuel J. Bell",
-      "Anaelia Ovalle",
-      "Jesse Dodge",
-      "Antoine Bosselut",
-      "Koustuv Sinha",
-      "Adina Williams"
-    ],
-    "summary": "Existing evaluation methods largely rely on clean, static benchmarks, which can overestimate true model performance by failing to capture the noise and variability inherent in real-world user inputs. This is especially true for language models, which can face human-generated text queries containing mistakes, typos, or alternative ways of phrasing the same question. In this work, we introduce a theoretical framework for quantifying model sensitivity to prompt variants, or brittleness, that can enable us to disentangle data-induced difficulty from prompt-related variability. Using this framework, we design a novel evaluation pipeline, Brittlebench, to holistically evaluate the sensitivity of frontier models. We apply semantics-preserving perturbations to a suite of popular benchmarks, and observe model performance to degrade as much as 12%. However, these perturbations do not affect all models equally: even a single perturbation alters the relative ranking of models in 63% of cases, impacting conclusions about comparative model performance. Decomposing the total variance of both state-of-the-art open-weight and commercial models, we find that semantics-preserving input perturbations can account for up to half of the performance variance for a given model. Brittlebench highlights the need for more robust evaluations and models, and allows us to systematically understand model brittleness.",
-    "published": "Mar 03",
-    "published_iso": "2026-03-03T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2603.13285v2",
-    "arxiv_url": "http://arxiv.org/abs/2603.13285v2",
-    "queried_author": "Antoine Bosselut",
-    "matching_authors": [
-      "Antoine Bosselut",
-      "Jesse Dodge"
     ]
   }
 ]
