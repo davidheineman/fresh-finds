@@ -1,5 +1,190 @@
 [
   {
+    "title": "Priced Guidance: Can Language Models Generate Future Research Ideas?",
+    "authors": [
+      "Kaiyue Wen",
+      "Tengyu Ma",
+      "Percy Liang"
+    ],
+    "summary": "We evaluate language models' capability to generate novel research ideas through the lens of compression. We aim to lower-bound the potentially tiny probability that a language model generates the essence of a future research idea without any hints. Rather than estimate this probability through expensive repeated sampling, our Priced Guidance framework measures the compression cost: how many additional bits of information are needed to guide the model to recover the target idea. We prove that if the model can recover the target idea with at most K bits of guidance in expectation, then it can generate the idea without any guidance with probability at least $2^{-K}$. In our framework, the language model, called the generator, can pose a sequence of multiple-choice questions and specify a probability distribution over possible answers. A guide, which is a language model with access to the target idea, selects answers. If a selected answer has prior probability p, the generator pays $-\\log_2 p$ bits. The generator aims to produce an idea that matches the essence of the target idea with minimal cumulative cost. This cumulative cost equals, up to an additive constant, the number of bits of information sent by the guide. Using this methodology, we evaluate five generator LLMs (Opus 5, Fable 5.1, GPT-6 Astra, GPT-5.6 Sol, and GLM 5.3) on the core ideas in 87 recent high-quality deep learning papers and we use LLM as judge to determine whether the generated idea matches the target in terms of the central research object and defining mechanism. Fable 5.1 achieves the lowest median co...",
+    "published": "Oct 06",
+    "published_iso": "2026-10-06T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.04976",
+    "arxiv_url": "https://arxiv.org/abs/2610.04976",
+    "queried_author": "Percy Liang",
+    "matching_authors": [
+      "Percy Liang"
+    ]
+  },
+  {
+    "title": "Off-Policy Merging Beats On-Policy Self-Distillation for Continual Learning",
+    "authors": [
+      "Chen Henry Wu",
+      "Thomas Zhang",
+      "Aditi Raghunathan"
+    ],
+    "summary": "A long-standing goal of AI is a model that can continually learn and improve itself. On post-trained models, supervised finetuning (SFT) on new data often causes poor generalization and catastrophic forgetting. As such, the conventional wisdom is that on-policy training is a prerequisite for continual learning. In practice, however, data containing new knowledge or capabilities are often off-policy. While methods such as on-policy self-distillation (OPSD) try to bridge this gap by converting off-policy data into on-policy signal, they have been shown to cause reasoning collapse. In this paper, we show that off-policy merging beats OPSD for continual learning. We first show that SFT learns a useful signal from new data, but naively applying its update interferes with existing capabilities. We reduce this interference with a simple recipe we term grafting, which changes where the update is learned and how it is applied: (1) learning the update on an earlier donor checkpoint, ideally even before the end of pretraining, and applying the weight update to the post-trained model; (2) scaling the weight update, equivalent to a form of model merging; and (3) optionally, masking the most sensitive update directions when the new data distribution is far from the post-trained model. Across continual learning settings including (1) distilling from expert traces, (2) self-improvement with STaR and Pedagogical RL, and (3) injecting knowledge after pretraining cutoff, grafting Pareto-dominates both SFT and OPSD in new-task and old-task performance, while avoiding expensive on-policy sampli...",
+    "published": "Oct 06",
+    "published_iso": "2026-10-06T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.05872",
+    "arxiv_url": "https://arxiv.org/abs/2610.05872",
+    "queried_author": "Aditi Raghunathan",
+    "matching_authors": [
+      "Aditi Raghunathan"
+    ]
+  },
+  {
+    "title": "Learning What to Imitate: Entropy-Aware Distribution Mixing",
+    "authors": [
+      "Juan Garcia Giraldo",
+      "Matteo Santelmo",
+      "Eduard Durech",
+      "Imanol Schlag",
+      "Valentina Pyatkin",
+      "Antoine Bosselut"
+    ],
+    "summary": "Small language models are often post-trained as students on reasoning traces from stronger teacher models to efficiently learn new skills. However, token-level imitation on traces that lie far outside the student's expected distribution often produces \\textit{confident conflicts}, whereby the student is required to imitate a continuation that it deems unlikely (i.e., low-probability) despite being confident in a different continuation (i.e., in a low-entropy state). To mitigate the degradation in generalisation and catastrophic forgetting caused by these conflicts, we propose \\textbf{Entropy-Aware Mixing}: a dynamic per-token interpolation of the student and teacher distributions, gated by the student's predictive entropy. We implement both convex and geometric interpolations for both offline trace generation (via speculative decoding, then SFT) and on-policy forward-KL distillation. Our results show that entropy-aware mixing stabilises distillation, improving in-distribution and out-of-distribution math reasoning while better preserving general capabilities than fixed-teacher supervision. Nonetheless, the optimal entropy schedule depends on the training source, with offline-generated traces favouring concave schedules (greater overall teacher influence) and on-policy training favouring linear or convex schedules (teacher concentrated in high-entropy states).",
+    "published": "Oct 06",
+    "published_iso": "2026-10-06T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.06671",
+    "arxiv_url": "https://arxiv.org/abs/2610.06671",
+    "queried_author": "Antoine Bosselut",
+    "matching_authors": [
+      "Antoine Bosselut"
+    ]
+  },
+  {
+    "title": "Base Models Can Reason By Taking a Cue From Training Data",
+    "authors": [
+      "Sophie L. Wang",
+      "Amil Dravid",
+      "Rulin Shao",
+      "Kevin Farhat",
+      "Sewon Min",
+      "Alexei A. Efros"
+    ],
+    "summary": "In this paper, we study how training data creates associations between the tokens at the start of a base model's response and the reasoning behavior that follows. First, we demonstrate that fixing particular starting token cues makes a base model's performance competitive with that of its reinforcement learning (RL)-trained counterparts on math and coding. For instance, the cue \".\\n\\nOkay\" raises Olmo-3-7B's MATH-500 pass@1 accuracy from 42% to 78%, while \"Alright,\" raises Qwen3-14B's from 72% to 87%. Second, RL makes these cues more likely, while fixing them recovers much of its performance gain over the base model. Third, we trace the reasoning effects of token cues to the training data. We perform causal data interventions to turn an arbitrary word, such as \"chicken\", into an effective reasoning cue, or remove an existing cue's effect. A similar edit makes the prompt instruction \"Think duck duck goose\" as effective as \"Think step by step\" at eliciting reasoning. We also find that the hidden state representations induced by different cues correlate with different document types from the training set. Finally, we extend our study of token cues with a case study in language model safety, finding that different cues elicit distinct refusal and compliance behaviors that correspond to different types of training data.",
+    "published": "Oct 06",
+    "published_iso": "2026-10-06T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.06851",
+    "arxiv_url": "https://arxiv.org/abs/2610.06851",
+    "queried_author": "Sewon Min",
+    "matching_authors": [
+      "Sewon Min"
+    ]
+  },
+  {
+    "title": "Language Model Activations Inhabit Privileged Error-Correcting Basins",
+    "authors": [
+      "Matthew Finlayson",
+      "Francisco Pernice",
+      "Eric Todd",
+      "Amir Zur",
+      "Daniel Wurgaft",
+      "Fenil R. Doshi",
+      "Vasudev Shyam",
+      "Matt Feiszli",
+      "Satchel Grant",
+      "Lucius Bushnaq",
+      "Tal Haklay",
+      "Usha Bhalla",
+      "Matthew Kowal",
+      "Thomas Fel",
+      "Jack Merullo",
+      "Atticus Geiger",
+      "Xiang Ren",
+      "Owen Lewis",
+      "Ekdeep Singh Lubana"
+    ],
+    "summary": "Language models exhibit remarkable robustness, continuing to produce coherent text even when their activations are perturbed by interventions like linear steering. We hypothesize that this robustness is a result of passive dynamics, i.e., constraining mechanisms in the forward pass that funnel activations toward \"good\" regions that produce coherent outputs. To investigate these hypothesized error-correcting mechanisms, we probe the geometry of language model activation space by observing the action of model layers on low-dimensional curves. In doing so, we discover that model activations occur within a cluster of distinct attracting basins, which differentiate natural activations geometrically from distributionally similar synthetic activations. Applying this lens to language model steering, we observe feature-specific basins along semantic steering directions, and find that steering moves activations between these basins. To demonstrate the active role of this geometry in neural computation, we show that adaptively modulating steering strength to transport activations across basins improves inter-language steering, significantly increasing the probability of sampling tokens from the target language compared to fixed-strength steering. Our findings establish analysis of activation space geometry as a promising approach to interpreting and controlling language models.",
+    "published": "Oct 06",
+    "published_iso": "2026-10-06T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.04183",
+    "arxiv_url": "https://arxiv.org/abs/2610.04183",
+    "queried_author": "Jack Merullo",
+    "matching_authors": [
+      "Jack Merullo"
+    ]
+  },
+  {
+    "title": "GitSwarm: Decentralized Compounding Inference",
+    "authors": [
+      "Vedant Shah",
+      "Ankur Samanta",
+      "Paras Dahal",
+      "Mikhail Plekhanov",
+      "Carole-Jean Wu",
+      "Scott Yih",
+      "Remi Munos",
+      "Rob Fergus",
+      "Jakob Foerster",
+      "Ruslan Salakhutdinov",
+      "Sanjeev Arora",
+      "Jason Weston",
+      "Aaron Courville",
+      "Anirudh Goyal"
+    ],
+    "summary": "Long-horizon problem solving and scientific research require computation to accumulate across successive attempts. Partial solutions, experimental findings, and unsuccessful approaches can inform later work, yet most inference-time computation is organized around individual trajectories or candidates rather than a persistent body of reusable work. We call this paradigm compounding inference: organizing inference-time computation so that intermediate work persists and can be inspected, extended, combined, or challenged by subsequent computation. We instantiate compounding inference in GitSwarm, an asynchronous system where homogeneous agents independently decide how to advance a task while collaborating through structured persistent memory. Agents explore, experiment, verify, refine, and synthesize previous work in a shared, branch-able Git repository. Atomic commits preserve intermediate artifacts, while explicit semantic dependencies record how later contributions build on work across branches. We evaluate GitSwarm on long-horizon problem solving and sustained GPU-backed experimental research. On IMOProofBench-Advanced, GitSwarm solves all 30 problems in one run using GPT-5.5. On ProgramBench, it achieves a $79.4\\%$ mean score, versus $65.1\\%$ for the strongest reported baseline under the stated budget. On three neural architecture research tasks (Residual Matrix Transformer, Looped Transformer, NanoChat), GitSwarm improves upon the starting architectures through successive experimentation. Beyond final performance, we measure whether computation accumulates: on ProgramBen...",
+    "published": "Oct 06",
+    "published_iso": "2026-10-06T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.04862",
+    "arxiv_url": "https://arxiv.org/abs/2610.04862",
+    "queried_author": "Scott Yih",
+    "matching_authors": [
+      "Scott Yih"
+    ]
+  },
+  {
+    "title": "IdeaScientist: Orchestrating Agents for Grounded Scientific Ideation",
+    "authors": [
+      "Jiarui Liu",
+      "Renjie Tao",
+      "Yiwei Liao",
+      "Chuanyang Jin",
+      "Kai Sun",
+      "Xiao Yang",
+      "Xinyuan Zhang",
+      "Xilun Chen",
+      "Zhuangqun Huang",
+      "Lechen Zhang",
+      "Yongjin Yang",
+      "Yinghui He",
+      "Weihao Xuan",
+      "Rakesh Wanga",
+      "Anuj Kumar",
+      "Mona T. Diab",
+      "Wen-tau Yih",
+      "Xin Luna Dong"
+    ],
+    "summary": "Despite rapid progress in automating scientific research, generating promising and well grounded research solutions remains a central challenge. We isolate research ideation as a standalone task and build our solution on the intuition that a challenge in one field can often be addressed by a mechanism that solved an analogous challenge in another. Accordingly, we introduce IdeaScientist, which decomposes ideation into gap finding, innovation, and report writing, and trains each role with reinforcement learning. These roles identify limitations in related work, draw solution intuitions from analogous problem settings, and develop those intuitions into complete research proposals. To facilitate discovery of insights across domains, we construct the Svalbard Idea Vault, a corpus of 2.77M decomposed research ideas for retrieval, training, and temporally controlled evaluation. Our evaluation restricts access to literature available before a cutoff date and assesses how closely proposed directions align with those later explored in 15K papers authored by human researchers. On Qwen3.6-27B, IdeaScientist outperforms the strongest open-source autoresearch baseline by 14.0%, driven mainly by gains in novelty. On this 27B open backbone, IdeaScientist even outperforms Claude Code SDK with Claude-4.8-Opus and Codex SDK with GPT-5.4, by up to 5.9%.",
+    "published": "Oct 06",
+    "published_iso": "2026-10-06T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.04074",
+    "arxiv_url": "https://arxiv.org/abs/2610.04074",
+    "queried_author": "Wen-tau Yih",
+    "matching_authors": [
+      "Wen-tau Yih"
+    ]
+  },
+  {
+    "title": "How Do People Challenge Racial Stereotypes Online? Counter-Story Detection Across Reddit Communities",
+    "authors": [
+      "Uma Sushmitha Gunturi",
+      "Jimin Mun",
+      "Maarten Sap",
+      "Maria Antoniak"
+    ],
+    "summary": "Counter-storytelling is a powerful mechanism people use to challenge dominant narratives. Unlike other forms of counterspeech that have been widely studied in computational social science, counter-storytelling has largely been overlooked. Counter-stories are difficult to detect automatically; they are relational (defined with respect to expressions of racial stereotypes) and structurally diverse (drawing on stories that describe lived experiences, witnessed events, exemplars, and hypotheticals). We introduce a first framework for detecting and characterizing counter-storytelling against racial stereotypes at scale. This includes (1) a three-dimensional taxonomy grounded in narratology and Critical Race Theory and (2) a multi-stage pipeline that identifies relational pairs of stereotypes and counter-stories in noisy Reddit discourse. Using this pipeline, we annotate 25,549 Reddit posts across 615 communities and identify 1,312 counter-stories. Our analysis shows that speaker identity and post context shape how counter-stories are told. For example, in-group writers favor first-person testimony, often adopting the role of self-reflective insiders. Our work shows how computational methods can scale qualitative approaches to identify and characterize counter-storytelling as a contextual narrative practice, with implications for content moderation, narratology, and racial discourse analysis.",
+    "published": "Oct 06",
+    "published_iso": "2026-10-06T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.04803",
+    "arxiv_url": "https://arxiv.org/abs/2610.04803",
+    "queried_author": "Maarten Sap",
+    "matching_authors": [
+      "Maarten Sap"
+    ]
+  },
+  {
     "title": "The Surprising Effectiveness of Shared Memory in Looped Transformers",
     "authors": [
       "Giovanni Monea",
@@ -13197,193 +13382,6 @@
     "queried_author": "Karthik Narasimhan",
     "matching_authors": [
       "Karthik Narasimhan"
-    ]
-  },
-  {
-    "title": "Position: Vector Prompt Interfaces Should Be Exposed to Enable Customization of Large Language Models",
-    "authors": [
-      "Liangwei Yang",
-      "Shiyu Wang",
-      "Haolin Chen",
-      "Rithesh Murthy",
-      "Ming Zhu",
-      "Jielin Qiu",
-      "Zixiang Chen",
-      "Juntao Tan",
-      "Jianguo Zhang",
-      "Zhiwei Liu",
-      "Wenting Zhao",
-      "Silvio Savarese",
-      "Caiming Xiong",
-      "Huan Wang",
-      "Shelby Heinecke"
-    ],
-    "summary": "As large language models (LLMs) transition from research prototypes to real-world systems, customization has emerged as a central bottleneck. While text prompts can already customize LLM behavior, we argue that text-only prompting does not constitute a suitable control interface for scalable, stable, and inference-only customization. This position paper argues that model providers should expose \\emph{vector prompt inputs} as part of the public interface for customizing LLMs. We support this position with diagnostic evidence showing that vector prompt tuning continues to improve with increasing supervision whereas text-based prompt optimization saturates early, and that vector prompts exhibit dense, global attention patterns indicative of a distinct control mechanism. We further discuss why inference-only customization is increasingly important under realistic deployment constraints, and why exposing vector prompts need not fundamentally increase model leakage risk under a standard black-box threat model. We conclude with a call to action for the community to rethink prompt interfaces as a core component of LLM customization.",
-    "published": "Mar 05",
-    "published_iso": "2026-03-05T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2603.04292v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.04292v1",
-    "queried_author": "Wenting Zhao",
-    "matching_authors": [
-      "Wenting Zhao"
-    ]
-  },
-  {
-    "title": "A Rubric-Supervised Critic from Sparse Real-World Outcomes",
-    "authors": [
-      "Xingyao Wang",
-      "Valerie Chen",
-      "Heng Ji",
-      "Graham Neubig"
-    ],
-    "summary": "Academic benchmarks for coding agents tend to reward autonomous task completion, measured by verifiable rewards such as unit-test success. In contrast, real-world coding agents operate with humans in the loop, where success signals are typically noisy, delayed, and sparse. How can we bridge this gap? In this paper, we propose a process to learn a \"critic\" model from sparse and noisy interaction data, which can then be used both as a reward model for either RL-based training or inference-time scaling. Specifically, we introduce Critic Rubrics, a rubric-based supervision framework with 24 behavioral features that can be derived from human-agent interaction traces alone. Using a semi-supervised objective, we can then jointly predict these rubrics and sparse human feedback (when present). In experiments, we demonstrate that, despite being trained primarily from trace-observable rubrics and sparse real-world outcome proxies, these critics improve best-of-N reranking on SWE-bench (Best@8 +15.9 over Random@8 over the rerankable subset of trajectories), enable early stopping (+17.7 with 83% fewer attempts), and support training-time data curation via critic-selected trajectories.",
-    "published": "Mar 05",
-    "published_iso": "2026-03-05T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2603.03800v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.03800v1",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
-    ]
-  },
-  {
-    "title": "Speculative Speculative Decoding",
-    "authors": [
-      "Tanishq Kumar",
-      "Tri Dao",
-      "Avner May"
-    ],
-    "summary": "Autoregressive decoding is bottlenecked by its sequential nature. Speculative decoding has become a standard way to accelerate inference by using a fast draft model to predict upcoming tokens from a slower target model, and then verifying them in parallel with a single target model forward pass. However, speculative decoding itself relies on a sequential dependence between speculation and verification. We introduce speculative speculative decoding (SSD) to parallelize these operations. While a verification is ongoing, the draft model predicts likely verification outcomes and prepares speculations pre-emptively for them. If the actual verification outcome is then in the predicted set, a speculation can be returned immediately, eliminating drafting overhead entirely. We identify three key challenges presented by speculative speculative decoding, and suggest principled methods to solve each. The result is Saguaro, an optimized SSD algorithm. Our implementation is on average 30% faster than optimized speculative decoding baselines and up to 5x faster than autoregressive decoding with open source inference engines.",
-    "published": "Mar 04",
-    "published_iso": "2026-03-04T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2603.03251v3",
-    "arxiv_url": "http://arxiv.org/abs/2603.03251v3",
-    "queried_author": "Tri Dao",
-    "matching_authors": [
-      "Tri Dao"
-    ]
-  },
-  {
-    "title": "Real-Time Generation of Game Video Commentary with Multimodal LLMs: Pause-Aware Decoding Approaches",
-    "authors": [
-      "Anum Afzal",
-      "Yuki Saito",
-      "Hiroya Takamura",
-      "Katsuhito Sudoh",
-      "Shinnosuke Takamichi",
-      "Graham Neubig",
-      "Florian Matthes",
-      "Tatsuya Ishigaki"
-    ],
-    "summary": "Real-time video commentary generation provides textual descriptions of ongoing events in videos. It supports accessibility and engagement in domains such as sports, esports, and livestreaming. Commentary generation involves two essential decisions: what to say and when to say it. While recent prompting-based approaches using multimodal large language models (MLLMs) have shown strong performance in content generation, they largely ignore the timing aspect. We investigate whether in-context prompting alone can support real-time commentary generation that is both semantically relevant and well-timed. We propose two prompting-based decoding strategies: 1) a fixed-interval approach, and 2) a novel dynamic interval-based decoding approach that adjusts the next prediction timing based on the estimated duration of the previous utterance. Both methods enable pause-aware generation without any fine-tuning. Experiments on Japanese and English datasets of racing and fighting games show that the dynamic interval-based decoding can generate commentary more closely aligned with human utterance timing and content using prompting alone. We release a multilingual benchmark dataset, trained models, and implementations to support future research on real-time video commentary generation.",
-    "published": "Mar 04",
-    "published_iso": "2026-03-04T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2603.02655v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.02655v1",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
-    ]
-  },
-  {
-    "title": "Contextualized Privacy Defense for LLM Agents",
-    "authors": [
-      "Yule Wen",
-      "Yanzhe Zhang",
-      "Jianxun Lian",
-      "Xiaoyuan Yi",
-      "Xing Xie",
-      "Diyi Yang"
-    ],
-    "summary": "LLM agents increasingly act on users' personal information, yet existing privacy defenses remain limited in both design and adaptability. Most prior approaches rely on static or passive defenses, such as prompting and guarding. These paradigms are insufficient for supporting contextual, proactive privacy decisions in multi-step agent execution. We propose Contextualized Defense Instructing (CDI), a new privacy defense paradigm in which an instructor model generates step-specific, context-aware privacy guidance during execution, proactively shaping actions rather than merely constraining or vetoing them. Crucially, CDI is paired with an experience-driven optimization framework that trains the instructor via reinforcement learning (RL), where we convert failure trajectories with privacy violations into learning environments. We formalize baseline defenses and CDI as distinct intervention points in a canonical agent loop, and compare their privacy-helpfulness trade-offs within a unified simulation framework. Results show that our CDI consistently achieves a better balance between privacy preservation (94.2%) and helpfulness (80.6%) than baselines, with superior robustness to adversarial conditions and generalization.",
-    "published": "Mar 04",
-    "published_iso": "2026-03-04T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2603.02983v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.02983v1",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang"
-    ]
-  },
-  {
-    "title": "Robometer: Scaling General-Purpose Robotic Reward Models via Trajectory Comparisons",
-    "authors": [
-      "Anthony Liang",
-      "Yigit Korkmaz",
-      "Jiahui Zhang",
-      "Minyoung Hwang",
-      "Abrar Anwar",
-      "Sidhant Kaushik",
-      "Aditya Shah",
-      "Alex S. Huang",
-      "Luke Zettlemoyer",
-      "Dieter Fox",
-      "Yu Xiang",
-      "Anqi Li",
-      "Andreea Bobu",
-      "Abhishek Gupta",
-      "Stephen Tu",
-      "Erdem Biyik",
-      "Jesse Zhang"
-    ],
-    "summary": "General-purpose robot reward models are typically trained to predict absolute task progress from expert demonstrations, providing only local, frame-level supervision. While effective for expert demonstrations, this paradigm scales poorly to large-scale robotics datasets where failed and suboptimal trajectories are abundant and assigning dense progress labels is ambiguous. We introduce Robometer, a scalable reward modeling framework that combines intra-trajectory progress supervision with inter-trajectory preference supervision. Robometer is trained with a dual objective: a frame-level progress loss that anchors reward magnitude on expert data, and a trajectory-comparison preference loss that imposes global ordering constraints across trajectories of the same task, enabling effective learning from both real and augmented failed trajectories. To support this formulation at scale, we curate RBM-1M, a reward-learning dataset comprising over one million trajectories spanning diverse robot embodiments and tasks, including substantial suboptimal and failure data. Across benchmarks and real-world evaluations, Robometer learns more generalizable reward functions than prior methods and improves robot learning performance across a diverse set of downstream applications. Code, model weights, and videos at https://robometer.github.io/.",
-    "published": "Mar 03",
-    "published_iso": "2026-03-03T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2603.02115v2",
-    "arxiv_url": "http://arxiv.org/abs/2603.02115v2",
-    "queried_author": "Luke Zettlemoyer",
-    "matching_authors": [
-      "Luke Zettlemoyer"
-    ]
-  },
-  {
-    "title": "According to Me: Long-Term Personalized Referential Memory QA",
-    "authors": [
-      "Jingbiao Mei",
-      "Jinghong Chen",
-      "Guangyu Yang",
-      "Xinyu Hou",
-      "Margaret Li",
-      "Bill Byrne"
-    ],
-    "summary": "Personalized AI assistants must recall and reason over long-term user memory, which naturally spans multiple modalities and sources such as images, videos, and emails. However, existing Long-term Memory benchmarks focus primarily on dialogue history, failing to capture realistic personalized references grounded in lived experience. We introduce ATM-Bench, the first benchmark for multimodal, multi-source personalized referential Memory QA. ATM-Bench contains approximately four years of privacy-preserving personal memory data and human-annotated question-answer pairs with ground-truth memory evidence, including queries that require resolving personal references, multi-evidence reasoning from multi-source and handling conflicting evidence. We propose Schema-Guided Memory (SGM) to structurally represent memory items originated from different sources. In experiments, we implement 5 state-of-the-art memory systems along with a standard RAG baseline and evaluate variants with different memory ingestion, retrieval, and answer generation techniques. We find poor performance (under 20\\% accuracy) on the ATM-Bench-Hard set, and that SGM improves performance over Descriptive Memory commonly adopted in prior works. Code available at: https://github.com/JingbiaoMei/ATM-Bench",
-    "published": "Mar 03",
-    "published_iso": "2026-03-03T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2603.01990v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.01990v1",
-    "queried_author": "Margaret Li",
-    "matching_authors": [
-      "Margaret Li"
-    ]
-  },
-  {
-    "title": "PanCanBench: A Comprehensive Benchmark for Evaluating Large Language Models in Pancreatic Oncology",
-    "authors": [
-      "Yimin Zhao",
-      "Sheela R. Damle",
-      "Simone E. Dekker",
-      "Scott Geng",
-      "Karly Williams Silva",
-      "Jesse J Hubbard",
-      "Manuel F Fernandez",
-      "Fatima Zelada-Arenas",
-      "Alejandra Alvarez",
-      "Brianne Flores",
-      "Alexis Rodriguez",
-      "Stephen Salerno",
-      "Carrie Wright",
-      "Zihao Wang",
-      "Pang Wei Koh",
-      "Jeffrey T. Leek"
-    ],
-    "summary": "Large language models (LLMs) have achieved expert-level performance on standardized examinations, yet multiple-choice accuracy poorly reflects real-world clinical utility and safety. As patients and clinicians increasingly use LLMs for guidance on complex conditions such as pancreatic cancer, evaluation must extend beyond general medical knowledge. Existing frameworks, such as HealthBench, rely on simulated queries and lack disease-specific depth. Moreover, high rubric-based scores do not ensure factual correctness, underscoring the need to assess hallucinations. We developed a human-in-the-loop pipeline to create expert rubrics for de-identified patient questions from the Pancreatic Cancer Action Network (PanCAN). The resulting benchmark, PanCanBench, includes 3,130 question-specific criteria across 282 authentic patient questions. We evaluated 22 proprietary and open-source LLMs using an LLM-as-a-judge framework, measuring clinical completeness, factual accuracy, and web-search integration. Models showed substantial variation in rubric-based completeness, with scores ranging from 46.5% to 82.3%. Factual errors were common, with hallucination rates (the percentages of responses containing at least one factual error) ranging from 6.0% for Gemini-2.5 Pro and GPT-4o to 53.8% for Llama-3.1-8B. Importantly, newer reasoning-optimized models did not consistently improve factuality: although o3 achieved the highest rubric score, it produced inaccuracies more frequently than other GPT-family models. Web-search integration did not inherently guarantee better responses. The average s...",
-    "published": "Mar 03",
-    "published_iso": "2026-03-03T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2603.01343v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.01343v1",
-    "queried_author": "Pang Wei Koh",
-    "matching_authors": [
-      "Pang Wei Koh"
     ]
   }
 ]
