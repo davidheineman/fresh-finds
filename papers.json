@@ -1,5 +1,45 @@
 [
   {
+    "title": "Is this machine playing?",
+    "authors": [
+      "Nathan Cloos",
+      "Antonio Norelli",
+      "Daniel Durbin",
+      "Jacob Andreas",
+      "Daniela Rus",
+      "Phillip Isola"
+    ],
+    "summary": "We placed a modern AI coding assistant in an unintended role: as the mind of a body on an unknown digital island. With only a minimal instruction mentioning no specific task, reward, or activity, the machine started animating its virtual body. Across thirty-hour runs, the embodied AI agent climbed hills, stacked blocks into towers, drew mandalas, reinterpreted sports, ran experiments on the physics of its world, and learned techniques that later expanded what it could accomplish. These activities recurred across thirteen agents but diverged into distinct histories. We examine whether this behavior satisfies classical criteria for play and ask whether play can become a mode of machine development.",
+    "published": "Oct 07",
+    "published_iso": "2026-10-07T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.07130",
+    "arxiv_url": "https://arxiv.org/abs/2610.07130",
+    "queried_author": "Jacob Andreas",
+    "matching_authors": [
+      "Jacob Andreas",
+      "Phillip Isola"
+    ]
+  },
+  {
+    "title": "Sherpa: Teaching LLMs to Teach Adaptively",
+    "authors": [
+      "Weixian Xu",
+      "Yanzhe Zhang",
+      "Zora Zhiruo Wang",
+      "Changyu Chen",
+      "Diyi Yang"
+    ],
+    "summary": "Large language models (LLMs) have become increasingly capable problem solvers, but being able to solve a problem is not the same as being able to teach it. Existing approaches to training LLMs as teachers rely on demonstrations, preference data, or predefined pedagogical criteria that specify what good teaching looks like. However, these signals are often not grounded in individual student learning outcomes, where effective teaching strategies can vary substantially across learners. To address this, we introduce Sherpa, a multi-turn reinforcement learning framework that instantiates multiple student archetypes with LLMs conditioned on distinct learning preferences and trains a teacher model to adapt its instruction by directly maximizing their learning outcomes. Teacher LLMs trained with Sherpa improve instructed students' performance across all archetypes by an average of 20.5 percentage points. Under MathTutorBench's evaluation, Sherpa raises the overall pedagogy score from 52.5% to 79.2%, indicating better teaching responses. Our human studies show that the trained teacher is preferred over the base model in 79.6% of pairwise comparisons. Together, Sherpa trains LLM teachers to adapt to diverse simulated students and become better aligned with human teachers, paving the road towards AI tutors teaching real students.",
+    "published": "Oct 07",
+    "published_iso": "2026-10-07T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.08778",
+    "arxiv_url": "https://arxiv.org/abs/2610.08778",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang"
+    ]
+  },
+  {
     "title": "Priced Guidance: Can Language Models Generate Future Research Ideas?",
     "authors": [
       "Kaiyue Wen",
@@ -13344,44 +13384,5 @@
       "Tri Dao"
     ],
     "published_iso": "2026-03-06T05:00:00+00:00"
-  },
-  {
-    "title": "AgentIR: Reasoning-Aware Retrieval for Deep Research Agents",
-    "authors": [
-      "Zijian Chen",
-      "Xueguang Ma",
-      "Shengyao Zhuang",
-      "Jimmy Lin",
-      "Akari Asai",
-      "Victor Zhong"
-    ],
-    "summary": "Deep Research agents are rapidly emerging as primary consumers of modern retrieval systems. Unlike human users who issue and refine queries without documenting their intermediate thought processes, Deep Research agents generate explicit natural language reasoning before each search call, revealing rich intent and contextual information that existing retrievers entirely ignore. To exploit this overlooked signal, we introduce: (1) Reasoning-Aware Retrieval, a retrieval paradigm that jointly embeds the agent's reasoning trace alongside its query; and (2) DR-Synth, a data synthesis method that generates Deep Research retriever training data from standard QA datasets. We demonstrate that both components are independently effective, and their combination yields a trained embedding model, AgentIR-4B, with substantial gains. On the challenging BrowseComp-Plus benchmark, AgentIR-4B achieves 68\\% accuracy with the open-weight agent Tongyi-DeepResearch, compared to 50\\% with conventional embedding models twice its size, and 37\\% with BM25. Code and data are available at: https://texttron.github.io/AgentIR/.",
-    "published": "Mar 05",
-    "published_iso": "2026-03-05T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2603.04384v3",
-    "arxiv_url": "http://arxiv.org/abs/2603.04384v3",
-    "queried_author": "Akari Asai",
-    "matching_authors": [
-      "Akari Asai"
-    ]
-  },
-  {
-    "title": "$\u03c4$-Knowledge: Evaluating Conversational Agents over Unstructured Knowledge",
-    "authors": [
-      "Quan Shi",
-      "Alexandra Zytek",
-      "Pedram Razavi",
-      "Karthik Narasimhan",
-      "Victor Barres"
-    ],
-    "summary": "Conversational agents are increasingly deployed in knowledge-intensive settings, where correct behavior depends on retrieving and applying domain-specific knowledge from large, proprietary, and unstructured corpora during live interactions with users. Yet most existing benchmarks evaluate retrieval or tool use independently of each other, creating a gap in realistic, fully agentic evaluation over unstructured data in long-horizon interactions. We introduce $\u03c4$-Knowledge, an extension of $\u03c4$-Bench for evaluating agents in environments where success depends on coordinating external, natural-language knowledge with tool outputs to produce verifiable, policy-compliant state changes. Our new domain, $\u03c4$-Banking, models realistic fintech customer support workflows in which agents must navigate roughly 700 interconnected knowledge documents while executing tool-mediated account updates. Across embedding-based retrieval and terminal-based search, even frontier models with high reasoning budgets achieve only $\\sim$25.5% pass^1, with reliability degrading sharply over repeated trials. Agents struggle to retrieve the correct documents from densely interlinked knowledge bases and to reason accurately over complex internal policies. Overall, $\u03c4$-Knowledge provides a realistic testbed for developing agents that integrate unstructured knowledge in human-facing deployments.",
-    "published": "Mar 05",
-    "published_iso": "2026-03-05T05:00:00+00:00",
-    "pdf_url": "https://arxiv.org/pdf/2603.04370v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.04370v1",
-    "queried_author": "Karthik Narasimhan",
-    "matching_authors": [
-      "Karthik Narasimhan"
-    ]
   }
 ]
