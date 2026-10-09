@@ -1,5 +1,96 @@
 [
   {
+    "title": "Measuring and Mitigating Solution Mode Collapse in RLVR",
+    "authors": [
+      "Liv G. d'Aliberti",
+      "Marwa Abdulhai",
+      "Sofiia Druchyna",
+      "Peter Henderson",
+      "Manoel Horta Ribeiro"
+    ],
+    "summary": "A language model (LM) can usually answer the same question in more than one way, but reinforcement learning with verifiable rewards (RLVR) is indifferent to which correct answer a model produces. A solution will earn the same reward whether it is the thousandth copy of a familiar answer or one the model has never produced before. Yet, there is potential value in having the model retain multiple correct solutions as it is trained. For instance, multiple modes may give users a choice and provide problem-solving strategies that improve overall model performance. Here, we introduce ModeBench, a benchmark of multi-solution tasks in which the verifier returns both correctness and mode discovered. We then use ModeBench to measure how solution diversity changes under RLVR post-training. We find that RLVR post-training concentrates probability onto fewer correct modes even as accuracy holds or improves, and moreover, that frontier models are already highly concentrated. We then introduce our solution, Re:Max, which stores one verified example per discovered mode in a replay buffer and trains on those stored modes uniformly. A solution found once is, therefore, practiced as often as one found repeatedly. Across three model scales, two RL objectives, and harder task constructions, replay improves both how often a policy succeeds and how many different ways it can succeed.",
+    "published": "Oct 09",
+    "published_iso": "2026-10-09T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.11064",
+    "arxiv_url": "https://arxiv.org/abs/2610.11064",
+    "queried_author": "Peter Henderson",
+    "matching_authors": [
+      "Peter Henderson"
+    ]
+  },
+  {
+    "title": "Marformer: A Transformer for Predicting Missing Data Distributions",
+    "authors": [
+      "Prabhav Singh",
+      "Xiheng Tom Wang",
+      "Haojun Shi",
+      "Jason Eisner"
+    ],
+    "summary": "Real decisions are made under incomplete information. If we observe only some of the random variables we need, we can predict the others. The \\textbf{conditional marginals} over the missing variables are the key ingredient for computing Bayes risk and Value of Information (VOI), the expected gain from acquiring one more observation before deciding. We present the Marformer, a Transformer trained to directly predict conditional marginals given any set of observed values. Like BERT, which is trained to predict missing words from context, the Marformer constructs a hidden-vector representation for each distribution $p(X_i)$ and iteratively refines it through attention to other distributions $p(X_j)$. Unlike generative approaches, the Marformer does not model the full joint distribution, requires no domain knowledge of the data-generating process, and makes all predictions in a single forward pass. We evaluate across three synthetic domains with missing data---Bayesian networks, discretized multivariate Gaussians, and structured annotation data. The Marformer can match or outperform classical missing-data methods, even when those methods are given the true model family and prior that generated the synthetic data. We also evaluate on a real annotation dataset, where the Marformer outperforms the evaluated baselines at the largest training size. In both cases, the Marformer is substantially faster than the evaluated generative baselines.",
+    "published": "Oct 09",
+    "published_iso": "2026-10-09T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.12379",
+    "arxiv_url": "https://arxiv.org/abs/2610.12379",
+    "queried_author": "Jason Eisner",
+    "matching_authors": [
+      "Jason Eisner"
+    ]
+  },
+  {
+    "title": "Predicting Alignment Generalization with Value Representations",
+    "authors": [
+      "Andy Liu",
+      "Mehar Bhatia",
+      "Karolina Stanczak",
+      "Mona Diab",
+      "Vered Shwartz",
+      "Daniel Fried"
+    ],
+    "summary": "LLM developers post-train their models to exhibit prosocial values and behavioral traits, which are enumerated in an alignment target. However, while recent post-training developments have yielded models that score highly on alignment evaluations, training models on sets of narrow behaviors still influences their behavior across unseen contexts and environments in unexpected ways. In this paper, we establish the task of alignment generalization prediction, i.e., predicting how fine-tuning a model to follow a given value changes its behavior across a wide range of held-out values. We conduct a large-scale analysis of alignment generalization effects across 66 values found in modern alignment targets, and benchmark representational techniques on the alignment generalization prediction task. We find that representations based on model activations when applying values in context significantly outperform methods based on textual descriptions of the values. Specifically, the best activations-based methods achieve correlations of 0.45 with our generalization matrix, compared with 0.05 from description-based baselines. We then show the applicability of representations that predict alignment generalization toward downstream tasks by using them to measure how similar the values in a multi-value alignment target are, which we find is significantly correlated with model robustness. Finally, we show initial evidence towards a shared, model-independent value space, which we use to develop the first taxonomy of LLM values grounded in empirical generalization dynamics. Our work demonstrate...",
+    "published": "Oct 09",
+    "published_iso": "2026-10-09T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.12410",
+    "arxiv_url": "https://arxiv.org/abs/2610.12410",
+    "queried_author": "Daniel Fried",
+    "matching_authors": [
+      "Daniel Fried"
+    ]
+  },
+  {
+    "title": "Probing for Long-Horizon Deductive Reasoning Capabilities in Language Models with Prolog",
+    "authors": [
+      "Hadeel Al-Negheimish",
+      "Jasna Ilieva",
+      "Yoon Kim"
+    ],
+    "summary": "Current frontier LLMs can theoretically process long contexts with 1M tokens or more. But to what extent can they go beyond simple retrieval and perform deeper reasoning over such long contexts? We empirically investigate long-horizon reasoning capabilities of LLMs, focusing on deductive logic expressed in Prolog. We construct ProloNg, a synthetic testbed to probe Prolog Long Reasoning, which systematically varies the complexity (reasoning depth) of problems, where the hardest case has a reasoning depth of 22 and 62k context length. We study 8 reasoning models across 5 families of frontier LLMs, and find that performance degrades substantially as reasoning depth grows, with the majority of models approaching chance beyond depth 10.",
+    "published": "Oct 09",
+    "published_iso": "2026-10-09T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.11592",
+    "arxiv_url": "https://arxiv.org/abs/2610.11592",
+    "queried_author": "Yoon Kim",
+    "matching_authors": [
+      "Yoon Kim"
+    ]
+  },
+  {
+    "title": "Language-Specific Effects of Tokenizer Choice in Multilingual Language Models",
+    "authors": [
+      "Clara Meister",
+      "G\\\"ul Sena Alt{\\i}nta\\c{s}",
+      "Antoine Bosselut"
+    ],
+    "summary": "Tokenizer choice affects multilingual language modeling, but vocabulary capacity is finite and vocabulary size is often constrained: improving representation for some languages often comes at the expense of others. We therefore ask whether tokenizer choice matters equally across languages, a question that the current literature leave unanswered. To this end, we train 123 language models spanning 54 tokenizers. In the main comparison, architecture, training corpus, training-token budget, and optimization are held fixed, so the models differ only in their tokenizer. We find that tokenizer choice matters more for languages with less language-model training data: across the 54 tokenizers, the standard deviation of a language's bits-per-byte (BPB) increases as its model training-data share decreases (Spearman rho = -0.52 over the 31 trained languages and -0.69 over the 28 written with word boundaries). Leaving a language out of tokenizer training raises its BPB in every language we study, and the penalty tends to be larger for languages with less language-model training data. Giving lower-resource languages a larger share of tokenizer-training data, however, does not unconditionally help those languages: both equal weighting and an allocation inverting the shares with respect to the language model training data increase their BPB, particularly when language-model training repeats data. Finally, which intrinsic tokenizer properties are associated with better BPB differs across languages, providing further evidence that what makes a good tokenizer depends on the language. We find ...",
+    "published": "Oct 09",
+    "published_iso": "2026-10-09T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.12144",
+    "arxiv_url": "https://arxiv.org/abs/2610.12144",
+    "queried_author": "Antoine Bosselut",
+    "matching_authors": [
+      "Antoine Bosselut"
+    ]
+  },
+  {
     "title": "Shared Geometry As A Rosetta Stone: Cross-Modal Alignment Without Paired Data",
     "authors": [
       "Dominik Schnaus",
@@ -13253,143 +13344,5 @@
       "Ashwinee Panda"
     ],
     "published_iso": "2026-03-10T04:00:00+00:00"
-  },
-  {
-    "title": "Scalable Training of Mixture-of-Experts Models with Megatron Core",
-    "authors": [
-      "Zijie Yan",
-      "Hongxiao Bai",
-      "Xin Yao",
-      "Dennis Liu",
-      "Tong Liu",
-      "Hongbin Liu",
-      "Pingtian Li",
-      "Evan Wu",
-      "Shiqing Fan",
-      "Li Tao",
-      "Robin Zhang",
-      "Yuzhong Wang",
-      "Shifang Xu",
-      "Jack Chang",
-      "Xuwen Chen",
-      "Kunlun Li",
-      "Yan Bai",
-      "Gao Deng",
-      "Nan Zheng",
-      "Vijay Anand Korthikanti",
-      "Abhinav Khattar",
-      "Ethan He",
-      "Soham Govande",
-      "Sangkug Lym",
-      "Zhongbo Zhu",
-      "Qi Zhang",
-      "Haochen Yuan",
-      "Xiaowei Ren",
-      "Deyu Fu",
-      "Tailai Ma",
-      "Shunkang Zhang",
-      "Jiang Shao",
-      "Ray Wang",
-      "Vasudevan Rengasamy",
-      "Rachit Garg",
-      "Santosh Bhavani",
-      "Xipeng Li",
-      "Chandler Zhou",
-      "David Wu",
-      "Yingcan Wei",
-      "Ashwath Aithal",
-      "Michael Andersch",
-      "Mohammad Shoeybi",
-      "Jiajie Yao",
-      "June Yang"
-    ],
-    "summary": "Scaling Mixture-of-Experts (MoE) training introduces systems challenges absent in dense models. Because each token activates only a subset of experts, this sparsity allows total parameters to grow much faster than per-token computation, creating coupled constraints across memory, communication, and computation. Optimizing one dimension often shifts pressure to another, demanding co-design across the full system stack.\n  We address these challenges for MoE training through integrated optimizations spanning memory (fine-grained recomputation, offloading, etc.), communication (optimized dispatchers, overlapping, etc.), and computation (Grouped GEMM, fusions, CUDA Graphs, etc.). The framework also provides Parallel Folding for flexible multi-dimensional parallelism, low-precision training support for FP8 and NVFP4, and efficient long-context training. On NVIDIA GB300 and GB200, it achieves 1,233/1,048 TFLOPS/GPU for DeepSeek-V3-685B and 974/919 TFLOPS/GPU for Qwen3-235B. As a performant, scalable, and production-ready open-source solution, it has been used across academia and industry for training MoE models ranging from billions to trillions of parameters on clusters scaling up to thousands of GPUs.\n  This report explains how these techniques work, their trade-offs, and their interactions at the systems level, providing practical guidance for scaling MoE models with Megatron Core.",
-    "published": "Mar 10",
-    "pdf_url": "https://arxiv.org/pdf/2603.07685v2",
-    "arxiv_url": "http://arxiv.org/abs/2603.07685v2",
-    "queried_author": "Mohammad Shoeybi",
-    "matching_authors": [
-      "Mohammad Shoeybi"
-    ],
-    "published_iso": "2026-03-10T04:00:00+00:00"
-  },
-  {
-    "title": "Moral Mazes in the Era of LLMs",
-    "authors": [
-      "Dang Nguyen",
-      "Harvey Yiyun Fu",
-      "Peter West",
-      "Ari Holtzman",
-      "Chenhao Tan"
-    ],
-    "summary": "Navigating complex social situations is an integral part of corporate life, ranging from giving critical feedback without hurting morale to rejecting requests without alienating teammates. Although large language models (LLMs) are permeating the workplace, it is unclear how well they can navigate these norms. To investigate this question, we created HR Simulator, a game where users roleplay as an HR officer and write emails to tackle challenging workplace scenarios, evaluated with GPT-4o as a judge based on scenario-specific rubrics. We analyze over 600 human and LLM emails and find systematic differences in style: LLM emails are more formal and empathetic. Furthermore, humans underperform LLMs (e.g., 23.5% vs. 48-54% scenario pass rate), but human emails rewritten by LLMs can outperform both, which indicates a hybrid advantage. On the evaluation side, judges can exhibit differences in their email preferences: an analysis of 10 judge models reveals evidence for emergent tact, where weaker models prefer direct, blunt communication but stronger models prefer more subtle messages. Judges also agree with each other more as they scale, which hints at a convergence toward shared communicative norms that may differ from humans'. Overall, our results suggest LLMs could substantially reshape communication in the workplace if they are widely adopted in professional correspondence.",
-    "published": "Mar 10",
-    "pdf_url": "https://arxiv.org/pdf/2603.20231v2",
-    "arxiv_url": "http://arxiv.org/abs/2603.20231v2",
-    "queried_author": "Ari Holtzman",
-    "matching_authors": [
-      "Ari Holtzman"
-    ],
-    "published_iso": "2026-03-10T04:00:00+00:00"
-  },
-  {
-    "title": "Improved high-dimensional estimation with Langevin dynamics and stochastic weight averaging",
-    "authors": [
-      "Stanley Wei",
-      "Alex Damian",
-      "Jason D. Lee"
-    ],
-    "summary": "Significant recent work has studied the ability of gradient descent to recover a hidden planted direction $\u03b8^\\star \\in S^{d-1}$ in different high-dimensional settings, including tensor PCA and single-index models. The key quantity that governs the ability of gradient descent to traverse these landscapes is the information exponent $k^\\star$ (Ben Arous et al., (2021)), which corresponds to the order of the saddle at initialization in the population landscape. Ben Arous et al., (2021) showed that $n \\gtrsim d^{\\max(1, k^\\star-1)}$ samples were necessary and sufficient for online SGD to recover $\u03b8^\\star$, and Ben Arous et al., (2020) proved a similar lower bound for Langevin dynamics. More recently, Damian et al., (2023) showed it was possible to circumvent these lower bounds by running gradient descent on a smoothed landscape, and that this algorithm succeeds with $n \\gtrsim d^{\\max(1, k^\\star/2)}$ samples, which is optimal in the worst case. This raises the question of whether it is possible to achieve the same rate without explicit smoothing. In this paper, we show that Langevin dynamics can succeed with $n \\gtrsim d^{ k^\\star/2 }$ samples if one considers the average iterate, rather than the last iterate. The key idea is that the combination of noise-injection and iterate averaging is able to emulate the effect of landscape smoothing. We apply this result to both the tensor PCA and single-index model settings. Finally, we conjecture that minibatch SGD can also achieve the same rate without adding any additional noise.",
-    "published": "Mar 09",
-    "pdf_url": "https://arxiv.org/pdf/2603.06028v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.06028v1",
-    "queried_author": "Alex Damian",
-    "matching_authors": [
-      "Alex Damian"
-    ],
-    "published_iso": "2026-03-09T04:00:00+00:00"
-  },
-  {
-    "title": "Learning Next Action Predictors from Human-Computer Interaction",
-    "authors": [
-      "Omar Shaikh",
-      "Valentin Teutschbein",
-      "Kanishk Gandhi",
-      "Yikun Chi",
-      "Nick Haber",
-      "Thomas Robinson",
-      "Nilam Ram",
-      "Byron Reeves",
-      "Sherry Yang",
-      "Michael S. Bernstein",
-      "Diyi Yang"
-    ],
-    "summary": "Truly proactive AI systems must anticipate what we will do next. This foresight demands far richer information than the sparse signals we type into our prompts -- it demands reasoning over the entire context of what we see and do. We formalize this as next action prediction (NAP): given a sequence of a user's multimodal interactions with a computer (screenshots, clicks, sensor data), predict that user's next action. Progress on this task requires both new data and modeling approaches. To scale data, we annotate longitudinal, naturalistic computer use with vision-language models. We release an open-source pipeline for performing this labeling on private infrastructure, and label over 360K actions across one month of continuous phone usage from 20 users, amounting to 1,800 hours of screen time. We then introduce LongNAP, a user model that combines parametric and in-context learning to reason over long interaction histories. LongNAP is trained via policy gradient methods to generate user-specific reasoning traces given some context; retrieve relevant traces from a library of past traces; and then apply retrieved traces in-context to predict future actions. Using an LLM-as-judge evaluation metric (0-1 similarity to ground truth), LongNAP significantly outperforms supervised finetuning and prompted baselines on held-out data (by 79% and 39% respectively). Additionally, LongNAP generalizes to held out users when trained across individuals. The space of next actions a user might take at any moment is unbounded, spanning thousands of possible outcomes. Despite this, 17.1% of LongNA...",
-    "published": "Mar 09",
-    "pdf_url": "https://arxiv.org/pdf/2603.05923v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.05923v1",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang"
-    ],
-    "published_iso": "2026-03-09T04:00:00+00:00"
-  },
-  {
-    "title": "When Rubrics Fail: Error Enumeration as Reward in Reference-Free RL Post-Training for Virtual Try-On",
-    "authors": [
-      "Wisdom Ikezogwo",
-      "Mehmet Saygin Seyfioglu",
-      "Ranjay Krishna",
-      "Karim Bouyarmane"
-    ],
-    "summary": "Reinforcement learning with verifiable rewards (RLVR) and Rubrics as Rewards (RaR) have driven strong gains in domains with clear correctness signals and even in subjective domains by synthesizing evaluation criteria from ideal reference answers. But many real-world tasks admit multiple valid outputs and lack the single ideal answer that rubric generation depends on. We identify this reference-free setting as a gap in current post-training methods and propose Implicit Error Counting (IEC) to fill it. Instead of checking what a response gets right against a rubric, IEC enumerates what it gets wrong, applying severity-weighted scores across task-relevant axes and converting them into calibrated per-aspect rewards. We show that na\u00efve explicit enumeration is too noisy for stable optimization, and that two design choices: implicit score emission and group calibration are necessary to make error counting a reliable reward. As a case study, we validate IEC on virtual try-on (VTO), a domain that is simultaneously too constrained for holistic scoring and too permissive for rubric-based evaluation: subtle garment errors are unacceptable, yet many output variations are correct. We introduce Cascaded Error Counting (CEC) as an evaluation metric, which tracks human preferences well (60% top-1 vs. 30% others), and curate Mismatch-DressCode (MDressBench), a benchmark with maximal attribute mismatch to stress-test reward designs. On MDressBench, IEC outperforms RaR across all metrics (CEC: 5.31 vs. 5.60 on flat references; 5.20 vs. 5.53 on non-flat). On VITON-HD and DressCode, IEC matches ...",
-    "published": "Mar 09",
-    "pdf_url": "https://arxiv.org/pdf/2603.05659v3",
-    "arxiv_url": "http://arxiv.org/abs/2603.05659v3",
-    "queried_author": "Ranjay Krishna",
-    "matching_authors": [
-      "Ranjay Krishna"
-    ],
-    "published_iso": "2026-03-09T04:00:00+00:00"
   }
 ]
