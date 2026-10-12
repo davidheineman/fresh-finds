@@ -1,5 +1,87 @@
 [
   {
+    "title": "ReplaySSM: Cache SSM Inputs, Not State",
+    "authors": [
+      "Ze-Wei Liou",
+      "Harris Nover",
+      "Amey Naik",
+      "Andrii Skliar",
+      "Igor Shovkun",
+      "Ido Shahaf",
+      "Tri Dao"
+    ],
+    "summary": "State-space models (SSMs) maintain a fixed-size recurrent state, but reading and writing it at every decoding step can bottleneck hybrid models. This eager state management causes large state I/O with low arithmetic intensity, leaves speculative decoding no cheap rollback, and feeds state quantization error into subsequent recurrent updates. We introduce ReplaySSM, which unrolls the recurrence to represent the state as a checkpoint and a buffer of recent SSM inputs. This separates output computation from checkpoint updates. By updating the checkpoint periodically, ReplaySSM avoids state writes on most steps and roughly halves the dominant state memory traffic. Keeping recent inputs also makes speculative rollback a buffer-pointer operation and enables output-only verification without materializing intermediate states. The same separation allows a low-precision checkpoint to serve output computation on most steps while a higher-precision checkpoint serves recurrent updates, so rounding error in the low-precision copy never enters later updates. We implement ReplaySSM in vLLM for Mamba-2 and Gated DeltaNet. At serving batch size 256, it accelerates standard decoding by $1.20$--$1.47\\times$ over a tuned vLLM baseline across four hybrid models, and delivers about $1.8\\times$ the throughput of vLLM's speculative decoding on the two 120B-class models. Separate state precisions also reduce output KL divergence and downstream accuracy losses compared with a shared low-precision checkpoint.",
+    "published": "Oct 12",
+    "published_iso": "2026-10-12T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.13778",
+    "arxiv_url": "https://arxiv.org/abs/2610.13778",
+    "queried_author": "Tri Dao",
+    "matching_authors": [
+      "Tri Dao"
+    ]
+  },
+  {
+    "title": "Designing Protein Structures from Natural Language",
+    "authors": [
+      "Joseph Lee",
+      "Yanjing Li",
+      "Bo Qiang",
+      "Gregory Lau",
+      "Allyson Ettinger",
+      "Noah A. Smith",
+      "Rory Donovan-Maiye",
+      "David Baker",
+      "Hanna Hajishirzi",
+      "Pang Wei Koh"
+    ],
+    "summary": "A central challenge in de novo protein design is generating proteins with desired structural and functional properties. Existing design models typically require a dedicated input representation for each property, limiting the design objectives they support. We develop Prompteina, the first all-atom structure generation model that supports new and broader design objectives specified in natural language, analogous to text-to-image generation. To train Prompteina, we construct Prompteina-Data, a paired text--protein structure dataset of 1.8M structures and 50M+ captions describing global and residue-specific structural and functional properties. We adapt Proteina-Complexa, a pretrained structure generation model, through text-conditioned pretraining and finetuning that aligns residues with their corresponding text. Prompteina outperforms baselines on 15 of 18 structural properties and generates proteins that more closely match descriptions of their intended functions. In binder design, it leads baselines on at least 13 of 20 targets and improves interface confidence by 14\\% over the strongest baseline. With iterative in silico feedback, Prompteina's gain over non-iterative generation is 57\\% larger than the next-best baseline on the hardest targets. Finally, we experimentally validate Prompteina designs against GM2A, a target with no reported de novo binders. We identify nine binders, with the strongest at an apparent $K_{\\mathrm{D}}$ of 107 nM. These results establish natural language as an effective and powerful conditioning interface for protein structure generation.",
+    "published": "Oct 12",
+    "published_iso": "2026-10-12T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.13917",
+    "arxiv_url": "https://arxiv.org/abs/2610.13917",
+    "queried_author": "Noah A. Smith",
+    "matching_authors": [
+      "Noah A. Smith",
+      "Pang Wei Koh"
+    ]
+  },
+  {
+    "title": "MagicBeanStalk: Escaping the RLVR Zero Advantage Trap with Recursive Data Synthesis",
+    "authors": [
+      "Ximing Lu",
+      "Aviral Kumar",
+      "Jan Kautz",
+      "Yejin Choi",
+      "David Acuna"
+    ],
+    "summary": "Data-centric scaling of RLVR has focused on collecting or generating verifiable training problems. However, corpus size alone does not determine whether the dataset provides a useful learning signal for a target policy. To guide the synthesis of effective RLVR data, we experimentally characterize dataset effectiveness as a function of its problems, the target policy, and the training rollout budget. Under this characterization, we show that a large open-source math corpus pooled from widely used RLVR datasets falls almost entirely into a zero-advantage trap: for a fixed target policy and rollout budget, roughly 88% of its problems are solved in every rollout or failed in every rollout. Filtering concentrates what remains, but it can only select, discarding the hard problems. Effective synthetic problems should therefore require the reasoning operations and compositions required to solve those hard problems. Yet their difficulty must be calibrated, so that some rollouts succeed, some fail, and at least one correct solution fits within the training budget. Prompting a teacher to vary hard problems directly does not achieve this. Guided by these empirical principles, we introduce MagicBeanStalk, a top-down decomposition and bottom-up recursive data-synthesis algorithm that grows seed problems into families of substantively new, policy- and budget-calibrated training problems while preserving the seeds' reasoning blueprints. Across 8 math benchmarks, continual RLVR on MagicBeanStalk problems improves gpt-oss-120b from 61.2 to 69.8 (+8.6) and DeepSeek v4Flash from 72.4 to 77.9 (...",
+    "published": "Oct 12",
+    "published_iso": "2026-10-12T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.12659",
+    "arxiv_url": "https://arxiv.org/abs/2610.12659",
+    "queried_author": "Yejin Choi",
+    "matching_authors": [
+      "Yejin Choi"
+    ]
+  },
+  {
+    "title": "Overcoming Data Imbalances with Expert Selection Biases",
+    "authors": [
+      "Ayush K. Tarun",
+      "Clara Meister",
+      "Antoine Bosselut"
+    ],
+    "summary": "Mixture-of-Experts (MoE) models have become the standard architecture for frontier LLMs. The multiple parallel experts in each transformer block theoretically enable expert specialization according to categories such as domains, languages, or modalities during pretraining. However, when data is imbalanced across categories, minority categories can become concentrated in a small fraction of the expert pool or spread inefficiently across them, effectively limiting their available capacity. In this work, we demonstrate that category-conditioned expert-selection biases can preferentially route tokens from different categories toward specialized expert pools. By applying biases based on input category, we provide a simple way to induce soft category-aligned specialization. This intervention encourages categories toward distinct expert subsets while retaining cross-category sharing when useful. More importantly, it enables the over-allocation of expert capacity to categories that would otherwise be disadvantaged by data scarcity. We observe performance improvements across modalities, low-resource languages, and code in models up to 10.6B parameters. At our smallest and largest model scales, these gains are equivalent to allocating 18.5% and 2.7% additional baseline training tokens, respectively. Overall, our results show that expert biases can serve as a lightweight control for category-level expert allocation, making room for low-resource categories while retaining standard MoE inference.",
+    "published": "Oct 12",
+    "published_iso": "2026-10-12T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.13370",
+    "arxiv_url": "https://arxiv.org/abs/2610.13370",
+    "queried_author": "Antoine Bosselut",
+    "matching_authors": [
+      "Antoine Bosselut"
+    ]
+  },
+  {
     "title": "Measuring and Mitigating Solution Mode Collapse in RLVR",
     "authors": [
       "Liv G. d'Aliberti",
@@ -683,6 +765,23 @@
     "matching_authors": [
       "Graham Neubig",
       "Seungone Kim"
+    ]
+  },
+  {
+    "title": "Adapter Thickets: Splitting an RLVR Budget Beats Concentrating It",
+    "authors": [
+      "Jonathan Williams",
+      "Esin Tureci",
+      "Karthik R. Narasimhan"
+    ],
+    "summary": "Majority voting over sampled completions is the workhorse of test-time scaling, and reinforcement learning with verifiable rewards (RLVR) is the workhorse for making each completion better. The standard pipeline composes the two: train one policy with RLVR, then sample it many times and vote. We show that this composition is lossy. A vote can only overturn mistakes that its voters do not share, and RLVR sharpens a policy so that its samples increasingly make the same mistakes. With every method drawing exactly $160$ completions per problem, training a single LoRA adapter on the full RLVR budget raises single-sample accuracy on every model we test ($1.5$B-$8$B). Yet on three of four models it leaves the majority vote below that of the untrained base model, by up to $4.8$ points. The damage builds during training: voter errors grow steadily more correlated, and the majority vote accuracy peaks early before falling by up to $7.0$ points. The cause is concentration, not RLVR itself. We split the same data and training budget across $K$ LoRA adapters, each trained on its own random disjoint shard, and call the result an adapter thicket. Thickets out-vote the fully trained adapter in all $16$ (model, $K$) settings, and for $K{\\geq}4$ they stay within $0.8$ points of the base model or above it. A single adapter stopped early, at a thicket member's step count, is a strong control that matches thickets for small $K$. For $K{\\geq}8$, thickets keep more of RLVR's single-sample gain and out-vote this control in six of eight settings. The cost of concentration also grows with the number...",
+    "published": "Oct 02",
+    "published_iso": "2026-10-02T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.00991v2",
+    "arxiv_url": "http://arxiv.org/abs/2610.00991v2",
+    "queried_author": "Karthik R Narasimhan",
+    "matching_authors": [
+      "Karthik R Narasimhan"
     ]
   },
   {
@@ -13252,97 +13351,5 @@
       "Yoav Artzi"
     ],
     "published_iso": "2026-03-12T04:00:00+00:00"
-  },
-  {
-    "title": "CREATE: Testing LLMs for Associative Creativity",
-    "authors": [
-      "Manya Wadhwa",
-      "Tiasa Singha Roy",
-      "Harvey Lederman",
-      "Junyi Jessy Li",
-      "Greg Durrett"
-    ],
-    "summary": "A key component of creativity is associative reasoning: the ability to draw novel yet meaningful connections between concepts. We introduce CREATE, a benchmark designed to evaluate models' capacity for creative associative reasoning. CREATE requires models to generate sets of paths connecting concepts in a model's parametric knowledge. Paths should have high specificity (distinctiveness and closeness of the concept connection) and high diversity (dissimilarity from other paths), and models are scored more highly if they produce a larger set of strong, diverse paths. This task shares demands of real creativity tasks like hypothesis generation, including an extremely large search space, but enables collection of a sizable benchmark with objective answer grading. Evaluation of frontier models shows that the strongest models achieve higher creative utility than others, with the high multiplicity of answers and complexity of the search making benchmark saturation difficult to achieve. Furthermore, our results illustrate that thinking models are not always more effective on our task, even with high token budgets. Recent approaches for creative prompting give some but limited additional improvement. CREATE provides a sandbox for developing new methods to improve models' capacity for associative creativity.",
-    "published": "Mar 11",
-    "pdf_url": "https://arxiv.org/pdf/2603.09970v2",
-    "arxiv_url": "http://arxiv.org/abs/2603.09970v2",
-    "queried_author": "Greg Durrett",
-    "matching_authors": [
-      "Greg Durrett"
-    ],
-    "published_iso": "2026-03-11T04:00:00+00:00"
-  },
-  {
-    "title": "SCENEBench: An Audio Understanding Benchmark Grounded in Assistive and Industrial Use Cases",
-    "authors": [
-      "Laya Iyer",
-      "Angelina Wang",
-      "Sanmi Koyejo"
-    ],
-    "summary": "Advances in large language models (LLMs) have enabled significant capabilities in audio processing, resulting in state-of-the-art models now known as Large Audio Language Models (LALMs). However, minimal work has been done to measure audio understanding beyond automatic speech recognition (ASR). This paper closes that gap by proposing a benchmark suite, SCENEBench (Spatial, Cross-lingual, Environmental, Non-speech Evaluation), that targets a broad form of audio comprehension across four real-world categories: background sound understanding, noise localization, cross-linguistic speech understanding, and vocal characterizer recognition. These four categories are selected based on understudied needs from accessibility technology and industrial noise monitoring. In addition to performance, we also measure model latency. The purpose of this benchmark suite is to assess audio beyond just what words are said - rather, how they are said and the non-speech components of the audio. Because our audio samples are synthetically constructed (e.g., by overlaying two natural audio samples), we further validate our benchmark against 20 natural audio items per task, sub-sampled from existing datasets to match our task criteria, to assess ecological validity. We assess five state-of-the-art LALMs and find critical gaps: performance varies across tasks, with some tasks performing below random chance and others achieving high accuracy. These results provide direction for targeted improvements in model capabilities.",
-    "published": "Mar 11",
-    "pdf_url": "https://arxiv.org/pdf/2603.09853v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.09853v1",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
-    ],
-    "published_iso": "2026-03-11T04:00:00+00:00"
-  },
-  {
-    "title": "AI Meets Mathematics Education: A Case Study on Supporting an Instructor in a Large Mathematics Class with Context-Aware AI",
-    "authors": [
-      "J\u00e9r\u00e9my Barghorn",
-      "Anna Sotnikova",
-      "Sacha Friedli",
-      "Antoine Bosselut"
-    ],
-    "summary": "Large-enrollment university courses face persistent challenges in providing timely and scalable instructional support. While generative AI holds promise, its effective use depends on reliability and pedagogical alignment. We present a human-centered case study of AI-assisted support in a Calculus I course, implemented in close collaboration with the course instructor. We developed a system to answer students' questions on a discussion forum, fine-tuning a lightweight language model on 2,588 historical student-instructor interactions. The model achieved 75.3% accuracy on a benchmark of 150 representative questions annotated by five instructors, and in 36% of cases, its responses were rated equal to or better than instructor answers. Post-deployment student survey (N = 105) indicated that students valued the alignment of the responses with the course materials and their immediate availability, while still relying on the instructor verification for trust. We highlight the importance of hybrid human-AI workflows for safe and effective course support.",
-    "published": "Mar 10",
-    "pdf_url": "https://arxiv.org/pdf/2603.26679v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.26679v1",
-    "queried_author": "Antoine Bosselut",
-    "matching_authors": [
-      "Antoine Bosselut"
-    ],
-    "published_iso": "2026-03-10T04:00:00+00:00"
-  },
-  {
-    "title": "Speculating Experts Accelerates Inference for Mixture-of-Experts",
-    "authors": [
-      "Vivan Madan",
-      "Prajwal Singhania",
-      "Abhinav Bhatele",
-      "Tom Goldstein",
-      "Ashwinee Panda"
-    ],
-    "summary": "Mixture-of-Experts (MoE) models have gained popularity as a means of scaling the capacity of large language models (LLMs) while maintaining sparse activations and reduced per-token compute. However, in memory-constrained inference settings, expert weights must be offloaded to CPU, creating a performance bottleneck from CPU-GPU transfers during decoding. We propose an expert prefetching scheme that leverages currently computed internal model representations to speculate future experts, enabling memory transfers to overlap with computation. Across multiple MoE architectures, we demonstrate that future experts can be reliably predicted by these internal representations. We also demonstrate that executing speculated experts generally maintains downstream task accuracy, thus preserving more effective compute-memory overlap by eliminating the need to re-fetch true router-selected experts. Integrated into an optimized inference engine, our approach achieves up to 14\\% reduction in time per output token (TPOT) over on-demand loading of experts from CPU memory. For MoEs where speculative execution alone yields suboptimal accuracy, we further examine lightweight estimators that improve expert prediction hit rates, thereby reducing performance degradation. Our code is released in open-source at https://github.com/axonn-ai/yalis/tree/offload_prefetch.",
-    "published": "Mar 10",
-    "pdf_url": "https://arxiv.org/pdf/2603.19289v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.19289v1",
-    "queried_author": "Ashwinee Panda",
-    "matching_authors": [
-      "Ashwinee Panda"
-    ],
-    "published_iso": "2026-03-10T04:00:00+00:00"
-  },
-  {
-    "title": "From Refusal Tokens to Refusal Control: Discovering and Steering Category-Specific Refusal Directions",
-    "authors": [
-      "Rishab Alagharu",
-      "Ishneet Sukhvinder Singh",
-      "Shaibi Shamsudeen",
-      "Zhen Wu",
-      "Ashwinee Panda"
-    ],
-    "summary": "Language models are commonly fine-tuned for safety alignment to refuse harmful prompts. One approach fine-tunes them to generate categorical refusal tokens that distinguish different refusal types before responding. In this work, we leverage a version of Llama 3 8B fine-tuned with these categorical refusal tokens to enable inference-time control over fine-grained refusal behavior, improving both safety and reliability. We show that refusal token fine-tuning induces separable, category-aligned directions in the residual stream, which we extract and use to construct categorical steering vectors with a lightweight probe that determines whether to steer toward or away from refusal during inference. In addition, we introduce a learned low-rank combination that mixes these category directions in a whitened, orthonormal steering basis, resulting in a single controllable intervention under activation-space anisotropy, and show that this intervention is transferable across same-architecture model variants without additional training. Across benchmarks, both categorical steering vectors and the low-rank combination consistently reduce over-refusals on benign prompts while increasing refusal rates on harmful prompts, highlighting their utility for multi-category refusal control.",
-    "published": "Mar 10",
-    "pdf_url": "https://arxiv.org/pdf/2603.13359v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.13359v1",
-    "queried_author": "Ashwinee Panda",
-    "matching_authors": [
-      "Ashwinee Panda"
-    ],
-    "published_iso": "2026-03-10T04:00:00+00:00"
   }
 ]
