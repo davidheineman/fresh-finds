@@ -1,5 +1,28 @@
 [
   {
+    "title": "RT-J: Large-Scale Pretraining of Relational Transformers for Context-Efficient Predictions",
+    "authors": [
+      "Rishabh Ranjan",
+      "Vignesh Kothapalli",
+      "Harshvardhan Agarwal",
+      "Charilaos Kanatsoulis",
+      "Roshan Upendra",
+      "Tom Palczewski",
+      "Carlos Guestrin",
+      "Jure Leskovec"
+    ],
+    "summary": "Foundation models for tables and relational databases are increasingly used for predictive tasks across various scientific and industrial domains. However, adapting existing models to unseen datasets requires tens of thousands of examples. Here we introduce RT-J, an 85M-parameter relational foundation model (RFM) that makes accurate predictions even with hundreds of in-context examples or fewer. To achieve this, we first assemble the Join, a large collection of 639 web-crawled databases with 6,023 LLM-generated forecasting tasks. We pretrain with long contexts of up to 8,192 database cells, using in-context examples from a novel lightweight random-walk retriever. Finally, we leverage context tuning and ensembling to scale up test-time compute. On in-context regression tasks from RelBench, RT-J requires 10x fewer examples on average to match strong feature engineering pipelines with LLM-agent or RDBLearn featurizers and TabICLv2 or LightGBM predictors. Overall, our work pushes the frontier for context-efficient predictions on relational data and highlights the importance of real-world semantics, context engineering and large-scale pretraining for RFMs.",
+    "published": "Oct 14",
+    "published_iso": "2026-10-14T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.17867v1",
+    "arxiv_url": "http://arxiv.org/abs/2610.17867v1",
+    "queried_author": "Carlos Guestrin",
+    "matching_authors": [
+      "Carlos Guestrin",
+      "Jure Leskovec"
+    ]
+  },
+  {
     "title": "ReplaySSM: Cache SSM Inputs, Not State",
     "authors": [
       "Ze-Wei Liou",
@@ -13333,22 +13356,6 @@
     "queried_author": "Ranjay Krishna",
     "matching_authors": [
       "Ranjay Krishna"
-    ],
-    "published_iso": "2026-03-12T04:00:00+00:00"
-  },
-  {
-    "title": "Lost in Backpropagation: The LM Head is a Gradient Bottleneck",
-    "authors": [
-      "Nathan Godey",
-      "Yoav Artzi"
-    ],
-    "summary": "The last layer of neural language models (LMs) projects output features of dimension $D$ to logits in dimension $V$, the size of the vocabulary, where usually $D \\ll V$. This mismatch is known to raise risks of limited expressivity in neural LMs, creating a so-called softmax bottleneck. We show the softmax bottleneck is not only an expressivity bottleneck but also an optimization bottleneck. Backpropagating $V$-dimensional gradients through a rank-$D$ linear layer induces unavoidable compression, which alters the training feedback provided to the vast majority of the parameters. We present a theoretical analysis of this phenomenon and measure empirically that 95-99% of the gradient norm is suppressed by the output layer, resulting in vastly suboptimal update directions. We conduct controlled pretraining experiments showing that the gradient bottleneck makes trivial patterns unlearnable, and drastically affects the training dynamics of LLMs. We argue that this inherent flaw contributes to training inefficiencies at scale independently of the model architecture, and raises the need for new LM head designs.",
-    "published": "Mar 12",
-    "pdf_url": "https://arxiv.org/pdf/2603.10145v2",
-    "arxiv_url": "http://arxiv.org/abs/2603.10145v2",
-    "queried_author": "Yoav Artzi",
-    "matching_authors": [
-      "Yoav Artzi"
     ],
     "published_iso": "2026-03-12T04:00:00+00:00"
   }
