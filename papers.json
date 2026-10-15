@@ -1,5 +1,194 @@
 [
   {
+    "title": "DTDD: Divergence-Triggered Dynamic Distillation for Reliable On-Policy Supervision",
+    "authors": [
+      "Qijia He",
+      "Zequn Li",
+      "Spencer Luo",
+      "Tianle Chen",
+      "Pradyumna Narayana",
+      "Zixian Ma",
+      "Ranjay Krishna",
+      "Lan Nie",
+      "Sugato Basu"
+    ],
+    "summary": "On-policy distillation (OPD) provides dense token-level supervision on student rollouts, but this supervision can become unreliable when the student and teacher diverge, either because of a large initial policy gap or compounding errors in long-horizon reasoning and tool use. We introduce Divergence-Triggered Dynamic Distillation (DTDD), an adaptive OPD framework that uses segment-level student-teacher divergence to trigger teacher takeover during training. When divergence triggers an intervention during reasoning, the student prefix continues to receive standard OPD supervision. The teacher then generates a recovery suffix, which the student learns through behavior cloning, using cross-entropy on the teacher-generated tokens. We evaluate DTDD in three regimes: long-horizon reasoning, distillation from a base initialization without offline supervised fine-tuning (SFT), and multi-turn agents. We also compare alternative trigger designs and teacher-intervention rates. DTDD reduces the post-warmup peak gradient norm by $8.6\\times$ and, from a base initialization, reaches $21.3\\%$ held-out math accuracy in $2.6\\times$ fewer optimizer updates than OPD; both methods finish near $22\\%$. It improves best-observed performance by $4.8$ and $4.1$ percentage points on ALFWorld with LoRA and agentic code, respectively. Ablations show that segment-averaged triggers outperform token-spike triggers. Behavior cloning is also more effective than the tested OPD surrogate for training teacher-generated recoveries. Across 23 experimental arms, takeover tends to help when the teacher substantial...",
+    "published": "Oct 15",
+    "published_iso": "2026-10-15T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.19302",
+    "arxiv_url": "https://arxiv.org/abs/2610.19302",
+    "queried_author": "Ranjay Krishna",
+    "matching_authors": [
+      "Ranjay Krishna"
+    ]
+  },
+  {
+    "title": "Diagnosing and Correcting Reward Hacking in Verifiable Instruction Following",
+    "authors": [
+      "Sangyeon Yoon",
+      "Wooseok Seo",
+      "Hamish Ivison",
+      "Hyesoo Hong",
+      "Donghoon Kim",
+      "Wonjun Kang",
+      "Albert No",
+      "Jaehyung Kim"
+    ],
+    "summary": "Verifiable instruction-following benchmarks emphasize output-constraint satisfaction but can overlook whether responses meaningfully answer the underlying request, creating an evaluation blind spot. We show that frontier models can receive full credit for responses with little substantive answer content. Using the same verifier-based criterion as a training reward can induce reward hacking, as publicly released checkpoints exhibit higher constraint satisfaction but lower response quality after reinforcement learning with verifiable rewards. To address this reward hacking, we introduce CALIF, a lightweight method that augments verifier rewards with a calibrated likelihood-based bonus to preserve response quality. CALIF evaluates response likelihood under the request alone using the existing frozen reference policy, requiring no additional judge or learned reward model. Across models ranging from 1.7B to 8B in reasoning and non-reasoning modes, CALIF improves constraint satisfaction on IFBench while maintaining response quality near or above pre-RL levels. It also outperforms corresponding base policies in 40 of 45 model-metric comparisons across three rubric-based instruction-following benchmarks, demonstrating gains beyond training verifiers.",
+    "published": "Oct 15",
+    "published_iso": "2026-10-15T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.19525",
+    "arxiv_url": "https://arxiv.org/abs/2610.19525",
+    "queried_author": "Hamish Ivison",
+    "matching_authors": [
+      "Hamish Ivison"
+    ]
+  },
+  {
+    "title": "Into the Unknown: Benchmarking AI agents on open scientific research problems",
+    "authors": [
+      "Seungone Kim",
+      "Jiayi Geng",
+      "Young-Jun Lee",
+      "Bo Liu",
+      "Juyoung Suk",
+      "Nicholas Lubbers",
+      "Mitchell Wood",
+      "Marcus Noack",
+      "Yong-Xin Yao",
+      "Yuan Shi",
+      "Roxana Bujack",
+      "Cristina Garcia Cardona",
+      "Austin Rodriguez",
+      "Ilon Joseph",
+      "Woojin Cho",
+      "Zora Zhiruo Wang",
+      "Chuanyang Jin",
+      "Ian Wu",
+      "Apurva Gandhi",
+      "Tianjian Li",
+      "Weiwei Sun",
+      "Carolin Lawrence",
+      "Kiril Gashteovski",
+      "Dongyeop Kang",
+      "Jay Shin",
+      "Akari Asai",
+      "Graham Neubig",
+      "Sean Welleck"
+    ],
+    "summary": "Can AI agents carry out research on open scientific problems? We introduce Into the Unknown, a benchmark that provides an agent with a science paper along with a research direction to pursue and tasks it to write a follow-up paper. We work with scientists at US Department of Energy (DOE) national laboratories, who each contribute an unpublished follow-up direction from their own work together with the necessary conditions a submission must meet. While assessing the quality of a follow-up paper is challenging in general, using these conditions to form a rubric makes evaluation more tractable for research problems that have no reference answer. We have nine frontier agents write 15 follow-ups each, spanning quantum computing, plasma physics, computational chemistry, materials science, and scientific machine learning domains. None of the 135 submissions satisfies all the conditions, and 114 fail our integrity check, most often because the paper claims work that was never done or reports numbers that contradict the recorded evidence. Overall, agents readily produce papers that look like follow-ups, but none meets the standard of the domain scientist, leaving substantial headroom. Our code and data are publicly available.",
+    "published": "Oct 15",
+    "published_iso": "2026-10-15T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.19159",
+    "arxiv_url": "https://arxiv.org/abs/2610.19159",
+    "queried_author": "Akari Asai",
+    "matching_authors": [
+      "Akari Asai",
+      "Graham Neubig",
+      "Sean Welleck",
+      "Seungone Kim"
+    ]
+  },
+  {
+    "title": "Articulation Upper Bounds for Language Models",
+    "authors": [
+      "Alexander Spangher",
+      "Daniel E. Ho",
+      "Diyi Yang",
+      "Noah Goodman",
+      "Sanmi Koyejo"
+    ],
+    "summary": "Language captures only a subset of the perceptions, intuitions and intents that form meaning between speakers. What, then, are the limits of language? We take steps towards measuring this in LLMs as follows: for a set of concepts, we measure how well each concept can be transmitted between two LLMs as their capabilities scale. This requires novel measurement tools: (1) optimal messages: we introduce a prompt optimization algorithm that beats existing algorithms by up to 14% on benchmarks and accurately estimates prompt upper bounds. (2) A transmission measure: the sender is asked to label text; the receiver then tries to recover the sender's prompt, and recovery is measured; we find this correlates strongly with human label error. With these measures, we use observational scaling laws to study how transmissibility of a concept, conveyed with optimal messages, increases as transmitter and receiver capacity grows: does it asymptote below or above a threshold? Measuring 1.2k concepts in eight domains, we find concepts that (a) can be fully articulated; these concepts usually depend on local patterns, e.g. \"joke ends with surprise\"; (b) might be articulated by future, stronger models; these rely on whole-text structural patterns, e.g. \"story's worldbuilding coherence\"; (c) concepts that face articulability limits; these concepts' meaning, we find, is tied to identity and social-group awareness, e.g. \"comic voice\". Interesting, these same concepts are not all challenging for humans: humans have moderate-to-high levels of agreement in 76% of concepts that LLMs struggle with; arti...",
+    "published": "Oct 15",
+    "published_iso": "2026-10-15T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.19721",
+    "arxiv_url": "https://arxiv.org/abs/2610.19721",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang",
+      "Noah Goodman",
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "The COUNT: Counting N-grams Unlocks Scaling on Host Memory and Training-Free Adaptation",
+    "authors": [
+      "Ian Magnusson",
+      "Noah A. Smith",
+      "Pang Wei Koh"
+    ],
+    "summary": "The scaling relationship of compute and performance for language models (LMs) has been extensively studied; more recently, models are being designed to scale memory use, as well. In particular, adding embeddings for n-grams scales memory separately from compute use, because each pass only processes individual embedding rows, which are much smaller than the storage used for the whole embedding table. However, existing methods train embeddings from scratch, which needs expensive GPU memory for fast reading and writing. Meanwhile, the ordinary memory of the host system is cheap and underutilized by these training methods. To scale on host memory, we introduce COUNT (Counting Offline Unlocks N-gram Transformers), which builds n-gram embeddings without adding learned parameters by storing precomputed n-gram counts on host. We use the corpus frequencies to weight together the LM's own unembeddings of the next tokens most often following the current n-gram history. At a fixed compute budget, COUNT can be added as an additional input embedding for pretraining 1B-parameter LMs to improve validation loss as much as an LM with 57% more compute. If GPU memory is limited, using COUNT to let backbone parameters fill GPU memory gives better performance than splitting memory with additional learned n-gram embeddings. Beyond efficiency, COUNT allows switching in a different table of n-gram counts from a domain-specific corpus at inference time to adapt to a new task without any training.",
+    "published": "Oct 15",
+    "published_iso": "2026-10-15T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.20456",
+    "arxiv_url": "https://arxiv.org/abs/2610.20456",
+    "queried_author": "Ian Magnusson",
+    "matching_authors": [
+      "Ian Magnusson",
+      "Noah A. Smith",
+      "Pang Wei Koh"
+    ]
+  },
+  {
+    "title": "Price of Anarchy of First-Price Auctions in Agentic Markets",
+    "authors": [
+      "Shubhendu Trivedi",
+      "Jacob Eisenstein",
+      "Alekh Agarwal",
+      "Ian Gemp",
+      "Michael Kaisers",
+      "Adam Fisch"
+    ],
+    "summary": "An agentic market is a decentralized serving-time market where AI agents bid to claim each user prompt. An agent's bid is based on its expected value for the prompt, which is the expectation of the reward for its response minus its inference costs. First-price auctions (FPAs), in which the highest bidder pays its bid and receives the prompt, are a natural way to allocate prompts in such a market, since they are simple and transparent to run, and do not require central knowledge of private capabilities and costs. However, FPAs are not truthful: participants may bid less than their true value in the hope of a larger profit, and the prompt may then be allocated to someone other than the bidder who values it the most. This welfare loss is quantified by the $\\textit{price-of-anarchy}$ (PoA). In this paper, we argue that agentic markets are likely to possess features that reduce the price-of-anarchy. The first is a $\\textit{competitive floor}$, which occurs when multiple bidders usually value the prompt above some baseline share of the optimal welfare (e.g., because the best models are often distilled into cheaper alternatives, which perform similarly). We show that competition among them then limits the welfare loss, which can be driven to zero as the floor rises. The second feature is $\\textit{near-independence}$ of values after conditioning on the prompt, which occurs when most of the predictable variation in the expected value is determined by the difficulty of the prompt. As the value distribution approaches conditional independence, we can derive an efficiency guarantee tha...",
+    "published": "Oct 15",
+    "published_iso": "2026-10-15T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.20587",
+    "arxiv_url": "https://arxiv.org/abs/2610.20587",
+    "queried_author": "Jacob Eisenstein",
+    "matching_authors": [
+      "Jacob Eisenstein"
+    ]
+  },
+  {
+    "title": "Copy-Paste Language Models",
+    "authors": [
+      "Nathan Godey",
+      "Yoav Artzi"
+    ],
+    "summary": "Transformers are intuitively considered to be efficient at copying from their inputs. We actually show that the ability of LLMs to copy in context can be improved through explicit modeling. We propose Copy-Paste Language Models (CPLMs), which add a lightweight Copy-Paste head to the conventional language modeling (LM) head. CPLMs improve training efficiency, downstream performance, and offer new operating points in long-context and retrieval setups. We validate our approach by pretraining models from 135M to 1.7B parameters, showing improvements across all scales and backbones with negligible training and inference overheads. We explain the success of CPLMs by showing that they partially mitigate the LM head gradient bottleneck through an alternative gradient path.",
+    "published": "Oct 15",
+    "published_iso": "2026-10-15T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.19247",
+    "arxiv_url": "https://arxiv.org/abs/2610.19247",
+    "queried_author": "Yoav Artzi",
+    "matching_authors": [
+      "Yoav Artzi"
+    ]
+  },
+  {
+    "title": "One Block Ahead: Promoting Sampler State in Diffusion Language Models",
+    "authors": [
+      "Yangyi Shen",
+      "Pin-Jui Ku",
+      "Nicolai Oswald",
+      "Jean-Marie Lemercier",
+      "Yonggan Fu",
+      "Stefano Ermon",
+      "Jure Leskovec",
+      "Boris Ginsburg",
+      "Ante Juki\\'c"
+    ],
+    "summary": "Block-diffusion language models denoise a whole block of token positions in parallel so each forward pass can emit many tokens. However, blocks are still denoised in strict sequence, a cost that within-block acceleration leaves untouched. Here, we investigate decoding blocks concurrently and propose One Block Ahead (OBA), a training-free decoding algorithm that denoises the next block alongside the current one. We demonstrate that for uniform-state diffusion LMs, where a block's denoising progress is not visible in its intermediate tokens, concurrent decoding is advantageous if the next block's tokens are promoted together with the corresponding sampler state, including the self-conditioning signal and the denoising time. We also derive a break-even criterion that relates the benefit of OBA to the relative cost of a paired-block forward pass. On DiffusionGemma, a state-of-the-art diffusion LM, OBA increases the tokens per forward pass by 42.3% (from 15.64 to 22.25) and the single-request denoising throughput by 16.3%, averaged over ten benchmarks, with a small accuracy regression.",
+    "published": "Oct 15",
+    "published_iso": "2026-10-15T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.19510",
+    "arxiv_url": "https://arxiv.org/abs/2610.19510",
+    "queried_author": "Jure Leskovec",
+    "matching_authors": [
+      "Jure Leskovec"
+    ]
+  },
+  {
     "title": "RT-J: Large-Scale Pretraining of Relational Transformers for Context-Efficient Predictions",
     "authors": [
       "Rishabh Ranjan",
@@ -13125,223 +13314,5 @@
       "Christopher D Manning"
     ],
     "published_iso": "2026-03-19T04:00:00+00:00"
-  },
-  {
-    "title": "Argument Reconstruction as Supervision for Critical Thinking in LLMs",
-    "authors": [
-      "Hyun Ryu",
-      "Gyouk Chu",
-      "Gregor Betz",
-      "Eunho Yang",
-      "Carolyn Rose",
-      "Sean Welleck"
-    ],
-    "summary": "To think critically about arguments, human learners are trained to identify, reconstruct, and evaluate arguments. Argument reconstruction is especially important because it makes an argument's underlying inferences explicit. However, it remains unclear whether LLMs can similarly enhance their critical thinking ability by learning to reconstruct arguments. To address this question, we introduce a holistic framework with three contributions. We (1) propose an engine that automatically reconstructs arbitrary arguments (GAAR), (2) synthesize a new high-quality argument reconstruction dataset (Arguinas) using the GAAR engine, and (3) investigate whether learning argument reconstruction benefits downstream critical thinking tasks. Our experimental results show that, across seven critical thinking tasks, models trained to learn argument reconstruction outperform models that do not, with the largest performance gains observed when training on the proposed Arguinas dataset.",
-    "published": "Mar 19",
-    "pdf_url": "https://arxiv.org/pdf/2603.17432v3",
-    "arxiv_url": "http://arxiv.org/abs/2603.17432v3",
-    "queried_author": "Sean Welleck",
-    "matching_authors": [
-      "Sean Welleck"
-    ],
-    "published_iso": "2026-03-19T04:00:00+00:00"
-  },
-  {
-    "title": "TurnWise: The Gap between Single- and Multi-turn Language Model Capabilities",
-    "authors": [
-      "Victoria Graf",
-      "Valentina Pyatkin",
-      "Nouha Dziri",
-      "Nathan Lambert",
-      "Hannaneh Hajishirzi"
-    ],
-    "summary": "Multi-turn conversations are a common and critical mode of language model interaction. However, current open training and evaluation data focus on single-turn settings, failing to capture the additional dimension of these longer interactions. To understand this multi-/single-turn gap, we first introduce a new benchmark, TurnWiseEval, for multi-turn capabilities that is directly comparable to single-turn chat evaluation. Our evaluation isolates multi-turn specific conversational ability through pairwise comparison to equivalent single-turn settings. We additionally introduce our synthetic multi-turn data pipeline TurnWiseData which allows the scalable generation of multi-turn training data. Our experiments with Olmo 3 show that training with multi-turn data is vital to achieving strong multi-turn chat performance, and that including as little as 10k multi-turn conversations during post-training can lead to a 12% improvement on TurnWiseEval.",
-    "published": "Mar 18",
-    "pdf_url": "https://arxiv.org/pdf/2603.16759v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.16759v1",
-    "queried_author": "Hannaneh Hajishirzi",
-    "matching_authors": [
-      "Hannaneh Hajishirzi"
-    ],
-    "published_iso": "2026-03-18T04:00:00+00:00"
-  },
-  {
-    "title": "Whose Knowledge Counts? Co-Designing Community-Centered AI Auditing Tools with Educators in Hawai`i",
-    "authors": [
-      "Dora Zhao",
-      "Hannah Cha",
-      "Michael J. Ryan",
-      "Angelina Wang",
-      "Rachel Baker-Ramos Evyn-Bree Helekahi-Kaiwi",
-      "Rebecca Diego",
-      "Josiah Hester",
-      "Diyi Yang"
-    ],
-    "summary": "Although generative AI is being deployed into classrooms with promises of aiding teachers, educators caution that these tools can have unintended pedagogical repercussions, including cultural misrepresentation and bias. These concerns are heightened in low-resource language and Indigenous education settings, where AI systems frequently underperform. We investigate these challenges in Hawai`i, where public schools operate under a statewide mandate to integrate Hawaiian language and culture into education. Through four co-design workshops with 22 public school educators, we surfaced concerns about using generative AI in educational settings, particularly around cultural misrepresentation, and corresponding designs for auditing tools that address these issues. We find that educators envision tools grounded in specific Hawaiian cultural values and practices, such as tracing the genealogy of knowledge in source materials. Building on these insights, we conceptualize AI auditing as a community-oriented process rather than the work of isolated individuals, and discuss implications for designing auditing tools.",
-    "published": "Mar 18",
-    "pdf_url": "https://arxiv.org/pdf/2603.16646v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.16646v1",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang"
-    ],
-    "published_iso": "2026-03-18T04:00:00+00:00"
-  },
-  {
-    "title": "The Finetuner's Fallacy: When to Pretrain with Your Finetuning Data",
-    "authors": [
-      "Christina Baek",
-      "Ricardo Pio Monti",
-      "David Schwab",
-      "Amro Abbas",
-      "Rishabh Adiga",
-      "Cody Blakeney",
-      "Maximilian B\u00f6ther",
-      "Paul Burstein",
-      "Aldo Gael Carranza",
-      "Alvin Deng",
-      "Parth Doshi",
-      "Vineeth Dorna",
-      "Alex Fang",
-      "Tony Jiang",
-      "Siddharth Joshi",
-      "Brett W. Larsen",
-      "Jason Chan Lee",
-      "Katherine L. Mentzer",
-      "Luke Merrick",
-      "Haakon Mongstad",
-      "Fan Pan",
-      "Anshuman Suri",
-      "Darren Teh",
-      "Jason Telanoff",
-      "Jack Urbanek",
-      "Zhengping Wang",
-      "Josh Wills",
-      "Haoli Yin",
-      "Aditi Raghunathan",
-      "J. Zico Kolter",
-      "Bogdan Gaza",
-      "Ari Morcos",
-      "Matthew Leavitt",
-      "Pratyush Maini"
-    ],
-    "summary": "Real-world model deployments demand strong performance on narrow domains where data is often scarce. Typically, practitioners finetune models to specialize them, but this risks overfitting to the domain and forgetting general knowledge. We study a simple strategy, specialized pretraining (SPT), where a small domain dataset, typically reserved for finetuning, is repeated starting from pretraining as a fraction of the total tokens. Across three specialized domains (ChemPile, MusicPile, and ProofPile), SPT improves domain performance and preserves general capabilities after finetuning compared to standard pretraining. In our experiments, SPT reduces the pretraining tokens needed to reach a given domain performance by up to 1.75x. These gains grow when the target domain is underrepresented in the pretraining corpus: on domains far from web text, a 1B SPT model outperforms a 3B standard pretrained model. Beyond these empirical gains, we derive overfitting scaling laws to guide practitioners in selecting the optimal domain-data repetition for a given pretraining compute budget. Our observations reveal the finetuner's fallacy: while finetuning may appear to be the cheapest path to domain adaptation, introducing specialized domain data during pretraining stretches its utility. SPT yields better specialized domain performance (via reduced overfitting across repeated exposures) and better general domain performance (via reduced forgetting during finetuning), ultimately achieving stronger results with fewer parameters and less total compute when amortized over inference. To get the mo...",
-    "published": "Mar 18",
-    "pdf_url": "https://arxiv.org/pdf/2603.16177v2",
-    "arxiv_url": "http://arxiv.org/abs/2603.16177v2",
-    "queried_author": "J Zico Kolter",
-    "matching_authors": [
-      "J Zico Kolter",
-      "Aditi Raghunathan"
-    ],
-    "published_iso": "2026-03-18T04:00:00+00:00"
-  },
-  {
-    "title": "Language Models Don't Know What You Want: Evaluating Personalization in Deep Research Needs Real Users",
-    "authors": [
-      "Nishant Balepur",
-      "Malachi Hamada",
-      "Varsha Kishore",
-      "Sergey Feldman",
-      "Amanpreet Singh",
-      "Pao Siangliulue",
-      "Joseph Chee Chang",
-      "Eunsol Choi",
-      "Jordan Lee Boyd-Graber",
-      "Aakanksha Naik"
-    ],
-    "summary": "Deep Research (DR) systems help researchers cope with ballooning publishing counts. Such tools synthesize scientific papers to answer research queries, but lack understanding of their users. We address this with MyScholarQA (MySQA), a personalized DR agent that: 1) infers a profile with a user's research interests; 2) proposes personalized actions for a user's input query; and 3) writes a multi-section report for the query that follows user-approved actions. We first test MySQA with NLP's standard protocol: we build a benchmark with synthetic users and LLM judges, where MySQA beats baselines in citation metrics and personalized action-following. However, we suspect this process does not cover all aspects of personalized DR users value, so we interview users in an online version of MySQA to unmask them. We reveal nine nuanced errors of personalized DR undetectable by our LLM judges, and we study qualitative feedback to form lessons for future DR design. In all, we argue for a pillar of personalization that easy-to-use LLM judges can lead NLP to overlook: real progress in personalization is only possible with real users.",
-    "published": "Mar 18",
-    "pdf_url": "https://arxiv.org/pdf/2603.16120v2",
-    "arxiv_url": "http://arxiv.org/abs/2603.16120v2",
-    "queried_author": "Eunsol Choi",
-    "matching_authors": [
-      "Eunsol Choi"
-    ],
-    "published_iso": "2026-03-18T04:00:00+00:00"
-  },
-  {
-    "title": "CUBE: A Standard for Unifying Agent Benchmarks",
-    "authors": [
-      "Alexandre Lacoste",
-      "Nicolas Gontier",
-      "Oleh Shliazhko",
-      "Aman Jaiswal",
-      "Kusha Sareen",
-      "Shailesh Nanisetty",
-      "Joan Cabezas",
-      "Manuel Del Verme",
-      "Omar G. Younis",
-      "Simone Baratta",
-      "Matteo Avalle",
-      "Imene Kerboua",
-      "Xing Han L\u00f9",
-      "Elron Bandel",
-      "Michal Shmueli-Scheuer",
-      "Asaf Yehudai",
-      "Leshem Choshen",
-      "Jonathan Lebensold",
-      "Sean Hughes",
-      "Massimo Caccia",
-      "Alexandre Drouin",
-      "Siva Reddy",
-      "Tao Yu",
-      "Yu Su",
-      "Graham Neubig",
-      "Dawn Song"
-    ],
-    "summary": "The proliferation of agent benchmarks has created critical fragmentation that threatens research productivity. Each new benchmark requires substantial custom integration, creating an \"integration tax\" that limits comprehensive evaluation. We propose CUBE (Common Unified Benchmark Environments), a universal protocol standard built on MCP and Gym that allows benchmarks to be wrapped once and used everywhere. By separating task, benchmark, package, and registry concerns into distinct API layers, CUBE enables any compliant platform to access any compliant benchmark for evaluation, RL training, or data generation without custom integration. We call on the community to contribute to the development of this standard before platform-specific implementations deepen fragmentation as benchmark production accelerates through 2026.",
-    "published": "Mar 18",
-    "pdf_url": "https://arxiv.org/pdf/2603.15798v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.15798v1",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
-    ],
-    "published_iso": "2026-03-18T04:00:00+00:00"
-  },
-  {
-    "title": "Mamba-3: Improved Sequence Modeling using State Space Principles",
-    "authors": [
-      "Aakash Lahoti",
-      "Kevin Y. Li",
-      "Berlin Chen",
-      "Caitlin Wang",
-      "Aviv Bick",
-      "J. Zico Kolter",
-      "Tri Dao",
-      "Albert Gu"
-    ],
-    "summary": "Scaling inference-time compute has emerged as an important driver of LLM performance, making inference efficiency a central focus of model design alongside model quality. While the current Transformer-based models deliver strong model quality, their quadratic compute and linear memory make inference expensive. This has spurred the development of sub-quadratic models with reduced linear compute and constant memory requirements. However, many recent linear models trade off model quality and capability for algorithmic efficiency, failing on tasks such as state tracking. Moreover, their theoretically linear inference remains hardware-inefficient in practice. Guided by an inference-first perspective, we introduce three core methodological improvements inspired by the state space model (SSM) viewpoint of linear models. We combine: (1) a more expressive recurrence derived from SSM discretization, (2) a complex-valued state update rule that enables richer state tracking, and (3) a multi-input, multi-output (MIMO) formulation for better model performance without increasing decode latency. Together with architectural refinements, our Mamba-3 model achieves significant gains across retrieval, state-tracking, and downstream language modeling tasks. At the 1.5B scale, Mamba-3 improves average downstream accuracy by 0.6 percentage points compared to the next best model (Gated DeltaNet), with Mamba-3's MIMO variant further improving accuracy by another 1.2 points for a total 1.8 point gain. Across state-size experiments, Mamba-3 achieves comparable perplexity to Mamba-2 despite using half...",
-    "published": "Mar 17",
-    "pdf_url": "https://arxiv.org/pdf/2603.15569v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.15569v1",
-    "queried_author": "Albert Gu",
-    "matching_authors": [
-      "Albert Gu",
-      "J Zico Kolter",
-      "Tri Dao"
-    ],
-    "published_iso": "2026-03-17T04:00:00+00:00"
-  },
-  {
-    "title": "Are Dilemmas and Conflicts in LLM Alignment Solvable? A View from Priority Graph",
-    "authors": [
-      "Zhenheng Tang",
-      "Xiang Liu",
-      "Qian Wang",
-      "Eunsol Choi",
-      "Bo Li",
-      "Xiaowen Chu"
-    ],
-    "summary": "As Large Language Models (LLMs) become more powerful and autonomous, they increasingly face conflicts and dilemmas in many scenarios. We first summarize and taxonomize these diverse conflicts. Then, we model the LLM's preferences to make different choices as a priority graph, where instructions and values are nodes, and the edges represent context-specific priorities determined by the model's output distribution. This graph reveals that a unified stable LLM alignment is very challenging, because the graph is neither static nor necessarily consistent in different contexts. Besides, it also reveals a potential vulnerability: priority hacking, where adversaries can craft deceptive contexts to manipulate the graph and bypass safety alignments. To counter this, we propose a runtime verification mechanism, enabling LLMs to query external sources to ground their context and resist manipulation. While this approach enhances robustness, we also acknowledge that many ethical and value dilemmas are philosophically irreducible, posing a long-term, open challenge for the future of AI alignment.",
-    "published": "Mar 17",
-    "pdf_url": "https://arxiv.org/pdf/2603.15527v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.15527v1",
-    "queried_author": "Eunsol Choi",
-    "matching_authors": [
-      "Eunsol Choi"
-    ],
-    "published_iso": "2026-03-17T04:00:00+00:00"
   }
 ]
