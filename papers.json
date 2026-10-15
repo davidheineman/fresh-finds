@@ -272,6 +272,25 @@
     ]
   },
   {
+    "title": "A Self-Defining Operator for Distributed Applications",
+    "authors": [
+      "Shihang Li",
+      "Thomas Anderson",
+      "Ratul Mahajan",
+      "Simon Peter",
+      "Luke Zettlemoyer"
+    ],
+    "summary": "To operate distributed applications with high availability, operators must rapidly diagnose and mitigate any incident. LLM-based agents can help, but unlike experienced human operators they do not improve as they handle more incidents. Each investigation starts from scratch, re-deriving likely causes and re-testing hypotheses even when a similar fault was resolved in the past. We present a self-defining operator (SDO) that improves with time by updating its operational behavior and memory. When SDO resolves an incident, it distills that experience into playbooks, which describe reusable diagnostic instructions for future incidents with similar faults, and detectors, scripts that take application telemetry as input and output relevant playbook(s). SDO continuously runs the detectors and invokes LLMs only when one fires, so its token cost scales with incident count rather than with operational time. Across 11 open-source microservice applications, SDO cuts resolution time by 52% on recurring faults while keeping per-incident cost low. SDO is open source at https://github.com/self-defining-systems/sdo.",
+    "published": "Oct 14",
+    "published_iso": "2026-10-14T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.14547",
+    "arxiv_url": "https://arxiv.org/abs/2610.14547",
+    "queried_author": "Luke Zettlemoyer",
+    "matching_authors": [
+      "Luke Zettlemoyer"
+    ]
+  },
+  {
     "title": "ReplaySSM: Cache SSM Inputs, Not State",
     "authors": [
       "Ze-Wei Liou",
@@ -13322,22 +13341,6 @@
     "queried_author": "Eunsol Choi",
     "matching_authors": [
       "Eunsol Choi"
-    ],
-    "published_iso": "2026-03-17T04:00:00+00:00"
-  },
-  {
-    "title": "Invisible failures in human-AI interactions",
-    "authors": [
-      "Christopher Potts",
-      "Moritz Sudhof"
-    ],
-    "summary": "AI systems fail silently far more often than they fail visibly. In an analysis of 100K human-AI interactions from the WildChat dataset, we find that 79% of AI failures are invisible: something went wrong but the user gave no overt indication that there was a problem. These invisible failures cluster into eight archetypes that help us characterize where and how AI systems are failing to meet users' needs. In addition, the archetypes show systematic co-occurrence patterns indicating higher-level failure types. To address the question of whether these archetypes will remain relevant as AI systems become more capable, we also created and annotated a counterfactual dataset in which WildChat's 2024-era responses are replaced by those from three present-day frontier LMs. This analysis indicates that failure rates have dropped substantially, but that the vast majority of failures remain invisible in our sense, and the distribution of failure archetypes seems stable. Finally, we illustrate how the archetypes help us to identify systematic and variable AI limitations across different usage domains. Overall, we argue that our invisible failure taxonomy can be a key component in reliable failure monitoring for product developers, scientists, and policy makers. Our code and data are available at https://github.com/bigspinai/bigspin-invisible-failure-archetypes",
-    "published": "Mar 17",
-    "pdf_url": "https://arxiv.org/pdf/2603.15423v2",
-    "arxiv_url": "http://arxiv.org/abs/2603.15423v2",
-    "queried_author": "Christopher Potts",
-    "matching_authors": [
-      "Christopher Potts"
     ],
     "published_iso": "2026-03-17T04:00:00+00:00"
   }
