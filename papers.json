@@ -1,5 +1,208 @@
 [
   {
+    "title": "Memorilla: Latent Semantic Memory for LLMs",
+    "authors": [
+      "Adibvafa Fallahpour",
+      "Parsa Idehpour",
+      "Vignesh Kothapalli",
+      "Nikita Mounier",
+      "Shirley Wu",
+      "Shayan Pardis",
+      "Jure Leskovec"
+    ],
+    "summary": "Memory enables large language models (LLMs) to use information beyond their parameters, such as past user conversations, long documents, or an agent's earlier actions. For a frozen LLM, access to this accumulated knowledge is limited to what a memory system places in its context window. However, gathering and combining relevant information needed for each query while keeping the model's context short remains challenging for existing systems. Here we introduce Memorilla, a memory system that gathers information from an entire document collection into a fixed number of query-dependent 'memory tokens' for a frozen LLM. Memorilla encodes documents (such as user chats, book chapters) once into reusable embeddings, then learns to retrieve and place query-specific information in the LLM's input embedding space. Using only 16 memory tokens, Memorilla achieves the best performance against baselines including Mem0 and MemoRAG on five of eight benchmarks spanning personalization, long-document and knowledge-intensive question answering. Notably, on FactKG, it reaches 84.33% accuracy versus 80.43% with full-context inference, while using 108x fewer tokens to represent the source documents. Furthermore, Memorilla can facilitate continual learning in agentic systems where the document count (the agent's past turns) increases throughout the trajectory. In a TextWorld environment, we show that Memorilla reduces the agent's tendency to wander between rooms it has already explored, and improves its average success rate from 18.6% with full-history in-context learning to 24.2%. Overall, Memor...",
+    "published": "Oct 16",
+    "published_iso": "2026-10-16T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.21375",
+    "arxiv_url": "https://arxiv.org/abs/2610.21375",
+    "queried_author": "Jure Leskovec",
+    "matching_authors": [
+      "Jure Leskovec"
+    ]
+  },
+  {
+    "title": "AlphaDiana: A Measurement System for Agents in Verifiable Reasoning Tasks",
+    "authors": [
+      "Zhanke Zhou",
+      "Zongze Li",
+      "Weikai Huang",
+      "Xuan Li",
+      "Chentao Cao",
+      "Xiao Feng",
+      "Xiangyu Lu",
+      "Jinbo Hu",
+      "Yi Xie",
+      "Nico Pelleriti",
+      "Shiyang Liu",
+      "Menghan Lu",
+      "Max Zimmer",
+      "Brando Miranda",
+      "Jiangchao Yao",
+      "Bo Liu",
+      "Sanmi Koyejo",
+      "Sebastian Pokutta",
+      "Bo Han"
+    ],
+    "summary": "Agents pair reasoning models with harnesses that organize model calls, execute tools, load skill instructions, and retain history in memory. Understanding agent performance requires linking execution conditions to outcomes, behavior, and resource use. We introduce AlphaDiana, a measurement system with modular interfaces for datasets, agents, environments, and scorers. It preserves harness-native control loops while controlling file reuse and memory retention separately. AlphaDiana supports macro analyses of complete agents and micro interventions on agent components such as tools, skills, and memory under matched conditions. We study three open-source models and three open-source harnesses on five answer-based benchmarks, with two models also tested on two interactive benchmarks. We find that harnesses do not consistently improve the accuracy of reasoning: gains on questions unsolved by the model alone can be outweighed by losses on questions it answers correctly without tools. This inconsistency extends to component interventions: neither skill guidance nor retained history reliably improves accuracy. Behavior and output-token use must be assessed with correctness: low token entropy can accompany wrong answers, and less output per execution can mean more output tokens per correct answer when accuracy falls. AlphaDiana links answer correctness and execution status to traces and resource records for comparing agents and diagnosing failures under shared task and resource policies.",
+    "published": "Oct 16",
+    "published_iso": "2026-10-16T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.20675",
+    "arxiv_url": "https://arxiv.org/abs/2610.20675",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "A Phenomenology of Neural Geometry in Vision-Language-Action Models",
+    "authors": [
+      "Mozes Jacobs",
+      "Aiden Swann",
+      "Mathilde Papillon",
+      "Siddharth Boppana",
+      "Fenil R. Doshi",
+      "Usha Bhalla",
+      "Thomas Icard",
+      "Matt Feiszli",
+      "Thomas McGrath",
+      "Vasudev Shyam",
+      "Demba Ba",
+      "Leon Bergen",
+      "Nina Miolane",
+      "Owen Lewis",
+      "Jack Merullo",
+      "Ekdeep Singh Lubana",
+      "Atticus Geiger",
+      "Matthew Kowal",
+      "Thomas Fel"
+    ],
+    "summary": "Robotic manipulation is inherently geometric, but what shape does the world take inside the policy that performs it? Prior work on vision-language-action (VLA) policies establishes that task-relevant variables are linearly readable from activations, yet readability certifies only that a variable is present and says nothing about the shape its values trace, which may be curved and multi-dimensional. Using controlled sweeps, natural rollouts, linear probes, and activation interventions, we build a taxonomy of seven task-relevant concepts in VLA models. We find that realized geometry is predominantly multi-dimensional and is shaped by the constraints under which the policy acts. Physical joint limits, for example, leave wrist orientation an open arc rather than a circle, and distance to the target, a single scalar, is realized in two orthogonal subspaces, a coarse ruler for the approach and a fine ruler for the grasp. The same geometries reappear in two further VLA models on real-world robot data, indicating that they are neither model-specific nor artifacts of simulation. We demonstrate how the findings are actionable by steering along the geometry a concept realizes. Overall, this work lays out an initial phenomenology of realized geometry in VLA policies and demonstrates that a concept's shape carries as much importance as its readability.",
+    "published": "Oct 16",
+    "published_iso": "2026-10-16T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.20840",
+    "arxiv_url": "https://arxiv.org/abs/2610.20840",
+    "queried_author": "Jack Merullo",
+    "matching_authors": [
+      "Jack Merullo"
+    ]
+  },
+  {
+    "title": "Can LLMs Anticipate Their Cruxes?",
+    "authors": [
+      "David Reber",
+      "James Reber",
+      "Ari Holtzman",
+      "Victor Veitch"
+    ],
+    "summary": "To use language models to help us make decisions we would like to understand the rationale behind the language model's outputs. In principle, the language model provides its rationale as part of its text output. However, the sheer volume of text makes this hard to use in practice. In this paper, we are interested in extracting the cruxes that lead a model to recommend one action over another. We take a crux to be a sub-question that a model's rollouts disagree on, where changing its value may have altered the conclusion. A crux is therefore a property of the distribution of a model's rollouts, not of any one rollout. We consider three strategies of increasing computational cost. First, we just ask a model to identify, a priori, what the cruxes of a decision will be. Second, we have the model actually go through the process of generating a response and then extract the cruxes that arose in its reasoning. Finally, we generate many responses and extract the cruxes by comparing the reasoning across the rollouts. We make this last procedure computationally tractable with cheap calls to a reranker, an estimated 86 times less compute than a judge. We then conduct an extensive empirical evaluation to assess whether the computationally inexpensive options are sufficient. They are not. Across domains and models, we find that a model's a priori assessment of the cruxes has little relation to the factors that are actually identified as important a posteriori. Using a single rollout helps, but is still inadequate for identifying the full set of cruxes. Accordingly, for high-stakes decis...",
+    "published": "Oct 16",
+    "published_iso": "2026-10-16T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.21006",
+    "arxiv_url": "https://arxiv.org/abs/2610.21006",
+    "queried_author": "Ari Holtzman",
+    "matching_authors": [
+      "Ari Holtzman"
+    ]
+  },
+  {
+    "title": "Priming Base Models for Agentic Post-Training: An Open Midtraining Recipe",
+    "authors": [
+      "Soumye Singhal",
+      "Joseph Jennings",
+      "Ka Shun Shum",
+      "Alexander Bukharin",
+      "Khushi Bhardwaj",
+      "Zirui Liu",
+      "Venkat Srinivasan",
+      "Jonathan Li",
+      "Yash Jain",
+      "Kezhi Kong",
+      "Markus Kliegl",
+      "Olivier Delalleau",
+      "Sanjeev Satheesh",
+      "Mostofa Patwary"
+    ],
+    "summary": "Frontier models, general-purpose and domain-specific alike, now include a midtraining stage between pretraining and post-training, but little has been published about how this stage is built. We present an open midtraining recipe that primes base models for agentic post-training, and we show its effectiveness on two Nemotron models of different sizes. Pretraining typically runs at short context and sees almost no agent interactions, while SFT data is mostly synthetic, and very long SFT stages can hurt the model's later RL trainability. Our midtraining stage sits between the two. It trains at 256K context for hundreds of billions of tokens on a diverse mixture of natural software-engineering data like packed repositories, pull requests, commit histories, and build logs together with a small share of agentic traces. On Nemotron 3.5 Lightning, 500B midtraining tokens improve SWE-bench Verified from 60.7 to 64.5, SWE-bench Multilingual from 55.8 to 62.8, and SWE-bench Pro from 32.0 to 35.5 after identical full SFT. On the larger Nemotron 3.5 Super, 280B midtraining tokens improve DeepSWE, a harder benchmark of long-horizon tasks, from 11.7 to 15.7 and SWE-bench Verified from 72.9 to 74.3 after identical full SFT. Midtraining also improves robustness across agent harnesses on both models. We report the ablations behind the recipe and an evaluation protocol built on short fixed SFT runs, since base-model proxy metrics did not correlate reliably with post-training results.",
+    "published": "Oct 16",
+    "published_iso": "2026-10-16T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.22019",
+    "arxiv_url": "https://arxiv.org/abs/2610.22019",
+    "queried_author": "Mostofa Patwary",
+    "matching_authors": [
+      "Mostofa Patwary"
+    ]
+  },
+  {
+    "title": "Decentralized LLM Workflows via Sequential Auctions",
+    "authors": [
+      "Ian Gemp",
+      "Shubhendu Trivedi",
+      "Adam Fisch",
+      "Fantine Huot",
+      "Michael Kaisers",
+      "Mirella Lapata",
+      "William W. Cohen",
+      "Alekh Agarwal",
+      "Kate Larson",
+      "Jacob Eisenstein"
+    ],
+    "summary": "We present a scalable framework for solving multi-step tasks through a decentralized market of self-interested agents. Prior theoretical work demonstrated that agents organized through sequential auctions can converge to a globally optimal policy in a Markov decision process (MDP), but relied on the restrictive assumption of the existence of perfect clones as a model of perfect competition. In reality, exact clones drive agent profit to zero, violating the natural risk-reward incentives of participants. Conversely, we empirically demonstrate that the opposite extreme, absence of competition, also leads to market failure and value extraction collapse. Between these two extremes, we investigate how heterogeneous agents can survive in markets that span the critical middle ground of imperfect competition. To be profitable, agents learn to strategically shade bids to secure positive individual profit margins, while still ensuring that the marketplace functions effectively enough so that collaborative tasks posed by market consumers can still be solved. We formulate and evaluate four bidding algorithms (Mirror Descent, Thompson Sampling, Bayes-Optimal, and PPO) across three auction protocols (1st-Price, 2nd-Price, and Credit-Conserving Vickrey). Across a diverse set of domains, we demonstrate that imperfect competition successfully sustains necessary agent profit margins while maintaining high task success rates at low costs.",
+    "published": "Oct 16",
+    "published_iso": "2026-10-16T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.22201",
+    "arxiv_url": "https://arxiv.org/abs/2610.22201",
+    "queried_author": "Jacob Eisenstein",
+    "matching_authors": [
+      "Jacob Eisenstein"
+    ]
+  },
+  {
+    "title": "T2-z: Test-Time Optimization of Environment Latents for Robotic World Models",
+    "authors": [
+      "Chenyuan Zhou",
+      "Yining Hong",
+      "Huang Huang",
+      "Yunfan Jiang",
+      "Wenlong Huang",
+      "David Held",
+      "Vitor Campagnolo Guizilini",
+      "Yue Wang",
+      "Li Fei-Fei",
+      "Jiajun Wu",
+      "Leonidas Guibas",
+      "Yejin Choi"
+    ],
+    "summary": "Predicting how the world responds to an action requires more than what can be seen: robots must account for environmental factors that are neither directly observable nor explicitly specified, from physical properties such as friction and mass to human-defined environmental rules. We introduce T2-Z for test-time optimization of environment latents, which augments a robotic world model with a learnable environment latent to condition world predictions. This compact latent captures underlying environmental variation without supervision of what environmental factors exist or what values they take. During training, T2-Z alternates between two stages: a world-model optimization stage that fixes the latents and learns general action-conditioned dynamics across environments; and an environment-latent optimization stage that freezes the world model and optimizes the conditioning latents, allowing latent structure to emerge purely through world prediction. At test time, the world model remains frozen and a newly initialized environment latent is optimized from one or more test-time interactions, adapting the model to previously unseen environmental configurations. Across 7 simulated settings and 4 real-world robotic tasks, T2-Z reduces object prediction error metric from 15.20 to 7.00 and raises action success from 33.73% to 72.96%. Its emergent latents capture structured representations of individual and compounded factors across diverse visual scenes. Ablations further show that T2-Z can efficiently infer environment latents from as little as a single test-time interaction traject...",
+    "published": "Oct 16",
+    "published_iso": "2026-10-16T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.22364",
+    "arxiv_url": "https://arxiv.org/abs/2610.22364",
+    "queried_author": "Yejin Choi",
+    "matching_authors": [
+      "Yejin Choi"
+    ]
+  },
+  {
+    "title": "DISARM-ing the Hidden Puppetmaster: An Interface for Exposing Manipulative Tactics in Large Language Models",
+    "authors": [
+      "Kynnedy Simone Smith",
+      "Kantwon Rogers",
+      "Priyal Shrivastava",
+      "Motahhare Eslami",
+      "Jocelyn Shen",
+      "Maarten Sap"
+    ],
+    "summary": "Large language models (LLMs) can covertly steer users' beliefs through emotionally manipulative tactics, yet little is known about how interfaces can protect users as such influence unfolds. We investigate whether in-situ disclosures can inoculate users against manipulation during AI conversations. Following a formative study, we developed DISARM, an interface that identifies, explains, and tracks manipulative tactics and hidden incentives. We evaluated our interface in a between-subjects experiment where 488 participants sought advice from an LLM pursuing a harmful hidden objective, with or without disclosures from DISARM. Participants receiving disclosures exhibited 78% less belief shift toward the agent's objective and perceived its advice as more biased and less actionable and the agent as less ethical, reliable, and well-intentioned. An inductive analysis of 1,927 user turns identified 16 response and pushback strategies. We contribute evidence that real-time disclosures can reduce manipulative influence, design recommendations for resistance, and a dataset of categorized responses.",
+    "published": "Oct 16",
+    "published_iso": "2026-10-16T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.20878",
+    "arxiv_url": "https://arxiv.org/abs/2610.20878",
+    "queried_author": "Maarten Sap",
+    "matching_authors": [
+      "Maarten Sap"
+    ]
+  },
+  {
     "title": "DTDD: Divergence-Triggered Dynamic Distillation for Reliable On-Policy Supervision",
     "authors": [
       "Qijia He",
@@ -186,6 +389,24 @@
     "queried_author": "Jure Leskovec",
     "matching_authors": [
       "Jure Leskovec"
+    ]
+  },
+  {
+    "title": "The Wealth of Agents: Scaling Agentic AI Across Developers",
+    "authors": [
+      "Austin W. Hanjie",
+      "Carlos E. Jimenez",
+      "Zirui Wang",
+      "Karthik Narasimhan"
+    ],
+    "summary": "Today's agentic systems are typically designed, built, and deployed by single developers with full control over all participating agents. While this simplifies development, it limits the potential scale of agentic systems. We study multi-developer agentic systems (MDAs) which enable developers to collaboratively build agentic systems to push frontier capability beyond what any individual developer could achieve alone. We construct empirical and theoretical models of developers to compare MDAs with single-developer agentic systems (SDAs). On GAIA, a general assistant benchmark, a population of specialized developers whose individual agents do not exceed 35% accuracy reaches 70% when their agents are combined in an MDA. This MDA performs 12 percentage points above the median general-purpose SDA built with several times each specialist's development budget. Our theoretical models show how MDAs can incentivize specialization and encourage more efficient use of aggregated developer resources. Put together, our results make a preliminary case for MDAs as a new scaling axis by enabling developers with diverse capabilities and resources to advance agentic AI collaboratively.",
+    "published": "Oct 15",
+    "published_iso": "2026-10-15T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.20518v1",
+    "arxiv_url": "http://arxiv.org/abs/2610.20518v1",
+    "queried_author": "Karthik Narasimhan",
+    "matching_authors": [
+      "Karthik Narasimhan"
     ]
   },
   {
@@ -13225,225 +13446,5 @@
       "Jacob Andreas"
     ],
     "published_iso": "2026-03-23T04:00:00+00:00"
-  },
-  {
-    "title": "FDARxBench: Benchmarking Regulatory and Clinical Reasoning on FDA Generic Drug Assessment",
-    "authors": [
-      "Betty Xiong",
-      "Jillian Fisher",
-      "Benjamin Newman",
-      "Meng Hu",
-      "Shivangi Gupta",
-      "Yejin Choi",
-      "Lanyan Fang",
-      "Russ B Altman"
-    ],
-    "summary": "We introduce an expert curated, real-world benchmark for evaluating document-grounded question-answering (QA) motivated by generic drug assessment, using the U.S. Food and Drug Administration (FDA) drug label documents. Drug labels contain rich but heterogeneous clinical and regulatory information, making accurate question answering difficult for current language models. In collaboration with FDA regulatory assessors, we introduce FDARxBench, and construct a multi-stage pipeline for generating high-quality, expert curated, QA examples spanning factual, multi-hop, and refusal tasks, and design evaluation protocols to assess both open-book and closed-book reasoning. Experiments across proprietary and open-weight models reveal substantial gaps in factual grounding, long-context retrieval, and safe refusal behavior. While motivated by FDA generic drug assessment needs, this benchmark also provides a substantial foundation for challenging regulatory-grade evaluation of label comprehension. The benchmark is designed to support evaluation of LLM behavior on drug-label questions.",
-    "published": "Mar 23",
-    "pdf_url": "https://arxiv.org/pdf/2603.19539v2",
-    "arxiv_url": "http://arxiv.org/abs/2603.19539v2",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ],
-    "published_iso": "2026-03-23T04:00:00+00:00"
-  },
-  {
-    "title": "Nemotron-Cascade 2: Post-Training LLMs with Cascade RL and Multi-Domain On-Policy Distillation",
-    "authors": [
-      "Zhuolin Yang",
-      "Zihan Liu",
-      "Yang Chen",
-      "Wenliang Dai",
-      "Boxin Wang",
-      "Sheng-Chieh Lin",
-      "Chankyu Lee",
-      "Yangyi Chen",
-      "Dongfu Jiang",
-      "Jiafan He",
-      "Renjie Pi",
-      "Grace Lam",
-      "Nayeon Lee",
-      "Alexander Bukharin",
-      "Mohammad Shoeybi",
-      "Bryan Catanzaro",
-      "Wei Ping"
-    ],
-    "summary": "We introduce Nemotron-Cascade 2, an open 30B MoE model with 3B activated parameters that delivers best-in-class reasoning and strong agentic capabilities. Despite its compact size, its mathematical and coding reasoning performance approaches that of frontier open models. It is the second open-weight LLM, after DeepSeekV3.2-Speciale-671B-A37B, to achieve Gold Medal-level performance in the 2025 International Mathematical Olympiad (IMO), the International Olympiad in Informatics (IOI), and the ICPC World Finals, demonstrating remarkably high intelligence density with 20x fewer parameters. In contrast to Nemotron-Cascade 1, the key technical advancements are as follows. After SFT on a meticulously curated dataset, we substantially expand Cascade RL to cover a much broader spectrum of reasoning and agentic domains. Furthermore, we introduce multi-domain on-policy distillation from the strongest intermediate teacher models for each domain throughout the Cascade RL process, allowing us to efficiently recover benchmark regressions and sustain strong performance gains along the way. We release the collection of model checkpoint and training data.",
-    "published": "Mar 20",
-    "pdf_url": "https://arxiv.org/pdf/2603.19220v2",
-    "arxiv_url": "http://arxiv.org/abs/2603.19220v2",
-    "queried_author": "Mohammad Shoeybi",
-    "matching_authors": [
-      "Mohammad Shoeybi"
-    ],
-    "published_iso": "2026-03-20T04:00:00+00:00"
-  },
-  {
-    "title": "Reasoning over mathematical objects: on-policy reward modeling and test time aggregation",
-    "authors": [
-      "Pranjal Aggarwal",
-      "Marjan Ghazvininejad",
-      "Seungone Kim",
-      "Ilia Kulikov",
-      "Jack Lanchantin",
-      "Xian Li",
-      "Tianjian Li",
-      "Bo Liu",
-      "Graham Neubig",
-      "Anaelia Ovalle",
-      "Swarnadeep Saha",
-      "Sainbayar Sukhbaatar",
-      "Sean Welleck",
-      "Jason Weston",
-      "Chenxi Whitehouse",
-      "Adina Williams",
-      "Jing Xu",
-      "Ping Yu",
-      "Weizhe Yuan",
-      "Jingyu Zhang",
-      "Wenting Zhao"
-    ],
-    "summary": "The ability to precisely derive mathematical objects is a core requirement for downstream STEM applications, including mathematics, physics, and chemistry, where reasoning must culminate in formally structured expressions. Yet, current LM evaluations of mathematical and scientific reasoning rely heavily on simplified answer formats such as numerical values or multiple choice options due to the convenience of automated assessment. In this paper we provide three contributions for improving reasoning over mathematical objects: (i) we build and release training data and benchmarks for deriving mathematical objects, the Principia suite; (ii) we provide training recipes with strong LLM-judges and verifiers, where we show that on-policy judge training boosts performance; (iii) we show how on-policy training can also be used to scale test-time compute via aggregation. We find that strong LMs such as Qwen3-235B and o3 struggle on Principia, while our training recipes can bring significant improvements over different LLM backbones, while simultaneously improving results on existing numerical and MCQA tasks, demonstrating cross-format generalization of reasoning abilities.",
-    "published": "Mar 20",
-    "pdf_url": "https://arxiv.org/pdf/2603.18886v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.18886v1",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig",
-      "Sean Welleck",
-      "Seungone Kim",
-      "Wenting Zhao"
-    ],
-    "published_iso": "2026-03-20T04:00:00+00:00"
-  },
-  {
-    "title": "ZEBRAARENA: A Diagnostic Simulation Environment for Studying Reasoning-Action Coupling in Tool-Augmented LLMs",
-    "authors": [
-      "Wanjia Zhao",
-      "Ludwig Schmidt",
-      "James Zou",
-      "Vidhisha Balachandran",
-      "Lingjiao Chen"
-    ],
-    "summary": "Tool-augmented large language models (LLMs) must tightly couple multi-step reasoning with external actions, yet existing benchmarks often confound this interplay with complex environment dynamics, memorized knowledge or dataset contamination. In this paper, we introduce ZebraArena, a procedurally generated diagnostic environment for studying reasoning-action coupling in tool-augmented LLMs, with controllable difficulty and a knowledge-minimal design, which limits gains from memorization or dataset contamination. Each task in ZebraArena requires a set of critical information which is available only through targeted tool use, yielding an interpretable interface between external information acquisition and deductive reasoning. This design provides deterministic evaluation via unique solutions, and a theoretical optimal query count for measuring efficient tool use. We show that ZebraArena requires a combination of in-depth reasoning and accurate external tool calling, which remains a challenge as frontier reasoning models such as GPT-5 and Gemini 2.5 Pro only achieves 60% accuracy on the hard instances. We also observe a persistent gaps between theoretical optimality and practical tool usage. For example, GPT-5 uses 70-270% more tool calls than the theoretical optimum. We highlight the key findings in our evaluation, and hope ZebraArena stimulates further research on the interplay between internal reasoning and external action.",
-    "published": "Mar 20",
-    "pdf_url": "https://arxiv.org/pdf/2603.18614v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.18614v1",
-    "queried_author": "Ludwig Schmidt",
-    "matching_authors": [
-      "Ludwig Schmidt"
-    ],
-    "published_iso": "2026-03-20T04:00:00+00:00"
-  },
-  {
-    "title": "Data-efficient pre-training by scaling synthetic megadocs",
-    "authors": [
-      "Konwoo Kim",
-      "Suhas Kotha",
-      "Yejin Choi",
-      "Tatsunori Hashimoto",
-      "Nick Haber",
-      "Percy Liang"
-    ],
-    "summary": "Synthetic data augmentation has emerged as a promising solution when pre-training is constrained by data rather than compute. We study how to design synthetic data algorithms that achieve better loss scaling: not only lowering loss at finite compute but especially as compute approaches infinity. We first show that pre-training on web data mixed with synthetically generated rephrases improves i.i.d. validation loss on the web data, despite the synthetic data coming from an entirely different distribution. With optimal mixing and epoching, loss and benchmark accuracy improve without overfitting as the number of synthetic generations grows, plateauing near $1.48\\times$ data efficiency at 32 rephrases per document. We find even better loss scaling under a new perspective: synthetic generations from the same document can form a single substantially longer megadocument instead of many short documents. We show two ways to construct megadocs: stitching synthetic rephrases from the same web document or stretching a document by inserting rationales. Both methods improve i.i.d. loss, downstream benchmarks, and especially long-context loss relative to simple rephrasing, increasing data efficiency from $1.48\\times$ to $1.80\\times$ at $32$ generations per document. Importantly, the improvement of megadocs over simple rephrasing widens as more synthetic data is generated. Our results show how to design synthetic data algorithms that benefit more from increasing compute when data-constrained.",
-    "published": "Mar 20",
-    "pdf_url": "https://arxiv.org/pdf/2603.18534v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.18534v1",
-    "queried_author": "Percy Liang",
-    "matching_authors": [
-      "Percy Liang",
-      "Tatsunori Hashimoto",
-      "Yejin Choi"
-    ],
-    "published_iso": "2026-03-20T04:00:00+00:00"
-  },
-  {
-    "title": "Counting Circuits: Mechanistic Interpretability of Visual Reasoning in Large Vision-Language Models",
-    "authors": [
-      "Liwei Che",
-      "Zhiyu Xue",
-      "Yihao Quan",
-      "Benlin Liu",
-      "Zeru Shi",
-      "Michelle Hurst",
-      "Jacob Feldman",
-      "Ruixiang Tang",
-      "Ranjay Krishna",
-      "Vladimir Pavlovic"
-    ],
-    "summary": "Counting serves as a simple but powerful test of a Large Vision-Language Model's (LVLM's) reasoning; it forces the model to identify each individual object and then add them all up. In this study, we investigate how LVLMs implement counting using controlled synthetic and real-world benchmarks, combined with mechanistic analyses. Our results show that LVLMs display a human-like counting behavior, with precise performance on small numerosities and noisy estimation for larger quantities. We introduce two novel interpretability methods, Visual Activation Patching and HeadLens, and use them to uncover a structured \"counting circuit\" that is largely shared across a variety of visual reasoning tasks. Building on these insights, we propose a lightweight intervention strategy that exploits simple and abundantly available synthetic images to fine-tune arbitrary pretrained LVLMs exclusively on counting. Despite the narrow scope of this fine-tuning, the intervention not only enhances counting accuracy on in-distribution synthetic data, but also yields an average improvement of +8.36% on out-of-distribution counting benchmarks and an average gain of +1.54% on complex, general visual reasoning tasks for Qwen2.5-VL. These findings highlight the central, influential role of counting in visual reasoning and suggest a potential pathway for improving overall visual reasoning capabilities through targeted enhancement of counting mechanisms.",
-    "published": "Mar 20",
-    "pdf_url": "https://arxiv.org/pdf/2603.18523v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.18523v1",
-    "queried_author": "Ranjay Krishna",
-    "matching_authors": [
-      "Ranjay Krishna"
-    ],
-    "published_iso": "2026-03-20T04:00:00+00:00"
-  },
-  {
-    "title": "Multi-Domain Empirical Bayes for Linearly-Mixed Causal Representations",
-    "authors": [
-      "Bohan Wu",
-      "Julius von K\u00fcgelgen",
-      "David M. Blei"
-    ],
-    "summary": "Causal representation learning (CRL) aims to learn low-dimensional causal latent variables from high-dimensional observations. While identifiability has been extensively studied for CRL, estimation has been less explored. In this paper, we explore the use of empirical Bayes (EB) to estimate causal representations. In particular, we consider the problem of learning from data from multiple domains, where differences between domains are modeled by interventions in a shared underlying causal model. Multi-domain CRL naturally poses a simultaneous inference problem that EB is designed to tackle. Here, we propose an EB $f$-modeling algorithm that improves the quality of learned causal variables by exploiting invariant structure within and across domains. Specifically, we consider a linear measurement model and interventional priors arising from a shared acyclic SCM. When the graph and intervention targets are known, we develop an EM-style algorithm based on causally structured score matching. We further discuss EB $g$-modeling in the context of existing CRL approaches. In experiments on synthetic data, our proposed method achieves more accurate estimation than other methods for CRL.",
-    "published": "Mar 20",
-    "pdf_url": "https://arxiv.org/pdf/2603.18404v2",
-    "arxiv_url": "http://arxiv.org/abs/2603.18404v2",
-    "queried_author": "David M. Blei",
-    "matching_authors": [
-      "David M. Blei"
-    ],
-    "published_iso": "2026-03-20T04:00:00+00:00"
-  },
-  {
-    "title": "Unified Spatio-Temporal Token Scoring for Efficient Video VLMs",
-    "authors": [
-      "Jianrui Zhang",
-      "Yue Yang",
-      "Rohun Tripathi",
-      "Winson Han",
-      "Ranjay Krishna",
-      "Christopher Clark",
-      "Yong Jae Lee",
-      "Sangho Lee"
-    ],
-    "summary": "Token pruning is essential for enhancing the computational efficiency of vision-language models (VLMs), particularly for video-based tasks where temporal redundancy is prevalent. Prior approaches typically prune tokens either (1) within the vision transformer (ViT) exclusively for unimodal perception tasks such as action recognition and object segmentation, without adapting to downstream vision-language tasks; or (2) only within the LLM while leaving the ViT output intact, often requiring complex text-conditioned token selection mechanisms. In this paper, we introduce Spatio-Temporal Token Scoring (STTS), a simple and lightweight module that prunes vision tokens across both the ViT and the LLM without text conditioning or token merging, and is fully compatible with end-to-end training. By learning how to score temporally via an auxiliary loss and spatially via LLM downstream gradients, aided by our efficient packing algorithm, STTS prunes 50% of vision tokens throughout the entire architecture, resulting in a 62% improvement in efficiency during both training and inference with only a 0.7% drop in average performance across 13 short and long video QA tasks. Efficiency gains increase with more sampled frames per video. Applying test-time scaling for long-video QA further yields performance gains of 0.5-1% compared to the baseline. Overall, STTS represents a novel, simple yet effective technique for unified, architecture-wide vision token pruning.",
-    "published": "Mar 19",
-    "pdf_url": "https://arxiv.org/pdf/2603.18004v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.18004v1",
-    "queried_author": "Ranjay Krishna",
-    "matching_authors": [
-      "Ranjay Krishna"
-    ],
-    "published_iso": "2026-03-19T04:00:00+00:00"
-  },
-  {
-    "title": "CodeScout: An Effective Recipe for Reinforcement Learning of Code Search Agents",
-    "authors": [
-      "Lintang Sutawika",
-      "Aditya Bharat Soni",
-      "Bharath Sriraam R R",
-      "Apurva Gandhi",
-      "Taha Yassine",
-      "Sanidhya Vijayvargiya",
-      "Yuchen Li",
-      "Xuhui Zhou",
-      "Yilin Zhang",
-      "Leander Melroy Maben",
-      "Graham Neubig"
-    ],
-    "summary": "A prerequisite for coding agents to perform tasks on large repositories is code localization - the identification of relevant files, classes, and functions to work on. While repository-level code localization has been performed using embedding-based retrieval approaches such as vector search, recent work has focused on developing agents to localize relevant code either as a standalone precursor to or interleaved with performing actual work. Most prior methods on agentic code search equip the agent with complex, specialized tools, such as repository graphs derived from static analysis. In this paper, we demonstrate that, with an effective reinforcement learning recipe, a coding agent equipped with nothing more than a standard Unix terminal can be trained to achieve strong results. Our experiments on three benchmarks (SWE-Bench Verified, Pro, and Lite) reveal that our models consistently achieve superior or competitive performance over 2-18x larger base and post-trained LLMs and sometimes approach performance provided by closed models like Claude Sonnet, even when using specialized scaffolds. Our work particularly focuses on techniques for re-purposing existing coding agent environments for code search, reward design, and RL optimization. We release the resulting model family, CodeScout, along with all our code and data for the community to build upon.",
-    "published": "Mar 19",
-    "pdf_url": "https://arxiv.org/pdf/2603.17829v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.17829v1",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
-    ],
-    "published_iso": "2026-03-19T04:00:00+00:00"
   }
 ]
