@@ -1,5 +1,63 @@
 [
   {
+    "title": "Learning Personalized Memory Gating from Delayed One-Sided Feedback",
+    "authors": [
+      "Kaixuan Ji",
+      "Zixiang Chen",
+      "Wenting Zhao",
+      "Cheng Qian",
+      "Heng Wang",
+      "Weizhi Zhang",
+      "Jielin Qiu",
+      "Liangwei Yang",
+      "Quanquan Gu",
+      "Silvio Savarese",
+      "Shelby Heinecke",
+      "Huan Wang"
+    ],
+    "summary": "Long-term memory enables language-model agents to personalize future interactions, but a finite memory bank cannot preserve every extracted fact. Existing memory gating policies are typically shared across users and therefore fail to account for user-specific patterns of future reuse. In this paper, we study memory gating at the fact level. We first propose a retrieval-based labeling strategy that labels each fact by whether it is later retrieved and incorporated into responses. We then formulate online memory gating as contextual apple tasting with delayed one-sided feedback, and propose Warm-Start UCB, which combines offline learning from existing data with online adaptation to the current user. Our theoretical analysis establishes a high-probability regret upper bound of $\\tilde{O}(T\\epsilon \\wedge d\\sqrt{T})$ when the delay window is at most $O(\\sqrt{T})$, where $T$ is the total number of rounds, $\\epsilon$ is the initialization error, $d$ is the dimension of the feature map, and $\\tilde{O}(\\cdot)$ hides constant and poly-logarithmic factors. The results of our experiment demonstrate that our method outperforms all baselines under different memory budgets and history lengths, establishing it as a promising personalized memory gating policy.",
+    "published": "Oct 19",
+    "published_iso": "2026-10-19T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.23812",
+    "arxiv_url": "https://arxiv.org/abs/2610.23812",
+    "queried_author": "Wenting Zhao",
+    "matching_authors": [
+      "Wenting Zhao"
+    ]
+  },
+  {
+    "title": "ProPerAgent: Toward Memory-Driven Proactive Assistance",
+    "authors": [
+      "Shenglai Zeng",
+      "Xiao Yang",
+      "Tiffany Ma",
+      "Xinyuan Zhang",
+      "Nanshu Wang",
+      "Deren Lei",
+      "Kai Sun",
+      "Xilun Chen",
+      "Tammy Stark",
+      "Xianhui Zhu",
+      "Yuetai Li",
+      "Rulin Shao",
+      "Tianxin Wei",
+      "Rakesh Wanga",
+      "Anuj Kumar",
+      "Jiliang Tang",
+      "Wen-tau Yih",
+      "Xin Luna Dong"
+    ],
+    "summary": "As assistants move from reactive answering toward proactive intervention, memory changes role: it no longer only supplies the answer to a query, it determines whether and when to speak at all. Prior work in this setting hands the system the relevant fact in context; we study the regime that makes the problem hard, where the evidence justifying an intervention must be mined from a long-horizon personal memory. We introduce ProPerMem, a benchmark for memory-driven proactive assistance (MPA), pairing egocentric video with year-long, distractor-rich user memories (~618K tokens on average), human-verified trigger windows, and a protocol that scores content and timing jointly. Every baseline we evaluate performs poorly (at most 15%), including frontier models given summarized or retrieval-augmented memory. A controlled study explains why: with oracle evidence delivered inside the trigger window GPT-5.3-Chat reaches 96%; letting it choose the timing drops it to 38%, and replacing oracle evidence with retrieval drops it to 15%. Content and timing are separately necessary, and missing either is catastrophic. Guided by this, we build ProPerAgent (Proactive Personalized Agent) with a plug-and-play harness that surfaces memory from a graph-organized store and gates it down to what is worth interrupting for, plus a lightweight RL stage that curbs early and repeated firing. Without any training, ProPerAgent lifts strict accuracy from below 10% to 37.5% on Qwen3.8-27B and 38% on GPT-5.3-Chat; RL post-training reaches 42.4%.",
+    "published": "Oct 19",
+    "published_iso": "2026-10-19T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.22671",
+    "arxiv_url": "https://arxiv.org/abs/2610.22671",
+    "queried_author": "Wen-tau Yih",
+    "matching_authors": [
+      "Wen-tau Yih"
+    ]
+  },
+  {
     "title": "Memorilla: Latent Semantic Memory for LLMs",
     "authors": [
       "Adibvafa Fallahpour",
@@ -13405,46 +13463,5 @@
       "Maarten Sap"
     ],
     "published_iso": "2026-03-24T04:00:00+00:00"
-  },
-  {
-    "title": "Problems with Chinchilla Approach 2: Systematic Biases in IsoFLOP Parabola Fits",
-    "authors": [
-      "Eric Czech",
-      "Zhiwei Xu",
-      "Yael Elmatad",
-      "Yixin Wang",
-      "William Held"
-    ],
-    "summary": "Chinchilla Approach 2 is among the most widely used methods for fitting neural scaling laws. Its parabolic approximation introduces systematic biases in compute-optimal allocation estimates, even on noise-free synthetic data. Applied to published Llama 3 IsoFLOP data at open frontier compute scales, these biases imply a parameter underallocation corresponding to 6.5% of the $3.8\\times10^{25}$ FLOP training budget and \\$1.4M (90% CI: \\$412K-\\$2.9M) in unnecessary compute at 50% H100 MFU. Simulated multimodal model misallocations show even greater opportunity costs due to higher loss surface asymmetry. Three sources of this error are examined: IsoFLOP sampling grid width (Taylor approximation accuracy), uncentered IsoFLOP sampling, and loss surface asymmetry ($\u03b1\\neq \u03b2$). Chinchilla Approach 3 largely eliminates these biases but is often regarded as less data-efficient, numerically unstable, prone to local minima, and harder to implement. Each concern is shown to be unfounded or addressable, especially when the partially linear structure of the objective is exploited via Variable Projection, enabling unbiased inference on all five loss surface parameters through a two-dimensional optimization that is well-conditioned, analytically differentiable, and amenable to dense, or even exhaustive, grid search. It may serve as a more convenient replacement for Approach 2 or a more scalable alternative for adaptations of Approach 3 to richer scaling law formulations. See https://github.com/Open-Athena/vpnls for details and https://openathena.ai/scaling-law-analysis for other results from...",
-    "published": "Mar 24",
-    "pdf_url": "https://arxiv.org/pdf/2603.22339v3",
-    "arxiv_url": "http://arxiv.org/abs/2603.22339v3",
-    "queried_author": "William Held",
-    "matching_authors": [
-      "William Held"
-    ],
-    "published_iso": "2026-03-24T04:00:00+00:00"
-  },
-  {
-    "title": "Pitfalls in Evaluating Interpretability Agents",
-    "authors": [
-      "Tal Haklay",
-      "Nikhil Prakash",
-      "Sana Pandey",
-      "Antonio Torralba",
-      "Aaron Mueller",
-      "Jacob Andreas",
-      "Tamar Rott Shaham",
-      "Yonatan Belinkov"
-    ],
-    "summary": "Automated interpretability systems aim to reduce the need for human labor and scale analysis to increasingly large models and diverse tasks. Recent efforts toward this goal leverage large language models (LLMs) at increasing levels of autonomy, ranging from fixed one-shot workflows to fully autonomous interpretability agents. This shift creates a corresponding need to scale evaluation approaches to keep pace with both the volume and complexity of generated explanations. We investigate this challenge in the context of automated circuit analysis -- explaining the roles of model components when performing specific tasks. To this end, we build an agentic system in which a research agent iteratively designs experiments and refines hypotheses. When evaluated against human expert explanations across six circuit analysis tasks in the literature, the system appears competitive. However, closer examination reveals several pitfalls of replication-based evaluation: human expert explanations can be subjective or incomplete, outcome-based comparisons obscure the research process, and LLM-based systems may reproduce published findings via memorization or informed guessing. To address some of these pitfalls, we propose an unsupervised intrinsic evaluation based on the functional interchangeability of model components. Our work demonstrates fundamental challenges in evaluating complex automated interpretability systems and reveals key limitations of replication-based evaluation.",
-    "published": "Mar 23",
-    "pdf_url": "https://arxiv.org/pdf/2603.20101v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.20101v1",
-    "queried_author": "Jacob Andreas",
-    "matching_authors": [
-      "Jacob Andreas"
-    ],
-    "published_iso": "2026-03-23T04:00:00+00:00"
   }
 ]
