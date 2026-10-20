@@ -1,5 +1,40 @@
 [
   {
+    "title": "TokenGate: Adapting LLMs for Fast and Memory-Efficient Prefill with Learned Token Pruning",
+    "authors": [
+      "Liana Patel",
+      "Rishabh Ranjan",
+      "Ion Stoica",
+      "Matei Zaharia",
+      "Carlos Guestrin"
+    ],
+    "summary": "Expert human readers process large inputs (e.g., code repositories and long documents) by skimming to closely read only what matters. On the other hand, language models process all input tokens through each model layer, resulting in significant processing costs for long-context inputs. We introduce TokenGate, a small, drop-in component that extends existing trained models to enable end-to-end learnable token pruning over long-context inputs for fast and memory-efficient prefill. To enable end-to-end learning despite the non-differentiable top-K operator for token pruning, we introduce token-gated attention, a mechanism inspired by Mixture-of-Experts that re-weights attention logits using token importance scores. Across diverse tasks, TokenGate achieves $1.4$-$11.3\\times$ faster time-to-first token (TTFT) and $1.5$-$3.4\\times$ lower peak memory at no accuracy degradation for prefill in transformers. Compared to the best-performing prior methods for token-pruning, TokenGate gives up to $6.4\\times$ faster prefill and $2\\times$ lower peak memory. TokenGate natively extends both standard transformers (e.g., Qwen3) and hybrid-attention models (e.g., Qwen3.5) with simple lightweight adaptation comparable to standard parameter-efficient fine-tuning. We make our code available at: https://github.com/tokengate-models/TokenGate.",
+    "published": "Oct 20",
+    "published_iso": "2026-10-20T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.26754v1",
+    "arxiv_url": "http://arxiv.org/abs/2610.26754v1",
+    "queried_author": "Carlos Guestrin",
+    "matching_authors": [
+      "Carlos Guestrin"
+    ]
+  },
+  {
+    "title": "Where RL Breaks: Localizing and Repairing Failures via Targeted Continued Pretraining",
+    "authors": [
+      "Xinyi Wang",
+      "Danqi Chen"
+    ],
+    "summary": "Reinforcement learning with verifiable rewards (RLVR) is widely used to improve reasoning in language models, yet growing evidence suggests that it mostly sharpens what the base model can already do. This raises a practical question: when RL fails, what is the base model missing? We look inside the RL policy's own rollouts and find that failures are localized: whether a rollout fails is strongly predicted by a small set of characteristic n-grams, ranging from reflection phrases such as \"let's recheck\" to specific operations such as \"the inverse of A\". These failures persist throughout RL training, although they are not beyond the model's reach: other sampled answers to the same question are often correct. Building on this observation, we use the failure $n$-grams to retrieve text from the pretraining corpus and continue pretraining the base model on it before RL. The resulting corpus has only 35M tokens, 3--4 orders of magnitude smaller than typical mid-training. We evaluate this approach on OLMo2 and Qwen3 models trained with RL on (1) GSM8K; (2) a mixture of math, commonsense, and knowledge questions; and (3) general math and science reasoning. Despite its size, the corpus yields consistent gains: our approach outperforms continued pretraining on the same amount of text sampled from the pretraining corpus across 10 out of 11 settings, including by $2.0$ points on GSM8K when inserted before mid-training. The retrieved text also transfers across model families: text retrieved for OLMo2-1B's failures improves Qwen3-4B on the mixture by $1.9$ points over the same baseline. To...",
+    "published": "Oct 20",
+    "published_iso": "2026-10-20T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.25836v1",
+    "arxiv_url": "http://arxiv.org/abs/2610.25836v1",
+    "queried_author": "Danqi Chen",
+    "matching_authors": [
+      "Danqi Chen"
+    ]
+  },
+  {
     "title": "Learning Personalized Memory Gating from Delayed One-Sided Feedback",
     "authors": [
       "Kaixuan Ji",
@@ -985,6 +1020,29 @@
     "queried_author": "Antoine Bosselut",
     "matching_authors": [
       "Antoine Bosselut"
+    ]
+  },
+  {
+    "title": "Next-Concept Modeling: Fast, Parallel Coarse-to-Fine Text Generation",
+    "authors": [
+      "Hermann Kumbong",
+      "Ishan S. Khare",
+      "Iddah Mlauzi",
+      "Andrew Woen",
+      "Charles Ding",
+      "E. Kelly Buchanan",
+      "Simran Arora",
+      "Azalia Mirhoseini",
+      "Christopher R\u00e9"
+    ],
+    "summary": "Diffusion language models (DLMs) offer parallel sampling for faster generation than autoregressive models, an increasingly important advantage as inference becomes a dominant computational workload. However, DLMs degrade quickly with fewer sampling steps, process the full sequence at every step, and require many passes over the dataset to reach good quality. We introduce Next-Concept Modeling (NCM), a two-stage, coarse-to-fine framework: a multiscale residual VQ-VAE encodes text into a hierarchy of discrete codes, and a transformer generates one level at a time, predicting all codes within a level in parallel. At matched parameter scales, NCM achieves better generative perplexity than the strongest DLM baseline on LM1B while running $21\\times$ faster. On OpenWebText, NCM is competitive with the strongest DLM while running $10\\times$ faster; on XSum, it matches the strongest DLM's ROUGE-L while being $31\\times$ faster. On the reasoning task of Sudoku, NCM outperforms autoregressive and diffusion baselines across all difficulty levels, using fewer function evaluations. On the reasoning task of Sudoku, NCM outperforms autoregressive and diffusion baselines across all difficulty levels, using fewer function evaluations.",
+    "published": "Oct 12",
+    "published_iso": "2026-10-12T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.14162v1",
+    "arxiv_url": "http://arxiv.org/abs/2610.14162v1",
+    "queried_author": "Christopher R\u00e9",
+    "matching_authors": [
+      "Christopher R\u00e9"
     ]
   },
   {
@@ -13404,63 +13462,6 @@
     "queried_author": "Valentin Hofmann",
     "matching_authors": [
       "Valentin Hofmann"
-    ],
-    "published_iso": "2026-03-24T04:00:00+00:00"
-  },
-  {
-    "title": "Effective Strategies for Asynchronous Software Engineering Agents",
-    "authors": [
-      "Jiayi Geng",
-      "Graham Neubig"
-    ],
-    "summary": "AI agents have become increasingly capable at isolated software engineering (SWE) tasks such as resolving issues on Github. Yet long-horizon tasks involving multiple interdependent subtasks still pose challenges both with respect to accuracy, and with respect to timely completion. A natural approach to solving these long-horizon tasks in a timely manner is asynchronous multi-agent collaboration, where multiple agents work on different parts of the task at the same time. But effective application of multi-agent systems has proven surprisingly difficult: concurrent edits by multiple agents interfere with each other, dependencies are difficult to synchronize, and combining partial progress into a coherent whole is challenging. On the other hand, human developers have long relied on mature collaboration infrastructure to manage these challenges in large software projects. Inspired by these collaboration primitives, we introduce Centralized Asynchronous Isolated Delegation (CAID), a structured multi-agent coordination paradigm grounded in three core SWE primitives: centralized task delegation, asynchronous execution, and isolated workspaces. CAID constructs dependency-aware task plans through a central manager, executes subtasks concurrently in isolated workspaces, and consolidates progress via structured integration with executable test-based verification. In empirical evaluation, we find that CAID improves accuracy over single-agent baselines by 25.6% absolute on paper reproduction tasks (PaperBench) and 14.7% on Python library development tasks (Commit0). Through systematic a...",
-    "published": "Mar 24",
-    "pdf_url": "https://arxiv.org/pdf/2603.21489v2",
-    "arxiv_url": "http://arxiv.org/abs/2603.21489v2",
-    "queried_author": "Graham Neubig",
-    "matching_authors": [
-      "Graham Neubig"
-    ],
-    "published_iso": "2026-03-24T04:00:00+00:00"
-  },
-  {
-    "title": "Alignment Whack-a-Mole : Finetuning Activates Verbatim Recall of Copyrighted Books in Large Language Models",
-    "authors": [
-      "Xinyue Liu",
-      "Niloofar Mireshghallah",
-      "Jane C. Ginsburg",
-      "Tuhin Chakrabarty"
-    ],
-    "summary": "Frontier LLM companies have repeatedly assured courts and regulators that their models do not store copies of training data. They further rely on safety alignment strategies via RLHF, system prompts, and output filters to block verbatim regurgitation of copyrighted works, and have cited the efficacy of these measures in their legal defenses against copyright infringement claims. We show that finetuning bypasses these protections: by training models to expand plot summaries into full text, a task naturally suited for commercial writing assistants, we cause GPT-4o, Gemini-2.5-Pro, and DeepSeek-V3.1 to reproduce up to 85-90% of held-out copyrighted books, with single verbatim spans exceeding 460 words, using only semantic descriptions as prompts and no actual book text. This extraction generalizes across authors: finetuning exclusively on Haruki Murakami's novels unlocks verbatim recall of copyrighted books from over 30 unrelated authors. The effect is not specific to any training author or corpus: random author pairs and public-domain finetuning data produce comparable extraction, while finetuning on synthetic text yields near-zero extraction, indicating that finetuning on individual authors' works reactivates latent memorization from pretraining. Three models from different providers memorize the same books in the same regions ($r \\ge 0.90$), pointing to an industry-wide vulnerability. Our findings offer compelling evidence that model weights store copies of copyrighted works and that the security failures that manifest after finetuning on individual authors' works undermine...",
-    "published": "Mar 24",
-    "pdf_url": "https://arxiv.org/pdf/2603.20957v4",
-    "arxiv_url": "http://arxiv.org/abs/2603.20957v4",
-    "queried_author": "Niloofar Mireshghallah",
-    "matching_authors": [
-      "Niloofar Mireshghallah"
-    ],
-    "published_iso": "2026-03-24T04:00:00+00:00"
-  },
-  {
-    "title": "The Hidden Puppet Master: Predicting Human Belief Change in Manipulative LLM Dialogues",
-    "authors": [
-      "Jocelyn Shen",
-      "Amina Luvsanchultem",
-      "Jessica Kim",
-      "Kynnedy Smith",
-      "Valdemar Danry",
-      "Kantwon Rogers",
-      "Hae Won Park",
-      "Maarten Sap",
-      "Cynthia Breazeal"
-    ],
-    "summary": "As users increasingly turn to LLMs for practical and personal advice, they become vulnerable to subtle steering toward hidden incentives misaligned with their own interests. While existing NLP research has benchmarked manipulation detection, these efforts often rely on simulated debates and remain fundamentally decoupled from actual human belief shifts in real-world scenarios. We introduce PUPPET, a theoretical taxonomy and resource that bridges this gap by focusing on the moral direction of hidden incentives in everyday, advice-giving contexts. We provide an evaluation dataset of N=1,035 human-LLM interactions, where we measure users' belief shifts. Our analysis reveals a critical disconnect in current safety paradigms: while models can be trained to detect manipulative strategies, they do not correlate with the magnitude of resulting belief change. As such, we define the task of human belief shift prediction and show that while state-of-the-art LLMs achieve moderate correlation (r=0.3-0.5), they exhibit systematic directional biases, with certain models over or under-predicting the magnitude of human belief change. This work establishes a theoretically grounded and behaviorally validated foundation for AI social safety efforts by studying incentive-driven manipulation in LLMs during everyday, practical user queries.",
-    "published": "Mar 24",
-    "pdf_url": "https://arxiv.org/pdf/2603.20907v5",
-    "arxiv_url": "http://arxiv.org/abs/2603.20907v5",
-    "queried_author": "Maarten Sap",
-    "matching_authors": [
-      "Maarten Sap"
     ],
     "published_iso": "2026-03-24T04:00:00+00:00"
   }
