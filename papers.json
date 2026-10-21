@@ -1,5 +1,92 @@
 [
   {
+    "title": "ReuF2F: Benchmarking Coding Agents on Formalized Undergraduate Research Problems",
+    "authors": [
+      "Zeyu Zheng",
+      "Yiyang Liu",
+      "Yuyang Zhao",
+      "Congmin Zheng",
+      "Jiachen Zhu",
+      "Jianian Chen",
+      "Kangning Zhang",
+      "Kayue Daniel Wong",
+      "Lingyu Yang",
+      "Rong Shan",
+      "Shihao Chen",
+      "Thomas Zhu",
+      "Wentao Zhang",
+      "Xiaopeng Li",
+      "Yan Hu",
+      "Yongxi Lin",
+      "Yuxiang Chen",
+      "Zhuoying Ou",
+      "Jianghao Lin",
+      "Jeremy Avigad",
+      "Prasad Tetali",
+      "Jingbang Chen",
+      "Sean Welleck"
+    ],
+    "summary": "As AI systems begin to resolve open research problems, reliable verification becomes increasingly important. Formal mathematics provides a trusted framework for mathematical reasoning, enabling agents to produce machine-checkable proofs while conducting mathematical exploration. Existing formal mathematics benchmarks often focus on known results or a small set of prominent open problems, which can become difficult to evaluate reliably once solutions are discovered and widely disseminated. Existing evaluation protocols are also not always aligned with how modern coding agents operate. We therefore introduce ReuF2F, a Lean 4 benchmark of 244 formalized open problems drawn from Research Experiences for Undergraduates (REU), spanning entry-level open research problems across a broad range of mathematical subfields. We expect these less prominent open problems, which tend to attract less attention and may remain unsolved for longer, to be better suited for held-out evaluation of end-to-end open problem resolution in Lean. We adopt a standard coding-agent evaluation setting, placing each problem and its logical negation into a Lean project in a Docker container. We also build Leanimum-agent on mini-SWE-agent to provide a unified harness for fair comparisons across models. Our evaluation finds that even the best-performing model resolves only ~40% of the problems, leaving substantial room for improvement on formalized open research problems.",
+    "published": "Oct 21",
+    "published_iso": "2026-10-21T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.27046",
+    "arxiv_url": "https://arxiv.org/abs/2610.27046",
+    "queried_author": "Sean Welleck",
+    "matching_authors": [
+      "Sean Welleck"
+    ]
+  },
+  {
+    "title": "EGI-BENCH: An Enterprise General Intelligence Benchmark Suite",
+    "authors": [
+      "Zhiwei Liu",
+      "Zhujun Lan",
+      "Jielin Qiu",
+      "Zixiang Chen",
+      "Liangwei Yang",
+      "Ming Zhu",
+      "Akshara Prabhakar",
+      "Wenting Zhao",
+      "John Emmons",
+      "Jason Wu",
+      "Shafiq Rayhan Joty",
+      "Junnan Li",
+      "Shelby Heinecke",
+      "Silvio Savarese",
+      "Huan Wang"
+    ],
+    "summary": "Enterprise adoption of LLMs in agentic workflows is gated by evaluations that span a wide arc of abilities: CRM operations, heterogeneous-document retrieval, personal data understanding, multi-turn planning, tool use, function calling, long-horizon research, and long-context software engineering. These evaluations live today in separate repositories with divergent runners, dependencies, and scoring conventions, which makes cross-benchmark comparison difficult and obscures what a single aggregate number actually represents. We release EGI-BENCH, a unified LLM agent benchmark suite that consolidates eight enterprise facing agent benchmarks (CRMARENA, HERB, PERSONABENCH, USERBENCH, MCP-UNIVERSE, MCPEVAL, BENCHFORCE, LOCOBENCH) behind a single command-line interface with two runtime-budgeted execution modes. On top of the suite we define the Enterprise General Intelligence (EGI) Score, a six-dimensional framework (M1-M6) whose buckets are populated by fine-grained sub-metrics routed from each benchmark rather than by benchmark-level averages. We describe the suite, the sub-metric routing, and the quick/deep budgets, and report results for fourteen frontier and cost-efficient LLMs spanning the GPT, Claude, and Gemini families under quick mode. Top-line EGI ranges from 39.6 (GPT-4o mini) to 65.6 (gpt-5.5), and no single model dominates every capability axis: gpt-5.5 leads task outcome, planning, and retrieval grounding; Claude Sonnet 4.5 leads tool actioning and safety/abstention; and Claude Haiku 4.5 leads engineering quality. Code is available at https://github.com/SalesforceAI...",
+    "published": "Oct 21",
+    "published_iso": "2026-10-21T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.27234",
+    "arxiv_url": "https://arxiv.org/abs/2610.27234",
+    "queried_author": "Wenting Zhao",
+    "matching_authors": [
+      "Wenting Zhao"
+    ]
+  },
+  {
+    "title": "Large Flow Language Models",
+    "authors": [
+      "Arnav Chavan",
+      "Chanhyuk Lee",
+      "Udbhav Bamba",
+      "Jaehoon Yoo",
+      "Seunghoon Hong",
+      "Aditi Raghunathan",
+      "Jinwoo Kim"
+    ],
+    "summary": "Continuous flow language models offer a path to parallel generation with tools for control and acceleration unavailable to discrete diffusion, yet effective techniques for building them at the billion-parameter scale remain less established. We present Lafa (Large flow language model), a fast, high-performing flow language model scaled to 8B parameters in a data-efficient manner. Lafa is a blockwise flow model with causal attention on the prefix and bidirectional, asynchronous flow within each block. This design enables efficient training by adapting pretrained autoregressive (AR) models and fast inference via prefix caching and blockwise parallel decoding. We train Lafa at 0.5B, 7B, and 8B scales with fewer than 30B tokens, more efficient than previous diffusion models, and evaluate it on instruction following, reasoning, and coding, where the learned flow matches or surpasses the quality of AR and can be distilled into flow maps for one- and few-step generation. Notably, flow training preserves or even improves pretrained AR capabilities via a multi-token prediction effect, which we leverage in a self-speculative decoding scheme that verifies flow-based drafts autoregressively within a single model. This yields 2.54x the throughput of an AR model at comparable quality, outperforming multi-token prediction and discrete diffusion methods. Our findings show that continuous flows can serve as a scalable foundation for language modeling.",
+    "published": "Oct 21",
+    "published_iso": "2026-10-21T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.28559",
+    "arxiv_url": "https://arxiv.org/abs/2610.28559",
+    "queried_author": "Aditi Raghunathan",
+    "matching_authors": [
+      "Aditi Raghunathan"
+    ]
+  },
+  {
     "title": "TokenGate: Adapting LLMs for Fast and Memory-Efficient Prefill with Learned Token Pruning",
     "authors": [
       "Liana Patel",
@@ -441,6 +528,47 @@
     "queried_author": "Yejin Choi",
     "matching_authors": [
       "Yejin Choi"
+    ]
+  },
+  {
+    "title": "Scaling Synthetic Pre-training Data and Evaluation for Indic LLMs",
+    "authors": [
+      "Abhinav Khattar",
+      "Aishwarya Chhabra",
+      "Ameya Velingker",
+      "Anusha Kamath",
+      "Brandon Norick",
+      "Kanishk Singla",
+      "Kiran Praveen",
+      "Markus Kliegl",
+      "Mohammad Qazim Bhat",
+      "Mostofa Patwary",
+      "Niket Agarwal",
+      "Rajpreet Thethy",
+      "Ramani Akkati",
+      "Raviraj Joshi",
+      "Sai Nishanth Padala",
+      "Shuoyang Ding",
+      "Sriharsha Niverty",
+      "Utkarsh Vaidya",
+      "Vitaly Lavrukhin",
+      "Yev Meyer",
+      "Anoop Kunchukuttan",
+      "Mitesh Khapra",
+      "Mohammed Safi Ur Rahman Khan",
+      "Rudra Murthy",
+      "Sumanth Doddapaneni",
+      "Thanmay Jayakumar",
+      "Ujjwal Sharma"
+    ],
+    "summary": "Building capable language models for India requires scalable multilingual data and robust evaluation. We introduce Nemotron-Pretraining-Indic-v1, a synthetic pretraining corpus of approximately 2.83 trillion tokens covering all 22 scheduled Indian languages in native script and twelve in romanized form. It is the largest openly released Indic pretraining corpus. Using our GPU-accelerated pipeline, we translate curated English documents, assess translation quality, and repair low-quality outputs while preserving technical content and document structure and maintaining source traceability. Through continued-pretraining experiments across twelve languages, we show that combining our synthetic corpus with natural Indic text improves knowledge and reasoning over a public-corpus baseline. Additional experiments show how data volume, script coverage, and Indic training share affect English performance. We also introduce the Indic-LLM-Eval-Suite, a multilingual benchmark suite for evaluating Indic language models across chat, instruction following, reasoning, knowledge, code, and translation. The suite combines existing Indic benchmarks with task-aware translations of English benchmarks, using automated quality assessment, targeted correction, and native-speaker review in a human-in-the-loop pipeline. We use the suite to comprehensively benchmark contemporary open-weight Indic and multilingual models across capabilities and languages, revealing substantial variation across tasks and languages. Together, these resources provide a scalable foundation for developing and evaluating mor...",
+    "published": "Oct 20",
+    "published_iso": "2026-10-20T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.26006v1",
+    "arxiv_url": "http://arxiv.org/abs/2610.26006v1",
+    "queried_author": "Mostofa Patwary",
+    "matching_authors": [
+      "Mostofa Patwary"
     ]
   },
   {
@@ -13648,92 +13776,5 @@
       "Jacob Eisenstein"
     ],
     "published_iso": "2026-03-31T04:00:00+00:00"
-  },
-  {
-    "title": "PerceptionComp: A Video Benchmark for Complex Perception-Centric Reasoning",
-    "authors": [
-      "Shaoxuan Li",
-      "Zhixuan Zhao",
-      "Hanze Deng",
-      "Zirun Ma",
-      "Shulin Tian",
-      "Zuyan Liu",
-      "Yushi Hu",
-      "Haoning Wu",
-      "Yuhao Dong",
-      "Benlin Liu",
-      "Ziwei Liu",
-      "Ranjay Krishna"
-    ],
-    "summary": "We introduce PerceptionComp, a manually annotated benchmark for complex, long-horizon, perception-centric video reasoning. PerceptionComp is designed so that no single moment is sufficient: answering each question requires multiple temporally separated pieces of visual evidence and compositional constraints under conjunctive and sequential logic, spanning perceptual subtasks such as objects, attributes, relations, locations, actions, and events, and requiring skills including semantic recognition, visual correspondence, temporal reasoning, and spatial reasoning. The benchmark contains 1,114 highly complex questions on 279 videos from diverse domains including city walk tours, indoor villa tours, video games, and extreme outdoor sports, with 100% manual annotation. Human studies show that PerceptionComp requires substantial test-time thinking and repeated perception steps: participants take much longer than on prior benchmarks, and accuracy drops to near chance (18.97%) when rewatching is disallowed. State-of-the-art MLLMs also perform substantially worse on PerceptionComp than on existing benchmarks: the best model in our evaluation, Gemini-3-Flash, reaches only 45.96% accuracy in the five-choice setting, while open-source models remain below 40%. These results suggest that perception-centric long-horizon video reasoning remains a major bottleneck, and we hope PerceptionComp will help drive progress in perceptual reasoning.",
-    "published": "Mar 30",
-    "pdf_url": "https://arxiv.org/pdf/2603.26653v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.26653v1",
-    "queried_author": "Ranjay Krishna",
-    "matching_authors": [
-      "Ranjay Krishna"
-    ],
-    "published_iso": "2026-03-30T04:00:00+00:00"
-  },
-  {
-    "title": "Estimating near-verbatim extraction risk in language models with decoding-constrained beam search",
-    "authors": [
-      "A. Feder Cooper",
-      "Mark A. Lemley",
-      "Christopher De Sa",
-      "Lea Duesterwald",
-      "Allison Casasola",
-      "Jamie Hayes",
-      "Katherine Lee",
-      "Daniel E. Ho",
-      "Percy Liang"
-    ],
-    "summary": "Recent work shows that standard greedy-decoding extraction methods for quantifying memorization in LLMs miss how extraction risk varies across sequences. Probabilistic extraction -- computing the probability of generating a target suffix given a prefix under a decoding scheme -- addresses this, but is tractable only for verbatim memorization, missing near-verbatim instances that pose similar privacy and copyright risks. Quantifying near-verbatim extraction risk is expensive: the set of near-verbatim suffixes is combinatorially large, and reliable Monte Carlo (MC) estimation can require ~100,000 samples per sequence. To mitigate this cost, we introduce decoding-constrained beam search, which yields deterministic lower bounds on near-verbatim extraction risk at a cost comparable to ~20 MC samples per sequence. Across experiments, our approach surfaces information invisible to verbatim methods: many more extractable sequences, substantially larger per-sequence extraction mass, and patterns in how near-verbatim extraction risk manifests across model sizes and types of text.",
-    "published": "Mar 27",
-    "pdf_url": "https://arxiv.org/pdf/2603.24917v3",
-    "arxiv_url": "http://arxiv.org/abs/2603.24917v3",
-    "queried_author": "Percy Liang",
-    "matching_authors": [
-      "Percy Liang"
-    ],
-    "published_iso": "2026-03-27T04:00:00+00:00"
-  },
-  {
-    "title": "Reaching Beyond the Mode: RL for Distributional Reasoning in Language Models",
-    "authors": [
-      "Isha Puri",
-      "Mehul Damani",
-      "Idan Shenfeld",
-      "Marzyeh Ghassemi",
-      "Jacob Andreas",
-      "Yoon Kim"
-    ],
-    "summary": "Given a question, a language model (LM) implicitly encodes a distribution over possible answers. In practice, post-training procedures for LMs often collapse this distribution onto a single dominant mode. While this is generally not a problem for benchmark-style evaluations that assume one correct answer, many real-world tasks inherently involve multiple valid answers or irreducible uncertainty. Examples include medical diagnosis, ambiguous question answering, and settings with incomplete information. In these cases, we would like LMs to generate multiple plausible hypotheses, ideally with confidence estimates for each one, and without computationally intensive repeated sampling to generate non-modal answers. This paper describes a multi-answer reinforcement learning approach for training LMs to perform distributional reasoning over multiple answers during inference. We modify the RL objective to enable models to explicitly generate multiple candidate answers in a single forward pass, internalizing aspects of inference-time search into the model's generative process. Across question-answering, medical diagnostic, and coding benchmarks, we observe improved diversity, coverage, and set-level calibration scores compared to single answer trained baselines. Models trained with our approach require fewer tokens to generate multiple answers than competing approaches. On coding tasks, they are also substantially more accurate. These results position multi-answer RL as a principled and compute-efficient alternative to inference-time scaling procedures such as best-of-k. Code and mor...",
-    "published": "Mar 27",
-    "pdf_url": "https://arxiv.org/pdf/2603.24844v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.24844v1",
-    "queried_author": "Jacob Andreas",
-    "matching_authors": [
-      "Jacob Andreas",
-      "Yoon Kim"
-    ],
-    "published_iso": "2026-03-27T04:00:00+00:00"
-  },
-  {
-    "title": "Examining the Effect of Explanations of AI Privacy Redaction in AI-mediated Interactions",
-    "authors": [
-      "Roshni Kaushik",
-      "Maarten Sap",
-      "Koichi Onoue"
-    ],
-    "summary": "AI-mediated communication is increasingly being utilized to help facilitate interactions; however, in privacy sensitive domains, an AI mediator has the additional challenge of considering how to preserve privacy. In these contexts, a mediator may redact or withhold information, raising questions about how users perceive these interventions and whether explanations of system behavior can improve trust. In this work, we investigate how explanations of redaction operations can affect user trust in AI-mediated communication. We devise a scenario where a validated system removes sensitive content from messages and generates explanations of varying detail to communicate its decisions to recipients. We then conduct a user study with $180$ participants that studies how user trust and preferences vary for cases with different amounts of redacted content and different levels of explanation detail. Our results show that participants believed our system was more effective at preserving privacy when explanations were provided ($p<0.05$, Cohen's $d \\approx 0.3$). We also found that contextual factors had an impact; participants relied more on explanations and found them more helpful when the system performed extensive redactions ($p<0.05$, Cohen's $f \\approx 0.2$). We also found that explanation preferences depended on individual differences as well, and factors such as age and baseline familiarity with AI affected user trust in our system. These findings highlight the importance and challenge of balancing transparency and privacy in AI-mediated communications and suggest that adaptive, ...",
-    "published": "Mar 27",
-    "pdf_url": "https://arxiv.org/pdf/2603.24735v2",
-    "arxiv_url": "http://arxiv.org/abs/2603.24735v2",
-    "queried_author": "Maarten Sap",
-    "matching_authors": [
-      "Maarten Sap"
-    ],
-    "published_iso": "2026-03-27T04:00:00+00:00"
   }
 ]
