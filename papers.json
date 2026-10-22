@@ -1,5 +1,99 @@
 [
   {
+    "title": "FrontierCS 2: A Benchmark for Computer Science R&D",
+    "authors": [
+      "Qiuyang Mang",
+      "Wenhao Chai",
+      "Runyuan He",
+      "Dongruixuan Li",
+      "Zihan Zheng",
+      "Yujun He",
+      "Xuanyi Zhou",
+      "Hao Wang",
+      "Siddhant Ray",
+      "Bo Peng",
+      "Ruyi Ji",
+      "Shuo Yang",
+      "Haocheng Xi",
+      "Boru Chen",
+      "Xinyang David Han",
+      "Melissa Pan",
+      "Mayank Mishra",
+      "Boxi Yu",
+      "Sijia Liu",
+      "Kerem Akillioglu",
+      "Yi Pan",
+      "Zirui Wang",
+      "Mert Cemri",
+      "Diogo Antunes",
+      "Yichuan Wang",
+      "Aiwei Ivy Zhang",
+      "Zhenyang Chen",
+      "Qizheng Zhang",
+      "Kaiyuan Liu",
+      "Wenyuan Huang",
+      "Sherry Ruan",
+      "Shu Liu",
+      "Dacheng Li",
+      "Zerui Cheng",
+      "Zeyu Shen",
+      "Shang Zhou",
+      "Hanfei Chen",
+      "Yuzhong Zhang",
+      "Bohan Lyu",
+      "Qu Ao",
+      "Han Zheng",
+      "Chonghe Jiang",
+      "Jingzhuo Hu",
+      "Xiaokun Chen",
+      "Kunjun Li",
+      "Zhiqing Zhong",
+      "Haoye Tian",
+      "Tong Zhao",
+      "Yunzhong He",
+      "Hanchen Li",
+      "Ofir Press",
+      "Jiantao Jiao",
+      "Kunle Olukotun",
+      "Karthik R. Narasimhan",
+      "Jingbo Shang",
+      "Koushik Sen",
+      "Matei Zaharia",
+      "Alex Dimakis",
+      "Ion Stoica",
+      "Joseph E. Gonzalez",
+      "Alvin Cheung"
+    ],
+    "summary": "Can LLM agents make contributions to frontier computer science R&amp;D? We introduce FrontierCS 2, a benchmark of 48 open-ended tasks. We take a paper and the code its authors released and delete the paper's contribution. The deleted code becomes the human reference that sets the bar. Earlier open-ended benchmarks give each agent a problem statement and grade one program after the run. FrontierCS 2 places the agent inside a research environment. The agent inherits a working repository and may submit a patch at any point. For each patch, a judge returns a development-suite score but keeps the evaluator, the held-out final suite and the reference private, and grades the final submission on that suite against the reference. The tasks span 13 domains, from machine-learning systems and high-performance computing to databases, security and robotics. Beyond these 48 tasks, FrontierCS 2 keeps a private set of more than 100 tasks, to be announced in the future. We evaluate 12 agents. The best one is Claude Opus 5.5, passing 58% of its runs. No run passes on 16 tasks. A higher score is not the same as a pass: most runs that beat the reference on the combined final score still fall short on some metric or workload. On a shared capability scale for agents and tasks, the median task is roughly as difficult as what the strongest agent can handle.",
+    "published": "Oct 22",
+    "published_iso": "2026-10-22T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.29932",
+    "arxiv_url": "https://arxiv.org/abs/2610.29932",
+    "queried_author": "Karthik R Narasimhan",
+    "matching_authors": [
+      "Karthik R Narasimhan",
+      "Ofir Press"
+    ]
+  },
+  {
+    "title": "Automating ML for Science: Can Frontier Agents Climb Scientific Hills in the Wild?",
+    "authors": [
+      "Ming Zhong",
+      "Stacy Li",
+      "Nicholas Carlini",
+      "Matthew Jagielski"
+    ],
+    "summary": "Frontier coding agents are increasingly framed as end-to-end automated researchers, and ML for science offers a demanding test of that promise: improving a scientific model often requires domain insight beyond routine ML engineering. We introduce Agent4Sci, a long-horizon testbed for measuring how far today's agents can improve the published best models on scientific ML benchmarks, spanning 20 benchmarks across 11 domains. Rather than ranking agents on a leaderboard, Agent4Sci asks what kinds of progress agents can make on these tasks under in-the-wild conditions, and where they fall short. Empirically, today's frontier agents advance the published best on every benchmark, with Claude Opus reaching 10.4% mean relative improvement and no run flagged for academic misconduct. These gains, however, come almost entirely from a bag of ML-engineering tricks rather than research-level insight. Trajectory analysis surfaces three recurring limitations in this setting: novelty miscalibration, resource under-utilization, and rapid collapse into local engineering sweeps. Lightweight plug-in skills for research ideation, experiment management, and scheduled checklists raise Claude Opus from 10.4% to 20.1% and Codex from 4.4% to 8.1%, while yielding more diverse, domain-relevant interventions. Agent4Sci gives the community a way to track and push frontier agents from ML engineering toward domain insight on real-world ML-for-science problems. Code and data are available on GitHub (https://github.com/maszhongming/agent4sci) and Hugging Face (https://huggingface.co/datasets/MingZhong/agent4s...",
+    "published": "Oct 22",
+    "published_iso": "2026-10-22T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.28763",
+    "arxiv_url": "https://arxiv.org/abs/2610.28763",
+    "queried_author": "Nicholas Carlini",
+    "matching_authors": [
+      "Nicholas Carlini"
+    ]
+  },
+  {
     "title": "ReuF2F: Benchmarking Coding Agents on Formalized Undergraduate Research Problems",
     "authors": [
       "Zeyu Zheng",
@@ -13733,47 +13827,5 @@
       "Dan Jurafsky"
     ],
     "published_iso": "2026-04-01T04:00:00+00:00"
-  },
-  {
-    "title": "ParaSpeechCLAP: A Dual-Encoder Speech-Text Model for Rich Stylistic Language-Audio Pretraining",
-    "authors": [
-      "Anuj Diwan",
-      "Eunsol Choi",
-      "David Harwath"
-    ],
-    "summary": "We introduce ParaSpeechCLAP, a family of dual-encoder models that map speech and text style captions into a shared embedding space, supporting rich intrinsic (speaker-level) and situational (utterance-level) descriptors, such as pitch, texture, and emotion, beyond the narrow set handled by existing models. We train separate Intrinsic and Situational models alongside a unified Combined model, finding that specialized models are stronger on individual style dimensions while the unified model excels on compositional evaluation. We further show that ParaSpeechCLAP-Intrinsic benefits from an additional classification loss and class-balanced training. We demonstrate performance on style caption retrieval, speech attribute classification, and usability as inference-time reward models for style-prompted TTS. ParaSpeechCLAP models outperform baselines on most metrics across all three applications. Our models and code are released at https://github.com/ajd12342/paraspeechclap .",
-    "published": "Mar 31",
-    "pdf_url": "https://arxiv.org/pdf/2603.28737v2",
-    "arxiv_url": "http://arxiv.org/abs/2603.28737v2",
-    "queried_author": "Eunsol Choi",
-    "matching_authors": [
-      "Eunsol Choi"
-    ],
-    "published_iso": "2026-03-31T04:00:00+00:00"
-  },
-  {
-    "title": "MolmoPoint: Better Pointing for VLMs with Grounding Tokens",
-    "authors": [
-      "Christopher Clark",
-      "Yue Yang",
-      "Jae Sung Park",
-      "Zixian Ma",
-      "Jieyu Zhang",
-      "Rohun Tripathi",
-      "Mohammadreza Salehi",
-      "Sangho Lee",
-      "Taira Anderson",
-      "Winson Han",
-      "Ranjay Krishna"
-    ],
-    "summary": "Grounding has become a fundamental capability of vision-language models (VLMs). Most existing VLMs point by generating coordinates as part of their text output, which requires learning a complicated coordinate system and results in a high token count. Instead, we propose a more intuitive pointing mechanism that directly selects the visual tokens that contain the target concept. Our model generates a special pointing token that cross-attends to the input image or video tokens and selects the appropriate one. To make this model more fine-grained, we follow these pointing tokens with an additional special token that selects a fine-grained subpatch within the initially selected region, and then a third token that specifies a location within that subpatch. We further show that performance improves by generating points sequentially in a consistent order, encoding the relative position of the previously selected point, and including a special no-more-points class when selecting visual tokens. Using this method, we set a new state-of-the-art on image pointing (70.7% on PointBench), set a new state-of-the-art among fully open models on GUI pointing (61.1% on ScreenSpotPro), and improve video pointing (59.1% human preference win rate vs. a text coordinate baseline) and tracking (+6.3% gain on Molmo2Track). We additionally show that our method achieves much higher sample efficiency and discuss the qualitative differences that emerge from this design change.",
-    "published": "Mar 31",
-    "pdf_url": "https://arxiv.org/pdf/2603.28069v1",
-    "arxiv_url": "http://arxiv.org/abs/2603.28069v1",
-    "queried_author": "Ranjay Krishna",
-    "matching_authors": [
-      "Ranjay Krishna"
-    ],
-    "published_iso": "2026-03-31T04:00:00+00:00"
   }
 ]
