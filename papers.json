@@ -1,5 +1,40 @@
 [
   {
+    "title": "Scaling Laws for Generative Reward Models",
+    "authors": [
+      "Angel Raychev",
+      "Nathan Lile",
+      "Rafael Rafailov"
+    ],
+    "summary": "We study generative reward models (GenRMs) as online preference providers for policy optimization in creative writing. Across Qwen3 reward-model sizes from 0.6B to 14B, Thinking judges trained with GRPO have higher static Gold-label accuracy than Answer-Only judges trained with SFT. This ranking often reverses when the judges train policies through online DPO: Answer-Only rewarders yield higher peak and top-five-average policy Elo in seven of eight matched settings under a fixed, learned 32B Gold evaluator. Intermediate Thinking-judge checkpoints can also outperform later, more statically accurate checkpoints as rewarders. Sweeps over rewarder size, policy size, training duration and DPO regularization show substantial benefits from reward-model capacity, including judges larger than the policy. We analyze trajectories with evaluator-specific Elo arenas, conditional match-resampling intervals and descriptive scaling fits. These results demonstrate an evaluator-rewarder gap in the studied pipelines: fixed-distribution judging accuracy does not determine downstream optimization quality. The comparison changes judge-training objective as well as response format, and the main ranking is conditional on its learned reference rather than a universal human-quality result. A limited follow-up using a different learned judge is inconclusive overall.",
+    "published": "Oct 23",
+    "published_iso": "2026-10-23T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.30765",
+    "arxiv_url": "https://arxiv.org/abs/2610.30765",
+    "queried_author": "Rafael Rafailov",
+    "matching_authors": [
+      "Rafael Rafailov"
+    ]
+  },
+  {
+    "title": "Towards User Simulators That Stay On Task And Still Sound Natural",
+    "authors": [
+      "Mustafa Omer Gul",
+      "Philippe Laban",
+      "Tanya Goyal",
+      "Jennifer Neville"
+    ],
+    "summary": "Users increasingly rely on AI systems for extended, multi-turn tasks, yet evidence indicates that LLM-based system performance degrades over prolonged interaction. To evaluate and improve AI assistants in such settings, we need user simulators that faithfully follow complex user intents while exhibiting realistic conversational behavior. Existing approaches manifest a trade-off: prompted assistants can follow complex user intents but lack behavioral fidelity, while specialized user simulators better approximate conversational behavior but struggle to remain faithful to complex intents. In this paper, we propose a reinforcement learning (RL) recipe that jointly rewards task intent adherence and behavioral naturalness. A crucial contribution of the method is operationalizing naturalness with a lightweight discriminator trained in an alternating, adversarial loop with the user simulator. We release the resulting model, UserLM-2.0, which produces valid simulated conversations (i.e., meeting both task-faithfulness and naturalness criteria) 46.2% of the time, over three times the rate of the strongest prior user simulator (14.1%).",
+    "published": "Oct 23",
+    "published_iso": "2026-10-23T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.31512",
+    "arxiv_url": "https://arxiv.org/abs/2610.31512",
+    "queried_author": "Tanya Goyal",
+    "matching_authors": [
+      "Tanya Goyal"
+    ]
+  },
+  {
     "title": "FrontierCS 2: A Benchmark for Computer Science R&D",
     "authors": [
       "Qiuyang Mang",
@@ -13791,41 +13826,5 @@
       "Colin Raffel"
     ],
     "published_iso": "2026-04-03T04:00:00+00:00"
-  },
-  {
-    "title": "Agent psychometrics: Task-level performance prediction in agentic coding benchmarks",
-    "authors": [
-      "Chris Ge",
-      "Daria Kryvosheieva",
-      "Daniel Fried",
-      "Uzay Girit",
-      "Kaivalya Hariharan"
-    ],
-    "summary": "As the focus in LLM-based coding shifts from static single-step code generation to multi-step agentic interaction with tools and environments, understanding which tasks will challenge agents and why becomes increasingly difficult. This is compounded by current practice: agent performance is typically measured by aggregate pass rates on benchmarks, but single-number metrics obscure the diversity of tasks within a benchmark. We present a framework for predicting success or failure on individual tasks tailored to the agentic coding regime. Our approach augments Item Response Theory (IRT) with rich features extracted from tasks, including issue statements, repository contexts, solutions, and test cases, and introduces a novel decomposition of agent ability into LLM and scaffold ability components. This parameterization enables us to aggregate evaluation data across heterogeneous leaderboards and accurately predict task-level performance for unseen benchmarks, as well as unseen LLM-scaffold combinations. Our methods have practical utility for benchmark designers, who can better calibrate the difficulty of their new tasks without running computationally expensive agent evaluations.",
-    "published": "Apr 02",
-    "pdf_url": "https://arxiv.org/pdf/2604.00594v2",
-    "arxiv_url": "http://arxiv.org/abs/2604.00594v2",
-    "queried_author": "Daniel Fried",
-    "matching_authors": [
-      "Daniel Fried"
-    ],
-    "published_iso": "2026-04-02T04:00:00+00:00"
-  },
-  {
-    "title": "Learning Concepts, Not Tokens: Self-Supervised Semantic Alignment for Language Models",
-    "authors": [
-      "Christine Zhang",
-      "Dan Jurafsky",
-      "Chen Shani"
-    ],
-    "summary": "The next-token prediction (NTP) objective trains language models to predict a single token at each step, even though many continuations can express the same meaning. For example, in the sentence ``this sticker can be placed here'', positioned, attached, or put are all plausible alternatives. While standard NTP training treats these alternatives as mutually exclusive targets, we explore a self-supervised framework that encourages models to predict concepts, approximated as sets of semantically equivalent tokens. Models trained with this concept supervision align better with human similarity judgments, improve classification, clustering, and reranking performance, and achieve comparable or stronger downstream reasoning. These gains come with lower perplexity on semantically meaningful words (Section 3.2) and only minimal increases in global perplexity, suggesting that concepts enhance semantic alignment while preserving language modeling quality. Our code is available at https://github.com/christine-zhang1/learning-concepts",
-    "published": "Apr 01",
-    "pdf_url": "https://arxiv.org/pdf/2603.29123v4",
-    "arxiv_url": "http://arxiv.org/abs/2603.29123v4",
-    "queried_author": "Dan Jurafsky",
-    "matching_authors": [
-      "Dan Jurafsky"
-    ],
-    "published_iso": "2026-04-01T04:00:00+00:00"
   }
 ]
