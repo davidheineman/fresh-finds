@@ -1,5 +1,84 @@
 [
   {
+    "title": "Eat Your Precision: Precision Objective Mitigates Reward Hacking in Rubric-based RL",
+    "authors": [
+      "Hyun Ryu",
+      "Jong-Heon Kim",
+      "Yiqing Xie",
+      "Seungone Kim",
+      "Carolyn Rose",
+      "Eunho Yang"
+    ],
+    "summary": "Rubric-based rewards enable effective reinforcement learning on non-verifiable tasks. However, because these rewards are typically defined as a weighted measure of rubric coverage, models are trained primarily to maximize a recall objective. As a result, RL-trained models produce responses that are more complete but also more verbose and contain more unnecessary or factually incorrect content, leading them to be less preferred than responses from the base model. To address this issue, we present the FORK reward, which jointly optimizes recall and a novel precision objective, which requires each unit of a model response to be both necessary and factually correct, as measured by rubric-driven necessity credits and a factual-correctness grader, respectively. Our experimental results show that FORK outperforms existing rubric-based RL methods and achieves Pareto-optimal performance that balances rubric coverage and overall response quality. Compared to the original recall-based reward, FORK substantially improves precision and reduces response length while achieving similar rubric coverage, which leads to significantly higher win rate compared to the base policy (e.g., from 10.6% to 68.0% on RubricHub-Medical and from 22.1% to 74.1% on HealthBench).",
+    "published": "Oct 27",
+    "published_iso": "2026-10-27T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.33512",
+    "arxiv_url": "https://arxiv.org/abs/2610.33512",
+    "queried_author": "Seungone Kim",
+    "matching_authors": [
+      "Seungone Kim"
+    ]
+  },
+  {
+    "title": "RAGing Against Misogyny: Improving Implicit Misogyny Explanations",
+    "authors": [
+      "Ivana Crescenzi",
+      "Arianna Muti",
+      "Maarten Sap",
+      "Tommaso Caselli",
+      "Debora Nozza"
+    ],
+    "summary": "Implicit misogyny often requires background knowledge to be understood. To address this challenge, we propose a Retrieval-Augmented Generation (RAG) framework for detecting and explaining implicit misogyny in English and Italian, leveraging encyclopedic, slang and feminist knowledge sources. Using the ImplicIT-Mis and SBIC+ datasets, we evaluate the contribution of each knowledge source to detection and explanation quality, investigating also whether RAG addresses known LLM failure modes in implicit misogyny. Results show that RAG improves recall on ImplicIT-Mis, but does not improve detection performance on SBIC+. However, human evaluation shows that RAG-based explanations are preferred over no-RAG explanations in both languages. Feminist literature emerges as the most consistently useful source for detection and explanation.",
+    "published": "Oct 27",
+    "published_iso": "2026-10-27T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.35094",
+    "arxiv_url": "https://arxiv.org/abs/2610.35094",
+    "queried_author": "Maarten Sap",
+    "matching_authors": [
+      "Maarten Sap"
+    ]
+  },
+  {
+    "title": "Lost in Translation: Investigating Systematic Discrepancies between Parallel English and Chinese Names of American Chinese Restaurants",
+    "authors": [
+      "Hang Jiang",
+      "Nanxi Liu",
+      "Tiantian Wang",
+      "Cassandra Overney",
+      "Rukun Zhang",
+      "Artemisia Luk",
+      "Diyi Yang",
+      "Deb Roy",
+      "Jad Kabbara"
+    ],
+    "summary": "Given that the Chinese are one of the oldest ethnic groups to immigrate to the US, their cuisine have become central to the US dining scene and an interesting avenue to study how Chinese immigrants have culturally adapted into American life. In that regard, previous research has focused on analyzing the English names that Chinese restaurants adopt, e.g., finding the use of familiar and typical words. To investigate how Chinese immigrants have culturally integrated in the US depending on social, geographic and demographic contexts, we investigate in this work the under-explored relationship between the Chinese and English names of American Chinese restaurants. Specifically, we conduct a study on 3,172 Chinese restaurants (10% of the total on Google Maps) sampled across the US. We present 8-dimension name frames to capture the underlying meanings behind names and create the NameFrames dataset containing 884 annotated parallel Chinese/English names. We also built an NLP pipeline to analyze the semantic discrepancies between names with both frame-based and embedding-based distance metrics. Our frame analysis shows that English names more often emphasize Location and Specialty, while Chinese names more often emphasize Positivity and Ambiance. Furthermore, we observe that for Chinese restaurants located in urban areas, those in counties with a higher concentration of Chinese population, or those that are relatively new, the discrepancies between the English and Chinese names are noticeably larger. Finally, interviews with 10 Chinese restaurant owners reveal additional interesting...",
+    "published": "Oct 27",
+    "published_iso": "2026-10-27T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.35191",
+    "arxiv_url": "https://arxiv.org/abs/2610.35191",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang"
+    ]
+  },
+  {
+    "title": "Quantifying Claim Smoothing by LLM Research Agents",
+    "authors": [
+      "Tiasa Singha Roy",
+      "Manya Wadhwa",
+      "Greg Durrett"
+    ],
+    "summary": "Deep research, or any use of large language models (LLMs) to read a large document collection and produce insights, requires synthesizing information from different sources. In this work, we find that LLMs produce long-form research reports that read as confident syntheses but which fail to accurately reflect the underlying documents. We call this failure smoothing. In collapsing diverse and potentially conflicting sources into a single narrative, the model discards the evidential \"jaggedness\" of its corpus and asserts conclusions more decisive than the citations can support. We introduce a claim level scoring pipeline, SmoothScore, to quantify this effect. Our pipeline extracts key conclusive claims from model generated reports, then finds evidence relevant to each claim and clusters that evidence along high level aspects. Finally, each claim is scored with respect to the evidence to quantify the degree of smoothing done by the agent. Across 7 systems and 4 datasets, we find that agents consistently produce stronger claims than warranted.",
+    "published": "Oct 27",
+    "published_iso": "2026-10-27T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.35793",
+    "arxiv_url": "https://arxiv.org/abs/2610.35793",
+    "queried_author": "Greg Durrett",
+    "matching_authors": [
+      "Greg Durrett"
+    ]
+  },
+  {
     "title": "Rewriting Scaling Laws for Synthetic Data with Compute and Data Constraints",
     "authors": [
       "Nicholas Roberts",
@@ -13746,87 +13825,5 @@
       "Noah A. Smith"
     ],
     "published_iso": "2026-04-07T04:00:00+00:00"
-  },
-  {
-    "title": "CresOWLve: Benchmarking Creative Problem-Solving Over Real-World Knowledge",
-    "authors": [
-      "Mete Ismayilzada",
-      "Renqing Cuomao",
-      "Daniil Yurshevich",
-      "Anna Sotnikova",
-      "Lonneke van der Plas",
-      "Antoine Bosselut"
-    ],
-    "summary": "Creative problem-solving requires combining multiple cognitive abilities, including logical reasoning, lateral thinking, analogy-making, and commonsense knowledge, to discover insights that connect seemingly unrelated pieces of information. However, most existing benchmarks for large language models (LLMs) evaluate only specific components of this process. Moreover, many creativity-oriented benchmarks rely on artificially constructed brainteasers or contrived scenarios that do not reflect how creative problem-solving occurs in real-world settings. To address this gap, we introduce CresOWLve (containing 2,061 examples across five difficulty levels), a benchmark for evaluating creative problem-solving using puzzles grounded in real-world knowledge. Problems in CresOWLve require employing multiple creative thinking strategies, retrieving facts from diverse domains, and creatively combining them to arrive at a solution. Evaluating several frontier non-thinking and thinking LLMs, we show that CresOWLve remains highly challenging. Our analysis reveals a consistent performance gap: models perform substantially better on factual questions than on creative ones (up to -17% drop). While models can often retrieve the relevant knowledge, they struggle to form the non-obvious creative connections required to integrate the knowledge and arrive at the correct answer.",
-    "published": "Apr 07",
-    "pdf_url": "https://arxiv.org/pdf/2604.03374v2",
-    "arxiv_url": "http://arxiv.org/abs/2604.03374v2",
-    "queried_author": "Antoine Bosselut",
-    "matching_authors": [
-      "Antoine Bosselut"
-    ],
-    "published_iso": "2026-04-07T04:00:00+00:00"
-  },
-  {
-    "title": "Verbalizing LLMs' assumptions to explain and control sycophancy",
-    "authors": [
-      "Myra Cheng",
-      "Isabel Sieh",
-      "Humishka Zope",
-      "Sunny Yu",
-      "Lujain Ibrahim",
-      "Aryaman Arora",
-      "Jared Moore",
-      "Desmond Ong",
-      "Dan Jurafsky",
-      "Diyi Yang"
-    ],
-    "summary": "LLMs can be socially sycophantic, affirming users when they ask questions like \"am I in the wrong?\" rather than providing genuine assessment. We hypothesize that this behavior arises from LLMs' incorrect assumptions about the user, like underestimating how often users are seeking information over reassurance. We present Verbalized Assumptions, a framework for eliciting these assumptions from LLMs. Verbalized Assumptions provide insight into LLM sycophancy, delusion, and other safety issues: in social sycophancy datasets, \"seeking validation\" is the most frequent bigram in LLMs' assumptions. We provide evidence for a causal link between assumptions and sycophantic model behavior: we train linear probes on internal representations associated with Verbalized Assumptions and then use these probes for interpretable, fine-grained steering of social sycophancy. Finally, we identify a human-AI expectation gap that explains why LLMs default to sycophantic assumptions. On identical queries, people expect more objective and informative responses from AI than from other humans, but LLMs trained on human-human conversation do not account for this difference in expectations. Our work contributes a new understanding of assumptions as a mechanism for analyzing and controlling sycophancy.",
-    "published": "Apr 06",
-    "pdf_url": "https://arxiv.org/pdf/2604.03058v3",
-    "arxiv_url": "http://arxiv.org/abs/2604.03058v3",
-    "queried_author": "Dan Jurafsky",
-    "matching_authors": [
-      "Dan Jurafsky",
-      "Diyi Yang"
-    ],
-    "published_iso": "2026-04-06T04:00:00+00:00"
-  },
-  {
-    "title": "Explorable Theorems: Making Written Theorems Explorable by Grounding Them in Formal Representations",
-    "authors": [
-      "Hita Kambhamettu",
-      "Will Crichton",
-      "Sean Welleck",
-      "Harrison Goldstein",
-      "Andrew Head"
-    ],
-    "summary": "LLM-generated explanations can make technical content more accessible, but there is a ceiling on what they can support interactively. Because LLM outputs are static text, they cannot be executed or stepped through. We argue that grounding explanations in a formalized representation enables interactive affordances beyond what static text supports. We instantiate this idea for mathematical proof comprehension with explorable theorems, a system that uses LLMs to translate a theorem and its written proof into Lean, a programming language for machine-checked proofs, and links the written proof with the Lean code. Readers can work through the proof at a step-level granularity, test custom examples or counterexamples, and trace the logical dependencies bridging each step. Each worked-out step is produced by executing the Lean proof on that example and extracting its intermediate state. A user study ($n = 16$) shows potential advantages of this approach: in a proof-reading task, participants who had access to the provided explorability features gave better, more correct, and more detailed answers to comprehension questions, demonstrating a stronger overall understanding of the underlying mathematics.",
-    "published": "Apr 06",
-    "pdf_url": "https://arxiv.org/pdf/2604.02598v2",
-    "arxiv_url": "http://arxiv.org/abs/2604.02598v2",
-    "queried_author": "Sean Welleck",
-    "matching_authors": [
-      "Sean Welleck"
-    ],
-    "published_iso": "2026-04-06T04:00:00+00:00"
-  },
-  {
-    "title": "Failing to Falsify: Evaluating and Mitigating Confirmation Bias in Language Models",
-    "authors": [
-      "Ayush Rajesh Jhaveri",
-      "Anthony GX-Chen",
-      "Ilia Sucholutsky",
-      "Eunsol Choi"
-    ],
-    "summary": "Confirmation bias, the tendency to seek evidence that supports rather than challenges one's belief, hinders one's reasoning ability. We examine whether large language models (LLMs) exhibit confirmation bias by adapting the rule-discovery study from human psychology: given a sequence of three numbers (a \"triple\"), an agent engages in an interactive feedback loop where it (1) proposes a new triple, (2) receives feedback on whether it satisfies the hidden rule, and (3) guesses the rule. Across eleven LLMs of multiple families and scales, we find that LLMs exhibit confirmation bias, often proposing triples to confirm their hypothesis rather than trying to falsify it. This leads to slower and less frequent discovery of the hidden rule. We further explore intervention strategies (e.g., encouraging the agent to consider counter examples) developed for humans. We find prompting LLMs with such instruction consistently decreases confirmation bias in LLMs, improving rule discovery rates from 42% to 56% on average. Lastly, we mitigate confirmation bias by distilling intervention-induced behavior into LLMs, showing promising generalization to a new task, the Blicket test. Our work shows that confirmation bias is a limitation of LLMs in hypothesis exploration, and that it can be mitigated via injecting interventions designed for humans.",
-    "published": "Apr 06",
-    "pdf_url": "https://arxiv.org/pdf/2604.02485v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.02485v1",
-    "queried_author": "Eunsol Choi",
-    "matching_authors": [
-      "Eunsol Choi"
-    ],
-    "published_iso": "2026-04-06T04:00:00+00:00"
   }
 ]
