@@ -1,5 +1,21 @@
 [
   {
+    "title": "Gym-Anything-RT: Scaling Real-Time Environments for Vision-Language Agents",
+    "authors": [
+      "Pranjal Aggarwal",
+      "Sean Welleck"
+    ],
+    "summary": "AI agents have made substantial progress in domains where they have a non-trivial amount of time to deliberate between actions, such as mathematics, software engineering, and performing tasks on desktop applications. It is less clear how such models fare in settings that demand real-time interaction, such as playing a video game or operating a physical device. In these settings, the environment state may evolve as the agent is reasoning, or even as the underlying model is performing a forward pass. To gain insight into the real-time interaction capabilities of vision-language agents, we introduce Gym-Anything-RT. Our key idea is to construct visual minigames that demand a portfolio of capabilities required for interactive real-time settings. Gym-Anything-RT uses an agentic pipeline to automatically generate such environments based on a taxonomy of six capabilities required for real-time interaction, including the ability to perceive the environment and act under an evolving environment state. A key feature of Gym-Anything-RT is that it allows for controlled comparison of real-time interaction capabilities: we can run the same minigame in real time, or pause or slow down the environment to relax the requirement for real-time actions. We use Gym-Anything-RT to construct 100 real-time minigames and evaluate AI agents on them. We find large capability gaps in real-time interaction. For example, GPT-6 Astra (xHigh) achieves a pass rate of only 9.0% on the real-time minigames, which rises to 75.0% when the environment is paused. We also identify intriguing behaviors by the most p...",
+    "published": "Oct 28",
+    "published_iso": "2026-10-28T04:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.37567",
+    "arxiv_url": "https://arxiv.org/abs/2610.37567",
+    "queried_author": "Sean Welleck",
+    "matching_authors": [
+      "Sean Welleck"
+    ]
+  },
+  {
     "title": "Eat Your Precision: Precision Objective Mitigates Reward Hacking in Rubric-based RL",
     "authors": [
       "Hyun Ryu",
@@ -13784,45 +13800,6 @@
     "queried_author": "Antoine Bosselut",
     "matching_authors": [
       "Antoine Bosselut"
-    ],
-    "published_iso": "2026-04-07T04:00:00+00:00"
-  },
-  {
-    "title": "Olmo Hybrid: From Theory to Practice and Back",
-    "authors": [
-      "William Merrill",
-      "Yanhong Li",
-      "Tyler Romero",
-      "Anej Svete",
-      "Caia Costello",
-      "Pradeep Dasigi",
-      "Dirk Groeneveld",
-      "David Heineman",
-      "Bailey Kuehl",
-      "Nathan Lambert",
-      "Chuan Li",
-      "Kyle Lo",
-      "Saumya Malik",
-      "DJ Matusz",
-      "Benjamin Minixhofer",
-      "Jacob Morrison",
-      "Luca Soldaini",
-      "Finbarr Timbers",
-      "Pete Walsh",
-      "Noah A. Smith",
-      "Hannaneh Hajishirzi",
-      "Ashish Sabharwal"
-    ],
-    "summary": "Recent work has demonstrated the potential of non-transformer language models, especially linear recurrent neural networks (RNNs) and hybrid models that mix recurrence and attention. Yet there is no consensus on whether the potential benefits of these new architectures justify the risk and effort of scaling them up. To address this, we provide evidence for the advantages of hybrid models over pure transformers on several fronts. First, theoretically, we show that hybrid models do not merely inherit the expressivity of transformers and linear RNNs, but can express tasks beyond both, such as code execution. Putting this theory to practice, we train Olmo Hybrid, a 7B-parameter model largely comparable to Olmo 3 7B but with the sliding window layers replaced by Gated DeltaNet layers. We show that Olmo Hybrid outperforms Olmo 3 across standard pretraining and mid-training evaluations, demonstrating the benefit of hybrid models in a controlled, large-scale setting. We find that the hybrid model scales significantly more efficiently than the transformer, explaining its higher performance. However, its unclear why greater expressivity on specific formal problems should result in better scaling or superior performance on downstream tasks unrelated to those problems. To explain this apparent gap, we return to theory and argue why increased expressivity should translate to better scaling efficiency, completing the loop. Overall, our results suggest that hybrid models mixing attention and recurrent layers are a powerful extension to the language modeling paradigm: not merely to reduce ...",
-    "published": "Apr 07",
-    "pdf_url": "https://arxiv.org/pdf/2604.03444v4",
-    "arxiv_url": "http://arxiv.org/abs/2604.03444v4",
-    "queried_author": "Hannaneh Hajishirzi",
-    "matching_authors": [
-      "Hannaneh Hajishirzi",
-      "Kyle Lo",
-      "Luca Soldaini",
-      "Noah A. Smith"
     ],
     "published_iso": "2026-04-07T04:00:00+00:00"
   }
