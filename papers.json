@@ -20,6 +20,23 @@
     ]
   },
   {
+    "title": "BlindToChange: AI Agents Can Find Changes When Asked But Do They Look When Needed?",
+    "authors": [
+      "Anirudh Phukan",
+      "Tanya Goyal",
+      "Danish Pruthi"
+    ],
+    "summary": "Given that AI agents can search the web broadly and deeply in real time, it is tempting to conclude that their outputs account for recent world events. We show that this conclusion does not hold in practice. While agents can search and easily find recent changes, the correctness of their responses depends on whether they search and what they search for. Popular agentic search benchmarks like BrowseComp cannot expose failures wherein agents do not recognize their own assumptions that should be verified, since these benchmarks explicitly state what needs to be found. In contrast, many user requests state only the final information need (e.g., an itinerary for a trip), leaving the agent to discover relevant changes (e.g., the temporary closure of a museum) and account for their consequences. To highlight such gaps, we introduce BlindToChange, a benchmark that measures whether agents proactively discover recent events that affect their responses. Our benchmark comprises requests for recommendations where an obvious candidate is no longer applicable due to a recent real-world event. These events are drawn automatically from Wikidata, allowing BlindToChange to be periodically refreshed. Strikingly, we find a big gap -- as high as 27.5 points, even at high reasoning effort -- in systems' performance, when the recent event is not explicitly mentioned compared to when we ask about it directly. Analyzing search trajectories, we learn that more than half of the failures can be attributed to the fact that agents do not directly search to verify whether a relevant fact has changed. Our ...",
+    "published": "Nov 02",
+    "published_iso": "2026-11-02T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2610.41435",
+    "arxiv_url": "https://arxiv.org/abs/2610.41435",
+    "queried_author": "Tanya Goyal",
+    "matching_authors": [
+      "Tanya Goyal"
+    ]
+  },
+  {
     "title": "The Role of Quantization in Loss Spikes",
     "authors": [
       "Zaiqian Chen",
@@ -14321,39 +14338,6 @@
     "queried_author": "Wenting Zhao",
     "matching_authors": [
       "Wenting Zhao"
-    ],
-    "published_iso": "2026-04-10T04:00:00+00:00"
-  },
-  {
-    "title": "Squeeze Evolve: Unified Multi-Model Orchestration for Verifier-Free Evolution",
-    "authors": [
-      "Monishwaran Maheswaran",
-      "Leon Lakhani",
-      "Zhongzhu Zhou",
-      "Shijia Yang",
-      "Junxiong Wang",
-      "Coleman Hooper",
-      "Yuezhou Hu",
-      "Rishabh Tiwari",
-      "Jue Wang",
-      "Harman Singh",
-      "Qingyang Wu",
-      "Yuqing Jian",
-      "Ce Zhang",
-      "Kurt Keutzer",
-      "Tri Dao",
-      "Xiaoxia Wu",
-      "Ben Athiwaratkun",
-      "James Zou",
-      "Chenfeng Xu"
-    ],
-    "summary": "We show that verifier-free evolution is bottlenecked by both diversity and efficiency: without external correction, repeated evolution accelerates collapse toward narrow modes, while the uniform use of a high-cost model wastes compute and quickly becomes economically impractical. We introduce Squeeze Evolve, a unified multi-model orchestration framework for verifier-free evolutionary inference. Our approach is guided by a simple principle: allocate model capability where it has the highest marginal utility. Stronger models are reserved for high-impact stages, while cheaper models handle the other stages at much lower costs. This principle addresses diversity and cost-efficiency jointly while remaining lightweight. Squeeze Evolve naturally supports open-source, closed-source, and mixed-model deployments. Across AIME 2025, HMMT 2025, LiveCodeBench V6, GPQA-Diamond, ARC-AGI-V2, and multimodal vision benchmarks, such as MMMU-Pro and BabyVision, Squeeze Evolve consistently improves the cost-capability frontier over single-model evolution and achieves new state-of-the-art results on several tasks. Empirically, Squeeze Evolve reduces API cost by up to $\\sim$3$\\times$ and increases fixed-budget serving throughput by up to $\\sim$10$\\times$. Moreover, on discovery tasks, Squeeze Evolve is the first verifier-free evolutionary method to match, and in some cases exceed, the performance of verifier-based evolutionary methods.",
-    "published": "Apr 10",
-    "pdf_url": "https://arxiv.org/pdf/2604.07725v2",
-    "arxiv_url": "http://arxiv.org/abs/2604.07725v2",
-    "queried_author": "Tri Dao",
-    "matching_authors": [
-      "Tri Dao"
     ],
     "published_iso": "2026-04-10T04:00:00+00:00"
   }
