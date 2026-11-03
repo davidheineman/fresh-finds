@@ -1,5 +1,30 @@
 [
   {
+    "title": "Hinted Scaling Laws",
+    "authors": [
+      "Suze van Adrichem",
+      "Luke Bailey",
+      "Rohith Kuditipudi",
+      "Christine Ye",
+      "Neil Band",
+      "Ahmed Ahmed",
+      "John Duchi",
+      "Percy Liang",
+      "Tatsunori Hashimoto"
+    ],
+    "summary": "Scaling laws predict the outcome of large, expensive training runs by extrapolating trends from smaller, cheaper runs. On downstream accuracy evaluations, these predictions fail when the weaker models produced by the cheaper runs score near zero accuracy, because these scores give no trend to extrapolate to larger scales. We introduce hinted scaling laws, which use privileged information to turn a benchmark into a continuum of easier versions so that even the small models score above zero. We find that accuracy rises smoothly and predictably with the hint level, enabling new types of scaling laws that operate below the noise threshold. On the Delphi pretraining ladder, a hinted scaling law fit on models trained with at most $10^{20}$ FLOPs forecasts the GSM8K accuracy of a $10^{23}$ FLOP model (25.9%) to within 3 percentage points; a standard scaling law under-forecasts it by 13 percentage points when fit on the same models and by 12 even with models up to $10^{22}$ FLOPs in the fit. Across both this pretraining ladder and a collection of post-trained model families, hinted scaling laws reduce the median forecasting error on GSM8K, AIME and HLE from 21 percentage points to 4.3. Hinting also reduces the number of test examples needed to tell whether one model is better than another by widening the accuracy gaps between models while approximately preserving their order: a single hinted rollout per problem ranks nearly indistinguishable models as accurately as five unhinted rollouts. Our results suggest that hinting is a general primitive for improving the accuracy and cost of...",
+    "published": "Nov 03",
+    "published_iso": "2026-11-03T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.02270v1",
+    "arxiv_url": "http://arxiv.org/abs/2611.02270v1",
+    "queried_author": "Percy Liang",
+    "matching_authors": [
+      "Percy Liang",
+      "Tatsunori Hashimoto",
+      "Luke Bailey"
+    ]
+  },
+  {
     "title": "WASABI: Wasserstein Sampling via Bridge Interpolants",
     "authors": [
       "Sebastian Salazar",
@@ -14318,26 +14343,6 @@
     "matching_authors": [
       "Christopher Potts",
       "Tatsunori Hashimoto"
-    ],
-    "published_iso": "2026-04-10T04:00:00+00:00"
-  },
-  {
-    "title": "Distributed Multi-Layer Editing for Rule-Level Knowledge in Large Language Models",
-    "authors": [
-      "Yating Wang",
-      "Wenting Zhao",
-      "Yaqi Zhao",
-      "Yongshun Gong",
-      "Yilong Yin",
-      "Haoliang Sun"
-    ],
-    "summary": "Large language models store not only isolated facts but also rules that support reasoning across symbolic expressions, natural language explanations, and concrete instances. Yet most model editing methods are built for fact-level knowledge, assuming that a target edit can be achieved through a localized intervention. This assumption does not hold for rule-level knowledge, where a single rule must remain consistent across multiple interdependent forms. We investigate this problem through a mechanistic study of rule-level knowledge editing. To support this study, we extend the RuleEdit benchmark from 80 to 200 manually verified rules spanning mathematics and physics. Fine-grained causal tracing reveals a form-specific organization of rule knowledge in transformer layers: formulas and descriptions are concentrated in earlier layers, while instances are more associated with middle layers. These results suggest that rule knowledge is not uniformly localized, and therefore cannot be reliably edited by a single-layer or contiguous-block intervention. Based on this insight, we propose Distributed Multi-Layer Editing (DMLE), which applies a shared early-layer update to formulas and descriptions and a separate middle-layer update to instances. While remaining competitive on standard editing metrics, DMLE achieves substantially stronger rule-level editing performance. On average, it improves instance portability and rule understanding by 13.91 and 50.19 percentage points, respectively, over the strongest baseline across GPT-J-6B, Qwen2.5-7B, Qwen2-7B, and LLaMA-3-8B. The code is avail...",
-    "published": "Apr 10",
-    "pdf_url": "https://arxiv.org/pdf/2604.08284v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.08284v1",
-    "queried_author": "Wenting Zhao",
-    "matching_authors": [
-      "Wenting Zhao"
     ],
     "published_iso": "2026-04-10T04:00:00+00:00"
   }
