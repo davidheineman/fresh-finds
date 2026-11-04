@@ -1,5 +1,25 @@
 [
   {
+    "title": "Stabilizing On-Policy Targeted Guidance in Agentic Reinforcement Learning",
+    "authors": [
+      "Kevin Frans",
+      "Alexander M Rush",
+      "Sergey Levine",
+      "Pieter Abbeel",
+      "Ashvin Nair"
+    ],
+    "summary": "Naive on-policy RL is often bottlenecked by the capabilities of the base model --- insufficient coverage can result in an inability to learn from certain rewards. At the same time, rewards in modern post-training systems often come from rich textual sources, e.g. judge models with a rubric of criteria. Can we utilize such structures to provide a rich directional signal that enables improving on otherwise difficult to optimize rewards? In this work, we examine a framework we refer to as targeted guidance that learns from per-turn textual feedback via an on-policy self-distillation objective. Our focus is not only on directly improving hard-to-optimize behaviors, but on how to do so throughout the training process without degrading baseline RL performance. Over a range of settings across an agentic multi-turn software engineering environment, we find success by combining targeted self-distillation with a per-criteria RL reward, and by limiting feedback to turns where the policy specifically fails. We further examine the design choices that lead to stable entropy and reduce oscillatory behavior throughout training.",
+    "published": "Nov 04",
+    "published_iso": "2026-11-04T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.05266v1",
+    "arxiv_url": "http://arxiv.org/abs/2611.05266v1",
+    "queried_author": "Alexander M Rush",
+    "matching_authors": [
+      "Alexander M Rush",
+      "Alexander M. Rush"
+    ]
+  },
+  {
     "title": "Hinted Scaling Laws",
     "authors": [
       "Suze van Adrichem",
@@ -14262,27 +14282,6 @@
     "queried_author": "Sanmi Koyejo",
     "matching_authors": [
       "Sanmi Koyejo"
-    ],
-    "published_iso": "2026-04-14T04:00:00+00:00"
-  },
-  {
-    "title": "Spoiler Alert: Narrative Forecasting as a Metric for Tension in LLM Storytelling",
-    "authors": [
-      "Peiqi Sui",
-      "Yutong Zhu",
-      "Tianyi Cheng",
-      "Peter West",
-      "Richard Jean So",
-      "Hoyt Long",
-      "Ari Holtzman"
-    ],
-    "summary": "LLMs have so far failed both to generate consistently compelling stories and to recognize this failure--on the leading creative-writing benchmark (EQ-Bench), LLM judges rank zero-shot AI stories above New Yorker short stories, a gold standard for literary fiction. We argue that existing rubrics overlook a key dimension of compelling human stories: narrative tension. We introduce the 100-Endings metric, which walks through a story sentence by sentence: at each position, a model predicts how the story will end 100 times given only the text so far, and we measure tension as how often predictions fail to match the ground truth. Beyond the mismatch rate, the sentence-level curve yields complementary statistics, such as inflection rate, a geometric measure of how frequently the curve reverses direction, tracking twists and revelations. Unlike rubric-based judges, 100-Endings correctly ranks New Yorker stories far above LLM outputs. Grounded in narratological principles, we design a story-generation pipeline using structural constraints, including analysis of story templates, idea formulation, and narrative scaffolding. Our pipeline significantly increases narrative tension as measured by the 100-Endings metric, while maintaining performance on the EQ-Bench leaderboard.",
-    "published": "Apr 14",
-    "pdf_url": "https://arxiv.org/pdf/2604.09854v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.09854v1",
-    "queried_author": "Ari Holtzman",
-    "matching_authors": [
-      "Ari Holtzman"
     ],
     "published_iso": "2026-04-14T04:00:00+00:00"
   }
