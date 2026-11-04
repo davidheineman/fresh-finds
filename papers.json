@@ -20,6 +20,99 @@
     ]
   },
   {
+    "title": "Tokenizer Myths and Where To Find Them",
+    "authors": [
+      "Rylan Schaeffer",
+      "Sanmi Koyejo"
+    ],
+    "summary": "Tokenization is a fundamental component of modern language models: before a model sees data, its tokenizer has already determined how the data appears. We identify and challenge three myths in the tokenization research literature. Myth #1: Bits-Per-Byte (BPB) is agnostic to the tokenizer and/or the vocabulary size: BPB is tokens per byte times bits per token, and the two factors do not cancel; using untrained models, we show that BPB prefers some tokenizers over others: the model has learned nothing, but the tokenizer--model pair has. Myth #2: lower BPB means a better model: On untrained models, BPB strongly prefers some vocabulary sizes, even though accuracy remains at chance, and on real models trained on the same data, BPB correlates weakly with downstream performance. Myth #3: different \"tokenizer-agnostic\" metrics yield consistent results: The \"unigram-normalized loss\" is not tokenizer-agnostic; its reported correlation of 0.989 with BPB comes from a confounder and falls to 0.057 once fixed; from the same data the two metrics select different vocabularies at each model size. We present a tokenizer trilemma: no metric can score only the true distribution best, give the same predictions the same score, and tie all untrained models, so choosing a metric is choosing a research question. We conclude with a caution for reading the tokenization literature and a conjecture for future work.",
+    "published": "Nov 04",
+    "published_iso": "2026-11-04T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.04215",
+    "arxiv_url": "https://arxiv.org/abs/2611.04215",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "Suppressing Misaligned Behaviors in Language Models, Durably",
+    "authors": [
+      "Luxi He",
+      "Pengcheng Jiang",
+      "Jifan Zhang",
+      "Jiawei Han",
+      "Danqi Chen"
+    ],
+    "summary": "Undesired model behaviors can emerge or re-emerge at any stage of training. Once observed, how effectively can we suppress them? To study this question, we first construct two model organisms--language models deliberately trained to exhibit a specific misalignment--that differ in what triggers the behavior. The narrow-trigger organism misbehaves only when the prompt contains a specific cue: it cheats on multiple-choice questions by following a planted hint that points to a wrong answer, and behaves normally otherwise. The broad-trigger organism has no such cue: after fine-tuning on insecure code, it gives harmful responses across a wide range of open-ended prompts. We then formalize post-hoc behavioral suppression and evaluate methods along three criteria: immediate suppression of the target behavior, durability under further training, and preservation of general capability. We compare standard methods--SFT, GRPO, and gradient-ascent unlearning--along these dimensions. Building on prior work on alignment shallowness, we hypothesize that more durable suppression requires the ability to recover from a wider range of misalignment states. We introduce Prefix-Expanded Adversarial Reinforcement Learning (PEARL), a GRPO variant that augments rollouts with continuations from intermediate states sampled along cached organism trajectories. Across both organism settings and two model families (Qwen3-4B, GPT-OSS-20B), PEARL achieves strong immediate suppression while preserving task accuracy, and remains durable under further fine-tuning on either the organism's data or unrelated data....",
+    "published": "Nov 04",
+    "published_iso": "2026-11-04T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.05358",
+    "arxiv_url": "https://arxiv.org/abs/2611.05358",
+    "queried_author": "Danqi Chen",
+    "matching_authors": [
+      "Danqi Chen"
+    ]
+  },
+  {
+    "title": "ProteoCraft: Protein Design as Proposal-Verification Search",
+    "authors": [
+      "Fang Wu",
+      "Hongbin Lin",
+      "Bingchen Duan",
+      "Yuchen Wang",
+      "Li Erran Li",
+      "Yanjie Huang",
+      "Mingxuan Cao",
+      "Yijun Ma",
+      "Yunxiang Mo",
+      "Yanchao Li",
+      "Kuan Pang",
+      "Juangui Xu",
+      "Hanqun Cao",
+      "Dongwei Jiang",
+      "Xinyue Xu",
+      "Xiangru Tang",
+      "Zehong Wang",
+      "Jian Ma",
+      "Kejun Ying",
+      "Guanlue Li",
+      "Mingran Cao",
+      "Fanjin Wang",
+      "Tianfan Fu",
+      "Shuangjia Zheng",
+      "Yao Shu",
+      "Jure Leskovec",
+      "Yejin Choi"
+    ],
+    "summary": "Protein-protein interactions underpin nearly all biological processes. Yet, designing proteins with desired interactions remains challenging due to the structural complexity governing molecular recognition. This study views protein design as a search optimization problem over a combinatorial sequence space under expensive structural evaluation. Toward this goal, we introduce a novel tree-based search framework, ProteoCraft, that employs approximate structural gradients from diffusion-based structure predictors as effective proposal policies to specify where the search should explore. Complete no-gradient inference of folding models separately assigns values to the resulting sequences, determining what is good. ProteoCraft allocates this verification budget through a coarse-to-fine paradigm: multi-site edits first explore distinct sequence basins, then verified promising states undergo strict single-site refinement. Across fourteen de novo binder-design settings spanning eight target proteins, five immune-relevant TCR-facing targets, and four localized CDR redesign tasks, ProteoCraft improves design quality and high-confidence yield. These improvements persist under independent AF2-IG and Rosetta-based interface evaluation. Prospective experimental validation further yielded an 82.9% binding hit rate for PD-L1 miniproteins, with a best measured KD of 0.879 nM, and confirmed binding of designed IFNAR2 VHH. Our code is available at https://github.com/smiles724/ProteoCraft_v1.",
+    "published": "Nov 04",
+    "published_iso": "2026-11-04T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.03963",
+    "arxiv_url": "https://arxiv.org/abs/2611.03963",
+    "queried_author": "Jure Leskovec",
+    "matching_authors": [
+      "Jure Leskovec",
+      "Yejin Choi"
+    ]
+  },
+  {
+    "title": "$\\tau$-Rec-Books: A Disclosure-Controlled Benchmark for Requirement Elicitation in Agentic Recommender Systems",
+    "authors": [
+      "Bharath Sivaram Narasimhan",
+      "Karthik R. Narasimhan"
+    ],
+    "summary": "While conversational recommendation systems provide a more natural user interface, they face the challenge of progressively discovering a user's needs before they can recommend an item that satisfies them. To evaluate the ability of AI agents at this elicitation process, we introduce $\\tau$-Rec-Books, a benchmark that holds each user request fixed while varying only when the user reveals their requirements: all at the start (volunteer), one at the start and the rest when asked (mixed), or some never (hidden). A hidden requirement can be found only by proposing books and inferring it from the user's accept or reject verdicts. We generate 450 tasks over a catalog of 20,000 books from Wikidata, develop a rule-based simulated user to answer the agent, and score recommendations against catalog metadata without an LLM judge. Across four agents and two search interfaces, success rates fall for every agent and interface, on average from 0.975 (volunteer) to 0.756 (mixed) and 0.283 (hidden). Mixed tasks fail mainly because agents do not ask, and when told to ask, every agent reaches at least 0.931. On hidden tasks, most failures come from agents recommending a book they never proposed to the user. When told to propose first, agents only match a simple baseline that proposes popular books, and stay well below one that uses rejection to rule out possible requirements. We release the catalog pipeline, task generator, simulated user, validators, reference agents, and all agent traces at https://github.com/nbharaths/tau-rec/tree/main/data/tracks/books-wikidata-v2.",
+    "published": "Nov 04",
+    "published_iso": "2026-11-04T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.04459",
+    "arxiv_url": "https://arxiv.org/abs/2611.04459",
+    "queried_author": "Karthik R Narasimhan",
+    "matching_authors": [
+      "Karthik R Narasimhan"
+    ]
+  },
+  {
     "title": "Hinted Scaling Laws",
     "authors": [
       "Suze van Adrichem",
@@ -14185,103 +14278,6 @@
     "queried_author": "Tri Dao",
     "matching_authors": [
       "Tri Dao"
-    ],
-    "published_iso": "2026-04-14T04:00:00+00:00"
-  },
-  {
-    "title": "Neural Generalized Mixed-Effects Models",
-    "authors": [
-      "Yuli Slavutsky",
-      "Sebastian Salazar",
-      "David M. Blei"
-    ],
-    "summary": "Generalized linear mixed-effects models (GLMMs) are widely used to analyze grouped and hierarchical data. In a GLMM, each response is assumed to follow an exponential-family distribution where the natural parameter is given by a linear function of observed covariates and a latent group-specific random effect. Since exact marginalization over the random effects is typically intractable, model parameters are estimated by maximizing an approximate marginal likelihood. In this paper, we replace the linear function with neural networks. The result is a more flexible model, the neural generalized mixed-effects model (NGMM), which captures complex relationships between covariates and responses. To fit NGMM to data, we introduce an efficient optimization procedure that maximizes the approximate marginal likelihood and is differentiable with respect to network parameters. We show that the approximation error of our objective decays at a Gaussian-tail rate in a user-chosen parameter. On synthetic data, NGMM improves over GLMMs when covariate-response relationships are nonlinear, and on real-world datasets it outperforms prior methods. Finally, we analyze a large dataset of student proficiency to demonstrate how NGMM can be extended to more complex latent-variable models.",
-    "published": "Apr 14",
-    "pdf_url": "https://arxiv.org/pdf/2604.10976v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.10976v1",
-    "queried_author": "David M. Blei",
-    "matching_authors": [
-      "David M. Blei"
-    ],
-    "published_iso": "2026-04-14T04:00:00+00:00"
-  },
-  {
-    "title": "You Only Judge Once: Multi-response Reward Modeling in a Single Forward Pass",
-    "authors": [
-      "Yinuo Yang",
-      "Zixian Ma",
-      "Manasi Ganti",
-      "Jieyu Zhang",
-      "Ranjay Krishna"
-    ],
-    "summary": "We present a discriminative multimodal reward model that scores all candidate responses in a single forward pass. Conventional discriminative reward models evaluate each response independently, requiring multiple forward passes, one for each potential response. Our approach concatenates multiple responses with separator tokens and applies cross-entropy over their scalar scores, enabling direct comparative reasoning and efficient $N$-way preference learning. The multi-response design also yields up to $N\\times$ wall-clock speedup and FLOPs reduction over conventional single-response scoring. To enable $N$-way reward evaluation beyond existing pairwise benchmarks, we construct two new benchmarks: (1) MR$^2$Bench-Image contains human-annotated rankings over responses from 8 diverse models; (2) MR$^2$Bench-Video is a large-scale video-based reward benchmark derived from 94K crowdsourced pairwise human judgments over video question-answering spanning 19 models, denoised via preference graph ensemble. Both benchmarks provide 4-response evaluation variants sampled from the full rankings. Built on a 4B vision-language backbone with LoRA fine-tuning and a lightweight MLP value head, our model achieves state-of-the-art results on six multimodal reward benchmarks, including MR$^2$Bench-Image, MR$^2$Bench-Video, and four other existing benchmarks. Our model outperforms existing larger generative and discriminative reward models. We further demonstrate that our reward model, when used in reinforcement learning with GRPO, produces improved policy models that maintain performance across s...",
-    "published": "Apr 14",
-    "pdf_url": "https://arxiv.org/pdf/2604.10966v2",
-    "arxiv_url": "http://arxiv.org/abs/2604.10966v2",
-    "queried_author": "Ranjay Krishna",
-    "matching_authors": [
-      "Ranjay Krishna"
-    ],
-    "published_iso": "2026-04-14T04:00:00+00:00"
-  },
-  {
-    "title": "Audio Flamingo Next: Next-Generation Open Audio-Language Models for Speech, Sound, and Music",
-    "authors": [
-      "Sreyan Ghosh",
-      "Arushi Goel",
-      "Kaousheik Jayakumar",
-      "Lasha Koroshinadze",
-      "Nishit Anand",
-      "Zhifeng Kong",
-      "Siddharth Gururani",
-      "Sang-gil Lee",
-      "Jaehyeon Kim",
-      "Aya Aljafari",
-      "Chao-Han Huck Yang",
-      "Sungwon Kim",
-      "Ramani Duraiswami",
-      "Dinesh Manocha",
-      "Mohammad Shoeybi",
-      "Bryan Catanzaro",
-      "Ming-Yu Liu",
-      "Wei Ping"
-    ],
-    "summary": "We present Audio Flamingo Next (AF-Next), the next-generation and most capable large audio-language model in the Audio Flamingo series, designed to advance understanding and reasoning over speech, environmental sounds and music. Compared to Audio Flamingo 3, AF-Next introduces: (i) a stronger foundational audio-language model that significantly improves accuracy across diverse audio understanding tasks; (ii) scalable strategies for constructing large-scale audio understanding and reasoning data beyond existing academic benchmarks; (iii) support for long and complex audio inputs up to 30 minutes; and (iv) Temporal Audio Chain-of-Thought, a new reasoning paradigm that explicitly grounds intermediate reasoning steps to timestamps in long audio, enabling fine-grained temporal alignment and improved interpretability. To enable these capabilities, we first conduct a systematic analysis of Audio Flamingo 3 to identify key gaps in audio understanding and reasoning. We then curate and scale new large-scale datasets totaling over 1 million hours to address these limitations and expand the existing AudioSkills-XL, LongAudio-XL, AF-Think and AF-Chat datasets. AF-Next is trained using a curriculum-based strategy spanning pre-training, mid-training and post-training stages. Extensive experiments across 20 audio understanding and reasoning benchmarks, including challenging long-audio tasks, show that AF-Next outperforms similarly sized open models by large margins and remains highly competitive with and sometimes surpasses, much larger open-weight and closed models. Beyond benchmark perfo...",
-    "published": "Apr 14",
-    "pdf_url": "https://arxiv.org/pdf/2604.10905v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.10905v1",
-    "queried_author": "Mohammad Shoeybi",
-    "matching_authors": [
-      "Mohammad Shoeybi"
-    ],
-    "published_iso": "2026-04-14T04:00:00+00:00"
-  },
-  {
-    "title": "HealthAdminBench: Evaluating Computer-Use Agents on Healthcare Administration Tasks",
-    "authors": [
-      "Suhana Bedi",
-      "Ryan Welch",
-      "Ethan Steinberg",
-      "Michael Wornow",
-      "Taeil Matthew Kim",
-      "Haroun Ahmed",
-      "Peter Sterling",
-      "Bravim Purohit",
-      "Qurat Akram",
-      "Angelic Acosta",
-      "Esther Nubla",
-      "Pritika Sharma",
-      "Michael A. Pfeffer",
-      "Sanmi Koyejo",
-      "Nigam H. Shah"
-    ],
-    "summary": "Healthcare administration accounts for over $1 trillion in annual spending, making it a promising target for LLM-based computer-use agents (CUAs). While clinical applications of LLMs have received significant attention, no benchmark exists for evaluating CUAs on end-to-end administrative workflows. To address this gap, we introduce HealthAdminBench, a benchmark comprising four realistic GUI environments: an EHR, two payer portals, and a fax system, and 135 expert-defined tasks spanning three administrative task types: Prior Authorization, Appeals and Denials Management, and Durable Medical Equipment (DME) Order Processing. Each task is decomposed into fine-grained, verifiable subtasks, yielding 1,698 evaluation points. We evaluate seven agent configurations under multiple prompting and observation settings and find that, despite strong subtask performance, end-to-end reliability remains low: the best-performing agent (Claude Opus 4.6 CUA) achieves only 36.3 percent task success, while GPT-5.4 CUA attains the highest subtask success rate (82.8 percent). These results reveal a substantial gap between current agent capabilities and the demands of real-world administrative workflows. HealthAdminBench provides a rigorous foundation for evaluating progress toward safe and reliable automation of healthcare administrative workflows.",
-    "published": "Apr 14",
-    "pdf_url": "https://arxiv.org/pdf/2604.09937v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.09937v1",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
     ],
     "published_iso": "2026-04-14T04:00:00+00:00"
   }
