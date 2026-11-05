@@ -16,6 +16,22 @@
     ]
   },
   {
+    "title": "Visual Token Routing: Learning to keep tokens that matter",
+    "authors": [
+      "Pranjal Aggarwal",
+      "Sean Welleck"
+    ],
+    "summary": "Computer-use agents (CUAs) have recently achieved superhuman performance on several long-horizon benchmarks. However, their computational cost limits their use in long-horizon tasks and real-time domains such as video games. A key bottleneck is representing each screenshot as thousands of visual tokens, which accumulate into long contexts as agents reason over extended interaction histories. We observe that most of these visual tokens are either semantically irrelevant to the agent's next action or temporally redundant across screenshots. Building on this observation, we introduce Visual Token Routing (VTR), a joint training framework for learning sparse visual representations that preserve the information needed for action prediction. In VTR, we train the vision-language model together with a lightweight spatio-temporal router that examines each image region in the current and previous screenshots and decides whether its visual token enters the language model. We optimize the router using an adaptive loss to keep the number of visual tokens as small as possible while minimizing performance degradation. With just 2,000 training steps, VTR matches the performance of the full-resolution model on OSWorld, CUA-World, and video game action prediction, while using 2.5-5.8x fewer visual tokens. These savings reduce inference cost by up to 3.3x and speed up prefill by up to 2.9x. VTR also outperforms lowering the image resolution and other baselines for dropping tokens, by up to 12.8 points on OSWorld. Overall, VTR enables computer-use agents to process only the visual tokens they ...",
+    "published": "Nov 05",
+    "published_iso": "2026-11-05T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.06854v1",
+    "arxiv_url": "http://arxiv.org/abs/2611.06854v1",
+    "queried_author": "Sean Welleck",
+    "matching_authors": [
+      "Sean Welleck"
+    ]
+  },
+  {
     "title": "Stabilizing On-Policy Targeted Guidance in Agentic Reinforcement Learning",
     "authors": [
       "Kevin Frans",
@@ -14243,25 +14259,6 @@
     "published": "Apr 14",
     "pdf_url": "https://arxiv.org/pdf/2604.11072v1",
     "arxiv_url": "http://arxiv.org/abs/2604.11072v1",
-    "queried_author": "Aditi Raghunathan",
-    "matching_authors": [
-      "Aditi Raghunathan"
-    ],
-    "published_iso": "2026-04-14T04:00:00+00:00"
-  },
-  {
-    "title": "Pando: Do Interpretability Methods Work When Models Won't Explain Themselves?",
-    "authors": [
-      "Ziqian Zhong",
-      "Aashiq Muhamed",
-      "Mona T. Diab",
-      "Virginia Smith",
-      "Aditi Raghunathan"
-    ],
-    "summary": "Mechanistic interpretability is often motivated for alignment auditing, where a model's verbal explanations can be absent, incomplete, or misleading. Yet many evaluations do not control whether black-box prompting alone can recover the target behavior, so apparent gains from white-box tools may reflect elicitation rather than internal signal; we call this the elicitation confounder. We introduce Pando, a model-organism benchmark that breaks this confound via an explanation axis: models are trained to produce either faithful explanations of the true rule, no explanation, or confident but unfaithful explanations of a disjoint distractor rule.\n  Across 720 finetuned models implementing hidden decision-tree rules, agents predict held-out model decisions from $10$ labeled query-response pairs, optionally augmented with one interpretability tool output. When explanations are faithful, black-box elicitation matches or exceeds all white-box methods; when explanations are absent or misleading, gradient-based attribution improves accuracy by 3-5 percentage points, and relevance patching, RelP, gives the largest gains, while logit lens, sparse autoencoders, and circuit tracing provide no reliable benefit. Variance decomposition suggests gradients track decision computation, which fields causally drive the output, whereas other readouts are dominated by task representation, biases toward field identity and value.\n  We release all models, code, and evaluation infrastructure.",
-    "published": "Apr 14",
-    "pdf_url": "https://arxiv.org/pdf/2604.11061v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.11061v1",
     "queried_author": "Aditi Raghunathan",
     "matching_authors": [
       "Aditi Raghunathan"
