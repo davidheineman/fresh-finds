@@ -1,5 +1,21 @@
 [
   {
+    "title": "Reconciling Privacy with Provenance for Language Model Watermarks",
+    "authors": [
+      "Elise L. Han",
+      "Tatsunori Hashimoto"
+    ],
+    "summary": "Watermarking has great potential for regulating the use of language models (LMs), but its deployment has been marred by controversy, as many users argue that fine-grained tracking of LM usage violates their privacy. This tension reduces the effectiveness of watermarks, as users engage in evasion strategies such as paraphrasing that can remove much of the watermark signal. We show that provenance and privacy can be reconciled if we shift the goal of watermark design from tracking individuals to estimating aggregate usage. We develop locally differentially private watermarks which provably limit the evidence that any individual text can contribute to detection, while still enabling accurate estimation of population frequencies. We introduce the Red-Green Sequence (RGS) watermark, a private and computationally efficient watermark that achieves accurate frequency estimation at high privacy levels across various models, sample sizes and generation entropies in settings that reflect realistic deployment scenarios. On C4 language modeling tasks, we attain $0.0019$ MSE with $0.0038$ mean absolute bias at a low $\\varepsilon$ of 1, while in more challenging settings such as an essay writing task with only 100 text samples, we still find errors on the order of $0.0113$ MSE with $0.004$ mean absolute bias at $\\varepsilon=2$.",
+    "published": "Nov 05",
+    "published_iso": "2026-11-05T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.06100",
+    "arxiv_url": "https://arxiv.org/abs/2611.06100",
+    "queried_author": "Tatsunori Hashimoto",
+    "matching_authors": [
+      "Tatsunori Hashimoto"
+    ]
+  },
+  {
     "title": "Stabilizing On-Policy Targeted Guidance in Agentic Reinforcement Learning",
     "authors": [
       "Kevin Frans",
@@ -14249,35 +14265,6 @@
     "queried_author": "Aditi Raghunathan",
     "matching_authors": [
       "Aditi Raghunathan"
-    ],
-    "published_iso": "2026-04-14T04:00:00+00:00"
-  },
-  {
-    "title": "Introspective Diffusion Language Models",
-    "authors": [
-      "Yifan Yu",
-      "Yuqing Jian",
-      "Junxiong Wang",
-      "Zhongzhu Zhou",
-      "Donglin Zhuang",
-      "Xinyu Fang",
-      "Sri Yanamandra",
-      "Xiaoxia Wu",
-      "Qingyang Wu",
-      "Shuaiwen Leon Song",
-      "Tri Dao",
-      "Ben Athiwaratkun",
-      "James Zou",
-      "Fan Lai",
-      "Chenfeng Xu"
-    ],
-    "summary": "Diffusion language models promise parallel generation, yet still lag behind autoregressive (AR) models in quality. We stem this gap to a failure of introspective consistency: AR models agree with their own generations, while DLMs often do not. We define the introspective acceptance rate, which measures whether a model accepts its previously generated tokens. This reveals why AR training has a structural advantage: causal masking and logit shifting implicitly enforce introspective consistency. Motivated by this observation, we introduce Introspective Diffusion Language Model (I-DLM), a paradigm that retains diffusion-style parallel decoding while inheriting the introspective consistency of AR training. I-DLM uses a novel introspective strided decoding (ISD) algorithm, which enables the model to verify previously generated tokens while advancing new ones in the same forward pass. From a systems standpoint, we build I-DLM inference engine on AR-inherited optimizations and further customize it with a stationary-batch scheduler. To the best of our knowledge, I-DLM is the first DLM to match the quality of its same-scale AR counterpart while outperforming prior DLMs in both model quality and practical serving efficiency across 15 benchmarks. It reaches 69.6 on AIME-24 and 45.7 on LiveCodeBench-v6, exceeding LLaDA-2.1-mini (16B) by more than 26 and 15 points, respectively. Beyond quality, I-DLM is designed for the growing demand of large-concurrency serving, delivering about 3x higher throughput than prior state-of-the-art DLMs.",
-    "published": "Apr 14",
-    "pdf_url": "https://arxiv.org/pdf/2604.11035v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.11035v1",
-    "queried_author": "Tri Dao",
-    "matching_authors": [
-      "Tri Dao"
     ],
     "published_iso": "2026-04-14T04:00:00+00:00"
   }
