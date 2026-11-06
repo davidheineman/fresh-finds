@@ -1,5 +1,83 @@
 [
   {
+    "title": "Shaping & Monitoring Models through their Internal Representations",
+    "authors": [
+      "Thomas Fel",
+      "Matthew Kowal",
+      "Matt Feiszli",
+      "Satchel Grant",
+      "Andrew Lee",
+      "Chris Earls",
+      "Fatih Dinc",
+      "Vasudev Shyam",
+      "Usha Bhalla",
+      "Leon Bergen",
+      "Siddharth Boppana",
+      "Ching Fang",
+      "Michael Byun",
+      "Tristan Gallent",
+      "Nicholas Wang",
+      "Tal Haklay",
+      "Dron Hazra",
+      "Neehar Kondapaneni",
+      "Connor Watts",
+      "Ryan Panwar",
+      "Thomas Dooms",
+      "Jack Merullo",
+      "Atticus Geiger",
+      "Ekdeep Singh Lubana",
+      "Thomas McGrath",
+      "Owen Lewis"
+    ],
+    "summary": "We propose Mechanistic Shaping, a unified framework for shaping models through their internal representations. Mechanistic Shaping is applied during training so that models follow specifications (rules) about which concepts they express, measured via their outputs or internal representations (e.g., no harmful content), and also which concepts they rely on, i.e., what they use to make their decisions (e.g., not a candidate's gender when screening a r\\'esum\\'e). Across multiple domains (vision, medical imaging, language), scales (up to 32B parameters), and training paradigms (classification, SFT, DPO, GRPO), we find that Mechanistic Shaping substantially reduces targeted behaviors while preserving task performance. Since training against a representation can also modify it, we ask whether shaped concepts remain monitorable, a question that depends on the class of monitors considered. We therefore introduce a hierarchy of such classes, which separates a concept that escapes one probe from a concept that is truly gone. We characterize three geometric mechanisms of circumvention: the concept can drift away from the monitor, be erased from the layer, or persist in higher-order statistics as a nonlinear encoding, which we explain through a product-code construction. Although other mechanisms may arise in different settings or at larger scales, these three account for all of our observations, and each can be detected by a matching monitor. In practice, we find that shaped concepts largely remain monitorable: refitted linear probes recover the concept in most settings, and the origi...",
+    "published": "Nov 06",
+    "published_iso": "2026-11-06T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.07071",
+    "arxiv_url": "https://arxiv.org/abs/2611.07071",
+    "queried_author": "Jack Merullo",
+    "matching_authors": [
+      "Jack Merullo"
+    ]
+  },
+  {
+    "title": "Benchmarks as Software: Terminal-Bench and the Case for Continuous Benchmarks",
+    "authors": [
+      "E. Kelly Buchanan",
+      "Crystal Zhou",
+      "Scott W. Linderman",
+      "Christopher R\u00e9"
+    ],
+    "summary": "Coding agents are among the most economically consequential deployments of LLMs to date, making reliable evaluation increasingly important. Yet even benchmarks that are carefully validated at release can become stale. As models improve, they can discover valid solutions that existing verifiers reject, while changes to evaluation infrastructure can invalidate assumptions embedded in tasks and tests. We call the resulting accumulation of defects benchmark maintenance debt: a growing gap between benchmark scores and the capabilities they are intended to measure. We introduce a continuous-validation workflow for agentic benchmarks that combines community reports, task artifacts, agent traces, automated oracle checks, and human-gated repairs. We apply this workflow to Terminal-Bench 2.0, a benchmark that underwent extensive human and LM-assisted review and red-teaming before release. Our audit identifies issues in roughly 30% of the benchmark, and we release the resulting repairs as Terminal-Bench 2.1. These repairs change evaluation results: accuracy increased by over 10 percentage points and leaderboard positions move by up to three ranks, even as the overall ranking remains highly correlated (Spearman rho = 0.958). We evaluate how resource allocation shapes benchmark conclusions. We show that fixed wall-clock can materially change agent performance: For example, extending the time limit closes a 20pp harness gap on GPT 5.4 and shrinks a 30 pp gap on GPT 5.4 mini to 5 pp. Benchmark maintenance is therefore not only about repairing task artifacts: resource budgets are part of t...",
+    "published": "Nov 06",
+    "published_iso": "2026-11-06T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.08417v1",
+    "arxiv_url": "http://arxiv.org/abs/2611.08417v1",
+    "queried_author": "Christopher R\u00e9",
+    "matching_authors": [
+      "Christopher R\u00e9"
+    ]
+  },
+  {
+    "title": "SAFE-Teen: Evaluating Chatbot Safety Across Adolescent Mental Health Conversations",
+    "authors": [
+      "Andrea Mock",
+      "Valerie Chen",
+      "Eric Lin",
+      "Rayan Krishnan",
+      "Diyi Yang",
+      "Caroline Figueroa"
+    ],
+    "summary": "Adolescents are increasingly turning to AI chatbots for mental health support, advice, and companionship, raising safety concerns. While recent evaluations have started to examine safety across multiple conversational turns, few compare how slight changes in a teen's responses can affect a chatbot's safety in the same scenario. We conduct a clinician-informed evaluation of chatbot safety in simulated conversations with adolescents aged 13-17, examining how safety failures vary with adolescents' responses and teen-aware system prompting. We evaluated 32,555 simulated conversations across 18 chatbot APIs and two system-prompt conditions using 22 safety criteria grounded in previously identified harms. Conversations spanned 983 variants of 106 seed scenarios covering urgent safety issues, health advice, and identity and relationships. The overall criterion failure rate was 43.3% without the teen-aware prompt and 24.9% with it. The teen-aware prompt reduced failures, but it didn't eliminate them. When a teenager pushed back on a chatbot's answer, failures on mental health diagnosis, medication, and substance misuse boundaries rose by 10-12 percentage points without the prompt, for more than 80% of chatbots. These findings reveal persistent safety failures in simulated adolescent-chatbot interactions and show that safety depends on how a conversation unfolds.",
+    "published": "Nov 06",
+    "published_iso": "2026-11-06T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.07218v1",
+    "arxiv_url": "http://arxiv.org/abs/2611.07218v1",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang"
+    ]
+  },
+  {
     "title": "Reconciling Privacy with Provenance for Language Model Watermarks",
     "authors": [
       "Elise L. Han",
@@ -14210,59 +14288,5 @@
       "Danqi Chen"
     ],
     "published_iso": "2026-04-15T04:00:00+00:00"
-  },
-  {
-    "title": "GoodPoint: Learning Constructive Scientific Paper Feedback from Author Responses",
-    "authors": [
-      "Jimin Mun",
-      "Chani Jung",
-      "Xuhui Zhou",
-      "Hyunwoo Kim",
-      "Maarten Sap"
-    ],
-    "summary": "While LLMs hold significant potential to transform scientific research, we advocate for their use to augment and empower researchers rather than to automate research without human oversight. To this end, we study constructive feedback generation, the task of producing targeted, actionable feedback that helps authors improve both their research and its presentation. In this work, we operationalize the effectiveness of feedback along two author-centric axes-validity and author action. We first curate GoodPoint-ICLR, a dataset of 19K ICLR papers with reviewer feedback annotated along both dimensions using author responses. Building on this, we introduce GoodPoint, a training recipe that leverages success signals from author responses through fine-tuning on valid and actionable feedback, together with preference optimization on both real and synthetic preference pairs. Our evaluation on a benchmark of 1.2K ICLR papers shows that a GoodPoint-trained Qwen3-8B improves the predicted success rate by 83.7% over the base model and sets a new state-of-the-art among LLMs of similar size in feedback matching on a golden human feedback set, even surpassing Gemini-3-flash in precision. We further validate these findings through an expert human study, demonstrating that GoodPoint consistently delivers higher practical value as perceived by authors.",
-    "published": "Apr 15",
-    "pdf_url": "https://arxiv.org/pdf/2604.11924v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.11924v1",
-    "queried_author": "Maarten Sap",
-    "matching_authors": [
-      "Maarten Sap"
-    ],
-    "published_iso": "2026-04-15T04:00:00+00:00"
-  },
-  {
-    "title": "Agentic Aggregation for Parallel Scaling of Long-Horizon Agentic Tasks",
-    "authors": [
-      "Yoonsang Lee",
-      "Howard Yen",
-      "Xi Ye",
-      "Danqi Chen"
-    ],
-    "summary": "We study parallel test-time scaling for long-horizon agentic tasks such as agentic search and deep research, where multiple rollouts are generated in parallel and aggregated into a final response. While such scaling has proven effective for chain-of-thought reasoning, agentic tasks pose unique challenges: trajectories are long, multi-turn, and tool-augmented, and outputs are often open-ended. Aggregating only final answers discards rich information from trajectories, while concatenating all trajectories exceeds the model's context window. To address this, we propose AggAgent, an aggregation agent that treats parallel trajectories as an environment. We equip it with lightweight tools to inspect candidate solutions and search across trajectories, enabling it to navigate and synthesize information on demand. Across six benchmarks and three model families (GLM-4.7, Qwen3.5, MiniMax-M2.5), AggAgent outperforms all existing aggregation methods-by up to 5.3% absolute on average and 10.3% on two deep research tasks-while adding minimal overhead, as the aggregation cost remains bounded by a single agentic rollout. Our findings establish agentic aggregation as an effective and cost-efficient approach to parallel test-time scaling.",
-    "published": "Apr 14",
-    "pdf_url": "https://arxiv.org/pdf/2604.11753v3",
-    "arxiv_url": "http://arxiv.org/abs/2604.11753v3",
-    "queried_author": "Danqi Chen",
-    "matching_authors": [
-      "Danqi Chen"
-    ],
-    "published_iso": "2026-04-14T04:00:00+00:00"
-  },
-  {
-    "title": "Hodoscope: Unsupervised Monitoring for AI Misbehaviors",
-    "authors": [
-      "Ziqian Zhong",
-      "Shashwat Saxena",
-      "Aditi Raghunathan"
-    ],
-    "summary": "Existing approaches to monitoring AI agents rely on supervised evaluation: human-written rules or LLM-based judges that check for known failure modes. However, novel misbehaviors may fall outside predefined categories entirely and LLM-based judges can be unreliable. To address this, we formulate unsupervised monitoring, drawing an analogy to unsupervised learning. Rather than checking for specific misbehaviors, an unsupervised monitor assists humans in discovering problematic agent behaviors without prior assumptions about what counts as problematic, leaving that determination to the human.\n  We observe that problematic behaviors are often distinctive: a model exploiting a benchmark loophole exhibits actions absent from well-behaved baselines, and a vulnerability unique to one evaluation manifests as behavioral anomalies when the same model runs across multiple benchmarks. This motivates using group-wise behavioral differences as the primary signal for unsupervised monitoring. We introduce Hodoscope, a tool that operationalizes this insight. Hodoscope compares behavior distributions across groups and highlights distinctive and potentially suspicious action patterns for human review. Using Hodoscope, we discover a previously unknown vulnerability in the Commit0 benchmark (unsquashed git history allowing ground-truth recovery, inflating scores for at least five models) and independently recover known exploits on ImpossibleBench and SWE-bench. Quantitative evaluation estimates that our method reduces review effort by 6-23$\\times$ compared to naive uniform sampling. Finally, we...",
-    "published": "Apr 14",
-    "pdf_url": "https://arxiv.org/pdf/2604.11072v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.11072v1",
-    "queried_author": "Aditi Raghunathan",
-    "matching_authors": [
-      "Aditi Raghunathan"
-    ],
-    "published_iso": "2026-04-14T04:00:00+00:00"
   }
 ]
