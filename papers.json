@@ -1,5 +1,175 @@
 [
   {
+    "title": "Regularization Amplifies Subliminal Learning",
+    "authors": [
+      "Lawrence Feng",
+      "Jacob Mitchell Springer",
+      "Gaurav R. Ghosal",
+      "Ziqian Zhong",
+      "Aditi Raghunathan"
+    ],
+    "summary": "Recent work has shown that hidden biases can be transferred through data with no apparent semantic relationship to those biases. Can regularization limit this covert influence? By constraining adaptation, regularization might be expected to suppress behavioral changes on seemingly unrelated inputs. We systematically study this hypothesis in subliminal learning, as well as in related settings of covert influence, including phantom transfer and logit-linear selection. We find the opposite: regularization amplifies the transfer of hidden biases. In particular, subliminal learning is typically absent under full fine-tuning, but low-rank adaptation or explicit penalties can induce strong transfer. Phantom transfer and logit-linear selection show similar trends. Adding more data, an implicit form of regularization, also strengthens covert influence. Together, these findings suggest that the simplicity biases induced by regularization may facilitate covert influence. We further hypothesize that the level of regularization that maximizes covert transfer depends on task complexity.",
+    "published": "Nov 10",
+    "published_iso": "2026-11-10T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.10397",
+    "arxiv_url": "https://arxiv.org/abs/2611.10397",
+    "queried_author": "Aditi Raghunathan",
+    "matching_authors": [
+      "Aditi Raghunathan"
+    ]
+  },
+  {
+    "title": "Shaping Useful Noise: Energy Distributions Predict Visual Pretraining Quality",
+    "authors": [
+      "Ching Lam Choi",
+      "Antonio Torralba",
+      "Phillip Isola",
+      "Stefanie Jegelka"
+    ],
+    "summary": "Synthetic data can scale visual pretraining, but current selection criteria only partially explain which datasets train strong representations. We propose using the energy profile of a dataset--the distribution of log-probability levels it occupies under a normalised real-image density model--as an audit and curation principle for synthetic data. To operationalise this view, we introduce Energy-Level Distribution Distance (ELD), which compares real and synthetic energy distributions. Real images span sparse high-likelihood scenes and dense low-likelihood textures, so useful synthetic data should cover this energy range rather than collapse to likely but low-variation samples. Across diverse synthetic datasets, ELD exposes mismatches missed by FID and predicts pretraining performance beyond FID, LPIPS variation, and feature-space recall, including across CNN and ViT self-supervised settings. We then use ELD to resample and mix synthetic sources, matching the real-image energy histogram while preserving diversity and improving downstream transfer.",
+    "published": "Nov 10",
+    "published_iso": "2026-11-10T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.11962",
+    "arxiv_url": "https://arxiv.org/abs/2611.11962",
+    "queried_author": "Phillip Isola",
+    "matching_authors": [
+      "Phillip Isola"
+    ]
+  },
+  {
+    "title": "MoTo: Mixture of Tokenizers Towards Fair Multilingual Language Modeling",
+    "authors": [
+      "G\\\"ul Sena Alt{\\i}nta\\c{s}",
+      "Colin Raffel"
+    ],
+    "summary": "Large language models rely on a single tokenizer that is chosen at training time and fixed thereafter. Most tokenizers are trained on English-dominant corpora, making them under-serve morphologically rich and non-Latin-script languages, where they can produce fragmented representations, longer sequence lengths, and reduced information density during training. We propose Mixture of Tokenizers MoTo, a modular tokenization framework that trains dedicated per-language BPE tokenizers and composes them into a unified superset vocabulary, where tokens shared across languages are deduplicated into a common ID space. Each tokenizer maintains its own normalization policy, pre-tokenization rules, and vocabulary budget. Despite allocating significantly fewer entries to English, MoTo retains English performance while delivering consistent gains across 18 out of 21 typologically diverse languages spanning six scripts, with improvements most pronounced on morphologically complex and non-Latin-script languages that are systematically underserved by English-dominant tokenizer design. Our results suggest that modular subword tokenization is a practical and extensible alternative to monolithic tokenization for multilingual parity.",
+    "published": "Nov 10",
+    "published_iso": "2026-11-10T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.11027",
+    "arxiv_url": "https://arxiv.org/abs/2611.11027",
+    "queried_author": "Colin Raffel",
+    "matching_authors": [
+      "Colin Raffel"
+    ]
+  },
+  {
+    "title": "Is Persona Generalization Predictable?",
+    "authors": [
+      "Olina Mukherjee",
+      "Arnav Goel",
+      "Aditi Raghunathan",
+      "Jacob Mitchell Springer"
+    ],
+    "summary": "Persona generalization occurs when fine-tuning a language model in one domain induces behavioral changes in others -- for example, the broadly unsafe behavior observed in emergent misalignment. We discover a surprising \"on-the-line\" phenomenon in persona generalization: in-domain and out-of-domain persona rates across various fine-tuning hyperparameters follow an approximately probit-linear relationship, and the specific probit-linear relationship is surprisingly shared even across model families and model sizes, including Qwen and Llama. Training choices that leave the set of trainable parameters unchanged, such as learning rate, weight decay, and training duration, largely move models along the same line, reducing transfer mainly by weakening in-domain learning. Changing which layers are fine-tuned, however, can change the slope. For unsafe behavior, fine-tuning only later layers yields shallower slopes, retaining strong in-domain learning while reducing out-of-domain misalignment. This \"on-the-line\" phenomenon unifies unexpected, isolated observations of persona generalization within a quantitative framework for predicting and controlling behavioral transfer.",
+    "published": "Nov 10",
+    "published_iso": "2026-11-10T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.12864",
+    "arxiv_url": "https://arxiv.org/abs/2611.12864",
+    "queried_author": "Aditi Raghunathan",
+    "matching_authors": [
+      "Aditi Raghunathan"
+    ]
+  },
+  {
+    "title": "Infrathon: Benchmarking Language Agents for Real-World, Long-Horizon AI Infra Optimization",
+    "authors": [
+      "Zhengyu Hu",
+      "Zheyuan Xiao",
+      "Yike Wang",
+      "Hamish Ivison",
+      "Haoyu Wang",
+      "Yige Yuan",
+      "Rulin Shao",
+      "Yuetai Li",
+      "Niqi Lyu",
+      "Yicheng Ding",
+      "Shu Yang",
+      "Zhichen Zeng",
+      "Banghua Zhu",
+      "Jiaxin Pei",
+      "Kaize Ding",
+      "Pradeep Dasigi",
+      "Dan Roth",
+      "Hannaneh Hajishirzi",
+      "Noah A. Smith",
+      "Teng Xiao",
+      "Radha Poovendran"
+    ],
+    "summary": "In this work, we study whether frontier agent can continually improve real-world AI infrastructure over long horizons. We introduce Infrathon, a benchmark of diverse, long-horizon AI infrastructure optimization tasks across different levels. We evaluate six models across 150 runs with 24-hour budgets, totaling over 10,000 GPU-hours. Our results show that model rankings vary with the evaluation horizon, while 135 of the 150 runs achieve further improvements during the second half of their budgets. These findings indicate that shorter evaluations can overlook both optimization gains and changes in relative model performance. We also find agents can discover solutions that outperform human-designed baselines: Claude Opus 5.5 increases the mean KV-cache compression ratio from 6.82% with the human-designed Quant-VideoGen codec to 19.86%. Analysis of agent trajectories identifies task violations, unreliable testing, and premature completion as barriers to sustained improvement. Together, Our Infrathon framework provide resources for constructing long-horizon tasks, evaluating frontier agents, and discovering good infrastructure solutions.",
+    "published": "Nov 10",
+    "published_iso": "2026-11-10T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.11995",
+    "arxiv_url": "https://arxiv.org/abs/2611.11995",
+    "queried_author": "Hamish Ivison",
+    "matching_authors": [
+      "Hamish Ivison",
+      "Hannaneh Hajishirzi",
+      "Noah A. Smith"
+    ]
+  },
+  {
+    "title": "Open Problems in Chatbots and Mental Health",
+    "authors": [
+      "Jared Moore",
+      "Jacy Reese Anthis",
+      "William Agnew",
+      "Andrea Mock",
+      "Kevin Klyman",
+      "Sanmi Koyejo",
+      "Nick Haber",
+      "Stevie Chancellor",
+      "Eric Lin",
+      "Ryan Louie",
+      "Desmond C. Ong"
+    ],
+    "summary": "General-purpose chatbots are increasingly used for emotional and mental health support. They can be useful, but issues such as sycophancy, reinforcement of delusional beliefs, and poor crisis response create risks that are difficult for researchers to study and evaluate. In this paper, we review the most critical open problems for researchers and policymakers in the use of general-purpose chatbots and their effects on mental health. First, there are tractable problems in the controlled evaluation of chatbots: establishing the construct and ecological validity of evaluations, evaluating multi-turn interactions, and connecting evaluations to improvements in chatbot behavior. For example, conventional benchmarks that primarily rely on static datasets cannot establish chatbot safety, and novel simulation methods need validation. Second, researchers must connect their studies of chatbots and mental health to real-world evidence. This includes analyzing the chatbot products that AI companies and mental health practitioners have deployed, including their user interfaces and human review and escalation practices for user welfare concerns. However, clinical analysis opportunities afforded by real chat log data sharing are complicated by significant privacy concerns. Finally, we argue that researchers should take an active role in the construction and refinement of evidence-based policy through corporate and governmental decisions such as user protections, standards of care, protected access to user chat logs, data sharing between institutions, incident reporting, and post-deployment...",
+    "published": "Nov 10",
+    "published_iso": "2026-11-10T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.10997",
+    "arxiv_url": "https://arxiv.org/abs/2611.10997",
+    "queried_author": "Sanmi Koyejo",
+    "matching_authors": [
+      "Sanmi Koyejo"
+    ]
+  },
+  {
+    "title": "Human-AI Collaboration at Scale: Task Criticality, Agency, and Friction across 250,000 Conversations",
+    "authors": [
+      "Yijia Shao",
+      "Dora Zhao",
+      "Vishakh Padmakumar",
+      "Jennifer Wang",
+      "Diyi Yang"
+    ],
+    "summary": "AI is increasingly embedded in professional work, yet how people actually collaborate with it at scale remains poorly understood. Drawing on a corpus of 249,834 real-world conversations, we conduct privacy-preserving analysis by asking three questions: what work people bring to AI, what roles humans retain in completing that work, and where human-AI collaboration breaks down. We find that users bring to AI not only trivial tasks but also consequential, hard-to-reverse work, with high criticality delegation concentrating in advisory and professional domains. As stakes rise, users engage more actively with AI output, and conversation length nearly doubles from ephemeral to high-stake tasks. We then examine human agency, the degree of control and responsibility users retain in completing the task. Human-led collaboration dominates overall, but users construct their level of agency through how they prompt and iterate. Across different levels of agency lies a common tension: does working with AI build human capability, or substitute for human effort? We examine this tension through AI-supported learning and upskilling, finding that active teaching is common (67% of conversations) but its benefits are unevenly realized. We further show that friction arises in roughly half of all conversations but it is often productive, and users often employ active strategies to recover from friction when it does occur. Together, these results map how humans and AI work together at scale and when that collaboration makes people more capable, and when it doesn't.",
+    "published": "Nov 10",
+    "published_iso": "2026-11-10T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.09902",
+    "arxiv_url": "https://arxiv.org/abs/2611.09902",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang"
+    ]
+  },
+  {
+    "title": "Micro-Randomized Trial of an AI-Simulated Practice Tool for Therapeutic Skills",
+    "authors": [
+      "Ryan Louie",
+      "Ellen Converse",
+      "Diyi Yang",
+      "Emma Brunskill"
+    ],
+    "summary": "Though LLM-simulated practice may support psychotherapy education, open questions remain about which system features provide the most educational value. We developed an AI-simulated practice tool for use in psychotherapy classrooms that provides speaking practice with LLM-based patients, followed by a post-practice activity that includes feedback from a fine-tuned LLM and written reflection exercises. We deployed the tool in a graduate psychotherapy course (n=25, 5 weeks) using a micro-randomized trial (MRT) - a method which can estimate the causal excursion effect of an intervention by leveraging longitudinal repeated randomization with participants. Testing four conditions crossing AI feedback (present/absent) with reflection granularity (utterance/session-level), we found surprising interaction effects on student engagement and educational value: utterance-level reflection paired with AI feedback significantly outperformed all conditions. Students valued comparing the AI suggestions to their own rather than passively accepting them. As the first MRT in a health education setting testing an LLM-simulation system, this work demonstrates that MRTs, a method mostly used in mobile intervention research, offers a viable evaluation paradigm for AI systems deployed in health education settings.",
+    "published": "Nov 10",
+    "published_iso": "2026-11-10T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.09912",
+    "arxiv_url": "https://arxiv.org/abs/2611.09912",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang"
+    ]
+  },
+  {
     "title": "Designing Effective Monitor-Based Interventions for Mitigating Reward Hacking During RL",
     "authors": [
       "Aria Wong",
@@ -13530,171 +13700,5 @@
       "Yejin Choi"
     ],
     "published_iso": "2026-04-22T04:00:00+00:00"
-  },
-  {
-    "title": "SAW-INT4: System-Aware 4-Bit KV-Cache Quantization for Real-World LLM Serving",
-    "authors": [
-      "Jinda Jia",
-      "Jisen Li",
-      "Zhongzhu Zhou",
-      "Jung Hwan Heo",
-      "Jue Wang",
-      "Tri Dao",
-      "Shuaiwen Leon Song",
-      "Ben Athiwaratkun",
-      "Chenfeng Xu",
-      "Tianyi Zhang",
-      "Xiaoxia Wu"
-    ],
-    "summary": "KV-cache memory is a major bottleneck in real-world LLM serving, where systems must simultaneously support latency-sensitive small-batch requests and high-throughput concurrent workloads. Although many KV-cache compression methods improve offline accuracy or compression ratio, they often violate practical serving constraints such as paged memory layouts, regular memory access, and fused attention execution, limiting their effectiveness in deployment.\n  In this work, we identify the minimal set of 4-bit KV-cache quantization methods that remain viable under these constraints. Our central finding is that a simple design--token-wise INT4 quantization with block-diagonal Hadamard rotation--consistently achieves the best accuracy-efficiency trade-off. Across multiple models and benchmarks, this approach recovers nearly all of the accuracy lost by naive INT4, while more complex methods such as vector quantization and Hessian-aware quantization provide only marginal additional gains once serving compatibility is taken into account.\n  To make this practical, we implement a fused rotation-quantization kernel that integrates directly into paged KV-cache layouts and introduces zero measurable end-to-end overhead, matching plain INT4 throughput across concurrency levels. Our results show that effective KV-cache compression is fundamentally a systems co-design problem: under real serving constraints, lightweight block-diagonal Hadamard rotation is a viable method that delivers near-lossless accuracy without sacrificing serving efficiency.",
-    "published": "Apr 22",
-    "pdf_url": "https://arxiv.org/pdf/2604.19157v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.19157v1",
-    "queried_author": "Tri Dao",
-    "matching_authors": [
-      "Tri Dao"
-    ],
-    "published_iso": "2026-04-22T04:00:00+00:00"
-  },
-  {
-    "title": "Beyond One Output: Visualizing and Comparing Distributions of Language Model Generations",
-    "authors": [
-      "Emily Reif",
-      "Claire Yang",
-      "Jared Hwang",
-      "Deniz Nazar",
-      "Noah A. Smith",
-      "Jeff Heer"
-    ],
-    "summary": "Users typically interact with and evaluate language models via single outputs, but each output is just one sample from a broad distribution of possible completions. This interaction hides distributional structure such as modes, uncommon edge cases, and sensitivity to small prompt changes, leading users to over-generalize from anecdotes when iterating on prompts for open-ended tasks. Informed by a formative study with researchers who use LMs (n=13) examining when stochasticity matters in practice, how they reason about distributions over language, and where current workflows break down, we introduce GROVE. GROVE is an interactive visualization that represents multiple LM generations as overlapping paths through a text graph, revealing shared structure, branching points, and clusters while preserving access to raw outputs. We evaluate across three crowdsourced user studies (N=47, 44, and 40 participants) targeting complementary distributional tasks. Our results support a hybrid workflow: graph summaries improve structural judgments such as assessing diversity, while direct output inspection remains stronger for detail-oriented questions.",
-    "published": "Apr 22",
-    "pdf_url": "https://arxiv.org/pdf/2604.18724v3",
-    "arxiv_url": "http://arxiv.org/abs/2604.18724v3",
-    "queried_author": "Noah A. Smith",
-    "matching_authors": [
-      "Noah A. Smith"
-    ],
-    "published_iso": "2026-04-22T04:00:00+00:00"
-  },
-  {
-    "title": "When Can LLMs Learn to Reason with Weak Supervision?",
-    "authors": [
-      "Salman Rahman",
-      "Jingyan Shen",
-      "Anna Mordvina",
-      "Hamid Palangi",
-      "Saadia Gabriel",
-      "Pavel Izmailov"
-    ],
-    "summary": "Large language models have achieved significant reasoning improvements through reinforcement learning with verifiable rewards (RLVR). Yet as model capabilities grow, constructing high-quality reward signals becomes increasingly difficult, making it essential to understand when RLVR can succeed under weaker forms of supervision. We conduct a systematic empirical study across diverse model families and reasoning domains under three weak supervision settings: scarce data, noisy rewards, and self-supervised proxy rewards. We find that generalization is governed by training reward saturation dynamics: models that generalize exhibit a prolonged pre-saturation phase during which training reward and downstream performance climb together, while models that saturate rapidly memorize rather than learn. We identify reasoning faithfulness, defined as the extent to which intermediate steps logically support the final answer, as the pre-RL property that predicts which regime a model falls into, while output diversity alone is uninformative. Motivated by these findings, we disentangle the contributions of continual pre-training and supervised fine-tuning, finding that SFT on explicit reasoning traces is necessary for generalization under weak supervision, while continual pre-training on domain data amplifies the effect. Applied together to Llama3.2-3B-Base, these interventions enable generalization across all three settings where the base model previously failed.",
-    "published": "Apr 21",
-    "pdf_url": "https://arxiv.org/pdf/2604.18574v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.18574v1",
-    "queried_author": "Pavel Izmailov",
-    "matching_authors": [
-      "Pavel Izmailov"
-    ],
-    "published_iso": "2026-04-21T04:00:00+00:00"
-  },
-  {
-    "title": "Train Separately, Merge Together: Modular Post-Training with Mixture-of-Experts",
-    "authors": [
-      "Jacob Morrison",
-      "Sanjay Adhikesaven",
-      "Akshita Bhagia",
-      "Matei Zaharia",
-      "Noah A. Smith",
-      "Sewon Min"
-    ],
-    "summary": "Extending a fully post-trained language model with new domain capabilities is fundamentally limited by monolithic training paradigms: retraining from scratch is expensive and scales poorly, while continued training often degrades existing capabilities. We present BAR (Branch-Adapt-Route), which trains independent domain experts, each through its own mid-training, supervised finetuning, and reinforcement learning pipeline, and composes them via a Mixture-of-Experts architecture with lightweight router training. Unlike retraining approaches that mix all domains and require full reprocessing for any update (with cost scaling quadratically), BAR enables updating individual experts independently with linear cost scaling and no degradation to existing domains. At the 7B scale, with experts for math, code, tool use, and safety, BAR achieves an overall score of 49.1 (averaged across 7 evaluation categories), matching or exceeding re-training baselines (47.8 without mid-training, 50.5 with). We further show that modular training provides a structural advantage: by isolating each domain, it avoids the catastrophic forgetting that occurs when late-stage RL degrades capabilities from earlier training stages, while significantly reducing the cost and complexity of updating or adding a domain. Together, these results suggest that decoupled, expert-based training is a scalable alternative to monolithic retraining for extending language models.",
-    "published": "Apr 21",
-    "pdf_url": "https://arxiv.org/pdf/2604.18473v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.18473v1",
-    "queried_author": "Noah A. Smith",
-    "matching_authors": [
-      "Noah A. Smith",
-      "Sewon Min"
-    ],
-    "published_iso": "2026-04-21T04:00:00+00:00"
-  },
-  {
-    "title": "CollabSkill: Evaluating Human-Agent Collaboration On Real-World Tasks",
-    "authors": [
-      "Yijia Shao",
-      "Zora Zhiruo Wang",
-      "Neel Ahuja",
-      "Yicheng Wang",
-      "Bowen Liu",
-      "Diyi Yang"
-    ],
-    "summary": "AI agents are reshaping the workspace, leading to drastic change of how humans work. Despite the considerable potential of human-agent collaboration both in preserving human agency and generating economic value, this paradigm remains largely absent from occupational task evaluation, hindered by the difficulty of gathering real human data and accounting for inter-human variability. We introduce CollabSkill, a framework for evaluating human-agent collaboration on real-world occupational tasks. CollabSkill pairs real human workers with AI agents on tasks matched to their occupational background, collecting data that capture the complexity of economically valuable tasks and the usage patterns of real workers. To account for inter-human variability, CollabSkill employs a Bayesian skill rating system to disentangle and quantify the skill contributions of both humans and AI agents. Drawing on over 1,500 prompts from 386 working sessions contributed by 93 human workers, our analysis yields insights on two fronts: on the agent side, rankings on CollabSkill diverge meaningfully from those of existing fully autonomous benchmarks where Codex leads, with Claude Code ranking first; on the human side, CollabSkill reveals that practical experience emerges as the primary driver of collaboration skill, with hands-on collaboration meaningfully shifting workers' AI literacy. Together, we hope CollabSkill enables the community to invest in systematic evaluation of human-agent collaboration and spurs development efforts aimed at building AI agents that genuinely augment human workers.",
-    "published": "Apr 21",
-    "pdf_url": "https://arxiv.org/pdf/2606.09833v2",
-    "arxiv_url": "http://arxiv.org/abs/2606.09833v2",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang"
-    ],
-    "published_iso": "2026-04-21T04:00:00+00:00"
-  },
-  {
-    "title": "Putting HUMANS first: Efficient LAM Evaluation with Human Preference Alignment",
-    "authors": [
-      "Woody Haosheng Gan",
-      "William Held",
-      "Diyi Yang"
-    ],
-    "summary": "The rapid proliferation of large audio models (LAMs) demands efficient approaches for model comparison, yet comprehensive benchmarks are costly. To fill this gap, we investigate whether minimal subsets can reliably evaluate LAMs while reducing costs and data redundancy. Analyzing 10 subset selection methods with 18 audio models across 40 tasks covering major LAM evaluation dimensions, we show that subsets of just 50 examples (0.3% of data) can achieve over 0.93 Pearson correlation with full benchmark scores. To understand how well these scores align with what practitioners ultimately care about, user satisfaction, we collect 776 human preference ratings from realistic voice assistant conversations, finding that both subsets and full benchmark achieve only 0.85 correlation with human. To better predict preferences, we trained regression models on these selected subsets, achieving 0.98 correlation -- outperforming regression models trained on both random subsets and the full benchmark. This demonstrates that in regression modeling, well-curated subsets outpredict the full benchmark, showing quality over quantity. We open-source these regression-weighted subsets as the HUMANS benchmark, an efficient proxy for LAM evaluation that captures both benchmark performance and user preferences.",
-    "published": "Apr 21",
-    "pdf_url": "https://arxiv.org/pdf/2605.00022v1",
-    "arxiv_url": "http://arxiv.org/abs/2605.00022v1",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang",
-      "William Held"
-    ],
-    "published_iso": "2026-04-21T04:00:00+00:00"
-  },
-  {
-    "title": "Poly-EPO: Training Exploratory Reasoning Models",
-    "authors": [
-      "Ifdita Hasan Orney",
-      "Jubayer Ibn Hamid",
-      "Shreya S Ramanujam",
-      "Shirley Wu",
-      "Hengyuan Hu",
-      "Noah Goodman",
-      "Dorsa Sadigh",
-      "Chelsea Finn"
-    ],
-    "summary": "Exploration is a cornerstone of learning from experience: it enables agents to find solutions to complex problems, generalize to novel ones, and scale performance with test-time compute. In this paper, we present a framework for post-training language models (LMs) that explicitly encourages optimistic exploration and promotes a synergy between exploration and exploitation. The central idea is to train the LM to generate sets of responses that are collectively accurate under the reward function and exploratory in their reasoning strategies. We first develop a general recipe for optimizing LMs with set reinforcement learning (set RL) under arbitrary objective functions, showing how standard RL algorithms can be adapted to this setting through a modification to the advantage computation. We then propose Polychromic Exploratory Policy Optimization (Poly-EPO), which instantiates this framework with an objective that explicitly synergizes exploration and exploitation. Across a range of reasoning benchmarks, we show that Poly-EPO improves generalization, as evidenced by higher pass@$k$ coverage, preserves greater diversity in model generations, and effectively scales with test-time compute.",
-    "published": "Apr 21",
-    "pdf_url": "https://arxiv.org/pdf/2604.17654v3",
-    "arxiv_url": "http://arxiv.org/abs/2604.17654v3",
-    "queried_author": "Noah Goodman",
-    "matching_authors": [
-      "Noah Goodman"
-    ],
-    "published_iso": "2026-04-21T04:00:00+00:00"
-  },
-  {
-    "title": "Terminal Wrench: A Dataset of 331 Reward-Hackable Environments and 3,632 Exploit Trajectories",
-    "authors": [
-      "Ivan Bercovich",
-      "Ivgeni Segal",
-      "Kexun Zhang",
-      "Shashwat Saxena",
-      "Aditi Raghunathan",
-      "Ziqian Zhong"
-    ],
-    "summary": "We release Terminal Wrench, a subset of 331 terminal-agent benchmark environments, copied from the popular open benchmarks that are demonstrably reward-hackable. The data set includes 3,632 hack trajectories and 2,352 legitimate baseline trajectories across three frontier models (Claude Opus 4.6, Gemini 3.1 Pro, GPT-5.4). Each entry preserves the original task definition alongside full attack trajectories that show how the verifier was bypassed. It also includes cases where the task was not solved as intended. The tasks span system administration, machine learning, software engineering, and security challenges; the exploits range from simple output spoofing to stack-frame introspection, standard-library patching, and rootkit-style binary hijacking. Crucially, these exploits are specific to each task, rather than the evaluation harness, making them harder to patch. We also present a monitorability study in which hack trajectories are sanitized or stripped of reasoning traces and then scored by an LLM judge, showing that detection degrades meaningfully when chain-of-thought is removed (AUC drops from 0.97 to 0.92). The data set is publicly available at https://github.com/few-sh/terminal-wrench.",
-    "published": "Apr 21",
-    "pdf_url": "https://arxiv.org/pdf/2604.17596v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.17596v1",
-    "queried_author": "Aditi Raghunathan",
-    "matching_authors": [
-      "Aditi Raghunathan"
-    ],
-    "published_iso": "2026-04-21T04:00:00+00:00"
   }
 ]
