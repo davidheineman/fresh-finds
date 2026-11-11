@@ -1,5 +1,27 @@
 [
   {
+    "title": "Deep Personalization: Continuous Context Observation for Local Proactive Agents",
+    "authors": [
+      "Yijia Shao",
+      "Song Bian",
+      "Junxian Guo",
+      "Jindong Jiang",
+      "Zhen Dong",
+      "Huizi Mao",
+      "Diyi Yang",
+      "Song Han"
+    ],
+    "summary": "As AI agents become increasingly capable, users must still recognize when and how to ask for help, leaving many opportunities for useful support unrealized. Proactive agents hold the promise to close this gap, but effective proactivity requires understanding users' real-time activities and personalizing intervention timing so that assistance is offered when it is likely to be helpful rather than disruptive. We introduce deep personalization, a closed-loop process that connects continuous context observation with continual agent adaptation: an agent observes user activity, selectively retains long-term context, and adapts intervention decisions from implicit feedback. We initiate deep personalization in Coco, a proactive desktop agent, by having a separate Observer Agent that monitors desktop activity, maintains compact long-term user modeling context, and learns when assistance is desirable from implicit signals such as engagement, dismissal, explicit requests, and repeated work patterns. We further develop efficient on-device strategies to enable the Observer Agent to run on local AI compute platforms without streaming raw activity data off-device. For evaluation at scale without collecting sensitive real-user activity, we introduce a data-synthesis pipeline that transforms existing computer-use trajectories into OSWorld-Persona, a benchmark with persona-conditioned intervention labels. On OSWorld-Persona, deep personalization improves macro F1 across three model backbones from 0.12-0.19 under direct prompting to 0.35-0.48 after adaptation, a 2.4-3.0x relative gain. In a w...",
+    "published": "Nov 11",
+    "published_iso": "2026-11-11T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.13457",
+    "arxiv_url": "https://arxiv.org/abs/2611.13457",
+    "queried_author": "Diyi Yang",
+    "matching_authors": [
+      "Diyi Yang"
+    ]
+  },
+  {
     "title": "Regularization Amplifies Subliminal Learning",
     "authors": [
       "Lawrence Feng",
@@ -13651,53 +13673,6 @@
     "queried_author": "Antoine Bosselut",
     "matching_authors": [
       "Antoine Bosselut"
-    ],
-    "published_iso": "2026-04-22T04:00:00+00:00"
-  },
-  {
-    "title": "Structured Scaling of AI Discovery Across Diverse Scientific Domains",
-    "authors": [
-      "Haotian Ye",
-      "Haowei Lin",
-      "Jingyi Tang",
-      "Yizhen Luo",
-      "Rahul Thapa",
-      "Caiyin Yang",
-      "Chang Su",
-      "Rui Yang",
-      "Ruihua Liu",
-      "Rundao Li",
-      "Zeyu Li",
-      "Pengwei Sun",
-      "Chong Gao",
-      "Dachao Ding",
-      "Guangrong He",
-      "Miaolei Zhang",
-      "Lina Sun",
-      "Wenyang Wang",
-      "Yuchen Zhong",
-      "Zhuohao Shen",
-      "Puheng Li",
-      "Pan Lu",
-      "Bianxiao Cui",
-      "Di He",
-      "Jianzhu Ma",
-      "Junfeng Li",
-      "Hexi Baoyin",
-      "Yejin Choi",
-      "Stefano Ermon",
-      "Xiaowen Chu",
-      "Tongyang Li",
-      "Yuzhi Xu",
-      "James Zou"
-    ],
-    "summary": "Scientific discovery often requires many cycles of proposing, testing, and refining candidate solutions. Language models can increasingly participate in these loops, but simply generating more attempts does not ensure progress: parallel searches may duplicate one another and iterative refinement may become trapped in poor directions. The central challenge is therefore not only to scale AI-driven discovery, but to structure that scaling so that evaluation signals compound over time. Here we introduce SimpleTES (Simple Test-time Evaluation-driven Scaling), a framework that focuses on the structured scaling of AI discovery loops, organizing evaluator queries across independent trajectories, iterative refinement, local candidate selection, and the selective reuse of evaluated histories. Drawing on structural features of scientific communities, SimpleTES uses a single open-source GPT-OSS model to establish new state-of-the-art solutions across 28 open-ended problems in diverse scientific domains ranging from quantum physics and astronomy to biology, AI, and mathematics. These include a 24.5% reduction in quantum circuit compilation overhead, up to 23% lower propulsive cost for deep-space trajectories, a 2.17x faster lasso-path solver, an 8.5% lower-error whole-brain neural-activity predictor, the fastest reported TriMul kernel, and new mathematical constructions beyond prior human or AI records. We further post-train the model for long-horizon discovery by assigning each attempt the final outcome of the trajectory it helped produce. This improves performance on both training and...",
-    "published": "Apr 22",
-    "pdf_url": "https://arxiv.org/pdf/2604.19341v2",
-    "arxiv_url": "http://arxiv.org/abs/2604.19341v2",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
     ],
     "published_iso": "2026-04-22T04:00:00+00:00"
   }
