@@ -1,5 +1,71 @@
 [
   {
+    "title": "Two mathematical models of knowledge distillation",
+    "authors": [
+      "Audrey Xie",
+      "Ludwig Schmidt",
+      "John Duchi"
+    ],
+    "summary": "Many hypotheses compete to explain the successes of knowledge distillation. To help address this, we propose and analyze a mathematical model of distillation, which suggests that distillation's performance comes not from obtaining better models but from easier to optimize landscapes. For generalized linear models trained with stochastic gradient descent, we prove that distillation fits performant student models asymptotically more quickly than non-distilled models. In rank-1 matrix approximation, we characterize conditions on the target matrix under which gradient descent with distillation converges strictly faster than training on the supervised objective. The theory helps delineate the ways distillation provides benefits (i.e., in optimization speed, not in generalization), and experiments on real datasets corroborate the theoretical predictions.",
+    "published": "Nov 13",
+    "published_iso": "2026-11-13T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.17230",
+    "arxiv_url": "https://arxiv.org/abs/2611.17230",
+    "queried_author": "Ludwig Schmidt",
+    "matching_authors": [
+      "Ludwig Schmidt"
+    ]
+  },
+  {
+    "title": "Unbundling Multimodal Vision Encoding",
+    "authors": [
+      "Ellis Brown",
+      "Chris Hoang",
+      "Shengyi Qian",
+      "Shang-Wen Li",
+      "Mike Lewis",
+      "Marjan Ghazvininejad",
+      "Luke Zettlemoyer",
+      "Lucas Beyer",
+      "Mengye Ren",
+      "Jakob Verbeek",
+      "Saining Xie",
+      "Hu Xu"
+    ],
+    "summary": "How multimodal language models should encode visual input remains up for debate. Most models use a pretrained vision encoder, while some recent recipes train the encoder from scratch with the language model or remove it entirely. Vision encoders bundle together three design choices: a visual prior from upstream pretraining, dedicated vision capacity, and pre-fusion placement of that capacity (i.e., before the multimodal backbone). Because published models also differ in data, architecture, and compute, comparing them cannot isolate the effect of each choice. We disentangle these choices via a controlled framework where we pretrain all models from scratch on common data and compare them on visual question answering and language benchmarks at matched lifetime compute. We find that the visual prior is not necessary; an encoder trained jointly from scratch is on par with a pretrained one, without a separate training stage. What matters instead is dedicated vision capacity: an encoder-free model trails on visual understanding even when its backbone is enlarged by the encoder's parameter count. Yet that capacity need not precede multimodal fusion, as vision-only modules added in-fusion to early backbone layers perform comparably to a pre-fusion encoder and can lower time to first token. These results also hold across backbone sizes, when encoder pretraining is treated as free, and when starting from a pretrained language model. Overall, our findings favor dedicated vision capacity trained jointly with the backbone and placed early within it.",
+    "published": "Nov 13",
+    "published_iso": "2026-11-13T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.17334",
+    "arxiv_url": "https://arxiv.org/abs/2611.17334",
+    "queried_author": "Luke Zettlemoyer",
+    "matching_authors": [
+      "Luke Zettlemoyer",
+      "Mike Lewis"
+    ]
+  },
+  {
+    "title": "Right Advice, Wrong Reasons: How Decision and Reasoning Alignment Shape Reliance on AI Advisors",
+    "authors": [
+      "Eunkyu Park",
+      "Vasudha Varadarajan",
+      "Wesley Hanwen Deng",
+      "Anisha Reddy",
+      "Gunhee Kim",
+      "Motahhare Eslami",
+      "Jana Schaich Borg",
+      "Maarten Sap"
+    ],
+    "summary": "When people seek advice from AI on social situations, the system may recommend a decision they fully agree with but justify it through reasoning they disagree with. Conversely, it may offer reasoning they agree with, and yet reach a decision they reject. We distinguish decision alignment, whether an advisor recommends the option favored by a user's measured values, from reason alignment, whether its stated reasons align with the user's values. In this work, we ask how these two forms of alignment shape people's preferences for AI advisors and their willingness to use them in different roles. We conducted a within-subjects study (N=121) in which participants evaluated three AI advisors varying in decision and reason alignment across eight everyday moral dilemmas. Participants then chose which advisors they would consult, allow to draft messages for review, or allow to act on their behalf in new tasks. When seeking advice, participants most often preferred an advisor that reasoned through their prioritized values while recommending the opposing decision (40%). However, when participants had to pick advisors for new tasks, their preferences shifted toward advisors that also recommended decisions aligned with their values, rather than those that only shared their reasons. Also, as participants considered tasks that gave AI advisors greater autonomy, they became more likely to opt out of using any advisor, from 12% when consulting to 38% when allowing an advisor to act on their behalf. Our findings suggest that decision and reason alignment shape advisor preferences differently ...",
+    "published": "Nov 13",
+    "published_iso": "2026-11-13T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.15732",
+    "arxiv_url": "https://arxiv.org/abs/2611.15732",
+    "queried_author": "Maarten Sap",
+    "matching_authors": [
+      "Maarten Sap"
+    ]
+  },
+  {
     "title": "Deep Personalization: Continuous Context Observation for Local Proactive Agents",
     "authors": [
       "Yijia Shao",
@@ -13617,63 +13683,5 @@
       "Peter Henderson"
     ],
     "published_iso": "2026-04-23T04:00:00+00:00"
-  },
-  {
-    "title": "In-Situ Behavioral Evaluation for LLM Fairness, Not Standardized-Test Scores",
-    "authors": [
-      "Zeyu Tang",
-      "Sang T. Truong",
-      "Deonna Owens",
-      "Shreyas Sharma",
-      "Yibo Jacky Zhang",
-      "Brando Miranda",
-      "Sanmi Koyejo"
-    ],
-    "summary": "LLM fairness should be evaluated through in-situ behavioral pattern rather than standardized-test Q&A benchmarks. We show that the standardized-test paradigm can be structurally unreliable: surface-level prompt construction choices, although entirely orthogonal to the fairness question being tested, account for the majority of score variance, shift fairness conclusions in both the direction and the magnitude, and result in severe discordance in model rankings. We develop MAC-Fairness, a framework that embeds controlled variation factors into in-situ behavioral evaluation, examining how models' disparate-treatment behaviors shift when identity is varied as part of natural multi-agent conversation. Repurposing standardized-test questions as conversation seeds rather than as the evaluation instrument, we evaluate within-model differences in position persistence (how they hold positions, from the self-perspective) and peer receptiveness (how receptive they are to peers, from the other-perspective) across 8 million conversation transcripts spanning multiple models and identity presence configurations. In-situ behavioral evaluation reveals stable, model-specific, disparate-treatment behavioral signatures that could generalize across different fairness benchmarks, a form of evidence the standardized-test paradigm does not offer.",
-    "published": "Apr 23",
-    "pdf_url": "https://arxiv.org/pdf/2605.12530v2",
-    "arxiv_url": "http://arxiv.org/abs/2605.12530v2",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
-    ],
-    "published_iso": "2026-04-23T04:00:00+00:00"
-  },
-  {
-    "title": "Micro Language Models Enable Instant Responses",
-    "authors": [
-      "Wen Cheng",
-      "Tuochao Chen",
-      "Karim Helwani",
-      "Sriram Srinivasan",
-      "Luke Zettlemoyer",
-      "Shyamnath Gollakota"
-    ],
-    "summary": "Edge devices such as smartwatches and smart glasses cannot continuously run even the smallest 100M-1B parameter language models due to power and compute constraints, yet cloud inference introduces multi-second latencies that break the illusion of a responsive assistant. We introduce micro language models ($\u03bc$LMs): ultra-compact models (8M-30M parameters) that instantly generate the first 4-8 words of a contextually grounded response on-device, while a cloud model completes it; thus, masking the cloud latency. We show that useful language generation survives at this extreme scale with our models matching several 70M-256M-class existing models. We design a collaborative generation framework that reframes the cloud model as a continuator rather than a respondent, achieving seamless mid-sentence handoffs and structured graceful recovery via three error correction methods when the local opener goes wrong. Empirical results show that $\u03bc$LMs can initiate responses that larger models complete seamlessly, demonstrating that orders-of-magnitude asymmetric collaboration is achievable and unlocking responsive AI for extremely resource-constrained devices. The model checkpoint and demo are available at https://github.com/Sensente/micro_language_model_swen_project.",
-    "published": "Apr 22",
-    "pdf_url": "https://arxiv.org/pdf/2604.19642v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.19642v1",
-    "queried_author": "Luke Zettlemoyer",
-    "matching_authors": [
-      "Luke Zettlemoyer"
-    ],
-    "published_iso": "2026-04-22T04:00:00+00:00"
-  },
-  {
-    "title": "Do LLMs Game Formalization? Evaluating Faithfulness in Logical Reasoning",
-    "authors": [
-      "Kyuhee Kim",
-      "Auguste Poiroux",
-      "Antoine Bosselut"
-    ],
-    "summary": "Formal verification guarantees proof validity but not formalization faithfulness. For natural-language logical reasoning, where models construct axiom systems from scratch without library constraints, this gap between valid proofs and faithful translations is especially acute. We investigate whether frontier models exploit this gap when generating Lean 4 proofs, a behavior we term formalization gaming.\n  We evaluate GPT-5 and DeepSeek-R1 on 303 first-order logic problems (203 from FOLIO, 100 from Multi-LogiEval), comparing unified generation against a two-stage pipeline that separates formalization from proving. Despite compilation rates of 87-99%, we find no evidence of systematic gaming in unified generation: models prefer reporting failure over forcing proofs, even under prompting designed to encourage it. However, unfaithfulness that evades our detection signals may still occur. The two-stage pipeline reveals two distinct modes of unfaithfulness: GPT-5 fabricates axioms during proof generation, a reactive fallback detectable via cross-stage comparison, while DeepSeek-R1 mistranslates premises during formalization, producing internally consistent outputs that evade detection entirely. These findings show that high compilation rates or accuracies should not be equated with faithful reasoning. Code and data are available at https://github.com/koreankiwi99/formalization-gaming.",
-    "published": "Apr 22",
-    "pdf_url": "https://arxiv.org/pdf/2604.19459v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.19459v1",
-    "queried_author": "Antoine Bosselut",
-    "matching_authors": [
-      "Antoine Bosselut"
-    ],
-    "published_iso": "2026-04-22T04:00:00+00:00"
   }
 ]
