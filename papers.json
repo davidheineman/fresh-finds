@@ -1,5 +1,81 @@
 [
   {
+    "title": "StreamEmbed: Real-Time Indexing from Pixels for Screenshot Retrieval",
+    "authors": [
+      "Dayoon Ko",
+      "Yichuan Wang",
+      "Soyeong Jeong",
+      "Joseph E. Gonzalez",
+      "Gunhee Kim",
+      "Sewon Min"
+    ],
+    "summary": "Screen history can serve as searchable visual memory for people and agents, but unlike an offline corpus, it must be encoded and indexed as each screenshot arrives. OCR-based indexing is fast but loses visual information; visual encoding takes over two seconds. Yet screens change incrementally: most pixels repeat within and across screenshots. This raises a question: do visual encoders need to recompute their representations from scratch for every new screenshot? We present StreamEmbed, a system for incremental visual embedding that exploits this redundancy. Guided solely by pixel differences, it combines spatial token pruning, which skips blocks that repeat a neighbor, with temporal KV reuse, which reuses cached keys and values for blocks unchanged across screenshots. A small learned adapter compensates for pruning and reuse to preserve fidelity to full-screenshot embeddings. On ScreenMemEval, our benchmark of 10,426 questions over 184 hours of screen histories from two humans and a computer-use agent, StreamEmbed sets a new accuracy-latency Pareto frontier on an M2 Pro GPU: it encodes up to 3.7x faster than full-screenshot encoding without sacrificing accuracy and improves accuracy over OCR-based indexing by up to 6.3 Recall@10 points at matched latency. A memory-efficient vector index stores a simulated year of screenshots in 0.13 GB of RAM. Together, these results make real-time indexing of screen history in its native visual form practical, laying a foundation for fully local visual assistants.",
+    "published": "Nov 16",
+    "published_iso": "2026-11-16T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.18516",
+    "arxiv_url": "https://arxiv.org/abs/2611.18516",
+    "queried_author": "Sewon Min",
+    "matching_authors": [
+      "Sewon Min"
+    ]
+  },
+  {
+    "title": "LECAT: Measuring LLM Category Learning from Pretraining Data",
+    "authors": [
+      "Jimin Mun",
+      "Maarten Sap",
+      "Yanai Elazar"
+    ],
+    "summary": "Humans know that airplanes are fast, that this extends to red airplanes, but that it does not hold for broken airplanes. How do LLMs acquire category knowledge that humans learn and apply effortlessly? We introduce LeCat, a two-part framework to analyze LLM's Learning of Category knowledge. First, we use LeCat to evaluate models on their ability to learn category knowledge, distinguishing between three cases: memorization of in-domain category knowledge, generalization to unseen instances, and ability to flexibly use knowledge in appropriate contexts. Then, we use LeCat to trace how this knowledge can be learned in pretraining from text that may encode category knowledge in various ways, such as verbatim repetition or exceptions, which we refer to as forms of \"knowledge expression\". We first assess open-source pretrained models using 199 curated category-feature pairs and analyze their training data. Our findings suggest that strengthening context and category-feature co-occurrence likelihood (PMI) improve learning for larger models and verbatim rule-like statements diminish flexible category learning. To systematically isolate these effects, we then train a 68M model from scratch with precise control over the categorical information each sees in their training data, confirming that verbatim repetition reduces flexible learning but mixture of diverse knowledge expressions lead to more robust category learning. Together, our findings highlight that while contextual flexibility is persistently difficult for models, how category knowledge is expressed in pretraining greatly im...",
+    "published": "Nov 16",
+    "published_iso": "2026-11-16T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.18419",
+    "arxiv_url": "https://arxiv.org/abs/2611.18419",
+    "queried_author": "Maarten Sap",
+    "matching_authors": [
+      "Maarten Sap"
+    ]
+  },
+  {
+    "title": "Rethinking Visual Reasoning in Text-to-Image Reward Modeling",
+    "authors": [
+      "Shiye Su",
+      "Xiaohan Wang",
+      "Ludwig Schmidt",
+      "Serena Yeung-Levy"
+    ],
+    "summary": "Reward models are a core component of modern text-to-image systems, serving as the objective for inference-time selection and RL-based post-training. A key prerequisite is visual understanding: to judge prompt adherence and ground aesthetic preferences, a reward model must bind attributes, resolve relations, and count reliably. We find that widely-used reward models perform poorly on targeted visual reasoning evaluations. Even when starting from strong vision-language backbones, preference fine-tuning erodes these capabilities, and continual-learning baselines fail to mitigate a steep tradeoff between visual reasoning and preference accuracy. We propose a data-centric intervention that injects visual reasoning supervision into preference learning by flipping the pairing axis. To complement conventional human preference data (paired images under a shared prompt), we convert existing visual reasoning datasets into preference pairs that share the same image but differ in prompt, and train on the mixture. This yields a Pareto improvement in both visual understanding and preference prediction. Across inference-time best-of-n selection and RL post-training, the resulting reward model improves text-to-image generation on challenging compositional prompts (GenEval) by an average of 4.0% and 5.5% respectively, outperforming HPSv3 which was trained on 6x more preference pairs.",
+    "published": "Nov 16",
+    "published_iso": "2026-11-16T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.17585",
+    "arxiv_url": "https://arxiv.org/abs/2611.17585",
+    "queried_author": "Ludwig Schmidt",
+    "matching_authors": [
+      "Ludwig Schmidt"
+    ]
+  },
+  {
+    "title": "PaperCritic: Training AI Reviewers to Assess the Soundness of Papers",
+    "authors": [
+      "Hyun Ryu",
+      "Ji Yong Cho",
+      "Eunho Yang",
+      "Moontae Lee",
+      "June Yong Yang",
+      "Sean Welleck",
+      "Carolyn Rose"
+    ],
+    "summary": "As AI conference submissions grow rapidly, AI reviewers are being considered as an alternative. However, simply imitating human reviewing is problematic because reviewing serves multiple purposes, including evaluating papers' soundness, interestingness, and clarity, the last two of which are subjective. In this work, we focus solely on evaluating soundness, the most important and objective criterion, and define the learning objective as jointly maximizing (1) precision, based on the soundness and substantiveness of review points, and (2) recall, the coverage of high-quality reference review points. Under this problem formulation, we construct a quality-labeled review point dataset, PaperSound-23K, using 1K ICLR submissions and 23K human-written and LLM-generated review points. Using this dataset, we train an AI reviewer model, PaperCritic, through reinforcement learning with the F1 score of precision and recall as the reward. Our experiments show that PaperCritic outperforms frontier models and models trained with other AI reviewer training methods on an in-domain test set. Surprisingly, learning to review ICLR submissions also transfers to reviewing Nature-family papers and even to out-of-domain reviewing tasks (e.g., code review, legal contract review, and feedback on story writing).",
+    "published": "Nov 16",
+    "published_iso": "2026-11-16T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.17834",
+    "arxiv_url": "https://arxiv.org/abs/2611.17834",
+    "queried_author": "Sean Welleck",
+    "matching_authors": [
+      "Sean Welleck"
+    ]
+  },
+  {
     "title": "Two mathematical models of knowledge distillation",
     "authors": [
       "Audrey Xie",
@@ -13605,83 +13681,5 @@
       "Yoon Kim"
     ],
     "published_iso": "2026-04-24T04:00:00+00:00"
-  },
-  {
-    "title": "Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL",
-    "authors": [
-      "Zhaofeng Wu",
-      "Shiqi Wang",
-      "Boya Peng",
-      "Anuj Goyal",
-      "Melanie Kambadur",
-      "Sebastian Ruder",
-      "Yoon Kim",
-      "Chloe Bi"
-    ],
-    "summary": "Modern language models demonstrate impressive coding capabilities in common programming languages (PLs), such as C++ and Python, but their performance in lower-resource PLs is often limited by training data availability. In principle, however, most programming skills are universal across PLs, so the capability acquired in one PL should transfer to others. In this work, we propose the task of zero-shot cross-programming-language transfer for code RL. We find that, for Llama-3.1, RL training for code generation in a source PL fails to improve, and sometimes even degrades, the performance on other target PLs. To address this, we hypothesize that effective RL transfer requires a generalizable SFT initialization before RL. We thus propose **Parallel-SFT**, an SFT strategy that incorporates \"parallel programs\" -- functionally equivalent code implemented in multiple PLs -- into the data mixture. We demonstrate that this improves transferability: when we subsequently perform RL on our Parallel-SFT model, we observe better generalization to unseen PLs. Analysis of the model internal representations reveals that Parallel-SFT leads to a more functionality-centric latent space, where equivalent programs across PLs are more tightly clustered, which we hypothesize to contribute to the improved transferability.",
-    "published": "Apr 23",
-    "pdf_url": "https://arxiv.org/pdf/2604.20835v2",
-    "arxiv_url": "http://arxiv.org/abs/2604.20835v2",
-    "queried_author": "Yoon Kim",
-    "matching_authors": [
-      "Yoon Kim"
-    ],
-    "published_iso": "2026-04-23T04:00:00+00:00"
-  },
-  {
-    "title": "SWE-chat: Coding Agent Interactions From Real Users in the Wild",
-    "authors": [
-      "Joachim Baumann",
-      "Vishakh Padmakumar",
-      "Xiang Li",
-      "John Yang",
-      "Diyi Yang",
-      "Sanmi Koyejo"
-    ],
-    "summary": "AI coding agents are being adopted at scale, yet we lack empirical evidence on how people actually use them and how much of their output is useful in practice. We present SWE-chat, the first large-scale dataset of real coding agent sessions collected from open-source developers in the wild. The dataset currently contains 6,000 sessions, comprising more than 63,000 user prompts and 355,000 agent tool calls. SWE-chat is a living dataset; our collection pipeline automatically and continually discovers and processes sessions from public repositories. Leveraging SWE-chat, we provide an initial empirical characterization of real-world coding agent usage and failure modes. We find that coding patterns are bimodal: in 41% of sessions, agents author virtually all committed code (\"vibe coding\"), while in 23%, humans write all code themselves. Despite rapidly improving capabilities, coding agents remain inefficient in natural settings. Just 44% of all agent-produced code survives into user commits, and agent-written code introduces more security vulnerabilities than code authored by humans. Furthermore, users push back against agent outputs -- through corrections, failure reports, and interruptions -- in 44% of all turns. By capturing complete interaction traces with human vs. agent code authorship attribution, SWE-chat provides an empirical foundation for moving beyond curated benchmarks towards an evidence-based understanding of how AI agents perform in real developer workflows.",
-    "published": "Apr 23",
-    "pdf_url": "https://arxiv.org/pdf/2604.20779v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.20779v1",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang",
-      "Sanmi Koyejo"
-    ],
-    "published_iso": "2026-04-23T04:00:00+00:00"
-  },
-  {
-    "title": "Scaling Self-Play with Self-Guidance",
-    "authors": [
-      "Luke Bailey",
-      "Kaiyue Wen",
-      "Kefan Dong",
-      "Tatsunori Hashimoto",
-      "Tengyu Ma"
-    ],
-    "summary": "LLM self-play algorithms are notable in that, in principle, nothing bounds their learning: a Conjecturer model creates problems for a Solver, and both improve together. However, in practice, existing LLM self-play methods do not scale well with large amounts of compute, instead hitting learning plateaus. We argue this is because over long training runs, the Conjecturer learns to hack its reward, collapsing to artificially complex problems that do not help the Solver improve. To overcome this, we introduce Self-Guided Self-Play (SGS), a self-play algorithm in which the language model itself guides the Conjecturer away from degeneracy. In SGS, the model takes on three roles: Solver, Conjecturer, and a Guide that scores synthetic problems by their relevance to unsolved target problems and how clean and natural they are, providing supervision against Conjecturer collapse. Our core hypothesis is that language models can assess whether a subproblem is useful for achieving a goal. We evaluate the scaling properties of SGS by running training for significantly longer than prior works and by fitting scaling laws to cumulative solve rate curves. Applying SGS to formal theorem proving in Lean4, we find that it surpasses the asymptotic solve rate of our strongest RL baseline in fewer than 80 rounds of self-play and enables a 7B parameter model, after 200 rounds of self-play, to solve more problems than a 671B parameter model pass@4.",
-    "published": "Apr 23",
-    "pdf_url": "https://arxiv.org/pdf/2604.20209v2",
-    "arxiv_url": "http://arxiv.org/abs/2604.20209v2",
-    "queried_author": "Tatsunori Hashimoto",
-    "matching_authors": [
-      "Tatsunori Hashimoto"
-    ],
-    "published_iso": "2026-04-23T04:00:00+00:00"
-  },
-  {
-    "title": "Temporally Extended Mixture-of-Experts Models",
-    "authors": [
-      "Zeyu Shen",
-      "Peter Henderson"
-    ],
-    "summary": "Mixture-of-Experts models, now popular for scaling capacity at fixed inference speed, switch experts at nearly every token. Once a model outgrows available GPU memory, this churn can render optimizations like offloading and pre-fetching ineffective. We make the case that the options framework in reinforcement learning is a perfect match to tackle this problem, and argue for temporally extended mixture-of-experts layers. Building on the option-critic framework with deliberation costs, we add a controller to each layer that learns when to switch expert sets and which to load. By applying this to gpt-oss-20b with low-rank adapters and a self-distillation reward, our method reduces switch rates from over 50% to below 5% while retaining up to 90% of base-model accuracy on MATH, MMLU, and MMMLU. This shows that even existing pre-trained models can be converted to temporally extended MoEs with lightweight training, with the deliberation cost allowing model trainers to trade off switching rates against capability. We hope this opens a principled path, grounded in the options framework, for memory-efficient serving and continual learning in ever-growing MoE models.",
-    "published": "Apr 23",
-    "pdf_url": "https://arxiv.org/pdf/2604.20156v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.20156v1",
-    "queried_author": "Peter Henderson",
-    "matching_authors": [
-      "Peter Henderson"
-    ],
-    "published_iso": "2026-04-23T04:00:00+00:00"
   }
 ]
