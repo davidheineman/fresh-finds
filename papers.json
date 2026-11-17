@@ -1,5 +1,31 @@
 [
   {
+    "title": "Supercharging Olmo-core for Efficient and Scalable MoE Training",
+    "authors": [
+      "Tianhua Tao",
+      "Akshita Bhagia",
+      "Dirk Groeneveld",
+      "Pete Walsh",
+      "Tyler Romero",
+      "Yashas Samaga",
+      "Jacob Morrison",
+      "Iz Beltagy",
+      "Taira Anderson",
+      "Noah A. Smith",
+      "Hannaneh Hajishirzi"
+    ],
+    "summary": "Mixture-of-Experts (MoE) models add parameters without proportionally increasing per-token compute. However, training cost also depends on bytes moved, memory held, and kernels launched, and many of those costs follow total parameter size rather than active compute. On infrastructure built for dense models, this mismatch is costly: in early baselines, throughput fell as stored expert parameter size grew, even though the useful work per token stayed nearly fixed. To close this gap, we present a redesigned training stack in Olmo-core, built for efficient, scalable MoE training. We replace the Fully Sharded Data Parallel (FSDP) of earlier Olmo-core versions with an architecture built on Distributed Data Parallel (DDP), and add Expert Parallelism (EP), Pipeline Parallelism (PP), a distributed optimizer, and activation recompute. We propose NVSHMEM-based rowwise EP, which writes each token directly into its expert's buffer, avoiding dispatch and combine permutation overhead. We make EP fully synchronization-free by keeping routing metadata on the GPU and using device-scheduled grouped GEMMs. Closely integrated MXFP8 cuts compute, activation-memory, and transport costs, and topology-agnostic checkpoints let the parallel layout change between runs. On NVL8 B300 nodes, the stack supports training configurations from 12.9 billion to 1.2 trillion total parameters on up to 512 GPUs, reaching 858 useful-model TFLOP/s/GPU at 1.2 trillion with MXFP8 and per-layer recompute; an experimental capacity test with the optional DeepEP v2 backend reaches 2.38 trillion. We also explain each desig...",
+    "published": "Nov 17",
+    "published_iso": "2026-11-17T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.18956",
+    "arxiv_url": "https://arxiv.org/abs/2611.18956",
+    "queried_author": "Hannaneh Hajishirzi",
+    "matching_authors": [
+      "Hannaneh Hajishirzi",
+      "Noah A. Smith"
+    ]
+  },
+  {
     "title": "StreamEmbed: Real-Time Indexing from Pixels for Screenshot Retrieval",
     "authors": [
       "Dayoon Ko",
@@ -13662,23 +13688,6 @@
     "queried_author": "Mitchell Gordon",
     "matching_authors": [
       "Mitchell Gordon"
-    ],
-    "published_iso": "2026-04-24T04:00:00+00:00"
-  },
-  {
-    "title": "Hyperloop Transformers",
-    "authors": [
-      "Abbas Zeitoun",
-      "Lucas Torroba-Hennigen",
-      "Yoon Kim"
-    ],
-    "summary": "LLM architecture research generally aims to maximize model quality subject to fixed compute/latency budgets. However, many applications of interest such as edge and on-device deployment are further constrained by the model's memory footprint, thus motivating parameter-efficient architectures for language modeling. This paper describes a simple architecture that improves the parameter-efficiency of LLMs. Our architecture makes use of looped Transformers as a core primitive, which reuse Transformer layers across depth and are thus more parameter-efficient than ordinary (depth-matched) Transformers. We organize the looped Transformer into three blocks--begin, middle, and end blocks--where each block itself consists of multiple Transformer layers, and only the middle block is applied recurrently across depth. We augment the looped middle block with hyper-connections (Xie et al., 2026), which expand the residual stream into matrix-valued residual streams. Hyper-connections are applied only after each loop, and therefore add minimal new parameters and compute cost. Across various model scales, we find that our Hyper-Connected Looped Transformer (Hyperloop Transformer) is able to perform well compared to depth-matched Transformer and mHC Transformer baselines despite using approximately 50% fewer parameters. This performance persists through post-training weight quantization, thus positioning Hyperloop Transformers as an attractive architecture for memory-efficient language modeling.",
-    "published": "Apr 24",
-    "pdf_url": "https://arxiv.org/pdf/2604.21254v3",
-    "arxiv_url": "http://arxiv.org/abs/2604.21254v3",
-    "queried_author": "Yoon Kim",
-    "matching_authors": [
-      "Yoon Kim"
     ],
     "published_iso": "2026-04-24T04:00:00+00:00"
   }
