@@ -1,5 +1,92 @@
 [
   {
+    "title": "NVIDIA Kumo Tabular: Pushing the Accuracy$\\unicode{8211}$Efficiency Frontier for Tabular Prediction",
+    "authors": [
+      "Jingang Qu",
+      "Valter Hudovernik",
+      "Martin Jurkovi\\v{c}",
+      "Cedric Lorenz",
+      "David Holzm\\\"uller",
+      "Federico Lopez",
+      "Dmitry Gordeev",
+      "Akihiro Nitta",
+      "Ramona Bendias",
+      "Ardrian Wong",
+      "Vedaant Jain",
+      "Vignesh Kothapalli",
+      "Gilberto Titericz Junior",
+      "Jure Leskovec",
+      "Matthias Fey"
+    ],
+    "summary": "We introduce Kumo Tabular, a family of open tabular foundation models for classification and regression, in three sizes: Kumo Tabular-S (27M parameters), Kumo Tabular-M (61M), and Kumo Tabular-L (214M). Pretrained only on artificial tables from the Kumo prior, they can make predictions on new tables without any training. In our approach, a table encoder compresses each row into an embedding, and an in-context learning transformer predicts the unlabeled rows from the labeled ones. Kumo Tabular introduces architectural innovations that improve both training stability and predictive performance, enabling the model to scale up to 150M cells on modern GPUs. Kumo Tabular-L ranks first on eight benchmarks: TabArena, TALENT, BeyondArena, ScoringBench, STRABLE, MulTaBench, RamanBench, and TabBench-Bio. These cover probabilistic regression, tables with over 1M rows or 100K columns, and tables with strings, text, or images. Accuracy improves with model size in all tested comparisons. All three sizes lie on the accuracy-speed frontiers of TabArena and BeyondArena. Kumo Tabular-L predicts faster than the runners-up, LimiX-2 on TabArena (36 times) and TabPFN-3.5 on BeyondArena (1.7 times). Weights and pretraining code are released under OpenMDW-1.1 and Apache 2.0, respectively.",
+    "published": "Nov 18",
+    "published_iso": "2026-11-18T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.23001",
+    "arxiv_url": "https://arxiv.org/abs/2611.23001",
+    "queried_author": "Jure Leskovec",
+    "matching_authors": [
+      "Jure Leskovec"
+    ]
+  },
+  {
+    "title": "Do LLM Agents Still Need to Be Told How to Self-Improve?",
+    "authors": [
+      "Shobhita Sundaram",
+      "Cansu Sancaktar",
+      "Phillip Isola"
+    ],
+    "summary": "LLM agents increasingly drive their own learning. Self-improvement methods delegate various components of model optimization to the models themselves. As models become more capable, this motivates a basic question: do these increasingly capable models still need us to specify how they should self-improve? In this paper we study an autonomous paradigm in which, given basic primitives, resources, and a general goal for self-improvement, agents construct their own self-learning algorithm for context-based optimization. Using the setting of gameplay as a testbed, a frozen LLM agent is given a compute budget and tools for collecting experience and updating text documents, and allowed to freely experiment without an externally imposed loop or access to real-world data. We find that sufficiently capable models do self-improve under these conditions, demonstrating strategies that align with classic cognitive frameworks for self-regulated learning and constructs from machine learning literature on self-generated curricula. Furthermore, we study the extent to which the learned text artifacts transfer to external benchmarks, observing improvement across different game horizons, mechanics, and 3D navigation.",
+    "published": "Nov 18",
+    "published_iso": "2026-11-18T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.23219",
+    "arxiv_url": "https://arxiv.org/abs/2611.23219",
+    "queried_author": "Phillip Isola",
+    "matching_authors": [
+      "Phillip Isola"
+    ]
+  },
+  {
+    "title": "Hierarchical Diffusion Transformer for End-to-End Image Generation",
+    "authors": [
+      "Xiaoyu Wu",
+      "Yifei Wang",
+      "Weihang Guo",
+      "Chen Wei",
+      "Lydia E Kavraki",
+      "Niloofar Mireshghallah",
+      "Steven Wu"
+    ],
+    "summary": "Pixel-space diffusion learns visual representations and image generation jointly in a single end-to-end training stage, without a separately pretrained visual encoder. However, plain pixel-space Transformers still trail leading two-stage latent diffusion models in generation quality and training efficiency. We hypothesize that part of this gap arises from retaining one token per patch throughout the backbone, which does not explicitly encourage a visual hierarchy that summarizes related content at progressively coarser levels. To address this, we introduce Hierarchical Diffusion Transformers (HiT), which progressively group related tokens and represent each group with a single token. The main Transformer bottleneck processes these compact group tokens, and ungrouping restores features to their original image positions. A compression budget regulates the average compression ratio across the batch, allowing group memberships and counts to vary across images and diffusion timesteps during both training and generation. The model exhibits emergent semantic structure, learning to group coherent objects and object parts without segmentation labels. In text-to-image generation, HiT further learns to group caption words with image patches depicting the same concepts, without region annotations. HiT achieves 1.48 FID on ImageNet $256\\times256$ and reaches comparable generation quality to JiT using approximately 40\\% of its cumulative training FLOPs. For text-to-image generation, HiT exceeds UniLiP's average score across five benchmarks with roughly $6\\times$ fewer denoiser parameters...",
+    "published": "Nov 18",
+    "published_iso": "2026-11-18T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.22962",
+    "arxiv_url": "https://arxiv.org/abs/2611.22962",
+    "queried_author": "Niloofar Mireshghallah",
+    "matching_authors": [
+      "Niloofar Mireshghallah"
+    ]
+  },
+  {
+    "title": "\"I Just Don't Want to Be a Burden\": Investigating AI Chatbot Emotional Support Among People with Suicidal Ideation and Other Mental Health Concerns",
+    "authors": [
+      "Vasudha Varadarajan",
+      "Nathan S. Fishbein",
+      "Andrew Aquilina",
+      "Jordan Taylor",
+      "Hong Shen",
+      "Maarten Sap"
+    ],
+    "summary": "People experiencing high-acuity mental health concerns are turning to AI chatbots for emotional support, but little is known about what drives this use, their experiences, and their preferences. In a sequential mixed-methods study, we inductively analyzed Reddit posts and used the findings to develop a survey. We surveyed 202 adults with recent mental health concerns who had used AI for emotional support. Most participants were already receiving clinical care and reported turning to AI, most commonly because they did not want to burden others, rather than being driven by barriers to care. Benefits were broadly shared, but participants reporting past-year suicidal ideation described more harm-facilitating AI behavior and reliance than those without. Overall, participants ranked honesty above warmth, and preference for crisis escalation declined as clinical acuity rose. These findings motivate AI support that addresses perceived costs of disclosure, evaluates benefits alongside harms, and widens feasible paths to human connection.",
+    "published": "Nov 18",
+    "published_iso": "2026-11-18T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.23190",
+    "arxiv_url": "https://arxiv.org/abs/2611.23190",
+    "queried_author": "Maarten Sap",
+    "matching_authors": [
+      "Maarten Sap"
+    ]
+  },
+  {
     "title": "Supercharging Olmo-core for Efficient and Scalable MoE Training",
     "authors": [
       "Tianhua Tao",
@@ -13609,86 +13696,5 @@
       "Eunsol Choi"
     ],
     "published_iso": "2026-04-28T04:00:00+00:00"
-  },
-  {
-    "title": "V-GRPO: Online Reinforcement Learning for Denoising Generative Models Is Easier than You Think",
-    "authors": [
-      "Bingda Tang",
-      "Yuhui Zhang",
-      "Xiaohan Wang",
-      "Jiayuan Mao",
-      "Ludwig Schmidt",
-      "Serena Yeung-Levy"
-    ],
-    "summary": "Aligning denoising generative models with human preferences or verifiable rewards remains a key challenge. While policy-gradient online reinforcement learning (RL) offers a principled post-training framework, its direct application is hindered by the intractable likelihoods of these models. Prior work therefore either optimizes an induced Markov decision process (MDP) over sampling trajectories, which is stable but inefficient, or uses likelihood surrogates based on the diffusion evidence lower bound (ELBO), which have so far underperformed on visual generation. Our key insight is that the ELBO-based approach can, in fact, be made both stable and efficient. By reducing surrogate variance and controlling gradient steps, we show that this approach can beat MDP-based methods. To this end, we introduce Variational GRPO (V-GRPO), a method that integrates ELBO-based surrogates with the Group Relative Policy Optimization (GRPO) algorithm, alongside a set of simple yet essential techniques. Our method is easy to implement, aligns with pretraining objectives, and avoids the limitations of MDP-based methods. V-GRPO achieves state-of-the-art performance in text-to-image synthesis, while delivering a $2\\times$ speedup over MixGRPO and a $3\\times$ speedup over DiffusionNFT.",
-    "published": "Apr 28",
-    "pdf_url": "https://arxiv.org/pdf/2604.23380v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.23380v1",
-    "queried_author": "Ludwig Schmidt",
-    "matching_authors": [
-      "Ludwig Schmidt"
-    ],
-    "published_iso": "2026-04-28T04:00:00+00:00"
-  },
-  {
-    "title": "Outcome Rewards Do Not Guarantee Verifiable or Causally Important Reasoning",
-    "authors": [
-      "Qinan Yu",
-      "Alexa Tartaglini",
-      "Peter Hase",
-      "Carlos Guestrin",
-      "Christopher Potts"
-    ],
-    "summary": "Reinforcement Learning from Verifiable Rewards (RLVR) on chain-of-thought reasoning has become a standard part of language model post-training recipes. A common assumption is that the reasoning chains trained through RLVR reliably represent how a model gets to its answer. In this paper, we develop two metrics for critically examining this assumption: Causal Importance of Reasoning (CIR), which measures the cumulative effect of reasoning tokens on the final answer, and Sufficiency of Reasoning (SR), which measures whether a verifier can arrive at an unambiguous answer based on the reasoning alone. Through experiments with the Qwen2.5 model series and ReasoningGym tasks, we find that: (1) while RLVR does improve task accuracy, it does not reliably improve CIR or SR, calling the role of reasoning in model performance into question; (2) a small amount of SFT before RLVR can be a remedy for low CIR and SR; and (3) CIR and SR can be improved even without SFT by applying auxiliary CIR/SR rewards on top of the outcome-based reward. This joint reward matches the accuracy of RLVR while also leading to causally important and sufficient reasoning. These results show that RLVR does not always lead models to rely on reasoning in the way that is commonly thought, but this issue can be remedied with simple modifications to the post-training procedure.",
-    "published": "Apr 27",
-    "pdf_url": "https://arxiv.org/pdf/2604.22074v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.22074v1",
-    "queried_author": "Carlos Guestrin",
-    "matching_authors": [
-      "Carlos Guestrin",
-      "Christopher Potts"
-    ],
-    "published_iso": "2026-04-27T04:00:00+00:00"
-  },
-  {
-    "title": "Seeing Fast and Slow: Learning the Flow of Time in Videos",
-    "authors": [
-      "Yen-Siang Wu",
-      "Rundong Luo",
-      "Jingsen Zhu",
-      "Tao Tu",
-      "Ali Farhadi",
-      "Matthew Wallingford",
-      "Yu-Chiang Frank Wang",
-      "Steve Marschner",
-      "Wei-Chiu Ma"
-    ],
-    "summary": "How can we tell whether a video has been sped up or slowed down? How can we generate videos at different speeds? Although videos have been central to modern computer vision research, little attention has been paid to perceiving and controlling the passage of time. In this paper, we study time as a learnable visual concept and develop models for reasoning about and manipulating the flow of time in videos. We first exploit the multimodal cues and temporal structure naturally present in videos to learn, in a self-supervised manner, to detect speed changes and estimate playback speed. We then show that these learned temporal reasoning models enable us to curate the largest slow-motion video dataset to date from noisy in-the-wild sources. Such slow-motion footage, typically filmed by high-speed cameras, contains substantially richer temporal detail than standard videos. Using this data, we further develop models capable of temporal control, including speed-conditioned video generation, which produces motion at specified playback speed, and temporal super-resolution, which tranforms low-FPS, blurry videos into high-FPS sequences with fine-grained temporal details. Our findings highlight time as a manipulable, perceptual dimension in video learning, opening doors to temporally controllable video generation, temporal forensics detection, and potentially richer world-models that understand how events unfold over time.",
-    "published": "Apr 24",
-    "pdf_url": "https://arxiv.org/pdf/2604.21931v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.21931v1",
-    "queried_author": "Ali Farhadi",
-    "matching_authors": [
-      "Ali Farhadi"
-    ],
-    "published_iso": "2026-04-24T04:00:00+00:00"
-  },
-  {
-    "title": "Alignment has a Fantasia Problem",
-    "authors": [
-      "Nathanael Jo",
-      "Zoe De Simone",
-      "Mitchell Gordon",
-      "Ashia Wilson"
-    ],
-    "summary": "In accomplishing complex tasks, human cognition typically progresses from abstract to concrete (e.g., from brainstorming ideas to writing an essay). With the advent of highly capable AI assistants, people now offload various parts of their task to the system. However, instruction-tuned AI systems, even when designed to infer implicit intent, lack an understanding of humans' cognitive processes. When a user approaches AI while their goals and intentions are abstract, AI systems often short circuit their cognitive process through which those goals would be refined by jumping toward a final output (e.g., writing the essay entirely). Doing so takes away the user's agency in achieving the task: they may need to spend more time revising or, worse, settle on a suboptimal outcome. We call these failures Fantasia interactions after the famous Disney scene.\n  We argue that Fantasia interactions demand a rethinking of alignment research, where AI systems optimize how cognitive responsibility is allocated within an interaction. We highlight gaps in state-of-the-art alignment methods, and outline a research agenda for training and evaluating models to achieve this vision.",
-    "published": "Apr 24",
-    "pdf_url": "https://arxiv.org/pdf/2604.21827v2",
-    "arxiv_url": "http://arxiv.org/abs/2604.21827v2",
-    "queried_author": "Mitchell Gordon",
-    "matching_authors": [
-      "Mitchell Gordon"
-    ],
-    "published_iso": "2026-04-24T04:00:00+00:00"
   }
 ]
