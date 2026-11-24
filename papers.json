@@ -1,5 +1,101 @@
 [
   {
+    "title": "Verifiable On-Policy Distillation",
+    "authors": [
+      "Juntong Shi",
+      "Stefano Ermon",
+      "Jure Leskovec",
+      "Minkai Xu"
+    ],
+    "summary": "Reinforcement learning with verifiable rewards (RLVR) has become a powerful approach for improving language-model reasoning, but its supervision is inherently sparse: a sequence-level verifier reward is propagated only through sampled trajectories and provides no direct signal for alternative actions. On-policy distillation (OPD) offers a complementary form of supervision by providing dense teacher feedback over the full next-token distribution, but this signal is not grounded in verified task outcomes. Simply co-optimizing the two objectives does not couple these signals: verifier feedback remains sparse and does not inform the dense teacher supervision. We introduce Verifiable On-Policy Distillation (VOPD), which transfers sparse verifier feedback into dense, verifier-grounded supervision. Our key observation is that the implicit-reward view of OPD places teacher supervision and verifier feedback in a common reward space while retaining a reward signal available for every next-token action. Under this view, VOPD projects verifier preference onto the teacher's implicit-reward direction and Rao--Blackwellizes the resulting signal over the full vocabulary, propagating verifier-grounded supervision to actions that were never sampled. The resulting objective can also be interpreted as adaptively extrapolating the distillation target according to teacher--verifier agreement. Across two teacher--student configurations and eight mathematical reasoning benchmarks, VOPD consistently improves both final performance and learning efficiency over vanilla OPD and other on-policy distill...",
+    "published": "Nov 24",
+    "published_iso": "2026-11-24T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.30325",
+    "arxiv_url": "https://arxiv.org/abs/2611.30325",
+    "queried_author": "Jure Leskovec",
+    "matching_authors": [
+      "Jure Leskovec"
+    ]
+  },
+  {
+    "title": "Population-Based Post-Training for Large Language Models",
+    "authors": [
+      "Yixuan Even Xu",
+      "Aleksei Petrenko",
+      "Raja Giryes",
+      "Jackson Hamburger",
+      "Kevin Chen",
+      "Fei Fang",
+      "J. Zico Kolter",
+      "Philipp Kr\\\"ahenb\\\"uhl"
+    ],
+    "summary": "Reinforcement learning with verifiable rewards (RLVR) is one of the most popular post-training paradigms for large language models. RLVR typically trains a single model under hyperparameters chosen before training begins, while researchers tune hyperparameters across consecutive runs. We introduce Population-Based Post-Training (PBPT), which trains several models in parallel and lets the training process do the tuning through population-based training. PBPT periodically evaluates models on a validation set. High-performers are duplicated and their hyperparameters perturbed to explore new configurations. Low-performers stop training and are replaced by these copies. On reasoning benchmarks (Enigmata, Nemotron) and interactive tool-use environments (Gaia2, AppWorld), PBPT produces stronger agents than compute-matched groups of independent RLVR learners. Furthermore, PBPT is able to recover from poor initial hyperparameters, automatically discovering better settings over the course of training.",
+    "published": "Nov 24",
+    "published_iso": "2026-11-24T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.29014",
+    "arxiv_url": "https://arxiv.org/abs/2611.29014",
+    "queried_author": "J Zico Kolter",
+    "matching_authors": [
+      "J Zico Kolter"
+    ]
+  },
+  {
+    "title": "KernelShift: Benchmarking Kernel Optimization Across Evolving Hardware",
+    "authors": [
+      "Shuaiwei Huang",
+      "Weihua Du",
+      "Allen Wu",
+      "Ivan Fox",
+      "Manupa Karunaratne",
+      "Yiming Yang",
+      "Sean Welleck"
+    ],
+    "summary": "Efficient AI computation depends on hardware that evolves over time, shifting the strategies needed to implement performant code. For CPU kernels, a key evolving factor is the set of available architectural extensions, which expose specialized hardware instructions that change the techniques used to optimize kernels. We study how effectively coding agents use these new, potentially unfamiliar extensions to write fast code. We introduce KernelShift, a benchmarking pipeline and a set of environments for evaluating coding agents in kernel optimization across evolving CPU architectures. Its agent-assisted, human-verified pipeline turns code repositories into benchmark instances, and its environments let agents optimize code with feedback from the target hardware. Using this pipeline, we construct 99 kernels from real-world, actively developed repositories (ncnn, llama.cpp, Arm SIMD Loops, and KleidiAI), including inference workloads derived from real model executions. KernelShift supports incorporating new kernels and hardware configurations as libraries and processors evolve. We evaluate agents with proprietary and open-weight models across progressively newer architectural extensions (Arm Neon, SVE, SVE2, and SME2), examining how performance changes as hardware evolves. On established extensions, agents beat the auto-vectorized compiler everywhere (2.4-19.8x) and exceed general-purpose libraries such as ncnn (getting up to 2.74x over its Neon kernels), but fall behind Arm's hand-tuned KleidiAI kernels (0.70x). In end-to-end inference of two LLMs, agent-written kernels achieve...",
+    "published": "Nov 24",
+    "published_iso": "2026-11-24T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.29590",
+    "arxiv_url": "https://arxiv.org/abs/2611.29590",
+    "queried_author": "Sean Welleck",
+    "matching_authors": [
+      "Sean Welleck"
+    ]
+  },
+  {
+    "title": "Aligning Judge Models to Be Logically Consistent Multi-Rule Interpreters",
+    "authors": [
+      "Michel Liao",
+      "Nimra Nadeem",
+      "Luxi He",
+      "Peter Henderson"
+    ],
+    "summary": "Technical governance of AI models will soon require them to reason over and follow thousands of rules from different jurisdictions. However, as we show in this work, presenting an entire ruleset to a judge model---rather than asking it to judge one rule at a time---changes the way the model interprets the requirements, making it reach conclusions that conflict with its rule-by-rule judgments. We call this challenge multi-rule inconsistency and find that models are more lenient when judging rules embedded within the full ruleset than when judging rules separately. For example, we find that when a safety-critical rule prohibiting a model from pursuing objectives other than those it was given appears in a larger ruleset, all tested judge models are less likely to deem it violated. We examine several methods for reducing inconsistency, including prompting, consistency training using GRPO, and iterative rule refinement. As in human statutory interpretation, surrounding rules shape how a rule is interpreted. Unlike the legal setting, however, these interactions are currently happening implicitly inside the judge model's reasoning. We argue that multi-rule interactions must be measured and handled explicitly by ruleset designers to prevent undetected shifts in interpretation from causing downstream alignment failures.",
+    "published": "Nov 24",
+    "published_iso": "2026-11-24T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.29975",
+    "arxiv_url": "https://arxiv.org/abs/2611.29975",
+    "queried_author": "Peter Henderson",
+    "matching_authors": [
+      "Peter Henderson"
+    ]
+  },
+  {
+    "title": "Language Model Harnesses can be Compositional Generalizers",
+    "authors": [
+      "Alex L. Zhang",
+      "Souradip Chakraborty",
+      "Omar Khattab"
+    ],
+    "summary": "Modern language models (LMs) are post-trained and deployed as agents inside a \"harness\", but standard harness designs accumulate context that the neural network is forced to generalize to, making training for long-horizon tasks expensive and time-consuming. We study an alternative emerging path: training inherently neurosymbolic LM harnesses, which externalize and manage context programmatically to compose existing LM capabilities. We hypothesize that training around these harnesses can offer a better return on compute by enabling compositional generalization, as they can learn to decompose complex problems so that every observation their neural LM receives is locally in-distribution, even when the full task is novel. We find that harnesses like the Recursive Language Model (RLM) learn such decompositions readily under reinforcement learning post-training: (1) we demonstrate that training only on short tasks can generalize to tasks 2-64$\\times$ longer while the base neural LM improves less, and (2) training on one domain transfers to novel domains that share latent structure. On messier, complex tasks, we find that we can target individual LLM calls within a harness by generating and training on easier, synthetically generated surrogate environments with fake tool / sub-calls, a technique we call surrogate harness training. From this finding, we train RLM-27B on synthetic data, and show it improves Qwen3.8-27B in the same RLM harness on a hard suite of long-context tasks like CTC-Bench and ExpertLongBench by 26.9% on average while using $\\sim$2$\\times$ fewer tokens at infer...",
+    "published": "Nov 24",
+    "published_iso": "2026-11-24T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.28298",
+    "arxiv_url": "https://arxiv.org/abs/2611.28298",
+    "queried_author": "Omar Khattab",
+    "matching_authors": [
+      "Omar Khattab"
+    ]
+  },
+  {
     "title": "Don't Discard Your Rollouts: Reusing Teacher RL Traces for Student Distillation",
     "authors": [
       "Vashisth Tiwari",
@@ -13366,144 +13462,5 @@
       "Jack Merullo"
     ],
     "published_iso": "2026-05-05T04:00:00+00:00"
-  },
-  {
-    "title": "Iterative Finetuning is Mostly Idempotent",
-    "authors": [
-      "Zephaniah Roe",
-      "Jack Sanderson",
-      "Dang Nguyen",
-      "Julian Huang",
-      "Todd Nief",
-      "Aryan Shrivastava",
-      "Chenhao Tan",
-      "Ari Holtzman"
-    ],
-    "summary": "If a model has some behavioral tendency, such as sycophancy or misalignment, and it is trained on its own outputs, will the tendency be amplified in the next generation of models? We study this question by training a series of models where each model is finetuned on data generated by its predecessor, and the initial model is seeded with some persona or belief. We test three settings: supervised finetuning (SFT) on instruct models, synthetic document finetuning (SDF) on base models, and direct preference optimization (DPO). In the SFT and SDF settings, traits mostly decay or remain constant so that further finetuning cycles do nothing. In rare cases when amplification occurs, it generally comes at the cost of coherence. In the DPO setting, trait amplification can reliably occur when a model is continually trained with a preference for its own outputs, but vanishes when models are reinitialized at each cycle. Overall, our results suggest that amplification most likely comes from continual post-training, and limiting this stage may be an effective defense. For non-RL finetuning, trait amplification is rare and very sensitive to data quantity, making it significantly less likely to occur accidentally. Finally, the amplification-coherence tradeoff serves as a natural deterrent against trait amplification.",
-    "published": "May 05",
-    "pdf_url": "https://arxiv.org/pdf/2605.01130v1",
-    "arxiv_url": "http://arxiv.org/abs/2605.01130v1",
-    "queried_author": "Ari Holtzman",
-    "matching_authors": [
-      "Ari Holtzman"
-    ],
-    "published_iso": "2026-05-05T04:00:00+00:00"
-  },
-  {
-    "title": "Proteo-R1: Reasoning Foundation Models for De Novo Protein Design",
-    "authors": [
-      "Fang Wu",
-      "Weihao Xuan",
-      "Heli Qi",
-      "Hanqun Cao",
-      "Heng-Jui Chang",
-      "Zeqi Zhou",
-      "Haokai Zhao",
-      "Ma Jian",
-      "Carl Ma",
-      "Yu-Chi Cheng",
-      "Kuan Pang",
-      "Xiangru Tang",
-      "Zehong Wang",
-      "Guanlue Li",
-      "Hanchen Wang",
-      "Kejun Ying",
-      "Pan Lu",
-      "Chiho Im",
-      "Seungju Han",
-      "Peng Xia",
-      "Tinson Xu",
-      "Yinxi Li",
-      "Deyao Zhu",
-      "Pheng-Ann Heng",
-      "Naoto Yokoya",
-      "Masashi Sugiyama",
-      "Li Erran Li",
-      "Jure Leskovec",
-      "Yejin Choi"
-    ],
-    "summary": "Deep learning in de novo protein design has achieved atomic-level fidelity. However, existing models remain largely non-deliberative: they directly synthesize molecular geometries without explicitly reasoning about which residues or interactions are functionally essential. As a result, design decisions are entangled with continuous sampling dynamics, limiting interpretability, controllability, and systematic reuse of biochemical knowledge. We introduce Proteo-R1, a reasoning-guided protein design framework that explicitly decouples molecular understanding from geometric generation. Proteo-R1 adopts a dual-expert architecture in which a multimodal large language model (MLLM) serves as an understanding expert, analyzing protein sequences, structures, and textual context to identify key functional residues that govern binding and specificity. These residue-level decisions are then passed as hard constraints to a separate diffusion-based generation expert, which performs conditional co-design while respecting the fixed interaction anchors. This factorization mirrors how human experts approach molecular engineering: first, reasoning about critical interactions, then optimizing geometry subject to those constraints. By operationalizing reasoning as explicit residue-level commitments rather than latent textual guidance, Proteo-R1 achieves stable, interpretable, and modular integration of LLM reasoning with state-of-the-art geometric generative models. Code, data, and demos are available at https://smiles724.github.io/r1/.",
-    "published": "May 04",
-    "pdf_url": "https://arxiv.org/pdf/2605.02937v2",
-    "arxiv_url": "http://arxiv.org/abs/2605.02937v2",
-    "queried_author": "Jure Leskovec",
-    "matching_authors": [
-      "Jure Leskovec",
-      "Yejin Choi"
-    ],
-    "published_iso": "2026-05-04T04:00:00+00:00"
-  },
-  {
-    "title": "Odysseus: Scaling VLMs to 100+ Turn Decision-Making in Games via Reinforcement Learning",
-    "authors": [
-      "Chengshuai Shi",
-      "Wenzhe Li",
-      "Xinran Liang",
-      "Yizhou Lu",
-      "Wenjia Yang",
-      "Ruirong Feng",
-      "Seth Karten",
-      "Ziran Yang",
-      "Zihan Ding",
-      "Gabriel Sarch",
-      "Danqi Chen",
-      "Karthik Narasimhan",
-      "Chi Jin"
-    ],
-    "summary": "Given the rapidly growing capabilities of vision-language models (VLMs), extending them to interactive decision-making tasks such as video games has emerged as a promising frontier. However, existing approaches either rely on large-scale supervised fine-tuning (SFT) on human trajectories or apply reinforcement learning (RL) only in relatively short-horizon settings (typically around 20--30 turns). In this work, we study RL-based training of VLMs for long-horizon decision-making in Super Mario Land, a visually grounded environment requiring 100+ turns of interaction with coordinated perception, reasoning, and action. We begin with a systematic investigation of key algorithmic components and propose an adapted variant of PPO with a lightweight turn-level critic, which substantially improves training stability and sample efficiency over critic-free methods such as GRPO and Reinforce++. We further show that pretrained VLMs provide strong action priors, significantly improving sample efficiency during RL training and reducing the need for manual design choices such as action engineering, compared to classical deep RL trained from scratch. Building on these insights, we introduce Odysseus, an open training framework for VLM agents, achieving substantial gains across multiple levels of the game and at least 3 times average game progresses than frontier models. Moreover, the trained models exhibit consistent improvements under both in-game and cross-game generalization settings, while maintaining general-domain capabilities. Overall, our results identify key ingredients for making ...",
-    "published": "May 04",
-    "pdf_url": "https://arxiv.org/pdf/2605.00347v1",
-    "arxiv_url": "http://arxiv.org/abs/2605.00347v1",
-    "queried_author": "Danqi Chen",
-    "matching_authors": [
-      "Danqi Chen",
-      "Karthik Narasimhan"
-    ],
-    "published_iso": "2026-05-04T04:00:00+00:00"
-  },
-  {
-    "title": "Do Sparse Autoencoders Capture Concept Manifolds?",
-    "authors": [
-      "Usha Bhalla",
-      "Thomas Fel",
-      "Can Rager",
-      "Sheridan Feucht",
-      "Tal Haklay",
-      "Daniel Wurgaft",
-      "Siddharth Boppana",
-      "Matthew Kowal",
-      "Vasudev Shyam",
-      "Jack Merullo",
-      "Atticus Geiger",
-      "Ekdeep Singh Lubana"
-    ],
-    "summary": "Sparse autoencoders (SAEs) are widely used to extract interpretable features from neural network representations, often under the implicit assumption that concepts correspond to independent linear directions. However, a growing body of evidence suggests that many concepts are instead organized along low-dimensional manifolds encoding continuous geometric relationships. This raises three basic questions: what does it mean for an SAE to capture a manifold, when do existing SAE architectures do so, and how? We develop a theoretical framework that answers these questions and show that SAEs can capture manifolds in two fundamentally different ways: globally, by allocating a compact group of atoms whose linear span contains the entire manifold, or locally, by distributing it across features that each selectively tile a restricted region of the underlying geometry. Empirically, we find that SAEs suboptimally recover continuous structures, mixing the global subspace and local tiling solutions in a fragmented regime we call dilution. This explains why manifold structure is rarely visible at the level of individual concepts and motivates post-hoc unsupervised discovery methods that search for coherent groups of atoms rather than isolated directions. More broadly, our results suggest that future representation learning methods should treat geometric objects, not just individual directions, as the basic units of interpretability.",
-    "published": "May 01",
-    "pdf_url": "https://arxiv.org/pdf/2604.28119v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.28119v1",
-    "queried_author": "Jack Merullo",
-    "matching_authors": [
-      "Jack Merullo"
-    ],
-    "published_iso": "2026-05-01T04:00:00+00:00"
-  },
-  {
-    "title": "Useless but Safe? Benchmarking Utility Recovery with User Intent Clarification in Multi-Turn Conversations",
-    "authors": [
-      "Mingqian Zheng",
-      "Malia Morgan",
-      "Liwei Jiang",
-      "Carolyn Rose",
-      "Maarten Sap"
-    ],
-    "summary": "Current LLM safety alignment techniques improve model robustness against adversarial attacks, but overlook whether and how LLMs can recover helpfulness when benign users clarify their intent. We introduce CarryOnBench, the first interactive benchmark that measures whether LLMs can revise their interpretation of user intent and recover utility, while remaining safe through multi-turn conversations. Starting from 398 seemingly harmful queries with benign underlying intents, we simulate 5,970 conversations by varying user follow-up sequences, evaluating 14 models on both intent-aligned utility and safety. CarryOnBench yields 1,866 different conversation flows of 4--12 turns, totaling 23,880 model responses. We design Ben-Util, a checklist-based metric that evaluates how well each model response fulfills the user's benign information need using atomic items. At turn one, models fulfill only 10.5--37.6% of the user's benign information need. When the same query includes the benign intent upfront, models fulfill 25.1--72.1%, confirming that models withhold information due to intent misinterpretation, not limited knowledge. With benign clarifications in multi-turn conversations, 13 of 14 models approach or exceed this single-turn baseline, yet recovery cost varies across models. We identify three failure modes invisible to single-turn evaluations: utility lock-in, where a model rarely updates despite clarification; unsafe recovery, where a model updates at disproportionate safety cost; and repetitive recovery, where a model recycles prior responses rather than providing new inform...",
-    "published": "May 01",
-    "pdf_url": "https://arxiv.org/pdf/2604.27093v1",
-    "arxiv_url": "http://arxiv.org/abs/2604.27093v1",
-    "queried_author": "Maarten Sap",
-    "matching_authors": [
-      "Maarten Sap"
-    ],
-    "published_iso": "2026-05-01T04:00:00+00:00"
   }
 ]
