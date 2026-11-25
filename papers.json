@@ -1,5 +1,179 @@
 [
   {
+    "title": "Subliminal Learning Crosses Modalities",
+    "authors": [
+      "Saraswathy Amjith",
+      "Kimia Hamidieh",
+      "Antonio Torralba",
+      "Yoon Kim"
+    ],
+    "summary": "Subliminal learning refers to a surprising phenomenon in language models wherein a prompt given to one model (e.g., preference for cats) can be subliminally distilled to another model via training on data that is ostensibly meaningless (e.g., number sequences). This paper shows that text-based subliminal learning transfers cross-modally, in particular, a topic/preference (e.g., animals) transferred through number sequences across vision-language models also changes how images are generated and represented. First, we show that a diffusion model using the student as its text encoder generates the student's animal more often than with the original model as its text encoder, but not its color or style. We then investigate the mechanism behind this phenomenon and which concepts transfer across modalities. A constant component of the student's change accounts for much of the shift of image representations toward the trait. Adding this component uniformly can change the generated animal, which depends on the whole prompt, but not concepts such as color or style, which are encoded in a single token. Finally, we introduce weight lens as an approach to identify a subliminal trait from the weights of a single trained model, and show that it identifies the trait of nearly every student, including traits that do not surface in generated images.",
+    "published": "Nov 25",
+    "published_iso": "2026-11-25T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.31870",
+    "arxiv_url": "https://arxiv.org/abs/2611.31870",
+    "queried_author": "Yoon Kim",
+    "matching_authors": [
+      "Yoon Kim"
+    ]
+  },
+  {
+    "title": "Exploring Multi-Player Social Games as Verifiable Training Grounds for Large Language Models",
+    "authors": [
+      "Keyu He",
+      "Michael Li",
+      "Jiarui Liu",
+      "Mingqian Zheng",
+      "Koichi Onoue",
+      "Tongshuang Wu",
+      "Maarten Sap"
+    ],
+    "summary": "The training of socially intelligent language models often relies on large language model (LLM) judges, which are expensive, noisy, and vulnerable to reward hacking. Multi-player social games offer a natural alternative: they require open-ended communication to coordinate with teammates and infer hidden roles, while their rules provide an objective outcome which can serve as a verifiable reward for training. Using three social games, we explore how much social intelligence Qwen3 models can acquire through supervised fine-tuning (SFT) and reinforcement learning with verifiable rewards (RLVR). Results show that against a much stronger Gemma-3-27B model, SFT and RLVR raise the win rate of Qwen3-4B from 33% to 81% on the three trained games, and from 39% to 54% on three additional held-out games. In contrast, in-context strategies such as prompting improve the win rate of Qwen3-4B by only about 6 pp across the same games we train and evaluate on. Furthermore, we show that the gains from SFT and RLVR hold across the model sizes 1.7B, 4B, and 32B. Qualitative analyses of agent behavior show signs of stronger social intelligence; for example, trained agents tend to share information more openly, check each other's claims against public evidence, and coordinate their votes. More broadly, our results demonstrate that training LLMs on verifiable outcomes in social games can cultivate generalizable social behaviors, which offers a scalable path for building socially intelligent agents.",
+    "published": "Nov 25",
+    "published_iso": "2026-11-25T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.31821",
+    "arxiv_url": "https://arxiv.org/abs/2611.31821",
+    "queried_author": "Maarten Sap",
+    "matching_authors": [
+      "Maarten Sap"
+    ]
+  },
+  {
+    "title": "OmniAct: One Policy, One Million Embodiments",
+    "authors": [
+      "Xiang Fan",
+      "Yuheng Wang",
+      "Jiayuan Yan",
+      "Bohan Fang",
+      "Wisdom Oluchi Ikezogwo",
+      "Ainaz Eftekhar",
+      "Max Argus",
+      "Jason Ren",
+      "Jiafei Duan",
+      "Ranjay Krishna"
+    ],
+    "summary": "A single policy that controls diverse robots must not only transfer task knowledge across embodiments, but also adapt its behavior to each robot's capabilities. Existing approaches facilitate transfer through shared action representations, but these representations do not necessarily capture how differences in robot morphology should shape manipulation strategies. We introduce OmniAct, a cross-embodiment manipulation policy that conditions directly on each robot's kinematics in a specific scene to produce embodiment-specific behavior. This kinematic graph represents the robot's joint positions, motion axes, and connectivity to its visual observation, allowing the policy to account for how its embodiment related to objects and surfaces in the scene. A flow-matching policy predicts relative joint motions for each node, enabling control across robots with different degrees of freedom and kinematic configurations. To learn how physical structure shapes behavior at scale, we procedurally design and filter one million physically feasible robot embodiments; next, we develop algorithms to generate robot trajectories in simulation for all embodiments; finally, we train across diverse simulated manipulation tasks. On 2,000 embodiment-scene-held-out evaluation episodes, OmniAct achieves 63.0% success, compared to 17.8% for pi 0.5 and 57.9% for the strongest baseline; on the task families GPT-6 Astra was evaluated on, it achieves 64.7% against GPT-6 Astra's 41.1%. On a previously unseen real-world robot, it achieves nearly twice the success rate of the next best method, MolmoAct2. Beyo...",
+    "published": "Nov 25",
+    "published_iso": "2026-11-25T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.33158",
+    "arxiv_url": "https://arxiv.org/abs/2611.33158",
+    "queried_author": "Ranjay Krishna",
+    "matching_authors": [
+      "Ranjay Krishna"
+    ]
+  },
+  {
+    "title": "Marketing-Bench: Evaluating Frontier Models and Agents on Real-World Marketing Capabilities",
+    "authors": [
+      "Sumanth Balaji",
+      "Siddharth Gupta",
+      "Ameet Deshpande",
+      "Vishvak Murahari",
+      "Karthik Narasimhan"
+    ],
+    "summary": "As frontier AI models and agents are deployed more broadly in the real world, marketing is emerging as one of their largest applications. Marketing teams use AI models to produce brand assets like website copy and social media posts, while consumers' agents autonomously discover products, research purchases, and navigate websites. However, evaluating marketing capability is difficult because unlike areas like software development, customer support, or legal review where ground truth is more objectively defined, marketing is subjective, and output quality is judged based on taste and brand. We introduce Marketing-Bench, the first open-source marketing benchmark, which pairs discriminative tasks (detecting brand anomalies) with generative tasks (remediation), while keeping answers verifiable. Marketing-Bench tests five key pillars: factuality, consistency, coherence, structure, and brand voice, all crucial elements for good brand content on the web. We find that frontier models are far from solving the benchmark: the average model corrects only about half of the introduced issues (53.1%), whereas a marketing expert corrects nearly all of them. Even the strongest, GPT-6 Astra, reaches only 74.8%, with Claude Opus and Fable, Gemini Argon, and GPT-6 Sol falling well short. These findings suggest that marketing capabilities are less mature than adoption implies, and that principled evaluation should precede further scaling of usage. Marketing-Bench is a first step toward \"frontier marketing models\" with superhuman marketing performance.",
+    "published": "Nov 25",
+    "published_iso": "2026-11-25T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.32012",
+    "arxiv_url": "https://arxiv.org/abs/2611.32012",
+    "queried_author": "Karthik Narasimhan",
+    "matching_authors": [
+      "Karthik Narasimhan"
+    ]
+  },
+  {
+    "title": "INCLUDE-2.0: Disentangling Knowledge Gaps in Multilingual LLM Evaluation",
+    "authors": [
+      "Angelika Romanou",
+      "Maria Grandury",
+      "Clara Meister",
+      "Negar Foroutan",
+      "Jabez Magomere",
+      "Anna Sotnikova",
+      "Hitesh Laxmichand Patel",
+      "Akshay Kumar Dubey",
+      "Alfonso Amayuelas",
+      "Amit Agarwal",
+      "Arion Das",
+      "Carlos Arriaga",
+      "Cheng Yu",
+      "Dalia Ali",
+      "David Quispe-Castillo",
+      "Fenal Ashokbhai Ilasariya",
+      "Francisco-Javier Rodrigo-Gines",
+      "Gonzalo Martinez",
+      "Gouthami Vadithya",
+      "Guido Ivetta",
+      "Javier Conde",
+      "Jorge Vallego",
+      "Juan J. Calderon G.",
+      "Karan Gupta",
+      "Marcos J Gomez",
+      "Marvin M. Ag\\\"uero-Torales",
+      "Mithil Bangera",
+      "Naira Paola Arnez Jordan",
+      "Oscar M. Cumbicus-Pineda",
+      "Priyaranjan Pattnayak",
+      "Reewos Erwin Talla Chumpitaz",
+      "Sahil Aggarwal",
+      "Sahil Raj",
+      "Shruti Jalan",
+      "Srikant Panda",
+      "Susana Zhou",
+      "Yeshil Bangera",
+      "Orestis Papakyriakopoulos",
+      "Scott A. Hale",
+      "Shamsuddeen Hassan Muhammad",
+      "Antoine Bosselut"
+    ],
+    "summary": "Current multilingual benchmarks cover only a fraction of the languages represented in modern pretraining corpora and often conflate language proficiency with the ability to answer questions grounded in specific regions and communities. We introduce INCLUDE-2.0, a large-scale benchmark for region-aware multilingual factual evaluation, which covers 91 languages from 86 countries (127 total language--country pairs), comprising over 220K curated samples drawn from native regional sources. Unlike existing benchmarks that often treat language as a proxy for region, IINCLUDE-2.0 distinguishes between questions whose answers are independent of context, vary by country, concern widely documented facts about a place, or depend on knowledge primarily expressed through local linguistic and cultural sources. Each item is annotated with its regional knowledge type and domain, and paired with an English translation, enabling controlled analysis of the relationship between language proficiency and possession of regional knowledge. Evaluating frontier and open-weight models on IINCLUDE-2.0, we find that aggregate multilingual accuracy masks substantial variation across regional knowledge types, languages, and regions. We find that frontier models perform worse on locally embedded knowledge than on widely documented facts about regions, with an average drop of ~14.5 points. We also show that for open-weight models, scale improves accuracy but does not reliably make performance invariant to whether a question is asked in English or its original language. INCLUDE-2.0 is available at https://hu...",
+    "published": "Nov 25",
+    "published_iso": "2026-11-25T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.31255",
+    "arxiv_url": "https://arxiv.org/abs/2611.31255",
+    "queried_author": "Antoine Bosselut",
+    "matching_authors": [
+      "Antoine Bosselut"
+    ]
+  },
+  {
+    "title": "ThinkMorph-SSL: Scaling Interleaved Multimodal Reasoning with Pretext Tasks",
+    "authors": [
+      "Jiawei Gu",
+      "Linjie Li",
+      "Yiming Liu",
+      "Yunzhuo Hao",
+      "Huichen Wang",
+      "Guanzheng Chen",
+      "Zhichao Peng",
+      "Luxin Xu",
+      "Xinyu Zhang",
+      "Li Luo",
+      "Disen Lan",
+      "Zican Hu",
+      "Mingyang Song",
+      "David Valente",
+      "Alex Jinpeng Wang",
+      "Yafu Li",
+      "Ganqu Cui",
+      "Zhengyuan Yang",
+      "Qizhe Xie",
+      "Yejin Choi",
+      "Ranjay Krishna",
+      "Yu Cheng"
+    ],
+    "summary": "People reason with pictures as well as words. Interleaved multimodal reasoning gives models a similar way to solve problems by creating intermediate images and using them to guide further reasoning. Training models with this ability usually relies on task-specific demonstrations, which are difficult to collect. We introduce ThinkMorph-SSL, a two-stage training recipe that uses images themselves as a source of supervision. The first stage, pretext reasoning, converts visual pretext tasks, such as image colorization and denoising, into instruction-free interleaved traces. Models describe a corrupted or transformed image, generate a restored or canonical image, and interpret the result. The second stage uses automatically constructed demonstrations for question-driven instruction tuning. At the same instruction-tuning budget, models trained with pretext reasoning outperform those trained with instruction tuning alone. The full recipe improves over the base model by an average of 11.33 accuracy points across twelve benchmarks. These results show that supervision derived from images can build the visual skills needed for interleaved reasoning and improve learning from task-specific demonstrations.",
+    "published": "Nov 25",
+    "published_iso": "2026-11-25T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.32183",
+    "arxiv_url": "https://arxiv.org/abs/2611.32183",
+    "queried_author": "Ranjay Krishna",
+    "matching_authors": [
+      "Ranjay Krishna",
+      "Yejin Choi"
+    ]
+  },
+  {
     "title": "Verifiable On-Policy Distillation",
     "authors": [
       "Juntong Shi",
@@ -13297,170 +13471,5 @@
       "Sanmi Koyejo"
     ],
     "published_iso": "2026-05-06T04:00:00+00:00"
-  },
-  {
-    "title": "VideoNet: A Large-Scale Dataset for Domain-Specific Action Recognition",
-    "authors": [
-      "Tanush Yadav",
-      "Mohammadreza Salehi",
-      "Jae Sung Park",
-      "Vivek Ramanujan",
-      "Hannaneh Hajishirzi",
-      "Yejin Choi",
-      "Ali Farhadi",
-      "Rohun Tripathi",
-      "Ranjay Krishna"
-    ],
-    "summary": "Videos are unique in their ability to capture actions which transcend multiple frames. Accordingly, for many years action recognition was the quintessential task for video understanding. Unfortunately, due to a lack of sufficiently diverse and challenging data, modern vision-language models (VLMs) are no longer evaluated on their action recognition capabilities. To revitalize action recognition in the era of VLMs, we advocate for a returned focus on domain-specific actions. To this end, we introduce VideoNet, a domain-specific action recognition benchmark covering 1,000 distinct actions from 37 domains. We begin with a multiple-choice evaluation setting, where the difference between closed and open models is stark: Gemini 3.1 Pro attains 69.9% accuracy while Qwen3-VL-8B gets a mere 45.0%. To understand why VLMs struggle on VideoNet, we relax the questions into a binary setting, where random chance is 50%. Still, Qwen achieves only 59.2% accuracy. Further relaxing the evaluation setup, we provide $k\\in\\{1,2,3\\}$ in-context examples of the action. Some models excel in the few-shot setting, while others falter; Qwen improves $+7.0\\%$, while Gemini declines $-4.8\\%$. Notably, these gains fall short of the $+13.6\\%$ improvement in non-expert humans when given few-shot examples. Finding that VLMs struggle to fully exploit in-context examples, we shift from test-time improvements to the training side. We collect the first large-scale training dataset for domain-specific actions, totaling nearly 500k video question-answer pairs. Fine-tuning a Molmo2-4B model on our data, we surpass...",
-    "published": "May 05",
-    "pdf_url": "https://arxiv.org/pdf/2605.02834v2",
-    "arxiv_url": "http://arxiv.org/abs/2605.02834v2",
-    "queried_author": "Ali Farhadi",
-    "matching_authors": [
-      "Ali Farhadi",
-      "Hannaneh Hajishirzi",
-      "Ranjay Krishna",
-      "Yejin Choi"
-    ],
-    "published_iso": "2026-05-05T04:00:00+00:00"
-  },
-  {
-    "title": "Sharpness-Aware Pretraining Mitigates Catastrophic Forgetting",
-    "authors": [
-      "Ishaan Watts",
-      "Catherine Li",
-      "Sachin Goyal",
-      "Jacob Mitchell Springer",
-      "Aditi Raghunathan"
-    ],
-    "summary": "Pretraining optimizers are tuned to produce the strongest possible base model, on the assumption that a stronger starting point yields a stronger model after subsequent changes like post-training and quantization. This overlooks the geometry of the base model which controls how much of the base model's capabilities survive subsequent parameter updates. We study three pretraining optimization approaches that bias optimization toward flatter minima: Sharpness-Aware Minimization (SAM), large learning rates, and shortened learning rate annealing periods. Across model sizes ranging from 20M to 150M parameters, we find that these interventions consistently improve downstream performance after post-training on five common datasets with up to 80% less forgetting. These principles hold at scale: a short SAM mid-training phase applied to an existing OLMo-2-1B checkpoint reduces forgetting by 31% after MetaMath post-training and by 40% after 4-bit quantization.",
-    "published": "May 05",
-    "pdf_url": "https://arxiv.org/pdf/2605.02105v1",
-    "arxiv_url": "http://arxiv.org/abs/2605.02105v1",
-    "queried_author": "Aditi Raghunathan",
-    "matching_authors": [
-      "Aditi Raghunathan"
-    ],
-    "published_iso": "2026-05-05T04:00:00+00:00"
-  },
-  {
-    "title": "Beyond Semantic Similarity: Rethinking Retrieval for Agentic Search via Direct Corpus Interaction",
-    "authors": [
-      "Zhuofeng Li",
-      "Haoxiang Zhang",
-      "Cong Wei",
-      "Pan Lu",
-      "Ping Nie",
-      "Yi Lu",
-      "Yuyang Bai",
-      "Shangbin Feng",
-      "Hangxiao Zhu",
-      "Ming Zhong",
-      "Yuyu Zhang",
-      "Jianwen Xie",
-      "Yejin Choi",
-      "James Zou",
-      "Jiawei Han",
-      "Wenhu Chen",
-      "Jimmy Lin",
-      "Dongfu Jiang",
-      "Yu Zhang"
-    ],
-    "summary": "Modern retrieval systems, whether lexical or semantic, expose a corpus through a fixed similarity interface that compresses access into a single top-k retrieval step before reasoning. This abstraction is efficient, but for agentic search, it becomes a bottleneck: exact lexical constraints, sparse clue conjunctions, local context checks, and multi-step hypothesis refinement are difficult to implement by calling a conventional off-the-shelf retriever, and evidence filtered out early cannot be recovered by stronger downstream reasoning. Agentic tasks further exacerbate this limitation because they require agents to orchestrate multiple steps, including discovering intermediate entities, combining weak clues, and revising the plan after observing partial evidence. To tackle the limitation, we study direct corpus interaction (DCI), where an agent searches the raw corpus directly with general-purpose terminal tools (e.g., grep, file reads, shell commands, lightweight scripts), without any embedding model, vector index, or retrieval API. This approach requires no offline indexing and adapts naturally to evolving local corpora. Across IR benchmarks and end-to-end agentic search tasks, this simple setup substantially outperforms strong sparse, dense, and reranking baselines on several BRIGHT and BEIR datasets, and attains strong accuracy on BrowseComp-Plus and multi-hop QA without relying on any conventional semantic retriever. Our results indicate that as language agents become stronger, retrieval quality depends not only on reasoning ability but also on the resolution of the inter...",
-    "published": "May 05",
-    "pdf_url": "https://arxiv.org/pdf/2605.05242v1",
-    "arxiv_url": "http://arxiv.org/abs/2605.05242v1",
-    "queried_author": "Yejin Choi",
-    "matching_authors": [
-      "Yejin Choi"
-    ],
-    "published_iso": "2026-05-05T04:00:00+00:00"
-  },
-  {
-    "title": "NoiseRater: Meta-Learned Noise Valuation for Diffusion Model Training",
-    "authors": [
-      "Fang Wu",
-      "Haokai Zhao",
-      "Da Xing",
-      "Hanqun Cao",
-      "Tinson Xu",
-      "Yanchao Li",
-      "Xiangru Tang",
-      "Zehong Wang",
-      "Aaron Tu",
-      "Kuan Pang",
-      "Hanchen Wang",
-      "Hongbin Lin",
-      "Zeqi Zhou",
-      "Yinxi Li",
-      "Peng Xia",
-      "Li Erran Li",
-      "Molei Tao",
-      "Jure Leskovec",
-      "Aditya Joshi",
-      "Yejin Choi"
-    ],
-    "summary": "Diffusion models have achieved remarkable success across a wide range of generative tasks, yet their training paradigm largely treats injected noise as uniformly informative. In this work, we challenge this assumption and introduce NoiseRater, a meta-learning framework for instance-level noise valuation in diffusion model training. We propose a parametric noise rater that assigns importance scores to individual noise realizations conditioned on data and timestep, enabling adaptive reweighting of the training objective. The rater is trained via bilevel optimization to improve downstream validation performance after inner-loop diffusion updates. To enable efficient deployment, we further design a decoupled two-stage pipeline that transitions from soft weighting during meta-training to hard noise selection during standard training. Extensive experiments on FFHQ and ImageNet demonstrate that not all noise samples contribute equally, and that prioritizing informative noise improves both training efficiency and generation quality. Our results establish noise valuation as a complementary and previously underexplored axis for improving diffusion model training. Our code is available at: https://anonymous.4open.science/r/NoiseRater-DEB116.",
-    "published": "May 05",
-    "pdf_url": "https://arxiv.org/pdf/2605.08144v1",
-    "arxiv_url": "http://arxiv.org/abs/2605.08144v1",
-    "queried_author": "Jure Leskovec",
-    "matching_authors": [
-      "Jure Leskovec",
-      "Yejin Choi"
-    ],
-    "published_iso": "2026-05-05T04:00:00+00:00"
-  },
-  {
-    "title": "Compute Optimal Tokenization",
-    "authors": [
-      "Tomasz Limisiewicz",
-      "Artidoro Pagnoni",
-      "Srini Iyer",
-      "Mike Lewis",
-      "Sachin Mehta",
-      "Alisa Liu",
-      "Margaret Li",
-      "Gargi Ghosh",
-      "Luke Zettlemoyer"
-    ],
-    "summary": "Scaling laws enable the optimal selection of data amount and language model size, yet the impact of the data unit, the token, on this relationship remains underexplored. In this work, we systematically investigate how the information granularity of tokens, controlled by the compression rate (i.e., average bytes of text per token), affects scaling trends. We train 988 latent tokenized models (BLT) ranging from 50M to 7B parameters that enable setting the desired compression rate. This flexibility allows us to study the role of compression rate well beyond 4.57 bytes per token obtained with a popular BPE tokenizer. Our experiments reveal that in compute-optimal configurations, model parameter counts scale proportionally to data size measured in bytes, not in tokens as commonly perceived (Kaplan et al., 2020; Hoffmann et al., 2022). Furthermore, we discover that the optimal compression rate differs from the one obtained with BPE and decreases with compute. These findings generalize to both latent and subword tokenization, as well as to languages other than English, guiding language model developers on tokenization scheme selection for maximal compute efficiency.",
-    "published": "May 05",
-    "pdf_url": "https://arxiv.org/pdf/2605.01188v2",
-    "arxiv_url": "http://arxiv.org/abs/2605.01188v2",
-    "queried_author": "Alisa Liu",
-    "matching_authors": [
-      "Alisa Liu",
-      "Luke Zettlemoyer",
-      "Margaret Li",
-      "Mike Lewis"
-    ],
-    "published_iso": "2026-05-05T04:00:00+00:00"
-  },
-  {
-    "title": "Arithmetic in the Wild: Llama uses Base-10 Addition to Reason About Cyclic Concepts",
-    "authors": [
-      "Sheridan Feucht",
-      "Tal Haklay",
-      "Usha Bhalla",
-      "Daniel Wurgaft",
-      "Can Rager",
-      "Rapha\u00ebl Sarfati",
-      "Jack Merullo",
-      "Thomas McGrath",
-      "Owen Lewis",
-      "Ekdeep Singh Lubana",
-      "Thomas Fel",
-      "Atticus Geiger"
-    ],
-    "summary": "Does structure in representations imply structure in computation? We study how Llama-3.1-8B reasons over cyclic concepts (e.g., \"what month is six months after August?\"). Even though Llama-3.1-8B's representations for these concepts are circularly structured, we find that instead of directly computing modular addition in the period of the cyclic concept (e.g., 12 for months), the model re-uses a generic addition mechanism across tasks that operates independently of concept-specific geometry. First, it computes the sum of its two inputs using base-10 addition (six + August=14). Then, it maps this sum back to cyclic concept space (14->February). We show that Llama-3.1-8B uses task-agnostic Fourier features to compute these sums--in fact, these features have periods that respect standard base-10 addition, e.g., 2, 5, and 10, rather than the cyclic concept period (e.g., 12 for months). Furthermore, we identify a sparse set of 28 MLP neurons re-used across all tasks (approximately 0.2% of the MLP at layer 18) that can be partitioned into disjoint clusters, each computing the sum for a Fourier feature with a different period. Our work highlights how an interplay between causal abstraction and feature geometry can deepen our mechanistic understanding of LMs.",
-    "published": "May 05",
-    "pdf_url": "https://arxiv.org/pdf/2605.01148v1",
-    "arxiv_url": "http://arxiv.org/abs/2605.01148v1",
-    "queried_author": "Jack Merullo",
-    "matching_authors": [
-      "Jack Merullo"
-    ],
-    "published_iso": "2026-05-05T04:00:00+00:00"
   }
 ]
