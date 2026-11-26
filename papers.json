@@ -1,5 +1,76 @@
 [
   {
+    "title": "Looped Models are Fast Multi-Token Predictors",
+    "authors": [
+      "Ayhan Suleymanzade",
+      "Sean McLeish",
+      "Sehoon Kim",
+      "Jinwoo Kim",
+      "Antoine Bosselut"
+    ],
+    "summary": "Looped language models can adapt computation for predicting a token without a proportional rescaling in unique model parameters by adjusting the number of loops. This property has been used for self-speculative decoding, taking shallow loops as fast drafters and deep loops as verifiers, which is effective since drafting still uses full parameters. In this paper, we show that shallow loops can be also predictive of several future tokens and leverage this to drastically accelerate the inference of looped language models. To that end, we present Floodgates, a simple self-speculative decoding method that appends a block of mask tokens as a suffix and learns via low-rank adaptation to draft these tokens in parallel. Across seven models, five benchmarks, a range of batch sizes, and both greedy and sampled decoding, Floodgates is the fastest lossless decoding method in most cases, attaining up to 7.5x acceleration. Through analysis, we show that this speedup is enabled by all-depth training of looped models, with the shallow drafter's ability to leverage full-depth computation by conditioning on deep prefix cache evaluated during verification.",
+    "published": "Nov 26",
+    "published_iso": "2026-11-26T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.33896",
+    "arxiv_url": "https://arxiv.org/abs/2611.33896",
+    "queried_author": "Antoine Bosselut",
+    "matching_authors": [
+      "Antoine Bosselut"
+    ]
+  },
+  {
+    "title": "Improving Tail-Augmented Speculative Drafting with Hidden State Mixing and Gradient Detach",
+    "authors": [
+      "Yaniv Galron",
+      "Rabeeh Karimi Mahabadi",
+      "Maor Ashkenazi",
+      "Roger Waleffe",
+      "Talor Abramovich",
+      "Tiyasa Mitra",
+      "Yoav Miron",
+      "Dor Tsur",
+      "Sanjeev Satheesh",
+      "Jimmy Zhang",
+      "Jiaji Huang",
+      "Yonatan Geifman",
+      "Mostofa Patwary",
+      "Mohammad Shoeybi",
+      "Bita Rouhani",
+      "Ran Zilberstein"
+    ],
+    "summary": "Multi-token prediction (MTP) modules and EAGLE-style drafters support efficient speculative decoding by reusing target-model hidden states. Their autoregressive use, however, introduces a training-inference mismatch: training supplies sequences of hidden states from the backbone or a single MTP step, whereas inference attends to a target-model prefix followed by a growing tail of recurrently generated MTP states. EAGLE-3's training-time test (TTT) explicitly simulates this behavior during training, at the cost of additional memory and specialized attention masks. We introduce two training-only methods for improving autoregressive drafting. Hidden State Mixing (HSM) samples among backbone and MTP hidden states aligned to the same prediction target, exposing the drafter to mixtures of states from different MTP steps without explicitly simulating inference. Hidden State Gradient Detach (HSGD) is a regularization method that stochastically blocks gradients through hidden state and embedding pathways while preserving the forward computation. Neither method adds inference cost. In joint pretraining followed by supervised fine-tuning, HSGD yields the highest acceptance rates at early draft positions, while HSM performs best later in the draft. These acceptance rate trends favor HSM for long-draft-length serving and HSGD for short-draft-length serving. Furthermore, across four Nemotron models and DeepSeek-V4-Pro, HSM-based MTP boosting with a frozen backbone improves mean acceptance length by up to 52.2% over the co-trained MTP. For EAGLE-3 drafters, HSM offers competitive acceptan...",
+    "published": "Nov 26",
+    "published_iso": "2026-11-26T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.34092",
+    "arxiv_url": "https://arxiv.org/abs/2611.34092",
+    "queried_author": "Mohammad Shoeybi",
+    "matching_authors": [
+      "Mohammad Shoeybi",
+      "Mostofa Patwary"
+    ]
+  },
+  {
+    "title": "Who Attributes a Mind to Whom? Mutual Theory of Mind in Simulated User-Assistant Conversation",
+    "authors": [
+      "Mingxi Yan",
+      "Vasudha Varadarajan",
+      "Qiaosi Wang",
+      "Qing Xiao",
+      "Hong Shen",
+      "Jodi Forlizzi",
+      "Maarten Sap"
+    ],
+    "summary": "When users assume that an AI chatbot has mental states, they are more likely to develop over-reliance, emotional dependence, and in extreme cases, psychological harm or self-harm. However, how these mind attributions arise in conversations and how human or AI factors influence this is still unknown. We study how users attribute minds using a minimal framework: a simulated user with different characteristics chats with assistants that differ in social style and memory. We also introduce a message-level measure of who attributes a mind to whom in four directions, checked with trained coders and applied by a fine-tuned encoder that reproduces an LLM judge. Our results show that, on average, nine out of thirteen characteristics raised simulated users' attribution to the assistant. We found that relational needs such as attachment anxiety raised it as theory predicts, some general personality traits raised it as well, and AI-specific characteristics the least. By contrast, the assistant's social style barely changed simulated users' mind attribution. Instead, sycophantic instructions raised the assistant's attribution to itself. Memory raised users' attribution only with some user models. The model playing the user changed overall attribution and the effects of characteristics, style, and memory. Our framework measures how persona descriptions affect mind attribution in simulation. It gives concrete hypotheses for human studies and shows the need for more consistent user simulators.",
+    "published": "Nov 26",
+    "published_iso": "2026-11-26T05:00:00+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2611.33327",
+    "arxiv_url": "https://arxiv.org/abs/2611.33327",
+    "queried_author": "Maarten Sap",
+    "matching_authors": [
+      "Maarten Sap"
+    ]
+  },
+  {
     "title": "Subliminal Learning Crosses Modalities",
     "authors": [
       "Saraswathy Amjith",
@@ -13406,69 +13477,6 @@
     "queried_author": "Pang Wei Koh",
     "matching_authors": [
       "Pang Wei Koh"
-    ],
-    "published_iso": "2026-05-06T04:00:00+00:00"
-  },
-  {
-    "title": "ProgramBench: Can Language Models Rebuild Programs From Scratch?",
-    "authors": [
-      "John Yang",
-      "Kilian Lieret",
-      "Jeffrey Ma",
-      "Parth Thakkar",
-      "Dmitrii Pedchenko",
-      "Sten Sootla",
-      "Emily McMilin",
-      "Pengcheng Yin",
-      "Rui Hou",
-      "Gabriel Synnaeve",
-      "Diyi Yang",
-      "Ofir Press"
-    ],
-    "summary": "Turning ideas into full software projects from scratch has become a popular use case for language models. Agents are being deployed to seed, maintain, and grow codebases over extended periods with minimal human oversight. Such settings require models to make high-level software architecture decisions. However, existing benchmarks measure focused, limited tasks such as fixing a single bug or developing a single, specified feature. We therefore introduce ProgramBench to measure the ability of software engineering agents to develop software holisitically. In ProgramBench, given only a program and its documentation, agents must architect and implement a codebase that matches the reference executable's behavior. End-to-end behavioral tests are generated via agent-driven fuzzing, enabling evaluation without prescribing implementation structure. Our 200 tasks range from compact CLI tools to widely used software such as FFmpeg, SQLite, and the PHP interpreter. We evaluate 9 LMs and find that none fully resolve any task, with the best model passing 95\\% of tests on only 3\\% of tasks. Models favor monolithic, single-file implementations that diverge sharply from human-written code.",
-    "published": "May 06",
-    "pdf_url": "https://arxiv.org/pdf/2605.03546v1",
-    "arxiv_url": "http://arxiv.org/abs/2605.03546v1",
-    "queried_author": "Diyi Yang",
-    "matching_authors": [
-      "Diyi Yang",
-      "Ofir Press"
-    ],
-    "published_iso": "2026-05-06T04:00:00+00:00"
-  },
-  {
-    "title": "RAG over Thinking Traces Can Improve Reasoning Tasks",
-    "authors": [
-      "Negar Arabzadeh",
-      "Wenjie Ma",
-      "Sewon Min",
-      "Matei Zaharia"
-    ],
-    "summary": "Retrieval-augmented generation (RAG) has proven effective for knowledge-intensive tasks, but is widely believed to offer limited benefit for reasoning-intensive problems such as math and code generation. We challenge this assumption by showing that the limitation lies not in RAG itself, but in the choice of corpus. Instead of retrieving documents, we propose retrieving thinking traces, i.e., intermediate thinking trajectories generated during problem solving attempts. We show that thinking traces are already a strong retrieval source, and further introduce T3, an offline method that transforms them into structured, retrieval-friendly representations, to improve usability. Using these traces as a corpus, a simple retrieve-then-generate pipeline consistently improves reasoning performance across strong models and benchmarks such as AIME 2025--2026, LiveCodeBench, and GPQA-Diamond, outperforming both non-RAG baselines and retrieval over standard web corpora. For instance, on AIME 2025-2026, RAG with traces generated by Gemini-2-thinking achieves relative gains of +56.3%, +8.6%, and +7.6% for Gemini-2.5-Flash, GPT-OSS-120B, and GPT-5, respectively, even though these are more recent models. Overall, our results suggest that thinking traces are an effective retrieval corpus for reasoning tasks, and transforming them into structured, compact, or diagnostic representations unlocks even stronger gains. Code available at https://github.com/Narabzad/t3.",
-    "published": "May 06",
-    "pdf_url": "https://arxiv.org/pdf/2605.03344v3",
-    "arxiv_url": "http://arxiv.org/abs/2605.03344v3",
-    "queried_author": "Sewon Min",
-    "matching_authors": [
-      "Sewon Min"
-    ],
-    "published_iso": "2026-05-06T04:00:00+00:00"
-  },
-  {
-    "title": "Stop Automating Peer Review Without Rigorous Evaluation",
-    "authors": [
-      "Joachim Baumann",
-      "Jiaxin Pei",
-      "Sanmi Koyejo",
-      "Dirk Hovy"
-    ],
-    "summary": "Large language models offer a tempting solution to address the peer review crisis. This position paper argues that today's AI systems should not be used to produce paper reviews. We ground this position in an empirical comparison of human- versus AI-generated ICLR 2026 reviews and an evaluation of the effect of automated paper rewriting on different AI reviewers. We identify two critical issues: 1) AI reviewers exhibit a hivemind effect of excessive agreement within and across papers that reduces perspective diversity. 2) AI review scores are trivially gameable through paper laundering: prompting an LLM to rewrite a paper could significantly increase the scores from AI reviewers, demonstrating that LLM reviewers are easy to game through stylistic changes rather than scientific results. However, non-gameability and review diversity are necessary but not sufficient conditions for automation. We argue that addressing the peer review crisis requires a science of peer review automation -- not general-purpose LLMs deployed without rigorous evaluation.",
-    "published": "May 06",
-    "pdf_url": "https://arxiv.org/pdf/2605.03202v2",
-    "arxiv_url": "http://arxiv.org/abs/2605.03202v2",
-    "queried_author": "Sanmi Koyejo",
-    "matching_authors": [
-      "Sanmi Koyejo"
     ],
     "published_iso": "2026-05-06T04:00:00+00:00"
   }
